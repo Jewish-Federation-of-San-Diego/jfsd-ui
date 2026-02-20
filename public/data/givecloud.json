@@ -1,0 +1,278 @@
+{
+  "asOfDate": "2026-02-20",
+  "notes": null,
+  "onlineGiving": {
+    "totalFY26": 317763.58,
+    "totalContributions": 616,
+    "avgGift": 515.85,
+    "medianGift": 47.19
+  },
+  "monthlyTrend": [
+    {
+      "month": "Jul",
+      "amount": 29242.16,
+      "recurringAmount": 0.0,
+      "contributions": 24
+    },
+    {
+      "month": "Aug",
+      "amount": 12394.8,
+      "recurringAmount": 0.0,
+      "contributions": 35
+    },
+    {
+      "month": "Sep",
+      "amount": 17817.22,
+      "recurringAmount": 0.0,
+      "contributions": 39
+    },
+    {
+      "month": "Oct",
+      "amount": 17936.05,
+      "recurringAmount": 0.0,
+      "contributions": 51
+    },
+    {
+      "month": "Nov",
+      "amount": 13081.0,
+      "recurringAmount": 0.0,
+      "contributions": 27
+    },
+    {
+      "month": "Dec",
+      "amount": 170723.3,
+      "recurringAmount": 0.0,
+      "contributions": 171
+    },
+    {
+      "month": "Jan",
+      "amount": 26166.87,
+      "recurringAmount": 0.0,
+      "contributions": 189
+    },
+    {
+      "month": "Feb",
+      "amount": 30402.18,
+      "recurringAmount": 0.0,
+      "contributions": 80
+    }
+  ],
+  "recurring": {
+    "activeProfiles": 0,
+    "monthlyRecurringRevenue": 0.0,
+    "newThisMonth": 63,
+    "cancelledThisMonth": 0,
+    "churnRate": 0,
+    "avgRecurringAmount": 0
+  },
+  "topProducts": [
+    {
+      "name": "Annual Campaign Page - All in - FY26 - Today Only",
+      "amount": 248531.88,
+      "count": 266
+    },
+    {
+      "name": "FED360 FY26 - Today Only",
+      "amount": 20886.0,
+      "count": 24
+    },
+    {
+      "name": "Payment Toward Pledge - Today Only",
+      "amount": 14000.0,
+      "count": 5
+    },
+    {
+      "name": "Annual Campaign Page - All in - FY26 - Monthly",
+      "amount": 7551.0,
+      "count": 17
+    },
+    {
+      "name": "Recurring - Monthly",
+      "amount": 5053.0,
+      "count": 25
+    },
+    {
+      "name": "Individual Ticket - A Conversation on Life After Captivity - Attendance Only",
+      "amount": 4320.0,
+      "count": 288
+    },
+    {
+      "name": "Rebuild Kibbutz Erez - Today Only",
+      "amount": 4000.0,
+      "count": 2
+    },
+    {
+      "name": "Make A Tribute Gift - Today Only",
+      "amount": 2314.77,
+      "count": 39
+    },
+    {
+      "name": "EOY FY26 Campaign Page - Today Only",
+      "amount": 2269.0,
+      "count": 12
+    },
+    {
+      "name": "JFSD Beit Melachah - Today Only",
+      "amount": 1321.0,
+      "count": 5
+    }
+  ],
+  "conversionBySource": [
+    {
+      "source": "Web",
+      "contributions": 616,
+      "amount": 317763.58
+    }
+  ],
+  "recentContributions": [
+    {
+      "name": "Vera Pienknagura",
+      "amount": 1000.0,
+      "product": "Annual Campaign Page - All in - FY26 - Today Only",
+      "date": "2026-02-17",
+      "recurring": false
+    },
+    {
+      "name": "Illana Woods",
+      "amount": 37.81,
+      "product": "Annual Campaign Page - All in - FY26 - Today Only",
+      "date": "2026-02-14",
+      "recurring": false
+    },
+    {
+      "name": "Emily Jennewein",
+      "amount": 521.3,
+      "product": "FED360 FY26 - Today Only",
+      "date": "2026-02-13",
+      "recurring": false
+    },
+    {
+      "name": "Assaf Avissar",
+      "amount": 100.0,
+      "product": "FED360 FY26 - Today Only",
+      "date": "2026-02-13",
+      "recurring": false
+    },
+    {
+      "name": "Mark James",
+      "amount": 36.0,
+      "product": "Annual Campaign Page - All in - FY26 - Today Only",
+      "date": "2026-02-12",
+      "recurring": false
+    },
+    {
+      "name": "Robert Lin",
+      "amount": 187.86,
+      "product": "Annual Campaign Page - All in - FY26 - Today Only",
+      "date": "2026-02-12",
+      "recurring": false
+    },
+    {
+      "name": "Marc Glazer",
+      "amount": 1100.0,
+      "product": "Annual Campaign Page - All in - FY26 - Today Only",
+      "date": "2026-02-11",
+      "recurring": false
+    },
+    {
+      "name": "Liz Cooperhouse",
+      "amount": 5180.0,
+      "product": "Annual Campaign Page - All in - FY26 - Today Only",
+      "date": "2026-02-11",
+      "recurring": false
+    },
+    {
+      "name": "Fern siegel",
+      "amount": 1042.3,
+      "product": "FED360 FY26 - Today Only",
+      "date": "2026-02-10",
+      "recurring": false
+    },
+    {
+      "name": "Arlene G LaGary",
+      "amount": 187.86,
+      "product": "FED360 FY26 - Today Only",
+      "date": "2026-02-10",
+      "recurring": false
+    },
+    {
+      "name": "Howard Bear",
+      "amount": 1800.0,
+      "product": "FED360 FY26 - Today Only",
+      "date": "2026-02-10",
+      "recurring": false
+    },
+    {
+      "name": "Barbi Dorfan",
+      "amount": 1875.9,
+      "product": "Annual Campaign Page - All in - FY26 - Today Only",
+      "date": "2026-02-10",
+      "recurring": false
+    },
+    {
+      "name": "Rachel Raz",
+      "amount": 18.0,
+      "product": "Support Our Work - A Conversation on Life After Captivity - Support the Work",
+      "date": "2026-02-09",
+      "recurring": false
+    },
+    {
+      "name": "Bobbi and Steve Laufer",
+      "amount": 50.0,
+      "product": "Annual Campaign Page - All in - FY26 - Today Only",
+      "date": "2026-02-09",
+      "recurring": false
+    },
+    {
+      "name": "Nelly Dean",
+      "amount": 5210.3,
+      "product": "Annual Campaign Page - All in - FY26 - Today Only",
+      "date": "2026-02-09",
+      "recurring": false
+    },
+    {
+      "name": "Joshua Reitman",
+      "amount": 180.0,
+      "product": "FED360 FY26 - Today Only",
+      "date": "2026-02-08",
+      "recurring": false
+    },
+    {
+      "name": "Stephanie Lahat",
+      "amount": 104.5,
+      "product": "FED360 FY26 - Today Only",
+      "date": "2026-02-08",
+      "recurring": false
+    },
+    {
+      "name": "Lara Woolf Grusd",
+      "amount": 5210.3,
+      "product": "FED360 FY26 - Today Only",
+      "date": "2026-02-08",
+      "recurring": false
+    },
+    {
+      "name": "John Lefter",
+      "amount": 1042.3,
+      "product": "FED360 FY26 - Today Only",
+      "date": "2026-02-08",
+      "recurring": false
+    },
+    {
+      "name": "Hanan Leberman",
+      "amount": 375.42,
+      "product": "FED360 FY26 - Today Only",
+      "date": "2026-02-08",
+      "recurring": false
+    }
+  ],
+  "failedPayments": [],
+  "kpis": {
+    "totalOnlineRevenue": 317763.58,
+    "recurringRevenue": 0,
+    "activeRecurring": 0,
+    "newDonorsOnline": 63,
+    "conversionRate": 0,
+    "churnRate": 0
+  }
+}

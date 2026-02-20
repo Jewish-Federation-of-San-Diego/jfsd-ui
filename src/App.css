@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  background: #F5F5F7;
+  color-scheme: light;
+}
+
+html {
+  color-scheme: light;
+}
+
+/* Ant Design overrides for dashboard density */
+.ant-card {
+  transition: box-shadow 0.2s;
+}
+.ant-card:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.kpi-card .ant-statistic-title {
+  color: #8C8C8C;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 11px !important;
+}
+
+.kpi-card .ant-statistic-content-value {
+  font-weight: 700;
+}
+
+.variance-positive { color: #3D8B37; }
+.variance-negative { color: #C4314B; }
+.variance-neutral  { color: #8C8C8C; }
+
+/* Mobile responsive */
+.mobile-menu-btn { display: none !important; }
+
+@media (max-width: 991px) {
+  .desktop-sider { display: none !important; }
+  .mobile-menu-btn { display: inline-flex !important; }
+}
+@media (min-width: 992px) {
+  .mobile-menu-btn { display: none !important; }
+}

@@ -1,0 +1,313 @@
+{
+  "asOfDate": "2026-02-20 06:04",
+  "annualCampaign": {
+    "name": "Annual Campaign 26",
+    "goal": 9000000,
+    "raised": 5918239.29,
+    "pctOfGoal": 65.8,
+    "donorCount": 1013,
+    "avgGift": 5842.0,
+    "priorYearSamePoint": 7883609.27
+  },
+  "momentum": {
+    "giftsThisWeek": 12,
+    "amountThisWeek": 40334.59,
+    "giftsLastWeek": 150,
+    "amountLastWeek": 135671.71,
+    "weekOverWeekPct": -70.3
+  },
+  "weeklyMomentum": [
+    {
+      "weekOf": "2025-12-29",
+      "gifts": 189,
+      "amount": 404295.34
+    },
+    {
+      "weekOf": "2026-01-05",
+      "gifts": 121,
+      "amount": 1430253.18
+    },
+    {
+      "weekOf": "2026-01-12",
+      "gifts": 71,
+      "amount": 41695.02
+    },
+    {
+      "weekOf": "2026-01-19",
+      "gifts": 74,
+      "amount": 462547.92
+    },
+    {
+      "weekOf": "2026-01-26",
+      "gifts": 218,
+      "amount": 601285.71
+    },
+    {
+      "weekOf": "2026-02-02",
+      "gifts": 74,
+      "amount": 27692.85
+    },
+    {
+      "weekOf": "2026-02-09",
+      "gifts": 150,
+      "amount": 135671.71
+    },
+    {
+      "weekOf": "2026-02-16",
+      "gifts": 12,
+      "amount": 40334.59
+    }
+  ],
+  "donorBreakdown": {
+    "newDonors": 204,
+    "returningDonors": 576,
+    "lybuntRecovered": 103,
+    "retentionRate": 30.9
+  },
+  "givingLevels": [
+    {
+      "level": "$1-99",
+      "donors": 151,
+      "amount": 6454.99
+    },
+    {
+      "level": "$100-499",
+      "donors": 328,
+      "amount": 70117.92
+    },
+    {
+      "level": "$500-999",
+      "donors": 128,
+      "amount": 73415.88
+    },
+    {
+      "level": "$1K-4,999",
+      "donors": 222,
+      "amount": 389447.27
+    },
+    {
+      "level": "$5K-9,999",
+      "donors": 91,
+      "amount": 509147.73
+    },
+    {
+      "level": "$10K-24,999",
+      "donors": 60,
+      "amount": 731305.82
+    },
+    {
+      "level": "$25K+",
+      "donors": 32,
+      "amount": 4137349.69
+    }
+  ],
+  "topGiftsThisWeek": [
+    {
+      "name": "Rita S. Hartman Z\"L",
+      "amount": 13000.0,
+      "campaign": "Endowment - FY26",
+      "date": "2026-02-19"
+    },
+    {
+      "name": "Rady Foundation",
+      "amount": 10000.0,
+      "campaign": "DRM - FY26",
+      "date": "2026-02-19"
+    },
+    {
+      "name": "Howard A Katz",
+      "amount": 10000.0,
+      "campaign": "DRM - FY26",
+      "date": "2026-02-19"
+    },
+    {
+      "name": "Dafgiving360",
+      "amount": 2500.0,
+      "campaign": "DRM - FY26",
+      "date": "2026-02-19"
+    },
+    {
+      "name": "Vivian Giudice",
+      "amount": 2000.0,
+      "campaign": "Unsolicited Annual Gifts - FY26",
+      "date": "2026-02-19"
+    },
+    {
+      "name": "Vera Pienknagura",
+      "amount": 1000.0,
+      "campaign": "Unsolicited Annual Gifts - FY26",
+      "date": "2026-02-17"
+    },
+    {
+      "name": "General Atomics",
+      "amount": 748.38,
+      "campaign": "Unsolicited Annual Gifts - FY26",
+      "date": "2026-02-19"
+    },
+    {
+      "name": "Alexandra Shubin Hirschhorn",
+      "amount": 598.0,
+      "campaign": "Payment on Pledge - FY26",
+      "date": "2026-02-16"
+    },
+    {
+      "name": "Give Lively Foundation Inc.",
+      "amount": 235.81,
+      "campaign": "Unsolicited Annual Gifts - FY26",
+      "date": "2026-02-19"
+    },
+    {
+      "name": "Nigel Goldenfeld",
+      "amount": 100.0,
+      "campaign": "Monthly - FY26",
+      "date": "2026-02-19"
+    }
+  ],
+  "pipeline": {
+    "openPledges": 634,
+    "openPledgeAmount": 13856172.15,
+    "expectedThisMonth": 175.0
+  },
+  "campaigns": [
+    {
+      "name": "October 7th Commemoration Sponsorships - FY26",
+      "raised": 33742.84,
+      "goal": 5000.0,
+      "donors": 14,
+      "pctOfGoal": 674.9
+    },
+    {
+      "name": "Designated - FY26",
+      "raised": 3800.0,
+      "goal": 0.0,
+      "donors": 2,
+      "pctOfGoal": 0
+    },
+    {
+      "name": "Giborim - FY26",
+      "raised": 0,
+      "goal": 0.0,
+      "donors": 0,
+      "pctOfGoal": 0
+    },
+    {
+      "name": "Underwriting - FY26",
+      "raised": 0,
+      "goal": 0.0,
+      "donors": 0,
+      "pctOfGoal": 0
+    },
+    {
+      "name": "Tributes - FY26",
+      "raised": 15855.97,
+      "goal": 0.0,
+      "donors": 76,
+      "pctOfGoal": 0
+    },
+    {
+      "name": "Emergency - FY26",
+      "raised": 0,
+      "goal": 0.0,
+      "donors": 0,
+      "pctOfGoal": 0
+    },
+    {
+      "name": "Texas Flood Relief - FY26",
+      "raised": 2220.0,
+      "goal": 0.0,
+      "donors": 4,
+      "pctOfGoal": 0
+    },
+    {
+      "name": "Mission to India - FY26",
+      "raised": 402817.0,
+      "goal": 0.0,
+      "donors": 71,
+      "pctOfGoal": 0
+    },
+    {
+      "name": "Monthly - FY26",
+      "raised": 18295.23,
+      "goal": 0.0,
+      "donors": 214,
+      "pctOfGoal": 0
+    },
+    {
+      "name": "FED360 2026",
+      "raised": 206500.0,
+      "goal": 0.0,
+      "donors": 286,
+      "pctOfGoal": 0
+    },
+    {
+      "name": "Programs - FY26",
+      "raised": 0,
+      "goal": 0.0,
+      "donors": 0,
+      "pctOfGoal": 0
+    },
+    {
+      "name": "Men's Mission to Cuba - FY26",
+      "raised": 78035.0,
+      "goal": 0.0,
+      "donors": 31,
+      "pctOfGoal": 0
+    },
+    {
+      "name": "Immersive Travel - FY26",
+      "raised": 0,
+      "goal": 0.0,
+      "donors": 0,
+      "pctOfGoal": 0
+    },
+    {
+      "name": "ShinShinim - FY26",
+      "raised": 152800.0,
+      "goal": 0.0,
+      "donors": 13,
+      "pctOfGoal": 0
+    },
+    {
+      "name": "Annual - FY26",
+      "raised": 0,
+      "goal": 0.0,
+      "donors": 0,
+      "pctOfGoal": 0
+    },
+    {
+      "name": "DRM - FY26",
+      "raised": 1696701.24,
+      "goal": 0.0,
+      "donors": 130,
+      "pctOfGoal": 0
+    },
+    {
+      "name": "Chaplaincy - FY26",
+      "raised": 4375.0,
+      "goal": 0.0,
+      "donors": 6,
+      "pctOfGoal": 0
+    },
+    {
+      "name": "Endowment - FY26",
+      "raised": 13000.0,
+      "goal": 0.0,
+      "donors": 1,
+      "pctOfGoal": 0
+    },
+    {
+      "name": "Corporate Event Sponsorships - FY26",
+      "raised": 30000.0,
+      "goal": 0.0,
+      "donors": 2,
+      "pctOfGoal": 0
+    },
+    {
+      "name": "Ambassador - FY26",
+      "raised": 71540.04,
+      "goal": 0.0,
+      "donors": 17,
+      "pctOfGoal": 0
+    }
+  ]
+}

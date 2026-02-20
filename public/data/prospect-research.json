@@ -1,0 +1,1534 @@
+{
+  "asOfDate": "2026-02-20",
+  "totalProfiled": 545,
+  "capacityGap": 30539061,
+  "upgradeProspects": [
+    {
+      "name": "Michael S. Levinson",
+      "currentGiving": 3600,
+      "estimatedCapacity": 87716,
+      "gap": 84116,
+      "yearsGiving": 3,
+      "trend": "flat"
+    },
+    {
+      "name": "Ann L. Jaffe",
+      "currentGiving": 1000,
+      "estimatedCapacity": 79805,
+      "gap": 78805,
+      "yearsGiving": 3,
+      "trend": "down"
+    },
+    {
+      "name": "Robert J. Silverman",
+      "currentGiving": 3600,
+      "estimatedCapacity": 56715,
+      "gap": 53115,
+      "yearsGiving": 3,
+      "trend": "up"
+    },
+    {
+      "name": "Harriet Fremland",
+      "currentGiving": 1500,
+      "estimatedCapacity": 54164,
+      "gap": 52664,
+      "yearsGiving": 3,
+      "trend": "flat"
+    },
+    {
+      "name": "Jori Potiker",
+      "currentGiving": 2000,
+      "estimatedCapacity": 47040,
+      "gap": 45040,
+      "yearsGiving": 2,
+      "trend": "flat"
+    },
+    {
+      "name": "Eli O. Meltzer",
+      "currentGiving": 2500,
+      "estimatedCapacity": 47349,
+      "gap": 44849,
+      "yearsGiving": 3,
+      "trend": "flat"
+    },
+    {
+      "name": "Ira Richard Braverman",
+      "currentGiving": 1000,
+      "estimatedCapacity": 34069,
+      "gap": 33069,
+      "yearsGiving": 3,
+      "trend": "flat"
+    },
+    {
+      "name": "Margaret Katleman",
+      "currentGiving": 2000,
+      "estimatedCapacity": 35040,
+      "gap": 33040,
+      "yearsGiving": 3,
+      "trend": "up"
+    },
+    {
+      "name": "William E. Friedel",
+      "currentGiving": 1500,
+      "estimatedCapacity": 33998,
+      "gap": 32498,
+      "yearsGiving": 3,
+      "trend": "up"
+    },
+    {
+      "name": "Hamilton M. Loeb",
+      "currentGiving": 2750,
+      "estimatedCapacity": 34995,
+      "gap": 32245,
+      "yearsGiving": 2,
+      "trend": "up"
+    },
+    {
+      "name": "Judy R Adler",
+      "currentGiving": 1800,
+      "estimatedCapacity": 33735,
+      "gap": 31935,
+      "yearsGiving": 2,
+      "trend": "up"
+    },
+    {
+      "name": "Joshua Weinman",
+      "currentGiving": 1000,
+      "estimatedCapacity": 32738,
+      "gap": 31738,
+      "yearsGiving": 2,
+      "trend": "up"
+    },
+    {
+      "name": "David Bramzon",
+      "currentGiving": 1800,
+      "estimatedCapacity": 33280,
+      "gap": 31480,
+      "yearsGiving": 3,
+      "trend": "down"
+    },
+    {
+      "name": "Ronald I. Simon",
+      "currentGiving": 3000,
+      "estimatedCapacity": 30075,
+      "gap": 27075,
+      "yearsGiving": 3,
+      "trend": "flat"
+    },
+    {
+      "name": "Norman M. Rozansky",
+      "currentGiving": 2500,
+      "estimatedCapacity": 29216,
+      "gap": 26716,
+      "yearsGiving": 3,
+      "trend": "up"
+    },
+    {
+      "name": "Leah Shapov Z\"L",
+      "currentGiving": 4243,
+      "estimatedCapacity": 30907,
+      "gap": 26664,
+      "yearsGiving": 3,
+      "trend": "down"
+    },
+    {
+      "name": "Robert L. Blumberg",
+      "currentGiving": 3600,
+      "estimatedCapacity": 30008,
+      "gap": 26408,
+      "yearsGiving": 3,
+      "trend": "flat"
+    },
+    {
+      "name": "Paul Neustein",
+      "currentGiving": 1200,
+      "estimatedCapacity": 25027,
+      "gap": 23827,
+      "yearsGiving": 3,
+      "trend": "down"
+    },
+    {
+      "name": "Franklin Borkat",
+      "currentGiving": 2000,
+      "estimatedCapacity": 25260,
+      "gap": 23260,
+      "yearsGiving": 3,
+      "trend": "flat"
+    },
+    {
+      "name": "Howard Bear",
+      "currentGiving": 1800,
+      "estimatedCapacity": 24483,
+      "gap": 22683,
+      "yearsGiving": 3,
+      "trend": "up"
+    },
+    {
+      "name": "Martin M. Ehrlich",
+      "currentGiving": 1000,
+      "estimatedCapacity": 20681,
+      "gap": 19681,
+      "yearsGiving": 2,
+      "trend": "flat"
+    },
+    {
+      "name": "David I. Geffen",
+      "currentGiving": 4000,
+      "estimatedCapacity": 23588,
+      "gap": 19588,
+      "yearsGiving": 3,
+      "trend": "up"
+    },
+    {
+      "name": "Susie B. Meltzer",
+      "currentGiving": 2500,
+      "estimatedCapacity": 21344,
+      "gap": 18844,
+      "yearsGiving": 3,
+      "trend": "up"
+    },
+    {
+      "name": "Mark A. Hoffman",
+      "currentGiving": 2400,
+      "estimatedCapacity": 20258,
+      "gap": 17858,
+      "yearsGiving": 3,
+      "trend": "flat"
+    },
+    {
+      "name": "Steven Brozinsky",
+      "currentGiving": 4000,
+      "estimatedCapacity": 21351,
+      "gap": 17351,
+      "yearsGiving": 2,
+      "trend": "up"
+    },
+    {
+      "name": "Avrille Copans",
+      "currentGiving": 3600,
+      "estimatedCapacity": 20788,
+      "gap": 17188,
+      "yearsGiving": 3,
+      "trend": "down"
+    },
+    {
+      "name": "Qualcomm Matching Gift Program",
+      "currentGiving": 3084,
+      "estimatedCapacity": 19516,
+      "gap": 16432,
+      "yearsGiving": 1,
+      "trend": "up"
+    },
+    {
+      "name": "Beverly Hecker Bernstein",
+      "currentGiving": 1000,
+      "estimatedCapacity": 17370,
+      "gap": 16370,
+      "yearsGiving": 1,
+      "trend": "up"
+    },
+    {
+      "name": "Hano A. Siegel",
+      "currentGiving": 1084,
+      "estimatedCapacity": 17005,
+      "gap": 15921,
+      "yearsGiving": 3,
+      "trend": "flat"
+    },
+    {
+      "name": "Richard D. Perlman",
+      "currentGiving": 2000,
+      "estimatedCapacity": 17769,
+      "gap": 15769,
+      "yearsGiving": 2,
+      "trend": "up"
+    },
+    {
+      "name": "Uri Feldman",
+      "currentGiving": 1980,
+      "estimatedCapacity": 17580,
+      "gap": 15600,
+      "yearsGiving": 2,
+      "trend": "up"
+    },
+    {
+      "name": "Charles R. Kossman",
+      "currentGiving": 1200,
+      "estimatedCapacity": 16462,
+      "gap": 15262,
+      "yearsGiving": 2,
+      "trend": "flat"
+    },
+    {
+      "name": "Martin Lawson",
+      "currentGiving": 3960,
+      "estimatedCapacity": 18834,
+      "gap": 14874,
+      "yearsGiving": 3,
+      "trend": "flat"
+    },
+    {
+      "name": "Diana L. Hahn",
+      "currentGiving": 1550,
+      "estimatedCapacity": 16328,
+      "gap": 14778,
+      "yearsGiving": 2,
+      "trend": "flat"
+    },
+    {
+      "name": "Mr Gordon L L. Gerson",
+      "currentGiving": 1036,
+      "estimatedCapacity": 15711,
+      "gap": 14675,
+      "yearsGiving": 3,
+      "trend": "flat"
+    },
+    {
+      "name": "Steven Oberman",
+      "currentGiving": 2000,
+      "estimatedCapacity": 16055,
+      "gap": 14055,
+      "yearsGiving": 3,
+      "trend": "flat"
+    },
+    {
+      "name": "Jerome N. Eisman",
+      "currentGiving": 1250,
+      "estimatedCapacity": 14963,
+      "gap": 13713,
+      "yearsGiving": 2,
+      "trend": "flat"
+    },
+    {
+      "name": "Ron S. Zollman",
+      "currentGiving": 1500,
+      "estimatedCapacity": 14657,
+      "gap": 13157,
+      "yearsGiving": 2,
+      "trend": "up"
+    },
+    {
+      "name": "Paul Treger",
+      "currentGiving": 2400,
+      "estimatedCapacity": 14203,
+      "gap": 11803,
+      "yearsGiving": 3,
+      "trend": "up"
+    },
+    {
+      "name": "Ralph Dalin",
+      "currentGiving": 1300,
+      "estimatedCapacity": 12928,
+      "gap": 11628,
+      "yearsGiving": 3,
+      "trend": "up"
+    },
+    {
+      "name": "Mindy Gold",
+      "currentGiving": 1000,
+      "estimatedCapacity": 12432,
+      "gap": 11432,
+      "yearsGiving": 3,
+      "trend": "down"
+    },
+    {
+      "name": "Charlotte Siegel",
+      "currentGiving": 1084,
+      "estimatedCapacity": 12405,
+      "gap": 11321,
+      "yearsGiving": 3,
+      "trend": "flat"
+    },
+    {
+      "name": "Jerri Pittluck Lasser",
+      "currentGiving": 2000,
+      "estimatedCapacity": 13230,
+      "gap": 11230,
+      "yearsGiving": 3,
+      "trend": "down"
+    },
+    {
+      "name": "Richard Kaufman",
+      "currentGiving": 1500,
+      "estimatedCapacity": 12573,
+      "gap": 11073,
+      "yearsGiving": 3,
+      "trend": "flat"
+    },
+    {
+      "name": "Ronnie Diamond",
+      "currentGiving": 1800,
+      "estimatedCapacity": 12322,
+      "gap": 10522,
+      "yearsGiving": 3,
+      "trend": "flat"
+    },
+    {
+      "name": "Congregation Beth Israel",
+      "currentGiving": 1800,
+      "estimatedCapacity": 11668,
+      "gap": 9868,
+      "yearsGiving": 3,
+      "trend": "up"
+    },
+    {
+      "name": "Alex B. Scheingross",
+      "currentGiving": 1175,
+      "estimatedCapacity": 10951,
+      "gap": 9776,
+      "yearsGiving": 3,
+      "trend": "down"
+    },
+    {
+      "name": "Michael G Bark",
+      "currentGiving": 1563,
+      "estimatedCapacity": 10969,
+      "gap": 9406,
+      "yearsGiving": 3,
+      "trend": "down"
+    },
+    {
+      "name": "Gillian Vapnek",
+      "currentGiving": 4500,
+      "estimatedCapacity": 13721,
+      "gap": 9221,
+      "yearsGiving": 3,
+      "trend": "up"
+    },
+    {
+      "name": "Sheldon Derezin",
+      "currentGiving": 2000,
+      "estimatedCapacity": 11160,
+      "gap": 9160,
+      "yearsGiving": 1,
+      "trend": "up"
+    }
+  ],
+  "majorDonorPipeline": [
+    {
+      "name": "Gary Evan Jacobs",
+      "capacity": 3551052,
+      "capacityTier": "$1M+",
+      "currentFY26": 80000,
+      "priorFY25": 358250,
+      "email": "gary.e.jacobs@jacobsllc.com",
+      "phone": ""
+    },
+    {
+      "name": "Irwin M. Jacobs",
+      "capacity": 2757300,
+      "capacityTier": "$1M+",
+      "currentFY26": 0,
+      "priorFY25": 125000,
+      "email": "irwin242@gmail.com",
+      "phone": "(858)658-4804"
+    },
+    {
+      "name": "Ernest S. Rady",
+      "capacity": 1321671,
+      "capacityTier": "$1M+",
+      "currentFY26": 5000,
+      "priorFY25": 1000000,
+      "email": "erady@americanassets.com",
+      "phone": "(858) 454-1469"
+    },
+    {
+      "name": "Jacqueline Woolf Z\"L",
+      "capacity": 682737,
+      "capacityTier": "$500K+",
+      "currentFY26": 0,
+      "priorFY25": 0,
+      "email": "jwoolf@argen.com",
+      "phone": ""
+    },
+    {
+      "name": "Marjorie Kalmanson",
+      "capacity": 426014,
+      "capacityTier": "$250K+",
+      "currentFY26": 10000,
+      "priorFY25": 0,
+      "email": "mk4chocs@aol.com",
+      "phone": "6199870776"
+    },
+    {
+      "name": "Esther Fischer",
+      "capacity": 400572,
+      "capacityTier": "$250K+",
+      "currentFY26": 35000,
+      "priorFY25": 35000,
+      "email": "estherfischer1001@gmail.com",
+      "phone": "(619) 743-2765"
+    },
+    {
+      "name": "Robert A. Rubenstein",
+      "capacity": 370113,
+      "capacityTier": "$250K+",
+      "currentFY26": 5000,
+      "priorFY25": 50000,
+      "email": "rar@cuidadocorp.com",
+      "phone": ""
+    },
+    {
+      "name": "Jack M. Schuster",
+      "capacity": 347307,
+      "capacityTier": "$250K+",
+      "currentFY26": 50000,
+      "priorFY25": 42000,
+      "email": "jms1046@gmail.com",
+      "phone": ""
+    },
+    {
+      "name": "David Shlomo Kabakoff",
+      "capacity": 317958,
+      "capacityTier": "$250K+",
+      "currentFY26": 36000,
+      "priorFY25": 36180,
+      "email": "dkabakoff@cox.net",
+      "phone": "(858)756-6588"
+    },
+    {
+      "name": "Phil de Toledo",
+      "capacity": 297000,
+      "capacityTier": "$250K+",
+      "currentFY26": 50000,
+      "priorFY25": 50000,
+      "email": "phil@detoledo.net",
+      "phone": "(818) 438-5170"
+    },
+    {
+      "name": "Elliot Feuerstein",
+      "capacity": 294100,
+      "capacityTier": "$250K+",
+      "currentFY26": 25000,
+      "priorFY25": 25000,
+      "email": "elliot.feuerstein@gmail.com",
+      "phone": "(858)271-4682"
+    },
+    {
+      "name": "Jeremy Berg",
+      "capacity": 285620,
+      "capacityTier": "$250K+",
+      "currentFY26": 10000,
+      "priorFY25": 10000,
+      "email": "jeremy@inlandindustries.com",
+      "phone": "(619)398-2580"
+    },
+    {
+      "name": "Diane Feuerstein",
+      "capacity": 252455,
+      "capacityTier": "$250K+",
+      "currentFY26": 50000,
+      "priorFY25": 25000,
+      "email": "dif678@aol.com",
+      "phone": "(858) 456-7586"
+    },
+    {
+      "name": "Valerie Marie Viterbi",
+      "capacity": 247919,
+      "capacityTier": "$100K+",
+      "currentFY26": 75000,
+      "priorFY25": 46950,
+      "email": "valeriemarie@hotmail.com",
+      "phone": "(858)775-8184"
+    },
+    {
+      "name": "Elene Solomon Z\"L",
+      "capacity": 238200,
+      "capacityTier": "$100K+",
+      "currentFY26": 27500,
+      "priorFY25": 55000,
+      "email": "",
+      "phone": ""
+    },
+    {
+      "name": "Sherron C. Schuster",
+      "capacity": 231885,
+      "capacityTier": "$100K+",
+      "currentFY26": 50000,
+      "priorFY25": 100,
+      "email": "sherron1046@gmail.com",
+      "phone": ""
+    },
+    {
+      "name": "American Endowment Foundation",
+      "capacity": 210000,
+      "capacityTier": "$100K+",
+      "currentFY26": 50000,
+      "priorFY25": 0,
+      "email": "",
+      "phone": "8884404233"
+    },
+    {
+      "name": "Jeffrey H. Silberman",
+      "capacity": 207986,
+      "capacityTier": "$100K+",
+      "currentFY26": 30116,
+      "priorFY25": 30117,
+      "email": "jeffs@carletonmgmt.com",
+      "phone": "(619) 933-4730"
+    },
+    {
+      "name": "Cecile B. Jordan",
+      "capacity": 200787,
+      "capacityTier": "$100K+",
+      "currentFY26": 360,
+      "priorFY25": 200787,
+      "email": "cjandrjdame@gmail.com",
+      "phone": ""
+    },
+    {
+      "name": "Edgar F. Berner",
+      "capacity": 179935,
+      "capacityTier": "$100K+",
+      "currentFY26": 7229,
+      "priorFY25": 7515,
+      "email": "ed@bernerconsult.com",
+      "phone": "(858)863-4053"
+    },
+    {
+      "name": "Charles Wax",
+      "capacity": 160404,
+      "capacityTier": "$100K+",
+      "currentFY26": 0,
+      "priorFY25": 180,
+      "email": "doris@waxie2.com",
+      "phone": "(619) 987-9106"
+    },
+    {
+      "name": "Rebecca Newman Z\"L",
+      "capacity": 158310,
+      "capacityTier": "$100K+",
+      "currentFY26": 0,
+      "priorFY25": 50000,
+      "email": "rrnewman@san.rr.com",
+      "phone": ""
+    },
+    {
+      "name": "Richard Gabriel",
+      "capacity": 150000,
+      "capacityTier": "$100K+",
+      "currentFY26": 50000,
+      "priorFY25": 0,
+      "email": "richardg@colrich.com",
+      "phone": ""
+    },
+    {
+      "name": "Cindy Bloch",
+      "capacity": 142050,
+      "capacityTier": "$100K+",
+      "currentFY26": 0,
+      "priorFY25": 12500,
+      "email": "bloch.cindy@gmail.com",
+      "phone": ""
+    },
+    {
+      "name": "Anton Woolf",
+      "capacity": 141142,
+      "capacityTier": "$100K+",
+      "currentFY26": 0,
+      "priorFY25": 0,
+      "email": "awoolf@argen.com",
+      "phone": "(858)405-9479"
+    },
+    {
+      "name": "Family of Endowments",
+      "capacity": 139761,
+      "capacityTier": "$100K+",
+      "currentFY26": 0,
+      "priorFY25": 0,
+      "email": "",
+      "phone": ""
+    },
+    {
+      "name": "Reina Shteremberg",
+      "capacity": 135631,
+      "capacityTier": "$100K+",
+      "currentFY26": 0,
+      "priorFY25": 252,
+      "email": "rshtere@gmail.com",
+      "phone": ""
+    },
+    {
+      "name": "Susanna Karney Flaster",
+      "capacity": 132059,
+      "capacityTier": "$100K+",
+      "currentFY26": 18000,
+      "priorFY25": 18000,
+      "email": "skflaster@gmail.com",
+      "phone": ""
+    },
+    {
+      "name": "Marcia Hazan",
+      "capacity": 131868,
+      "capacityTier": "$100K+",
+      "currentFY26": 60233,
+      "priorFY25": 60333,
+      "email": "marcia.hazan@me.com",
+      "phone": "(858) 735-9361"
+    },
+    {
+      "name": "Sandra Levinson",
+      "capacity": 129170,
+      "capacityTier": "$100K+",
+      "currentFY26": 5000,
+      "priorFY25": 5000,
+      "email": "slev1@mac.com",
+      "phone": ""
+    },
+    {
+      "name": "Rita S. Hartman Z\"L",
+      "capacity": 125000,
+      "capacityTier": "$100K+",
+      "currentFY26": 0,
+      "priorFY25": 125000,
+      "email": "",
+      "phone": ""
+    },
+    {
+      "name": "Karen Foster Silberman",
+      "capacity": 124472,
+      "capacityTier": "$100K+",
+      "currentFY26": 30116,
+      "priorFY25": 30116,
+      "email": "karens@carletonmgmt.com",
+      "phone": ""
+    },
+    {
+      "name": "Evelyn Rady",
+      "capacity": 122700,
+      "capacityTier": "$100K+",
+      "currentFY26": 5000,
+      "priorFY25": 0,
+      "email": "erady1@gmail.com",
+      "phone": ""
+    },
+    {
+      "name": "Richard A. Katz",
+      "capacity": 114858,
+      "capacityTier": "$100K+",
+      "currentFY26": 0,
+      "priorFY25": 0,
+      "email": "sdkatzr@aol.com",
+      "phone": ""
+    },
+    {
+      "name": "Shana Lew",
+      "capacity": 114854,
+      "capacityTier": "$100K+",
+      "currentFY26": 0,
+      "priorFY25": 21800,
+      "email": "shanaplew@gmail.com",
+      "phone": "(858)794-7947"
+    },
+    {
+      "name": "Allison Price",
+      "capacity": 111996,
+      "capacityTier": "$100K+",
+      "currentFY26": 12500,
+      "priorFY25": 12500,
+      "email": "pma7051@gmail.com",
+      "phone": ""
+    },
+    {
+      "name": "Wayne Millard Harris",
+      "capacity": 110153,
+      "capacityTier": "$100K+",
+      "currentFY26": 30000,
+      "priorFY25": 30000,
+      "email": "wayne@harris95.com",
+      "phone": "(858)793-7617"
+    },
+    {
+      "name": "Robert Singer",
+      "capacity": 109500,
+      "capacityTier": "$100K+",
+      "currentFY26": 5000,
+      "priorFY25": 5000,
+      "email": "rsingermd@aol.com",
+      "phone": ""
+    },
+    {
+      "name": "Lara Woolf Grusd",
+      "capacity": 103033,
+      "capacityTier": "$100K+",
+      "currentFY26": 5210,
+      "priorFY25": 5000,
+      "email": "larazwg@gmail.com",
+      "phone": ""
+    },
+    {
+      "name": "Andrea Oster",
+      "capacity": 100364,
+      "capacityTier": "$100K+",
+      "currentFY26": 0,
+      "priorFY25": 18000,
+      "email": "andreaoster3@gmail.com",
+      "phone": ""
+    },
+    {
+      "name": "Ronald J. Cohn",
+      "capacity": 100050,
+      "capacityTier": "$100K+",
+      "currentFY26": 45000,
+      "priorFY25": 5000,
+      "email": "cohnrj@yahoo.com",
+      "phone": ""
+    },
+    {
+      "name": "Stephen P. Cushman",
+      "capacity": 100000,
+      "capacityTier": "$100K+",
+      "currentFY26": 0,
+      "priorFY25": 0,
+      "email": "",
+      "phone": ""
+    }
+  ],
+  "givingVsCapacity": [
+    {
+      "level": "$0",
+      "donors": 2926,
+      "avgGiving": 0,
+      "avgCapacity": 3130
+    },
+    {
+      "level": "$1-999",
+      "donors": 625,
+      "avgGiving": 251,
+      "avgCapacity": 2172
+    },
+    {
+      "level": "$1K-4,999",
+      "donors": 230,
+      "avgGiving": 1750,
+      "avgCapacity": 8816
+    },
+    {
+      "level": "$5K-24,999",
+      "donors": 163,
+      "avgGiving": 8430,
+      "avgCapacity": 44112
+    },
+    {
+      "level": "$25K-99,999",
+      "donors": 30,
+      "avgGiving": 42908,
+      "avgCapacity": 263246
+    },
+    {
+      "level": "$100K+",
+      "donors": 8,
+      "avgGiving": 554216,
+      "avgCapacity": 1215703
+    }
+  ],
+  "trajectoryAnalysis": [
+    {
+      "name": "Jewish Community Foundation",
+      "fy24": 1218500,
+      "fy25": 1321471,
+      "fy26": 1350395,
+      "trajectory": "increasing"
+    },
+    {
+      "name": "Dana Zeff",
+      "fy24": 800000,
+      "fy25": 750000,
+      "fy26": 750000,
+      "trajectory": "stable"
+    },
+    {
+      "name": "Andrew James Viterbi",
+      "fy24": 3750000,
+      "fy25": 250000,
+      "fy26": 750000,
+      "trajectory": "increasing"
+    },
+    {
+      "name": "Elaine Galinson",
+      "fy24": 1000000,
+      "fy25": 500100,
+      "fy26": 500000,
+      "trajectory": "decreasing"
+    },
+    {
+      "name": "Alan Viterbi",
+      "fy24": 975000,
+      "fy25": 25000,
+      "fy26": 475000,
+      "trajectory": "increasing"
+    },
+    {
+      "name": "Gary Shekhter",
+      "fy24": 663773,
+      "fy25": 333333,
+      "fy26": 333333,
+      "trajectory": "increasing"
+    },
+    {
+      "name": "Herbert J. Solomon",
+      "fy24": 100000,
+      "fy25": 230000,
+      "fy26": 165000,
+      "trajectory": "decreasing"
+    },
+    {
+      "name": "Susan Rachelle Chortek Weisman",
+      "fy24": 10000,
+      "fy25": 10000,
+      "fy26": 110000,
+      "trajectory": "increasing"
+    },
+    {
+      "name": "Gary Evan Jacobs",
+      "fy24": 803826,
+      "fy25": 358250,
+      "fy26": 80000,
+      "trajectory": "decreasing"
+    },
+    {
+      "name": "Anonymous Anonymous",
+      "fy24": 0,
+      "fy25": 0,
+      "fy26": 77975,
+      "trajectory": "increasing"
+    },
+    {
+      "name": "Valerie Marie Viterbi",
+      "fy24": 100000,
+      "fy25": 46950,
+      "fy26": 75000,
+      "trajectory": "increasing"
+    },
+    {
+      "name": "Jules & Gwen Knapp Family Foundation",
+      "fy24": 0,
+      "fy25": 0,
+      "fy26": 75000,
+      "trajectory": "increasing"
+    },
+    {
+      "name": "Marcia Hazan",
+      "fy24": 180,
+      "fy25": 60333,
+      "fy26": 60233,
+      "trajectory": "decreasing"
+    },
+    {
+      "name": "Fidelity Charitable Trust",
+      "fy24": 0,
+      "fy25": 3500,
+      "fy26": 58223,
+      "trajectory": "increasing"
+    },
+    {
+      "name": "Sherron C. Schuster",
+      "fy24": 0,
+      "fy25": 100,
+      "fy26": 50000,
+      "trajectory": "increasing"
+    },
+    {
+      "name": "Richard Gabriel",
+      "fy24": 150000,
+      "fy25": 0,
+      "fy26": 50000,
+      "trajectory": "increasing"
+    },
+    {
+      "name": "Phil de Toledo",
+      "fy24": 220000,
+      "fy25": 50000,
+      "fy26": 50000,
+      "trajectory": "stable"
+    },
+    {
+      "name": "Shayna Davis-Schreiber",
+      "fy24": 0,
+      "fy25": 50000,
+      "fy26": 50000,
+      "trajectory": "stable"
+    },
+    {
+      "name": "Jack M. Schuster",
+      "fy24": 47000,
+      "fy25": 42000,
+      "fy26": 50000,
+      "trajectory": "increasing"
+    },
+    {
+      "name": "American Endowment Foundation",
+      "fy24": 0,
+      "fy25": 0,
+      "fy26": 50000,
+      "trajectory": "increasing"
+    },
+    {
+      "name": "Diane Feuerstein",
+      "fy24": 40000,
+      "fy25": 25000,
+      "fy26": 50000,
+      "trajectory": "increasing"
+    },
+    {
+      "name": "Ronald J. Cohn",
+      "fy24": 0,
+      "fy25": 5000,
+      "fy26": 45000,
+      "trajectory": "increasing"
+    },
+    {
+      "name": "Andrew Garman",
+      "fy24": 18000,
+      "fy25": 18000,
+      "fy26": 36000,
+      "trajectory": "increasing"
+    },
+    {
+      "name": "David Shlomo Kabakoff",
+      "fy24": 36165,
+      "fy25": 36180,
+      "fy26": 36000,
+      "trajectory": "decreasing"
+    },
+    {
+      "name": "Sonia Ancoli Israel",
+      "fy24": 36000,
+      "fy25": 36000,
+      "fy26": 36000,
+      "trajectory": "stable"
+    },
+    {
+      "name": "Esther Fischer",
+      "fy24": 70000,
+      "fy25": 35000,
+      "fy26": 35000,
+      "trajectory": "stable"
+    },
+    {
+      "name": "Karen Foster Silberman",
+      "fy24": 0,
+      "fy25": 30116,
+      "fy26": 30116,
+      "trajectory": "stable"
+    },
+    {
+      "name": "Jeffrey H. Silberman",
+      "fy24": 0,
+      "fy25": 30117,
+      "fy26": 30116,
+      "trajectory": "decreasing"
+    },
+    {
+      "name": "AmandaLynn MacLeod",
+      "fy24": 6480,
+      "fy25": 10000,
+      "fy26": 30075,
+      "trajectory": "increasing"
+    },
+    {
+      "name": "Wayne Millard Harris",
+      "fy24": 60000,
+      "fy25": 30000,
+      "fy26": 30000,
+      "trajectory": "stable"
+    },
+    {
+      "name": "Elene Solomon Z\"L",
+      "fy24": 0,
+      "fy25": 55000,
+      "fy26": 27500,
+      "trajectory": "decreasing"
+    },
+    {
+      "name": "Barry J. Galgut",
+      "fy24": 20000,
+      "fy25": 25180,
+      "fy26": 25000,
+      "trajectory": "decreasing"
+    },
+    {
+      "name": "Morgan Stanley Private Wealth Management",
+      "fy24": 25000,
+      "fy25": 0,
+      "fy26": 25000,
+      "trajectory": "increasing"
+    },
+    {
+      "name": "Sheryl J. Kaufman",
+      "fy24": 10000,
+      "fy25": 77500,
+      "fy26": 25000,
+      "trajectory": "decreasing"
+    },
+    {
+      "name": "Sandra Hooper",
+      "fy24": 0,
+      "fy25": 0,
+      "fy26": 25000,
+      "trajectory": "increasing"
+    },
+    {
+      "name": "Klaff Family Foundation",
+      "fy24": 0,
+      "fy25": 0,
+      "fy26": 25000,
+      "trajectory": "increasing"
+    },
+    {
+      "name": "Mitchell Siegler",
+      "fy24": 32000,
+      "fy25": 50000,
+      "fy26": 25000,
+      "trajectory": "decreasing"
+    },
+    {
+      "name": "Elliot Feuerstein",
+      "fy24": 40000,
+      "fy25": 25000,
+      "fy26": 25000,
+      "trajectory": "stable"
+    },
+    {
+      "name": "Judi Gottschalk",
+      "fy24": 13600,
+      "fy25": 5000,
+      "fy26": 20000,
+      "trajectory": "increasing"
+    },
+    {
+      "name": "Jessica Effress",
+      "fy24": 10000,
+      "fy25": 20000,
+      "fy26": 20000,
+      "trajectory": "stable"
+    },
+    {
+      "name": "Kevin A. Wechter",
+      "fy24": 30000,
+      "fy25": 15000,
+      "fy26": 20000,
+      "trajectory": "increasing"
+    },
+    {
+      "name": "Ira Cohen",
+      "fy24": 60000,
+      "fy25": 30000,
+      "fy26": 20000,
+      "trajectory": "decreasing"
+    },
+    {
+      "name": "Spielman Family Foundation",
+      "fy24": 0,
+      "fy25": 0,
+      "fy26": 19500,
+      "trajectory": "increasing"
+    },
+    {
+      "name": "Susanna Karney Flaster",
+      "fy24": 14000,
+      "fy25": 18000,
+      "fy26": 18000,
+      "trajectory": "stable"
+    },
+    {
+      "name": "Vanguard Charitable",
+      "fy24": 0,
+      "fy25": 0,
+      "fy26": 18000,
+      "trajectory": "increasing"
+    },
+    {
+      "name": "Graeme Gabriel",
+      "fy24": 72000,
+      "fy25": 180,
+      "fy26": 18000,
+      "trajectory": "increasing"
+    },
+    {
+      "name": "Allie Beth Hauser Erickson",
+      "fy24": 7018,
+      "fy25": 16582,
+      "fy26": 18000,
+      "trajectory": "increasing"
+    },
+    {
+      "name": "Arlene Rosen",
+      "fy24": 20000,
+      "fy25": 11500,
+      "fy26": 16749,
+      "trajectory": "increasing"
+    },
+    {
+      "name": "Heidi Gantwerk",
+      "fy24": 24220,
+      "fy25": 21893,
+      "fy26": 16500,
+      "trajectory": "decreasing"
+    },
+    {
+      "name": "Gary Levine",
+      "fy24": 31000,
+      "fy25": 16500,
+      "fy26": 16500,
+      "trajectory": "stable"
+    },
+    {
+      "name": "Arlene Navias",
+      "fy24": 11000,
+      "fy25": 15020,
+      "fy26": 16340,
+      "trajectory": "increasing"
+    },
+    {
+      "name": "The San Diego Foundation",
+      "fy24": 0,
+      "fy25": 25000,
+      "fy26": 16340,
+      "trajectory": "decreasing"
+    },
+    {
+      "name": "The Howard G. And Samita B. Jacobs Foundation",
+      "fy24": 16000,
+      "fy25": 16000,
+      "fy26": 16000,
+      "trajectory": "stable"
+    },
+    {
+      "name": "Barbara Sherman",
+      "fy24": 10000,
+      "fy25": 0,
+      "fy26": 15625,
+      "trajectory": "increasing"
+    },
+    {
+      "name": "Lawrence M. Sherman",
+      "fy24": 0,
+      "fy25": 12500,
+      "fy26": 15625,
+      "trajectory": "increasing"
+    },
+    {
+      "name": "Terry R. Klitzner",
+      "fy24": 10000,
+      "fy25": 10000,
+      "fy26": 15000,
+      "trajectory": "increasing"
+    },
+    {
+      "name": "Charlene Ida Seidle",
+      "fy24": 7200,
+      "fy25": 10000,
+      "fy26": 13906,
+      "trajectory": "increasing"
+    },
+    {
+      "name": "Dafgiving360",
+      "fy24": 0,
+      "fy25": 30000,
+      "fy26": 13780,
+      "trajectory": "decreasing"
+    },
+    {
+      "name": "Daniel Einhorn",
+      "fy24": 32500,
+      "fy25": 0,
+      "fy26": 13000,
+      "trajectory": "increasing"
+    },
+    {
+      "name": "Silvana Anna Christy",
+      "fy24": 14000,
+      "fy25": 11036,
+      "fy26": 12800,
+      "trajectory": "increasing"
+    },
+    {
+      "name": "Allison Price",
+      "fy24": 25000,
+      "fy25": 12500,
+      "fy26": 12500,
+      "trajectory": "stable"
+    },
+    {
+      "name": "Richard Bockoff",
+      "fy24": 15000,
+      "fy25": 0,
+      "fy26": 12000,
+      "trajectory": "increasing"
+    },
+    {
+      "name": "Jeff M. Schindler",
+      "fy24": 20000,
+      "fy25": 12000,
+      "fy26": 12000,
+      "trajectory": "stable"
+    },
+    {
+      "name": "Raulf Polichar",
+      "fy24": 10000,
+      "fy25": 12000,
+      "fy26": 12000,
+      "trajectory": "stable"
+    },
+    {
+      "name": "Danielle Weizman",
+      "fy24": 5180,
+      "fy25": 7680,
+      "fy26": 12000,
+      "trajectory": "increasing"
+    },
+    {
+      "name": "Sharon Polichar",
+      "fy24": 0,
+      "fy25": 0,
+      "fy26": 12000,
+      "trajectory": "increasing"
+    },
+    {
+      "name": "Susana Cohen Corrigan",
+      "fy24": 20000,
+      "fy25": 10180,
+      "fy26": 11800,
+      "trajectory": "increasing"
+    },
+    {
+      "name": "Emily R Jennewein",
+      "fy24": 750,
+      "fy25": 1038,
+      "fy26": 10521,
+      "trajectory": "increasing"
+    },
+    {
+      "name": "Jack Maizel",
+      "fy24": 20000,
+      "fy25": 10000,
+      "fy26": 10250,
+      "trajectory": "increasing"
+    },
+    {
+      "name": "Stacy Rosenberg",
+      "fy24": 5000,
+      "fy25": 10189,
+      "fy26": 10189,
+      "trajectory": "stable"
+    },
+    {
+      "name": "Linda Platt",
+      "fy24": 10000,
+      "fy25": 10000,
+      "fy26": 10000,
+      "trajectory": "increasing"
+    },
+    {
+      "name": "Lauren Cohen",
+      "fy24": 0,
+      "fy25": 0,
+      "fy26": 10000,
+      "trajectory": "increasing"
+    },
+    {
+      "name": "Marjorie Kalmanson",
+      "fy24": 55000,
+      "fy25": 0,
+      "fy26": 10000,
+      "trajectory": "increasing"
+    },
+    {
+      "name": "Lisa Beth Pearl",
+      "fy24": 7000,
+      "fy25": 6000,
+      "fy26": 10000,
+      "trajectory": "increasing"
+    },
+    {
+      "name": "Gail Satter",
+      "fy24": 0,
+      "fy25": 0,
+      "fy26": 10000,
+      "trajectory": "increasing"
+    },
+    {
+      "name": "Erica Weinberg",
+      "fy24": 0,
+      "fy25": 1800,
+      "fy26": 10000,
+      "trajectory": "increasing"
+    },
+    {
+      "name": "Selwyn Isakow",
+      "fy24": 15144,
+      "fy25": 6180,
+      "fy26": 10000,
+      "trajectory": "increasing"
+    },
+    {
+      "name": "The Stein Family Foundation",
+      "fy24": 0,
+      "fy25": 0,
+      "fy26": 10000,
+      "trajectory": "increasing"
+    },
+    {
+      "name": "Hilary Isakow",
+      "fy24": 5000,
+      "fy25": 6036,
+      "fy26": 10000,
+      "trajectory": "increasing"
+    },
+    {
+      "name": "Howard A Katz",
+      "fy24": 5000,
+      "fy25": 5000,
+      "fy26": 10000,
+      "trajectory": "increasing"
+    },
+    {
+      "name": "Rady Foundation",
+      "fy24": 0,
+      "fy25": 0,
+      "fy26": 10000,
+      "trajectory": "increasing"
+    },
+    {
+      "name": "Luis Maizel",
+      "fy24": 50180,
+      "fy25": 0,
+      "fy26": 10000,
+      "trajectory": "increasing"
+    },
+    {
+      "name": "Jeremy Berg",
+      "fy24": 10000,
+      "fy25": 10000,
+      "fy26": 10000,
+      "trajectory": "stable"
+    },
+    {
+      "name": "Dan Gordon Carnick",
+      "fy24": 5000,
+      "fy25": 15000,
+      "fy26": 10000,
+      "trajectory": "decreasing"
+    },
+    {
+      "name": "Jean Somers",
+      "fy24": 0,
+      "fy25": 0,
+      "fy26": 10000,
+      "trajectory": "increasing"
+    },
+    {
+      "name": "Zita Liebermensch",
+      "fy24": 10000,
+      "fy25": 11844,
+      "fy26": 10000,
+      "trajectory": "decreasing"
+    },
+    {
+      "name": "Charlene Zieky",
+      "fy24": 7500,
+      "fy25": 7500,
+      "fy26": 10000,
+      "trajectory": "increasing"
+    },
+    {
+      "name": "Kira Elizabeth Finkenberg",
+      "fy24": 11965,
+      "fy25": 10400,
+      "fy26": 10000,
+      "trajectory": "decreasing"
+    },
+    {
+      "name": "Barbara Bry",
+      "fy24": 10000,
+      "fy25": 10000,
+      "fy26": 10000,
+      "trajectory": "stable"
+    },
+    {
+      "name": "Cheryl Rattner Price",
+      "fy24": 10000,
+      "fy25": 10000,
+      "fy26": 10000,
+      "trajectory": "stable"
+    },
+    {
+      "name": "John D. Freedman",
+      "fy24": 0,
+      "fy25": 0,
+      "fy26": 10000,
+      "trajectory": "increasing"
+    },
+    {
+      "name": "Jackie Stein",
+      "fy24": 0,
+      "fy25": 0,
+      "fy26": 10000,
+      "trajectory": "increasing"
+    },
+    {
+      "name": "Marsha Berkson",
+      "fy24": 20000,
+      "fy25": 10000,
+      "fy26": 10000,
+      "trajectory": "stable"
+    },
+    {
+      "name": "Robyn F. Goldberg",
+      "fy24": 0,
+      "fy25": 0,
+      "fy26": 10000,
+      "trajectory": "increasing"
+    },
+    {
+      "name": "Debbie Ann Deverett",
+      "fy24": 5000,
+      "fy25": 10000,
+      "fy26": 10000,
+      "trajectory": "stable"
+    },
+    {
+      "name": "Charles Tiano",
+      "fy24": 0,
+      "fy25": 0,
+      "fy26": 10000,
+      "trajectory": "increasing"
+    },
+    {
+      "name": "Adam Jacobs",
+      "fy24": 10000,
+      "fy25": 10000,
+      "fy26": 10000,
+      "trajectory": "stable"
+    },
+    {
+      "name": "Suzi Feldman",
+      "fy24": 5036,
+      "fy25": 6000,
+      "fy26": 10000,
+      "trajectory": "increasing"
+    },
+    {
+      "name": "Jan Stiglitz",
+      "fy24": 0,
+      "fy25": 0,
+      "fy26": 10000,
+      "trajectory": "increasing"
+    },
+    {
+      "name": "Laura Galinson",
+      "fy24": 0,
+      "fy25": 180,
+      "fy26": 10000,
+      "trajectory": "increasing"
+    }
+  ],
+  "kpis": {
+    "totalProfiled": 545,
+    "totalCapacityGap": 30539061,
+    "upgradeCount": 109,
+    "avgUpgradeAmount": 14256,
+    "highCapacityNonDonors": 53
+  }
+}
