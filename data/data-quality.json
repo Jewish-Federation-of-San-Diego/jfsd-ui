@@ -1,20 +1,20 @@
 {
-  "asOfDate": "2026-02-24 09:37",
-  "overallScore": 24,
+  "asOfDate": "2026-02-25 11:10",
+  "overallScore": 23,
   "categories": [
     {
       "name": "Contact Completeness",
-      "score": 24,
+      "score": 20,
       "issues": [
         {
           "metric": "Major donors missing email",
-          "count": 20,
+          "count": 21,
           "severity": "high",
           "details": [
             {
               "name": "Anonymous Anonymous",
               "id": "001Uf00000aCXE0IAO",
-              "fy26": 78808.06
+              "fy26": 78988.06
             },
             {
               "name": "Elene Solomon Z\"L",
@@ -32,6 +32,11 @@
               "fy26": 5800.0
             },
             {
+              "name": "Karin Toranto",
+              "id": "001Uf00000qcP2qIAE",
+              "fy26": 5210.3
+            },
+            {
               "name": "Nat Koren",
               "id": "001Uf00000WkQNwIAN",
               "fy26": 5000.0
@@ -47,13 +52,13 @@
               "fy26": 4000.0
             },
             {
-              "name": "Dana Vandersip",
-              "id": "001Uf00000WkM1kIAF",
+              "name": "Edith Koppel",
+              "id": "001Uf00000WkTbLIAV",
               "fy26": 2500.0
             },
             {
-              "name": "Edith Koppel",
-              "id": "001Uf00000WkTbLIAV",
+              "name": "Dana Vandersip",
+              "id": "001Uf00000WkM1kIAF",
               "fy26": 2500.0
             },
             {
@@ -62,23 +67,23 @@
               "fy26": 2160.0
             },
             {
-              "name": "Anne F. Simon",
-              "id": "001Uf00000WkUEsIAN",
-              "fy26": 2000.0
-            },
-            {
               "name": "Sonya H. Borkat",
               "id": "001Uf00000WkOXNIA3",
               "fy26": 2000.0
             },
             {
-              "name": "William Stone",
-              "id": "001Uf00000WkC2JIAV",
+              "name": "Anne F. Simon",
+              "id": "001Uf00000WkUEsIAN",
               "fy26": 2000.0
             },
             {
               "name": "Susan Jacobson",
               "id": "001Uf00000fZYonIAG",
+              "fy26": 2000.0
+            },
+            {
+              "name": "William Stone",
+              "id": "001Uf00000WkC2JIAV",
               "fy26": 2000.0
             },
             {
@@ -105,23 +110,23 @@
               "name": "Marvin Ross",
               "id": "001Uf00000WkJyEIAV",
               "fy26": 1000.0
-            },
-            {
-              "name": "Sally Weinman",
-              "id": "001Uf00000WkFNjIAN",
-              "fy26": 1000.0
             }
           ]
         },
         {
           "metric": "Major donors missing address",
-          "count": 1,
+          "count": 2,
           "severity": "medium",
           "details": [
             {
               "name": "Anonymous Anonymous",
               "id": "001Uf00000aCXE0IAO",
-              "fy26": 78808.06
+              "fy26": 78988.06
+            },
+            {
+              "name": "Karin Toranto",
+              "id": "001Uf00000qcP2qIAE",
+              "fy26": 5210.3
             }
           ]
         },
@@ -136,24 +141,24 @@
               "fy26": 165000.0
             },
             {
-              "name": "Anonymous Anonymous",
-              "id": "001Uf00000aCXE0IAO",
-              "fy26": 78808.06
-            },
-            {
               "name": "Shayna Davis-Schreiber",
               "id": "001Uf00000WkPvSIAV",
-              "fy26": 50000.0
+              "fy26": 100000.0
+            },
+            {
+              "name": "Anonymous Anonymous",
+              "id": "001Uf00000aCXE0IAO",
+              "fy26": 78988.06
+            },
+            {
+              "name": "Karen Foster Silberman",
+              "id": "001Uf00000WkFiIIAV",
+              "fy26": 60233.0
             },
             {
               "name": "Andrew Garman",
               "id": "001Uf00000WkF3JIAV",
               "fy26": 36000.0
-            },
-            {
-              "name": "Karen Foster Silberman",
-              "id": "001Uf00000WkFiIIAV",
-              "fy26": 30116.5
             },
             {
               "name": "Elene Solomon Z\"L",
@@ -171,13 +176,13 @@
               "fy26": 25000.0
             },
             {
-              "name": "Graeme Gabriel",
-              "id": "001Uf00000WjZrnIAF",
+              "name": "Susanna Karney Flaster",
+              "id": "001Uf00000WkGpsIAF",
               "fy26": 18000.0
             },
             {
-              "name": "Susanna Karney Flaster",
-              "id": "001Uf00000WkGpsIAF",
+              "name": "Graeme Gabriel",
+              "id": "001Uf00000WjZrnIAF",
               "fy26": 18000.0
             },
             {
@@ -216,13 +221,13 @@
               "fy26": 10000.0
             },
             {
-              "name": "Adam Jacobs",
-              "id": "001Uf00000WkKVaIAN",
+              "name": "Erica Weinberg",
+              "id": "001Uf00000WkBQRIA3",
               "fy26": 10000.0
             },
             {
-              "name": "Erica Weinberg",
-              "id": "001Uf00000WkBQRIA3",
+              "name": "Adam Jacobs",
+              "id": "001Uf00000WkKVaIAN",
               "fy26": 10000.0
             },
             {
@@ -256,11 +261,11 @@
               "count": 9
             },
             {
-              "name": "David Levy",
+              "name": "Barbara Cohen",
               "count": 8
             },
             {
-              "name": "Barbara Cohen",
+              "name": "David Levy",
               "count": 8
             },
             {
@@ -272,11 +277,11 @@
               "count": 7
             },
             {
-              "name": "Barry Cohen",
+              "name": "Michael Schwartz",
               "count": 6
             },
             {
-              "name": "Michael Schwartz",
+              "name": "Barry Cohen",
               "count": 6
             },
             {
@@ -284,19 +289,27 @@
               "count": 6
             },
             {
+              "name": "Jack Forman",
+              "count": 6
+            },
+            {
               "name": "David Feldman",
               "count": 6
             },
             {
-              "name": "David Goodman",
+              "name": "Barbara Friedman",
               "count": 5
             },
             {
-              "name": "Robert Levy",
+              "name": "Jack Cohen",
               "count": 5
             },
             {
-              "name": "Paul Cohen",
+              "name": "Michael Katz",
+              "count": 5
+            },
+            {
+              "name": "David Schwartz",
               "count": 5
             },
             {
@@ -308,15 +321,7 @@
               "count": 5
             },
             {
-              "name": "Linda Bernstein",
-              "count": 5
-            },
-            {
-              "name": "Sharon Katz",
-              "count": 5
-            },
-            {
-              "name": "Barbara Friedman",
+              "name": "David Goodman",
               "count": 5
             },
             {
@@ -324,7 +329,7 @@
               "count": 5
             }
           ],
-          "totalAffectedRecords": 1952
+          "totalAffectedRecords": 1954
         }
       ]
     },
@@ -617,12 +622,12 @@
   ],
   "trends": [],
   "kpis": {
-    "overallScore": 24,
+    "overallScore": 23,
     "criticalIssues": 0,
-    "highIssues": 171,
-    "mediumIssues": 46,
+    "highIssues": 172,
+    "mediumIssues": 47,
     "lowIssues": 50,
-    "totalRecordsAffected": 267,
-    "totalMajorDonors": 405
+    "totalRecordsAffected": 269,
+    "totalMajorDonors": 409
   }
 }

@@ -1,5 +1,5 @@
 {
-  "asOfDate": "2026-02-24",
+  "asOfDate": "2026-02-25",
   "boards": [
     {
       "name": "Jewish Community Foundation of San Diego",
@@ -8,7 +8,7 @@
       "matchedInSF": 15,
       "gaveFY26": 5,
       "participationRate": 25.0,
-      "totalGiven": 44084.0,
+      "totalGiven": 49084.0,
       "totalFY25": 8150.0,
       "members": [
         {
@@ -22,8 +22,8 @@
           "name": "Judi Gottschalk",
           "role": "",
           "status": "gave",
-          "fy26Amount": 20000.0,
-          "fy25Amount": 5000.0
+          "fy26Amount": 25000.0,
+          "fy25Amount": 0.0
         },
         {
           "name": "Jeff Schindler",
@@ -112,9 +112,9 @@
         {
           "name": "David Wax",
           "role": "",
-          "status": "no-record",
+          "status": "lybunt",
           "fy26Amount": 0.0,
-          "fy25Amount": 0.0
+          "fy25Amount": 180000.0
         },
         {
           "name": "Michael S. Levinson",
@@ -317,16 +317,16 @@
       "shortName": "AJC",
       "totalMembers": 18,
       "matchedInSF": 11,
-      "gaveFY26": 3,
-      "participationRate": 16.7,
-      "totalGiven": 492000.0,
+      "gaveFY26": 4,
+      "participationRate": 22.2,
+      "totalGiven": 1002189.15,
       "totalFY25": 7500.0,
       "members": [
         {
           "name": "Alan Viterbi",
           "role": "Board President",
           "status": "gave",
-          "fy26Amount": 475000.0,
+          "fy26Amount": 975000.0,
           "fy25Amount": 25000.0
         },
         {
@@ -339,9 +339,9 @@
         {
           "name": "Stacy Rosenberg",
           "role": "",
-          "status": "no-record",
-          "fy26Amount": 0.0,
-          "fy25Amount": 0.0
+          "status": "gave",
+          "fy26Amount": 10189.15,
+          "fy25Amount": 10189.15
         },
         {
           "name": "Jeff Schindler",
@@ -453,26 +453,26 @@
   ],
   "campaignSummary": {
     "goal": 9000000,
-    "raised": 4400.0,
+    "raised": 2600.0,
     "pctOfGoal": 0.0,
     "donorCount": 0,
-    "priorYearComparison": 4300.0
+    "priorYearComparison": 2500.0
   },
   "givingLevels": [
     {
       "level": "$100K+",
       "donors": 1,
-      "amount": 475000.0
+      "amount": 975000.0
     },
     {
       "level": "$25K\u2013$99K",
-      "donors": 0,
-      "amount": 0
+      "donors": 1,
+      "amount": 25000.0
     },
     {
       "level": "$10K\u2013$24K",
       "donors": 4,
-      "amount": 54000.0
+      "amount": 44189.15
     },
     {
       "level": "$5K\u2013$9K",
@@ -493,8 +493,8 @@
   "highlights": [
     {
       "metric": "Board Participation",
-      "value": "23.7%",
-      "trend": "down"
+      "value": "25.4%",
+      "trend": "up"
     },
     {
       "metric": "Campaign Progress",
@@ -503,19 +503,19 @@
     },
     {
       "metric": "Board Giving Total",
-      "value": "$554,104",
+      "value": "$1,069,293",
       "trend": "up"
     },
     {
       "metric": "YoY Change",
-      "value": "+3440.6%",
+      "value": "+6732.5%",
       "trend": "up"
     }
   ],
   "kpis": {
-    "overallBoardParticipation": 23.7,
+    "overallBoardParticipation": 25.4,
     "campaignPctOfGoal": 0.0,
-    "totalBoardGiving": 554104.0,
-    "yoyChange": 3440.6
+    "totalBoardGiving": 1069293.15,
+    "yoyChange": 6732.5
   }
 }

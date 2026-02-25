@@ -1,12 +1,12 @@
 {
-  "asOfDate": "2026-02-24T09:37:27.861406",
+  "asOfDate": "2026-02-25T11:10:12.210133",
   "count": 500,
-  "revenueAtRisk": 1881492.5,
+  "revenueAtRisk": 2218111.85,
   "byTier": [
     {
       "tier": "Critical",
-      "count": 99,
-      "revenueAtRisk": 1543848.45,
+      "count": 100,
+      "revenueAtRisk": 1881468.45,
       "color": "#C4314B"
     },
     {
@@ -17,14 +17,14 @@
     },
     {
       "tier": "Medium",
-      "count": 87,
-      "revenueAtRisk": 52442.23,
+      "count": 85,
+      "revenueAtRisk": 51141.58,
       "color": "#C5A258"
     },
     {
       "tier": "Watch",
-      "count": 183,
-      "revenueAtRisk": 46498.75,
+      "count": 184,
+      "revenueAtRisk": 46798.75,
       "color": "#3D8B37"
     }
   ],
@@ -43,10 +43,10 @@
         "41 year relationship at risk",
         "$37,906/yr avg at risk",
         "$1,554,135 lifetime donor",
-        "1380 days since last gift",
+        "1381 days since last gift",
         "Major donor \u2014 immediate outreach needed"
       ],
-      "daysSinceGift": 1380
+      "daysSinceGift": 1381
     },
     {
       "name": "Irwin M. Jacobs",
@@ -62,10 +62,48 @@
         "43 year relationship at risk",
         "$213,744/yr avg at risk",
         "$9,191,000 lifetime donor",
-        "1449 days since last gift",
+        "1450 days since last gift",
         "Major donor \u2014 immediate outreach needed"
       ],
-      "daysSinceGift": 1449
+      "daysSinceGift": 1450
+    },
+    {
+      "name": "Jerri-Ann J Jacobs",
+      "phone": "6198239278",
+      "email": "jerriann@jacobsllc.com",
+      "fy25Amount": 95000.0,
+      "lifetimeGiving": 780043.0,
+      "avgAnnual": 18140.53,
+      "lastGiftDate": "2021-11-23",
+      "riskScore": 100,
+      "riskTier": "Critical",
+      "riskFactors": [
+        "43 year relationship at risk",
+        "$18,141/yr avg at risk",
+        "$780,043 lifetime donor",
+        "1555 days since last gift",
+        "Major donor \u2014 immediate outreach needed"
+      ],
+      "daysSinceGift": 1555
+    },
+    {
+      "name": "Gloria E. Stone",
+      "phone": "",
+      "email": "gestone2@me.com",
+      "fy25Amount": 75000.0,
+      "lifetimeGiving": 1485905.5,
+      "avgAnnual": 32302.29,
+      "lastGiftDate": "2024-10-16",
+      "riskScore": 100,
+      "riskTier": "Critical",
+      "riskFactors": [
+        "46 year relationship at risk",
+        "$32,302/yr avg at risk",
+        "$1,485,906 lifetime donor",
+        "497 days since last gift",
+        "Major donor \u2014 immediate outreach needed"
+      ],
+      "daysSinceGift": 497
     },
     {
       "name": "Lisa Foster",
@@ -81,10 +119,10 @@
         "27 year relationship at risk",
         "$11,849/yr avg at risk",
         "$319,926 lifetime donor",
-        "1406 days since last gift",
+        "1407 days since last gift",
         "Major donor \u2014 immediate outreach needed"
       ],
-      "daysSinceGift": 1406
+      "daysSinceGift": 1407
     },
     {
       "name": "Daniel J. Epstein",
@@ -100,10 +138,10 @@
         "41 year relationship at risk",
         "$28,555/yr avg at risk",
         "$1,170,750 lifetime donor",
-        "616 days since last gift",
+        "617 days since last gift",
         "Major donor \u2014 immediate outreach needed"
       ],
-      "daysSinceGift": 616
+      "daysSinceGift": 617
     },
     {
       "name": "Brian Tauber",
@@ -119,10 +157,10 @@
         "27 year relationship at risk",
         "$37,226/yr avg at risk",
         "$1,005,105 lifetime donor",
-        "1030 days since last gift",
+        "1031 days since last gift",
         "Major donor \u2014 immediate outreach needed"
       ],
-      "daysSinceGift": 1030
+      "daysSinceGift": 1031
     },
     {
       "name": "Donald M. Slate",
@@ -138,10 +176,10 @@
         "32 year relationship at risk",
         "$28,862/yr avg at risk",
         "$923,600 lifetime donor",
-        "1530 days since last gift",
+        "1531 days since last gift",
         "Major donor \u2014 immediate outreach needed"
       ],
-      "daysSinceGift": 1530
+      "daysSinceGift": 1531
     },
     {
       "name": "Esther W. Belinsky",
@@ -157,29 +195,10 @@
         "29 year relationship at risk",
         "$11,421/yr avg at risk",
         "$331,200 lifetime donor",
-        "1377 days since last gift",
+        "1378 days since last gift",
         "Major donor \u2014 immediate outreach needed"
       ],
-      "daysSinceGift": 1377
-    },
-    {
-      "name": "Jerome H. Turk",
-      "phone": "8584147894",
-      "email": "jhturk@gmail.com",
-      "fy25Amount": 25000.0,
-      "lifetimeGiving": 1335515.72,
-      "avgAnnual": 47696.99,
-      "lastGiftDate": "2022-12-07",
-      "riskScore": 100,
-      "riskTier": "Critical",
-      "riskFactors": [
-        "28 year relationship at risk",
-        "$47,697/yr avg at risk",
-        "$1,335,516 lifetime donor",
-        "1175 days since last gift",
-        "Major donor \u2014 immediate outreach needed"
-      ],
-      "daysSinceGift": 1175
+      "daysSinceGift": 1378
     },
     {
       "name": "Howard S. Robin",
@@ -195,10 +214,29 @@
         "43 year relationship at risk",
         "$13,980/yr avg at risk",
         "$601,150 lifetime donor",
-        "833 days since last gift",
+        "834 days since last gift",
         "Major donor \u2014 immediate outreach needed"
       ],
-      "daysSinceGift": 833
+      "daysSinceGift": 834
+    },
+    {
+      "name": "Jerome H. Turk",
+      "phone": "8584147894",
+      "email": "jhturk@gmail.com",
+      "fy25Amount": 25000.0,
+      "lifetimeGiving": 1335515.72,
+      "avgAnnual": 47696.99,
+      "lastGiftDate": "2022-12-07",
+      "riskScore": 100,
+      "riskTier": "Critical",
+      "riskFactors": [
+        "28 year relationship at risk",
+        "$47,697/yr avg at risk",
+        "$1,335,516 lifetime donor",
+        "1176 days since last gift",
+        "Major donor \u2014 immediate outreach needed"
+      ],
+      "daysSinceGift": 1176
     },
     {
       "name": "Phyllis F. Epstein",
@@ -214,10 +252,10 @@
         "43 year relationship at risk",
         "$10,730/yr avg at risk",
         "$461,396 lifetime donor",
-        "818 days since last gift",
+        "819 days since last gift",
         "Major donor \u2014 immediate outreach needed"
       ],
-      "daysSinceGift": 818
+      "daysSinceGift": 819
     },
     {
       "name": "Steven Mizel",
@@ -233,48 +271,10 @@
         "21 year relationship at risk",
         "$37,855/yr avg at risk",
         "$794,946 lifetime donor",
-        "1609 days since last gift",
+        "1610 days since last gift",
         "Major donor \u2014 immediate outreach needed"
       ],
-      "daysSinceGift": 1609
-    },
-    {
-      "name": "Gary D. Blake",
-      "phone": "",
-      "email": "gdblake@hotmail.com",
-      "fy25Amount": 12500.0,
-      "lifetimeGiving": 195879.0,
-      "avgAnnual": 4555.33,
-      "lastGiftDate": "2024-01-11",
-      "riskScore": 95,
-      "riskTier": "Critical",
-      "riskFactors": [
-        "43 year relationship at risk",
-        "$4,555/yr avg at risk",
-        "$195,879 lifetime donor",
-        "775 days since last gift",
-        "Major donor \u2014 immediate outreach needed"
-      ],
-      "daysSinceGift": 775
-    },
-    {
-      "name": "Laurence H. Bloch",
-      "phone": "6198946100",
-      "email": "bloch.lhb@gmail.com",
-      "fy25Amount": 12500.0,
-      "lifetimeGiving": 747635.26,
-      "avgAnnual": 23363.6,
-      "lastGiftDate": "2022-06-30",
-      "riskScore": 95,
-      "riskTier": "Critical",
-      "riskFactors": [
-        "32 year relationship at risk",
-        "$23,364/yr avg at risk",
-        "$747,635 lifetime donor",
-        "1335 days since last gift",
-        "Major donor \u2014 immediate outreach needed"
-      ],
-      "daysSinceGift": 1335
+      "daysSinceGift": 1610
     },
     {
       "name": "Cindy Bloch",
@@ -290,10 +290,10 @@
         "31 year relationship at risk",
         "$15,274/yr avg at risk",
         "$473,500 lifetime donor",
-        "1335 days since last gift",
+        "1336 days since last gift",
         "Major donor \u2014 immediate outreach needed"
       ],
-      "daysSinceGift": 1335
+      "daysSinceGift": 1336
     },
     {
       "name": "Kenneth D. Polin",
@@ -309,10 +309,48 @@
         "43 year relationship at risk",
         "$5,036/yr avg at risk",
         "$216,553 lifetime donor",
-        "1520 days since last gift",
+        "1521 days since last gift",
         "Major donor \u2014 immediate outreach needed"
       ],
-      "daysSinceGift": 1520
+      "daysSinceGift": 1521
+    },
+    {
+      "name": "Gary D. Blake",
+      "phone": "",
+      "email": "gdblake@hotmail.com",
+      "fy25Amount": 12500.0,
+      "lifetimeGiving": 195879.0,
+      "avgAnnual": 4555.33,
+      "lastGiftDate": "2024-01-11",
+      "riskScore": 95,
+      "riskTier": "Critical",
+      "riskFactors": [
+        "43 year relationship at risk",
+        "$4,555/yr avg at risk",
+        "$195,879 lifetime donor",
+        "776 days since last gift",
+        "Major donor \u2014 immediate outreach needed"
+      ],
+      "daysSinceGift": 776
+    },
+    {
+      "name": "Laurence H. Bloch",
+      "phone": "6198946100",
+      "email": "bloch.lhb@gmail.com",
+      "fy25Amount": 12500.0,
+      "lifetimeGiving": 747635.26,
+      "avgAnnual": 23363.6,
+      "lastGiftDate": "2022-06-30",
+      "riskScore": 95,
+      "riskTier": "Critical",
+      "riskFactors": [
+        "32 year relationship at risk",
+        "$23,364/yr avg at risk",
+        "$747,635 lifetime donor",
+        "1336 days since last gift",
+        "Major donor \u2014 immediate outreach needed"
+      ],
+      "daysSinceGift": 1336
     },
     {
       "name": "Andrea Oster",
@@ -330,7 +368,7 @@
         "$334,547 lifetime donor",
         "Major donor \u2014 immediate outreach needed"
       ],
-      "daysSinceGift": 286
+      "daysSinceGift": 287
     },
     {
       "name": "Gayle Breitbard Klusky",
@@ -348,7 +386,7 @@
         "$178,608 lifetime donor",
         "Major donor \u2014 immediate outreach needed"
       ],
-      "daysSinceGift": 319
+      "daysSinceGift": 320
     },
     {
       "name": "Michael S. Rosen",
@@ -366,26 +404,7 @@
         "$621,500 lifetime donor",
         "Major donor \u2014 immediate outreach needed"
       ],
-      "daysSinceGift": 256
-    },
-    {
-      "name": "Richard Gordon",
-      "phone": "8583423471",
-      "email": "gordon92067@gmail.com",
-      "fy25Amount": 11000.0,
-      "lifetimeGiving": 230606.0,
-      "avgAnnual": 10981.24,
-      "lastGiftDate": "2021-07-26",
-      "riskScore": 92,
-      "riskTier": "Critical",
-      "riskFactors": [
-        "21 year relationship at risk",
-        "$10,981/yr avg at risk",
-        "$230,606 lifetime donor",
-        "1674 days since last gift",
-        "Major donor \u2014 immediate outreach needed"
-      ],
-      "daysSinceGift": 1674
+      "daysSinceGift": 257
     },
     {
       "name": "James S. Nierman",
@@ -401,10 +420,29 @@
         "25 year relationship at risk",
         "$4,320/yr avg at risk",
         "$108,000 lifetime donor",
-        "2626 days since last gift",
+        "2627 days since last gift",
         "Major donor \u2014 immediate outreach needed"
       ],
-      "daysSinceGift": 2626
+      "daysSinceGift": 2627
+    },
+    {
+      "name": "Richard Gordon",
+      "phone": "8583423471",
+      "email": "gordon92067@gmail.com",
+      "fy25Amount": 11000.0,
+      "lifetimeGiving": 230606.0,
+      "avgAnnual": 10981.24,
+      "lastGiftDate": "2021-07-26",
+      "riskScore": 92,
+      "riskTier": "Critical",
+      "riskFactors": [
+        "21 year relationship at risk",
+        "$10,981/yr avg at risk",
+        "$230,606 lifetime donor",
+        "1675 days since last gift",
+        "Major donor \u2014 immediate outreach needed"
+      ],
+      "daysSinceGift": 1675
     },
     {
       "name": "Strul Goldstein",
@@ -420,29 +458,10 @@
         "40 year relationship at risk",
         "$2,708/yr avg at risk",
         "$108,332 lifetime donor",
-        "378 days since last gift",
+        "379 days since last gift",
         "Major donor \u2014 immediate outreach needed"
       ],
-      "daysSinceGift": 378
-    },
-    {
-      "name": "Shirley Ann Pidgeon",
-      "phone": "6199959942",
-      "email": "shirleyannpidgeon@gmail.com",
-      "fy25Amount": 10000.0,
-      "lifetimeGiving": 169512.0,
-      "avgAnnual": 4134.44,
-      "lastGiftDate": "2022-08-05",
-      "riskScore": 90,
-      "riskTier": "Critical",
-      "riskFactors": [
-        "41 year relationship at risk",
-        "$4,134/yr avg at risk",
-        "$169,512 lifetime donor",
-        "1299 days since last gift",
-        "Major donor \u2014 immediate outreach needed"
-      ],
-      "daysSinceGift": 1299
+      "daysSinceGift": 379
     },
     {
       "name": "Larry R. Acheatel",
@@ -458,10 +477,29 @@
         "26 year relationship at risk",
         "$3,877/yr avg at risk",
         "$100,809 lifetime donor",
-        "1400 days since last gift",
+        "1401 days since last gift",
         "Major donor \u2014 immediate outreach needed"
       ],
-      "daysSinceGift": 1400
+      "daysSinceGift": 1401
+    },
+    {
+      "name": "Shirley Ann Pidgeon",
+      "phone": "6199959942",
+      "email": "shirleyannpidgeon@gmail.com",
+      "fy25Amount": 10000.0,
+      "lifetimeGiving": 169512.0,
+      "avgAnnual": 4134.44,
+      "lastGiftDate": "2022-08-05",
+      "riskScore": 90,
+      "riskTier": "Critical",
+      "riskFactors": [
+        "41 year relationship at risk",
+        "$4,134/yr avg at risk",
+        "$169,512 lifetime donor",
+        "1300 days since last gift",
+        "Major donor \u2014 immediate outreach needed"
+      ],
+      "daysSinceGift": 1300
     },
     {
       "name": "Simon Vainer",
@@ -479,7 +517,7 @@
         "$252,102 lifetime donor",
         "Major donor \u2014 immediate outreach needed"
       ],
-      "daysSinceGift": 196
+      "daysSinceGift": 197
     },
     {
       "name": "Boris Shekhter",
@@ -495,29 +533,10 @@
         "31 year relationship at risk",
         "$2,649/yr avg at risk",
         "$82,123 lifetime donor",
-        "799 days since last gift",
+        "800 days since last gift",
         "Major donor \u2014 immediate outreach needed"
       ],
-      "daysSinceGift": 799
-    },
-    {
-      "name": "Andrew M. Ratner",
-      "phone": "",
-      "email": "andyratner@aol.com",
-      "fy25Amount": 7500.0,
-      "lifetimeGiving": 191330.0,
-      "avgAnnual": 4555.48,
-      "lastGiftDate": "2022-12-07",
-      "riskScore": 85,
-      "riskTier": "Critical",
-      "riskFactors": [
-        "42 year relationship at risk",
-        "$4,555/yr avg at risk",
-        "$191,330 lifetime donor",
-        "1175 days since last gift",
-        "Major donor \u2014 immediate outreach needed"
-      ],
-      "daysSinceGift": 1175
+      "daysSinceGift": 800
     },
     {
       "name": "Lawrence Belinsky",
@@ -533,10 +552,29 @@
         "40 year relationship at risk",
         "$4,594/yr avg at risk",
         "$183,750 lifetime donor",
-        "870 days since last gift",
+        "871 days since last gift",
         "Major donor \u2014 immediate outreach needed"
       ],
-      "daysSinceGift": 870
+      "daysSinceGift": 871
+    },
+    {
+      "name": "Andrew M. Ratner",
+      "phone": "",
+      "email": "andyratner@aol.com",
+      "fy25Amount": 7500.0,
+      "lifetimeGiving": 191330.0,
+      "avgAnnual": 4555.48,
+      "lastGiftDate": "2022-12-07",
+      "riskScore": 85,
+      "riskTier": "Critical",
+      "riskFactors": [
+        "42 year relationship at risk",
+        "$4,555/yr avg at risk",
+        "$191,330 lifetime donor",
+        "1176 days since last gift",
+        "Major donor \u2014 immediate outreach needed"
+      ],
+      "daysSinceGift": 1176
     },
     {
       "name": "Barbara Loonin",
@@ -552,10 +590,28 @@
         "41 year relationship at risk",
         "$2,268/yr avg at risk",
         "$92,990 lifetime donor",
-        "2000 days since last gift",
+        "2001 days since last gift",
         "Major donor \u2014 immediate outreach needed"
       ],
-      "daysSinceGift": 2000
+      "daysSinceGift": 2001
+    },
+    {
+      "name": "David Wax",
+      "phone": "6195071729",
+      "email": "davidwax@icloud.com",
+      "fy25Amount": 180000.0,
+      "lifetimeGiving": 1720182.63,
+      "avgAnnual": 61435.09,
+      "lastGiftDate": "2025-11-04",
+      "riskScore": 83,
+      "riskTier": "Critical",
+      "riskFactors": [
+        "28 year relationship at risk",
+        "$61,435/yr avg at risk",
+        "$1,720,183 lifetime donor",
+        "Major donor \u2014 immediate outreach needed"
+      ],
+      "daysSinceGift": 113
     },
     {
       "name": "Michael Gelfand",
@@ -571,10 +627,10 @@
         "28 year relationship at risk",
         "$6,242/yr avg at risk",
         "$174,765 lifetime donor",
-        "2323 days since last gift",
+        "2324 days since last gift",
         "Major donor \u2014 immediate outreach needed"
       ],
-      "daysSinceGift": 2323
+      "daysSinceGift": 2324
     },
     {
       "name": "Lynn Gordon",
@@ -590,10 +646,10 @@
         "20 year relationship at risk",
         "$5,657/yr avg at risk",
         "$113,136 lifetime donor",
-        "2115 days since last gift",
+        "2116 days since last gift",
         "Major donor \u2014 immediate outreach needed"
       ],
-      "daysSinceGift": 2115
+      "daysSinceGift": 2116
     },
     {
       "name": "Darryl Hall",
@@ -611,7 +667,7 @@
         "$100,970 lifetime donor",
         "Major donor \u2014 immediate outreach needed"
       ],
-      "daysSinceGift": 243
+      "daysSinceGift": 244
     },
     {
       "name": "Warren O. Kessler",
@@ -629,7 +685,7 @@
         "$870,525 lifetime donor",
         "Major donor \u2014 immediate outreach needed"
       ],
-      "daysSinceGift": 70
+      "daysSinceGift": 71
     },
     {
       "name": "Julie P. Dubick",
@@ -645,67 +701,10 @@
         "43 year relationship at risk",
         "$1,097/yr avg at risk",
         "$47,158 lifetime donor",
-        "812 days since last gift",
+        "813 days since last gift",
         "Major donor \u2014 immediate outreach needed"
       ],
-      "daysSinceGift": 812
-    },
-    {
-      "name": "Kay l Gurtin",
-      "phone": "8582047227",
-      "email": "klgurtin@yahoo.com",
-      "fy25Amount": 5000.0,
-      "lifetimeGiving": 117683.7,
-      "avgAnnual": 5884.18,
-      "lastGiftDate": "2023-06-27",
-      "riskScore": 80,
-      "riskTier": "Critical",
-      "riskFactors": [
-        "20 year relationship at risk",
-        "$5,884/yr avg at risk",
-        "$117,684 lifetime donor",
-        "973 days since last gift",
-        "Major donor \u2014 immediate outreach needed"
-      ],
-      "daysSinceGift": 973
-    },
-    {
-      "name": "Jeffrey Glazer",
-      "phone": "8582323216",
-      "email": "jglazer@mail.sdsu.edu",
-      "fy25Amount": 5000.0,
-      "lifetimeGiving": 116010.0,
-      "avgAnnual": 2697.91,
-      "lastGiftDate": "2022-03-18",
-      "riskScore": 80,
-      "riskTier": "Critical",
-      "riskFactors": [
-        "43 year relationship at risk",
-        "$2,698/yr avg at risk",
-        "$116,010 lifetime donor",
-        "1439 days since last gift",
-        "Major donor \u2014 immediate outreach needed"
-      ],
-      "daysSinceGift": 1439
-    },
-    {
-      "name": "Anne Nagorner",
-      "phone": "6199936626",
-      "email": "anagorner@aol.com",
-      "fy25Amount": 5000.0,
-      "lifetimeGiving": 124885.0,
-      "avgAnnual": 3045.98,
-      "lastGiftDate": "2024-02-27",
-      "riskScore": 80,
-      "riskTier": "Critical",
-      "riskFactors": [
-        "41 year relationship at risk",
-        "$3,046/yr avg at risk",
-        "$124,885 lifetime donor",
-        "728 days since last gift",
-        "Major donor \u2014 immediate outreach needed"
-      ],
-      "daysSinceGift": 728
+      "daysSinceGift": 813
     },
     {
       "name": "Lisa S. Braun Glazer",
@@ -721,10 +720,29 @@
         "43 year relationship at risk",
         "$2,772/yr avg at risk",
         "$119,200 lifetime donor",
-        "1439 days since last gift",
+        "1440 days since last gift",
         "Major donor \u2014 immediate outreach needed"
       ],
-      "daysSinceGift": 1439
+      "daysSinceGift": 1440
+    },
+    {
+      "name": "Anne Nagorner",
+      "phone": "6199936626",
+      "email": "anagorner@aol.com",
+      "fy25Amount": 5000.0,
+      "lifetimeGiving": 124885.0,
+      "avgAnnual": 3045.98,
+      "lastGiftDate": "2024-02-27",
+      "riskScore": 80,
+      "riskTier": "Critical",
+      "riskFactors": [
+        "41 year relationship at risk",
+        "$3,046/yr avg at risk",
+        "$124,885 lifetime donor",
+        "729 days since last gift",
+        "Major donor \u2014 immediate outreach needed"
+      ],
+      "daysSinceGift": 729
     },
     {
       "name": "Andrew Kaplan",
@@ -740,10 +758,10 @@
         "26 year relationship at risk",
         "$7,583/yr avg at risk",
         "$197,163 lifetime donor",
-        "1061 days since last gift",
+        "1062 days since last gift",
         "Major donor \u2014 immediate outreach needed"
       ],
-      "daysSinceGift": 1061
+      "daysSinceGift": 1062
     },
     {
       "name": "Carole Turk",
@@ -759,10 +777,48 @@
         "27 year relationship at risk",
         "$9,230/yr avg at risk",
         "$249,205 lifetime donor",
-        "1175 days since last gift",
+        "1176 days since last gift",
         "Major donor \u2014 immediate outreach needed"
       ],
-      "daysSinceGift": 1175
+      "daysSinceGift": 1176
+    },
+    {
+      "name": "Jeffrey Glazer",
+      "phone": "8582323216",
+      "email": "jglazer@mail.sdsu.edu",
+      "fy25Amount": 5000.0,
+      "lifetimeGiving": 116010.0,
+      "avgAnnual": 2697.91,
+      "lastGiftDate": "2022-03-18",
+      "riskScore": 80,
+      "riskTier": "Critical",
+      "riskFactors": [
+        "43 year relationship at risk",
+        "$2,698/yr avg at risk",
+        "$116,010 lifetime donor",
+        "1440 days since last gift",
+        "Major donor \u2014 immediate outreach needed"
+      ],
+      "daysSinceGift": 1440
+    },
+    {
+      "name": "Kay l Gurtin",
+      "phone": "8582047227",
+      "email": "klgurtin@yahoo.com",
+      "fy25Amount": 5000.0,
+      "lifetimeGiving": 117683.7,
+      "avgAnnual": 5884.18,
+      "lastGiftDate": "2023-06-27",
+      "riskScore": 80,
+      "riskTier": "Critical",
+      "riskFactors": [
+        "20 year relationship at risk",
+        "$5,884/yr avg at risk",
+        "$117,684 lifetime donor",
+        "974 days since last gift",
+        "Major donor \u2014 immediate outreach needed"
+      ],
+      "daysSinceGift": 974
     },
     {
       "name": "Shana Lew",
@@ -780,7 +836,7 @@
         "$382,845 lifetime donor",
         "Major donor \u2014 immediate outreach needed"
       ],
-      "daysSinceGift": 57
+      "daysSinceGift": 58
     },
     {
       "name": "Elyse K. Sollender",
@@ -798,7 +854,7 @@
         "$350,796 lifetime donor",
         "Major donor \u2014 immediate outreach needed"
       ],
-      "daysSinceGift": 47
+      "daysSinceGift": 48
     },
     {
       "name": "Claire Ellman",
@@ -816,7 +872,7 @@
         "$810,433 lifetime donor",
         "Major donor \u2014 immediate outreach needed"
       ],
-      "daysSinceGift": 46
+      "daysSinceGift": 47
     },
     {
       "name": "Carlos David Michan",
@@ -834,25 +890,7 @@
         "$689,751 lifetime donor",
         "Major donor \u2014 immediate outreach needed"
       ],
-      "daysSinceGift": 42
-    },
-    {
-      "name": "Sharon R. Davidson",
-      "phone": "6199927173",
-      "email": "sdconsult@aol.com",
-      "fy25Amount": 5000.0,
-      "lifetimeGiving": 117312.0,
-      "avgAnnual": 2550.26,
-      "lastGiftDate": "2025-03-20",
-      "riskScore": 78,
-      "riskTier": "Critical",
-      "riskFactors": [
-        "46 year relationship at risk",
-        "$2,550/yr avg at risk",
-        "$117,312 lifetime donor",
-        "Major donor \u2014 immediate outreach needed"
-      ],
-      "daysSinceGift": 341
+      "daysSinceGift": 43
     },
     {
       "name": "Theresa Marie Dupuis",
@@ -870,7 +908,7 @@
         "$312,991 lifetime donor",
         "Major donor \u2014 immediate outreach needed"
       ],
-      "daysSinceGift": 36
+      "daysSinceGift": 37
     },
     {
       "name": "Marlene Sasson-Recht",
@@ -888,7 +926,7 @@
         "$232,495 lifetime donor",
         "Major donor \u2014 immediate outreach needed"
       ],
-      "daysSinceGift": 23
+      "daysSinceGift": 24
     },
     {
       "name": "Abraham Gleiberman",
@@ -904,10 +942,10 @@
         "43 year relationship at risk",
         "$1,720/yr avg at risk",
         "$73,970 lifetime donor",
-        "665 days since last gift",
+        "666 days since last gift",
         "Major donor \u2014 immediate outreach needed"
       ],
-      "daysSinceGift": 665
+      "daysSinceGift": 666
     },
     {
       "name": "James Greenstein",
@@ -923,10 +961,10 @@
         "43 year relationship at risk",
         "$2,002/yr avg at risk",
         "$86,100 lifetime donor",
-        "1469 days since last gift",
+        "1470 days since last gift",
         "Major donor \u2014 immediate outreach needed"
       ],
-      "daysSinceGift": 1469
+      "daysSinceGift": 1470
     },
     {
       "name": "Raymond I. Fink",
@@ -942,9 +980,9 @@
         "42 year relationship at risk",
         "$3,629/yr avg at risk",
         "$152,398 lifetime donor",
-        "1302 days since last gift"
+        "1303 days since last gift"
       ],
-      "daysSinceGift": 1302
+      "daysSinceGift": 1303
     },
     {
       "name": "Gerald Handler",
@@ -960,10 +998,10 @@
         "41 year relationship at risk",
         "$1,594/yr avg at risk",
         "$65,350 lifetime donor",
-        "1335 days since last gift",
+        "1336 days since last gift",
         "Major donor \u2014 immediate outreach needed"
       ],
-      "daysSinceGift": 1335
+      "daysSinceGift": 1336
     },
     {
       "name": "Lynn Louis",
@@ -979,10 +1017,10 @@
         "26 year relationship at risk",
         "$2,860/yr avg at risk",
         "$74,364 lifetime donor",
-        "448 days since last gift",
+        "449 days since last gift",
         "Major donor \u2014 immediate outreach needed"
       ],
-      "daysSinceGift": 448
+      "daysSinceGift": 449
     },
     {
       "name": "Marie Raftery",
@@ -998,29 +1036,10 @@
         "18 year relationship at risk",
         "$4,571/yr avg at risk",
         "$82,280 lifetime donor",
-        "655 days since last gift",
+        "656 days since last gift",
         "Major donor \u2014 immediate outreach needed"
       ],
-      "daysSinceGift": 655
-    },
-    {
-      "name": "Jeremy King Pearl",
-      "phone": "",
-      "email": "jeremy@jcfsandiego.org",
-      "fy25Amount": 7380.0,
-      "lifetimeGiving": 50372.0,
-      "avgAnnual": 2398.67,
-      "lastGiftDate": "2022-06-24",
-      "riskScore": 75,
-      "riskTier": "Critical",
-      "riskFactors": [
-        "21 year relationship at risk",
-        "$2,399/yr avg at risk",
-        "$50,372 lifetime donor",
-        "1341 days since last gift",
-        "Major donor \u2014 immediate outreach needed"
-      ],
-      "daysSinceGift": 1341
+      "daysSinceGift": 656
     },
     {
       "name": "Michael L. Lipman",
@@ -1036,9 +1055,9 @@
         "43 year relationship at risk",
         "$2,083/yr avg at risk",
         "$89,550 lifetime donor",
-        "421 days since last gift"
+        "422 days since last gift"
       ],
-      "daysSinceGift": 421
+      "daysSinceGift": 422
     },
     {
       "name": "George S. Scher",
@@ -1055,7 +1074,7 @@
         "$2,805/yr avg at risk",
         "$120,620 lifetime donor"
       ],
-      "daysSinceGift": 364
+      "daysSinceGift": 365
     },
     {
       "name": "Iris Strauss",
@@ -1071,9 +1090,9 @@
         "46 year relationship at risk",
         "$6,074/yr avg at risk",
         "$279,400 lifetime donor",
-        "428 days since last gift"
+        "429 days since last gift"
       ],
-      "daysSinceGift": 428
+      "daysSinceGift": 429
     },
     {
       "name": "Colin Seid",
@@ -1089,9 +1108,9 @@
         "43 year relationship at risk",
         "$2,974/yr avg at risk",
         "$127,898 lifetime donor",
-        "476 days since last gift"
+        "477 days since last gift"
       ],
-      "daysSinceGift": 476
+      "daysSinceGift": 477
     },
     {
       "name": "Paul Michelson",
@@ -1107,10 +1126,10 @@
         "43 year relationship at risk",
         "$1,065/yr avg at risk",
         "$45,806 lifetime donor",
-        "1908 days since last gift",
+        "1909 days since last gift",
         "Major donor \u2014 immediate outreach needed"
       ],
-      "daysSinceGift": 1908
+      "daysSinceGift": 1909
     },
     {
       "name": "Alan Sorkin",
@@ -1126,10 +1145,10 @@
         "33 year relationship at risk",
         "$1,906/yr avg at risk",
         "$62,900 lifetime donor",
-        "1545 days since last gift",
+        "1546 days since last gift",
         "Major donor \u2014 immediate outreach needed"
       ],
-      "daysSinceGift": 1545
+      "daysSinceGift": 1546
     },
     {
       "name": "Barbara Browne",
@@ -1145,9 +1164,9 @@
         "43 year relationship at risk",
         "$1,874/yr avg at risk",
         "$80,594 lifetime donor",
-        "463 days since last gift"
+        "464 days since last gift"
       ],
-      "daysSinceGift": 463
+      "daysSinceGift": 464
     },
     {
       "name": "J. Michael Channick",
@@ -1163,9 +1182,9 @@
         "43 year relationship at risk",
         "$3,097/yr avg at risk",
         "$133,150 lifetime donor",
-        "1761 days since last gift"
+        "1762 days since last gift"
       ],
-      "daysSinceGift": 1761
+      "daysSinceGift": 1762
     },
     {
       "name": "Charles Sandy Roseman",
@@ -1181,9 +1200,9 @@
         "44 year relationship at risk",
         "$2,240/yr avg at risk",
         "$98,580 lifetime donor",
-        "1152 days since last gift"
+        "1153 days since last gift"
       ],
-      "daysSinceGift": 1152
+      "daysSinceGift": 1153
     },
     {
       "name": "Olga M. Worm",
@@ -1201,7 +1220,7 @@
         "$123,673 lifetime donor",
         "Major donor \u2014 immediate outreach needed"
       ],
-      "daysSinceGift": 82
+      "daysSinceGift": 83
     },
     {
       "name": "Hannah R. Jarson",
@@ -1219,26 +1238,7 @@
         "$87,515 lifetime donor",
         "Major donor \u2014 immediate outreach needed"
       ],
-      "daysSinceGift": 243
-    },
-    {
-      "name": "David Belenzon",
-      "phone": "",
-      "email": "david.belenzon@gmail.com",
-      "fy25Amount": 5000.0,
-      "lifetimeGiving": 55550.0,
-      "avgAnnual": 2777.5,
-      "lastGiftDate": "2022-03-01",
-      "riskScore": 71,
-      "riskTier": "Critical",
-      "riskFactors": [
-        "20 year relationship at risk",
-        "$2,778/yr avg at risk",
-        "$55,550 lifetime donor",
-        "1456 days since last gift",
-        "Major donor \u2014 immediate outreach needed"
-      ],
-      "daysSinceGift": 1456
+      "daysSinceGift": 244
     },
     {
       "name": "Marcia Malkus",
@@ -1256,7 +1256,26 @@
         "$160,830 lifetime donor",
         "Major donor \u2014 immediate outreach needed"
       ],
-      "daysSinceGift": 236
+      "daysSinceGift": 237
+    },
+    {
+      "name": "David Belenzon",
+      "phone": "",
+      "email": "david.belenzon@gmail.com",
+      "fy25Amount": 5000.0,
+      "lifetimeGiving": 55550.0,
+      "avgAnnual": 2777.5,
+      "lastGiftDate": "2022-03-01",
+      "riskScore": 71,
+      "riskTier": "Critical",
+      "riskFactors": [
+        "20 year relationship at risk",
+        "$2,778/yr avg at risk",
+        "$55,550 lifetime donor",
+        "1457 days since last gift",
+        "Major donor \u2014 immediate outreach needed"
+      ],
+      "daysSinceGift": 1457
     },
     {
       "name": "Denise Selati",
@@ -1272,9 +1291,9 @@
         "43 year relationship at risk",
         "$2,941/yr avg at risk",
         "$126,455 lifetime donor",
-        "2148 days since last gift"
+        "2149 days since last gift"
       ],
-      "daysSinceGift": 2148
+      "daysSinceGift": 2149
     },
     {
       "name": "Reina Shteremberg",
@@ -1290,9 +1309,9 @@
         "43 year relationship at risk",
         "$10,514/yr avg at risk",
         "$452,104 lifetime donor",
-        "511 days since last gift"
+        "512 days since last gift"
       ],
-      "daysSinceGift": 511
+      "daysSinceGift": 512
     },
     {
       "name": "Lawrence Liebermensch",
@@ -1310,7 +1329,7 @@
         "$52,921 lifetime donor",
         "Major donor \u2014 immediate outreach needed"
       ],
-      "daysSinceGift": 70
+      "daysSinceGift": 71
     },
     {
       "name": "Julie Bronstein",
@@ -1326,10 +1345,10 @@
         "19 year relationship at risk",
         "$2,728/yr avg at risk",
         "$51,830 lifetime donor",
-        "819 days since last gift",
+        "820 days since last gift",
         "Major donor \u2014 immediate outreach needed"
       ],
-      "daysSinceGift": 819
+      "daysSinceGift": 820
     },
     {
       "name": "Joyce Axelrod",
@@ -1345,9 +1364,9 @@
         "46 year relationship at risk",
         "$1,770/yr avg at risk",
         "$81,400 lifetime donor",
-        "1469 days since last gift"
+        "1470 days since last gift"
       ],
-      "daysSinceGift": 1469
+      "daysSinceGift": 1470
     },
     {
       "name": "Charles Wax",
@@ -1363,9 +1382,9 @@
         "43 year relationship at risk",
         "$12,434/yr avg at risk",
         "$534,680 lifetime donor",
-        "865 days since last gift"
+        "866 days since last gift"
       ],
-      "daysSinceGift": 865
+      "daysSinceGift": 866
     },
     {
       "name": "Ira D Levine",
@@ -1381,9 +1400,9 @@
         "46 year relationship at risk",
         "$1,616/yr avg at risk",
         "$74,336 lifetime donor",
-        "456 days since last gift"
+        "457 days since last gift"
       ],
-      "daysSinceGift": 456
+      "daysSinceGift": 457
     },
     {
       "name": "Paul Needelman",
@@ -1399,10 +1418,10 @@
         "35 year relationship at risk",
         "$1,069/yr avg at risk",
         "$37,404 lifetime donor",
-        "554 days since last gift",
+        "555 days since last gift",
         "Major donor \u2014 immediate outreach needed"
       ],
-      "daysSinceGift": 554
+      "daysSinceGift": 555
     },
     {
       "name": "Mary Ann Scher",
@@ -1420,7 +1439,7 @@
         "$290,998 lifetime donor",
         "Major donor \u2014 immediate outreach needed"
       ],
-      "daysSinceGift": 196
+      "daysSinceGift": 197
     },
     {
       "name": "Edward Goldberg",
@@ -1436,9 +1455,9 @@
         "42 year relationship at risk",
         "$1,293/yr avg at risk",
         "$54,300 lifetime donor",
-        "601 days since last gift"
+        "602 days since last gift"
       ],
-      "daysSinceGift": 601
+      "daysSinceGift": 602
     },
     {
       "name": "Larry Okmin",
@@ -1454,9 +1473,9 @@
         "43 year relationship at risk",
         "$1,389/yr avg at risk",
         "$59,747 lifetime donor",
-        "1357 days since last gift"
+        "1358 days since last gift"
       ],
-      "daysSinceGift": 1357
+      "daysSinceGift": 1358
     },
     {
       "name": "Marilyn Smiedt",
@@ -1472,9 +1491,9 @@
         "43 year relationship at risk",
         "$1,956/yr avg at risk",
         "$84,090 lifetime donor",
-        "2113 days since last gift"
+        "2114 days since last gift"
       ],
-      "daysSinceGift": 2113
+      "daysSinceGift": 2114
     },
     {
       "name": "Ellen Epsten Benkle",
@@ -1492,7 +1511,7 @@
         "$43,003 lifetime donor",
         "Major donor \u2014 immediate outreach needed"
       ],
-      "daysSinceGift": 348
+      "daysSinceGift": 349
     },
     {
       "name": "Elliot A Scott",
@@ -1510,7 +1529,7 @@
         "$168,475 lifetime donor",
         "Major donor \u2014 immediate outreach needed"
       ],
-      "daysSinceGift": 12
+      "daysSinceGift": 13
     },
     {
       "name": "Perri L. Wittgrove",
@@ -1528,7 +1547,7 @@
         "$180,074 lifetime donor",
         "Major donor \u2014 immediate outreach needed"
       ],
-      "daysSinceGift": 13
+      "daysSinceGift": 14
     },
     {
       "name": "Amy Corton",
@@ -1544,9 +1563,9 @@
         "35 year relationship at risk",
         "$1,716/yr avg at risk",
         "$60,072 lifetime donor",
-        "858 days since last gift"
+        "859 days since last gift"
       ],
-      "daysSinceGift": 858
+      "daysSinceGift": 859
     },
     {
       "name": "Steven D. Solomon",
@@ -1563,7 +1582,7 @@
         "$5,064/yr avg at risk",
         "$212,672 lifetime donor"
       ],
-      "daysSinceGift": 279
+      "daysSinceGift": 280
     },
     {
       "name": "Carly Feuerstein",
@@ -1579,10 +1598,10 @@
         "10 year relationship at risk",
         "$2,537/yr avg at risk",
         "$25,366 lifetime donor",
-        "487 days since last gift",
+        "488 days since last gift",
         "Major donor \u2014 immediate outreach needed"
       ],
-      "daysSinceGift": 487
+      "daysSinceGift": 488
     },
     {
       "name": "Norman Lizt",
@@ -1598,9 +1617,9 @@
         "31 year relationship at risk",
         "$1,567/yr avg at risk",
         "$48,570 lifetime donor",
-        "390 days since last gift"
+        "391 days since last gift"
       ],
-      "daysSinceGift": 390
+      "daysSinceGift": 391
     },
     {
       "name": "Phillip L. Ginsburg",
@@ -1616,9 +1635,9 @@
         "43 year relationship at risk",
         "$1,324/yr avg at risk",
         "$56,932 lifetime donor",
-        "1327 days since last gift"
+        "1328 days since last gift"
       ],
-      "daysSinceGift": 1327
+      "daysSinceGift": 1328
     },
     {
       "name": "Fane L. Robinson",
@@ -1634,9 +1653,9 @@
         "36 year relationship at risk",
         "$1,559/yr avg at risk",
         "$56,115 lifetime donor",
-        "1050 days since last gift"
+        "1051 days since last gift"
       ],
-      "daysSinceGift": 1050
+      "daysSinceGift": 1051
     },
     {
       "name": "Roanne Linda Gotthelf",
@@ -1652,27 +1671,9 @@
         "40 year relationship at risk",
         "$1,540/yr avg at risk",
         "$61,608 lifetime donor",
-        "819 days since last gift"
+        "820 days since last gift"
       ],
-      "daysSinceGift": 819
-    },
-    {
-      "name": "Roberta Campbell",
-      "phone": "8582290649",
-      "email": "robbicamp@gmail.com",
-      "fy25Amount": 5000.0,
-      "lifetimeGiving": 20100.0,
-      "avgAnnual": 478.57,
-      "lastGiftDate": "2025-01-28",
-      "riskScore": 64,
-      "riskTier": "Critical",
-      "riskFactors": [
-        "42 year relationship at risk",
-        "$20,100 lifetime donor",
-        "392 days since last gift",
-        "Major donor \u2014 immediate outreach needed"
-      ],
-      "daysSinceGift": 392
+      "daysSinceGift": 820
     },
     {
       "name": "June B Chocheles",
@@ -1690,7 +1691,25 @@
         "$138,928 lifetime donor",
         "Major donor \u2014 immediate outreach needed"
       ],
-      "daysSinceGift": 129
+      "daysSinceGift": 130
+    },
+    {
+      "name": "Roberta Campbell",
+      "phone": "8582290649",
+      "email": "robbicamp@gmail.com",
+      "fy25Amount": 5000.0,
+      "lifetimeGiving": 20100.0,
+      "avgAnnual": 478.57,
+      "lastGiftDate": "2025-01-28",
+      "riskScore": 64,
+      "riskTier": "Critical",
+      "riskFactors": [
+        "42 year relationship at risk",
+        "$20,100 lifetime donor",
+        "393 days since last gift",
+        "Major donor \u2014 immediate outreach needed"
+      ],
+      "daysSinceGift": 393
     },
     {
       "name": "Jose Zyman",
@@ -1707,7 +1726,7 @@
         "$2,085/yr avg at risk",
         "$83,398 lifetime donor"
       ],
-      "daysSinceGift": 244
+      "daysSinceGift": 245
     },
     {
       "name": "Steven M. Steinberg",
@@ -1723,9 +1742,9 @@
         "40 year relationship at risk",
         "$1,557/yr avg at risk",
         "$62,298 lifetime donor",
-        "445 days since last gift"
+        "446 days since last gift"
       ],
-      "daysSinceGift": 445
+      "daysSinceGift": 446
     },
     {
       "name": "Donald C. Lipkis",
@@ -1741,27 +1760,9 @@
         "43 year relationship at risk",
         "$1,382/yr avg at risk",
         "$59,444 lifetime donor",
-        "445 days since last gift"
+        "446 days since last gift"
       ],
-      "daysSinceGift": 445
-    },
-    {
-      "name": "Randi Wax",
-      "phone": "",
-      "email": "",
-      "fy25Amount": 180.0,
-      "lifetimeGiving": 65980.0,
-      "avgAnnual": 1534.42,
-      "lastGiftDate": "2024-09-12",
-      "riskScore": 64,
-      "riskTier": "Watch",
-      "riskFactors": [
-        "43 year relationship at risk",
-        "$1,534/yr avg at risk",
-        "$65,980 lifetime donor",
-        "530 days since last gift"
-      ],
-      "daysSinceGift": 530
+      "daysSinceGift": 446
     },
     {
       "name": "Pamela Carnot",
@@ -1779,7 +1780,7 @@
         "$11,060 lifetime donor",
         "Major donor \u2014 immediate outreach needed"
       ],
-      "daysSinceGift": 243
+      "daysSinceGift": 244
     },
     {
       "name": "Sharon M. Dreeben",
@@ -1794,10 +1795,10 @@
       "riskFactors": [
         "26 year relationship at risk",
         "$11,500 lifetime donor",
-        "463 days since last gift",
+        "464 days since last gift",
         "Major donor \u2014 immediate outreach needed"
       ],
-      "daysSinceGift": 463
+      "daysSinceGift": 464
     },
     {
       "name": "Brigitte Salomon",
@@ -1813,9 +1814,9 @@
         "43 year relationship at risk",
         "$692/yr avg at risk",
         "$29,758 lifetime donor",
-        "434 days since last gift"
+        "435 days since last gift"
       ],
-      "daysSinceGift": 434
+      "daysSinceGift": 435
     },
     {
       "name": "Mary Epsten",
@@ -1831,9 +1832,9 @@
         "43 year relationship at risk",
         "$1,094/yr avg at risk",
         "$47,045 lifetime donor",
-        "1343 days since last gift"
+        "1344 days since last gift"
       ],
-      "daysSinceGift": 1343
+      "daysSinceGift": 1344
     },
     {
       "name": "Stephen M Abramson",
@@ -1850,7 +1851,7 @@
         "$3,549/yr avg at risk",
         "$149,043 lifetime donor"
       ],
-      "daysSinceGift": 245
+      "daysSinceGift": 246
     },
     {
       "name": "Thomas Elden",
@@ -1866,10 +1867,10 @@
         "20 year relationship at risk",
         "$600/yr avg at risk",
         "$12,000 lifetime donor",
-        "7337 days since last gift",
+        "7338 days since last gift",
         "Major donor \u2014 immediate outreach needed"
       ],
-      "daysSinceGift": 7337
+      "daysSinceGift": 7338
     },
     {
       "name": "Jeffrey S Essakow",
@@ -1885,9 +1886,9 @@
         "37 year relationship at risk",
         "$1,109/yr avg at risk",
         "$41,026 lifetime donor",
-        "939 days since last gift"
+        "940 days since last gift"
       ],
-      "daysSinceGift": 939
+      "daysSinceGift": 940
     },
     {
       "name": "Nina Sabban",
@@ -1903,9 +1904,9 @@
         "19 year relationship at risk",
         "$2,081/yr avg at risk",
         "$39,547 lifetime donor",
-        "819 days since last gift"
+        "820 days since last gift"
       ],
-      "daysSinceGift": 819
+      "daysSinceGift": 820
     },
     {
       "name": "Ed Saul Mendelsohn",
@@ -1922,7 +1923,7 @@
         "$1,562/yr avg at risk",
         "$68,733 lifetime donor"
       ],
-      "daysSinceGift": 300
+      "daysSinceGift": 301
     },
     {
       "name": "Stanley Pappelbaum",
@@ -1938,9 +1939,9 @@
         "43 year relationship at risk",
         "$1,307/yr avg at risk",
         "$56,207 lifetime donor",
-        "1601 days since last gift"
+        "1602 days since last gift"
       ],
-      "daysSinceGift": 1601
+      "daysSinceGift": 1602
     },
     {
       "name": "Judith Belinsky",
@@ -1958,7 +1959,7 @@
         "$162,789 lifetime donor",
         "Major donor \u2014 immediate outreach needed"
       ],
-      "daysSinceGift": 12
+      "daysSinceGift": 13
     },
     {
       "name": "Hillary Liber",
@@ -1974,9 +1975,9 @@
         "43 year relationship at risk",
         "$693/yr avg at risk",
         "$29,818 lifetime donor",
-        "1284 days since last gift"
+        "1285 days since last gift"
       ],
-      "daysSinceGift": 1284
+      "daysSinceGift": 1285
     },
     {
       "name": "Debbie Gerber",
@@ -1992,9 +1993,9 @@
         "46 year relationship at risk",
         "$755/yr avg at risk",
         "$34,711 lifetime donor",
-        "382 days since last gift"
+        "383 days since last gift"
       ],
-      "daysSinceGift": 382
+      "daysSinceGift": 383
     },
     {
       "name": "Sylvia L. Sneider",
@@ -2010,9 +2011,9 @@
         "40 year relationship at risk",
         "$1,068/yr avg at risk",
         "$42,735 lifetime donor",
-        "588 days since last gift"
+        "589 days since last gift"
       ],
-      "daysSinceGift": 588
+      "daysSinceGift": 589
     },
     {
       "name": "Fanny Wellman",
@@ -2028,10 +2029,10 @@
         "9 year relationship at risk",
         "$6,148/yr avg at risk",
         "$55,334 lifetime donor",
-        "671 days since last gift",
+        "672 days since last gift",
         "Major donor \u2014 immediate outreach needed"
       ],
-      "daysSinceGift": 671
+      "daysSinceGift": 672
     },
     {
       "name": "David Michelson",
@@ -2047,9 +2048,9 @@
         "23 year relationship at risk",
         "$1,208/yr avg at risk",
         "$27,775 lifetime donor",
-        "1540 days since last gift"
+        "1541 days since last gift"
       ],
-      "daysSinceGift": 1540
+      "daysSinceGift": 1541
     },
     {
       "name": "Monica Handler-Penner",
@@ -2067,7 +2068,7 @@
         "$163,439 lifetime donor",
         "Major donor \u2014 immediate outreach needed"
       ],
-      "daysSinceGift": 61
+      "daysSinceGift": 62
     },
     {
       "name": "Geoffrey Berg",
@@ -2084,7 +2085,7 @@
         "$2,414/yr avg at risk",
         "$62,763 lifetime donor"
       ],
-      "daysSinceGift": 245
+      "daysSinceGift": 246
     },
     {
       "name": "Meg Goldstein",
@@ -2100,9 +2101,9 @@
         "28 year relationship at risk",
         "$1,464/yr avg at risk",
         "$40,990 lifetime donor",
-        "832 days since last gift"
+        "833 days since last gift"
       ],
-      "daysSinceGift": 832
+      "daysSinceGift": 833
     },
     {
       "name": "July Galper",
@@ -2119,7 +2120,7 @@
         "$506/yr avg at risk",
         "$21,779 lifetime donor"
       ],
-      "daysSinceGift": 316
+      "daysSinceGift": 317
     },
     {
       "name": "Jeffrey R. Liber",
@@ -2136,7 +2137,7 @@
         "$1,416/yr avg at risk",
         "$60,905 lifetime donor"
       ],
-      "daysSinceGift": 231
+      "daysSinceGift": 232
     },
     {
       "name": "Douglas Blane Lucas",
@@ -2152,9 +2153,9 @@
         "22 year relationship at risk",
         "$825/yr avg at risk",
         "$18,151 lifetime donor",
-        "515 days since last gift"
+        "516 days since last gift"
       ],
-      "daysSinceGift": 515
+      "daysSinceGift": 516
     },
     {
       "name": "Brian Marcus",
@@ -2170,9 +2171,9 @@
         "26 year relationship at risk",
         "$771/yr avg at risk",
         "$20,040 lifetime donor",
-        "1280 days since last gift"
+        "1281 days since last gift"
       ],
-      "daysSinceGift": 1280
+      "daysSinceGift": 1281
     },
     {
       "name": "Eileen Wingard",
@@ -2189,25 +2190,7 @@
         "$642/yr avg at risk",
         "$23,741 lifetime donor"
       ],
-      "daysSinceGift": 363
-    },
-    {
-      "name": "Rochelle A. Treger",
-      "phone": "6198558786",
-      "email": "rotreger@gmail.com",
-      "fy25Amount": 1200.0,
-      "lifetimeGiving": 29100.0,
-      "avgAnnual": 676.74,
-      "lastGiftDate": "2024-12-30",
-      "riskScore": 58,
-      "riskTier": "High",
-      "riskFactors": [
-        "43 year relationship at risk",
-        "$677/yr avg at risk",
-        "$29,100 lifetime donor",
-        "421 days since last gift"
-      ],
-      "daysSinceGift": 421
+      "daysSinceGift": 364
     },
     {
       "name": "Mark S. Kramer",
@@ -2223,9 +2206,27 @@
         "39 year relationship at risk",
         "$743/yr avg at risk",
         "$28,986 lifetime donor",
-        "414 days since last gift"
+        "415 days since last gift"
       ],
-      "daysSinceGift": 414
+      "daysSinceGift": 415
+    },
+    {
+      "name": "Rochelle A. Treger",
+      "phone": "6198558786",
+      "email": "rotreger@gmail.com",
+      "fy25Amount": 1200.0,
+      "lifetimeGiving": 29100.0,
+      "avgAnnual": 676.74,
+      "lastGiftDate": "2024-12-30",
+      "riskScore": 58,
+      "riskTier": "High",
+      "riskFactors": [
+        "43 year relationship at risk",
+        "$677/yr avg at risk",
+        "$29,100 lifetime donor",
+        "422 days since last gift"
+      ],
+      "daysSinceGift": 422
     },
     {
       "name": "Judith L. Amster",
@@ -2241,9 +2242,9 @@
         "43 year relationship at risk",
         "$675/yr avg at risk",
         "$29,016 lifetime donor",
-        "1439 days since last gift"
+        "1440 days since last gift"
       ],
-      "daysSinceGift": 1439
+      "daysSinceGift": 1440
     },
     {
       "name": "Marshall Jesse Littman",
@@ -2259,9 +2260,9 @@
         "45 year relationship at risk",
         "$691/yr avg at risk",
         "$31,098 lifetime donor",
-        "826 days since last gift"
+        "827 days since last gift"
       ],
-      "daysSinceGift": 826
+      "daysSinceGift": 827
     },
     {
       "name": "Richard E. Safrin",
@@ -2276,9 +2277,9 @@
       "riskFactors": [
         "37 year relationship at risk",
         "$15,730 lifetime donor",
-        "474 days since last gift"
+        "475 days since last gift"
       ],
-      "daysSinceGift": 474
+      "daysSinceGift": 475
     },
     {
       "name": "Judith Rubenstein",
@@ -2294,9 +2295,9 @@
         "36 year relationship at risk",
         "$578/yr avg at risk",
         "$20,790 lifetime donor",
-        "406 days since last gift"
+        "407 days since last gift"
       ],
-      "daysSinceGift": 406
+      "daysSinceGift": 407
     },
     {
       "name": "Harvey L. Amster",
@@ -2312,9 +2313,9 @@
         "43 year relationship at risk",
         "$570/yr avg at risk",
         "$24,525 lifetime donor",
-        "1631 days since last gift"
+        "1632 days since last gift"
       ],
-      "daysSinceGift": 1631
+      "daysSinceGift": 1632
     },
     {
       "name": "Mark Oberman",
@@ -2330,9 +2331,9 @@
         "24 year relationship at risk",
         "$990/yr avg at risk",
         "$23,750 lifetime donor",
-        "1357 days since last gift"
+        "1358 days since last gift"
       ],
-      "daysSinceGift": 1357
+      "daysSinceGift": 1358
     },
     {
       "name": "Sonya G. Jinich",
@@ -2348,9 +2349,9 @@
         "24 year relationship at risk",
         "$1,235/yr avg at risk",
         "$29,630 lifetime donor",
-        "837 days since last gift"
+        "838 days since last gift"
       ],
-      "daysSinceGift": 837
+      "daysSinceGift": 838
     },
     {
       "name": "Avra Kassar",
@@ -2366,9 +2367,9 @@
         "43 year relationship at risk",
         "$806/yr avg at risk",
         "$34,650 lifetime donor",
-        "509 days since last gift"
+        "510 days since last gift"
       ],
-      "daysSinceGift": 509
+      "daysSinceGift": 510
     },
     {
       "name": "Perla Fox",
@@ -2384,7 +2385,7 @@
         "19 year relationship at risk",
         "Major donor \u2014 immediate outreach needed"
       ],
-      "daysSinceGift": 287
+      "daysSinceGift": 288
     },
     {
       "name": "Daniel Alexander Strich",
@@ -2398,9 +2399,9 @@
       "riskTier": "High",
       "riskFactors": [
         "42 year relationship at risk",
-        "866 days since last gift"
+        "867 days since last gift"
       ],
-      "daysSinceGift": 866
+      "daysSinceGift": 867
     },
     {
       "name": "Jonathan Kabakoff",
@@ -2415,27 +2416,9 @@
       "riskFactors": [
         "23 year relationship at risk",
         "$11,493 lifetime donor",
-        "799 days since last gift"
+        "800 days since last gift"
       ],
-      "daysSinceGift": 799
-    },
-    {
-      "name": "Rayna Francine Colton",
-      "phone": "",
-      "email": "raynacolton@gmail.com",
-      "fy25Amount": 1000.0,
-      "lifetimeGiving": 18475.48,
-      "avgAnnual": 615.85,
-      "lastGiftDate": "2024-12-05",
-      "riskScore": 56,
-      "riskTier": "High",
-      "riskFactors": [
-        "30 year relationship at risk",
-        "$616/yr avg at risk",
-        "$18,475 lifetime donor",
-        "446 days since last gift"
-      ],
-      "daysSinceGift": 446
+      "daysSinceGift": 800
     },
     {
       "name": "Alan E. Shumacher",
@@ -2452,7 +2435,25 @@
         "$650/yr avg at risk",
         "$27,950 lifetime donor"
       ],
-      "daysSinceGift": 348
+      "daysSinceGift": 349
+    },
+    {
+      "name": "Rayna Francine Colton",
+      "phone": "",
+      "email": "raynacolton@gmail.com",
+      "fy25Amount": 1000.0,
+      "lifetimeGiving": 18475.48,
+      "avgAnnual": 615.85,
+      "lastGiftDate": "2024-12-05",
+      "riskScore": 56,
+      "riskTier": "High",
+      "riskFactors": [
+        "30 year relationship at risk",
+        "$616/yr avg at risk",
+        "$18,475 lifetime donor",
+        "447 days since last gift"
+      ],
+      "daysSinceGift": 447
     },
     {
       "name": "Laurie Doyle",
@@ -2468,9 +2469,9 @@
         "36 year relationship at risk",
         "$745/yr avg at risk",
         "$26,809 lifetime donor",
-        "1447 days since last gift"
+        "1448 days since last gift"
       ],
-      "daysSinceGift": 1447
+      "daysSinceGift": 1448
     },
     {
       "name": "Steven Tradonsky",
@@ -2486,9 +2487,9 @@
         "28 year relationship at risk",
         "$957/yr avg at risk",
         "$26,801 lifetime donor",
-        "379 days since last gift"
+        "380 days since last gift"
       ],
-      "daysSinceGift": 379
+      "daysSinceGift": 380
     },
     {
       "name": "Wendy Abramson",
@@ -2502,9 +2503,9 @@
       "riskTier": "High",
       "riskFactors": [
         "15 year relationship at risk",
-        "403 days since last gift"
+        "404 days since last gift"
       ],
-      "daysSinceGift": 403
+      "daysSinceGift": 404
     },
     {
       "name": "Andrew Mopper",
@@ -2521,7 +2522,7 @@
         "$823/yr avg at risk",
         "$27,988 lifetime donor"
       ],
-      "daysSinceGift": 300
+      "daysSinceGift": 301
     },
     {
       "name": "Raymond A. Sachs",
@@ -2538,7 +2539,7 @@
         "$1,153/yr avg at risk",
         "$49,570 lifetime donor"
       ],
-      "daysSinceGift": 245
+      "daysSinceGift": 246
     },
     {
       "name": "Danny Gabriel",
@@ -2552,25 +2553,9 @@
       "riskTier": "High",
       "riskFactors": [
         "22 year relationship at risk",
-        "463 days since last gift"
+        "464 days since last gift"
       ],
-      "daysSinceGift": 463
-    },
-    {
-      "name": "Joseph M. Reisman",
-      "phone": "8583825764",
-      "email": "jreisman@kmob.com",
-      "fy25Amount": 1800.0,
-      "lifetimeGiving": 8888.0,
-      "avgAnnual": 404.0,
-      "lastGiftDate": "2023-03-31",
-      "riskScore": 55,
-      "riskTier": "High",
-      "riskFactors": [
-        "22 year relationship at risk",
-        "1061 days since last gift"
-      ],
-      "daysSinceGift": 1061
+      "daysSinceGift": 464
     },
     {
       "name": "Darren Kevin Schwartz",
@@ -2586,9 +2571,25 @@
         "15 year relationship at risk",
         "$1,183/yr avg at risk",
         "$17,742 lifetime donor",
-        "1894 days since last gift"
+        "1895 days since last gift"
       ],
-      "daysSinceGift": 1894
+      "daysSinceGift": 1895
+    },
+    {
+      "name": "Joseph M. Reisman",
+      "phone": "8583825764",
+      "email": "jreisman@kmob.com",
+      "fy25Amount": 1800.0,
+      "lifetimeGiving": 8888.0,
+      "avgAnnual": 404.0,
+      "lastGiftDate": "2023-03-31",
+      "riskScore": 55,
+      "riskTier": "High",
+      "riskFactors": [
+        "22 year relationship at risk",
+        "1062 days since last gift"
+      ],
+      "daysSinceGift": 1062
     },
     {
       "name": "Steven J. Davis",
@@ -2603,9 +2604,9 @@
       "riskFactors": [
         "43 year relationship at risk",
         "$10,536 lifetime donor",
-        "2291 days since last gift"
+        "2292 days since last gift"
       ],
-      "daysSinceGift": 2291
+      "daysSinceGift": 2292
     },
     {
       "name": "Robert Cohen",
@@ -2621,9 +2622,26 @@
         "24 year relationship at risk",
         "$520/yr avg at risk",
         "$12,490 lifetime donor",
-        "425 days since last gift"
+        "426 days since last gift"
       ],
-      "daysSinceGift": 425
+      "daysSinceGift": 426
+    },
+    {
+      "name": "Diane Strum",
+      "phone": "",
+      "email": "dianestrum@earthlink.net",
+      "fy25Amount": 1000.0,
+      "lifetimeGiving": 14978.88,
+      "avgAnnual": 365.34,
+      "lastGiftDate": "2024-06-26",
+      "riskScore": 55,
+      "riskTier": "High",
+      "riskFactors": [
+        "41 year relationship at risk",
+        "$14,979 lifetime donor",
+        "609 days since last gift"
+      ],
+      "daysSinceGift": 609
     },
     {
       "name": "Elissa Livingstone",
@@ -2639,9 +2657,9 @@
         "25 year relationship at risk",
         "$535/yr avg at risk",
         "$13,366 lifetime donor",
-        "922 days since last gift"
+        "923 days since last gift"
       ],
-      "daysSinceGift": 922
+      "daysSinceGift": 923
     },
     {
       "name": "Steven Feitelberg",
@@ -2656,26 +2674,9 @@
       "riskFactors": [
         "37 year relationship at risk",
         "$12,990 lifetime donor",
-        "383 days since last gift"
+        "384 days since last gift"
       ],
-      "daysSinceGift": 383
-    },
-    {
-      "name": "Diane Strum",
-      "phone": "",
-      "email": "dianestrum@earthlink.net",
-      "fy25Amount": 1000.0,
-      "lifetimeGiving": 14978.88,
-      "avgAnnual": 365.34,
-      "lastGiftDate": "2024-06-26",
-      "riskScore": 55,
-      "riskTier": "High",
-      "riskFactors": [
-        "41 year relationship at risk",
-        "$14,979 lifetime donor",
-        "608 days since last gift"
-      ],
-      "daysSinceGift": 608
+      "daysSinceGift": 384
     },
     {
       "name": "Beth Faber Faber Jacobs",
@@ -2690,9 +2691,9 @@
       "riskFactors": [
         "43 year relationship at risk",
         "$19,716 lifetime donor",
-        "420 days since last gift"
+        "421 days since last gift"
       ],
-      "daysSinceGift": 420
+      "daysSinceGift": 421
     },
     {
       "name": "David Matthew Frank",
@@ -2708,9 +2709,9 @@
         "32 year relationship at risk",
         "$698/yr avg at risk",
         "$22,333 lifetime donor",
-        "467 days since last gift"
+        "468 days since last gift"
       ],
-      "daysSinceGift": 467
+      "daysSinceGift": 468
     },
     {
       "name": "Edith Maizel",
@@ -2725,9 +2726,9 @@
       "riskFactors": [
         "42 year relationship at risk",
         "$20,498 lifetime donor",
-        "476 days since last gift"
+        "477 days since last gift"
       ],
-      "daysSinceGift": 476
+      "daysSinceGift": 477
     },
     {
       "name": "Justin Gover",
@@ -2742,10 +2743,10 @@
       "riskFactors": [
         "$8,333/yr avg at risk",
         "$25,000 lifetime donor",
-        "1253 days since last gift",
+        "1254 days since last gift",
         "Major donor \u2014 immediate outreach needed"
       ],
-      "daysSinceGift": 1253
+      "daysSinceGift": 1254
     },
     {
       "name": "Linda R. Bennett",
@@ -2763,7 +2764,7 @@
         "$58,734 lifetime donor",
         "Major donor \u2014 immediate outreach needed"
       ],
-      "daysSinceGift": 77
+      "daysSinceGift": 78
     },
     {
       "name": "Miriam H. Fishman",
@@ -2779,10 +2780,10 @@
         "10 year relationship at risk",
         "$2,187/yr avg at risk",
         "$21,872 lifetime donor",
-        "1406 days since last gift",
+        "1407 days since last gift",
         "Major donor \u2014 immediate outreach needed"
       ],
-      "daysSinceGift": 1406
+      "daysSinceGift": 1407
     },
     {
       "name": "Alberto Chaljon",
@@ -2796,9 +2797,9 @@
       "riskTier": "High",
       "riskFactors": [
         "23 year relationship at risk",
-        "463 days since last gift"
+        "464 days since last gift"
       ],
-      "daysSinceGift": 463
+      "daysSinceGift": 464
     },
     {
       "name": "Ana Kozlowski",
@@ -2815,7 +2816,7 @@
         "$976/yr avg at risk",
         "$24,398 lifetime donor"
       ],
-      "daysSinceGift": 321
+      "daysSinceGift": 322
     },
     {
       "name": "Arlette Smith",
@@ -2830,9 +2831,25 @@
       "riskFactors": [
         "41 year relationship at risk",
         "$10,265 lifetime donor",
-        "434 days since last gift"
+        "435 days since last gift"
       ],
-      "daysSinceGift": 434
+      "daysSinceGift": 435
+    },
+    {
+      "name": "Suzanne Marcus",
+      "phone": "",
+      "email": "sumarcus43@gmail.com",
+      "fy25Amount": 1000.0,
+      "lifetimeGiving": 8692.0,
+      "avgAnnual": 321.93,
+      "lastGiftDate": "2014-01-17",
+      "riskScore": 54,
+      "riskTier": "High",
+      "riskFactors": [
+        "27 year relationship at risk",
+        "4422 days since last gift"
+      ],
+      "daysSinceGift": 4422
     },
     {
       "name": "Deborah Sue Bucksbaum",
@@ -2847,25 +2864,9 @@
       "riskFactors": [
         "17 year relationship at risk",
         "$584/yr avg at risk",
-        "464 days since last gift"
+        "465 days since last gift"
       ],
-      "daysSinceGift": 464
-    },
-    {
-      "name": "Suzanne Marcus",
-      "phone": "",
-      "email": "sumarcus43@gmail.com",
-      "fy25Amount": 1000.0,
-      "lifetimeGiving": 8692.0,
-      "avgAnnual": 321.93,
-      "lastGiftDate": "2014-01-17",
-      "riskScore": 54,
-      "riskTier": "High",
-      "riskFactors": [
-        "27 year relationship at risk",
-        "4421 days since last gift"
-      ],
-      "daysSinceGift": 4421
+      "daysSinceGift": 465
     },
     {
       "name": "Beverly Silldorf",
@@ -2880,9 +2881,9 @@
       "riskFactors": [
         "43 year relationship at risk",
         "$12,126 lifetime donor",
-        "414 days since last gift"
+        "415 days since last gift"
       ],
-      "daysSinceGift": 414
+      "daysSinceGift": 415
     },
     {
       "name": "Jose Abadi",
@@ -2898,9 +2899,9 @@
         "23 year relationship at risk",
         "$549/yr avg at risk",
         "$12,620 lifetime donor",
-        "431 days since last gift"
+        "432 days since last gift"
       ],
-      "daysSinceGift": 431
+      "daysSinceGift": 432
     },
     {
       "name": "Michelle Abramowitz",
@@ -2916,9 +2917,9 @@
         "27 year relationship at risk",
         "$637/yr avg at risk",
         "$17,204 lifetime donor",
-        "1456 days since last gift"
+        "1457 days since last gift"
       ],
-      "daysSinceGift": 1456
+      "daysSinceGift": 1457
     },
     {
       "name": "Morris Gold",
@@ -2934,9 +2935,9 @@
         "24 year relationship at risk",
         "$656/yr avg at risk",
         "$15,755 lifetime donor",
-        "1061 days since last gift"
+        "1062 days since last gift"
       ],
-      "daysSinceGift": 1061
+      "daysSinceGift": 1062
     },
     {
       "name": "Beth Alpert",
@@ -2952,27 +2953,9 @@
         "36 year relationship at risk",
         "$570/yr avg at risk",
         "$20,502 lifetime donor",
-        "420 days since last gift"
+        "421 days since last gift"
       ],
-      "daysSinceGift": 420
-    },
-    {
-      "name": "Howard Bruce Somers",
-      "phone": "6193188380",
-      "email": "urodoc79@gmail.com",
-      "fy25Amount": 10000.0,
-      "lifetimeGiving": 37472.23,
-      "avgAnnual": 2081.79,
-      "lastGiftDate": "2026-02-11",
-      "riskScore": 53,
-      "riskTier": "Critical",
-      "riskFactors": [
-        "18 year relationship at risk",
-        "$2,082/yr avg at risk",
-        "$37,472 lifetime donor",
-        "Major donor \u2014 immediate outreach needed"
-      ],
-      "daysSinceGift": 13
+      "daysSinceGift": 421
     },
     {
       "name": "Gregg Kornfeld",
@@ -2990,7 +2973,25 @@
         "$39,508 lifetime donor",
         "Major donor \u2014 immediate outreach needed"
       ],
-      "daysSinceGift": 12
+      "daysSinceGift": 13
+    },
+    {
+      "name": "Howard Bruce Somers",
+      "phone": "6193188380",
+      "email": "urodoc79@gmail.com",
+      "fy25Amount": 10000.0,
+      "lifetimeGiving": 37472.23,
+      "avgAnnual": 2081.79,
+      "lastGiftDate": "2026-02-11",
+      "riskScore": 53,
+      "riskTier": "Critical",
+      "riskFactors": [
+        "18 year relationship at risk",
+        "$2,082/yr avg at risk",
+        "$37,472 lifetime donor",
+        "Major donor \u2014 immediate outreach needed"
+      ],
+      "daysSinceGift": 14
     },
     {
       "name": "Shari Friedman Schenk",
@@ -3008,7 +3009,7 @@
         "$69,522 lifetime donor",
         "Major donor \u2014 immediate outreach needed"
       ],
-      "daysSinceGift": 63
+      "daysSinceGift": 64
     },
     {
       "name": "Robert Kucinski",
@@ -3025,7 +3026,7 @@
         "$927/yr avg at risk",
         "$38,940 lifetime donor"
       ],
-      "daysSinceGift": 237
+      "daysSinceGift": 238
     },
     {
       "name": "Dana M. Quittner",
@@ -3039,9 +3040,9 @@
       "riskTier": "High",
       "riskFactors": [
         "41 year relationship at risk",
-        "378 days since last gift"
+        "379 days since last gift"
       ],
-      "daysSinceGift": 378
+      "daysSinceGift": 379
     },
     {
       "name": "Larry Neugarten",
@@ -3055,9 +3056,9 @@
       "riskTier": "High",
       "riskFactors": [
         "17 year relationship at risk",
-        "454 days since last gift"
+        "455 days since last gift"
       ],
-      "daysSinceGift": 454
+      "daysSinceGift": 455
     },
     {
       "name": "Joanne F. Ellison",
@@ -3071,9 +3072,9 @@
       "riskTier": "High",
       "riskFactors": [
         "43 year relationship at risk",
-        "798 days since last gift"
+        "799 days since last gift"
       ],
-      "daysSinceGift": 798
+      "daysSinceGift": 799
     },
     {
       "name": "Josh Mereminsky",
@@ -3087,9 +3088,9 @@
       "riskTier": "Medium",
       "riskFactors": [
         "34 year relationship at risk",
-        "2230 days since last gift"
+        "2231 days since last gift"
       ],
-      "daysSinceGift": 2230
+      "daysSinceGift": 2231
     },
     {
       "name": "Jonathan M. Flam",
@@ -3103,9 +3104,25 @@
       "riskTier": "Medium",
       "riskFactors": [
         "28 year relationship at risk",
-        "1335 days since last gift"
+        "1336 days since last gift"
       ],
-      "daysSinceGift": 1335
+      "daysSinceGift": 1336
+    },
+    {
+      "name": "Myra F. Kauderer",
+      "phone": "",
+      "email": "kaudererbm@aol.com",
+      "fy25Amount": 500.0,
+      "lifetimeGiving": 7950.0,
+      "avgAnnual": 274.14,
+      "lastGiftDate": "2024-10-29",
+      "riskScore": 53,
+      "riskTier": "Medium",
+      "riskFactors": [
+        "29 year relationship at risk",
+        "484 days since last gift"
+      ],
+      "daysSinceGift": 484
     },
     {
       "name": "Peter Stovin",
@@ -3120,41 +3137,9 @@
       "riskFactors": [
         "43 year relationship at risk",
         "$11,000 lifetime donor",
-        "484 days since last gift"
+        "485 days since last gift"
       ],
-      "daysSinceGift": 484
-    },
-    {
-      "name": "Myra F. Kauderer",
-      "phone": "",
-      "email": "kaudererbm@aol.com",
-      "fy25Amount": 500.0,
-      "lifetimeGiving": 7950.0,
-      "avgAnnual": 274.14,
-      "lastGiftDate": "2024-10-29",
-      "riskScore": 53,
-      "riskTier": "Medium",
-      "riskFactors": [
-        "29 year relationship at risk",
-        "483 days since last gift"
-      ],
-      "daysSinceGift": 483
-    },
-    {
-      "name": "Bruce M. Abrams",
-      "phone": "6193189220",
-      "email": "esqbma@live.com",
-      "fy25Amount": 500.0,
-      "lifetimeGiving": 7668.8,
-      "avgAnnual": 403.62,
-      "lastGiftDate": "2024-11-25",
-      "riskScore": 53,
-      "riskTier": "Medium",
-      "riskFactors": [
-        "19 year relationship at risk",
-        "456 days since last gift"
-      ],
-      "daysSinceGift": 456
+      "daysSinceGift": 485
     },
     {
       "name": "Eric Poliak",
@@ -3169,9 +3154,25 @@
       "riskFactors": [
         "25 year relationship at risk",
         "$12,469 lifetime donor",
-        "392 days since last gift"
+        "393 days since last gift"
       ],
-      "daysSinceGift": 392
+      "daysSinceGift": 393
+    },
+    {
+      "name": "Bruce M. Abrams",
+      "phone": "6193189220",
+      "email": "esqbma@live.com",
+      "fy25Amount": 500.0,
+      "lifetimeGiving": 7668.8,
+      "avgAnnual": 403.62,
+      "lastGiftDate": "2024-11-25",
+      "riskScore": 53,
+      "riskTier": "Medium",
+      "riskFactors": [
+        "19 year relationship at risk",
+        "457 days since last gift"
+      ],
+      "daysSinceGift": 457
     },
     {
       "name": "Myra Greenberg-Glassman",
@@ -3185,9 +3186,9 @@
       "riskTier": "Medium",
       "riskFactors": [
         "41 year relationship at risk",
-        "6143 days since last gift"
+        "6144 days since last gift"
       ],
-      "daysSinceGift": 6143
+      "daysSinceGift": 6144
     },
     {
       "name": "Miriam Kirshner",
@@ -3202,9 +3203,9 @@
       "riskFactors": [
         "37 year relationship at risk",
         "$10,936 lifetime donor",
-        "456 days since last gift"
+        "457 days since last gift"
       ],
-      "daysSinceGift": 456
+      "daysSinceGift": 457
     },
     {
       "name": "Eric Weisman",
@@ -3220,9 +3221,9 @@
         "27 year relationship at risk",
         "$514/yr avg at risk",
         "$13,865 lifetime donor",
-        "1477 days since last gift"
+        "1478 days since last gift"
       ],
-      "daysSinceGift": 1477
+      "daysSinceGift": 1478
     },
     {
       "name": "Liz Sharp",
@@ -3237,9 +3238,26 @@
       "riskFactors": [
         "43 year relationship at risk",
         "$14,231 lifetime donor",
-        "474 days since last gift"
+        "475 days since last gift"
       ],
-      "daysSinceGift": 474
+      "daysSinceGift": 475
+    },
+    {
+      "name": "Ellen Potter",
+      "phone": "8583544270",
+      "email": "ellenpotterevans@gmail.com",
+      "fy25Amount": 180.0,
+      "lifetimeGiving": 13125.0,
+      "avgAnnual": 312.5,
+      "lastGiftDate": "2024-10-03",
+      "riskScore": 53,
+      "riskTier": "Watch",
+      "riskFactors": [
+        "42 year relationship at risk",
+        "$13,125 lifetime donor",
+        "510 days since last gift"
+      ],
+      "daysSinceGift": 510
     },
     {
       "name": "Julie Litman",
@@ -3255,10 +3273,10 @@
         "6 year relationship at risk",
         "$4,700/yr avg at risk",
         "$28,200 lifetime donor",
-        "1533 days since last gift",
+        "1534 days since last gift",
         "Major donor \u2014 immediate outreach needed"
       ],
-      "daysSinceGift": 1533
+      "daysSinceGift": 1534
     },
     {
       "name": "Daniel Salomon Feiner",
@@ -3273,9 +3291,9 @@
       "riskFactors": [
         "11 year relationship at risk",
         "$580/yr avg at risk",
-        "434 days since last gift"
+        "435 days since last gift"
       ],
-      "daysSinceGift": 434
+      "daysSinceGift": 435
     },
     {
       "name": "Karin Toranto",
@@ -3292,7 +3310,7 @@
         "$1,748/yr avg at risk",
         "$24,477 lifetime donor"
       ],
-      "daysSinceGift": 288
+      "daysSinceGift": 289
     },
     {
       "name": "Benjamin Frishberg",
@@ -3308,7 +3326,7 @@
         "23 year relationship at risk",
         "$11,490 lifetime donor"
       ],
-      "daysSinceGift": 321
+      "daysSinceGift": 322
     },
     {
       "name": "Gaby R. Cosgrove",
@@ -3322,25 +3340,9 @@
       "riskTier": "High",
       "riskFactors": [
         "28 year relationship at risk",
-        "456 days since last gift"
+        "457 days since last gift"
       ],
-      "daysSinceGift": 456
-    },
-    {
-      "name": "Leonid Zilberman",
-      "phone": "",
-      "email": "lzilberman68@gmail.com",
-      "fy25Amount": 750.0,
-      "lifetimeGiving": 4590.0,
-      "avgAnnual": 199.57,
-      "lastGiftDate": "2024-11-18",
-      "riskScore": 52,
-      "riskTier": "Medium",
-      "riskFactors": [
-        "23 year relationship at risk",
-        "463 days since last gift"
-      ],
-      "daysSinceGift": 463
+      "daysSinceGift": 457
     },
     {
       "name": "Victor Wahba",
@@ -3354,9 +3356,9 @@
       "riskTier": "Medium",
       "riskFactors": [
         "28 year relationship at risk",
-        "10392 days since last gift"
+        "10393 days since last gift"
       ],
-      "daysSinceGift": 10392
+      "daysSinceGift": 10393
     },
     {
       "name": "Alan Katz",
@@ -3370,9 +3372,9 @@
       "riskTier": "Medium",
       "riskFactors": [
         "23 year relationship at risk",
-        "464 days since last gift"
+        "465 days since last gift"
       ],
-      "daysSinceGift": 464
+      "daysSinceGift": 465
     },
     {
       "name": "Amy Schindler",
@@ -3386,9 +3388,9 @@
       "riskTier": "Medium",
       "riskFactors": [
         "31 year relationship at risk",
-        "456 days since last gift"
+        "457 days since last gift"
       ],
-      "daysSinceGift": 456
+      "daysSinceGift": 457
     },
     {
       "name": "Kate Haimsohn Kassar",
@@ -3402,9 +3404,9 @@
       "riskTier": "Medium",
       "riskFactors": [
         "29 year relationship at risk",
-        "463 days since last gift"
+        "464 days since last gift"
       ],
-      "daysSinceGift": 463
+      "daysSinceGift": 464
     },
     {
       "name": "Jacob S. Berkson",
@@ -3418,9 +3420,9 @@
       "riskTier": "Medium",
       "riskFactors": [
         "26 year relationship at risk",
-        "7930 days since last gift"
+        "7931 days since last gift"
       ],
-      "daysSinceGift": 7930
+      "daysSinceGift": 7931
     },
     {
       "name": "Irving Jacoby",
@@ -3435,7 +3437,7 @@
       "riskFactors": [
         "42 year relationship at risk"
       ],
-      "daysSinceGift": 363
+      "daysSinceGift": 364
     },
     {
       "name": "Elizabeth Marek",
@@ -3449,25 +3451,9 @@
       "riskTier": "Medium",
       "riskFactors": [
         "31 year relationship at risk",
-        "4464 days since last gift"
+        "4465 days since last gift"
       ],
-      "daysSinceGift": 4464
-    },
-    {
-      "name": "Devorah Gurantz",
-      "phone": "",
-      "email": "dgurantz@gmail.com",
-      "fy25Amount": 500.0,
-      "lifetimeGiving": 2855.8,
-      "avgAnnual": 66.41,
-      "lastGiftDate": "2024-09-24",
-      "riskScore": 52,
-      "riskTier": "Medium",
-      "riskFactors": [
-        "43 year relationship at risk",
-        "518 days since last gift"
-      ],
-      "daysSinceGift": 518
+      "daysSinceGift": 4465
     },
     {
       "name": "Fran Susan Forman",
@@ -3481,9 +3467,25 @@
       "riskTier": "Medium",
       "riskFactors": [
         "29 year relationship at risk",
-        "465 days since last gift"
+        "466 days since last gift"
       ],
-      "daysSinceGift": 465
+      "daysSinceGift": 466
+    },
+    {
+      "name": "Devorah Gurantz",
+      "phone": "",
+      "email": "dgurantz@gmail.com",
+      "fy25Amount": 500.0,
+      "lifetimeGiving": 2855.8,
+      "avgAnnual": 66.41,
+      "lastGiftDate": "2024-09-24",
+      "riskScore": 52,
+      "riskTier": "Medium",
+      "riskFactors": [
+        "43 year relationship at risk",
+        "519 days since last gift"
+      ],
+      "daysSinceGift": 519
     },
     {
       "name": "Judy Rosenthal",
@@ -3497,9 +3499,9 @@
       "riskTier": "Watch",
       "riskFactors": [
         "36 year relationship at risk",
-        "1526 days since last gift"
+        "1527 days since last gift"
       ],
-      "daysSinceGift": 1526
+      "daysSinceGift": 1527
     },
     {
       "name": "Claudia Ehrlich",
@@ -3513,9 +3515,9 @@
       "riskTier": "Watch",
       "riskFactors": [
         "29 year relationship at risk",
-        "463 days since last gift"
+        "464 days since last gift"
       ],
-      "daysSinceGift": 463
+      "daysSinceGift": 464
     },
     {
       "name": "Judith S. Levine",
@@ -3529,9 +3531,9 @@
       "riskTier": "Watch",
       "riskFactors": [
         "43 year relationship at risk",
-        "434 days since last gift"
+        "435 days since last gift"
       ],
-      "daysSinceGift": 434
+      "daysSinceGift": 435
     },
     {
       "name": "Stuart Gayler",
@@ -3545,9 +3547,9 @@
       "riskTier": "Watch",
       "riskFactors": [
         "43 year relationship at risk",
-        "420 days since last gift"
+        "421 days since last gift"
       ],
-      "daysSinceGift": 420
+      "daysSinceGift": 421
     },
     {
       "name": "Dalia Lieberman",
@@ -3561,9 +3563,9 @@
       "riskTier": "Watch",
       "riskFactors": [
         "25 year relationship at risk",
-        "411 days since last gift"
+        "412 days since last gift"
       ],
-      "daysSinceGift": 411
+      "daysSinceGift": 412
     },
     {
       "name": "Ilana Gold",
@@ -3577,9 +3579,9 @@
       "riskTier": "Watch",
       "riskFactors": [
         "20 year relationship at risk",
-        "512 days since last gift"
+        "513 days since last gift"
       ],
-      "daysSinceGift": 512
+      "daysSinceGift": 513
     },
     {
       "name": "Harriet Schuman",
@@ -3593,9 +3595,9 @@
       "riskTier": "Watch",
       "riskFactors": [
         "43 year relationship at risk",
-        "420 days since last gift"
+        "421 days since last gift"
       ],
-      "daysSinceGift": 420
+      "daysSinceGift": 421
     },
     {
       "name": "Jennifer Goldman",
@@ -3610,10 +3612,10 @@
       "riskFactors": [
         "10 year relationship at risk",
         "$510/yr avg at risk",
-        "3310 days since last gift",
+        "3311 days since last gift",
         "Major donor \u2014 immediate outreach needed"
       ],
-      "daysSinceGift": 3310
+      "daysSinceGift": 3311
     },
     {
       "name": "Ron Keidar",
@@ -3629,7 +3631,7 @@
         "15 year relationship at risk",
         "$592/yr avg at risk"
       ],
-      "daysSinceGift": 344
+      "daysSinceGift": 345
     },
     {
       "name": "Norma Hirsh",
@@ -3645,7 +3647,7 @@
         "43 year relationship at risk",
         "$17,230 lifetime donor"
       ],
-      "daysSinceGift": 278
+      "daysSinceGift": 279
     },
     {
       "name": "Richard Haubrich",
@@ -3659,9 +3661,9 @@
       "riskTier": "Medium",
       "riskFactors": [
         "20 year relationship at risk",
-        "6509 days since last gift"
+        "6510 days since last gift"
       ],
-      "daysSinceGift": 6509
+      "daysSinceGift": 6510
     },
     {
       "name": "Carolyn Blumenthal",
@@ -3675,25 +3677,9 @@
       "riskTier": "Medium",
       "riskFactors": [
         "33 year relationship at risk",
-        "495 days since last gift"
+        "496 days since last gift"
       ],
-      "daysSinceGift": 495
-    },
-    {
-      "name": "Robert Fox",
-      "phone": "",
-      "email": "robertfoxmd@mac.com",
-      "fy25Amount": 500.0,
-      "lifetimeGiving": 2089.6,
-      "avgAnnual": 52.24,
-      "lastGiftDate": "2024-11-18",
-      "riskScore": 51,
-      "riskTier": "Medium",
-      "riskFactors": [
-        "40 year relationship at risk",
-        "463 days since last gift"
-      ],
-      "daysSinceGift": 463
+      "daysSinceGift": 496
     },
     {
       "name": "Joanne Gimbel",
@@ -3707,9 +3693,9 @@
       "riskTier": "Medium",
       "riskFactors": [
         "32 year relationship at risk",
-        "448 days since last gift"
+        "449 days since last gift"
       ],
-      "daysSinceGift": 448
+      "daysSinceGift": 449
     },
     {
       "name": "Shaun Copans",
@@ -3723,9 +3709,25 @@
       "riskTier": "Medium",
       "riskFactors": [
         "20 year relationship at risk",
-        "462 days since last gift"
+        "463 days since last gift"
       ],
-      "daysSinceGift": 462
+      "daysSinceGift": 463
+    },
+    {
+      "name": "Robert Fox",
+      "phone": "",
+      "email": "robertfoxmd@mac.com",
+      "fy25Amount": 500.0,
+      "lifetimeGiving": 2089.6,
+      "avgAnnual": 52.24,
+      "lastGiftDate": "2024-11-18",
+      "riskScore": 51,
+      "riskTier": "Medium",
+      "riskFactors": [
+        "40 year relationship at risk",
+        "464 days since last gift"
+      ],
+      "daysSinceGift": 464
     },
     {
       "name": "Patricia Waisburd",
@@ -3739,25 +3741,9 @@
       "riskTier": "Medium",
       "riskFactors": [
         "36 year relationship at risk",
-        "656 days since last gift"
+        "657 days since last gift"
       ],
-      "daysSinceGift": 656
-    },
-    {
-      "name": "Lee Maio",
-      "phone": "6198239834",
-      "email": "lcrproducts@cox.net",
-      "fy25Amount": 360.0,
-      "lifetimeGiving": 2166.95,
-      "avgAnnual": 80.26,
-      "lastGiftDate": "2024-11-16",
-      "riskScore": 51,
-      "riskTier": "Watch",
-      "riskFactors": [
-        "27 year relationship at risk",
-        "465 days since last gift"
-      ],
-      "daysSinceGift": 465
+      "daysSinceGift": 657
     },
     {
       "name": "Richard Schwartz",
@@ -3771,9 +3757,25 @@
       "riskTier": "Watch",
       "riskFactors": [
         "24 year relationship at risk",
-        "406 days since last gift"
+        "407 days since last gift"
       ],
-      "daysSinceGift": 406
+      "daysSinceGift": 407
+    },
+    {
+      "name": "Lee Maio",
+      "phone": "6198239834",
+      "email": "lcrproducts@cox.net",
+      "fy25Amount": 360.0,
+      "lifetimeGiving": 2166.95,
+      "avgAnnual": 80.26,
+      "lastGiftDate": "2024-11-16",
+      "riskScore": 51,
+      "riskTier": "Watch",
+      "riskFactors": [
+        "27 year relationship at risk",
+        "466 days since last gift"
+      ],
+      "daysSinceGift": 466
     },
     {
       "name": "Marty Weiss",
@@ -3787,9 +3789,9 @@
       "riskTier": "Watch",
       "riskFactors": [
         "19 year relationship at risk",
-        "420 days since last gift"
+        "421 days since last gift"
       ],
-      "daysSinceGift": 420
+      "daysSinceGift": 421
     },
     {
       "name": "Darlene Schaeffer",
@@ -3803,25 +3805,9 @@
       "riskTier": "Watch",
       "riskFactors": [
         "17 year relationship at risk",
-        "429 days since last gift"
+        "430 days since last gift"
       ],
-      "daysSinceGift": 429
-    },
-    {
-      "name": "Mark A. Stern",
-      "phone": "",
-      "email": "vpipenman@yahoo.com",
-      "fy25Amount": 300.0,
-      "lifetimeGiving": 2831.0,
-      "avgAnnual": 65.84,
-      "lastGiftDate": "2024-11-18",
-      "riskScore": 51,
-      "riskTier": "Watch",
-      "riskFactors": [
-        "43 year relationship at risk",
-        "463 days since last gift"
-      ],
-      "daysSinceGift": 463
+      "daysSinceGift": 430
     },
     {
       "name": "Pam Zuckerman",
@@ -3835,9 +3821,9 @@
       "riskTier": "Watch",
       "riskFactors": [
         "43 year relationship at risk",
-        "456 days since last gift"
+        "457 days since last gift"
       ],
-      "daysSinceGift": 456
+      "daysSinceGift": 457
     },
     {
       "name": "Robert A. Lerner",
@@ -3851,9 +3837,25 @@
       "riskTier": "Watch",
       "riskFactors": [
         "36 year relationship at risk",
-        "432 days since last gift"
+        "433 days since last gift"
       ],
-      "daysSinceGift": 432
+      "daysSinceGift": 433
+    },
+    {
+      "name": "Mark A. Stern",
+      "phone": "",
+      "email": "vpipenman@yahoo.com",
+      "fy25Amount": 300.0,
+      "lifetimeGiving": 2831.0,
+      "avgAnnual": 65.84,
+      "lastGiftDate": "2024-11-18",
+      "riskScore": 51,
+      "riskTier": "Watch",
+      "riskFactors": [
+        "43 year relationship at risk",
+        "464 days since last gift"
+      ],
+      "daysSinceGift": 464
     },
     {
       "name": "Darren Pfefferman",
@@ -3867,9 +3869,9 @@
       "riskTier": "Watch",
       "riskFactors": [
         "18 year relationship at risk",
-        "3283 days since last gift"
+        "3284 days since last gift"
       ],
-      "daysSinceGift": 3283
+      "daysSinceGift": 3284
     },
     {
       "name": "Nouri Nahoraof",
@@ -3883,9 +3885,9 @@
       "riskTier": "Watch",
       "riskFactors": [
         "21 year relationship at risk",
-        "489 days since last gift"
+        "490 days since last gift"
       ],
-      "daysSinceGift": 489
+      "daysSinceGift": 490
     },
     {
       "name": "Abraham Broudy",
@@ -3899,25 +3901,9 @@
       "riskTier": "Watch",
       "riskFactors": [
         "21 year relationship at risk",
-        "421 days since last gift"
+        "422 days since last gift"
       ],
-      "daysSinceGift": 421
-    },
-    {
-      "name": "Lisa Heikoff",
-      "phone": "",
-      "email": "",
-      "fy25Amount": 200.0,
-      "lifetimeGiving": 4148.0,
-      "avgAnnual": 143.03,
-      "lastGiftDate": "2024-11-05",
-      "riskScore": 51,
-      "riskTier": "Watch",
-      "riskFactors": [
-        "29 year relationship at risk",
-        "476 days since last gift"
-      ],
-      "daysSinceGift": 476
+      "daysSinceGift": 422
     },
     {
       "name": "Miklos Wallenfels",
@@ -3931,9 +3917,25 @@
       "riskTier": "Watch",
       "riskFactors": [
         "28 year relationship at risk",
-        "411 days since last gift"
+        "412 days since last gift"
       ],
-      "daysSinceGift": 411
+      "daysSinceGift": 412
+    },
+    {
+      "name": "Lisa Heikoff",
+      "phone": "",
+      "email": "",
+      "fy25Amount": 200.0,
+      "lifetimeGiving": 4148.0,
+      "avgAnnual": 143.03,
+      "lastGiftDate": "2024-11-05",
+      "riskScore": 51,
+      "riskTier": "Watch",
+      "riskFactors": [
+        "29 year relationship at risk",
+        "477 days since last gift"
+      ],
+      "daysSinceGift": 477
     },
     {
       "name": "Warren Treisman",
@@ -3947,9 +3949,9 @@
       "riskTier": "Watch",
       "riskFactors": [
         "22 year relationship at risk",
-        "2262 days since last gift"
+        "2263 days since last gift"
       ],
-      "daysSinceGift": 2262
+      "daysSinceGift": 2263
     },
     {
       "name": "Lina Wolf Lustbader",
@@ -3963,9 +3965,9 @@
       "riskTier": "Watch",
       "riskFactors": [
         "17 year relationship at risk",
-        "516 days since last gift"
+        "517 days since last gift"
       ],
-      "daysSinceGift": 516
+      "daysSinceGift": 517
     },
     {
       "name": "Bruce Koren",
@@ -3979,9 +3981,9 @@
       "riskTier": "Watch",
       "riskFactors": [
         "28 year relationship at risk",
-        "424 days since last gift"
+        "425 days since last gift"
       ],
-      "daysSinceGift": 424
+      "daysSinceGift": 425
     },
     {
       "name": "Lolie Fromm",
@@ -3995,9 +3997,9 @@
       "riskTier": "Watch",
       "riskFactors": [
         "35 year relationship at risk",
-        "455 days since last gift"
+        "456 days since last gift"
       ],
-      "daysSinceGift": 455
+      "daysSinceGift": 456
     },
     {
       "name": "Andrew Vanderwiel",
@@ -4011,9 +4013,9 @@
       "riskTier": "Watch",
       "riskFactors": [
         "24 year relationship at risk",
-        "8631 days since last gift"
+        "8632 days since last gift"
       ],
-      "daysSinceGift": 8631
+      "daysSinceGift": 8632
     },
     {
       "name": "Sandy Kodesh",
@@ -4027,9 +4029,9 @@
       "riskTier": "Watch",
       "riskFactors": [
         "36 year relationship at risk",
-        "503 days since last gift"
+        "504 days since last gift"
       ],
-      "daysSinceGift": 503
+      "daysSinceGift": 504
     },
     {
       "name": "Mark B. Strauss",
@@ -4043,9 +4045,9 @@
       "riskTier": "Watch",
       "riskFactors": [
         "31 year relationship at risk",
-        "523 days since last gift"
+        "524 days since last gift"
       ],
-      "daysSinceGift": 523
+      "daysSinceGift": 524
     },
     {
       "name": "Mark Feder",
@@ -4059,9 +4061,9 @@
       "riskTier": "Watch",
       "riskFactors": [
         "20 year relationship at risk",
-        "512 days since last gift"
+        "513 days since last gift"
       ],
-      "daysSinceGift": 512
+      "daysSinceGift": 513
     },
     {
       "name": "Alex York",
@@ -4075,25 +4077,9 @@
       "riskTier": "Watch",
       "riskFactors": [
         "36 year relationship at risk",
-        "414 days since last gift"
+        "415 days since last gift"
       ],
-      "daysSinceGift": 414
-    },
-    {
-      "name": "Craig Saffer",
-      "phone": "",
-      "email": "cssaffer@gmail.com",
-      "fy25Amount": 180.0,
-      "lifetimeGiving": 3653.0,
-      "avgAnnual": 192.26,
-      "lastGiftDate": "2024-10-10",
-      "riskScore": 51,
-      "riskTier": "Watch",
-      "riskFactors": [
-        "19 year relationship at risk",
-        "502 days since last gift"
-      ],
-      "daysSinceGift": 502
+      "daysSinceGift": 415
     },
     {
       "name": "Craig Saloner",
@@ -4107,9 +4093,9 @@
       "riskTier": "Watch",
       "riskFactors": [
         "20 year relationship at risk",
-        "463 days since last gift"
+        "464 days since last gift"
       ],
-      "daysSinceGift": 463
+      "daysSinceGift": 464
     },
     {
       "name": "Julie West",
@@ -4123,9 +4109,9 @@
       "riskTier": "Watch",
       "riskFactors": [
         "40 year relationship at risk",
-        "456 days since last gift"
+        "457 days since last gift"
       ],
-      "daysSinceGift": 456
+      "daysSinceGift": 457
     },
     {
       "name": "Grace Tawil",
@@ -4139,25 +4125,25 @@
       "riskTier": "Watch",
       "riskFactors": [
         "19 year relationship at risk",
-        "456 days since last gift"
+        "457 days since last gift"
       ],
-      "daysSinceGift": 456
+      "daysSinceGift": 457
     },
     {
-      "name": "Paulo Berger",
-      "phone": "",
-      "email": "elbigmac1@gmail.com",
+      "name": "Karyn Rovner-Sklar",
+      "phone": "6199901597",
+      "email": "krsklar@gmail.com",
       "fy25Amount": 180.0,
-      "lifetimeGiving": 4703.4,
-      "avgAnnual": 223.97,
-      "lastGiftDate": "2024-12-30",
+      "lifetimeGiving": 744.0,
+      "avgAnnual": 32.35,
+      "lastGiftDate": "2016-11-04",
       "riskScore": 51,
       "riskTier": "Watch",
       "riskFactors": [
-        "21 year relationship at risk",
-        "421 days since last gift"
+        "23 year relationship at risk",
+        "3400 days since last gift"
       ],
-      "daysSinceGift": 421
+      "daysSinceGift": 3400
     },
     {
       "name": "Jeffrey A. Sitcov",
@@ -4171,9 +4157,26 @@
       "riskTier": "Watch",
       "riskFactors": [
         "37 year relationship at risk",
-        "411 days since last gift"
+        "412 days since last gift"
       ],
-      "daysSinceGift": 411
+      "daysSinceGift": 412
+    },
+    {
+      "name": "Salomon Gorshtein",
+      "phone": "6199930950",
+      "email": "sgorshtein@sunroadenterprises.com",
+      "fy25Amount": 2320.0,
+      "lifetimeGiving": 32195.0,
+      "avgAnnual": 1788.61,
+      "lastGiftDate": "2025-08-07",
+      "riskScore": 50,
+      "riskTier": "High",
+      "riskFactors": [
+        "18 year relationship at risk",
+        "$1,789/yr avg at risk",
+        "$32,195 lifetime donor"
+      ],
+      "daysSinceGift": 202
     },
     {
       "name": "Jodyne Roseman",
@@ -4190,7 +4193,7 @@
         "$2,059/yr avg at risk",
         "$94,719 lifetime donor"
       ],
-      "daysSinceGift": 26
+      "daysSinceGift": 27
     },
     {
       "name": "David Mullin",
@@ -4206,23 +4209,7 @@
         "28 year relationship at risk",
         "$10,940 lifetime donor"
       ],
-      "daysSinceGift": 308
-    },
-    {
-      "name": "Betsy Arnold",
-      "phone": "",
-      "email": "barnold10@cox.net",
-      "fy25Amount": 1000.0,
-      "lifetimeGiving": 18679.68,
-      "avgAnnual": 434.41,
-      "lastGiftDate": "2025-05-12",
-      "riskScore": 50,
-      "riskTier": "High",
-      "riskFactors": [
-        "43 year relationship at risk",
-        "$18,680 lifetime donor"
-      ],
-      "daysSinceGift": 288
+      "daysSinceGift": 309
     },
     {
       "name": "Jeffrey Bernstein",
@@ -4239,7 +4226,23 @@
         "$1,658/yr avg at risk",
         "$33,156 lifetime donor"
       ],
-      "daysSinceGift": 242
+      "daysSinceGift": 243
+    },
+    {
+      "name": "Betsy Arnold",
+      "phone": "",
+      "email": "barnold10@cox.net",
+      "fy25Amount": 1000.0,
+      "lifetimeGiving": 18679.68,
+      "avgAnnual": 434.41,
+      "lastGiftDate": "2025-05-12",
+      "riskScore": 50,
+      "riskTier": "High",
+      "riskFactors": [
+        "43 year relationship at risk",
+        "$18,680 lifetime donor"
+      ],
+      "daysSinceGift": 289
     },
     {
       "name": "Michael Hopkins",
@@ -4255,9 +4258,24 @@
         "12 year relationship at risk",
         "$2,496/yr avg at risk",
         "$29,946 lifetime donor",
-        "853 days since last gift"
+        "854 days since last gift"
       ],
-      "daysSinceGift": 853
+      "daysSinceGift": 854
+    },
+    {
+      "name": "Norman Needel",
+      "phone": "6197727434",
+      "email": "normanhneedel@cox.net",
+      "fy25Amount": 300.0,
+      "lifetimeGiving": 4500.0,
+      "avgAnnual": 225.0,
+      "lastGiftDate": "2025-03-13",
+      "riskScore": 50,
+      "riskTier": "Watch",
+      "riskFactors": [
+        "20 year relationship at risk"
+      ],
+      "daysSinceGift": 349
     },
     {
       "name": "Robyn Cohen",
@@ -4272,7 +4290,7 @@
       "riskFactors": [
         "29 year relationship at risk"
       ],
-      "daysSinceGift": 364
+      "daysSinceGift": 365
     },
     {
       "name": "Sherrie Dixon",
@@ -4280,15 +4298,15 @@
       "email": "srdixon1014@aol.com",
       "fy25Amount": 180.0,
       "lifetimeGiving": 280.0,
-      "avgAnnual": 8.75,
+      "avgAnnual": 8.48,
       "lastGiftDate": "2024-09-12",
       "riskScore": 50,
       "riskTier": "Watch",
       "riskFactors": [
-        "32 year relationship at risk",
-        "530 days since last gift"
+        "33 year relationship at risk",
+        "531 days since last gift"
       ],
-      "daysSinceGift": 530
+      "daysSinceGift": 531
     },
     {
       "name": "Roman Volf",
@@ -4302,9 +4320,9 @@
       "riskTier": "Watch",
       "riskFactors": [
         "16 year relationship at risk",
-        "397 days since last gift"
+        "398 days since last gift"
       ],
-      "daysSinceGift": 397
+      "daysSinceGift": 398
     },
     {
       "name": "Yitzhak Tor",
@@ -4318,9 +4336,9 @@
       "riskTier": "Watch",
       "riskFactors": [
         "21 year relationship at risk",
-        "420 days since last gift"
+        "421 days since last gift"
       ],
-      "daysSinceGift": 420
+      "daysSinceGift": 421
     },
     {
       "name": "STEVEN DEMETER",
@@ -4338,7 +4356,7 @@
         "$50,800 lifetime donor",
         "Major donor \u2014 immediate outreach needed"
       ],
-      "daysSinceGift": 59
+      "daysSinceGift": 60
     },
     {
       "name": "Elizabeth Jeter",
@@ -4354,7 +4372,7 @@
         "43 year relationship at risk",
         "$21,038 lifetime donor"
       ],
-      "daysSinceGift": 169
+      "daysSinceGift": 170
     },
     {
       "name": "John David Tishler",
@@ -4371,7 +4389,7 @@
         "$2,709/yr avg at risk",
         "$59,593 lifetime donor"
       ],
-      "daysSinceGift": 55
+      "daysSinceGift": 56
     },
     {
       "name": "Salomon Waisburd",
@@ -4386,9 +4404,9 @@
       "riskFactors": [
         "10 year relationship at risk",
         "$756/yr avg at risk",
-        "456 days since last gift"
+        "457 days since last gift"
       ],
-      "daysSinceGift": 456
+      "daysSinceGift": 457
     },
     {
       "name": "Bobbie Gilbert",
@@ -4405,24 +4423,7 @@
         "$1,701/yr avg at risk",
         "$73,155 lifetime donor"
       ],
-      "daysSinceGift": 67
-    },
-    {
-      "name": "Salomon Gorshtein",
-      "phone": "6199930950",
-      "email": "sgorshtein@sunroadenterprises.com",
-      "fy25Amount": 2320.0,
-      "lifetimeGiving": 32195.0,
-      "avgAnnual": 1788.61,
-      "lastGiftDate": "2025-08-07",
-      "riskScore": 49,
-      "riskTier": "High",
-      "riskFactors": [
-        "18 year relationship at risk",
-        "$1,789/yr avg at risk",
-        "$32,195 lifetime donor"
-      ],
-      "daysSinceGift": 201
+      "daysSinceGift": 68
     },
     {
       "name": "Sylvia Gorshtein",
@@ -4439,7 +4440,7 @@
         "$1,840/yr avg at risk",
         "$42,315 lifetime donor"
       ],
-      "daysSinceGift": 169
+      "daysSinceGift": 170
     },
     {
       "name": "Sharon Gabriel",
@@ -4456,7 +4457,7 @@
         "$3,385/yr avg at risk",
         "$145,540 lifetime donor"
       ],
-      "daysSinceGift": 25
+      "daysSinceGift": 26
     },
     {
       "name": "Herbert Adelman",
@@ -4472,9 +4473,9 @@
         "13 year relationship at risk",
         "$1,223/yr avg at risk",
         "$15,901 lifetime donor",
-        "412 days since last gift"
+        "413 days since last gift"
       ],
-      "daysSinceGift": 412
+      "daysSinceGift": 413
     },
     {
       "name": "Harvey Gelb",
@@ -4488,9 +4489,9 @@
       "riskTier": "Watch",
       "riskFactors": [
         "15 year relationship at risk",
-        "424 days since last gift"
+        "425 days since last gift"
       ],
-      "daysSinceGift": 424
+      "daysSinceGift": 425
     },
     {
       "name": "Valerie Leman",
@@ -4505,7 +4506,7 @@
       "riskFactors": [
         "43 year relationship at risk"
       ],
-      "daysSinceGift": 334
+      "daysSinceGift": 335
     },
     {
       "name": "Joanne Laverson",
@@ -4520,7 +4521,7 @@
       "riskFactors": [
         "26 year relationship at risk"
       ],
-      "daysSinceGift": 348
+      "daysSinceGift": 349
     },
     {
       "name": "Joel Jacks",
@@ -4536,10 +4537,10 @@
         "5 year relationship at risk",
         "$5,800/yr avg at risk",
         "$29,000 lifetime donor",
-        "558 days since last gift",
+        "559 days since last gift",
         "Major donor \u2014 immediate outreach needed"
       ],
-      "daysSinceGift": 558
+      "daysSinceGift": 559
     },
     {
       "name": "Elliott Tarson",
@@ -4555,9 +4556,9 @@
         "10 year relationship at risk",
         "$1,550/yr avg at risk",
         "$15,500 lifetime donor",
-        "396 days since last gift"
+        "397 days since last gift"
       ],
-      "daysSinceGift": 396
+      "daysSinceGift": 397
     },
     {
       "name": "Jorge Saad",
@@ -4574,7 +4575,7 @@
         "$834/yr avg at risk",
         "$35,860 lifetime donor"
       ],
-      "daysSinceGift": 202
+      "daysSinceGift": 203
     },
     {
       "name": "Patricia Greenfield",
@@ -4590,7 +4591,7 @@
         "46 year relationship at risk",
         "$11,760 lifetime donor"
       ],
-      "daysSinceGift": 277
+      "daysSinceGift": 278
     },
     {
       "name": "Elena Kucinski",
@@ -4607,7 +4608,38 @@
         "$531/yr avg at risk",
         "$24,409 lifetime donor"
       ],
-      "daysSinceGift": 237
+      "daysSinceGift": 238
+    },
+    {
+      "name": "Joel Heiser",
+      "phone": "7602073016",
+      "email": "joelheiser@me.com",
+      "fy25Amount": 1000.0,
+      "lifetimeGiving": 21100.0,
+      "avgAnnual": 490.7,
+      "lastGiftDate": "2025-06-25",
+      "riskScore": 48,
+      "riskTier": "High",
+      "riskFactors": [
+        "43 year relationship at risk",
+        "$21,100 lifetime donor"
+      ],
+      "daysSinceGift": 245
+    },
+    {
+      "name": "Joan Lubowe",
+      "phone": "",
+      "email": "lubowejk@gmail.com",
+      "fy25Amount": 1000.0,
+      "lifetimeGiving": 6400.0,
+      "avgAnnual": 266.67,
+      "lastGiftDate": "2025-05-12",
+      "riskScore": 48,
+      "riskTier": "High",
+      "riskFactors": [
+        "24 year relationship at risk"
+      ],
+      "daysSinceGift": 289
     },
     {
       "name": "Eduardo Sneider",
@@ -4624,7 +4656,7 @@
         "$503/yr avg at risk",
         "$17,592 lifetime donor"
       ],
-      "daysSinceGift": 270
+      "daysSinceGift": 271
     },
     {
       "name": "Dorothy Kleinman",
@@ -4640,7 +4672,7 @@
         "43 year relationship at risk",
         "$19,905 lifetime donor"
       ],
-      "daysSinceGift": 271
+      "daysSinceGift": 272
     },
     {
       "name": "Mark Abelkop",
@@ -4656,7 +4688,7 @@
         "37 year relationship at risk",
         "$18,124 lifetime donor"
       ],
-      "daysSinceGift": 277
+      "daysSinceGift": 278
     },
     {
       "name": "Laurie Hoshaw",
@@ -4674,7 +4706,7 @@
         "$37,275 lifetime donor",
         "Major donor \u2014 immediate outreach needed"
       ],
-      "daysSinceGift": 23
+      "daysSinceGift": 24
     },
     {
       "name": "Meg Leopold Mandel",
@@ -4692,7 +4724,7 @@
         "$54,682 lifetime donor",
         "Major donor \u2014 immediate outreach needed"
       ],
-      "daysSinceGift": 22
+      "daysSinceGift": 23
     },
     {
       "name": "Oscar A. Worm",
@@ -4707,38 +4739,7 @@
       "riskFactors": [
         "42 year relationship at risk"
       ],
-      "daysSinceGift": 222
-    },
-    {
-      "name": "Joan Lubowe",
-      "phone": "",
-      "email": "lubowejk@gmail.com",
-      "fy25Amount": 1000.0,
-      "lifetimeGiving": 6400.0,
-      "avgAnnual": 266.67,
-      "lastGiftDate": "2025-05-12",
-      "riskScore": 47,
-      "riskTier": "High",
-      "riskFactors": [
-        "24 year relationship at risk"
-      ],
-      "daysSinceGift": 288
-    },
-    {
-      "name": "Joel Heiser",
-      "phone": "7602073016",
-      "email": "joelheiser@me.com",
-      "fy25Amount": 1000.0,
-      "lifetimeGiving": 21100.0,
-      "avgAnnual": 490.7,
-      "lastGiftDate": "2025-06-25",
-      "riskScore": 47,
-      "riskTier": "High",
-      "riskFactors": [
-        "43 year relationship at risk",
-        "$21,100 lifetime donor"
-      ],
-      "daysSinceGift": 244
+      "daysSinceGift": 223
     },
     {
       "name": "Zvi & Hadas BARON",
@@ -4753,7 +4754,7 @@
       "riskFactors": [
         "22 year relationship at risk"
       ],
-      "daysSinceGift": 308
+      "daysSinceGift": 309
     },
     {
       "name": "David Roth",
@@ -4769,7 +4770,7 @@
         "36 year relationship at risk",
         "$16,060 lifetime donor"
       ],
-      "daysSinceGift": 272
+      "daysSinceGift": 273
     },
     {
       "name": "Jan M Friedman",
@@ -4784,7 +4785,7 @@
       "riskFactors": [
         "43 year relationship at risk"
       ],
-      "daysSinceGift": 302
+      "daysSinceGift": 303
     },
     {
       "name": "Ava Kurnow",
@@ -4799,9 +4800,9 @@
       "riskFactors": [
         "13 year relationship at risk",
         "$700/yr avg at risk",
-        "589 days since last gift"
+        "590 days since last gift"
       ],
-      "daysSinceGift": 589
+      "daysSinceGift": 590
     },
     {
       "name": "Richard Schrager",
@@ -4819,7 +4820,7 @@
         "$47,575 lifetime donor",
         "Major donor \u2014 immediate outreach needed"
       ],
-      "daysSinceGift": 238
+      "daysSinceGift": 239
     },
     {
       "name": "Ronna Gerber",
@@ -4833,9 +4834,9 @@
       "riskTier": "Medium",
       "riskFactors": [
         "13 year relationship at risk",
-        "428 days since last gift"
+        "429 days since last gift"
       ],
-      "daysSinceGift": 428
+      "daysSinceGift": 429
     },
     {
       "name": "Michael Harnett",
@@ -4850,7 +4851,7 @@
       "riskFactors": [
         "21 year relationship at risk"
       ],
-      "daysSinceGift": 278
+      "daysSinceGift": 279
     },
     {
       "name": "Arlene Weintraub",
@@ -4866,7 +4867,7 @@
         "46 year relationship at risk",
         "$12,702 lifetime donor"
       ],
-      "daysSinceGift": 272
+      "daysSinceGift": 273
     },
     {
       "name": "Ethan Marcus",
@@ -4881,7 +4882,7 @@
       "riskFactors": [
         "19 year relationship at risk"
       ],
-      "daysSinceGift": 299
+      "daysSinceGift": 300
     },
     {
       "name": "Nurit Yehushua",
@@ -4896,7 +4897,7 @@
       "riskFactors": [
         "28 year relationship at risk"
       ],
-      "daysSinceGift": 300
+      "daysSinceGift": 301
     },
     {
       "name": "Gaby M. Kuperman",
@@ -4911,7 +4912,7 @@
       "riskFactors": [
         "28 year relationship at risk"
       ],
-      "daysSinceGift": 300
+      "daysSinceGift": 301
     },
     {
       "name": "Edward Colby",
@@ -4925,9 +4926,9 @@
       "riskTier": "Watch",
       "riskFactors": [
         "13 year relationship at risk",
-        "420 days since last gift"
+        "421 days since last gift"
       ],
-      "daysSinceGift": 420
+      "daysSinceGift": 421
     },
     {
       "name": "Mark David Muller",
@@ -4942,7 +4943,22 @@
       "riskFactors": [
         "36 year relationship at risk"
       ],
-      "daysSinceGift": 293
+      "daysSinceGift": 294
+    },
+    {
+      "name": "Sheldon A. Kleiman",
+      "phone": "",
+      "email": "robk.conceptek@gmail.com",
+      "fy25Amount": 180.0,
+      "lifetimeGiving": 480.0,
+      "avgAnnual": 15.0,
+      "lastGiftDate": "2025-04-30",
+      "riskScore": 46,
+      "riskTier": "Watch",
+      "riskFactors": [
+        "32 year relationship at risk"
+      ],
+      "daysSinceGift": 301
     },
     {
       "name": "Anthony H. Sacks",
@@ -4959,7 +4975,7 @@
         "$1,786/yr avg at risk",
         "$76,786 lifetime donor"
       ],
-      "daysSinceGift": 13
+      "daysSinceGift": 14
     },
     {
       "name": "Paul Saitowitz",
@@ -4973,9 +4989,9 @@
       "riskTier": "High",
       "riskFactors": [
         "12 year relationship at risk",
-        "463 days since last gift"
+        "464 days since last gift"
       ],
-      "daysSinceGift": 463
+      "daysSinceGift": 464
     },
     {
       "name": "Alberto Hanono",
@@ -4989,9 +5005,25 @@
       "riskTier": "Medium",
       "riskFactors": [
         "12 year relationship at risk",
-        "463 days since last gift"
+        "464 days since last gift"
       ],
-      "daysSinceGift": 463
+      "daysSinceGift": 464
+    },
+    {
+      "name": "Renee Barnow",
+      "phone": "2024213550",
+      "email": "0jersey.hilly@icloud.com",
+      "fy25Amount": 500.0,
+      "lifetimeGiving": 3923.2,
+      "avgAnnual": 326.93,
+      "lastGiftDate": "2024-12-05",
+      "riskScore": 45,
+      "riskTier": "Medium",
+      "riskFactors": [
+        "12 year relationship at risk",
+        "447 days since last gift"
+      ],
+      "daysSinceGift": 447
     },
     {
       "name": "Rebecca Brewer",
@@ -5007,25 +5039,9 @@
         "11 year relationship at risk",
         "$1,156/yr avg at risk",
         "$12,718 lifetime donor",
-        "1830 days since last gift"
+        "1831 days since last gift"
       ],
-      "daysSinceGift": 1830
-    },
-    {
-      "name": "Renee Barnow",
-      "phone": "2024213550",
-      "email": "0jersey.hilly@icloud.com",
-      "fy25Amount": 500.0,
-      "lifetimeGiving": 3923.2,
-      "avgAnnual": 326.93,
-      "lastGiftDate": "2024-12-05",
-      "riskScore": 45,
-      "riskTier": "Medium",
-      "riskFactors": [
-        "12 year relationship at risk",
-        "446 days since last gift"
-      ],
-      "daysSinceGift": 446
+      "daysSinceGift": 1831
     },
     {
       "name": "John Silverstein",
@@ -5040,7 +5056,7 @@
       "riskFactors": [
         "43 year relationship at risk"
       ],
-      "daysSinceGift": 264
+      "daysSinceGift": 265
     },
     {
       "name": "Daniel Fascowich",
@@ -5054,9 +5070,9 @@
       "riskTier": "Watch",
       "riskFactors": [
         "13 year relationship at risk",
-        "465 days since last gift"
+        "466 days since last gift"
       ],
-      "daysSinceGift": 465
+      "daysSinceGift": 466
     },
     {
       "name": "Edward Farajzadeh",
@@ -5071,7 +5087,7 @@
       "riskFactors": [
         "42 year relationship at risk"
       ],
-      "daysSinceGift": 272
+      "daysSinceGift": 273
     },
     {
       "name": "Diane W. Sherman",
@@ -5086,7 +5102,7 @@
       "riskFactors": [
         "29 year relationship at risk"
       ],
-      "daysSinceGift": 281
+      "daysSinceGift": 282
     },
     {
       "name": "Vicky Krugman-Mendel",
@@ -5101,22 +5117,7 @@
       "riskFactors": [
         "34 year relationship at risk"
       ],
-      "daysSinceGift": 272
-    },
-    {
-      "name": "Sheldon A. Kleiman",
-      "phone": "",
-      "email": "robk.conceptek@gmail.com",
-      "fy25Amount": 180.0,
-      "lifetimeGiving": 480.0,
-      "avgAnnual": 15.0,
-      "lastGiftDate": "2025-04-30",
-      "riskScore": 45,
-      "riskTier": "Watch",
-      "riskFactors": [
-        "32 year relationship at risk"
-      ],
-      "daysSinceGift": 300
+      "daysSinceGift": 273
     },
     {
       "name": "Liz Wolfson",
@@ -5131,7 +5132,7 @@
       "riskFactors": [
         "20 year relationship at risk"
       ],
-      "daysSinceGift": 279
+      "daysSinceGift": 280
     },
     {
       "name": "Mark Ankcorn",
@@ -5145,9 +5146,9 @@
       "riskTier": "Watch",
       "riskFactors": [
         "13 year relationship at risk",
-        "503 days since last gift"
+        "504 days since last gift"
       ],
-      "daysSinceGift": 503
+      "daysSinceGift": 504
     },
     {
       "name": "Michael Breslauer",
@@ -5163,7 +5164,7 @@
         "40 year relationship at risk",
         "$14,237 lifetime donor"
       ],
-      "daysSinceGift": 245
+      "daysSinceGift": 246
     },
     {
       "name": "Adam Ellis",
@@ -5177,9 +5178,9 @@
       "riskTier": "Watch",
       "riskFactors": [
         "13 year relationship at risk",
-        "465 days since last gift"
+        "466 days since last gift"
       ],
-      "daysSinceGift": 465
+      "daysSinceGift": 466
     },
     {
       "name": "Barry Scher",
@@ -5196,7 +5197,7 @@
         "$861/yr avg at risk",
         "$39,626 lifetime donor"
       ],
-      "daysSinceGift": 104
+      "daysSinceGift": 105
     },
     {
       "name": "Sally Nalven",
@@ -5211,7 +5212,22 @@
       "riskFactors": [
         "42 year relationship at risk"
       ],
-      "daysSinceGift": 264
+      "daysSinceGift": 265
+    },
+    {
+      "name": "Edward S. Nefouse",
+      "phone": "8583422110",
+      "email": "",
+      "fy25Amount": 550.0,
+      "lifetimeGiving": 886.0,
+      "avgAnnual": 38.52,
+      "lastGiftDate": "2025-06-11",
+      "riskScore": 44,
+      "riskTier": "Medium",
+      "riskFactors": [
+        "23 year relationship at risk"
+      ],
+      "daysSinceGift": 259
     },
     {
       "name": "Beth Ann Sirull",
@@ -5227,9 +5243,9 @@
         "8 year relationship at risk",
         "$3,910/yr avg at risk",
         "$31,280 lifetime donor",
-        "1343 days since last gift"
+        "1344 days since last gift"
       ],
-      "daysSinceGift": 1343
+      "daysSinceGift": 1344
     },
     {
       "name": "Edward Rabinovich",
@@ -5245,7 +5261,7 @@
         "35 year relationship at risk",
         "$10,048 lifetime donor"
       ],
-      "daysSinceGift": 245
+      "daysSinceGift": 246
     },
     {
       "name": "Susan S. Fieldman",
@@ -5260,7 +5276,22 @@
       "riskFactors": [
         "18 year relationship at risk"
       ],
-      "daysSinceGift": 264
+      "daysSinceGift": 265
+    },
+    {
+      "name": "Stan Katz",
+      "phone": "",
+      "email": "stankatz@sbcglobal.net",
+      "fy25Amount": 334.0,
+      "lifetimeGiving": 5111.0,
+      "avgAnnual": 154.88,
+      "lastGiftDate": "2025-06-17",
+      "riskScore": 44,
+      "riskTier": "Watch",
+      "riskFactors": [
+        "33 year relationship at risk"
+      ],
+      "daysSinceGift": 253
     },
     {
       "name": "Craig Schechtman",
@@ -5275,7 +5306,7 @@
       "riskFactors": [
         "24 year relationship at risk"
       ],
-      "daysSinceGift": 259
+      "daysSinceGift": 260
     },
     {
       "name": "Sherwin Chasen",
@@ -5290,7 +5321,7 @@
       "riskFactors": [
         "22 year relationship at risk"
       ],
-      "daysSinceGift": 272
+      "daysSinceGift": 273
     },
     {
       "name": "Marvin E. Mazie",
@@ -5305,7 +5336,22 @@
       "riskFactors": [
         "19 year relationship at risk"
       ],
-      "daysSinceGift": 264
+      "daysSinceGift": 265
+    },
+    {
+      "name": "Jeanette Ross",
+      "phone": "",
+      "email": "summerross@cox.net",
+      "fy25Amount": 200.0,
+      "lifetimeGiving": 2400.0,
+      "avgAnnual": 57.14,
+      "lastGiftDate": "2025-06-05",
+      "riskScore": 44,
+      "riskTier": "Watch",
+      "riskFactors": [
+        "42 year relationship at risk"
+      ],
+      "daysSinceGift": 265
     },
     {
       "name": "David Gmach",
@@ -5320,7 +5366,7 @@
       "riskFactors": [
         "32 year relationship at risk"
       ],
-      "daysSinceGift": 270
+      "daysSinceGift": 271
     },
     {
       "name": "Martin Kent",
@@ -5334,9 +5380,9 @@
       "riskTier": "Watch",
       "riskFactors": [
         "12 year relationship at risk",
-        "420 days since last gift"
+        "421 days since last gift"
       ],
-      "daysSinceGift": 420
+      "daysSinceGift": 421
     },
     {
       "name": "Pauline Freedman",
@@ -5354,7 +5400,7 @@
         "$15,731 lifetime donor",
         "Major donor \u2014 immediate outreach needed"
       ],
-      "daysSinceGift": 24
+      "daysSinceGift": 25
     },
     {
       "name": "Mona S. Platt",
@@ -5369,7 +5415,7 @@
       "riskFactors": [
         "40 year relationship at risk"
       ],
-      "daysSinceGift": 189
+      "daysSinceGift": 190
     },
     {
       "name": "Kristine Ann Quart",
@@ -5384,22 +5430,7 @@
       "riskFactors": [
         "30 year relationship at risk"
       ],
-      "daysSinceGift": 189
-    },
-    {
-      "name": "Edward S. Nefouse",
-      "phone": "8583422110",
-      "email": "",
-      "fy25Amount": 550.0,
-      "lifetimeGiving": 886.0,
-      "avgAnnual": 38.52,
-      "lastGiftDate": "2025-06-11",
-      "riskScore": 43,
-      "riskTier": "Medium",
-      "riskFactors": [
-        "23 year relationship at risk"
-      ],
-      "daysSinceGift": 258
+      "daysSinceGift": 190
     },
     {
       "name": "Victoria L. Spilkin",
@@ -5414,7 +5445,7 @@
       "riskFactors": [
         "43 year relationship at risk"
       ],
-      "daysSinceGift": 237
+      "daysSinceGift": 238
     },
     {
       "name": "Fanny Pienknagura",
@@ -5429,7 +5460,7 @@
       "riskFactors": [
         "23 year relationship at risk"
       ],
-      "daysSinceGift": 253
+      "daysSinceGift": 254
     },
     {
       "name": "Ian Subel",
@@ -5443,24 +5474,9 @@
       "riskTier": "Watch",
       "riskFactors": [
         "11 year relationship at risk",
-        "1866 days since last gift"
+        "1867 days since last gift"
       ],
-      "daysSinceGift": 1866
-    },
-    {
-      "name": "Stan Katz",
-      "phone": "",
-      "email": "stankatz@sbcglobal.net",
-      "fy25Amount": 334.0,
-      "lifetimeGiving": 5111.0,
-      "avgAnnual": 154.88,
-      "lastGiftDate": "2025-06-17",
-      "riskScore": 43,
-      "riskTier": "Watch",
-      "riskFactors": [
-        "33 year relationship at risk"
-      ],
-      "daysSinceGift": 252
+      "daysSinceGift": 1867
     },
     {
       "name": "David I Berman",
@@ -5475,22 +5491,7 @@
       "riskFactors": [
         "43 year relationship at risk"
       ],
-      "daysSinceGift": 241
-    },
-    {
-      "name": "Jeanette Ross",
-      "phone": "",
-      "email": "summerross@cox.net",
-      "fy25Amount": 200.0,
-      "lifetimeGiving": 2400.0,
-      "avgAnnual": 57.14,
-      "lastGiftDate": "2025-06-05",
-      "riskScore": 43,
-      "riskTier": "Watch",
-      "riskFactors": [
-        "42 year relationship at risk"
-      ],
-      "daysSinceGift": 264
+      "daysSinceGift": 242
     },
     {
       "name": "Audrey Beth Levine",
@@ -5508,7 +5509,7 @@
         "$24,525 lifetime donor",
         "Major donor \u2014 immediate outreach needed"
       ],
-      "daysSinceGift": 13
+      "daysSinceGift": 14
     },
     {
       "name": "Sara Michelle Kabakoff",
@@ -5526,7 +5527,7 @@
         "$28,426 lifetime donor",
         "Major donor \u2014 immediate outreach needed"
       ],
-      "daysSinceGift": 26
+      "daysSinceGift": 27
     },
     {
       "name": "Eileen Glasser Wesley",
@@ -5542,9 +5543,9 @@
         "6 year relationship at risk",
         "$2,867/yr avg at risk",
         "$17,204 lifetime donor",
-        "817 days since last gift"
+        "818 days since last gift"
       ],
-      "daysSinceGift": 817
+      "daysSinceGift": 818
     },
     {
       "name": "Jeffrey Bernicker",
@@ -5559,9 +5560,9 @@
       "riskFactors": [
         "9 year relationship at risk",
         "$900/yr avg at risk",
-        "474 days since last gift"
+        "475 days since last gift"
       ],
-      "daysSinceGift": 474
+      "daysSinceGift": 475
     },
     {
       "name": "Cyril Light",
@@ -5578,7 +5579,7 @@
         "$975/yr avg at risk",
         "$30,237 lifetime donor"
       ],
-      "daysSinceGift": 131
+      "daysSinceGift": 132
     },
     {
       "name": "Gary Fybel",
@@ -5593,7 +5594,7 @@
       "riskFactors": [
         "20 year relationship at risk"
       ],
-      "daysSinceGift": 237
+      "daysSinceGift": 238
     },
     {
       "name": "Jan Kass",
@@ -5608,7 +5609,7 @@
       "riskFactors": [
         "33 year relationship at risk"
       ],
-      "daysSinceGift": 245
+      "daysSinceGift": 246
     },
     {
       "name": "Gary Recht",
@@ -5623,7 +5624,7 @@
       "riskFactors": [
         "41 year relationship at risk"
       ],
-      "daysSinceGift": 237
+      "daysSinceGift": 238
     },
     {
       "name": "Lara Worm",
@@ -5637,9 +5638,9 @@
       "riskTier": "Watch",
       "riskFactors": [
         "11 year relationship at risk",
-        "463 days since last gift"
+        "464 days since last gift"
       ],
-      "daysSinceGift": 463
+      "daysSinceGift": 464
     },
     {
       "name": "N. Jess Barmatz",
@@ -5654,7 +5655,7 @@
       "riskFactors": [
         "43 year relationship at risk"
       ],
-      "daysSinceGift": 243
+      "daysSinceGift": 244
     },
     {
       "name": "George Bronstein",
@@ -5669,7 +5670,7 @@
       "riskFactors": [
         "19 year relationship at risk"
       ],
-      "daysSinceGift": 216
+      "daysSinceGift": 217
     },
     {
       "name": "David Demner",
@@ -5683,9 +5684,9 @@
       "riskTier": "Watch",
       "riskFactors": [
         "11 year relationship at risk",
-        "530 days since last gift"
+        "531 days since last gift"
       ],
-      "daysSinceGift": 530
+      "daysSinceGift": 531
     },
     {
       "name": "Allison Blythe Leeds",
@@ -5701,7 +5702,7 @@
         "22 year relationship at risk",
         "$10,877 lifetime donor"
       ],
-      "daysSinceGift": 75
+      "daysSinceGift": 76
     },
     {
       "name": "Jonathan Kroll",
@@ -5718,7 +5719,7 @@
         "$528/yr avg at risk",
         "$21,127 lifetime donor"
       ],
-      "daysSinceGift": 110
+      "daysSinceGift": 111
     },
     {
       "name": "Heidi Slate-Levin",
@@ -5732,9 +5733,9 @@
       "riskTier": "High",
       "riskFactors": [
         "9 year relationship at risk",
-        "487 days since last gift"
+        "488 days since last gift"
       ],
-      "daysSinceGift": 487
+      "daysSinceGift": 488
     },
     {
       "name": "Joanie Bernicker",
@@ -5748,9 +5749,9 @@
       "riskTier": "Medium",
       "riskFactors": [
         "9 year relationship at risk",
-        "2554 days since last gift"
+        "2555 days since last gift"
       ],
-      "daysSinceGift": 2554
+      "daysSinceGift": 2555
     },
     {
       "name": "Sari Hartman",
@@ -5764,9 +5765,9 @@
       "riskTier": "Watch",
       "riskFactors": [
         "10 year relationship at risk",
-        "465 days since last gift"
+        "466 days since last gift"
       ],
-      "daysSinceGift": 465
+      "daysSinceGift": 466
     },
     {
       "name": "Jaime Hunley",
@@ -5781,7 +5782,7 @@
       "riskFactors": [
         "25 year relationship at risk"
       ],
-      "daysSinceGift": 237
+      "daysSinceGift": 238
     },
     {
       "name": "Pamela Amundson",
@@ -5796,7 +5797,7 @@
       "riskFactors": [
         "18 year relationship at risk"
       ],
-      "daysSinceGift": 239
+      "daysSinceGift": 240
     },
     {
       "name": "Brett Gottlieb",
@@ -5810,9 +5811,9 @@
       "riskTier": "Watch",
       "riskFactors": [
         "10 year relationship at risk",
-        "510 days since last gift"
+        "511 days since last gift"
       ],
-      "daysSinceGift": 510
+      "daysSinceGift": 511
     },
     {
       "name": "Nicole Gesher",
@@ -5829,7 +5830,23 @@
         "$19,500 lifetime donor",
         "Major donor \u2014 immediate outreach needed"
       ],
-      "daysSinceGift": 49
+      "daysSinceGift": 50
+    },
+    {
+      "name": "Jeffrey Stephan Myers",
+      "phone": "",
+      "email": "jeff.myers1@gmail.com",
+      "fy25Amount": 5000.0,
+      "lifetimeGiving": 7588.0,
+      "avgAnnual": 252.93,
+      "lastGiftDate": "2025-12-28",
+      "riskScore": 40,
+      "riskTier": "Critical",
+      "riskFactors": [
+        "30 year relationship at risk",
+        "Major donor \u2014 immediate outreach needed"
+      ],
+      "daysSinceGift": 59
     },
     {
       "name": "Adele Saleh",
@@ -5847,23 +5864,7 @@
         "$11,537 lifetime donor",
         "Major donor \u2014 immediate outreach needed"
       ],
-      "daysSinceGift": 42
-    },
-    {
-      "name": "Jeffrey Stephan Myers",
-      "phone": "",
-      "email": "jeff.myers1@gmail.com",
-      "fy25Amount": 5000.0,
-      "lifetimeGiving": 7588.0,
-      "avgAnnual": 252.93,
-      "lastGiftDate": "2025-12-28",
-      "riskScore": 40,
-      "riskTier": "Critical",
-      "riskFactors": [
-        "30 year relationship at risk",
-        "Major donor \u2014 immediate outreach needed"
-      ],
-      "daysSinceGift": 58
+      "daysSinceGift": 43
     },
     {
       "name": "Susan R. Erman",
@@ -5880,7 +5881,7 @@
         "$957/yr avg at risk",
         "$34,450 lifetime donor"
       ],
-      "daysSinceGift": 48
+      "daysSinceGift": 49
     },
     {
       "name": "Emilie Mason",
@@ -5894,9 +5895,9 @@
       "riskTier": "Watch",
       "riskFactors": [
         "9 year relationship at risk",
-        "523 days since last gift"
+        "524 days since last gift"
       ],
-      "daysSinceGift": 523
+      "daysSinceGift": 524
     },
     {
       "name": "Elizabeth J. Carnes",
@@ -5910,9 +5911,9 @@
       "riskTier": "Watch",
       "riskFactors": [
         "10 year relationship at risk",
-        "539 days since last gift"
+        "540 days since last gift"
       ],
-      "daysSinceGift": 539
+      "daysSinceGift": 540
     },
     {
       "name": "Edmund Beimel",
@@ -5927,7 +5928,7 @@
       "riskFactors": [
         "16 year relationship at risk"
       ],
-      "daysSinceGift": 238
+      "daysSinceGift": 239
     },
     {
       "name": "Jacob Liebermensch",
@@ -5941,9 +5942,9 @@
       "riskTier": "Watch",
       "riskFactors": [
         "10 year relationship at risk",
-        "463 days since last gift"
+        "464 days since last gift"
       ],
-      "daysSinceGift": 463
+      "daysSinceGift": 464
     },
     {
       "name": "Kevin Berkowitz",
@@ -5957,9 +5958,9 @@
       "riskTier": "Watch",
       "riskFactors": [
         "10 year relationship at risk",
-        "483 days since last gift"
+        "484 days since last gift"
       ],
-      "daysSinceGift": 483
+      "daysSinceGift": 484
     },
     {
       "name": "Stacie Ann Bresler-Reinstein",
@@ -5976,7 +5977,7 @@
         "$1,422/yr avg at risk",
         "$39,820 lifetime donor"
       ],
-      "daysSinceGift": 24
+      "daysSinceGift": 25
     },
     {
       "name": "Jane Ellen Fantel",
@@ -5993,7 +5994,7 @@
         "$1,560/yr avg at risk",
         "$45,246 lifetime donor"
       ],
-      "daysSinceGift": 25
+      "daysSinceGift": 26
     },
     {
       "name": "Andrew M. Lowy",
@@ -6008,7 +6009,7 @@
       "riskFactors": [
         "14 year relationship at risk"
       ],
-      "daysSinceGift": 259
+      "daysSinceGift": 260
     },
     {
       "name": "Joan Rosenberg",
@@ -6022,9 +6023,9 @@
       "riskTier": "Watch",
       "riskFactors": [
         "9 year relationship at risk",
-        "420 days since last gift"
+        "421 days since last gift"
       ],
-      "daysSinceGift": 420
+      "daysSinceGift": 421
     },
     {
       "name": "Mark Zyman",
@@ -6038,9 +6039,9 @@
       "riskTier": "Watch",
       "riskFactors": [
         "9 year relationship at risk",
-        "412 days since last gift"
+        "413 days since last gift"
       ],
-      "daysSinceGift": 412
+      "daysSinceGift": 413
     },
     {
       "name": "Shai Kalansky",
@@ -6054,9 +6055,9 @@
       "riskTier": "Watch",
       "riskFactors": [
         "9 year relationship at risk",
-        "1443 days since last gift"
+        "1444 days since last gift"
       ],
-      "daysSinceGift": 1443
+      "daysSinceGift": 1444
     },
     {
       "name": "Betty Lyon",
@@ -6070,9 +6071,9 @@
       "riskTier": "Watch",
       "riskFactors": [
         "9 year relationship at risk",
-        "515 days since last gift"
+        "516 days since last gift"
       ],
-      "daysSinceGift": 515
+      "daysSinceGift": 516
     },
     {
       "name": "Judy Stern",
@@ -6086,9 +6087,9 @@
       "riskTier": "Watch",
       "riskFactors": [
         "9 year relationship at risk",
-        "463 days since last gift"
+        "464 days since last gift"
       ],
-      "daysSinceGift": 463
+      "daysSinceGift": 464
     },
     {
       "name": "Sivan Davide",
@@ -6102,10 +6103,10 @@
       "riskTier": "Critical",
       "riskFactors": [
         "$5,095/yr avg at risk",
-        "425 days since last gift",
+        "426 days since last gift",
         "Major donor \u2014 immediate outreach needed"
       ],
-      "daysSinceGift": 425
+      "daysSinceGift": 426
     },
     {
       "name": "Franklin D. Gaylis",
@@ -6122,7 +6123,7 @@
         "$698/yr avg at risk",
         "$24,420 lifetime donor"
       ],
-      "daysSinceGift": 74
+      "daysSinceGift": 75
     },
     {
       "name": "Michael Bruce Maskin",
@@ -6137,7 +6138,7 @@
       "riskFactors": [
         "13 year relationship at risk"
       ],
-      "daysSinceGift": 264
+      "daysSinceGift": 265
     },
     {
       "name": "Elizabeth Jinich",
@@ -6152,7 +6153,39 @@
       "riskFactors": [
         "13 year relationship at risk"
       ],
-      "daysSinceGift": 265
+      "daysSinceGift": 266
+    },
+    {
+      "name": "William S. Anapoell",
+      "phone": "",
+      "email": "thedancingtacos@gmail.com",
+      "fy25Amount": 200.0,
+      "lifetimeGiving": 2170.0,
+      "avgAnnual": 108.5,
+      "lastGiftDate": "2025-09-03",
+      "riskScore": 38,
+      "riskTier": "Watch",
+      "riskFactors": [
+        "20 year relationship at risk"
+      ],
+      "daysSinceGift": 175
+    },
+    {
+      "name": "Lauren B. Lizerbram",
+      "phone": "6198711879",
+      "email": "lauren@lizerbram.com",
+      "fy25Amount": 180.0,
+      "lifetimeGiving": 40749.4,
+      "avgAnnual": 947.66,
+      "lastGiftDate": "2025-12-19",
+      "riskScore": 38,
+      "riskTier": "Watch",
+      "riskFactors": [
+        "43 year relationship at risk",
+        "$948/yr avg at risk",
+        "$40,749 lifetime donor"
+      ],
+      "daysSinceGift": 68
     },
     {
       "name": "Dalia Cohen",
@@ -6167,7 +6200,7 @@
       "riskFactors": [
         "9 year relationship at risk"
       ],
-      "daysSinceGift": 347
+      "daysSinceGift": 348
     },
     {
       "name": "Jon Steven Segal",
@@ -6184,7 +6217,7 @@
         "$10,058/yr avg at risk",
         "$90,519 lifetime donor"
       ],
-      "daysSinceGift": 13
+      "daysSinceGift": 14
     },
     {
       "name": "Benjamin Zager",
@@ -6199,9 +6232,9 @@
       "riskFactors": [
         "5 year relationship at risk",
         "$1,223/yr avg at risk",
-        "420 days since last gift"
+        "421 days since last gift"
       ],
-      "daysSinceGift": 420
+      "daysSinceGift": 421
     },
     {
       "name": "Enrique Zagursky",
@@ -6218,7 +6251,7 @@
         "$580/yr avg at risk",
         "$24,353 lifetime donor"
       ],
-      "daysSinceGift": 56
+      "daysSinceGift": 57
     },
     {
       "name": "Lorraine Hennessy",
@@ -6234,22 +6267,7 @@
         "10 year relationship at risk",
         "$648/yr avg at risk"
       ],
-      "daysSinceGift": 299
-    },
-    {
-      "name": "William S. Anapoell",
-      "phone": "",
-      "email": "thedancingtacos@gmail.com",
-      "fy25Amount": 200.0,
-      "lifetimeGiving": 2170.0,
-      "avgAnnual": 108.5,
-      "lastGiftDate": "2025-09-03",
-      "riskScore": 37,
-      "riskTier": "Watch",
-      "riskFactors": [
-        "20 year relationship at risk"
-      ],
-      "daysSinceGift": 174
+      "daysSinceGift": 300
     },
     {
       "name": "Diane Saikhon Szekely",
@@ -6264,9 +6282,9 @@
       "riskFactors": [
         "5 year relationship at risk",
         "$958/yr avg at risk",
-        "484 days since last gift"
+        "485 days since last gift"
       ],
-      "daysSinceGift": 484
+      "daysSinceGift": 485
     },
     {
       "name": "Hannah Sima Cohen",
@@ -6281,7 +6299,7 @@
       "riskFactors": [
         "7 year relationship at risk"
       ],
-      "daysSinceGift": 344
+      "daysSinceGift": 345
     },
     {
       "name": "Arlene Bernstein",
@@ -6297,7 +6315,7 @@
         "24 year relationship at risk",
         "$11,955 lifetime donor"
       ],
-      "daysSinceGift": 105
+      "daysSinceGift": 106
     },
     {
       "name": "Derek Berghaus",
@@ -6311,9 +6329,9 @@
       "riskTier": "Medium",
       "riskFactors": [
         "6 year relationship at risk",
-        "1930 days since last gift"
+        "1931 days since last gift"
       ],
-      "daysSinceGift": 1930
+      "daysSinceGift": 1931
     },
     {
       "name": "Yaron Guez",
@@ -6328,7 +6346,7 @@
       "riskFactors": [
         "13 year relationship at risk"
       ],
-      "daysSinceGift": 237
+      "daysSinceGift": 238
     },
     {
       "name": "Tina Hirsh-Kholos",
@@ -6343,7 +6361,7 @@
       "riskFactors": [
         "20 year relationship at risk"
       ],
-      "daysSinceGift": 77
+      "daysSinceGift": 78
     },
     {
       "name": "Marjorie Ann Mopper",
@@ -6359,7 +6377,7 @@
         "43 year relationship at risk",
         "$13,059 lifetime donor"
       ],
-      "daysSinceGift": 77
+      "daysSinceGift": 78
     },
     {
       "name": "Rancy Feldman",
@@ -6373,9 +6391,9 @@
       "riskTier": "Watch",
       "riskFactors": [
         "6 year relationship at risk",
-        "420 days since last gift"
+        "421 days since last gift"
       ],
-      "daysSinceGift": 420
+      "daysSinceGift": 421
     },
     {
       "name": "Elliot Horowitz",
@@ -6389,9 +6407,9 @@
       "riskTier": "Watch",
       "riskFactors": [
         "6 year relationship at risk",
-        "483 days since last gift"
+        "484 days since last gift"
       ],
-      "daysSinceGift": 483
+      "daysSinceGift": 484
     },
     {
       "name": "Marlene Bellamy",
@@ -6406,7 +6424,7 @@
       "riskFactors": [
         "40 year relationship at risk"
       ],
-      "daysSinceGift": 76
+      "daysSinceGift": 77
     },
     {
       "name": "Jeffrey Jeffrey Weissman",
@@ -6420,9 +6438,9 @@
       "riskTier": "Medium",
       "riskFactors": [
         "$1,711/yr avg at risk",
-        "420 days since last gift"
+        "421 days since last gift"
       ],
-      "daysSinceGift": 420
+      "daysSinceGift": 421
     },
     {
       "name": "Phillip Burger",
@@ -6436,9 +6454,9 @@
       "riskTier": "Watch",
       "riskFactors": [
         "6 year relationship at risk",
-        "403 days since last gift"
+        "404 days since last gift"
       ],
-      "daysSinceGift": 403
+      "daysSinceGift": 404
     },
     {
       "name": "Robin M. Layton",
@@ -6455,23 +6473,7 @@
         "$511/yr avg at risk",
         "$14,295 lifetime donor"
       ],
-      "daysSinceGift": 13
-    },
-    {
-      "name": "Stuart Strenger",
-      "phone": "",
-      "email": "sstrengerphd@gmail.com",
-      "fy25Amount": 180.0,
-      "lifetimeGiving": 665.4,
-      "avgAnnual": 133.08,
-      "lastGiftDate": "2024-12-30",
-      "riskScore": 33,
-      "riskTier": "Watch",
-      "riskFactors": [
-        "5 year relationship at risk",
-        "421 days since last gift"
-      ],
-      "daysSinceGift": 421
+      "daysSinceGift": 14
     },
     {
       "name": "Issac Rechter",
@@ -6485,9 +6487,25 @@
       "riskTier": "Watch",
       "riskFactors": [
         "5 year relationship at risk",
-        "1927 days since last gift"
+        "1928 days since last gift"
       ],
-      "daysSinceGift": 1927
+      "daysSinceGift": 1928
+    },
+    {
+      "name": "Stuart Strenger",
+      "phone": "",
+      "email": "sstrengerphd@gmail.com",
+      "fy25Amount": 180.0,
+      "lifetimeGiving": 665.4,
+      "avgAnnual": 133.08,
+      "lastGiftDate": "2024-12-30",
+      "riskScore": 33,
+      "riskTier": "Watch",
+      "riskFactors": [
+        "5 year relationship at risk",
+        "422 days since last gift"
+      ],
+      "daysSinceGift": 422
     },
     {
       "name": "Scott David Schindler",
@@ -6504,7 +6522,7 @@
         "$774/yr avg at risk",
         "Major donor \u2014 immediate outreach needed"
       ],
-      "daysSinceGift": 25
+      "daysSinceGift": 26
     },
     {
       "name": "Eric Kaufmann",
@@ -6518,25 +6536,9 @@
       "riskTier": "High",
       "riskFactors": [
         "$967/yr avg at risk",
-        "462 days since last gift"
+        "463 days since last gift"
       ],
-      "daysSinceGift": 462
-    },
-    {
-      "name": "Jacob Hirshberg",
-      "phone": "",
-      "email": "jbhirshberg@gmail.com",
-      "fy25Amount": 1000.0,
-      "lifetimeGiving": 3721.4,
-      "avgAnnual": 1240.47,
-      "lastGiftDate": "2023-02-27",
-      "riskScore": 32,
-      "riskTier": "High",
-      "riskFactors": [
-        "$1,240/yr avg at risk",
-        "1093 days since last gift"
-      ],
-      "daysSinceGift": 1093
+      "daysSinceGift": 463
     },
     {
       "name": "Alexander Shekhter",
@@ -6550,9 +6552,25 @@
       "riskTier": "High",
       "riskFactors": [
         "$1,363/yr avg at risk",
-        "841 days since last gift"
+        "842 days since last gift"
       ],
-      "daysSinceGift": 841
+      "daysSinceGift": 842
+    },
+    {
+      "name": "Jacob Hirshberg",
+      "phone": "",
+      "email": "jbhirshberg@gmail.com",
+      "fy25Amount": 1000.0,
+      "lifetimeGiving": 3721.4,
+      "avgAnnual": 1240.47,
+      "lastGiftDate": "2023-02-27",
+      "riskScore": 32,
+      "riskTier": "High",
+      "riskFactors": [
+        "$1,240/yr avg at risk",
+        "1094 days since last gift"
+      ],
+      "daysSinceGift": 1094
     },
     {
       "name": "Shannah Katz",
@@ -6566,9 +6584,9 @@
       "riskTier": "Medium",
       "riskFactors": [
         "$1,139/yr avg at risk",
-        "867 days since last gift"
+        "868 days since last gift"
       ],
-      "daysSinceGift": 867
+      "daysSinceGift": 868
     },
     {
       "name": "Sonia K Mandelbaum",
@@ -6583,7 +6601,7 @@
       "riskFactors": [
         "21 year relationship at risk"
       ],
-      "daysSinceGift": 67
+      "daysSinceGift": 68
     },
     {
       "name": "Lee Levinson",
@@ -6598,7 +6616,7 @@
       "riskFactors": [
         "5 year relationship at risk"
       ],
-      "daysSinceGift": 347
+      "daysSinceGift": 348
     },
     {
       "name": "Dennis C. Carson",
@@ -6614,7 +6632,7 @@
         "43 year relationship at risk",
         "$11,871 lifetime donor"
       ],
-      "daysSinceGift": 61
+      "daysSinceGift": 62
     },
     {
       "name": "Craig Misrach",
@@ -6628,9 +6646,9 @@
       "riskTier": "Medium",
       "riskFactors": [
         "$830/yr avg at risk",
-        "1341 days since last gift"
+        "1342 days since last gift"
       ],
-      "daysSinceGift": 1341
+      "daysSinceGift": 1342
     },
     {
       "name": "Elaina Rose Welch",
@@ -6643,9 +6661,9 @@
       "riskScore": 31,
       "riskTier": "Watch",
       "riskFactors": [
-        "465 days since last gift"
+        "466 days since last gift"
       ],
-      "daysSinceGift": 465
+      "daysSinceGift": 466
     },
     {
       "name": "Barbara Caspi",
@@ -6662,7 +6680,7 @@
         "$2,689/yr avg at risk",
         "$13,447 lifetime donor"
       ],
-      "daysSinceGift": 245
+      "daysSinceGift": 246
     },
     {
       "name": "Shelley Neiman",
@@ -6676,9 +6694,9 @@
       "riskTier": "Medium",
       "riskFactors": [
         "$1,125/yr avg at risk",
-        "420 days since last gift"
+        "421 days since last gift"
       ],
-      "daysSinceGift": 420
+      "daysSinceGift": 421
     },
     {
       "name": "Yair Karmi",
@@ -6691,9 +6709,9 @@
       "riskScore": 30,
       "riskTier": "Watch",
       "riskFactors": [
-        "420 days since last gift"
+        "421 days since last gift"
       ],
-      "daysSinceGift": 420
+      "daysSinceGift": 421
     },
     {
       "name": "Mark Rothstein",
@@ -6707,9 +6725,9 @@
       "riskTier": "High",
       "riskFactors": [
         "$3,185/yr avg at risk",
-        "510 days since last gift"
+        "511 days since last gift"
       ],
-      "daysSinceGift": 510
+      "daysSinceGift": 511
     },
     {
       "name": "Elan Bark",
@@ -6723,9 +6741,9 @@
       "riskTier": "Medium",
       "riskFactors": [
         "$821/yr avg at risk",
-        "463 days since last gift"
+        "464 days since last gift"
       ],
-      "daysSinceGift": 463
+      "daysSinceGift": 464
     },
     {
       "name": "Robin Sassi",
@@ -6739,9 +6757,24 @@
       "riskTier": "Medium",
       "riskFactors": [
         "$512/yr avg at risk",
-        "461 days since last gift"
+        "462 days since last gift"
       ],
-      "daysSinceGift": 461
+      "daysSinceGift": 462
+    },
+    {
+      "name": "Gad Zeilingold",
+      "phone": "",
+      "email": "gzz04@fastmail.com",
+      "fy25Amount": 500.0,
+      "lifetimeGiving": 2191.0,
+      "avgAnnual": 91.29,
+      "lastGiftDate": "2026-01-13",
+      "riskScore": 29,
+      "riskTier": "Medium",
+      "riskFactors": [
+        "24 year relationship at risk"
+      ],
+      "daysSinceGift": 43
     },
     {
       "name": "Steven Miller",
@@ -6755,9 +6788,9 @@
       "riskTier": "Medium",
       "riskFactors": [
         "$750/yr avg at risk",
-        "790 days since last gift"
+        "791 days since last gift"
       ],
-      "daysSinceGift": 790
+      "daysSinceGift": 791
     },
     {
       "name": "Lisa Orlansky",
@@ -6773,7 +6806,7 @@
         "43 year relationship at risk",
         "$10,892 lifetime donor"
       ],
-      "daysSinceGift": 13
+      "daysSinceGift": 14
     },
     {
       "name": "Dana Koenig",
@@ -6786,24 +6819,9 @@
       "riskScore": 29,
       "riskTier": "Medium",
       "riskFactors": [
-        "463 days since last gift"
+        "464 days since last gift"
       ],
-      "daysSinceGift": 463
-    },
-    {
-      "name": "Gad Zeilingold",
-      "phone": "",
-      "email": "gzz04@fastmail.com",
-      "fy25Amount": 500.0,
-      "lifetimeGiving": 2191.0,
-      "avgAnnual": 91.29,
-      "lastGiftDate": "2026-01-13",
-      "riskScore": 29,
-      "riskTier": "Medium",
-      "riskFactors": [
-        "24 year relationship at risk"
-      ],
-      "daysSinceGift": 42
+      "daysSinceGift": 464
     },
     {
       "name": "Mery Pienknagura",
@@ -6816,9 +6834,9 @@
       "riskScore": 29,
       "riskTier": "Watch",
       "riskFactors": [
-        "428 days since last gift"
+        "429 days since last gift"
       ],
-      "daysSinceGift": 428
+      "daysSinceGift": 429
     },
     {
       "name": "Debra Ostrosky Womble",
@@ -6831,9 +6849,9 @@
       "riskScore": 29,
       "riskTier": "Watch",
       "riskFactors": [
-        "467 days since last gift"
+        "468 days since last gift"
       ],
-      "daysSinceGift": 467
+      "daysSinceGift": 468
     },
     {
       "name": "Sarah Garrick",
@@ -6846,9 +6864,9 @@
       "riskScore": 29,
       "riskTier": "Watch",
       "riskFactors": [
-        "465 days since last gift"
+        "466 days since last gift"
       ],
-      "daysSinceGift": 465
+      "daysSinceGift": 466
     },
     {
       "name": "James Alfi",
@@ -6879,7 +6897,7 @@
         "5 year relationship at risk",
         "$1,200/yr avg at risk"
       ],
-      "daysSinceGift": 256
+      "daysSinceGift": 257
     },
     {
       "name": "Asaf Benhaim",
@@ -6893,9 +6911,9 @@
       "riskTier": "Medium",
       "riskFactors": [
         "$750/yr avg at risk",
-        "463 days since last gift"
+        "464 days since last gift"
       ],
-      "daysSinceGift": 463
+      "daysSinceGift": 464
     },
     {
       "name": "Martin Potsdam",
@@ -6909,9 +6927,9 @@
       "riskTier": "Medium",
       "riskFactors": [
         "$750/yr avg at risk",
-        "533 days since last gift"
+        "534 days since last gift"
       ],
-      "daysSinceGift": 533
+      "daysSinceGift": 534
     },
     {
       "name": "Brian Daly",
@@ -6925,25 +6943,9 @@
       "riskTier": "Medium",
       "riskFactors": [
         "$572/yr avg at risk",
-        "463 days since last gift"
+        "464 days since last gift"
       ],
-      "daysSinceGift": 463
-    },
-    {
-      "name": "William Hoshaw",
-      "phone": "8582050487",
-      "email": "wdh@mmpph.com",
-      "fy25Amount": 540.0,
-      "lifetimeGiving": 550.36,
-      "avgAnnual": 550.36,
-      "lastGiftDate": "2024-11-18",
-      "riskScore": 28,
-      "riskTier": "Medium",
-      "riskFactors": [
-        "$550/yr avg at risk",
-        "463 days since last gift"
-      ],
-      "daysSinceGift": 463
+      "daysSinceGift": 464
     },
     {
       "name": "Saman Nasseri",
@@ -6957,9 +6959,9 @@
       "riskTier": "Medium",
       "riskFactors": [
         "$1,085/yr avg at risk",
-        "505 days since last gift"
+        "506 days since last gift"
       ],
-      "daysSinceGift": 505
+      "daysSinceGift": 506
     },
     {
       "name": "Shay Kleinberg Bimstein",
@@ -6973,9 +6975,25 @@
       "riskTier": "Medium",
       "riskFactors": [
         "$540/yr avg at risk",
-        "434 days since last gift"
+        "435 days since last gift"
       ],
-      "daysSinceGift": 434
+      "daysSinceGift": 435
+    },
+    {
+      "name": "William Hoshaw",
+      "phone": "8582050487",
+      "email": "wdh@mmpph.com",
+      "fy25Amount": 540.0,
+      "lifetimeGiving": 550.36,
+      "avgAnnual": 550.36,
+      "lastGiftDate": "2024-11-18",
+      "riskScore": 28,
+      "riskTier": "Medium",
+      "riskFactors": [
+        "$550/yr avg at risk",
+        "464 days since last gift"
+      ],
+      "daysSinceGift": 464
     },
     {
       "name": "Rachel Luis Y Prado",
@@ -6989,9 +7007,9 @@
       "riskTier": "Medium",
       "riskFactors": [
         "$510/yr avg at risk",
-        "465 days since last gift"
+        "466 days since last gift"
       ],
-      "daysSinceGift": 465
+      "daysSinceGift": 466
     },
     {
       "name": "Mark Mosson",
@@ -7005,9 +7023,9 @@
       "riskTier": "Medium",
       "riskFactors": [
         "$510/yr avg at risk",
-        "465 days since last gift"
+        "466 days since last gift"
       ],
-      "daysSinceGift": 465
+      "daysSinceGift": 466
     },
     {
       "name": "Marina Mosson",
@@ -7021,9 +7039,9 @@
       "riskTier": "Medium",
       "riskFactors": [
         "$510/yr avg at risk",
-        "465 days since last gift"
+        "466 days since last gift"
       ],
-      "daysSinceGift": 465
+      "daysSinceGift": 466
     },
     {
       "name": "Nadav Hazan",
@@ -7037,9 +7055,9 @@
       "riskTier": "Medium",
       "riskFactors": [
         "$500/yr avg at risk",
-        "474 days since last gift"
+        "475 days since last gift"
       ],
-      "daysSinceGift": 474
+      "daysSinceGift": 475
     },
     {
       "name": "Marcia J. Diamond",
@@ -7054,7 +7072,7 @@
       "riskFactors": [
         "20 year relationship at risk"
       ],
-      "daysSinceGift": 26
+      "daysSinceGift": 27
     },
     {
       "name": "Vicky Bergman",
@@ -7069,7 +7087,7 @@
       "riskFactors": [
         "6 year relationship at risk"
       ],
-      "daysSinceGift": 272
+      "daysSinceGift": 273
     },
     {
       "name": "Gary Lambo",
@@ -7082,9 +7100,9 @@
       "riskScore": 28,
       "riskTier": "Watch",
       "riskFactors": [
-        "421 days since last gift"
+        "422 days since last gift"
       ],
-      "daysSinceGift": 421
+      "daysSinceGift": 422
     },
     {
       "name": "Esther Eisenberg",
@@ -7097,9 +7115,9 @@
       "riskScore": 28,
       "riskTier": "Watch",
       "riskFactors": [
-        "496 days since last gift"
+        "497 days since last gift"
       ],
-      "daysSinceGift": 496
+      "daysSinceGift": 497
     },
     {
       "name": "Donna Schindler",
@@ -7112,9 +7130,24 @@
       "riskScore": 28,
       "riskTier": "Watch",
       "riskFactors": [
-        "599 days since last gift"
+        "600 days since last gift"
       ],
-      "daysSinceGift": 599
+      "daysSinceGift": 600
+    },
+    {
+      "name": "Beth Schulefand",
+      "phone": "",
+      "email": "bethschulefand@gmail.com",
+      "fy25Amount": 180.0,
+      "lifetimeGiving": 231.5,
+      "avgAnnual": 115.75,
+      "lastGiftDate": "2024-11-18",
+      "riskScore": 28,
+      "riskTier": "Watch",
+      "riskFactors": [
+        "464 days since last gift"
+      ],
+      "daysSinceGift": 464
     },
     {
       "name": "Lisa B. Arian-Pollack",
@@ -7127,9 +7160,9 @@
       "riskScore": 28,
       "riskTier": "Watch",
       "riskFactors": [
-        "503 days since last gift"
+        "504 days since last gift"
       ],
-      "daysSinceGift": 503
+      "daysSinceGift": 504
     },
     {
       "name": "Nanette Sable",
@@ -7142,9 +7175,9 @@
       "riskScore": 28,
       "riskTier": "Watch",
       "riskFactors": [
-        "476 days since last gift"
+        "477 days since last gift"
       ],
-      "daysSinceGift": 476
+      "daysSinceGift": 477
     },
     {
       "name": "Jonathan H Segal",
@@ -7157,7 +7190,7 @@
       "riskScore": 28,
       "riskTier": "Watch",
       "riskFactors": [],
-      "daysSinceGift": 343
+      "daysSinceGift": 344
     },
     {
       "name": "Lauren Hendin",
@@ -7202,7 +7235,7 @@
       "riskFactors": [
         "34 year relationship at risk"
       ],
-      "daysSinceGift": 13
+      "daysSinceGift": 14
     },
     {
       "name": "Terrence Hardin",
@@ -7215,9 +7248,9 @@
       "riskScore": 27,
       "riskTier": "Watch",
       "riskFactors": [
-        "403 days since last gift"
+        "404 days since last gift"
       ],
-      "daysSinceGift": 403
+      "daysSinceGift": 404
     },
     {
       "name": "Andrew Komar",
@@ -7230,9 +7263,9 @@
       "riskScore": 27,
       "riskTier": "Watch",
       "riskFactors": [
-        "421 days since last gift"
+        "422 days since last gift"
       ],
-      "daysSinceGift": 421
+      "daysSinceGift": 422
     },
     {
       "name": "Ethan Bortniker",
@@ -7245,24 +7278,9 @@
       "riskScore": 27,
       "riskTier": "Watch",
       "riskFactors": [
-        "465 days since last gift"
+        "466 days since last gift"
       ],
-      "daysSinceGift": 465
-    },
-    {
-      "name": "Jeffrey Tandy",
-      "phone": "",
-      "email": "",
-      "fy25Amount": 360.0,
-      "lifetimeGiving": 360.0,
-      "avgAnnual": 360.0,
-      "lastGiftDate": "2024-10-30",
-      "riskScore": 27,
-      "riskTier": "Watch",
-      "riskFactors": [
-        "482 days since last gift"
-      ],
-      "daysSinceGift": 482
+      "daysSinceGift": 466
     },
     {
       "name": "David Einstein",
@@ -7276,9 +7294,39 @@
       "riskTier": "Watch",
       "riskFactors": [
         "$720/yr avg at risk",
-        "550 days since last gift"
+        "551 days since last gift"
       ],
-      "daysSinceGift": 550
+      "daysSinceGift": 551
+    },
+    {
+      "name": "Jeffrey Tandy",
+      "phone": "",
+      "email": "",
+      "fy25Amount": 360.0,
+      "lifetimeGiving": 360.0,
+      "avgAnnual": 360.0,
+      "lastGiftDate": "2024-10-30",
+      "riskScore": 27,
+      "riskTier": "Watch",
+      "riskFactors": [
+        "483 days since last gift"
+      ],
+      "daysSinceGift": 483
+    },
+    {
+      "name": "Randy Silverstein",
+      "phone": "",
+      "email": "randy63108@yahoo.com",
+      "fy25Amount": 360.0,
+      "lifetimeGiving": 614.0,
+      "avgAnnual": 122.8,
+      "lastGiftDate": "2025-05-28",
+      "riskScore": 27,
+      "riskTier": "Watch",
+      "riskFactors": [
+        "5 year relationship at risk"
+      ],
+      "daysSinceGift": 273
     },
     {
       "name": "Erika Rosen",
@@ -7291,9 +7339,9 @@
       "riskScore": 27,
       "riskTier": "Watch",
       "riskFactors": [
-        "465 days since last gift"
+        "466 days since last gift"
       ],
-      "daysSinceGift": 465
+      "daysSinceGift": 466
     },
     {
       "name": "Lee Egerman",
@@ -7306,9 +7354,9 @@
       "riskScore": 27,
       "riskTier": "Watch",
       "riskFactors": [
-        "465 days since last gift"
+        "466 days since last gift"
       ],
-      "daysSinceGift": 465
+      "daysSinceGift": 466
     },
     {
       "name": "Rhonda Rafsky",
@@ -7321,9 +7369,9 @@
       "riskScore": 27,
       "riskTier": "Watch",
       "riskFactors": [
-        "463 days since last gift"
+        "464 days since last gift"
       ],
-      "daysSinceGift": 463
+      "daysSinceGift": 464
     },
     {
       "name": "Scott Herman",
@@ -7336,9 +7384,9 @@
       "riskScore": 27,
       "riskTier": "Watch",
       "riskFactors": [
-        "460 days since last gift"
+        "461 days since last gift"
       ],
-      "daysSinceGift": 460
+      "daysSinceGift": 461
     },
     {
       "name": "Ralph Lazar",
@@ -7351,9 +7399,9 @@
       "riskScore": 27,
       "riskTier": "Watch",
       "riskFactors": [
-        "533 days since last gift"
+        "534 days since last gift"
       ],
-      "daysSinceGift": 533
+      "daysSinceGift": 534
     },
     {
       "name": "Nicole Sievers",
@@ -7368,7 +7416,7 @@
       "riskFactors": [
         "6 year relationship at risk"
       ],
-      "daysSinceGift": 252
+      "daysSinceGift": 253
     },
     {
       "name": "Richard Malicdem",
@@ -7381,9 +7429,54 @@
       "riskScore": 27,
       "riskTier": "Watch",
       "riskFactors": [
-        "465 days since last gift"
+        "466 days since last gift"
       ],
-      "daysSinceGift": 465
+      "daysSinceGift": 466
+    },
+    {
+      "name": "Donald Schwartz",
+      "phone": "",
+      "email": "dustinb@jewishinsandiego.com",
+      "fy25Amount": 250.0,
+      "lifetimeGiving": 254.88,
+      "avgAnnual": 254.88,
+      "lastGiftDate": "2024-12-24",
+      "riskScore": 27,
+      "riskTier": "Watch",
+      "riskFactors": [
+        "428 days since last gift"
+      ],
+      "daysSinceGift": 428
+    },
+    {
+      "name": "Steven Weinberg",
+      "phone": "9496376490",
+      "email": "steven217@gmail.com",
+      "fy25Amount": 250.0,
+      "lifetimeGiving": 250.0,
+      "avgAnnual": 250.0,
+      "lastGiftDate": "2024-11-21",
+      "riskScore": 27,
+      "riskTier": "Watch",
+      "riskFactors": [
+        "461 days since last gift"
+      ],
+      "daysSinceGift": 461
+    },
+    {
+      "name": "Carole Weinberg",
+      "phone": "",
+      "email": "cmweinberg102@gmail.com",
+      "fy25Amount": 250.0,
+      "lifetimeGiving": 254.88,
+      "avgAnnual": 254.88,
+      "lastGiftDate": "2024-11-25",
+      "riskScore": 27,
+      "riskTier": "Watch",
+      "riskFactors": [
+        "457 days since last gift"
+      ],
+      "daysSinceGift": 457
     },
     {
       "name": "Janice Alper",
@@ -7398,52 +7491,7 @@
       "riskFactors": [
         "17 year relationship at risk"
       ],
-      "daysSinceGift": 9
-    },
-    {
-      "name": "Donald Schwartz",
-      "phone": "",
-      "email": "dustinb@jewishinsandiego.com",
-      "fy25Amount": 250.0,
-      "lifetimeGiving": 254.88,
-      "avgAnnual": 254.88,
-      "lastGiftDate": "2024-12-24",
-      "riskScore": 27,
-      "riskTier": "Watch",
-      "riskFactors": [
-        "427 days since last gift"
-      ],
-      "daysSinceGift": 427
-    },
-    {
-      "name": "Steven Weinberg",
-      "phone": "9496376490",
-      "email": "steven217@gmail.com",
-      "fy25Amount": 250.0,
-      "lifetimeGiving": 250.0,
-      "avgAnnual": 250.0,
-      "lastGiftDate": "2024-11-21",
-      "riskScore": 27,
-      "riskTier": "Watch",
-      "riskFactors": [
-        "460 days since last gift"
-      ],
-      "daysSinceGift": 460
-    },
-    {
-      "name": "Carole Weinberg",
-      "phone": "",
-      "email": "cmweinberg102@gmail.com",
-      "fy25Amount": 250.0,
-      "lifetimeGiving": 254.88,
-      "avgAnnual": 254.88,
-      "lastGiftDate": "2024-11-25",
-      "riskScore": 27,
-      "riskTier": "Watch",
-      "riskFactors": [
-        "456 days since last gift"
-      ],
-      "daysSinceGift": 456
+      "daysSinceGift": 10
     },
     {
       "name": "Bonnie Mantel",
@@ -7456,9 +7504,9 @@
       "riskScore": 27,
       "riskTier": "Watch",
       "riskFactors": [
-        "460 days since last gift"
+        "461 days since last gift"
       ],
-      "daysSinceGift": 460
+      "daysSinceGift": 461
     },
     {
       "name": "Gretchen Gordon",
@@ -7471,9 +7519,9 @@
       "riskScore": 27,
       "riskTier": "Watch",
       "riskFactors": [
-        "463 days since last gift"
+        "464 days since last gift"
       ],
-      "daysSinceGift": 463
+      "daysSinceGift": 464
     },
     {
       "name": "Lowell Gordon",
@@ -7486,9 +7534,9 @@
       "riskScore": 27,
       "riskTier": "Watch",
       "riskFactors": [
-        "463 days since last gift"
+        "464 days since last gift"
       ],
-      "daysSinceGift": 463
+      "daysSinceGift": 464
     },
     {
       "name": "Janice Feingold",
@@ -7501,9 +7549,9 @@
       "riskScore": 27,
       "riskTier": "Watch",
       "riskFactors": [
-        "533 days since last gift"
+        "534 days since last gift"
       ],
-      "daysSinceGift": 533
+      "daysSinceGift": 534
     },
     {
       "name": "Previn A. Waran",
@@ -7516,9 +7564,9 @@
       "riskScore": 27,
       "riskTier": "Watch",
       "riskFactors": [
-        "376 days since last gift"
+        "377 days since last gift"
       ],
-      "daysSinceGift": 376
+      "daysSinceGift": 377
     },
     {
       "name": "Gary Arenz",
@@ -7531,9 +7579,9 @@
       "riskScore": 27,
       "riskTier": "Watch",
       "riskFactors": [
-        "599 days since last gift"
+        "600 days since last gift"
       ],
-      "daysSinceGift": 599
+      "daysSinceGift": 600
     },
     {
       "name": "Jack Mackin",
@@ -7546,24 +7594,9 @@
       "riskScore": 27,
       "riskTier": "Watch",
       "riskFactors": [
-        "465 days since last gift"
+        "466 days since last gift"
       ],
-      "daysSinceGift": 465
-    },
-    {
-      "name": "Tom Rooney",
-      "phone": "",
-      "email": "presshalf@gmail.com",
-      "fy25Amount": 180.0,
-      "lifetimeGiving": 180.0,
-      "avgAnnual": 180.0,
-      "lastGiftDate": "2024-11-18",
-      "riskScore": 27,
-      "riskTier": "Watch",
-      "riskFactors": [
-        "463 days since last gift"
-      ],
-      "daysSinceGift": 463
+      "daysSinceGift": 466
     },
     {
       "name": "Jared Sclar",
@@ -7576,9 +7609,24 @@
       "riskScore": 27,
       "riskTier": "Watch",
       "riskFactors": [
-        "447 days since last gift"
+        "448 days since last gift"
       ],
-      "daysSinceGift": 447
+      "daysSinceGift": 448
+    },
+    {
+      "name": "Tom Rooney",
+      "phone": "",
+      "email": "presshalf@gmail.com",
+      "fy25Amount": 180.0,
+      "lifetimeGiving": 180.0,
+      "avgAnnual": 180.0,
+      "lastGiftDate": "2024-11-18",
+      "riskScore": 27,
+      "riskTier": "Watch",
+      "riskFactors": [
+        "464 days since last gift"
+      ],
+      "daysSinceGift": 464
     },
     {
       "name": "Gordon Liss",
@@ -7591,9 +7639,9 @@
       "riskScore": 27,
       "riskTier": "Watch",
       "riskFactors": [
-        "464 days since last gift"
+        "465 days since last gift"
       ],
-      "daysSinceGift": 464
+      "daysSinceGift": 465
     },
     {
       "name": "Celeste Chalpin",
@@ -7606,9 +7654,25 @@
       "riskScore": 27,
       "riskTier": "Watch",
       "riskFactors": [
-        "508 days since last gift"
+        "509 days since last gift"
       ],
-      "daysSinceGift": 508
+      "daysSinceGift": 509
+    },
+    {
+      "name": "Carly Lobenstein",
+      "phone": "",
+      "email": "carlye@jewishinsandiego.org",
+      "fy25Amount": 1660.0,
+      "lifetimeGiving": 9351.26,
+      "avgAnnual": 779.27,
+      "lastGiftDate": "2026-01-21",
+      "riskScore": 26,
+      "riskTier": "High",
+      "riskFactors": [
+        "12 year relationship at risk",
+        "$779/yr avg at risk"
+      ],
+      "daysSinceGift": 35
     },
     {
       "name": "Richard Salmon",
@@ -7623,7 +7687,7 @@
       "riskFactors": [
         "$1,500/yr avg at risk"
       ],
-      "daysSinceGift": 306
+      "daysSinceGift": 307
     },
     {
       "name": "L Jacobs",
@@ -7641,9 +7705,9 @@
       "daysSinceGift": 365
     },
     {
-      "name": "Caren Schwarz",
-      "phone": "",
-      "email": "",
+      "name": "Inessa Baumgartner",
+      "phone": "8583425066",
+      "email": "inessa01@sbcglobal.net",
       "fy25Amount": 750.0,
       "lifetimeGiving": 750.0,
       "avgAnnual": 750.0,
@@ -7656,9 +7720,9 @@
       "daysSinceGift": 365
     },
     {
-      "name": "Inessa Baumgartner",
-      "phone": "8583425066",
-      "email": "inessa01@sbcglobal.net",
+      "name": "Caren Schwarz",
+      "phone": "",
+      "email": "",
       "fy25Amount": 750.0,
       "lifetimeGiving": 750.0,
       "avgAnnual": 750.0,
@@ -7686,24 +7750,9 @@
       "daysSinceGift": 365
     },
     {
-      "name": "Julie Jacobs",
+      "name": "Marvin Stern",
       "phone": "",
-      "email": "jsjacobs@san.rr.com",
-      "fy25Amount": 750.0,
-      "lifetimeGiving": 750.0,
-      "avgAnnual": 750.0,
-      "lastGiftDate": "",
-      "riskScore": 26,
-      "riskTier": "Medium",
-      "riskFactors": [
-        "$750/yr avg at risk"
-      ],
-      "daysSinceGift": 365
-    },
-    {
-      "name": "Steven Zacks",
-      "phone": "6193004796",
-      "email": "stevenzacks@gmail.com",
+      "email": "mstern2009@yahoo.com",
       "fy25Amount": 750.0,
       "lifetimeGiving": 750.0,
       "avgAnnual": 750.0,
@@ -7746,9 +7795,9 @@
       "daysSinceGift": 365
     },
     {
-      "name": "Marvin Stern",
-      "phone": "",
-      "email": "mstern2009@yahoo.com",
+      "name": "Steven Zacks",
+      "phone": "6193004796",
+      "email": "stevenzacks@gmail.com",
       "fy25Amount": 750.0,
       "lifetimeGiving": 750.0,
       "avgAnnual": 750.0,
@@ -7761,19 +7810,19 @@
       "daysSinceGift": 365
     },
     {
-      "name": "Emma Paterno",
-      "phone": "(562) 221-7822",
-      "email": "emmapaterno@aol.com",
-      "fy25Amount": 550.65,
-      "lifetimeGiving": 550.65,
-      "avgAnnual": 550.65,
-      "lastGiftDate": "2025-03-13",
+      "name": "Julie Jacobs",
+      "phone": "",
+      "email": "jsjacobs@san.rr.com",
+      "fy25Amount": 750.0,
+      "lifetimeGiving": 750.0,
+      "avgAnnual": 750.0,
+      "lastGiftDate": "",
       "riskScore": 26,
       "riskTier": "Medium",
       "riskFactors": [
-        "$551/yr avg at risk"
+        "$750/yr avg at risk"
       ],
-      "daysSinceGift": 348
+      "daysSinceGift": 365
     },
     {
       "name": "Greg Saber",
@@ -7806,21 +7855,6 @@
       "daysSinceGift": 365
     },
     {
-      "name": "Randy Silverstein",
-      "phone": "",
-      "email": "randy63108@yahoo.com",
-      "fy25Amount": 360.0,
-      "lifetimeGiving": 614.0,
-      "avgAnnual": 122.8,
-      "lastGiftDate": "2025-05-28",
-      "riskScore": 26,
-      "riskTier": "Watch",
-      "riskFactors": [
-        "5 year relationship at risk"
-      ],
-      "daysSinceGift": 272
-    },
-    {
       "name": "Angela Cornelio Lefter",
       "phone": "6193709844",
       "email": "angela@lefter.org",
@@ -7833,23 +7867,25 @@
       "riskFactors": [
         "6 year relationship at risk"
       ],
-      "daysSinceGift": 246
+      "daysSinceGift": 247
     },
     {
-      "name": "Carly Lobenstein",
+      "name": "Mike Chasin",
       "phone": "",
-      "email": "carlye@jewishinsandiego.org",
-      "fy25Amount": 1660.0,
-      "lifetimeGiving": 9351.26,
-      "avgAnnual": 779.27,
-      "lastGiftDate": "2026-01-21",
+      "email": "mikechasin@yahoo.com",
+      "fy25Amount": 5000.0,
+      "lifetimeGiving": 10222.0,
+      "avgAnnual": 2044.4,
+      "lastGiftDate": "2025-12-12",
       "riskScore": 25,
-      "riskTier": "High",
+      "riskTier": "Critical",
       "riskFactors": [
-        "12 year relationship at risk",
-        "$779/yr avg at risk"
+        "5 year relationship at risk",
+        "$2,044/yr avg at risk",
+        "$10,222 lifetime donor",
+        "Major donor \u2014 immediate outreach needed"
       ],
-      "daysSinceGift": 34
+      "daysSinceGift": 75
     },
     {
       "name": "Olga L. Gordon",
@@ -7864,7 +7900,7 @@
       "riskFactors": [
         "$2,061/yr avg at risk"
       ],
-      "daysSinceGift": 265
+      "daysSinceGift": 266
     },
     {
       "name": "Lynn Todd",
@@ -7879,7 +7915,7 @@
       "riskFactors": [
         "$750/yr avg at risk"
       ],
-      "daysSinceGift": 328
+      "daysSinceGift": 329
     },
     {
       "name": "Dianne Krasnow",
@@ -7907,7 +7943,7 @@
       "riskScore": 25,
       "riskTier": "Watch",
       "riskFactors": [],
-      "daysSinceGift": 340
+      "daysSinceGift": 341
     },
     {
       "name": "Anna Lowe",
@@ -7949,38 +7985,7 @@
         "5 year relationship at risk",
         "$580/yr avg at risk"
       ],
-      "daysSinceGift": 243
-    },
-    {
-      "name": "Talia Arya",
-      "phone": "",
-      "email": "taliaarya@gmail.com",
-      "fy25Amount": 180.0,
-      "lifetimeGiving": 180.0,
-      "avgAnnual": 180.0,
-      "lastGiftDate": "2025-03-18",
-      "riskScore": 25,
-      "riskTier": "Watch",
-      "riskFactors": [],
-      "daysSinceGift": 343
-    },
-    {
-      "name": "Mike Chasin",
-      "phone": "",
-      "email": "mikechasin@yahoo.com",
-      "fy25Amount": 5000.0,
-      "lifetimeGiving": 10222.0,
-      "avgAnnual": 2044.4,
-      "lastGiftDate": "2025-12-12",
-      "riskScore": 24,
-      "riskTier": "Critical",
-      "riskFactors": [
-        "5 year relationship at risk",
-        "$2,044/yr avg at risk",
-        "$10,222 lifetime donor",
-        "Major donor \u2014 immediate outreach needed"
-      ],
-      "daysSinceGift": 74
+      "daysSinceGift": 244
     },
     {
       "name": "Nataly Bramzon",
@@ -7993,7 +7998,7 @@
       "riskScore": 24,
       "riskTier": "Watch",
       "riskFactors": [],
-      "daysSinceGift": 330
+      "daysSinceGift": 331
     },
     {
       "name": "Elizabeth Leonard",
@@ -8008,7 +8013,7 @@
       "riskFactors": [
         "$509/yr avg at risk"
       ],
-      "daysSinceGift": 273
+      "daysSinceGift": 274
     },
     {
       "name": "Sheree Bendas",
@@ -8021,7 +8026,7 @@
       "riskScore": 22,
       "riskTier": "Watch",
       "riskFactors": [],
-      "daysSinceGift": 279
+      "daysSinceGift": 280
     },
     {
       "name": "Chris Rhodes",
@@ -8034,7 +8039,7 @@
       "riskScore": 22,
       "riskTier": "Watch",
       "riskFactors": [],
-      "daysSinceGift": 305
+      "daysSinceGift": 306
     },
     {
       "name": "Joseph Sheiner",
@@ -8047,7 +8052,7 @@
       "riskScore": 22,
       "riskTier": "Watch",
       "riskFactors": [],
-      "daysSinceGift": 300
+      "daysSinceGift": 301
     },
     {
       "name": "Steven Levin",
@@ -8062,7 +8067,7 @@
       "riskFactors": [
         "$1,120/yr avg at risk"
       ],
-      "daysSinceGift": 279
+      "daysSinceGift": 280
     },
     {
       "name": "Stephanie Smith",
@@ -8077,7 +8082,7 @@
       "riskFactors": [
         "$1,015/yr avg at risk"
       ],
-      "daysSinceGift": 277
+      "daysSinceGift": 278
     },
     {
       "name": "Ronit Droker",
@@ -8094,7 +8099,7 @@
         "$11,554 lifetime donor",
         "Major donor \u2014 immediate outreach needed"
       ],
-      "daysSinceGift": 56
+      "daysSinceGift": 57
     },
     {
       "name": "Noemi Epstein",
@@ -8107,7 +8112,7 @@
       "riskScore": 20,
       "riskTier": "Medium",
       "riskFactors": [],
-      "daysSinceGift": 239
+      "daysSinceGift": 240
     },
     {
       "name": "Barbi Dorfan",
@@ -8123,7 +8128,7 @@
         "9 year relationship at risk",
         "$601/yr avg at risk"
       ],
-      "daysSinceGift": 14
+      "daysSinceGift": 15
     },
     {
       "name": "Steve Weissman",
@@ -8138,7 +8143,7 @@
       "riskFactors": [
         "$800/yr avg at risk"
       ],
-      "daysSinceGift": 239
+      "daysSinceGift": 240
     },
     {
       "name": "Melissa Brill",
@@ -8155,7 +8160,7 @@
         "$10,572 lifetime donor",
         "Major donor \u2014 immediate outreach needed"
       ],
-      "daysSinceGift": 46
+      "daysSinceGift": 47
     },
     {
       "name": "Charlene Pinn",
@@ -8168,7 +8173,7 @@
       "riskScore": 18,
       "riskTier": "Watch",
       "riskFactors": [],
-      "daysSinceGift": 239
+      "daysSinceGift": 240
     },
     {
       "name": "Zvi Israel Weiss",
@@ -8184,7 +8189,7 @@
         "5 year relationship at risk",
         "$1,736/yr avg at risk"
       ],
-      "daysSinceGift": 48
+      "daysSinceGift": 49
     },
     {
       "name": "Jill Press",
@@ -8199,7 +8204,7 @@
       "riskFactors": [
         "$1,500/yr avg at risk"
       ],
-      "daysSinceGift": 84
+      "daysSinceGift": 85
     },
     {
       "name": "Fabienne Perlov",
@@ -8214,7 +8219,7 @@
       "riskFactors": [
         "5 year relationship at risk"
       ],
-      "daysSinceGift": 46
+      "daysSinceGift": 47
     },
     {
       "name": "Marc Sacks",
@@ -8229,7 +8234,7 @@
       "riskFactors": [
         "$2,514/yr avg at risk"
       ],
-      "daysSinceGift": 26
+      "daysSinceGift": 27
     },
     {
       "name": "Suzy Sostrin",
@@ -8239,12 +8244,12 @@
       "lifetimeGiving": 1110.0,
       "avgAnnual": 1110.0,
       "lastGiftDate": "2025-12-11",
-      "riskScore": 7,
+      "riskScore": 8,
       "riskTier": "Watch",
       "riskFactors": [
         "$1,110/yr avg at risk"
       ],
-      "daysSinceGift": 75
+      "daysSinceGift": 76
     },
     {
       "name": "William Tiep",
@@ -8259,7 +8264,7 @@
       "riskFactors": [
         "$980/yr avg at risk"
       ],
-      "daysSinceGift": 26
+      "daysSinceGift": 27
     },
     {
       "name": "Itai Ben-Artzi",
@@ -8274,7 +8279,7 @@
       "riskFactors": [
         "$1,890/yr avg at risk"
       ],
-      "daysSinceGift": 39
+      "daysSinceGift": 40
     },
     {
       "name": "Liza Shiff-Feigenbaum",
@@ -8289,14 +8294,14 @@
       "riskFactors": [
         "$716/yr avg at risk"
       ],
-      "daysSinceGift": 40
+      "daysSinceGift": 41
     }
   ],
   "kpis": {
     "totalAtRisk": 500,
-    "revenueAtRisk": 1881492.5,
-    "criticalCount": 99,
-    "criticalRevenue": 1543848.45,
-    "avgDaysSinceGift": 642
+    "revenueAtRisk": 2218111.85,
+    "criticalCount": 100,
+    "criticalRevenue": 1881468.45,
+    "avgDaysSinceGift": 649
   }
 }

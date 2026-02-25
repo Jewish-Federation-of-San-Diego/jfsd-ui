@@ -1,5 +1,5 @@
 {
-  "asOfDate": "2026-02-24T17:35:35Z",
+  "asOfDate": "2026-02-25T19:07:27Z",
   "monthlyTrend": [
     {
       "month": "Jul",
@@ -38,17 +38,17 @@
     },
     {
       "month": "Feb",
-      "amount": 95778.0,
-      "txnCount": 368
+      "amount": 97546.69,
+      "txnCount": 385
     }
   ],
   "departmentSpend": [
     {
       "dept": "Administration",
-      "amount": 422904.49,
-      "txnCount": 1248,
+      "amount": 424294.2,
+      "txnCount": 1257,
       "budget": 1773360.0,
-      "pctOfBudget": 23.8
+      "pctOfBudget": 23.9
     },
     {
       "dept": "Programs",
@@ -66,15 +66,15 @@
     },
     {
       "dept": "Development",
-      "amount": 59637.47,
-      "txnCount": 284,
+      "amount": 59883.54,
+      "txnCount": 287,
       "budget": 1915921.0,
       "pctOfBudget": 3.1
     },
     {
       "dept": "Shinshinim",
-      "amount": 37887.75,
-      "txnCount": 1815,
+      "amount": 38020.66,
+      "txnCount": 1820,
       "budget": 466926.0,
       "pctOfBudget": 8.1
     },
@@ -101,18 +101,18 @@
     },
     {
       "category": "Restaurants",
-      "amount": 91783.41,
-      "txnCount": 733
+      "amount": 91829.21,
+      "txnCount": 736
+    },
+    {
+      "category": "SaaS / Software",
+      "amount": 70337.76,
+      "txnCount": 264
     },
     {
       "category": "Professional Services",
       "amount": 69547.31,
       "txnCount": 70
-    },
-    {
-      "category": "SaaS / Software",
-      "amount": 69149.82,
-      "txnCount": 260
     },
     {
       "category": "Car Rental",
@@ -121,8 +121,8 @@
     },
     {
       "category": "Office supplies and cleaning",
-      "amount": 37093.6,
-      "txnCount": 10
+      "amount": 37126.11,
+      "txnCount": 11
     },
     {
       "category": "Books and Newspapers",
@@ -131,8 +131,8 @@
     },
     {
       "category": "Taxi and Rideshare",
-      "amount": 31765.29,
-      "txnCount": 1063
+      "amount": 31906.6,
+      "txnCount": 1066
     },
     {
       "category": "Other",
@@ -146,18 +146,18 @@
     },
     {
       "category": "Lodging",
-      "amount": 28036.36,
-      "txnCount": 61
+      "amount": 28054.27,
+      "txnCount": 62
+    },
+    {
+      "category": "General Merchandise",
+      "amount": 26754.17,
+      "txnCount": 340
     },
     {
       "category": "Taxes and tax preparation",
       "amount": 26674.04,
       "txnCount": 4
-    },
-    {
-      "category": "General Merchandise",
-      "amount": 26520.35,
-      "txnCount": 338
     },
     {
       "category": "Office",
@@ -208,8 +208,8 @@
     },
     {
       "merchant": "Uber",
-      "amount": 15832.62,
-      "txnCount": 653
+      "amount": 15973.93,
+      "txnCount": 656
     },
     {
       "merchant": "San Diego Padres",
@@ -250,14 +250,14 @@
   "topSpenders": [
     {
       "name": "Carly Lobenstein",
-      "amount": 128768.11,
-      "txnCount": 196,
+      "amount": 128773.11,
+      "txnCount": 197,
       "dept": "Administration"
     },
     {
       "name": "David Fuhriman",
-      "amount": 104556.55,
-      "txnCount": 96,
+      "amount": 104710.9,
+      "txnCount": 99,
       "dept": "Administration"
     },
     {
@@ -274,8 +274,8 @@
     },
     {
       "name": "Joanna  Chiu",
-      "amount": 54360.95,
-      "txnCount": 185,
+      "amount": 54630.95,
+      "txnCount": 186,
       "dept": "Administration"
     },
     {
@@ -292,14 +292,14 @@
     },
     {
       "name": "Sharon Veksler",
-      "amount": 28182.32,
-      "txnCount": 90,
+      "amount": 29075.26,
+      "txnCount": 91,
       "dept": "Administration"
     },
     {
       "name": "Debbie Tirouda",
-      "amount": 24391.12,
-      "txnCount": 85,
+      "amount": 24594.78,
+      "txnCount": 86,
       "dept": "Development"
     },
     {
@@ -322,8 +322,8 @@
     },
     {
       "name": "Miliah Rodriguez",
-      "amount": 11911.54,
-      "txnCount": 126,
+      "amount": 11944.05,
+      "txnCount": 127,
       "dept": "Administration"
     },
     {
@@ -343,20 +343,20 @@
     "active": 100,
     "dormant30d": 54,
     "totalLimit": 387006.99,
-    "totalSpent": 786494.8,
-    "utilizationPct": 203.2
+    "totalSpent": 788263.49,
+    "utilizationPct": 203.7
   },
   "weekOverWeek": {
-    "thisWeek": 1427.31,
+    "thisWeek": 3196.0,
     "lastWeek": 11945.8,
-    "changePct": -88.1
+    "changePct": -73.2
   },
   "kpis": {
-    "totalSpendFY26": 786494.8,
-    "monthlyAvg": 98311.85,
+    "totalSpendFY26": 788263.49,
+    "monthlyAvg": 98532.94,
     "activeCards": 100,
     "topDepartment": "Administration",
-    "topDepartmentAmount": 422904.49,
-    "weekOverWeekChange": -88.1
+    "topDepartmentAmount": 424294.2,
+    "weekOverWeekChange": -73.2
   }
 }

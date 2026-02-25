@@ -1,20 +1,20 @@
 {
-  "asOfDate": "2026-02-24 09:32",
+  "asOfDate": "2026-02-25 11:04",
   "annualCampaign": {
     "name": "Annual Campaign 26",
     "goal": 9000000,
-    "raised": 5991770.91,
-    "pctOfGoal": 66.6,
-    "donorCount": 1015,
-    "avgGift": 5903.0,
-    "priorYearSamePoint": 7905709.27
+    "raised": 7355845.86,
+    "pctOfGoal": 81.7,
+    "donorCount": 1021,
+    "avgGift": 7205.0,
+    "priorYearSamePoint": 7431300.67
   },
   "momentum": {
-    "giftsThisWeek": 16,
-    "amountThisWeek": 7075.4,
-    "giftsLastWeek": 59,
-    "amountLastWeek": 117209.84,
-    "weekOverWeekPct": -94.0
+    "giftsThisWeek": 74,
+    "amountThisWeek": 27137.96,
+    "giftsLastWeek": 64,
+    "amountLastWeek": 119609.84,
+    "weekOverWeekPct": -77.3
   },
   "weeklyMomentum": [
     {
@@ -49,19 +49,19 @@
     },
     {
       "weekOf": "2026-02-16",
-      "gifts": 59,
-      "amount": 117209.84
+      "gifts": 64,
+      "amount": 119609.84
     },
     {
       "weekOf": "2026-02-23",
-      "gifts": 16,
-      "amount": 7075.4
+      "gifts": 74,
+      "amount": 27137.96
     }
   ],
   "donorBreakdown": {
-    "newDonors": 205,
+    "newDonors": 210,
     "returningDonors": 578,
-    "lybuntRecovered": 103,
+    "lybuntRecovered": 106,
     "retentionRate": 31.0
   },
   "givingLevels": [
@@ -72,36 +72,48 @@
     },
     {
       "level": "$100-499",
-      "donors": 329,
-      "amount": 70281.92
+      "donors": 331,
+      "amount": 70645.47
     },
     {
       "level": "$500-999",
       "donors": 129,
-      "amount": 73955.88
+      "amount": 74055.88
     },
     {
       "level": "$1K-4,999",
-      "donors": 223,
-      "amount": 393947.27
+      "donors": 225,
+      "amount": 400347.27
     },
     {
       "level": "$5K-9,999",
-      "donors": 89,
-      "amount": 499147.73
+      "donors": 91,
+      "amount": 510358.03
     },
     {
       "level": "$10K-24,999",
-      "donors": 61,
-      "amount": 758805.82
+      "donors": 60,
+      "amount": 749510.42
     },
     {
       "level": "$25K+",
-      "donors": 32,
-      "amount": 4188182.69
+      "donors": 33,
+      "amount": 5543479.19
     }
   ],
   "topGiftsThisWeek": [
+    {
+      "name": "Sempra Energy",
+      "amount": 12504.6,
+      "campaign": "DRM - FY26",
+      "date": "2026-02-24"
+    },
+    {
+      "name": "Karin Toranto",
+      "amount": 5210.3,
+      "campaign": "Unsolicited Annual Gifts - FY26",
+      "date": "2026-02-24"
+    },
     {
       "name": "Jewish Community Foundation",
       "amount": 3000.0,
@@ -109,10 +121,10 @@
       "date": "2026-02-23"
     },
     {
-      "name": "Jewish Community Foundation",
-      "amount": 1000.0,
+      "name": "Leonid Zilberman",
+      "amount": 1800.0,
       "campaign": "FED360 - FY26 - Donations - Attended",
-      "date": "2026-02-23"
+      "date": "2026-02-24"
     },
     {
       "name": "Jewish Community Foundation",
@@ -124,6 +136,12 @@
       "name": "Jewish Community Foundation",
       "amount": 1000.0,
       "campaign": "Unsolicited Annual Gifts - FY26",
+      "date": "2026-02-23"
+    },
+    {
+      "name": "Jewish Community Foundation",
+      "amount": 1000.0,
+      "campaign": "FED360 - FY26 - Donations - Attended",
       "date": "2026-02-23"
     },
     {
@@ -142,24 +160,6 @@
       "name": "Schindler Brokerage LLC",
       "amount": 208.7,
       "campaign": "Unsolicited Annual Gifts - FY26",
-      "date": "2026-02-23"
-    },
-    {
-      "name": "Jewish Community Foundation",
-      "amount": 118.0,
-      "campaign": "Tributes - FY26",
-      "date": "2026-02-23"
-    },
-    {
-      "name": "Jason Bercovitch",
-      "amount": 0.0,
-      "campaign": "Yom HaShoah - FY26",
-      "date": "2026-02-24"
-    },
-    {
-      "name": "Daniel Eyal",
-      "amount": 0.0,
-      "campaign": "Yom HaShoah - FY26",
       "date": "2026-02-23"
     }
   ],
@@ -276,9 +276,9 @@
     },
     {
       "name": "DRM - FY26",
-      "raised": 1756701.24,
+      "raised": 2278205.84,
       "goal": 0.0,
-      "donors": 132,
+      "donors": 136,
       "pctOfGoal": 0
     },
     {
@@ -304,9 +304,9 @@
     },
     {
       "name": "Ambassador - FY26",
-      "raised": 71540.04,
+      "raised": 75140.04,
       "goal": 0.0,
-      "donors": 17,
+      "donors": 18,
       "pctOfGoal": 0
     }
   ]

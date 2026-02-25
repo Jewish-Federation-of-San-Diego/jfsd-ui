@@ -1,5 +1,5 @@
 {
-  "asOfDate": "2026-02-24",
+  "asOfDate": "2026-02-25",
   "summary": {
     "totalOpenPledges": 605,
     "totalPledgedAmount": 13841022.150000002,
@@ -11,23 +11,23 @@
   "agingBuckets": [
     {
       "bucket": "0-90 days",
-      "count": 234,
-      "amount": 2686415
+      "count": 237,
+      "amount": 2686699
     },
     {
       "bucket": "91-180 days",
-      "count": 25,
-      "amount": 277412
+      "count": 24,
+      "amount": 272412
     },
     {
       "bucket": "181-365 days",
-      "count": 79,
-      "amount": 2387708
+      "count": 76,
+      "amount": 2392325
     },
     {
       "bucket": "365+ days",
-      "count": 267,
-      "amount": 8120990
+      "count": 268,
+      "amount": 8121090
     }
   ],
   "writeOffRisk": [
@@ -37,7 +37,7 @@
       "paidAmount": 0.0,
       "balance": 18000.0,
       "endDate": "2025-12-31",
-      "daysOverdue": 55,
+      "daysOverdue": 56,
       "campaign": "DRM - FY26"
     },
     {
@@ -46,7 +46,7 @@
       "paidAmount": 9643.0,
       "balance": 10357.0,
       "endDate": "2025-12-31",
-      "daysOverdue": 55,
+      "daysOverdue": 56,
       "campaign": "DRM - FY26"
     },
     {
@@ -55,7 +55,7 @@
       "paidAmount": 0.0,
       "balance": 10000.0,
       "endDate": "2025-10-31",
-      "daysOverdue": 116,
+      "daysOverdue": 117,
       "campaign": "DRM - FY26"
     },
     {
@@ -64,7 +64,7 @@
       "paidAmount": 0.0,
       "balance": 10000.0,
       "endDate": "2026-01-01",
-      "daysOverdue": 54,
+      "daysOverdue": 55,
       "campaign": "DRM - FY26"
     },
     {
@@ -73,7 +73,7 @@
       "paidAmount": 0.0,
       "balance": 6000.0,
       "endDate": "2025-04-22",
-      "daysOverdue": 308,
+      "daysOverdue": 309,
       "campaign": "DRM - FY26"
     },
     {
@@ -82,7 +82,7 @@
       "paidAmount": 0.0,
       "balance": 6000.0,
       "endDate": "2025-12-31",
-      "daysOverdue": 55,
+      "daysOverdue": 56,
       "campaign": "DRM - FY26"
     },
     {
@@ -91,7 +91,7 @@
       "paidAmount": 0.0,
       "balance": 5000.0,
       "endDate": "2025-12-31",
-      "daysOverdue": 55,
+      "daysOverdue": 56,
       "campaign": "DRM - FY26"
     },
     {
@@ -100,7 +100,7 @@
       "paidAmount": 0.0,
       "balance": 1800.0,
       "endDate": "2026-02-07",
-      "daysOverdue": 17,
+      "daysOverdue": 18,
       "campaign": "FED360 - FY26 - Sponsorships"
     },
     {
@@ -109,7 +109,7 @@
       "paidAmount": 3500.0,
       "balance": 1500.0,
       "endDate": "2025-12-31",
-      "daysOverdue": 55,
+      "daysOverdue": 56,
       "campaign": "DRM - FY26"
     }
   ],
@@ -265,7 +265,7 @@
       "balance": 75000.0,
       "startDate": "2024-06-10",
       "endDate": "",
-      "campaign": "DRM FACE 2024"
+      "campaign": "DRM FACE 2025"
     },
     {
       "name": "Carlos David Michan",
@@ -350,15 +350,15 @@
     },
     {
       "campaign": "DRM - FY26",
-      "pledgeCount": 67,
-      "pledgedAmount": 1825538.98,
+      "pledgeCount": 69,
+      "pledgedAmount": 1847339.03,
       "paidAmount": 30141.0,
-      "fulfillmentRate": 1.7
+      "fulfillmentRate": 1.6
     },
     {
       "campaign": "DRM - CY27",
-      "pledgeCount": 41,
-      "pledgedAmount": 1291622.15,
+      "pledgeCount": 46,
+      "pledgedAmount": 1300505.7,
       "paidAmount": 0.0,
       "fulfillmentRate": 0.0
     },
@@ -384,18 +384,18 @@
       "fulfillmentRate": 0.0
     },
     {
-      "campaign": "DRM FACE 2024",
-      "pledgeCount": 5,
-      "pledgedAmount": 283333.33999999997,
-      "paidAmount": 110440.0,
-      "fulfillmentRate": 39.0
-    },
-    {
       "campaign": "FED360 - FY26 - Donations - Attended",
-      "pledgeCount": 178,
-      "pledgedAmount": 246457.0,
+      "pledgeCount": 177,
+      "pledgedAmount": 244657.0,
       "paidAmount": 780.0,
       "fulfillmentRate": 0.3
+    },
+    {
+      "campaign": "DRM FACE 2025",
+      "pledgeCount": 13,
+      "pledgedAmount": 220050.0,
+      "paidAmount": 15657.599999999999,
+      "fulfillmentRate": 7.1
     },
     {
       "campaign": "JDC - Rady Match",
@@ -405,18 +405,18 @@
       "fulfillmentRate": 24.9
     },
     {
+      "campaign": "DRM FACE 2024",
+      "pledgeCount": 3,
+      "pledgedAmount": 163333.34,
+      "paidAmount": 110440.0,
+      "fulfillmentRate": 67.6
+    },
+    {
       "campaign": "Beit Melachah - General",
       "pledgeCount": 4,
       "pledgedAmount": 155000.0,
       "paidAmount": 0.0,
       "fulfillmentRate": 0.0
-    },
-    {
-      "campaign": "DRM FACE 2025",
-      "pledgeCount": 11,
-      "pledgedAmount": 130066.5,
-      "paidAmount": 15657.599999999999,
-      "fulfillmentRate": 12.0
     },
     {
       "campaign": "Beit Melachah Direct Mail 2025",
@@ -427,8 +427,8 @@
     },
     {
       "campaign": "Ambassador - FY26",
-      "pledgeCount": 16,
-      "pledgedAmount": 115050.0,
+      "pledgeCount": 17,
+      "pledgedAmount": 118650.0,
       "paidAmount": 0.0,
       "fulfillmentRate": 0.0
     },
@@ -545,13 +545,6 @@
       "fulfillmentRate": 6.2
     },
     {
-      "campaign": "LION OF JUDAH LUNCHEON 2025",
-      "pledgeCount": 10,
-      "pledgedAmount": 6020.1,
-      "paidAmount": 0.0,
-      "fulfillmentRate": 0.0
-    },
-    {
       "campaign": "DRM EM 2022",
       "pledgeCount": 3,
       "pledgedAmount": 5780.0,
@@ -576,6 +569,13 @@
       "campaign": "NYLC CAUCUS 2023",
       "pledgeCount": 1,
       "pledgedAmount": 5436.0,
+      "paidAmount": 0.0,
+      "fulfillmentRate": 0.0
+    },
+    {
+      "campaign": "LION OF JUDAH LUNCHEON 2025",
+      "pledgeCount": 3,
+      "pledgedAmount": 5353.0,
       "paidAmount": 0.0,
       "fulfillmentRate": 0.0
     },
@@ -615,25 +615,11 @@
       "fulfillmentRate": 2.2
     },
     {
-      "campaign": "Annual - FY26",
-      "pledgeCount": 3,
-      "pledgedAmount": 4400.0,
-      "paidAmount": 0.0,
-      "fulfillmentRate": 0.0
-    },
-    {
       "campaign": "CMNTY TRIP 2023",
       "pledgeCount": 9,
       "pledgedAmount": 3876.0,
       "paidAmount": 870.0,
       "fulfillmentRate": 22.4
-    },
-    {
-      "campaign": "Unsolicited Annual Gifts 2025",
-      "pledgeCount": 1,
-      "pledgedAmount": 3600.0,
-      "paidAmount": 0.0,
-      "fulfillmentRate": 0.0
     },
     {
       "campaign": "TLMKT DEC 2022",
@@ -678,6 +664,13 @@
       "fulfillmentRate": 0.0
     },
     {
+      "campaign": "Annual - FY26",
+      "pledgeCount": 2,
+      "pledgedAmount": 2600.0,
+      "paidAmount": 0.0,
+      "fulfillmentRate": 0.0
+    },
+    {
       "campaign": "SPRNG2025GVNG",
       "pledgeCount": 2,
       "pledgedAmount": 2025.0,
@@ -686,6 +679,20 @@
     },
     {
       "campaign": "DRM CALL 2024",
+      "pledgeCount": 1,
+      "pledgedAmount": 1800.0,
+      "paidAmount": 0.0,
+      "fulfillmentRate": 0.0
+    },
+    {
+      "campaign": "Tributes - FY26",
+      "pledgeCount": 1,
+      "pledgedAmount": 1800.0,
+      "paidAmount": 0.0,
+      "fulfillmentRate": 0.0
+    },
+    {
+      "campaign": "FED360 - FY26 - Donations - Tributes",
       "pledgeCount": 1,
       "pledgedAmount": 1800.0,
       "paidAmount": 0.0,
@@ -799,6 +806,12 @@
   ],
   "recentPayments": [
     {
+      "name": "Sempra Energy",
+      "amount": 12504.6,
+      "date": "2026-02-24",
+      "pledgeTotal": 12000.0
+    },
+    {
       "name": "Igor Raginski",
       "amount": 52.4,
       "date": "2026-02-19",
@@ -911,12 +924,6 @@
       "amount": 4698.0,
       "date": "2026-02-09",
       "pledgeTotal": 10000.0
-    },
-    {
-      "name": "Jean Somers",
-      "amount": 5302.0,
-      "date": "2026-02-09",
-      "pledgeTotal": 10000.0
     }
   ],
   "kpis": {
@@ -925,6 +932,6 @@
     "writeOffRiskAmount": 68657.0,
     "writeOffRiskCount": 9,
     "avgDaysToPayment": 0,
-    "pledgesThisMonth": 216
+    "pledgesThisMonth": 219
   }
 }
