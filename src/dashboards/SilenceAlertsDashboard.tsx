@@ -26,7 +26,7 @@ export function SilenceAlertsDashboard() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('/data/silence-alerts.json').then(r => r.json()).then(d => { setData(d); setLoading(false); });
+    fetch(`${import.meta.env.BASE_URL}data/silence-alerts.json`).then(r => r.json()).then(d => { setData(d); setLoading(false); });
   }, []);
 
   if (loading || !data) return <DashboardSkeleton />;

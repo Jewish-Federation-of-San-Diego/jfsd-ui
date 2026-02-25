@@ -32,8 +32,8 @@ export function HubSpotDashboard() {
 
   useEffect(() => {
     Promise.all([
-      fetch('/data/hubspot-engagement.json').then(r => r.json()),
-      fetch('/data/hubspot-emails.json').then(r => r.json()),
+      fetch(`${import.meta.env.BASE_URL}data/hubspot-engagement.json`).then(r => r.json()),
+      fetch(`${import.meta.env.BASE_URL}data/hubspot-emails.json`).then(r => r.json()),
     ]).then(([eng, em]) => {
       setEngagement(eng);
       setEmails(em);

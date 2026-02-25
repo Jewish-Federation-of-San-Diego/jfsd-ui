@@ -26,7 +26,7 @@ export function EcobeeTrendsDashboard() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('/data/ecobee-trends.json').then(r => r.json()).then(d => { setData(d); setLoading(false); });
+    fetch(`${import.meta.env.BASE_URL}data/ecobee-trends.json`).then(r => r.json()).then(d => { setData(d); setLoading(false); });
   }, []);
 
   if (loading || !data) return <DashboardSkeleton />;

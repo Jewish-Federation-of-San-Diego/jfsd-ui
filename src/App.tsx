@@ -135,22 +135,18 @@ const dashboardTitles: Record<string, string> = {
   'chart-gallery': 'Chart Gallery',
 };
 
-function App() {
-  const [drawerOpen, setDrawerOpen] = useState(false);
-  const [defsOpen, setDefsOpen] = useState(false);
-  const [selectedKey, setSelectedKey] = useState('overview');
+interface SidebarContentProps {
+  selectedKey: string;
+  onMenuClick: (info: { key: string }) => void;
+}
 
-  const handleMenuClick = ({ key }: { key: string }) => {
-    setSelectedKey(key);
-    setDrawerOpen(false);
-  };
-
-  const SidebarContent = () => (
+function SidebarContent({ selectedKey, onMenuClick }: SidebarContentProps) {
+  return (
     <>
       <div style={{ padding: '20px 16px', borderBottom: '1px solid rgba(255,255,255,0.1)' }}>
-        <Title level={4} style={{ color: '#4DA3FF', margin: 0, fontSize: 18 }}>
+        <Typography.Title level={4} style={{ color: '#4DA3FF', margin: 0, fontSize: 18 }}>
           Federation Analytics
-        </Title>
+        </Typography.Title>
         <div style={{ color: 'rgba(255,255,255,0.5)', fontSize: 12, marginTop: 4 }}>
           Jewish Federation of San Diego
         </div>
@@ -160,10 +156,21 @@ function App() {
         mode="inline"
         selectedKeys={[selectedKey]}
         items={menuItems}
-        onClick={handleMenuClick}
+        onClick={onMenuClick}
       />
     </>
   );
+}
+
+function App() {
+  const [drawerOpen, setDrawerOpen] = useState(false);
+  const [defsOpen, setDefsOpen] = useState(false);
+  const [selectedKey, setSelectedKey] = useState('overview');
+
+  const handleMenuClick = ({ key }: { key: string }) => {
+    setSelectedKey(key);
+    setDrawerOpen(false);
+  };
 
   const renderDashboard = () => {
     switch (selectedKey) {
@@ -200,7 +207,7 @@ function App() {
       <Layout style={{ minHeight: '100vh' }}>
         <Sider width={230} theme="dark" breakpoint="lg" collapsedWidth={0} trigger={null}
           className="desktop-sider">
-          <SidebarContent />
+          <SidebarContent selectedKey={selectedKey} onMenuClick={handleMenuClick} />
         </Sider>
 
         <Drawer
@@ -212,7 +219,7 @@ function App() {
           closable={false}
         >
           <div style={{ background: '#1B365D', minHeight: '100%' }}>
-            <SidebarContent />
+            <SidebarContent selectedKey={selectedKey} onMenuClick={handleMenuClick} />
           </div>
         </Drawer>
 
