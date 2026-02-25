@@ -280,11 +280,12 @@ function RecommendationsCard() {
 
 // ── SVG Bar Chart ───────────────────────────────────────────────────────
 function BarChart({ data, width: w }: { data: MonthlyRow[]; width: number }) {
+  if (!data || data.length === 0) return null;
   const H = 220;
   const PAD = { top: 10, right: 10, bottom: 30, left: 50 };
   const cw = w - PAD.left - PAD.right;
   const ch = H - PAD.top - PAD.bottom;
-  const maxVal = Math.max(...data.map(d => d.amount));
+  const maxVal = Math.max(...data.map(d => d.amount), 1);
   const barW = Math.max((cw / data.length) * 0.6, 8);
   const gap = cw / data.length;
 
@@ -322,9 +323,11 @@ function BarChart({ data, width: w }: { data: MonthlyRow[]; width: number }) {
 
 function MonthlyRevenueChart({ data }: { data: MonthlyRow[] }) {
   const { ref, width } = useWidth();
+  if (!data || data.length === 0) return null;
   // Find the peak month for the title
-  const peak = data.reduce((a, b) => a.amount > b.amount ? a : b, data[0]);
-  const peakPct = Math.round(peak.amount / data.reduce((s, d) => s + d.amount, 0) * 100);
+  const peak = data.reduce((a, b) => a.amount > b.amount ? a : b);
+  const total = data.reduce((s, d) => s + d.amount, 0);
+  const peakPct = total > 0 ? Math.round(peak.amount / total * 100) : 0;
 
   return (
     <Card title={`${peak.month} year-end giving drove $${Math.round(peak.amount / 1000)}K — ${peakPct}% of FY26 volume`} size="small">
@@ -338,6 +341,7 @@ function MonthlyRevenueChart({ data }: { data: MonthlyRow[] }) {
 
 // ── SVG Line Chart ──────────────────────────────────────────────────────
 function LineChart({ data, width: w }: { data: MonthlyRow[]; width: number }) {
+  if (!data || data.length === 0) return null;
   const H = 220;
   const PAD = { top: 10, right: 16, bottom: 30, left: 44 };
   const cw = w - PAD.left - PAD.right;
@@ -347,7 +351,7 @@ function LineChart({ data, width: w }: { data: MonthlyRow[]; width: number }) {
 
   const yTicks = [2.0, 2.2, 2.4, 2.6, 2.8, 3.0, 3.2];
 
-  const toX = (i: number) => PAD.left + (i / (data.length - 1)) * cw;
+  const toX = (i: number) => PAD.left + (i / Math.max(data.length - 1, 1)) * cw;
   const toY = (v: number) => PAD.top + ch - ((v - minY) / range) * ch;
 
   const points = data.map((d, i) => ({ x: toX(i), y: toY(d.feeRate), ...d }));
@@ -383,8 +387,9 @@ function LineChart({ data, width: w }: { data: MonthlyRow[]; width: number }) {
 
 function FeeRateChart({ data }: { data: MonthlyRow[] }) {
   const { ref, width } = useWidth();
+  if (!data || data.length === 0) return null;
   // Find month with highest fee rate for title
-  const peak = data.reduce((a, b) => a.feeRate > b.feeRate ? a : b, data[0]);
+  const peak = data.reduce((a, b) => a.feeRate > b.feeRate ? a : b);
 
   return (
     <Card title={`${peak.month} fee rate spiked to ${peak.feeRate.toFixed(2)}% — driven by small-dollar charges`} size="small">
@@ -398,7 +403,8 @@ function FeeRateChart({ data }: { data: MonthlyRow[] }) {
 
 // ── Card Brand Breakdown (horizontal bars) ──────────────────────────────
 function CardBrandBreakdown({ data }: { data: CardBrandRow[] }) {
-  const total = data.reduce((a, d) => a + d.amount, 0);
+  if (!data || data.length === 0) return null;
+  const total = Math.max(data.reduce((a, d) => a + d.amount, 0), 1);
   // Find top brand for title
   const top = data[0];
   const topPct = Math.round((top.amount / total) * 100);
@@ -469,6 +475,7 @@ function MonthlyTable({ data }: { data: MonthlyRow[] }) {
 
 // ── Source Breakdown ────────────────────────────────────────────────────
 function SourceBreakdown({ data }: { data: SourceRow[] }) {
+  if (!data || data.length === 0) return null;
   const top = data[0];
   return (
     <Card title={`${top.pct}% of volume routes through ${top.source}`} size="small">
@@ -496,7 +503,7 @@ export function StripeDashboard() {
   const [refreshing, setRefreshing] = useState(false);
 
   useEffect(() => {
-    fetch('/jfsd-ui/data/stripe.json')
+    fetch(`${import.meta.env.BASE_URL}data/stripe.json`)
       .then(res => {
         if (!res.ok) throw new Error(`Failed to load data (${res.status})`);
         return res.json();
@@ -513,7 +520,7 @@ export function StripeDashboard() {
 
   const refresh = useCallback(() => {
     setRefreshing(true);
-    fetch('/jfsd-ui/data/stripe.json')
+    fetch(`${import.meta.env.BASE_URL}data/stripe.json`)
       .then(r => r.ok ? r.json() : null)
       .then(setData)
       .catch(() => {})

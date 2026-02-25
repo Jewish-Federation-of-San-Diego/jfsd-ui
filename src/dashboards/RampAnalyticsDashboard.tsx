@@ -118,7 +118,7 @@ function DeptBarChart({ data }: { data: DeptSpend[] }) {
 // ── Category Treemap Grid ───────────────────────────────────────────────
 function CategoryGrid({ data }: { data: CategoryRow[] }) {
   if (!data.length) return null;
-  const total = data.reduce((s, d) => s + d.amount, 0);
+  const total = Math.max(data.reduce((s, d) => s + d.amount, 0), 1);
   const colors = [NAVY, GOLD, SUCCESS, WARNING, '#5B8DB8', '#8B6B3D', '#6B8E6B', '#9B6B6B', '#7B7B9B', '#4B7B7B'];
 
   return (
