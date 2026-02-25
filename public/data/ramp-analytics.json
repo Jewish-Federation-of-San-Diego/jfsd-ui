@@ -1,5 +1,5 @@
 {
-  "asOfDate": "2026-02-20T14:07:29Z",
+  "asOfDate": "2026-02-24T17:35:35Z",
   "monthlyTrend": [
     {
       "month": "Jul",
@@ -38,24 +38,24 @@
     },
     {
       "month": "Feb",
-      "amount": 93690.9,
-      "txnCount": 314
+      "amount": 95778.0,
+      "txnCount": 368
     }
   ],
   "departmentSpend": [
     {
       "dept": "Administration",
-      "amount": 420622.2,
-      "txnCount": 1223,
+      "amount": 422904.49,
+      "txnCount": 1248,
       "budget": 1773360.0,
-      "pctOfBudget": 23.7
+      "pctOfBudget": 23.8
     },
     {
       "dept": "Programs",
-      "amount": 180239.62,
+      "amount": 179188.46,
       "txnCount": 420,
       "budget": 466926.0,
-      "pctOfBudget": 38.6
+      "pctOfBudget": 38.4
     },
     {
       "dept": "Marketing",
@@ -66,17 +66,17 @@
     },
     {
       "dept": "Development",
-      "amount": 59278.76,
-      "txnCount": 279,
+      "amount": 59637.47,
+      "txnCount": 284,
       "budget": 1915921.0,
       "pctOfBudget": 3.1
     },
     {
       "dept": "Shinshinim",
-      "amount": 37390.49,
-      "txnCount": 1791,
+      "amount": 37887.75,
+      "txnCount": 1815,
       "budget": 466926.0,
-      "pctOfBudget": 8.0
+      "pctOfBudget": 8.1
     },
     {
       "dept": "Legacy of Light Goldberg Institute for Holocaust Education",
@@ -96,48 +96,48 @@
   "categoryBreakdown": [
     {
       "category": "Airlines",
-      "amount": 117553.73,
-      "txnCount": 77
+      "amount": 117588.33,
+      "txnCount": 78
     },
     {
       "category": "Restaurants",
-      "amount": 91612.06,
-      "txnCount": 720
+      "amount": 91783.41,
+      "txnCount": 733
     },
     {
       "category": "Professional Services",
-      "amount": 69533.61,
-      "txnCount": 69
+      "amount": 69547.31,
+      "txnCount": 70
     },
     {
       "category": "SaaS / Software",
-      "amount": 68171.83,
-      "txnCount": 257
+      "amount": 69149.82,
+      "txnCount": 260
     },
     {
       "category": "Car Rental",
-      "amount": 44927.11,
-      "txnCount": 57
+      "amount": 44987.09,
+      "txnCount": 59
     },
     {
       "category": "Office supplies and cleaning",
-      "amount": 36844.82,
-      "txnCount": 9
+      "amount": 37093.6,
+      "txnCount": 10
     },
     {
       "category": "Books and Newspapers",
-      "amount": 32811.79,
-      "txnCount": 267
+      "amount": 33005.36,
+      "txnCount": 271
     },
     {
       "category": "Taxi and Rideshare",
-      "amount": 31684.48,
-      "txnCount": 1062
+      "amount": 31765.29,
+      "txnCount": 1063
     },
     {
       "category": "Other",
-      "amount": 29150.82,
-      "txnCount": 24
+      "amount": 29184.02,
+      "txnCount": 26
     },
     {
       "category": "Entertainment",
@@ -146,8 +146,8 @@
     },
     {
       "category": "Lodging",
-      "amount": 28788.81,
-      "txnCount": 60
+      "amount": 28036.36,
+      "txnCount": 61
     },
     {
       "category": "Taxes and tax preparation",
@@ -156,8 +156,8 @@
     },
     {
       "category": "General Merchandise",
-      "amount": 26120.12,
-      "txnCount": 332
+      "amount": 26520.35,
+      "txnCount": 338
     },
     {
       "category": "Office",
@@ -166,8 +166,8 @@
     },
     {
       "category": "Charitable donations",
-      "amount": 18783.03,
-      "txnCount": 61
+      "amount": 18943.03,
+      "txnCount": 63
     }
   ],
   "topMerchants": [
@@ -192,14 +192,14 @@
       "txnCount": 14
     },
     {
+      "merchant": "Amazon",
+      "amount": 25716.08,
+      "txnCount": 290
+    },
+    {
       "merchant": "Tlalim Tours",
       "amount": 25622.04,
       "txnCount": 1
-    },
-    {
-      "merchant": "Amazon",
-      "amount": 25522.51,
-      "txnCount": 286
     },
     {
       "merchant": "Farmer & The Seahorse",
@@ -208,8 +208,8 @@
     },
     {
       "merchant": "Uber",
-      "amount": 15751.81,
-      "txnCount": 652
+      "amount": 15832.62,
+      "txnCount": 653
     },
     {
       "merchant": "San Diego Padres",
@@ -250,14 +250,14 @@
   "topSpenders": [
     {
       "name": "Carly Lobenstein",
-      "amount": 128730.24,
-      "txnCount": 195,
+      "amount": 128768.11,
+      "txnCount": 196,
       "dept": "Administration"
     },
     {
       "name": "David Fuhriman",
-      "amount": 103500.74,
-      "txnCount": 93,
+      "amount": 104556.55,
+      "txnCount": 96,
       "dept": "Administration"
     },
     {
@@ -298,8 +298,8 @@
     },
     {
       "name": "Debbie Tirouda",
-      "amount": 24380.79,
-      "txnCount": 84,
+      "amount": 24391.12,
+      "txnCount": 85,
       "dept": "Development"
     },
     {
@@ -321,42 +321,42 @@
       "dept": "Legacy of Light Goldberg Institute for Holocaust Education"
     },
     {
+      "name": "Miliah Rodriguez",
+      "amount": 11911.54,
+      "txnCount": 126,
+      "dept": "Administration"
+    },
+    {
       "name": "Jessica Kretzer",
       "amount": 11209.32,
       "txnCount": 60,
       "dept": "Legacy of Light Goldberg Institute for Holocaust Education"
     },
     {
-      "name": "Miliah Rodriguez",
-      "amount": 11161.91,
-      "txnCount": 121,
-      "dept": "Administration"
-    },
-    {
       "name": "Janese Cassel",
-      "amount": 10827.52,
-      "txnCount": 58,
+      "amount": 10841.22,
+      "txnCount": 59,
       "dept": "Programs"
     }
   ],
   "cardUtilization": {
     "active": 100,
-    "dormant30d": 52,
+    "dormant30d": 54,
     "totalLimit": 387006.99,
-    "totalSpent": 784407.7,
-    "utilizationPct": 202.7
+    "totalSpent": 786494.8,
+    "utilizationPct": 203.2
   },
   "weekOverWeek": {
-    "thisWeek": 10070.03,
-    "lastWeek": 33740.0,
-    "changePct": -70.2
+    "thisWeek": 1427.31,
+    "lastWeek": 11945.8,
+    "changePct": -88.1
   },
   "kpis": {
-    "totalSpendFY26": 784407.7,
-    "monthlyAvg": 98050.96,
+    "totalSpendFY26": 786494.8,
+    "monthlyAvg": 98311.85,
     "activeCards": 100,
     "topDepartment": "Administration",
-    "topDepartmentAmount": 420622.2,
-    "weekOverWeekChange": -70.2
+    "topDepartmentAmount": 422904.49,
+    "weekOverWeekChange": -88.1
   }
 }

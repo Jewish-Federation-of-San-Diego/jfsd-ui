@@ -1,16 +1,16 @@
 {
-  "asOfDate": "2026-02-20 06:05",
+  "asOfDate": "2026-02-24 09:33",
   "drms": [
     {
       "name": "Michael Rabkin",
       "slug": "michael-rabkin",
       "totalDonors": 30505,
-      "totalRecognitionFY26": 693930.51,
-      "totalRecognitionFY25": 1079086.73,
-      "lybuntCount": 1026,
-      "lybuntAmount": 627787.9,
+      "totalRecognitionFY26": 701229.13,
+      "totalRecognitionFY25": 1081586.73,
+      "lybuntCount": 1025,
+      "lybuntAmount": 626087.9,
       "sybuntCount": 590,
-      "recentGifts30d": 120,
+      "recentGifts30d": 96,
       "topDonors": [
         {
           "name": "Marcia Hazan",
@@ -20,17 +20,17 @@
           "phone": "(858) 735-9361"
         },
         {
-          "name": "Sherron C. Schuster",
-          "fy26": 50000.0,
-          "fy25": 100.0,
-          "email": "sherron1046@gmail.com",
-          "phone": ""
-        },
-        {
           "name": "Jack M. Schuster",
           "fy26": 50000.0,
           "fy25": 42000.0,
           "email": "jms1046@gmail.com",
+          "phone": ""
+        },
+        {
+          "name": "Sherron C. Schuster",
+          "fy26": 50000.0,
+          "fy25": 100.0,
+          "email": "sherron1046@gmail.com",
           "phone": ""
         },
         {
@@ -55,6 +55,13 @@
           "phone": ""
         },
         {
+          "name": "Cheryl Rattner Price",
+          "fy26": 17500.0,
+          "fy25": 12500.0,
+          "email": "cherylprice@me.com",
+          "phone": "6197086883"
+        },
+        {
           "name": "Heidi Gantwerk",
           "fy26": 16500.16,
           "fy25": 21892.84,
@@ -69,6 +76,13 @@
           "phone": "(858) 775-5887"
         },
         {
+          "name": "Danielle L. Miller",
+          "fy26": 10000.0,
+          "fy25": 5036.0,
+          "email": "dlmiller4@aol.com",
+          "phone": ""
+        },
+        {
           "name": "Paul Segal",
           "fy26": 10000.0,
           "fy25": 0.0,
@@ -76,11 +90,32 @@
           "phone": "+18587751951"
         },
         {
-          "name": "Cheryl Rattner Price",
+          "name": "Lauren Cohen",
           "fy26": 10000.0,
-          "fy25": 10000.0,
-          "email": "cherylprice@me.com",
-          "phone": "6197086883"
+          "fy25": 0.0,
+          "email": "lauren10s@hotmail.com",
+          "phone": ""
+        },
+        {
+          "name": "Gail Satter",
+          "fy26": 10000.0,
+          "fy25": 0.0,
+          "email": "celobr8@san.rr.com",
+          "phone": ""
+        },
+        {
+          "name": "Erica Weinberg",
+          "fy26": 10000.0,
+          "fy25": 1800.0,
+          "email": "ericaweinberg@gmail.com",
+          "phone": ""
+        },
+        {
+          "name": "Robyn F. Goldberg",
+          "fy26": 10000.0,
+          "fy25": 0.0,
+          "email": "robynfgoldberg@yahoo.com",
+          "phone": ""
         },
         {
           "name": "Jan Stiglitz",
@@ -94,34 +129,6 @@
           "fy26": 10000.0,
           "fy25": 0.0,
           "email": "joan@inlandindustries.com",
-          "phone": ""
-        },
-        {
-          "name": "Robyn F. Goldberg",
-          "fy26": 10000.0,
-          "fy25": 0.0,
-          "email": "robynfgoldberg@yahoo.com",
-          "phone": ""
-        },
-        {
-          "name": "Erica Weinberg",
-          "fy26": 10000.0,
-          "fy25": 1800.0,
-          "email": "ericaweinberg@gmail.com",
-          "phone": ""
-        },
-        {
-          "name": "Gail Satter",
-          "fy26": 10000.0,
-          "fy25": 0.0,
-          "email": "celobr8@san.rr.com",
-          "phone": ""
-        },
-        {
-          "name": "Lauren Cohen",
-          "fy26": 10000.0,
-          "fy25": 0.0,
-          "email": "lauren10s@hotmail.com",
           "phone": ""
         },
         {
@@ -167,25 +174,18 @@
           "phone": ""
         },
         {
-          "name": "Jane Scher",
-          "fy26": 5000.0,
-          "fy25": 100.0,
-          "email": "janescher@gmail.com",
-          "phone": ""
-        },
-        {
-          "name": "Harris M. Cohen",
+          "name": "Arturo Levin",
           "fy26": 5000.0,
           "fy25": 0.0,
-          "email": "usbmaker@gmail.com",
-          "phone": ""
+          "email": "r2@lefam.com",
+          "phone": "(858) 756-5699"
         },
         {
-          "name": "Geoffrey Wahl",
+          "name": "Robert A. Rubenstein",
           "fy26": 5000.0,
-          "fy25": 250.0,
-          "email": "geoff.wahl@gmail.com",
-          "phone": "(858)864-5627"
+          "fy25": 50000.0,
+          "email": "rar@cuidadocorp.com",
+          "phone": ""
         }
       ],
       "lybuntList": [
@@ -204,18 +204,18 @@
           "phone": ""
         },
         {
-          "name": "Elyse K. Sollender",
-          "fy25Amount": 50000.0,
-          "lastGiftDate": "2026-01-08",
-          "email": "722elyse@gmail.com",
-          "phone": "(858)642-9260"
-        },
-        {
           "name": "Rebecca Newman Z\"L",
           "fy25Amount": 50000.0,
           "lastGiftDate": "2025-06-10",
           "email": "rrnewman@san.rr.com",
           "phone": ""
+        },
+        {
+          "name": "Elyse K. Sollender",
+          "fy25Amount": 50000.0,
+          "lastGiftDate": "2026-01-08",
+          "email": "722elyse@gmail.com",
+          "phone": "(858)642-9260"
         },
         {
           "name": "Elliot A Scott",
@@ -255,8 +255,15 @@
         {
           "name": "Gregg Kornfeld",
           "fy25Amount": 10000.0,
-          "lastGiftDate": "2026-01-19",
+          "lastGiftDate": "2026-02-12",
           "email": "gkornfeldpens@gmail.com",
+          "phone": ""
+        },
+        {
+          "name": "Sharon M. Dreeben",
+          "fy25Amount": 5500.0,
+          "lastGiftDate": "2024-11-18",
+          "email": "junk@footmd.com",
           "phone": ""
         },
         {
@@ -267,10 +274,24 @@
           "phone": "(858) 945-8791"
         },
         {
-          "name": "Sharon M. Dreeben",
-          "fy25Amount": 5500.0,
-          "lastGiftDate": "2024-11-18",
-          "email": "junk@footmd.com",
+          "name": "Mary Ann Scher",
+          "fy25Amount": 5000.0,
+          "lastGiftDate": "2025-08-12",
+          "email": "mascherx@gmail.com",
+          "phone": ""
+        },
+        {
+          "name": "Anne Nagorner",
+          "fy25Amount": 5000.0,
+          "lastGiftDate": "2024-02-27",
+          "email": "anagorner@aol.com",
+          "phone": "(858)756-1195"
+        },
+        {
+          "name": "Julie Bronstein",
+          "fy25Amount": 5000.0,
+          "lastGiftDate": "2023-11-28",
+          "email": "juliembronstein@gmail.com",
           "phone": ""
         },
         {
@@ -281,6 +302,13 @@
           "phone": ""
         },
         {
+          "name": "Lisa S. Braun Glazer",
+          "fy25Amount": 5000.0,
+          "lastGiftDate": "2022-03-18",
+          "email": "lbglazer@gmail.com",
+          "phone": ""
+        },
+        {
           "name": "Jeffrey Glazer",
           "fy25Amount": 5000.0,
           "lastGiftDate": "2022-03-18",
@@ -288,25 +316,11 @@
           "phone": "(858)232-3216"
         },
         {
-          "name": "Anne Nagorner",
-          "fy25Amount": 5000.0,
-          "lastGiftDate": "2024-02-27",
-          "email": "anagorner@aol.com",
-          "phone": "(858)756-1195"
-        },
-        {
           "name": "Shari Friedman Schenk",
           "fy25Amount": 5000.0,
           "lastGiftDate": "2025-12-23",
           "email": "sharischenk@gmail.com",
           "phone": "(619) 794-9547"
-        },
-        {
-          "name": "Lisa S. Braun Glazer",
-          "fy25Amount": 5000.0,
-          "lastGiftDate": "2022-03-18",
-          "email": "lbglazer@gmail.com",
-          "phone": ""
         },
         {
           "name": "Marie Raftery",
@@ -320,20 +334,6 @@
           "fy25Amount": 5000.0,
           "lastGiftDate": "2017-02-01",
           "email": "goldman.jennifer.r@gmail.com",
-          "phone": ""
-        },
-        {
-          "name": "Julie Bronstein",
-          "fy25Amount": 5000.0,
-          "lastGiftDate": "2023-11-28",
-          "email": "juliembronstein@gmail.com",
-          "phone": ""
-        },
-        {
-          "name": "Mary Ann Scher",
-          "fy25Amount": 5000.0,
-          "lastGiftDate": "2025-08-12",
-          "email": "mascherx@gmail.com",
           "phone": ""
         },
         {
@@ -379,13 +379,6 @@
           "phone": "6197872956"
         },
         {
-          "name": "Danny Gabriel",
-          "fy25Amount": 1800.0,
-          "lastGiftDate": "2024-11-18",
-          "email": "dgabriel007@yahoo.com",
-          "phone": ""
-        },
-        {
           "name": "Amy Corton",
           "fy25Amount": 1800.0,
           "lastGiftDate": "2023-10-20",
@@ -393,10 +386,10 @@
           "phone": ""
         },
         {
-          "name": "Stuart R. Weiss Z\"L",
-          "fy25Amount": 1500.0,
-          "lastGiftDate": "2024-07-31",
-          "email": "srweissmd75@gmail.com",
+          "name": "Danny Gabriel",
+          "fy25Amount": 1800.0,
+          "lastGiftDate": "2024-11-18",
+          "email": "dgabriel007@yahoo.com",
           "phone": ""
         },
         {
@@ -404,6 +397,13 @@
           "fy25Amount": 1500.0,
           "lastGiftDate": "2024-11-27",
           "email": "larryn@bdgdesigngroup.com",
+          "phone": ""
+        },
+        {
+          "name": "Stuart R. Weiss Z\"L",
+          "fy25Amount": 1500.0,
+          "lastGiftDate": "2024-07-31",
+          "email": "srweissmd75@gmail.com",
           "phone": ""
         },
         {
@@ -421,24 +421,17 @@
           "phone": ""
         },
         {
-          "name": "Lauren Hendin",
-          "fy25Amount": 1000.0,
-          "lastGiftDate": "",
-          "email": "",
-          "phone": ""
-        },
-        {
-          "name": "Sharleen Wollach",
-          "fy25Amount": 1000.0,
-          "lastGiftDate": "2023-05-19",
-          "email": "sharleen@jcfsandiego.org",
-          "phone": "(858)792-1330"
-        },
-        {
           "name": "Paul Saitowitz",
           "fy25Amount": 1000.0,
           "lastGiftDate": "2024-11-18",
           "email": "pauls81@hotmail.com",
+          "phone": ""
+        },
+        {
+          "name": "Lauren Hendin",
+          "fy25Amount": 1000.0,
+          "lastGiftDate": "",
+          "email": "",
           "phone": ""
         },
         {
@@ -477,31 +470,10 @@
           "phone": ""
         },
         {
-          "name": "Jessica Beth Kort",
-          "fy25Amount": 800.0,
-          "lastGiftDate": "2024-11-25",
-          "email": "jbkort@gmail.com",
-          "phone": ""
-        },
-        {
           "name": "Joanie Bernicker",
           "fy25Amount": 750.0,
           "lastGiftDate": "2019-02-27",
           "email": "jbernick@san.rr.com",
-          "phone": ""
-        },
-        {
-          "name": "Asaf Benhaim",
-          "fy25Amount": 750.0,
-          "lastGiftDate": "2024-11-18",
-          "email": "asaf@teambenhaim.com",
-          "phone": ""
-        },
-        {
-          "name": "Lynn Todd",
-          "fy25Amount": 750.0,
-          "lastGiftDate": "2025-04-02",
-          "email": "lynnletter@aol.com",
           "phone": ""
         },
         {
@@ -512,17 +484,17 @@
           "phone": ""
         },
         {
-          "name": "Victor Wahba",
+          "name": "Martin Potsdam",
           "fy25Amount": 750.0,
-          "lastGiftDate": "1997-09-12",
-          "email": "",
+          "lastGiftDate": "2024-09-09",
+          "email": "madstopm@gmail.com",
           "phone": ""
         },
         {
-          "name": "Julie Jacobs",
+          "name": "Lynn Todd",
           "fy25Amount": 750.0,
-          "lastGiftDate": "",
-          "email": "jsjacobs@san.rr.com",
+          "lastGiftDate": "2025-04-02",
+          "email": "lynnletter@aol.com",
           "phone": ""
         },
         {
@@ -530,6 +502,34 @@
           "fy25Amount": 750.0,
           "lastGiftDate": "",
           "email": "",
+          "phone": ""
+        },
+        {
+          "name": "Marvin Stern",
+          "fy25Amount": 750.0,
+          "lastGiftDate": "",
+          "email": "mstern2009@yahoo.com",
+          "phone": ""
+        },
+        {
+          "name": "Carrie Hunley",
+          "fy25Amount": 750.0,
+          "lastGiftDate": "",
+          "email": "carrie@hunleys.us",
+          "phone": ""
+        },
+        {
+          "name": "Victor Wahba",
+          "fy25Amount": 750.0,
+          "lastGiftDate": "1997-09-12",
+          "email": "",
+          "phone": ""
+        },
+        {
+          "name": "Leonid Zilberman",
+          "fy25Amount": 750.0,
+          "lastGiftDate": "2024-11-18",
+          "email": "lzilberman68@gmail.com",
           "phone": ""
         },
         {
@@ -541,6 +541,48 @@
         }
       ],
       "recentActivity": [
+        {
+          "donorName": "Jason Bercovitch",
+          "amount": 0.0,
+          "date": "2026-02-24",
+          "type": "Yom HaShoah - FY26"
+        },
+        {
+          "donorName": "Daniel Eyal",
+          "amount": 0.0,
+          "date": "2026-02-23",
+          "type": "Yom HaShoah - FY26"
+        },
+        {
+          "donorName": "Joseph Fox",
+          "amount": 0.0,
+          "date": "2026-02-20",
+          "type": "Yom HaShoah - FY26"
+        },
+        {
+          "donorName": "Brittany Hawkins",
+          "amount": 52.25,
+          "date": "2026-02-20",
+          "type": "Yom HaShoah - FY26 - Donations"
+        },
+        {
+          "donorName": "Sharon Peterson",
+          "amount": 5.0,
+          "date": "2026-02-20",
+          "type": "Yom HaShoah - FY26 - Donations"
+        },
+        {
+          "donorName": "Barbara Rabkin",
+          "amount": 0.0,
+          "date": "2026-02-20",
+          "type": "Yom HaShoah - FY26"
+        },
+        {
+          "donorName": "Fidelity Charitable Trust",
+          "amount": 500.0,
+          "date": "2026-02-19",
+          "type": "Tributes - FY26"
+        },
         {
           "donorName": "Rita S. Hartman Z\"L",
           "amount": 13000.0,
@@ -587,92 +629,50 @@
           "donorName": "Igor Raginski",
           "amount": 52.4,
           "date": "2026-02-19",
-          "type": "Unsolicited Annual Gifts - FY26"
+          "type": "Monthly - FY26"
         },
         {
-          "donorName": "Vera Pienknagura",
-          "amount": 1000.0,
-          "date": "2026-02-17",
-          "type": "Unsolicited Annual Gifts - FY26"
-        },
-        {
-          "donorName": "Janice Alper",
-          "amount": 25.0,
-          "date": "2026-02-15",
-          "type": "Unsolicited Annual Gifts - FY26"
-        },
-        {
-          "donorName": "Steve Shupper",
-          "amount": 20.77,
+          "donorName": "Brad A. Ross",
+          "amount": 20.0,
           "date": "2026-02-15",
           "type": "Monthly - FY26"
         },
         {
-          "donorName": "Bank Of America Charitable Gift Fund",
-          "amount": 168.0,
-          "date": "2026-02-13",
-          "type": "Unsolicited Annual Gifts - FY26"
+          "donorName": "Jessica Lazur",
+          "amount": 20.0,
+          "date": "2026-02-15",
+          "type": "Monthly - FY26"
         },
         {
-          "donorName": "Emily R Jennewein",
-          "amount": 521.3,
-          "date": "2026-02-13",
-          "type": "FED360 - FY26 - Donations - Attended"
+          "donorName": "Brian Kurlan",
+          "amount": 10.0,
+          "date": "2026-02-15",
+          "type": "Monthly - FY26"
         },
         {
-          "donorName": "Eve Fybel",
-          "amount": 500.0,
-          "date": "2026-02-12",
-          "type": "The Community Trip - CY27"
+          "donorName": "Bobby Israel",
+          "amount": 20.0,
+          "date": "2026-02-15",
+          "type": "Monthly - FY26"
         },
         {
-          "donorName": "Wayne A. Zucker",
-          "amount": 250.0,
-          "date": "2026-02-12",
-          "type": "The Community Trip - CY27"
-        },
-        {
-          "donorName": "Gary Hirschfeld",
-          "amount": 250.0,
-          "date": "2026-02-12",
-          "type": "The Community Trip - CY27"
-        },
-        {
-          "donorName": "Sara N N. Isgur",
-          "amount": 250.0,
-          "date": "2026-02-12",
-          "type": "The Community Trip - CY27"
-        },
-        {
-          "donorName": "Alyse Kirschen",
-          "amount": 250.0,
-          "date": "2026-02-12",
-          "type": "The Community Trip - CY27"
-        },
-        {
-          "donorName": "Susan Elden",
-          "amount": 250.0,
-          "date": "2026-02-12",
-          "type": "The Community Trip - CY27"
-        },
-        {
-          "donorName": "Arlene LaGary",
-          "amount": 250.0,
-          "date": "2026-02-12",
-          "type": "The Community Trip - CY27"
+          "donorName": "Martha J. Alden",
+          "amount": 13.0,
+          "date": "2026-02-15",
+          "type": "Monthly - FY26"
         }
       ]
     },
     {
       "name": "Maya Steinberg",
       "slug": "maya-steinberg",
-      "totalDonors": 192,
+      "totalDonors": 191,
       "totalRecognitionFY26": 204387.88,
       "totalRecognitionFY25": 267362.5,
       "lybuntCount": 44,
       "lybuntAmount": 114902.5,
       "sybuntCount": 22,
-      "recentGifts30d": 16,
+      "recentGifts30d": 11,
       "topDonors": [
         {
           "name": "Jessica Effress",
@@ -1216,59 +1216,29 @@
           "type": "FED360 - FY26 - Donations - Attended"
         },
         {
+          "donorName": "Lauren Sommer",
+          "amount": 250.0,
+          "date": "2026-02-10",
+          "type": "The Community Trip - CY27"
+        },
+        {
           "donorName": "Illana Mauser",
           "amount": 360.0,
           "date": "2026-02-10",
           "type": "FED360 - FY26 - Donations - Attended"
-        },
-        {
-          "donorName": "Ariele Sparks",
-          "amount": 5200.3,
-          "date": "2026-02-10",
-          "type": "FED360 - FY26 - Donations - Attended"
-        },
-        {
-          "donorName": "Barbi Dorfan",
-          "amount": 1875.9,
-          "date": "2026-02-10",
-          "type": "Lion of Judah Luncheon - FY25"
-        },
-        {
-          "donorName": "Nancy Gordon",
-          "amount": 5000.0,
-          "date": "2026-02-09",
-          "type": "DRM - FY26"
-        },
-        {
-          "donorName": "Robert Leonard Grazian",
-          "amount": 260.0,
-          "date": "2026-02-07",
-          "type": "FED360 - FY26 - Donations - Attended"
-        },
-        {
-          "donorName": "Julie Elaine Grazian",
-          "amount": 770.0,
-          "date": "2026-02-07",
-          "type": "FED360 - FY26 - Donations - Attended"
-        },
-        {
-          "donorName": "Heather Keith",
-          "amount": 360.0,
-          "date": "2026-02-05",
-          "type": "DRM Call 2025"
         }
       ]
     },
     {
       "name": "Dustin Biton",
       "slug": "dustin-biton",
-      "totalDonors": 183,
-      "totalRecognitionFY26": 698019.34,
-      "totalRecognitionFY25": 825402.5,
-      "lybuntCount": 38,
-      "lybuntAmount": 234420.5,
+      "totalDonors": 186,
+      "totalRecognitionFY26": 708019.34,
+      "totalRecognitionFY25": 846402.5,
+      "lybuntCount": 40,
+      "lybuntAmount": 255420.5,
       "sybuntCount": 25,
-      "recentGifts30d": 8,
+      "recentGifts30d": 10,
       "topDonors": [
         {
           "name": "Diane Feuerstein",
@@ -1278,18 +1248,18 @@
           "phone": "(858) 456-7586"
         },
         {
-          "name": "David Shlomo Kabakoff",
-          "fy26": 36000.0,
-          "fy25": 36180.0,
-          "email": "dkabakoff@cox.net",
-          "phone": "(858)756-6588"
-        },
-        {
           "name": "Andrew Garman",
           "fy26": 36000.0,
           "fy25": 18000.0,
           "email": "agarman@nvpllc.com",
           "phone": ""
+        },
+        {
+          "name": "David Shlomo Kabakoff",
+          "fy26": 36000.0,
+          "fy25": 36180.0,
+          "email": "dkabakoff@cox.net",
+          "phone": "(858)756-6588"
         },
         {
           "name": "AmandaLynn MacLeod",
@@ -1299,18 +1269,18 @@
           "phone": "(619) 459-9395"
         },
         {
-          "name": "Elliot Feuerstein",
-          "fy26": 25000.0,
-          "fy25": 25000.0,
-          "email": "elliot.feuerstein@gmail.com",
-          "phone": "(858)271-4682"
-        },
-        {
           "name": "Sheryl J. Kaufman",
           "fy26": 25000.0,
           "fy25": 77500.0,
           "email": "sheryljk@yahoo.com",
           "phone": "(619) 546-9214"
+        },
+        {
+          "name": "Elliot Feuerstein",
+          "fy26": 25000.0,
+          "fy25": 25000.0,
+          "email": "elliot.feuerstein@gmail.com",
+          "phone": "(858)271-4682"
         },
         {
           "name": "Kevin A. Wechter",
@@ -1320,24 +1290,31 @@
           "phone": "(858) 625-6700"
         },
         {
-          "name": "Allie Beth Hauser Erickson",
+          "name": "Charles Tiano",
+          "fy26": 20000.0,
+          "fy25": 0.0,
+          "email": "ctiano1@aol.com",
+          "phone": ""
+        },
+        {
+          "name": "Allie Hauser-Erickson",
           "fy26": 18000.0,
           "fy25": 16582.0,
           "email": "alliebeth@gmail.com",
           "phone": "(914) 393-0261"
         },
         {
-          "name": "Susanna Karney Flaster",
-          "fy26": 18000.0,
-          "fy25": 18000.0,
-          "email": "skflaster@gmail.com",
-          "phone": ""
-        },
-        {
           "name": "Graeme Gabriel",
           "fy26": 18000.0,
           "fy25": 180.0,
           "email": "graemeg@colrich.com",
+          "phone": ""
+        },
+        {
+          "name": "Susanna Karney Flaster",
+          "fy26": 18000.0,
+          "fy25": 18000.0,
+          "email": "skflaster@gmail.com",
           "phone": ""
         },
         {
@@ -1437,13 +1414,6 @@
           "fy25": 6000.0,
           "email": "lisapearl@lisapearlconsulting.com",
           "phone": "(858) 229-7350"
-        },
-        {
-          "name": "Zita Liebermensch",
-          "fy26": 10000.0,
-          "fy25": 11844.0,
-          "email": "zital2@cox.net",
-          "phone": "(619)461-9415"
         }
       ],
       "lybuntList": [
@@ -1469,6 +1439,13 @@
           "phone": "(858)565-8100"
         },
         {
+          "name": "Richard Gordon",
+          "fy25Amount": 11000.0,
+          "lastGiftDate": "2021-07-26",
+          "email": "gordon92067@gmail.com",
+          "phone": "(858)342-3471"
+        },
+        {
           "name": "Strul Goldstein",
           "fy25Amount": 10036.0,
           "lastGiftDate": "2025-02-11",
@@ -1487,6 +1464,13 @@
           "fy25Amount": 10000.0,
           "lastGiftDate": "2025-06-26",
           "email": "pjcarnot@gmail.com",
+          "phone": ""
+        },
+        {
+          "name": "Darryl Hall",
+          "fy25Amount": 10000.0,
+          "lastGiftDate": "2025-06-26",
+          "email": "darrylhall55@me.com",
           "phone": ""
         },
         {
@@ -1525,18 +1509,18 @@
           "phone": "(858)756-6696"
         },
         {
-          "name": "Abraham Gleiberman",
-          "fy25Amount": 6000.0,
-          "lastGiftDate": "2024-04-30",
-          "email": "grandpaabe@yahoo.com",
-          "phone": "(858) 455-6832"
-        },
-        {
           "name": "Hannah R. Jarson",
           "fy25Amount": 6000.0,
           "lastGiftDate": "2025-06-26",
           "email": "hjarson@sbcglobal.net",
           "phone": ""
+        },
+        {
+          "name": "Abraham Gleiberman",
+          "fy25Amount": 6000.0,
+          "lastGiftDate": "2024-04-30",
+          "email": "grandpaabe@yahoo.com",
+          "phone": "(858) 455-6832"
         },
         {
           "name": "Ronit Droker",
@@ -1716,22 +1700,46 @@
       ],
       "recentActivity": [
         {
+          "donorName": "Kira Elizabeth Finkenberg",
+          "amount": 0.0,
+          "date": "2026-02-20",
+          "type": "Yom HaShoah - FY26"
+        },
+        {
           "donorName": "Howard A Katz",
           "amount": 10000.0,
           "date": "2026-02-19",
           "type": "DRM - FY26"
         },
         {
+          "donorName": "Brett MacLeod",
+          "amount": 1000.0,
+          "date": "2026-02-15",
+          "type": "The Community Trip - CY27"
+        },
+        {
+          "donorName": "David Bramzon",
+          "amount": 200.0,
+          "date": "2026-02-15",
+          "type": "DRM  EM 2023"
+        },
+        {
           "donorName": "Evan Vapnek",
           "amount": 300.0,
           "date": "2026-02-15",
-          "type": "Monthly - FY26"
+          "type": "FED360 - FY26 - Donations - Attended"
         },
         {
           "donorName": "Gillian Vapnek",
           "amount": 300.0,
           "date": "2026-02-15",
-          "type": "Monthly - FY26"
+          "type": "FED360 - FY26 - Donations - Attended"
+        },
+        {
+          "donorName": "Charlene Zieky",
+          "amount": 95.0,
+          "date": "2026-02-12",
+          "type": "Mission to India - FY26"
         },
         {
           "donorName": "Barbara Gitlin",
@@ -1750,18 +1758,6 @@
           "amount": 250.0,
           "date": "2026-02-11",
           "type": "The Community Trip - CY27"
-        },
-        {
-          "donorName": "Nelly Dean",
-          "amount": 5210.3,
-          "date": "2026-02-09",
-          "type": "FED360 - FY26 - Donations - Attended"
-        },
-        {
-          "donorName": "Solomon Kempinski",
-          "amount": 375.42,
-          "date": "2026-02-08",
-          "type": "Unsolicited Annual Gifts - FY26"
         }
       ]
     },
@@ -1769,12 +1765,12 @@
       "name": "Heidi Gantwerk",
       "slug": "heidi-gantwerk",
       "totalDonors": 132,
-      "totalRecognitionFY26": 3819851.79,
-      "totalRecognitionFY25": 4982375.64,
+      "totalRecognitionFY26": 3869851.79,
+      "totalRecognitionFY25": 4998475.64,
       "lybuntCount": 33,
-      "lybuntAmount": 795049.45,
+      "lybuntAmount": 798649.45,
       "sybuntCount": 14,
-      "recentGifts30d": 13,
+      "recentGifts30d": 23,
       "topDonors": [
         {
           "name": "Dana Zeff",
@@ -1826,9 +1822,16 @@
           "phone": ""
         },
         {
+          "name": "Richard Gabriel",
+          "fy26": 100000.0,
+          "fy25": 0.0,
+          "email": "richardg@colrich.com",
+          "phone": ""
+        },
+        {
           "name": "Gary Evan Jacobs",
           "fy26": 80000.0,
-          "fy25": 358250.0,
+          "fy25": 370750.0,
           "email": "gary.e.jacobs@jacobsllc.com",
           "phone": ""
         },
@@ -1845,13 +1848,6 @@
           "fy25": 50000.0,
           "email": "phil@detoledo.net",
           "phone": "(818) 438-5170"
-        },
-        {
-          "name": "Richard Gabriel",
-          "fy26": 50000.0,
-          "fy25": 0.0,
-          "email": "richardg@colrich.com",
-          "phone": ""
         },
         {
           "name": "Shayna Davis-Schreiber",
@@ -2080,18 +2076,18 @@
           "phone": "(619) 318-8380"
         },
         {
+          "name": "Jeremy King Pearl",
+          "fy25Amount": 7380.0,
+          "lastGiftDate": "2022-06-24",
+          "email": "jeremy@jcfsandiego.org",
+          "phone": "(858) 279-2757"
+        },
+        {
           "name": "Carole Turk",
           "fy25Amount": 5000.0,
           "lastGiftDate": "2022-12-07",
           "email": "grammyturk@gmail.com",
           "phone": ""
-        },
-        {
-          "name": "Jeremy King Pearl",
-          "fy25Amount": 3780.0,
-          "lastGiftDate": "2022-06-24",
-          "email": "jeremy@jcfsandiego.org",
-          "phone": "(858) 279-2757"
         },
         {
           "name": "Darren Kevin Schwartz",
@@ -2187,6 +2183,96 @@
       ],
       "recentActivity": [
         {
+          "donorName": "Jewish Community Foundation",
+          "amount": 118.0,
+          "date": "2026-02-23",
+          "type": "Tributes - FY26"
+        },
+        {
+          "donorName": "Jewish Community Foundation",
+          "amount": 1000.0,
+          "date": "2026-02-23",
+          "type": "Unsolicited Annual Gifts - FY26"
+        },
+        {
+          "donorName": "Jewish Community Foundation",
+          "amount": 1000.0,
+          "date": "2026-02-23",
+          "type": "FEDERATION 360 - FY25"
+        },
+        {
+          "donorName": "Jewish Community Foundation",
+          "amount": 1000.0,
+          "date": "2026-02-23",
+          "type": "FED360 - FY26 - Donations - Attended"
+        },
+        {
+          "donorName": "Jewish Community Foundation",
+          "amount": 3000.0,
+          "date": "2026-02-23",
+          "type": "DRM Call 2025"
+        },
+        {
+          "donorName": "Jewish Community Foundation",
+          "amount": 540.0,
+          "date": "2026-02-23",
+          "type": "FED360 - FY26 - Donations - Attended"
+        },
+        {
+          "donorName": "Rabbi Ralph Dalin",
+          "amount": 0.0,
+          "date": "2026-02-20",
+          "type": "Yom HaShoah - FY26"
+        },
+        {
+          "donorName": "Jewish Community Foundation",
+          "amount": 7200.0,
+          "date": "2026-02-18",
+          "type": "Rady Match for Israel\u2019s Recovery - General"
+        },
+        {
+          "donorName": "Jewish Community Foundation",
+          "amount": 500.0,
+          "date": "2026-02-18",
+          "type": "FED360 - FY26 - Donations - Attended"
+        },
+        {
+          "donorName": "Jewish Community Foundation",
+          "amount": 500.0,
+          "date": "2026-02-18",
+          "type": "Rady Match for Israel\u2019s Recovery - General"
+        },
+        {
+          "donorName": "Jewish Community Foundation",
+          "amount": 10000.0,
+          "date": "2026-02-18",
+          "type": "DRM - FY26"
+        },
+        {
+          "donorName": "Jewish Community Foundation",
+          "amount": 3000.0,
+          "date": "2026-02-18",
+          "type": "FED360 - FY26 - Donations - Attended"
+        },
+        {
+          "donorName": "Jewish Community Foundation",
+          "amount": 5000.0,
+          "date": "2026-02-18",
+          "type": "FED360 - FY26 - Donations - Attended"
+        },
+        {
+          "donorName": "Jewish Community Foundation",
+          "amount": 100.0,
+          "date": "2026-02-18",
+          "type": "Tributes - FY26"
+        },
+        {
+          "donorName": "Jewish Community Foundation",
+          "amount": 50000.0,
+          "date": "2026-02-18",
+          "type": "DRM - FY26"
+        },
+        {
           "donorName": "Ingram Losner",
           "amount": 250.0,
           "date": "2026-02-12",
@@ -2215,67 +2301,19 @@
           "amount": 500.0,
           "date": "2026-02-11",
           "type": "The Community Trip - CY27"
-        },
-        {
-          "donorName": "Laura Vainer-Mekler",
-          "amount": 62.82,
-          "date": "2026-02-11",
-          "type": "Healing in the Aftermath - FY26 - Event"
-        },
-        {
-          "donorName": "Suzi Feldman",
-          "amount": 500.0,
-          "date": "2026-02-11",
-          "type": "The Community Trip - CY27"
-        },
-        {
-          "donorName": "Sonia Ancoli Israel",
-          "amount": 250.0,
-          "date": "2026-02-11",
-          "type": "The Community Trip - CY27"
-        },
-        {
-          "donorName": "Kimberly Carnot",
-          "amount": 1800.0,
-          "date": "2026-02-10",
-          "type": "FED360 - FY26 - Donations - Attended"
-        },
-        {
-          "donorName": "Jewish Community Foundation",
-          "amount": 10000.0,
-          "date": "2026-02-09",
-          "type": "DRM - FY26"
-        },
-        {
-          "donorName": "Jewish Community Foundation",
-          "amount": 500.0,
-          "date": "2026-02-09",
-          "type": "Unsolicited Annual Gifts - FY26"
-        },
-        {
-          "donorName": "Jean Somers",
-          "amount": 4698.0,
-          "date": "2026-02-09",
-          "type": "DRM - FY26"
-        },
-        {
-          "donorName": "Jean Somers",
-          "amount": 5302.0,
-          "date": "2026-02-09",
-          "type": "DRM - FY26"
         }
       ]
     },
     {
       "name": "Paul Sapiano",
       "slug": "paul-sapiano",
-      "totalDonors": 112,
-      "totalRecognitionFY26": 41797.08,
+      "totalDonors": 110,
+      "totalRecognitionFY26": 41697.08,
       "totalRecognitionFY25": 0.0,
       "lybuntCount": 0,
       "lybuntAmount": 0.0,
       "sybuntCount": 0,
-      "recentGifts30d": 27,
+      "recentGifts30d": 47,
       "topDonors": [
         {
           "name": "Sandra Hooper",
@@ -2334,17 +2372,17 @@
           "phone": ""
         },
         {
-          "name": "Bill Silva",
-          "fy26": 500.0,
-          "fy25": 0.0,
-          "email": "marika@billsilva.net",
-          "phone": ""
-        },
-        {
           "name": "Amy Sacks",
           "fy26": 500.0,
           "fy25": 0.0,
           "email": "amydsacks@gmail.com",
+          "phone": ""
+        },
+        {
+          "name": "Bill Silva",
+          "fy26": 500.0,
+          "fy25": 0.0,
+          "email": "marika@billsilva.net",
           "phone": ""
         },
         {
@@ -2411,13 +2449,6 @@
           "phone": ""
         },
         {
-          "name": "Assaf Avissar",
-          "fy26": 100.0,
-          "fy25": 0.0,
-          "email": "",
-          "phone": ""
-        },
-        {
           "name": "Carol Zachs",
           "fy26": 79.87,
           "fy25": 0.0,
@@ -2451,129 +2482,136 @@
           "fy25": 0.0,
           "email": "",
           "phone": ""
+        },
+        {
+          "name": "Robert Chiler",
+          "fy26": 37.81,
+          "fy25": 0.0,
+          "email": "rchiler@yahoo.com",
+          "phone": "+15167075155"
         }
       ],
       "lybuntList": [],
       "recentActivity": [
         {
-          "donorName": "Dale Spector",
-          "amount": 52.4,
-          "date": "2026-02-15",
-          "type": "Monthly - FY26"
+          "donorName": "Riley Martinez",
+          "amount": 0.0,
+          "date": "2026-02-24",
+          "type": "Yom HaShoah - FY26"
         },
         {
-          "donorName": "Illana Woods",
-          "amount": 37.81,
-          "date": "2026-02-14",
+          "donorName": "Julie Gordon",
+          "amount": 0.0,
+          "date": "2026-02-23",
+          "type": "Jewish Heritage Day at the Padres - FY26"
+        },
+        {
+          "donorName": "Charlene Seidle",
+          "amount": 0.0,
+          "date": "2026-02-23",
+          "type": "Yom HaShoah - FY26"
+        },
+        {
+          "donorName": "Schindler Brokerage LLC",
+          "amount": 208.7,
+          "date": "2026-02-23",
           "type": "Unsolicited Annual Gifts - FY26"
         },
         {
-          "donorName": "Steph Johnson",
-          "amount": 37.81,
-          "date": "2026-02-14",
+          "donorName": "Schindler Brokerage LLC",
+          "amount": 208.7,
+          "date": "2026-02-23",
           "type": "Unsolicited Annual Gifts - FY26"
         },
         {
-          "donorName": "Assaf Avissar",
-          "amount": 100.0,
-          "date": "2026-02-13",
-          "type": "FED360 - FY26 - Donations - Attended"
+          "donorName": "Sarah Gimbel",
+          "amount": 0.0,
+          "date": "2026-02-23",
+          "type": "Yom HaShoah - FY26"
         },
         {
-          "donorName": "Maya Satnick",
-          "amount": 250.0,
-          "date": "2026-02-12",
-          "type": "The Community Trip - CY27"
+          "donorName": "stephanie wells",
+          "amount": 0.0,
+          "date": "2026-02-23",
+          "type": "Yom HaShoah - FY26"
         },
         {
-          "donorName": "Cindy Kaplan",
-          "amount": 250.0,
-          "date": "2026-02-12",
-          "type": "The Community Trip - CY27"
+          "donorName": "Karen Frischwasser",
+          "amount": 0.0,
+          "date": "2026-02-23",
+          "type": "Yom HaShoah - FY26"
         },
         {
-          "donorName": "Stephanie Harvie",
-          "amount": 250.0,
-          "date": "2026-02-11",
-          "type": "The Community Trip - CY27"
+          "donorName": "RUTH MCCALLAN",
+          "amount": 0.0,
+          "date": "2026-02-22",
+          "type": "Yom HaShoah - FY26"
         },
         {
-          "donorName": "Hanan Nisan",
-          "amount": 500.0,
-          "date": "2026-02-11",
-          "type": "The Community Trip - CY27"
+          "donorName": "Freddi Pakier",
+          "amount": 0.0,
+          "date": "2026-02-22",
+          "type": "Yom HaShoah - FY26"
         },
         {
-          "donorName": "Tanya Mahller",
-          "amount": 1000.0,
-          "date": "2026-02-11",
-          "type": "FED360 - FY26 - Donations - Attended"
+          "donorName": "Ali Tilzer",
+          "amount": 0.0,
+          "date": "2026-02-22",
+          "type": "Yom HaShoah - FY26"
         },
         {
-          "donorName": "Tsipi Landen",
-          "amount": 180.0,
-          "date": "2026-02-10",
-          "type": "FED360 - FY26 - Donations - Attended"
+          "donorName": "MOK orol",
+          "amount": 0.0,
+          "date": "2026-02-21",
+          "type": "Yom HaShoah - FY26"
         },
         {
-          "donorName": "Rachel Raz",
-          "amount": 18.0,
-          "date": "2026-02-09",
-          "type": "Healing in the Aftermath - FY26 - Event"
+          "donorName": "Brett Schwartz",
+          "amount": 0.0,
+          "date": "2026-02-21",
+          "type": "Yom HaShoah - FY26"
         },
         {
-          "donorName": "Ingo Muschenetz",
-          "amount": 52.4,
-          "date": "2026-02-08",
-          "type": "FED360 - FY26 - Donations - Attended"
+          "donorName": "Scott Schindler",
+          "amount": 0.0,
+          "date": "2026-02-21",
+          "type": "Yom HaShoah - FY26"
         },
         {
-          "donorName": "Hanan Nisan",
-          "amount": 5000.0,
-          "date": "2026-02-07",
-          "type": "FED360 - FY26 - Donations - Attended"
+          "donorName": "erica weinberg",
+          "amount": 0.0,
+          "date": "2026-02-21",
+          "type": "Yom HaShoah - FY26"
         },
         {
-          "donorName": "Roman Karaoglanov",
-          "amount": 7.59,
-          "date": "2026-02-05",
-          "type": "Unsolicited Annual Gifts - FY26"
+          "donorName": "Randy Silverstein",
+          "amount": 0.0,
+          "date": "2026-02-21",
+          "type": "Yom HaShoah - FY26"
         },
         {
-          "donorName": "Sharona Canales",
-          "amount": 15.0,
-          "date": "2026-02-04",
-          "type": "Healing in the Aftermath - FY26 - Event"
+          "donorName": "Jan Landau",
+          "amount": 0.0,
+          "date": "2026-02-21",
+          "type": "Yom HaShoah - FY26"
         },
         {
-          "donorName": "Jackie Skolnik",
-          "amount": 15.93,
-          "date": "2026-02-04",
-          "type": "Healing in the Aftermath - FY26 - Event"
+          "donorName": "Howard Somers",
+          "amount": 0.0,
+          "date": "2026-02-21",
+          "type": "Yom HaShoah - FY26"
         },
         {
-          "donorName": "Eli Singer",
-          "amount": 15.0,
-          "date": "2026-02-03",
-          "type": "Healing in the Aftermath - FY26 - Event"
+          "donorName": "Cindy Nelson",
+          "amount": 0.0,
+          "date": "2026-02-21",
+          "type": "Yom HaShoah - FY26"
         },
         {
-          "donorName": "Maya Satnick",
-          "amount": 15.0,
-          "date": "2026-02-03",
-          "type": "Healing in the Aftermath - FY26 - Event"
-        },
-        {
-          "donorName": "Kate Leib",
-          "amount": 100.0,
-          "date": "2026-02-03",
-          "type": "Unsolicited Annual Gifts - FY26"
-        },
-        {
-          "donorName": "Tamra Amiram",
-          "amount": 31.56,
-          "date": "2026-02-03",
-          "type": "Healing in the Aftermath - FY26 - Event"
+          "donorName": "Guri Stark",
+          "amount": 0.0,
+          "date": "2026-02-21",
+          "type": "Yom HaShoah - FY26"
         }
       ]
     },
@@ -2586,7 +2624,7 @@
       "lybuntCount": 19,
       "lybuntAmount": 164348.0,
       "sybuntCount": 2,
-      "recentGifts30d": 5,
+      "recentGifts30d": 4,
       "topDonors": [
         {
           "name": "Arlene Rosen",
@@ -2810,7 +2848,7 @@
         {
           "name": "Judith Belinsky",
           "fy25Amount": 7500.0,
-          "lastGiftDate": "2025-10-09",
+          "lastGiftDate": "2026-02-12",
           "email": "jtens10@aol.com",
           "phone": ""
         },
@@ -2904,7 +2942,13 @@
           "donorName": "Alexandra Shubin Hirschhorn",
           "amount": 598.0,
           "date": "2026-02-16",
-          "type": "Payment on Pledge - FY26"
+          "type": "DRM EM 2025"
+        },
+        {
+          "donorName": "Judith Belinsky",
+          "amount": 95.0,
+          "date": "2026-02-12",
+          "type": "Mission to India - FY26"
         },
         {
           "donorName": "Perri L. Wittgrove",
@@ -2917,35 +2961,23 @@
           "amount": 5500.0,
           "date": "2026-02-11",
           "type": "FED360 - FY26 - Donations - Attended"
-        },
-        {
-          "donorName": "Howard Bear",
-          "amount": 1800.0,
-          "date": "2026-02-10",
-          "type": "FED360 - FY26 - Donations - Attended"
-        },
-        {
-          "donorName": "Perri L. Wittgrove",
-          "amount": 1000.0,
-          "date": "2026-02-06",
-          "type": "DRM FACE 2025"
         }
       ]
     },
     {
       "name": "Jessica McGregor",
       "slug": "jessica-mcgregor",
-      "totalDonors": 42,
-      "totalRecognitionFY26": 107464.74,
+      "totalDonors": 45,
+      "totalRecognitionFY26": 108297.74,
       "totalRecognitionFY25": 13836.0,
       "lybuntCount": 3,
       "lybuntAmount": 2586.0,
       "sybuntCount": 0,
-      "recentGifts30d": 7,
+      "recentGifts30d": 8,
       "topDonors": [
         {
           "name": "Anonymous Anonymous",
-          "fy26": 77975.06,
+          "fy26": 78808.06,
           "fy25": 0.0,
           "email": "",
           "phone": ""
@@ -3088,6 +3120,24 @@
       ],
       "recentActivity": [
         {
+          "donorName": "Gina Rosenfeld",
+          "amount": 1000.0,
+          "date": "2026-02-18",
+          "type": "SD AJMA Medical Mission to Israel - FY26"
+        },
+        {
+          "donorName": "Michele Kalt",
+          "amount": 1000.0,
+          "date": "2026-02-13",
+          "type": "SD AJMA Medical Mission to Israel - FY26"
+        },
+        {
+          "donorName": "Dani Golden",
+          "amount": 1000.0,
+          "date": "2026-02-12",
+          "type": "SD AJMA Medical Mission to Israel - FY26"
+        },
+        {
           "donorName": "John Van Cleef",
           "amount": 250.0,
           "date": "2026-02-12",
@@ -3116,18 +3166,6 @@
           "amount": 1040.3,
           "date": "2026-02-11",
           "type": "FED360 - FY26 - Donations - Attended"
-        },
-        {
-          "donorName": "Inbar Shavit",
-          "amount": 250.0,
-          "date": "2026-02-07",
-          "type": "FED360 2026"
-        },
-        {
-          "donorName": "Eli Marmur",
-          "amount": 500.0,
-          "date": "2026-02-03",
-          "type": "FED360 2026"
         }
       ]
     },
@@ -3135,16 +3173,16 @@
       "name": "Steve Gerard",
       "slug": "steve-gerard",
       "totalDonors": 25,
-      "totalRecognitionFY26": 7267.8,
+      "totalRecognitionFY26": 7767.8,
       "totalRecognitionFY25": 2470.0,
       "lybuntCount": 0,
       "lybuntAmount": 0.0,
       "sybuntCount": 2,
-      "recentGifts30d": 4,
+      "recentGifts30d": 1,
       "topDonors": [
         {
           "name": "Sharyn Goodson",
-          "fy26": 2110.0,
+          "fy26": 2610.0,
           "fy25": 750.0,
           "email": "sharyn@leichtag.org",
           "phone": "(858) 997-6675"
@@ -3276,32 +3314,14 @@
           "amount": 520.3,
           "date": "2026-02-11",
           "type": "FED360 - FY26 - Donations - Attended"
-        },
-        {
-          "donorName": "Manny Olsen-Vazquez",
-          "amount": 180.0,
-          "date": "2026-02-10",
-          "type": "FED360 - FY26 - Donations - Attended"
-        },
-        {
-          "donorName": "HRC Fertility",
-          "amount": 5000.0,
-          "date": "2026-02-09",
-          "type": "Corporate Event Sponsorships - FY26"
-        },
-        {
-          "donorName": "Stephanie Lahat",
-          "amount": 104.5,
-          "date": "2026-02-08",
-          "type": "FED360 - FY26 - Donations - Attended"
         }
       ]
     }
   ],
   "kpis": {
-    "totalPortfolioDonors": 31244,
-    "totalLYBUNT": 1163,
-    "totalRecognitionFY26": 5664328.04,
+    "totalPortfolioDonors": 31247,
+    "totalLYBUNT": 1164,
+    "totalRecognitionFY26": 5732859.66,
     "avgPortfolioSize": 3906
   }
 }

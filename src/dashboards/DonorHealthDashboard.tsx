@@ -1,4 +1,5 @@
-import { Card, Col, Row, Statistic, Table, Tag, Typography, Space, Progress, Spin, Alert, Badge, Tooltip as AntTooltip } from 'antd';
+import { Card, Col, Row, Statistic, Table, Tag, Typography, Space, Progress, Alert, Badge, Tooltip as AntTooltip } from 'antd';
+import { DashboardSkeleton } from '../components/DashboardSkeleton';
 import { CsvExport } from '../components/CsvExport';
 import {
   WarningOutlined,
@@ -11,16 +12,12 @@ import {
 } from '@ant-design/icons';
 import { useEffect, useRef, useState, useCallback } from 'react';
 
+import { DataFreshness } from '../components/DataFreshness';
 const { Text, Title } = Typography;
 import { DefinitionTooltip } from "../components/DefinitionTooltip";
+import { NAVY, GOLD, SUCCESS, ERROR, WARNING, MUTED } from '../theme/jfsdTheme';
 
 // ── Brand tokens ────────────────────────────────────────────────────────
-const NAVY = '#1B365D';
-const GOLD = '#C5A258';
-const SUCCESS = '#3D8B37';
-const ERROR = '#C4314B';
-const WARNING = '#D4880F';
-const MUTED = '#8C8C8C';
 const GRID = '#E8E8ED';
 
 // ── Types ───────────────────────────────────────────────────────────────
@@ -413,6 +410,7 @@ export function DonorHealthDashboard() {
   const [data, setData] = useState<DonorHealthData | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
+  const [refreshing, setRefreshing] = useState(false);
 
   useEffect(() => {
     fetch('/jfsd-ui/data/sharon-donor-health.json')
@@ -424,13 +422,16 @@ export function DonorHealthDashboard() {
       .catch(err => { setError(err.message); setLoading(false); });
   }, []);
 
-  if (loading) {
-    return (
-      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: 400 }}>
-        <Spin size="large" tip="Loading donor health data..." />
-      </div>
-    );
-  }
+  const refresh = useCallback(() => {
+    setRefreshing(true);
+    fetch('/jfsd-ui/data/sharon-donor-health.json')
+      .then(r => r.ok ? r.json() : null)
+      .then(setData)
+      .catch(() => {})
+      .finally(() => setRefreshing(false));
+  }, []);
+
+  if (loading) return <DashboardSkeleton />;
 
   if (error || !data) {
     return (
@@ -446,9 +447,7 @@ export function DonorHealthDashboard() {
 
   return (
     <Space direction="vertical" size={16} style={{ width: '100%' }}>
-      <div style={{ fontSize: 11, color: MUTED, textAlign: 'right' }}>
-        Data as of: {new Date(data.asOfDate).toLocaleString()}
-      </div>
+      <DataFreshness asOfDate={data.asOfDate} onRefresh={refresh} refreshing={refreshing} />
 
       {/* KPI Row */}
       <KPICards kpis={data.kpis} newDonors={data.newDonorsThisWeek} />

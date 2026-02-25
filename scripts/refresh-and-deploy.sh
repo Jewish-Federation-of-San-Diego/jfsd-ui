@@ -18,6 +18,7 @@ SCRIPTS=(
   generate-silence-alerts.py
   generate-ask-list.py
   generate-financial-data.py
+  generate-project-tracker.py
 )
 
 for script in "${SCRIPTS[@]}"; do

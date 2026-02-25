@@ -1,18 +1,14 @@
 // @ts-nocheck
-import { Card, Col, Row, Statistic, Typography, Progress, Space, Spin, Tag } from 'antd';
-import { useEffect, useState } from 'react';
+import { Card, Col, Row, Statistic, Typography, Progress, Space, Tag } from 'antd';
+import { DashboardSkeleton } from '../components/DashboardSkeleton';
+import { useEffect, useState, useCallback } from 'react';
 
 const { Title, Text } = Typography;
+import { DataFreshness } from '../components/DataFreshness';
 import { DefinitionTooltip } from "../components/DefinitionTooltip";
+import { NAVY, GOLD, SUCCESS, ERROR, WARNING, MUTED } from '../theme/jfsdTheme';
 
 // ── Brand tokens ────────────────────────────────────────────────────────
-const NAVY = '#1B365D';
-const GOLD = '#C5A258';
-const SUCCESS = '#3D8B37';
-const ERROR = '#C4314B';
-const WARNING = '#D4880F';
-const MUTED = '#8C8C8C';
-
 // ── Helpers ─────────────────────────────────────────────────────────────
 const fmtUSD = (v?: number) => v != null ? `$${v.toLocaleString()}` : '—';
 const fmtK = (v?: number) => v == null ? '—' : v >= 1_000_000 ? `$${(v / 1_000_000).toFixed(1)}M` : v >= 1_000 ? `$${(v / 1_000).toFixed(0)}K` : `$${v}`;
@@ -46,6 +42,7 @@ const QUICK_LINKS: { key: DataKey; navKey: string; label: string; metric: (d: D)
 export function OverviewDashboard({ onNavigate }: { onNavigate?: (key: string) => void }) {
   const [data, setData] = useState<Record<DataKey, D | null>>({} as any);
   const [loading, setLoading] = useState(true);
+  const [refreshing, setRefreshing] = useState(false);
 
   useEffect(() => {
     const base = `${import.meta.env.BASE_URL}data/`;
@@ -63,7 +60,24 @@ export function OverviewDashboard({ onNavigate }: { onNavigate?: (key: string) =
     });
   }, []);
 
-  if (loading) return <div style={{ textAlign: 'center', padding: 80 }}><Spin size="large" /><br /><Text type="secondary">Loading executive overview…</Text></div>;
+  const refresh = useCallback(() => {
+    setRefreshing(true);
+    const base = `${import.meta.env.BASE_URL}data/`;
+    Promise.allSettled(
+      DATA_FILES.map(k =>
+        fetch(`${base}${k}.json`).then(r => r.ok ? r.json() : null).then(d => [k, d] as const)
+      )
+    ).then(results => {
+      const m: any = {};
+      for (const r of results) {
+        if (r.status === 'fulfilled' && r.value) m[r.value[0]] = r.value[1];
+      }
+      setData(m);
+      setRefreshing(false);
+    });
+  }, []);
+
+  if (loading) return <DashboardSkeleton kpiCount={6} />;
 
   const campaign = data['campaign-tracker'];
   const donors = data['sharon-donor-health'];
@@ -130,13 +144,12 @@ export function OverviewDashboard({ onNavigate }: { onNavigate?: (key: string) =
   );
 
   return (
-    <div style={{ padding: 24, maxWidth: 1200, margin: '0 auto' }}>
+    <div style={{ padding: 24, maxWidth: 1400, margin: '0 auto' }}>
       {/* Header */}
       <div style={{ marginBottom: 24 }}>
         <Title level={2} style={{ color: NAVY, margin: 0 }}>Executive Overview</Title>
-        <Text type="secondary">
-          Single-pane snapshot · Data as of {safe(() => campaign.asOfDate, '') || safe(() => stripe.kpis?.asOfDate, '') || 'latest'}
-        </Text>
+        <Text type="secondary">Single-pane snapshot</Text>
+        <DataFreshness asOfDate={safe(() => campaign.asOfDate, '') || safe(() => stripe.kpis?.asOfDate, '') || ''} onRefresh={refresh} refreshing={refreshing} />
       </div>
 
       {/* ── Hero KPI Row ─────────────────────────────────────────────── */}

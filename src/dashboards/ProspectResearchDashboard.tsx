@@ -1,4 +1,5 @@
-import { Card, Col, Row, Space, Statistic, Table, Typography, Spin, Alert, Tag, Tooltip } from 'antd';
+import { Card, Col, Row, Space, Statistic, Table, Typography, Alert, Tag, Tooltip } from 'antd';
+import { DashboardSkeleton } from '../components/DashboardSkeleton';
 import { CsvExport } from '../components/CsvExport';
 import {
   RiseOutlined,
@@ -11,16 +12,12 @@ import {
 } from '@ant-design/icons';
 import { useEffect, useRef, useState, useCallback } from 'react';
 
+import { DataFreshness } from '../components/DataFreshness';
 const { Text } = Typography;
 import { DefinitionTooltip } from "../components/DefinitionTooltip";
+import { NAVY, GOLD, SUCCESS, ERROR, WARNING } from '../theme/jfsdTheme';
 
 // ── Brand tokens ────────────────────────────────────────────────────────
-const NAVY    = '#1B365D';
-const GOLD    = '#C5A258';
-const SUCCESS = '#3D8B37';
-const ERROR   = '#C4314B';
-const WARNING = '#D4880F';
-
 // ── Types ───────────────────────────────────────────────────────────────
 interface UpgradeProspect {
   name: string; currentGiving: number; estimatedCapacity: number;
@@ -146,6 +143,7 @@ export function ProspectResearchDashboard() {
   const [data, setData] = useState<ProspectData | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
+  const [refreshing, setRefreshing] = useState(false);
 
   useEffect(() => {
     fetch('/jfsd-ui/data/prospect-research.json')
@@ -154,7 +152,16 @@ export function ProspectResearchDashboard() {
       .catch(e => { setError(e.message); setLoading(false); });
   }, []);
 
-  if (loading) return <div style={{ textAlign: 'center', padding: 80 }}><Spin size="large" /></div>;
+  const refresh = useCallback(() => {
+    setRefreshing(true);
+    fetch('/jfsd-ui/data/prospect-research.json')
+      .then(r => r.ok ? r.json() : null)
+      .then(setData)
+      .catch(() => {})
+      .finally(() => setRefreshing(false));
+  }, []);
+
+  if (loading) return <DashboardSkeleton />;
   if (error) return <Alert type="error" message="Failed to load prospect research data" description={error} showIcon />;
   if (!data) return null;
 
@@ -198,10 +205,8 @@ export function ProspectResearchDashboard() {
       {/* Header */}
       <div style={{ marginBottom: 24 }}>
         <Text style={{ fontSize: 24, fontWeight: 700, color: NAVY }}>Prospect Research</Text>
-        <Text style={{ marginLeft: 12, color: '#8C8C8C', fontSize: 13 }}>
-          as of {new Date(data.asOfDate + 'T00:00:00').toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}
-        </Text>
       </div>
+      <DataFreshness asOfDate={data.asOfDate} onRefresh={refresh} refreshing={refreshing} />
 
       {/* KPI Row */}
       <Row gutter={[16, 16]} style={{ marginBottom: 24 }}>

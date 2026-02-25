@@ -51,6 +51,10 @@ export const definitions: Record<string, Definition[]> = {
     { term: 'Risk Tiers', definition: 'Critical (≥$5K FY25), High ($1K-5K), Medium ($500-999), Watch ($100-499).', category: 'Risk Assessment' },
     { term: 'Revenue at Risk', definition: 'Sum of prior year giving for at-risk donors.', category: 'Risk Assessment' },
     { term: 'Days Since Gift', definition: 'Calendar days since the donor\'s most recent gift transaction.', category: 'Risk Assessment' },
+    { term: 'Silence Period', definition: 'Number of days since a donor last made a gift or had recorded engagement.', category: 'Risk' },
+    { term: 'Risk Tier', definition: 'Classification based on silence duration and giving history: Critical (180+ days, major donor), High (90-180 days), Medium (60-90 days), Low (30-60 days).', category: 'Risk' },
+    { term: 'Last Gift Date', definition: 'Most recent gift transaction date for the donor.', category: 'Donor' },
+    { term: 'Lifetime Value', definition: 'Total cumulative giving across all fiscal years.', category: 'Donor' },
   ],
 
   prospect: [
@@ -130,5 +134,66 @@ export const definitions: Record<string, Definition[]> = {
     { term: 'Categories', definition: 'Contact Completeness, Duplicate Records, Campaign Health, Pipeline Hygiene, Recognition Integrity.', category: 'Scoring' },
     { term: 'Severity Levels', definition: 'Critical (data loss risk), High (reporting impact), Medium (best practice), Low (cosmetic).', category: 'Scoring' },
     { term: 'Data Quality Score', definition: 'Composite of email valid (25%), phone valid (25%), address complete (25%), campaign attribution (25%).', category: 'Contact Quality' },
+  ],
+
+  projects: [
+    { term: 'P0', definition: 'Critical priority — actively blocking work or has an immediate deadline.', category: 'Priority' },
+    { term: 'P1', definition: 'High priority — should be addressed this week or next.', category: 'Priority' },
+    { term: 'P2', definition: 'Medium priority — important but not urgent, planned for this month.', category: 'Priority' },
+    { term: 'P3', definition: 'Low priority — backlog item, nice to have.', category: 'Priority' },
+    { term: 'Swim Lane', definition: 'Category grouping for related work items across the organization.', category: 'Organization' },
+    { term: 'Owner', definition: 'Person responsible for the next action on this item.', category: 'Organization' },
+    { term: 'McKinsey Review', definition: 'Strategic analysis of the Federation Analytics platform rating each dashboard on decision-orientation, data quality, and UX.', category: 'Sources' },
+  ],
+
+  hubspot: [
+    { term: 'Engagement Segment', definition: 'Classification based on email interaction: Champion (high open+click), Active (regular opens), Passive (occasional), At Risk (declining), Dormant (no activity 90+ days), Ghost (never opened), New (<30 days).', category: 'Engagement' },
+    { term: 'Ghost', definition: 'Contacts who have never opened a single email. 55.9% of our database. Candidates for re-engagement or cleanup.', category: 'Engagement' },
+    { term: 'Champion', definition: 'Contacts with highest open and click rates. Only 27 out of 32,977 contacts (0.1%).', category: 'Engagement' },
+    { term: 'Open Rate', definition: 'Percentage of delivered emails that were opened. Industry average for nonprofits: ~25%.', category: 'Email Metrics' },
+    { term: 'Click Rate', definition: 'Percentage of delivered emails where a link was clicked. Industry average: ~2.5%.', category: 'Email Metrics' },
+  ],
+
+  wealth: [
+    { term: 'Net Worth', definition: 'WealthEngine estimated total net worth based on real estate, investments, income, and asset data.', category: 'Wealth Indicators' },
+    { term: 'Gift Capacity', definition: 'WealthEngine estimated annual giving capacity. Based on net worth, income, and giving history.', category: 'Wealth Indicators' },
+    { term: 'P2G Score', definition: 'Propensity to Give score (1-99). Higher = more likely to make charitable gifts. Based on giving history, demographics, and wealth indicators.', category: 'Wealth Indicators' },
+    { term: 'Share of Wallet', definition: 'FY26 Recognition ÷ (5-Year Gift Capacity ÷ 5). Shows what percentage of estimated giving capacity goes to Federation.', category: 'Analysis' },
+    { term: 'Capacity Gap', definition: 'Difference between estimated gift capacity and current giving level. Represents upgrade potential.', category: 'Analysis' },
+  ],
+
+  'ecobee-trends': [
+    { term: 'Zone', definition: 'Individual thermostat/area in the building complex. 48 zones across Federation, JCF, ADL, Common areas.', category: 'Facilities' },
+    { term: 'Setback', definition: 'Overnight temperature reduction to save energy. Causes morning temperature swings as zones recover.', category: 'HVAC' },
+    { term: 'Server Room', definition: 'Critical cooling zones (Common-Server Room, ADL-Server, Common-Data Room). Must stay below 80°F.', category: 'Critical' },
+    { term: 'Heating Hours', definition: 'Total hours the heating system was active across all zones. Higher = colder period or efficiency issues.', category: 'HVAC' },
+    { term: 'Cooling Hours', definition: 'Total hours the cooling system was active across all zones.', category: 'HVAC' },
+  ],
+
+  monday: [
+    { term: 'Board', definition: 'A Monday.com project board containing items (tasks/records) organized in groups.', category: 'Monday.com' },
+    { term: 'Items', definition: 'Individual records/tasks within a Monday.com board. Can represent grants, event tasks, onboarding steps, etc.', category: 'Monday.com' },
+    { term: 'Groups', definition: 'Sections within a board that organize items by status, phase, or category.', category: 'Monday.com' },
+  ],
+
+  boards: [
+    { term: 'SF Match', definition: 'A nonprofit board member whose name was found in our Salesforce database. Indicates existing relationship with Federation.', category: 'Matching' },
+    { term: 'Match Rate', definition: 'Percentage of identified board members who exist in our Salesforce donor database.', category: 'Matching' },
+    { term: 'EIN', definition: 'Employer Identification Number. Unique IRS identifier for nonprofit organizations.', category: 'Organization' },
+    { term: 'Total Revenue', definition: 'Annual revenue from most recent IRS Form 990 filing.', category: 'Organization' },
+  ],
+
+  'data-duel': [
+    { term: 'Data Detective', definition: 'AI analyst specializing in correlation hunting, statistical anomalies, and pattern spotting. Uses regression and clustering.', category: 'Analysts' },
+    { term: 'Operations Oracle', definition: 'AI analyst specializing in process efficiency, cost optimization, and budget variance analysis.', category: 'Analysts' },
+    { term: 'Donor Whisperer', definition: 'AI analyst specializing in behavioral psychology, giving patterns, and donor segmentation. 11 wins out of 13 runs.', category: 'Analysts' },
+    { term: 'Compounding Intelligence', definition: 'Each tournament builds on prior findings, questions, and trends. The state layer means Day 10 has accumulated intelligence from all prior days.', category: 'Methodology' },
+    { term: 'Novelty Score', definition: 'Points for genuinely new discoveries. Repeating a known finding from prior runs incurs a penalty.', category: 'Scoring' },
+    { term: 'Dollar Impact', definition: 'Estimated financial significance of a finding. Used to prioritize action items.', category: 'Scoring' },
+  ],
+
+  'chart-gallery': [
+    { term: 'Plotly', definition: 'Interactive JavaScript charting library. All 35 charts use Plotly.js with real JFSD data.', category: 'Technical' },
+    { term: 'Chart Categories', definition: 'Basic (line, bar, scatter), Financial (waterfall, funnel, gauge), Statistical (histogram, box, violin), Maps (choropleth, geo), Hierarchical (sankey, treemap, sunburst).', category: 'Technical' },
   ],
 };

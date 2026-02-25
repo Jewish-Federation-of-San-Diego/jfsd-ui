@@ -1,5 +1,5 @@
 {
-  "asOfDate": "2026-02-20 06:07",
+  "asOfDate": "2026-02-24 09:37",
   "overallScore": 24,
   "categories": [
     {
@@ -14,7 +14,7 @@
             {
               "name": "Anonymous Anonymous",
               "id": "001Uf00000aCXE0IAO",
-              "fy26": 77975.06
+              "fy26": 78808.06
             },
             {
               "name": "Elene Solomon Z\"L",
@@ -62,13 +62,18 @@
               "fy26": 2160.0
             },
             {
-              "name": "William Stone",
-              "id": "001Uf00000WkC2JIAV",
+              "name": "Anne F. Simon",
+              "id": "001Uf00000WkUEsIAN",
               "fy26": 2000.0
             },
             {
               "name": "Sonya H. Borkat",
               "id": "001Uf00000WkOXNIA3",
+              "fy26": 2000.0
+            },
+            {
+              "name": "William Stone",
+              "id": "001Uf00000WkC2JIAV",
               "fy26": 2000.0
             },
             {
@@ -97,11 +102,6 @@
               "fy26": 1000.0
             },
             {
-              "name": "Anne F. Simon",
-              "id": "001Uf00000WkUEsIAN",
-              "fy26": 1000.0
-            },
-            {
               "name": "Marvin Ross",
               "id": "001Uf00000WkJyEIAV",
               "fy26": 1000.0
@@ -121,7 +121,7 @@
             {
               "name": "Anonymous Anonymous",
               "id": "001Uf00000aCXE0IAO",
-              "fy26": 77975.06
+              "fy26": 78808.06
             }
           ]
         },
@@ -138,7 +138,7 @@
             {
               "name": "Anonymous Anonymous",
               "id": "001Uf00000aCXE0IAO",
-              "fy26": 77975.06
+              "fy26": 78808.06
             },
             {
               "name": "Shayna Davis-Schreiber",
@@ -161,13 +161,13 @@
               "fy26": 27500.0
             },
             {
-              "name": "Mitchell Siegler",
-              "id": "001Uf00000WkJk1IAF",
+              "name": "Sandra Hooper",
+              "id": "001Uf00000XRXMhIAP",
               "fy26": 25000.0
             },
             {
-              "name": "Sandra Hooper",
-              "id": "001Uf00000XRXMhIAP",
+              "name": "Mitchell Siegler",
+              "id": "001Uf00000WkJk1IAF",
               "fy26": 25000.0
             },
             {
@@ -196,6 +196,16 @@
               "fy26": 12000.0
             },
             {
+              "name": "Robyn F. Goldberg",
+              "id": "001Uf00000WkEqWIAV",
+              "fy26": 10000.0
+            },
+            {
+              "name": "Danielle L. Miller",
+              "id": "001Uf00000WkJxLIAV",
+              "fy26": 10000.0
+            },
+            {
               "name": "Gail Satter",
               "id": "001Uf00000WkC8CIAV",
               "fy26": 10000.0
@@ -206,29 +216,19 @@
               "fy26": 10000.0
             },
             {
-              "name": "Erica Weinberg",
-              "id": "001Uf00000WkBQRIA3",
+              "name": "Adam Jacobs",
+              "id": "001Uf00000WkKVaIAN",
               "fy26": 10000.0
             },
             {
-              "name": "Adam Jacobs",
-              "id": "001Uf00000WkKVaIAN",
+              "name": "Erica Weinberg",
+              "id": "001Uf00000WkBQRIA3",
               "fy26": 10000.0
             },
             {
               "name": "Jean Somers",
               "id": "001Uf00000WkEw3IAF",
               "fy26": 10000.0
-            },
-            {
-              "name": "Robyn F. Goldberg",
-              "id": "001Uf00000WkEqWIAV",
-              "fy26": 10000.0
-            },
-            {
-              "name": "Amy Spielman",
-              "id": "001Uf00000WkP72IAF",
-              "fy26": 9750.0
             }
           ]
         }
@@ -256,23 +256,23 @@
               "count": 9
             },
             {
-              "name": "Barbara Cohen",
-              "count": 8
-            },
-            {
               "name": "David Levy",
               "count": 8
             },
             {
-              "name": "Martin Schwartz",
-              "count": 7
+              "name": "Barbara Cohen",
+              "count": 8
             },
             {
               "name": "Michael Cohen",
               "count": 7
             },
             {
-              "name": "Linda Feldman",
+              "name": "Martin Schwartz",
+              "count": 7
+            },
+            {
+              "name": "Barry Cohen",
               "count": 6
             },
             {
@@ -280,7 +280,7 @@
               "count": 6
             },
             {
-              "name": "Barry Cohen",
+              "name": "Linda Feldman",
               "count": 6
             },
             {
@@ -288,15 +288,15 @@
               "count": 6
             },
             {
+              "name": "David Goodman",
+              "count": 5
+            },
+            {
               "name": "Robert Levy",
               "count": 5
             },
             {
-              "name": "Sharon Katz",
-              "count": 5
-            },
-            {
-              "name": "David Goodman",
+              "name": "Paul Cohen",
               "count": 5
             },
             {
@@ -308,11 +308,11 @@
               "count": 5
             },
             {
-              "name": "Michael Katz",
+              "name": "Linda Bernstein",
               "count": 5
             },
             {
-              "name": "Paul Cohen",
+              "name": "Sharon Katz",
               "count": 5
             },
             {
@@ -330,22 +330,17 @@
     },
     {
       "name": "Campaign Health",
-      "score": 94,
+      "score": 95,
       "issues": [
         {
           "metric": "Orphaned campaigns",
-          "count": 3,
+          "count": 2,
           "severity": "medium",
           "details": [
             {
               "name": "ANTISEMITISM COALITION",
               "id": "701Uf00000Wkm4aIAB",
               "gifts": 154900.0
-            },
-            {
-              "name": "Payment on Pledge - FY26",
-              "id": "701Uf00000lMSnNIAW",
-              "gifts": 598.0
             },
             {
               "name": "AVIAD",
@@ -371,12 +366,6 @@
           "count": 50,
           "severity": "high",
           "details": [
-            {
-              "name": "- Buster Bluth",
-              "id": "006Uf00000bdW7eIAE",
-              "amount": 60.0,
-              "closeDate": "2016-04-26"
-            },
             {
               "name": "- Buster Bluth",
               "id": "006Uf00000bdqvtIAA",
@@ -490,6 +479,12 @@
               "id": "006Uf00000RkznMIAR",
               "amount": 100000.0,
               "closeDate": "2025-07-31"
+            },
+            {
+              "name": "Chortek Weissman - BRIDGE Annual 2028",
+              "id": "006Uf00000Rl20SIAR",
+              "amount": 100000.0,
+              "closeDate": "2025-07-31"
             }
           ]
         },
@@ -572,12 +567,12 @@
             {
               "name": "Jacqueline Stein",
               "id": "001Uf00000WkLdsIAF",
-              "giving": 23738.0
+              "giving": 23558.0
             },
             {
               "name": "Judith Belinsky",
               "id": "001Uf00000WkQTrIAN",
-              "giving": 15435.0
+              "giving": 15530.0
             },
             {
               "name": "Lawrence Liebermensch",
@@ -600,13 +595,13 @@
               "giving": 7500.0
             },
             {
-              "name": "Adele Saleh",
-              "id": "001Uf00000WkTojIAF",
-              "giving": 6000.0
+              "name": "Gregg Kornfeld",
+              "id": "001Uf00000WkIERIA3",
+              "giving": 6309.5
             },
             {
-              "name": "Howard Bruce Somers",
-              "id": "001Uf00000WkHeSIAV",
+              "name": "Adele Saleh",
+              "id": "001Uf00000WkTojIAF",
               "giving": 6000.0
             }
           ]
@@ -625,9 +620,9 @@
     "overallScore": 24,
     "criticalIssues": 0,
     "highIssues": 171,
-    "mediumIssues": 47,
+    "mediumIssues": 46,
     "lowIssues": 50,
-    "totalRecordsAffected": 268,
+    "totalRecordsAffected": 267,
     "totalMajorDonors": 405
   }
 }

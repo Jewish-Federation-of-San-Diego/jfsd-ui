@@ -1,4 +1,5 @@
-import { Card, Col, Row, Statistic, Table, Typography, Space, Progress, Spin, Alert, Tag } from 'antd';
+import { Card, Col, Row, Statistic, Table, Typography, Space, Progress, Alert, Tag, Select } from 'antd';
+import { DashboardSkeleton } from '../components/DashboardSkeleton';
 import { CsvExport } from '../components/CsvExport';
 import {
   RiseOutlined,
@@ -8,20 +9,15 @@ import {
   TrophyOutlined,
   FieldTimeOutlined,
 } from '@ant-design/icons';
-import { useEffect, useRef, useState, useCallback } from 'react';
+import { useEffect, useRef, useState, useCallback, useMemo } from 'react';
 
+import { DataFreshness } from '../components/DataFreshness';
 import { DefinitionTooltip } from '../components/DefinitionTooltip';
+import { NAVY, GOLD, SUCCESS, ERROR, WARNING, MUTED } from '../theme/jfsdTheme';
 
 const { Text, Title } = Typography;
 
 // ── Brand tokens ────────────────────────────────────────────────────────
-const NAVY  = '#1B365D';
-const GOLD  = '#C5A258';
-const SUCCESS = '#3D8B37';
-const ERROR   = '#C4314B';
-const WARNING = '#D4880F';
-const MUTED   = '#8C8C8C';
-
 // ── Types ───────────────────────────────────────────────────────────────
 interface WeeklyMomentum { weekOf: string; gifts: number; amount: number; }
 interface GivingLevel { level: string; donors: number; amount: number; }
@@ -93,8 +89,9 @@ function ProgressRing({ pct, size = 120, stroke = 10 }: { pct: number; size?: nu
 }
 
 // ── KPI Row ─────────────────────────────────────────────────────────────
-function KPIRow({ data }: { data: CampaignData }) {
-  const { annualCampaign: ac, momentum: m, donorBreakdown: db } = data;
+function KPIRow({ data, filteredMomentum }: { data: CampaignData; filteredMomentum?: { amountThisWeek: number; amountLastWeek: number; weekOverWeekPct: number } }) {
+  const { annualCampaign: ac, donorBreakdown: db } = data;
+  const m = filteredMomentum ?? data.momentum;
   const wowColor = m.weekOverWeekPct >= 0 ? SUCCESS : ERROR;
   const WowIcon = m.weekOverWeekPct >= 0 ? RiseOutlined : FallOutlined;
   return (
@@ -343,34 +340,95 @@ function SubCampaigns({ campaigns }: { campaigns: CampaignItem[] }) {
 }
 
 // ── Main Dashboard ──────────────────────────────────────────────────────
+type DateRange = 'week' | 'month' | 'quarter' | 'ytd';
+
+function filterByDateRange(data: CampaignData, range: DateRange) {
+  if (range === 'ytd') {
+    return { weeks: data.weeklyMomentum, gifts: data.topGiftsThisWeek, momentum: undefined };
+  }
+
+  const now = new Date();
+  const daysMap: Record<Exclude<DateRange, 'ytd'>, number> = { week: 7, month: 30, quarter: 90 };
+  const weeksMap: Record<Exclude<DateRange, 'ytd'>, number> = { week: 1, month: 4, quarter: 13 };
+  const days = daysMap[range];
+  const maxWeeks = weeksMap[range];
+
+  const cutoff = new Date(now.getTime() - days * 86400000);
+
+  const weeks = data.weeklyMomentum.slice(-maxWeeks);
+  const gifts = data.topGiftsThisWeek.filter(g => {
+    const d = new Date(g.date + 'T00:00:00');
+    return d >= cutoff;
+  });
+
+  // Recalculate momentum KPIs from filtered weeks
+  const thisWeek = weeks.length > 0 ? weeks[weeks.length - 1] : null;
+  const lastWeek = weeks.length > 1 ? weeks[weeks.length - 2] : null;
+  const amountThisWeek = thisWeek?.amount ?? 0;
+  const amountLastWeek = lastWeek?.amount ?? 0;
+  const weekOverWeekPct = amountLastWeek > 0 ? ((amountThisWeek - amountLastWeek) / amountLastWeek) * 100 : 0;
+
+  return {
+    weeks,
+    gifts,
+    momentum: { amountThisWeek, amountLastWeek, weekOverWeekPct },
+  };
+}
+
 export function CampaignTrackerDashboard() {
   const [data, setData] = useState<CampaignData | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const [dateRange, setDateRange] = useState<DateRange>('ytd');
+  const [refreshing, setRefreshing] = useState(false);
 
-  useEffect(() => {
+  const fetchData = useCallback(() => {
     fetch('/jfsd-ui/data/campaign-tracker.json')
       .then(r => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json(); })
       .then(setData)
       .catch(e => setError(e.message));
   }, []);
 
+  useEffect(() => { fetchData(); }, [fetchData]);
+
+  const refresh = useCallback(() => {
+    setRefreshing(true);
+    fetch('/jfsd-ui/data/campaign-tracker.json')
+      .then(r => r.ok ? r.json() : null)
+      .then(setData)
+      .catch(() => {})
+      .finally(() => setRefreshing(false));
+  }, []);
+
+  const filtered = useMemo(() => {
+    if (!data) return null;
+    return filterByDateRange(data, dateRange);
+  }, [data, dateRange]);
+
   if (error) return <Alert type="error" message="Failed to load campaign data" description={error} showIcon style={{ margin: 24 }} />;
-  if (!data) return <div style={{ textAlign: 'center', padding: 80 }}><Spin size="large" /><br /><Text type="secondary">Loading campaign data…</Text></div>;
+  if (!data || !filtered) return <DashboardSkeleton />;
 
   return (
-    <div style={{ padding: '16px 24px', maxWidth: 1200, margin: '0 auto' }}>
+    <div style={{ padding: '16px 24px', maxWidth: 1400, margin: '0 auto' }}>
       <Space direction="vertical" size={16} style={{ width: '100%' }}>
         <Row justify="space-between" align="middle">
-          <Title level={3} style={{ color: NAVY, margin: 0 }}>🎯 Campaign Tracker</Title>
-          <Text type="secondary">As of {data.asOfDate}</Text>
+          <Space align="center">
+            <Title level={3} style={{ color: NAVY, margin: 0 }}>🎯 Campaign Tracker</Title>
+            <Select value={dateRange} onChange={setDateRange} style={{ width: 160 }} size="small">
+              <Select.Option value="week">This Week</Select.Option>
+              <Select.Option value="month">This Month</Select.Option>
+              <Select.Option value="quarter">This Quarter</Select.Option>
+              <Select.Option value="ytd">FY26 YTD</Select.Option>
+            </Select>
+          </Space>
         </Row>
+        <DataFreshness asOfDate={data.asOfDate} onRefresh={refresh} refreshing={refreshing} />
 
-        <KPIRow data={data} />
+        <KPIRow data={data} filteredMomentum={filtered.momentum} />
         <CampaignThermometer data={data} />
 
         <Row gutter={[16, 16]}>
           <Col xs={24} lg={14}>
-            <MomentumChart weeks={data.weeklyMomentum} />
+            <MomentumChart weeks={filtered.weeks} />
           </Col>
           <Col xs={24} lg={10}>
             <DonorDonut data={data.donorBreakdown} />
@@ -381,7 +439,7 @@ export function CampaignTrackerDashboard() {
 
         <Row gutter={[16, 16]}>
           <Col xs={24} lg={14}>
-            <TopGiftsTable gifts={data.topGiftsThisWeek} />
+            <TopGiftsTable gifts={filtered.gifts} />
           </Col>
           <Col xs={24} lg={10}>
             <PipelineCard pipeline={data.pipeline} />

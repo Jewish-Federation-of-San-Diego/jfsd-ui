@@ -1,11 +1,11 @@
 {
-  "asOfDate": "2026-02-20",
+  "asOfDate": "2026-02-24",
   "notes": null,
   "onlineGiving": {
-    "totalFY26": 317763.58,
-    "totalContributions": 616,
-    "avgGift": 515.85,
-    "medianGift": 47.19
+    "totalFY26": 318047.53,
+    "totalContributions": 664,
+    "avgGift": 478.99,
+    "medianGift": 40.47
   },
   "monthlyTrend": [
     {
@@ -52,15 +52,15 @@
     },
     {
       "month": "Feb",
-      "amount": 30402.18,
+      "amount": 30686.13,
       "recurringAmount": 0.0,
-      "contributions": 80
+      "contributions": 128
     }
   ],
   "recurring": {
     "activeProfiles": 0,
     "monthlyRecurringRevenue": 0.0,
-    "newThisMonth": 63,
+    "newThisMonth": 96,
     "cancelledThisMonth": 0,
     "churnRate": 0,
     "avgRecurringAmount": 0
@@ -68,8 +68,8 @@
   "topProducts": [
     {
       "name": "Annual Campaign Page - All in - FY26 - Today Only",
-      "amount": 248531.88,
-      "count": 266
+      "amount": 248731.88,
+      "count": 267
     },
     {
       "name": "FED360 FY26 - Today Only",
@@ -120,158 +120,158 @@
   "conversionBySource": [
     {
       "source": "Web",
-      "contributions": 616,
-      "amount": 317763.58
+      "contributions": 664,
+      "amount": 318047.53
     }
   ],
   "recentContributions": [
     {
-      "name": "Vera Pienknagura",
-      "amount": 1000.0,
+      "name": "Riley Martinez",
+      "amount": 0.0,
+      "product": "Individual Ticket - Yom HaShoah - Inidividual Ticket",
+      "date": "2026-02-24",
+      "recurring": false
+    },
+    {
+      "name": "Jason Bercovitch",
+      "amount": 0.0,
+      "product": "Individual Ticket - Yom HaShoah - Inidividual Ticket",
+      "date": "2026-02-24",
+      "recurring": false
+    },
+    {
+      "name": "Karen Frischwasser",
+      "amount": 0.0,
+      "product": "Individual Ticket - Yom HaShoah - Inidividual Ticket",
+      "date": "2026-02-23",
+      "recurring": false
+    },
+    {
+      "name": "Daniel Eyal",
+      "amount": 0.0,
+      "product": "Individual Ticket - Yom HaShoah - Inidividual Ticket",
+      "date": "2026-02-23",
+      "recurring": false
+    },
+    {
+      "name": "stephanie wells",
+      "amount": 0.0,
+      "product": "Individual Ticket - Yom HaShoah - Inidividual Ticket",
+      "date": "2026-02-23",
+      "recurring": false
+    },
+    {
+      "name": "Sarah Gimbel",
+      "amount": 0.0,
+      "product": "Individual Ticket - Yom HaShoah - Inidividual Ticket",
+      "date": "2026-02-23",
+      "recurring": false
+    },
+    {
+      "name": "Scott Schindler",
+      "amount": 208.7,
       "product": "Annual Campaign Page - All in - FY26 - Today Only",
-      "date": "2026-02-17",
+      "date": "2026-02-23",
       "recurring": false
     },
     {
-      "name": "Illana Woods",
-      "amount": 37.81,
-      "product": "Annual Campaign Page - All in - FY26 - Today Only",
-      "date": "2026-02-14",
+      "name": "Charlene Seidle",
+      "amount": 0.0,
+      "product": "Individual Ticket - Yom HaShoah - Inidividual Ticket",
+      "date": "2026-02-23",
       "recurring": false
     },
     {
-      "name": "Emily Jennewein",
-      "amount": 521.3,
-      "product": "FED360 FY26 - Today Only",
-      "date": "2026-02-13",
+      "name": "Julie Gordon",
+      "amount": 0.0,
+      "product": "Individual Ticket - Padres Jewish Heritage Night 2026 - Western Metal Rooftop Ticket",
+      "date": "2026-02-23",
       "recurring": false
     },
     {
-      "name": "Assaf Avissar",
-      "amount": 100.0,
-      "product": "FED360 FY26 - Today Only",
-      "date": "2026-02-13",
+      "name": "Ali Tilzer",
+      "amount": 0.0,
+      "product": "Individual Ticket - Yom HaShoah - Inidividual Ticket",
+      "date": "2026-02-22",
       "recurring": false
     },
     {
-      "name": "Mark James",
-      "amount": 36.0,
-      "product": "Annual Campaign Page - All in - FY26 - Today Only",
-      "date": "2026-02-12",
+      "name": "Freddi Pakier",
+      "amount": 0.0,
+      "product": "Individual Ticket - Yom HaShoah - Inidividual Ticket",
+      "date": "2026-02-22",
       "recurring": false
     },
     {
-      "name": "Robert Lin",
-      "amount": 187.86,
-      "product": "Annual Campaign Page - All in - FY26 - Today Only",
-      "date": "2026-02-12",
+      "name": "RUTH MCCALLAN",
+      "amount": 0.0,
+      "product": "Individual Ticket - Yom HaShoah - Inidividual Ticket",
+      "date": "2026-02-22",
       "recurring": false
     },
     {
-      "name": "Marc Glazer",
-      "amount": 1100.0,
-      "product": "Annual Campaign Page - All in - FY26 - Today Only",
-      "date": "2026-02-11",
+      "name": "Naomi Jensen",
+      "amount": 0.0,
+      "product": "Individual Ticket - Yom HaShoah - Inidividual Ticket",
+      "date": "2026-02-21",
       "recurring": false
     },
     {
-      "name": "Liz Cooperhouse",
-      "amount": 5180.0,
-      "product": "Annual Campaign Page - All in - FY26 - Today Only",
-      "date": "2026-02-11",
+      "name": "Kathryn Ames",
+      "amount": 0.0,
+      "product": "Individual Ticket - Yom HaShoah - Inidividual Ticket",
+      "date": "2026-02-21",
       "recurring": false
     },
     {
-      "name": "Fern siegel",
-      "amount": 1042.3,
-      "product": "FED360 FY26 - Today Only",
-      "date": "2026-02-10",
-      "recurring": false
-    },
-    {
-      "name": "Arlene G LaGary",
-      "amount": 187.86,
-      "product": "FED360 FY26 - Today Only",
-      "date": "2026-02-10",
-      "recurring": false
-    },
-    {
-      "name": "Howard Bear",
-      "amount": 1800.0,
-      "product": "FED360 FY26 - Today Only",
-      "date": "2026-02-10",
-      "recurring": false
-    },
-    {
-      "name": "Barbi Dorfan",
-      "amount": 1875.9,
-      "product": "Annual Campaign Page - All in - FY26 - Today Only",
-      "date": "2026-02-10",
-      "recurring": false
-    },
-    {
-      "name": "Rachel Raz",
+      "name": "Neal Jacobs",
       "amount": 18.0,
-      "product": "Support Our Work - A Conversation on Life After Captivity - Support the Work",
-      "date": "2026-02-09",
+      "product": "Individual Ticket - Yom HaShoah - Inidividual Ticket",
+      "date": "2026-02-21",
       "recurring": false
     },
     {
-      "name": "Bobbi and Steve Laufer",
-      "amount": 50.0,
-      "product": "Annual Campaign Page - All in - FY26 - Today Only",
-      "date": "2026-02-09",
+      "name": "Dan Vassilovski",
+      "amount": 0.0,
+      "product": "Individual Ticket - Yom HaShoah - Inidividual Ticket",
+      "date": "2026-02-21",
       "recurring": false
     },
     {
-      "name": "Nelly Dean",
-      "amount": 5210.3,
-      "product": "Annual Campaign Page - All in - FY26 - Today Only",
-      "date": "2026-02-09",
+      "name": "Sandra Abbott",
+      "amount": 0.0,
+      "product": "Individual Ticket - Yom HaShoah - Inidividual Ticket",
+      "date": "2026-02-21",
       "recurring": false
     },
     {
-      "name": "Joshua Reitman",
-      "amount": 180.0,
-      "product": "FED360 FY26 - Today Only",
-      "date": "2026-02-08",
+      "name": "Guri  Stark",
+      "amount": 0.0,
+      "product": "Individual Ticket - Yom HaShoah - Inidividual Ticket",
+      "date": "2026-02-21",
       "recurring": false
     },
     {
-      "name": "Stephanie Lahat",
-      "amount": 104.5,
-      "product": "FED360 FY26 - Today Only",
-      "date": "2026-02-08",
+      "name": "Cindy Nelson",
+      "amount": 0.0,
+      "product": "Individual Ticket - Yom HaShoah - Inidividual Ticket",
+      "date": "2026-02-21",
       "recurring": false
     },
     {
-      "name": "Lara Woolf Grusd",
-      "amount": 5210.3,
-      "product": "FED360 FY26 - Today Only",
-      "date": "2026-02-08",
-      "recurring": false
-    },
-    {
-      "name": "John Lefter",
-      "amount": 1042.3,
-      "product": "FED360 FY26 - Today Only",
-      "date": "2026-02-08",
-      "recurring": false
-    },
-    {
-      "name": "Hanan Leberman",
-      "amount": 375.42,
-      "product": "FED360 FY26 - Today Only",
-      "date": "2026-02-08",
+      "name": "Ruth Gilboa",
+      "amount": 0.0,
+      "product": "Individual Ticket - Yom HaShoah - Inidividual Ticket",
+      "date": "2026-02-21",
       "recurring": false
     }
   ],
   "failedPayments": [],
   "kpis": {
-    "totalOnlineRevenue": 317763.58,
+    "totalOnlineRevenue": 318047.53,
     "recurringRevenue": 0,
     "activeRecurring": 0,
-    "newDonorsOnline": 63,
+    "newDonorsOnline": 96,
     "conversionRate": 0,
     "churnRate": 0
   }

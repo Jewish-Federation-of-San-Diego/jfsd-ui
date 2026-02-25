@@ -17,6 +17,9 @@ const dashboardNames: Record<string, string> = {
   prospect: 'Prospect Research', pledge: 'Pledge Management', board: 'Board Reporting',
   stripe: 'Stripe Analytics', givecloud: 'GiveCloud', ramp: 'Ramp Analytics',
   'ap-expense': 'AP & Expense', facilities: 'Facilities', 'data-quality': 'Data Quality',
+  hubspot: 'HubSpot', wealth: 'WealthEngine',
+  boards: 'Nonprofit Boards', 'data-duel': 'Data Duel', 'ecobee-trends': 'Ecobee Trends',
+  monday: 'Monday.com', 'chart-gallery': 'Chart Gallery',
 };
 
 export function DefinitionsDrawer({ dashboardKey, open, onClose }: DefinitionsDrawerProps) {

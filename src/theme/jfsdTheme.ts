@@ -99,3 +99,14 @@ export const statusColors = {
   critical: '#C4314B',
   neutral: '#8C8C8C',
 } as const;
+
+/**
+ * Dashboard color palette — single source of truth.
+ * Import this instead of re-declaring const NAVY/GOLD/etc in each dashboard.
+ */
+export const NAVY    = '#1B365D';
+export const GOLD    = '#C5A258';
+export const SUCCESS = '#3D8B37';
+export const ERROR   = '#C4314B';
+export const WARNING = '#D4880F';
+export const MUTED   = '#8C8C8C';

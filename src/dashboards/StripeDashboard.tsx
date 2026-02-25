@@ -1,20 +1,17 @@
-import { Card, Col, Row, Statistic, Table, Tag, Typography, Space, Progress, Tooltip as AntTooltip, Spin, Alert } from 'antd';
+import { Card, Col, Row, Statistic, Table, Tag, Typography, Space, Progress, Tooltip as AntTooltip, Alert, List } from 'antd';
+import { DashboardSkeleton } from '../components/DashboardSkeleton';
 import { CsvExport } from '../components/CsvExport';
 import { useEffect, useRef, useState, useCallback } from 'react';
+import { InfoCircleOutlined, WarningOutlined, CheckCircleOutlined, BulbOutlined, ArrowUpOutlined, ArrowDownOutlined } from '@ant-design/icons';
 
+import { DataFreshness } from '../components/DataFreshness';
 import { DefinitionTooltip } from '../components/DefinitionTooltip';
+import { NAVY, GOLD, SUCCESS, ERROR, WARNING, MUTED } from '../theme/jfsdTheme';
 
 const { Text } = Typography;
 
 // ── Brand tokens ────────────────────────────────────────────────────────
-const NAVY = '#1B365D';
-const GOLD = '#C5A258';
-const SUCCESS = '#3D8B37';
-const ERROR = '#C4314B';
-const WARNING = '#D4880F';
 const GRID = '#E8E8ED';
-const MUTED = '#8C8C8C';
-
 // ── Types ───────────────────────────────────────────────────────────────
 interface MonthlyRow {
   month: string;
@@ -90,35 +87,194 @@ function useWidth() {
   return { ref, width };
 }
 
+// ── Monthly comparison helper ────────────────────────────────────────────
+function MonthDelta({ current, prior }: { current: number; prior: number; prefix?: string; suffix?: string; precision?: number }) {
+  if (!prior) return null;
+  const pctChange = ((current - prior) / prior) * 100;
+  const up = pctChange >= 0;
+  const color = up ? SUCCESS : ERROR;
+  const Icon = up ? ArrowUpOutlined : ArrowDownOutlined;
+  return (
+    <Text style={{ fontSize: 11, color, marginLeft: 4 }}>
+      <Icon style={{ fontSize: 9 }} /> {Math.abs(pctChange).toFixed(1)}% vs prior mo
+    </Text>
+  );
+}
+
 // ── KPI Cards ───────────────────────────────────────────────────────────
-function KPICards({ kpis }: { kpis: KPIs }) {
+function KPICards({ kpis, monthlyData }: { kpis: KPIs; monthlyData: MonthlyRow[] }) {
+  const curr = monthlyData.length >= 1 ? monthlyData[monthlyData.length - 1] : null;
+  const prev = monthlyData.length >= 2 ? monthlyData[monthlyData.length - 2] : null;
+
   return (
     <Row gutter={[12, 12]}>
       <Col xs={12} lg={6}>
         <Card className="kpi-card" size="small">
           <Statistic title={<DefinitionTooltip term="Gross Volume" dashboardKey="stripe">GROSS VOLUME</DefinitionTooltip>} value={kpis.grossVolume} precision={0} prefix="$" valueStyle={{ color: NAVY }} />
           <Text type="secondary" style={{ fontSize: 11 }}>FY26 thru {kpis.asOfDate}</Text>
+          {curr && prev && <MonthDelta current={curr.amount} prior={prev.amount} />}
         </Card>
       </Col>
       <Col xs={12} lg={6}>
         <Card className="kpi-card" size="small">
           <Statistic title={<DefinitionTooltip term="Net After Fees" dashboardKey="stripe">NET AFTER FEES</DefinitionTooltip>} value={kpis.netAfterFees} precision={0} prefix="$" valueStyle={{ color: SUCCESS }} />
           <Text type="secondary" style={{ fontSize: 11 }}>${kpis.totalFees.toLocaleString()} in fees</Text>
+          {curr && prev && <MonthDelta current={curr.amount - curr.fees} prior={prev.amount - prev.fees} />}
         </Card>
       </Col>
       <Col xs={12} lg={6}>
         <Card className="kpi-card" size="small">
           <Statistic title={<DefinitionTooltip term="Fee Rate" dashboardKey="stripe">AVG FEE RATE</DefinitionTooltip>} value={kpis.avgFeeRate} precision={2} suffix="%" valueStyle={{ color: kpis.avgFeeRate > 2.5 ? WARNING : SUCCESS }} />
           <Text type="secondary" style={{ fontSize: 11 }}>Target: &lt;2.5%</Text>
+          {curr && prev && <MonthDelta current={curr.feeRate} prior={prev.feeRate} suffix="%" precision={2} />}
         </Card>
       </Col>
       <Col xs={12} lg={6}>
         <Card className="kpi-card" size="small">
           <Statistic title="TOTAL CHARGES" value={kpis.totalCharges} valueStyle={{ color: NAVY }} />
           <Text type="secondary" style={{ fontSize: 11 }}>Avg ${kpis.avgPerCharge.toLocaleString()}/charge</Text>
+          {curr && prev && <MonthDelta current={curr.charges} prior={prev.charges} />}
         </Card>
       </Col>
     </Row>
+  );
+}
+
+// ── Insights & Actions ──────────────────────────────────────────────────
+interface Insight {
+  icon: React.ReactNode;
+  color: string;
+  text: string;
+}
+
+function generateInsights(data: StripeData): Insight[] {
+  const insights: Insight[] = [];
+  const { kpis, monthlyData, cardBrandData, sourceData } = data;
+
+  // Fee optimization
+  if (kpis.avgFeeRate > 2.5) {
+    insights.push({
+      icon: <WarningOutlined />,
+      color: WARNING,
+      text: `Consider negotiating Stripe rates — current average ${kpis.avgFeeRate.toFixed(2)}% exceeds industry benchmark of 2.2–2.4% for nonprofits`,
+    });
+  } else {
+    insights.push({
+      icon: <CheckCircleOutlined />,
+      color: SUCCESS,
+      text: `Average fee rate of ${kpis.avgFeeRate.toFixed(2)}% is within the nonprofit benchmark range — good`,
+    });
+  }
+
+  // Volume anomaly — compare most recent month to average
+  if (monthlyData.length >= 2) {
+    const recent = monthlyData[monthlyData.length - 1];
+    const avgCharges = monthlyData.reduce((s, d) => s + d.charges, 0) / monthlyData.length;
+    const pctDiff = ((recent.charges - avgCharges) / avgCharges) * 100;
+    if (Math.abs(pctDiff) > 20) {
+      const direction = pctDiff > 0 ? 'above' : 'below';
+      insights.push({
+        icon: <WarningOutlined />,
+        color: WARNING,
+        text: `${recent.month} volume is ${Math.abs(pctDiff).toFixed(0)}% ${direction} average (${recent.charges} vs avg ${Math.round(avgCharges)}) — investigate`,
+      });
+    }
+  }
+
+  // Large transaction alert
+  const avgPerCharge = kpis.avgPerCharge;
+  // We check via monthly data — if any month's avg charge > $10K, flag it
+  const largeMonths = monthlyData.filter(d => d.amount / d.charges > 10000);
+  if (largeMonths.length > 0 || avgPerCharge > 10000) {
+    // Use a simpler heuristic: check if any month has total/charges implying >$10K transactions
+    insights.push({
+      icon: <InfoCircleOutlined />,
+      color: NAVY,
+      text: `Some months show average charge amounts suggesting large transactions (>$10K) — verify these processed correctly`,
+    });
+  }
+
+  // Card brand concentration
+  const totalChargesByBrand = cardBrandData.reduce((s, d) => s + d.charges, 0);
+  for (const brand of cardBrandData) {
+    const pct = (brand.charges / totalChargesByBrand) * 100;
+    if (pct > 80) {
+      insights.push({
+        icon: <InfoCircleOutlined />,
+        color: NAVY,
+        text: `${pct.toFixed(0)}% of charges on ${brand.brand} — consider if payment method diversity is a risk`,
+      });
+    }
+  }
+
+  // Source concentration
+  for (const src of sourceData) {
+    if (src.pct > 95) {
+      insights.push({
+        icon: <InfoCircleOutlined />,
+        color: NAVY,
+        text: `${src.pct}% of charges route through ${src.source} — all payment processing depends on this integration`,
+      });
+    }
+  }
+
+  // Fee rate spikes in individual months
+  const highFeeMonths = monthlyData.filter(d => d.feeRate > 2.8);
+  if (highFeeMonths.length > 0) {
+    insights.push({
+      icon: <WarningOutlined />,
+      color: WARNING,
+      text: `${highFeeMonths.length} month(s) with fee rates above 2.8% (${highFeeMonths.map(m => `${m.month}: ${m.feeRate.toFixed(2)}%`).join(', ')}) — typically caused by small-dollar charges where fixed $0.30 fee dominates`,
+    });
+  }
+
+  return insights;
+}
+
+function InsightsCard({ data }: { data: StripeData }) {
+  const insights = generateInsights(data);
+
+  return (
+    <Card
+      title="Insights & Action Items"
+      size="small"
+      style={{ borderLeft: `3px solid ${GOLD}` }}
+    >
+      <Space direction="vertical" size={8} style={{ width: '100%' }}>
+        {insights.map((insight, i) => (
+          <div key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: 8 }}>
+            <span style={{ color: insight.color, fontSize: 16, marginTop: 2, flexShrink: 0 }}>{insight.icon}</span>
+            <Text style={{ fontSize: 13 }}>{insight.text}</Text>
+          </div>
+        ))}
+      </Space>
+    </Card>
+  );
+}
+
+// ── Recommendations ─────────────────────────────────────────────────────
+const RECOMMENDATIONS = [
+  'Review failed charges weekly and contact donors with expired cards',
+  'Request nonprofit pricing from Stripe (2.2% + $0.30 typical)',
+  'Consider ACH/bank transfer for large gifts (0.8% fee vs 2.5%)',
+];
+
+function RecommendationsCard() {
+  return (
+    <Card title="Best Practice Recommendations" size="small" style={{ borderLeft: `3px solid ${SUCCESS}` }}>
+      <List
+        size="small"
+        dataSource={RECOMMENDATIONS}
+        renderItem={(item) => (
+          <List.Item style={{ padding: '6px 0', border: 'none' }}>
+            <Space>
+              <BulbOutlined style={{ color: GOLD, fontSize: 15 }} />
+              <Text style={{ fontSize: 13 }}>{item}</Text>
+            </Space>
+          </List.Item>
+        )}
+      />
+    </Card>
   );
 }
 
@@ -337,6 +493,7 @@ export function StripeDashboard() {
   const [data, setData] = useState<StripeData | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
+  const [refreshing, setRefreshing] = useState(false);
 
   useEffect(() => {
     fetch('/jfsd-ui/data/stripe.json')
@@ -354,13 +511,16 @@ export function StripeDashboard() {
       });
   }, []);
 
-  if (loading) {
-    return (
-      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: 400 }}>
-        <Spin size="large" tip="Loading Stripe data..." />
-      </div>
-    );
-  }
+  const refresh = useCallback(() => {
+    setRefreshing(true);
+    fetch('/jfsd-ui/data/stripe.json')
+      .then(r => r.ok ? r.json() : null)
+      .then(setData)
+      .catch(() => {})
+      .finally(() => setRefreshing(false));
+  }, []);
+
+  if (loading) return <DashboardSkeleton />;
 
   if (error || !data) {
     return (
@@ -376,10 +536,9 @@ export function StripeDashboard() {
 
   return (
     <Space direction="vertical" size={16} style={{ width: '100%' }}>
-      <div style={{ fontSize: 11, color: MUTED, textAlign: 'right' }}>
-        Data as of: {data.kpis.asOfDate}
-      </div>
-      <KPICards kpis={data.kpis} />
+      <DataFreshness asOfDate={data.kpis.asOfDate} onRefresh={refresh} refreshing={refreshing} />
+      <KPICards kpis={data.kpis} monthlyData={data.monthlyData} />
+      <InsightsCard data={data} />
       <MonthlyRevenueChart data={data.monthlyData} />
       <FeeRateChart data={data.monthlyData} />
       <Row gutter={[12, 12]}>
@@ -391,6 +550,7 @@ export function StripeDashboard() {
           </Space>
         </Col>
       </Row>
+      <RecommendationsCard />
     </Space>
   );
 }

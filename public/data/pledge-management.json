@@ -1,18 +1,18 @@
 {
-  "asOfDate": "2026-02-20",
+  "asOfDate": "2026-02-24",
   "summary": {
-    "totalOpenPledges": 606,
-    "totalPledgedAmount": 13855972.150000002,
-    "totalPaidAmount": 367696.26999999996,
-    "totalOutstanding": 13488275.880000003,
+    "totalOpenPledges": 605,
+    "totalPledgedAmount": 13841022.150000002,
+    "totalPaidAmount": 368496.26999999996,
+    "totalOutstanding": 13472525.880000003,
     "fulfillmentRate": 2.7,
-    "avgPledgeSize": 22865
+    "avgPledgeSize": 22878
   },
   "agingBuckets": [
     {
       "bucket": "0-90 days",
-      "count": 232,
-      "amount": 2659867
+      "count": 234,
+      "amount": 2686415
     },
     {
       "bucket": "91-180 days",
@@ -21,13 +21,13 @@
     },
     {
       "bucket": "181-365 days",
-      "count": 83,
-      "amount": 2430708
+      "count": 79,
+      "amount": 2387708
     },
     {
       "bucket": "365+ days",
-      "count": 266,
-      "amount": 8120288
+      "count": 267,
+      "amount": 8120990
     }
   ],
   "writeOffRisk": [
@@ -37,7 +37,7 @@
       "paidAmount": 0.0,
       "balance": 18000.0,
       "endDate": "2025-12-31",
-      "daysOverdue": 51,
+      "daysOverdue": 55,
       "campaign": "DRM - FY26"
     },
     {
@@ -46,7 +46,7 @@
       "paidAmount": 9643.0,
       "balance": 10357.0,
       "endDate": "2025-12-31",
-      "daysOverdue": 51,
+      "daysOverdue": 55,
       "campaign": "DRM - FY26"
     },
     {
@@ -55,7 +55,7 @@
       "paidAmount": 0.0,
       "balance": 10000.0,
       "endDate": "2025-10-31",
-      "daysOverdue": 112,
+      "daysOverdue": 116,
       "campaign": "DRM - FY26"
     },
     {
@@ -64,7 +64,7 @@
       "paidAmount": 0.0,
       "balance": 10000.0,
       "endDate": "2026-01-01",
-      "daysOverdue": 50,
+      "daysOverdue": 54,
       "campaign": "DRM - FY26"
     },
     {
@@ -73,7 +73,7 @@
       "paidAmount": 0.0,
       "balance": 6000.0,
       "endDate": "2025-04-22",
-      "daysOverdue": 304,
+      "daysOverdue": 308,
       "campaign": "DRM - FY26"
     },
     {
@@ -82,7 +82,7 @@
       "paidAmount": 0.0,
       "balance": 6000.0,
       "endDate": "2025-12-31",
-      "daysOverdue": 51,
+      "daysOverdue": 55,
       "campaign": "DRM - FY26"
     },
     {
@@ -91,7 +91,7 @@
       "paidAmount": 0.0,
       "balance": 5000.0,
       "endDate": "2025-12-31",
-      "daysOverdue": 51,
+      "daysOverdue": 55,
       "campaign": "DRM - FY26"
     },
     {
@@ -100,7 +100,7 @@
       "paidAmount": 0.0,
       "balance": 1800.0,
       "endDate": "2026-02-07",
-      "daysOverdue": 13,
+      "daysOverdue": 17,
       "campaign": "FED360 - FY26 - Sponsorships"
     },
     {
@@ -109,7 +109,7 @@
       "paidAmount": 3500.0,
       "balance": 1500.0,
       "endDate": "2025-12-31",
-      "daysOverdue": 51,
+      "daysOverdue": 55,
       "campaign": "DRM - FY26"
     }
   ],
@@ -146,6 +146,15 @@
       "pledgedAmount": 750000.0,
       "paidAmount": 0.0,
       "balance": 750000.0,
+      "startDate": "2027-01-01",
+      "endDate": "2027-12-31",
+      "campaign": "DRM - CY27"
+    },
+    {
+      "name": "Andrew James Viterbi",
+      "pledgedAmount": 750000.0,
+      "paidAmount": 0.0,
+      "balance": 750000.0,
       "startDate": "2025-12-02",
       "endDate": "2026-06-30",
       "campaign": "DRM - FY26"
@@ -158,15 +167,6 @@
       "startDate": "2025-07-01",
       "endDate": "",
       "campaign": "Unsolicited Annual Gifts - FY26"
-    },
-    {
-      "name": "Andrew James Viterbi",
-      "pledgedAmount": 750000.0,
-      "paidAmount": 0.0,
-      "balance": 750000.0,
-      "startDate": "2027-01-01",
-      "endDate": "2027-12-31",
-      "campaign": "DRM - CY27"
     },
     {
       "name": "California Department Of Social Services",
@@ -223,13 +223,13 @@
       "campaign": "DRM - FY26"
     },
     {
-      "name": "The Melvin Garb Foundation",
+      "name": "Anton Woolf",
       "pledgedAmount": 100000.0,
       "paidAmount": 0.0,
       "balance": 100000.0,
-      "startDate": "2025-12-03",
-      "endDate": "2026-06-30",
-      "campaign": "Legacy of Light (Spark)"
+      "startDate": "2025-10-23",
+      "endDate": "2027-12-31",
+      "campaign": "JDC - Rady Match"
     },
     {
       "name": "Claire Ellman",
@@ -241,6 +241,15 @@
       "campaign": "Sha\u2019ar HaNegev Resiliency Village - Rady Match"
     },
     {
+      "name": "The Melvin Garb Foundation",
+      "pledgedAmount": 100000.0,
+      "paidAmount": 0.0,
+      "balance": 100000.0,
+      "startDate": "2025-12-03",
+      "endDate": "2026-06-30",
+      "campaign": "Legacy of Light (Spark)"
+    },
+    {
       "name": "Mark Gleiberman",
       "pledgedAmount": 100000.0,
       "paidAmount": 0.0,
@@ -250,13 +259,13 @@
       "campaign": "DRM EM 2025"
     },
     {
-      "name": "Anton Woolf",
-      "pledgedAmount": 100000.0,
+      "name": "Gloria E. Stone",
+      "pledgedAmount": 75000.0,
       "paidAmount": 0.0,
-      "balance": 100000.0,
-      "startDate": "2025-10-23",
-      "endDate": "2027-12-31",
-      "campaign": "JDC - Rady Match"
+      "balance": 75000.0,
+      "startDate": "2024-06-10",
+      "endDate": "",
+      "campaign": "DRM FACE 2024"
     },
     {
       "name": "Carlos David Michan",
@@ -266,15 +275,6 @@
       "startDate": "2025-05-28",
       "endDate": "",
       "campaign": "Beit Melachah Direct Mail 2025"
-    },
-    {
-      "name": "Gloria E. Stone",
-      "pledgedAmount": 75000.0,
-      "paidAmount": 0.0,
-      "balance": 75000.0,
-      "startDate": "2024-06-10",
-      "endDate": "",
-      "campaign": "DRM FACE 2024"
     },
     {
       "name": "Valerie Marie Viterbi",
@@ -295,15 +295,6 @@
       "campaign": "DRM - CY27"
     },
     {
-      "name": "Sonia Ancoli Israel",
-      "pledgedAmount": 100000.0,
-      "paidAmount": 50000.0,
-      "balance": 50000.0,
-      "startDate": "2025-12-12",
-      "endDate": "2026-12-31",
-      "campaign": "The Community Trip - Underwriting"
-    },
-    {
       "name": "Lara Woolf Grusd",
       "pledgedAmount": 100000.0,
       "paidAmount": 50000.0,
@@ -319,25 +310,34 @@
       "balance": 50000.0,
       "startDate": "2025-12-12",
       "endDate": "2026-12-31",
+      "campaign": "The Community Trip - Underwriting"
+    },
+    {
+      "name": "Sonia Ancoli Israel",
+      "pledgedAmount": 100000.0,
+      "paidAmount": 50000.0,
+      "balance": 50000.0,
+      "startDate": "2025-12-12",
+      "endDate": "2026-12-31",
       "campaign": "Legacy of Light (Spark)"
     },
     {
-      "name": "Shayna Davis-Schreiber",
+      "name": "Cohn Family Foundation",
       "pledgedAmount": 50000.0,
       "paidAmount": 0.0,
       "balance": 50000.0,
-      "startDate": "2024-07-01",
+      "startDate": "2025-01-17",
       "endDate": "",
-      "campaign": "Beit Melachah - General"
+      "campaign": "Unknown"
     },
     {
-      "name": "Shayna Davis-Schreiber",
+      "name": "Richard Gabriel",
       "pledgedAmount": 50000.0,
       "paidAmount": 0.0,
       "balance": 50000.0,
-      "startDate": "2025-07-01",
+      "startDate": "2026-07-01",
       "endDate": "",
-      "campaign": "Beit Melachah - General"
+      "campaign": "DRM - CY27"
     }
   ],
   "byCampaign": [
@@ -350,10 +350,10 @@
     },
     {
       "campaign": "DRM - FY26",
-      "pledgeCount": 68,
-      "pledgedAmount": 1830538.98,
+      "pledgeCount": 67,
+      "pledgedAmount": 1825538.98,
       "paidAmount": 30141.0,
-      "fulfillmentRate": 1.6
+      "fulfillmentRate": 1.7
     },
     {
       "campaign": "DRM - CY27",
@@ -385,17 +385,17 @@
     },
     {
       "campaign": "DRM FACE 2024",
-      "pledgeCount": 6,
-      "pledgedAmount": 295833.33999999997,
+      "pledgeCount": 5,
+      "pledgedAmount": 283333.33999999997,
       "paidAmount": 110440.0,
-      "fulfillmentRate": 37.3
+      "fulfillmentRate": 39.0
     },
     {
       "campaign": "FED360 - FY26 - Donations - Attended",
       "pledgeCount": 178,
       "pledgedAmount": 246457.0,
-      "paidAmount": 180.0,
-      "fulfillmentRate": 0.1
+      "paidAmount": 780.0,
+      "fulfillmentRate": 0.3
     },
     {
       "campaign": "JDC - Rady Match",
@@ -412,6 +412,13 @@
       "fulfillmentRate": 0.0
     },
     {
+      "campaign": "DRM FACE 2025",
+      "pledgeCount": 11,
+      "pledgedAmount": 130066.5,
+      "paidAmount": 15657.599999999999,
+      "fulfillmentRate": 12.0
+    },
+    {
       "campaign": "Beit Melachah Direct Mail 2025",
       "pledgeCount": 2,
       "pledgedAmount": 125000.0,
@@ -419,11 +426,11 @@
       "fulfillmentRate": 20.0
     },
     {
-      "campaign": "DRM FACE 2025",
-      "pledgeCount": 10,
-      "pledgedAmount": 117566.5,
-      "paidAmount": 15657.599999999999,
-      "fulfillmentRate": 13.3
+      "campaign": "Ambassador - FY26",
+      "pledgeCount": 16,
+      "pledgedAmount": 115050.0,
+      "paidAmount": 0.0,
+      "fulfillmentRate": 0.0
     },
     {
       "campaign": "The Community Trip - Underwriting",
@@ -433,18 +440,11 @@
       "fulfillmentRate": 43.5
     },
     {
-      "campaign": "Ambassador - FY26",
-      "pledgeCount": 15,
-      "pledgedAmount": 107550.0,
-      "paidAmount": 0.0,
-      "fulfillmentRate": 0.0
-    },
-    {
       "campaign": "DRM EM 2025",
       "pledgeCount": 2,
       "pledgedAmount": 106000.0,
-      "paidAmount": 4246.0,
-      "fulfillmentRate": 4.0
+      "paidAmount": 4844.0,
+      "fulfillmentRate": 4.6
     },
     {
       "campaign": "Sha\u2019ar HaNegev Resiliency Village - Rady Match",
@@ -462,8 +462,8 @@
     },
     {
       "campaign": "DRM - CY28",
-      "pledgeCount": 3,
-      "pledgedAmount": 65000.0,
+      "pledgeCount": 4,
+      "pledgedAmount": 70000.0,
       "paidAmount": 0.0,
       "fulfillmentRate": 0.0
     },
@@ -489,11 +489,11 @@
       "fulfillmentRate": 0.0
     },
     {
-      "campaign": "Payment on Pledge - FY26",
-      "pledgeCount": 1,
-      "pledgedAmount": 14950.0,
-      "paidAmount": 598.0,
-      "fulfillmentRate": 4.0
+      "campaign": "AMB EM 2025",
+      "pledgeCount": 4,
+      "pledgedAmount": 14500.0,
+      "paidAmount": 0.0,
+      "fulfillmentRate": 0.0
     },
     {
       "campaign": "FEDERATION 360 2024",
@@ -503,25 +503,11 @@
       "fulfillmentRate": 25.2
     },
     {
-      "campaign": "AMB EM 2025",
-      "pledgeCount": 3,
-      "pledgedAmount": 12000.0,
-      "paidAmount": 0.0,
-      "fulfillmentRate": 0.0
-    },
-    {
       "campaign": "AMB FACE 2022",
       "pledgeCount": 2,
       "pledgedAmount": 10616.0,
       "paidAmount": 5768.0,
       "fulfillmentRate": 54.3
-    },
-    {
-      "campaign": "AMB EM 2024",
-      "pledgeCount": 3,
-      "pledgedAmount": 10500.0,
-      "paidAmount": 50.0,
-      "fulfillmentRate": 0.5
     },
     {
       "campaign": "Corporate Event Sponsorships - FY26",
@@ -555,8 +541,8 @@
       "campaign": "DRM Em 2023",
       "pledgeCount": 1,
       "pledgedAmount": 7000.0,
-      "paidAmount": 232.0,
-      "fulfillmentRate": 3.3
+      "paidAmount": 432.0,
+      "fulfillmentRate": 6.2
     },
     {
       "campaign": "LION OF JUDAH LUNCHEON 2025",
@@ -594,14 +580,14 @@
       "fulfillmentRate": 0.0
     },
     {
-      "campaign": "Rady Match for Israel\u2019s Recovery - General",
+      "campaign": "CABINET RETREAT 2025",
       "pledgeCount": 1,
       "pledgedAmount": 5000.0,
       "paidAmount": 0.0,
       "fulfillmentRate": 0.0
     },
     {
-      "campaign": "CABINET RETREAT 2025",
+      "campaign": "Rady Match for Israel\u2019s Recovery - General",
       "pledgeCount": 1,
       "pledgedAmount": 5000.0,
       "paidAmount": 0.0,
@@ -699,14 +685,14 @@
       "fulfillmentRate": 0.0
     },
     {
-      "campaign": "FED360 - FY26 - Sponsorships",
+      "campaign": "DRM CALL 2024",
       "pledgeCount": 1,
       "pledgedAmount": 1800.0,
       "paidAmount": 0.0,
       "fulfillmentRate": 0.0
     },
     {
-      "campaign": "DRM CALL 2024",
+      "campaign": "FED360 - FY26 - Sponsorships",
       "pledgeCount": 1,
       "pledgedAmount": 1800.0,
       "paidAmount": 0.0,
@@ -739,6 +725,13 @@
       "pledgedAmount": 554.0,
       "paidAmount": 0.0,
       "fulfillmentRate": 0.0
+    },
+    {
+      "campaign": "AMB EM 2024",
+      "pledgeCount": 1,
+      "pledgedAmount": 500.0,
+      "paidAmount": 50.0,
+      "fulfillmentRate": 10.0
     },
     {
       "campaign": "UNSOL ONL 2022",
@@ -815,13 +808,19 @@
       "name": "Alexandra Shubin Hirschhorn",
       "amount": 598.0,
       "date": "2026-02-16",
-      "pledgeTotal": 14950.0
+      "pledgeTotal": 6000.0
     },
     {
       "name": "Marla White Strich",
       "amount": 198.08,
       "date": "2026-02-15",
       "pledgeTotal": 0.0
+    },
+    {
+      "name": "David Bramzon",
+      "amount": 200.0,
+      "date": "2026-02-15",
+      "pledgeTotal": 7000.0
     },
     {
       "name": "Dale Spector",
@@ -839,7 +838,7 @@
       "name": "Evan Vapnek",
       "amount": 300.0,
       "date": "2026-02-15",
-      "pledgeTotal": 0.0
+      "pledgeTotal": 3600.0
     },
     {
       "name": "Steve Shupper",
@@ -851,7 +850,7 @@
       "name": "Gillian Vapnek",
       "amount": 300.0,
       "date": "2026-02-15",
-      "pledgeTotal": 0.0
+      "pledgeTotal": 3600.0
     },
     {
       "name": "Steph Johnson",
@@ -918,16 +917,10 @@
       "amount": 5302.0,
       "date": "2026-02-09",
       "pledgeTotal": 10000.0
-    },
-    {
-      "name": "Nancy Gordon",
-      "amount": 5000.0,
-      "date": "2026-02-09",
-      "pledgeTotal": 5000.0
     }
   ],
   "kpis": {
-    "totalOutstanding": 13488275.880000003,
+    "totalOutstanding": 13472525.880000003,
     "fulfillmentRate": 2.7,
     "writeOffRiskAmount": 68657.0,
     "writeOffRiskCount": 9,

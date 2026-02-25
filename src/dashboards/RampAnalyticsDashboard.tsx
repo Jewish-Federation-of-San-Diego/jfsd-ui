@@ -1,19 +1,15 @@
-import { Card, Col, Row, Statistic, Table, Tag, Typography, Progress, Spin, Alert, Tooltip } from 'antd';
+import { Card, Col, Row, Statistic, Table, Tag, Typography, Progress, Alert, Tooltip } from 'antd';
+import { DashboardSkeleton } from '../components/DashboardSkeleton';
 import { CsvExport } from '../components/CsvExport';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useCallback } from 'react';
 
+import { DataFreshness } from '../components/DataFreshness';
 import { DefinitionTooltip } from '../components/DefinitionTooltip';
+import { NAVY, GOLD, SUCCESS, ERROR, WARNING, MUTED } from '../theme/jfsdTheme';
 
 const { Text, Title } = Typography;
 
 // ── Brand tokens ────────────────────────────────────────────────────────
-const NAVY = '#1B365D';
-const GOLD = '#C5A258';
-const SUCCESS = '#3D8B37';
-const ERROR = '#C4314B';
-const WARNING = '#D4880F';
-const MUTED = '#8C8C8C';
-
 // ── Types ───────────────────────────────────────────────────────────────
 interface MonthlyTrend { month: string; amount: number; txnCount: number; }
 interface DeptSpend { dept: string; amount: number; txnCount: number; budget: number; pctOfBudget: number; }
@@ -181,6 +177,7 @@ export function RampAnalyticsDashboard() {
   const [data, setData] = useState<RampData | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [refreshing, setRefreshing] = useState(false);
 
   useEffect(() => {
     fetch('/jfsd-ui/data/ramp-analytics.json')
@@ -190,12 +187,20 @@ export function RampAnalyticsDashboard() {
       .finally(() => setLoading(false));
   }, []);
 
-  if (loading) return <div style={{ textAlign: 'center', padding: 80 }}><Spin size="large" /></div>;
+  const refresh = useCallback(() => {
+    setRefreshing(true);
+    fetch('/jfsd-ui/data/ramp-analytics.json')
+      .then(r => r.ok ? r.json() : null)
+      .then(setData)
+      .catch(() => {})
+      .finally(() => setRefreshing(false));
+  }, []);
+
+  if (loading) return <DashboardSkeleton />;
   if (error) return <Alert type="error" message="Failed to load Ramp analytics" description={error} showIcon />;
   if (!data) return null;
 
   const { kpis, monthlyTrend, departmentSpend, categoryBreakdown, topMerchants, topSpenders, cardUtilization, weekOverWeek } = data;
-  const asOf = new Date(data.asOfDate).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', hour: 'numeric', minute: '2-digit' });
 
   const merchantCols = [
     { title: 'Merchant', dataIndex: 'merchant', key: 'merchant', sorter: (a: MerchantRow, b: MerchantRow) => a.merchant.localeCompare(b.merchant) },
@@ -211,12 +216,12 @@ export function RampAnalyticsDashboard() {
   ];
 
   return (
-    <div style={{ padding: '16px 24px', maxWidth: 1200, margin: '0 auto' }}>
+    <div style={{ padding: '16px 24px', maxWidth: 1400, margin: '0 auto' }}>
       {/* Header */}
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: 16 }}>
         <Title level={3} style={{ color: NAVY, margin: 0 }}>Ramp Spend Analytics — FY26</Title>
-        <Text style={{ color: MUTED, fontSize: 12 }}>As of {asOf}</Text>
       </div>
+      <DataFreshness asOfDate={data.asOfDate} onRefresh={refresh} refreshing={refreshing} />
 
       {/* KPI Row */}
       <Row gutter={[16, 16]} style={{ marginBottom: 20 }}>

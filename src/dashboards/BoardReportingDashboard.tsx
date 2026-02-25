@@ -1,4 +1,5 @@
-import { Card, Col, Row, Statistic, Table, Typography, Space, Spin, Alert, Tag, Collapse } from 'antd';
+import { Card, Col, Row, Statistic, Table, Typography, Space, Alert, Tag, Collapse } from 'antd';
+import { DashboardSkeleton } from '../components/DashboardSkeleton';
 import { CsvExport } from '../components/CsvExport';
 import {
   RiseOutlined,
@@ -11,18 +12,15 @@ import {
   CloseCircleOutlined,
   QuestionCircleOutlined,
 } from '@ant-design/icons';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef, useCallback } from 'react';
+import { PdfExport } from '../components/PdfExport';
+import { DataFreshness } from '../components/DataFreshness';
 
 const { Text, Title } = Typography;
 import { DefinitionTooltip } from "../components/DefinitionTooltip";
+import { NAVY, GOLD, SUCCESS, ERROR, WARNING, MUTED } from '../theme/jfsdTheme';
 
 // ── Brand tokens ────────────────────────────────────────────────────────
-const NAVY    = '#1B365D';
-const GOLD    = '#C5A258';
-const SUCCESS = '#3D8B37';
-const ERROR   = '#C4314B';
-const WARNING = '#D4880F';
-const MUTED   = '#8C8C8C';
 const BG_LIGHT = '#F7F8FA';
 
 // ── Types ───────────────────────────────────────────────────────────────
@@ -282,9 +280,11 @@ function BoardCard({ board }: { board: Board }) {
 
 // ── Main Dashboard ──────────────────────────────────────────────────────
 export function BoardReportingDashboard() {
+  const contentRef = useRef<HTMLDivElement>(null);
   const [data, setData] = useState<BoardData | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [refreshing, setRefreshing] = useState(false);
 
   useEffect(() => {
     fetch('/jfsd-ui/data/board-reporting.json')
@@ -293,11 +293,16 @@ export function BoardReportingDashboard() {
       .catch(e => { setError(e.message); setLoading(false); });
   }, []);
 
-  if (loading) return (
-    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: 400 }}>
-      <Spin size="large" tip="Loading board data…" />
-    </div>
-  );
+  const refresh = useCallback(() => {
+    setRefreshing(true);
+    fetch('/jfsd-ui/data/board-reporting.json')
+      .then(r => r.ok ? r.json() : null)
+      .then(setData)
+      .catch(() => {})
+      .finally(() => setRefreshing(false));
+  }, []);
+
+  if (loading) return <DashboardSkeleton />;
 
   if (error || !data) return (
     <Alert type="error" message="Failed to load board reporting data" description={error} showIcon
@@ -307,12 +312,15 @@ export function BoardReportingDashboard() {
   const { kpis, campaignSummary, boards, givingLevels, highlights } = data;
 
   return (
-    <div style={{ padding: '24px 32px', maxWidth: 1200, margin: '0 auto', background: BG_LIGHT, minHeight: '100vh' }}>
+    <div ref={contentRef} style={{ padding: '24px 32px', maxWidth: 1400, margin: '0 auto', background: BG_LIGHT, minHeight: '100vh' }}>
       {/* Header */}
-      <div style={{ marginBottom: 32 }}>
-        <Title level={2} style={{ color: NAVY, margin: 0 }}>Board Reporting</Title>
-        <Text type="secondary">As of {new Date(data.asOfDate + 'T00:00:00').toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</Text>
+      <div style={{ marginBottom: 32, display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
+        <div>
+          <Title level={2} style={{ color: NAVY, margin: 0 }}>Board Reporting</Title>
+        </div>
+        <PdfExport filename="board-reporting" targetRef={contentRef} />
       </div>
+      <DataFreshness asOfDate={data.asOfDate} onRefresh={refresh} refreshing={refreshing} />
 
       {/* KPI Row */}
       <Row gutter={[16, 16]} style={{ marginBottom: 32 }}>

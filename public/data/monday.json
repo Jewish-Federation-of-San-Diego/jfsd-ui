@@ -1,0 +1,207 @@
+{
+  "asOfDate": "2026-02-24T23:12:12.617344",
+  "boards": [
+    {
+      "id": "18224703487",
+      "name": "Spark Interactive Launch Planning",
+      "totalItems": 79,
+      "groups": []
+    },
+    {
+      "id": "18389752165",
+      "name": "Lion of Judah Luncheon FY26",
+      "totalItems": 65,
+      "groups": []
+    },
+    {
+      "id": "18390007291",
+      "name": "Spark Interactive Launch",
+      "totalItems": 50,
+      "groups": []
+    },
+    {
+      "id": "18394406680",
+      "name": "Yom HaShoah Checklist 2026",
+      "totalItems": 45,
+      "groups": []
+    },
+    {
+      "id": "18395140706",
+      "name": "Grants by Pillar FY26",
+      "totalItems": 29,
+      "groups": []
+    },
+    {
+      "id": "18400489741",
+      "name": "Legacy of Light \u2013 Run of Show",
+      "totalItems": 24,
+      "groups": []
+    },
+    {
+      "id": "18400489735",
+      "name": "Legacy of Light \u2013 Marketing & Printed Materials",
+      "totalItems": 22,
+      "groups": []
+    },
+    {
+      "id": "18400627042",
+      "name": "Marketing",
+      "totalItems": 13,
+      "groups": []
+    },
+    {
+      "id": "18400490801",
+      "name": "Direct Report Meetings",
+      "totalItems": 12,
+      "groups": []
+    },
+    {
+      "id": "18255725519",
+      "name": "Staff Newsletter Updates",
+      "totalItems": 11,
+      "groups": []
+    },
+    {
+      "id": "18400627037",
+      "name": "Trip Overview",
+      "totalItems": 10,
+      "groups": []
+    },
+    {
+      "id": "18400490814",
+      "name": "Supervisor Meetings",
+      "totalItems": 10,
+      "groups": []
+    },
+    {
+      "id": "18312534144",
+      "name": "Corporate Insurance",
+      "totalItems": 10,
+      "groups": []
+    },
+    {
+      "id": "18401467175",
+      "name": "Engagement Initiatives",
+      "totalItems": 8,
+      "groups": []
+    },
+    {
+      "id": "18400490811",
+      "name": "Management Meetings",
+      "totalItems": 8,
+      "groups": []
+    },
+    {
+      "id": "18400489743",
+      "name": "Legacy of Light \u2013 Invitations & Registration",
+      "totalItems": 8,
+      "groups": []
+    },
+    {
+      "id": "18400717367",
+      "name": "Job Recruitment",
+      "totalItems": 7,
+      "groups": []
+    },
+    {
+      "id": "18400628973",
+      "name": "Add Ons",
+      "totalItems": 7,
+      "groups": []
+    },
+    {
+      "id": "18400628969",
+      "name": "Leadership & Roles",
+      "totalItems": 7,
+      "groups": []
+    },
+    {
+      "id": "18401467167",
+      "name": "Travel Activities",
+      "totalItems": 6,
+      "groups": []
+    },
+    {
+      "id": "18376922414",
+      "name": "Country Capital Memory Game",
+      "totalItems": 6,
+      "groups": []
+    },
+    {
+      "id": "18264686602",
+      "name": "Staff Intranet & Resources",
+      "totalItems": 6,
+      "groups": []
+    },
+    {
+      "id": "18400628966",
+      "name": "Trip Buses and Assignments",
+      "totalItems": 5,
+      "groups": []
+    },
+    {
+      "id": "18400627045",
+      "name": "Participants",
+      "totalItems": 5,
+      "groups": []
+    },
+    {
+      "id": "18335820301",
+      "name": "TTI Grants FY26",
+      "totalItems": 5,
+      "groups": []
+    },
+    {
+      "id": "18194230825",
+      "name": "Systems and Software",
+      "totalItems": 5,
+      "groups": []
+    },
+    {
+      "id": "18160063954",
+      "name": "Employee Onboarding",
+      "totalItems": 5,
+      "groups": []
+    },
+    {
+      "id": "18401467150",
+      "name": "Sha'ar Hanegev Microgrant Application Form",
+      "totalItems": 4,
+      "groups": []
+    },
+    {
+      "id": "18401467129",
+      "name": "Grant Application Form",
+      "totalItems": 4,
+      "groups": []
+    },
+    {
+      "id": "18400999931",
+      "name": "Annual Campaign Fundraising Tracker",
+      "totalItems": 4,
+      "groups": []
+    },
+    {
+      "id": "18400491488",
+      "name": "Legacy of Light \u2013 Meeting Notes & Decisions",
+      "totalItems": 1,
+      "groups": []
+    },
+    {
+      "id": "18400489738",
+      "name": "Legacy of Light \u2013 Vendor Management",
+      "totalItems": 1,
+      "groups": []
+    },
+    {
+      "id": "18345583630",
+      "name": "Content calendar",
+      "totalItems": 1,
+      "groups": []
+    }
+  ],
+  "kpis": {
+    "totalBoards": 33,
+    "totalItems": 483
+  }
+}

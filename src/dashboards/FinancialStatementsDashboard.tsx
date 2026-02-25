@@ -1,4 +1,5 @@
-import { Card, Col, Row, Statistic, Tabs, Table, Typography, Spin, Alert, Progress, Collapse, Tag} from 'antd';
+import { Card, Col, Row, Statistic, Tabs, Table, Typography, Alert, Progress, Collapse, Tag} from 'antd';
+import { DashboardSkeleton } from '../components/DashboardSkeleton';
 import {
   DollarOutlined,
   RiseOutlined,
@@ -7,19 +8,16 @@ import {
   FundOutlined,
   SafetyCertificateOutlined,
 } from '@ant-design/icons';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef, useCallback } from 'react';
+import { PdfExport } from '../components/PdfExport';
+import { DataFreshness } from '../components/DataFreshness';
 import { DefinitionTooltip } from '../components/DefinitionTooltip';
+import { NAVY, GOLD, SUCCESS, ERROR, WARNING, MUTED } from '../theme/jfsdTheme';
 
 const { Text, Title } = Typography;
 const { Panel } = Collapse;
 
 // ── Brand tokens ────────────────────────────────────────────────────────
-const NAVY    = '#1B365D';
-const GOLD    = '#C5A258';
-const SUCCESS = '#3D8B37';
-const ERROR   = '#C4314B';
-const WARNING = '#D4880F';
-const MUTED   = '#8C8C8C';
 const LIGHT_BG = '#FAFBFD';
 
 // ── Formatting helpers ──────────────────────────────────────────────────
@@ -28,7 +26,6 @@ const fmtAcct = (v: number) => {
   if (v < 0) return `$(${Math.abs(v).toLocaleString(undefined, { minimumFractionDigits: 0, maximumFractionDigits: 0 })})`;
   return `$${v.toLocaleString(undefined, { minimumFractionDigits: 0, maximumFractionDigits: 0 })}`;
 };
-
 
 const fmtPct = (v: number) => {
   if (Math.abs(v) < 0.05) return '—';
@@ -255,9 +252,11 @@ function BSSection({ title: _title, items, totalLabel, total, totalPY }: {
 // MAIN DASHBOARD
 // ═══════════════════════════════════════════════════════════════════════════
 export function FinancialStatementsDashboard() {
+  const contentRef = useRef<HTMLDivElement>(null);
   const [data, setData] = useState<FinData | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [refreshing, setRefreshing] = useState(false);
 
   useEffect(() => {
     fetch('/jfsd-ui/data/financial-statements.json')
@@ -266,7 +265,16 @@ export function FinancialStatementsDashboard() {
       .catch(e => { setError(e.message); setLoading(false); });
   }, []);
 
-  if (loading) return <div style={{ textAlign: 'center', padding: 80 }}><Spin size="large" /><br /><Text type="secondary">Loading financial data…</Text></div>;
+  const refresh = useCallback(() => {
+    setRefreshing(true);
+    fetch('/jfsd-ui/data/financial-statements.json')
+      .then(r => r.ok ? r.json() : null)
+      .then(setData)
+      .catch(() => {})
+      .finally(() => setRefreshing(false));
+  }, []);
+
+  if (loading) return <DashboardSkeleton kpiCount={4} hasChart={false} />;
   if (error || !data) return <Alert type="error" message="Failed to load financial data" description={error} showIcon />;
 
   const { kpis, monthlyTrend, balanceSheet: bs, activities: act, functionalExpenses: fe, budgetVsActual: bva } = data;
@@ -629,14 +637,18 @@ export function FinancialStatementsDashboard() {
   ];
 
   return (
-    <div style={{ maxWidth: 1200, margin: '0 auto' }}>
+    <div ref={contentRef} style={{ maxWidth: 1400, margin: '0 auto' }}>
       {/* Header */}
       <div style={{ textAlign: 'center', marginBottom: 16, position: 'relative' }}>
         <Title level={3} style={{ color: NAVY, marginBottom: 0 }}>Financial Statements</Title>
         <Text type="secondary">{data.period}</Text>
+        <DataFreshness asOfDate={data.balanceSheet.asOfDate} onRefresh={refresh} refreshing={refreshing} />
         <Tag color="default" style={{ position: 'absolute', right: 0, top: 4, fontSize: 10, opacity: 0.6 }}>
           UNAUDITED
         </Tag>
+        <div style={{ position: 'absolute', left: 0, top: 4 }}>
+          <PdfExport filename="financial-statements" targetRef={contentRef} />
+        </div>
       </div>
 
       <style>{`

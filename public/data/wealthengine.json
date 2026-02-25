@@ -1,0 +1,692 @@
+{
+  "asOfDate": "2026-02-24T23:10:48.721087",
+  "kpis": {
+    "totalScreened": 3560,
+    "matched": 3560,
+    "avgAge": 63
+  },
+  "netWorthDistribution": [
+    {
+      "label": "$1MM-$5MM",
+      "count": 1975
+    },
+    {
+      "label": "$5MM-$10MM",
+      "count": 583
+    },
+    {
+      "label": "$500K-$1MM",
+      "count": 379
+    },
+    {
+      "label": "$10MM-$25MM",
+      "count": 238
+    },
+    {
+      "label": "$100K-$500K",
+      "count": 228
+    },
+    {
+      "label": "$25K-$50K",
+      "count": 78
+    },
+    {
+      "label": "$50K-$100K",
+      "count": 54
+    },
+    {
+      "label": "$25MM-$50MM",
+      "count": 11
+    },
+    {
+      "label": "$100MM-$500MM",
+      "count": 6
+    },
+    {
+      "label": "$500MM+",
+      "count": 5
+    },
+    {
+      "label": "$50MM-$100MM",
+      "count": 2
+    },
+    {
+      "label": "",
+      "count": 1
+    }
+  ],
+  "giftCapacityDistribution": [
+    {
+      "label": "$100K-$200K",
+      "count": 1204
+    },
+    {
+      "label": "$200K-$300K",
+      "count": 604
+    },
+    {
+      "label": "$50K-$75K",
+      "count": 363
+    },
+    {
+      "label": "$75K-$100K",
+      "count": 327
+    },
+    {
+      "label": "$300K-$500K",
+      "count": 310
+    },
+    {
+      "label": "$500K-$1MM",
+      "count": 105
+    },
+    {
+      "label": "$40K-$50K",
+      "count": 87
+    },
+    {
+      "label": "$30K-$40K",
+      "count": 79
+    },
+    {
+      "label": "$20K-$25K",
+      "count": 47
+    },
+    {
+      "label": "$15K-$20K",
+      "count": 38
+    },
+    {
+      "label": "$25K-$30K",
+      "count": 32
+    },
+    {
+      "label": "$10K-$15K",
+      "count": 30
+    },
+    {
+      "label": "$1MM-$5MM",
+      "count": 15
+    },
+    {
+      "label": "$7.5K-$10K",
+      "count": 6
+    },
+    {
+      "label": "$5MM+",
+      "count": 5
+    },
+    {
+      "label": "$5K-$7.5K",
+      "count": 4
+    },
+    {
+      "label": "$3K-$5K",
+      "count": 2
+    },
+    {
+      "label": "$2K-$3K",
+      "count": 1
+    },
+    {
+      "label": "$1K-$2K",
+      "count": 1
+    }
+  ],
+  "p2gDistribution": [
+    {
+      "score": "10",
+      "count": 818
+    },
+    {
+      "score": "11",
+      "count": 1
+    },
+    {
+      "score": "12",
+      "count": 1
+    },
+    {
+      "score": "13",
+      "count": 50
+    },
+    {
+      "score": "14",
+      "count": 313
+    },
+    {
+      "score": "15",
+      "count": 19
+    },
+    {
+      "score": "23",
+      "count": 59
+    },
+    {
+      "score": "24",
+      "count": 1016
+    },
+    {
+      "score": "25",
+      "count": 657
+    },
+    {
+      "score": "33",
+      "count": 41
+    },
+    {
+      "score": "35",
+      "count": 121
+    },
+    {
+      "score": "36",
+      "count": 26
+    },
+    {
+      "score": "40",
+      "count": 138
+    }
+  ],
+  "topProspects": [
+    {
+      "name": "Zeff Dana L",
+      "netWorth": "$25MM-$50MM",
+      "giftCapacity": "$1MM-$5MM",
+      "p2g": "10",
+      "totalAssets": "$25MM-$50MM",
+      "realEstate": "$10MM+",
+      "age": 57,
+      "gender": "Female"
+    },
+    {
+      "name": "Malnove Paul S",
+      "netWorth": "$50MM-$100MM",
+      "giftCapacity": "$1MM-$5MM",
+      "p2g": "10",
+      "totalAssets": "$50MM-$100MM",
+      "realEstate": "$10MM+",
+      "age": 102,
+      "gender": "Male"
+    },
+    {
+      "name": "Blake Gary D",
+      "netWorth": "$10MM-$25MM",
+      "giftCapacity": "$1MM-$5MM",
+      "p2g": "10",
+      "totalAssets": "$10MM-$25MM",
+      "realEstate": "$5MM-$10MM",
+      "age": 76,
+      "gender": "Male"
+    },
+    {
+      "name": "Jacks Joel R",
+      "netWorth": "$100MM-$500MM",
+      "giftCapacity": "$1MM-$5MM",
+      "p2g": "10",
+      "totalAssets": "$100MM-$500MM",
+      "realEstate": "$2MM-$5MM",
+      "age": 78,
+      "gender": "Male"
+    },
+    {
+      "name": "Rastetter William H",
+      "netWorth": "$100MM-$500MM",
+      "giftCapacity": "$1MM-$5MM",
+      "p2g": "10",
+      "totalAssets": "$100MM-$500MM",
+      "realEstate": null,
+      "age": 77,
+      "gender": "Male"
+    },
+    {
+      "name": "Rastetter William H",
+      "netWorth": "$100MM-$500MM",
+      "giftCapacity": "$1MM-$5MM",
+      "p2g": "10",
+      "totalAssets": "$100MM-$500MM",
+      "realEstate": null,
+      "age": 77,
+      "gender": "Male"
+    },
+    {
+      "name": "Zeff Dana L",
+      "netWorth": "$25MM-$50MM",
+      "giftCapacity": "$1MM-$5MM",
+      "p2g": "10",
+      "totalAssets": "$25MM-$50MM",
+      "realEstate": "$10MM+",
+      "age": 57,
+      "gender": "Female"
+    },
+    {
+      "name": "Blake Gary D",
+      "netWorth": "$10MM-$25MM",
+      "giftCapacity": "$1MM-$5MM",
+      "p2g": "10",
+      "totalAssets": "$10MM-$25MM",
+      "realEstate": "$5MM-$10MM",
+      "age": 76,
+      "gender": "Male"
+    },
+    {
+      "name": "Lief Jack J",
+      "netWorth": "$25MM-$50MM",
+      "giftCapacity": "$1MM-$5MM",
+      "p2g": "10",
+      "totalAssets": "$25MM-$50MM",
+      "realEstate": "$1MM-$2MM",
+      "age": 79,
+      "gender": "Male"
+    },
+    {
+      "name": "Lief Judith L",
+      "netWorth": "$25MM-$50MM",
+      "giftCapacity": "$1MM-$5MM",
+      "p2g": "10",
+      "totalAssets": "$25MM-$50MM",
+      "realEstate": "$1MM-$2MM",
+      "age": 77,
+      "gender": "Female"
+    },
+    {
+      "name": "Jaffe Richard B",
+      "netWorth": "$5MM-$10MM",
+      "giftCapacity": "$1MM-$5MM",
+      "p2g": "10",
+      "totalAssets": "$5MM-$10MM",
+      "realEstate": "$1MM-$2MM",
+      "age": 72,
+      "gender": "Male"
+    },
+    {
+      "name": "Blake Barbara F",
+      "netWorth": "$10MM-$25MM",
+      "giftCapacity": "$1MM-$5MM",
+      "p2g": "10",
+      "totalAssets": "$10MM-$25MM",
+      "realEstate": "$5MM-$10MM",
+      "age": 76,
+      "gender": "Female"
+    },
+    {
+      "name": "Barrelet Clarice E",
+      "netWorth": "$25MM-$50MM",
+      "giftCapacity": "$1MM-$5MM",
+      "p2g": "10",
+      "totalAssets": "$25MM-$50MM",
+      "realEstate": "$2MM-$5MM",
+      "age": 49,
+      "gender": "Female"
+    },
+    {
+      "name": "Fromm Lolie L",
+      "netWorth": "$5MM-$10MM",
+      "giftCapacity": "$1MM-$5MM",
+      "p2g": "11",
+      "totalAssets": "$5MM-$10MM",
+      "realEstate": "$1MM-$2MM",
+      "age": 76,
+      "gender": "Female"
+    },
+    {
+      "name": "Jacks Joel R",
+      "netWorth": "$100MM-$500MM",
+      "giftCapacity": "$1MM-$5MM",
+      "p2g": "10",
+      "totalAssets": "$100MM-$500MM",
+      "realEstate": "$2MM-$5MM",
+      "age": 78,
+      "gender": "Male"
+    },
+    {
+      "name": "Berkson Marsha F",
+      "netWorth": "$10MM-$25MM",
+      "giftCapacity": "$500K-$1MM",
+      "p2g": "10",
+      "totalAssets": "$10MM-$25MM",
+      "realEstate": "$5MM-$10MM",
+      "age": 67,
+      "gender": "Female"
+    },
+    {
+      "name": "Druckman Lee H",
+      "netWorth": "$10MM-$25MM",
+      "giftCapacity": "$500K-$1MM",
+      "p2g": "10",
+      "totalAssets": "$10MM-$25MM",
+      "realEstate": "$2MM-$5MM",
+      "age": 99,
+      "gender": "Male"
+    },
+    {
+      "name": "Tal Aharon B",
+      "netWorth": "$10MM-$25MM",
+      "giftCapacity": "$500K-$1MM",
+      "p2g": "10",
+      "totalAssets": "$10MM-$25MM",
+      "realEstate": "$5MM-$10MM",
+      "age": 79,
+      "gender": "Male"
+    },
+    {
+      "name": "Burton Sarah P",
+      "netWorth": "$10MM-$25MM",
+      "giftCapacity": "$500K-$1MM",
+      "p2g": "10",
+      "totalAssets": "$10MM-$25MM",
+      "realEstate": "$10MM+",
+      "age": 74,
+      "gender": "Female"
+    },
+    {
+      "name": "Bernstein Bonnie R",
+      "netWorth": "$10MM-$25MM",
+      "giftCapacity": "$500K-$1MM",
+      "p2g": "10",
+      "totalAssets": "$10MM-$25MM",
+      "realEstate": "$5MM-$10MM",
+      "age": 70,
+      "gender": "Female"
+    },
+    {
+      "name": "Benjamin Alan H",
+      "netWorth": "$5MM-$10MM",
+      "giftCapacity": "$500K-$1MM",
+      "p2g": "10",
+      "totalAssets": "$5MM-$10MM",
+      "realEstate": null,
+      "age": 66,
+      "gender": "Male"
+    },
+    {
+      "name": "Hart John R",
+      "netWorth": "$10MM-$25MM",
+      "giftCapacity": "$500K-$1MM",
+      "p2g": "10",
+      "totalAssets": "$10MM-$25MM",
+      "realEstate": "$5MM-$10MM",
+      "age": 92,
+      "gender": "Male"
+    },
+    {
+      "name": "Steinberg Sheeri K",
+      "netWorth": "$10MM-$25MM",
+      "giftCapacity": "$500K-$1MM",
+      "p2g": "10",
+      "totalAssets": "$10MM-$25MM",
+      "realEstate": "$5MM-$10MM",
+      "age": 62,
+      "gender": "Female"
+    },
+    {
+      "name": "Gitlin Stephanie M",
+      "netWorth": "$50MM-$100MM",
+      "giftCapacity": "$500K-$1MM",
+      "p2g": "10",
+      "totalAssets": "$50MM-$100MM",
+      "realEstate": "$5MM-$10MM",
+      "age": 57,
+      "gender": "Female"
+    },
+    {
+      "name": "Kaufman Linda B",
+      "netWorth": "$10MM-$25MM",
+      "giftCapacity": "$500K-$1MM",
+      "p2g": "10",
+      "totalAssets": "$10MM-$25MM",
+      "realEstate": "$5MM-$10MM",
+      "age": 70,
+      "gender": "Female"
+    },
+    {
+      "name": "Schwartz Leslie K",
+      "netWorth": "$10MM-$25MM",
+      "giftCapacity": "$500K-$1MM",
+      "p2g": "10",
+      "totalAssets": "$10MM-$25MM",
+      "realEstate": "$5MM-$10MM",
+      "age": 75,
+      "gender": "Female"
+    },
+    {
+      "name": "Gurtin Kay L",
+      "netWorth": "$10MM-$25MM",
+      "giftCapacity": "$500K-$1MM",
+      "p2g": "10",
+      "totalAssets": "$10MM-$25MM",
+      "realEstate": "$5MM-$10MM",
+      "age": 64,
+      "gender": "Female"
+    },
+    {
+      "name": "Pleskow Audrey J",
+      "netWorth": "$10MM-$25MM",
+      "giftCapacity": "$500K-$1MM",
+      "p2g": "10",
+      "totalAssets": "$10MM-$25MM",
+      "realEstate": "$10MM+",
+      "age": 71,
+      "gender": "Female"
+    },
+    {
+      "name": "Amber Betty T",
+      "netWorth": "$10MM-$25MM",
+      "giftCapacity": "$500K-$1MM",
+      "p2g": "10",
+      "totalAssets": "$10MM-$25MM",
+      "realEstate": "$5MM-$10MM",
+      "age": 70,
+      "gender": "Female"
+    },
+    {
+      "name": "Greenfield Richard J",
+      "netWorth": "$10MM-$25MM",
+      "giftCapacity": "$500K-$1MM",
+      "p2g": "10",
+      "totalAssets": "$10MM-$25MM",
+      "realEstate": "$10MM+",
+      "age": 83,
+      "gender": "Male"
+    },
+    {
+      "name": "Hamerslag Steven J",
+      "netWorth": "$10MM-$25MM",
+      "giftCapacity": "$500K-$1MM",
+      "p2g": "10",
+      "totalAssets": "$10MM-$25MM",
+      "realEstate": "$10MM+",
+      "age": 69,
+      "gender": "Male"
+    },
+    {
+      "name": "Sanoff Noa ",
+      "netWorth": "$10MM-$25MM",
+      "giftCapacity": "$500K-$1MM",
+      "p2g": "10",
+      "totalAssets": "$10MM-$25MM",
+      "realEstate": "$5MM-$10MM",
+      "age": 0,
+      "gender": "Female"
+    },
+    {
+      "name": "Mashaal Robert G",
+      "netWorth": "$10MM-$25MM",
+      "giftCapacity": "$500K-$1MM",
+      "p2g": "10",
+      "totalAssets": "$10MM-$25MM",
+      "realEstate": "$5MM-$10MM",
+      "age": 62,
+      "gender": "Male"
+    },
+    {
+      "name": "Gross Shoshana R",
+      "netWorth": "$10MM-$25MM",
+      "giftCapacity": "$500K-$1MM",
+      "p2g": "10",
+      "totalAssets": "$10MM-$25MM",
+      "realEstate": "$5MM-$10MM",
+      "age": 63,
+      "gender": "Female"
+    },
+    {
+      "name": "Jacobs Irwin M",
+      "netWorth": "$25MM-$50MM",
+      "giftCapacity": "$500K-$1MM",
+      "p2g": "10",
+      "totalAssets": "$25MM-$50MM",
+      "realEstate": "$10MM+",
+      "age": 92,
+      "gender": "Male"
+    },
+    {
+      "name": "Epstein Daniel J",
+      "netWorth": "$10MM-$25MM",
+      "giftCapacity": "$500K-$1MM",
+      "p2g": "10",
+      "totalAssets": "$10MM-$25MM",
+      "realEstate": "$2MM-$5MM",
+      "age": 84,
+      "gender": "Male"
+    },
+    {
+      "name": "Scott Elliot A",
+      "netWorth": "$10MM-$25MM",
+      "giftCapacity": "$500K-$1MM",
+      "p2g": "10",
+      "totalAssets": "$10MM-$25MM",
+      "realEstate": "$5MM-$10MM",
+      "age": 53,
+      "gender": "Male"
+    },
+    {
+      "name": "Turk Jerome H",
+      "netWorth": "$10MM-$25MM",
+      "giftCapacity": "$500K-$1MM",
+      "p2g": "10",
+      "totalAssets": "$25MM-$50MM",
+      "realEstate": "$10MM+",
+      "age": 83,
+      "gender": "Male"
+    },
+    {
+      "name": "Epstein Phyllis H",
+      "netWorth": "$10MM-$25MM",
+      "giftCapacity": "$500K-$1MM",
+      "p2g": "10",
+      "totalAssets": "$10MM-$25MM",
+      "realEstate": "$2MM-$5MM",
+      "age": 84,
+      "gender": "Female"
+    },
+    {
+      "name": "Gelfand Michael D",
+      "netWorth": "$10MM-$25MM",
+      "giftCapacity": "$500K-$1MM",
+      "p2g": "10",
+      "totalAssets": "$10MM-$25MM",
+      "realEstate": "$5MM-$10MM",
+      "age": 71,
+      "gender": "Male"
+    },
+    {
+      "name": "Ziman Helene B",
+      "netWorth": "$10MM-$25MM",
+      "giftCapacity": "$500K-$1MM",
+      "p2g": "10",
+      "totalAssets": "$10MM-$25MM",
+      "realEstate": "$5MM-$10MM",
+      "age": 75,
+      "gender": "Female"
+    },
+    {
+      "name": "Dreeben Sharon M",
+      "netWorth": "$10MM-$25MM",
+      "giftCapacity": "$500K-$1MM",
+      "p2g": "10",
+      "totalAssets": "$10MM-$25MM",
+      "realEstate": "$5MM-$10MM",
+      "age": 67,
+      "gender": "Female"
+    },
+    {
+      "name": "Turk Carole ",
+      "netWorth": "$10MM-$25MM",
+      "giftCapacity": "$500K-$1MM",
+      "p2g": "10",
+      "totalAssets": "$10MM-$25MM",
+      "realEstate": "$10MM+",
+      "age": 79,
+      "gender": "Female"
+    },
+    {
+      "name": "Wesley Eileen G",
+      "netWorth": "$25MM-$50MM",
+      "giftCapacity": "$500K-$1MM",
+      "p2g": "10",
+      "totalAssets": "$25MM-$50MM",
+      "realEstate": "$5MM-$10MM",
+      "age": 67,
+      "gender": "Female"
+    },
+    {
+      "name": "Safrin Richard E",
+      "netWorth": "$5MM-$10MM",
+      "giftCapacity": "$500K-$1MM",
+      "p2g": "12",
+      "totalAssets": "$5MM-$10MM",
+      "realEstate": "$1MM-$2MM",
+      "age": 71,
+      "gender": "Male"
+    },
+    {
+      "name": "Levitt Cheryl I",
+      "netWorth": "$10MM-$25MM",
+      "giftCapacity": "$500K-$1MM",
+      "p2g": "10",
+      "totalAssets": "$10MM-$25MM",
+      "realEstate": "$5MM-$10MM",
+      "age": 69,
+      "gender": "Female"
+    },
+    {
+      "name": "Kabakoff David S",
+      "netWorth": "$100MM-$500MM",
+      "giftCapacity": "$500K-$1MM",
+      "p2g": "10",
+      "totalAssets": "$100MM-$500MM",
+      "realEstate": "$2MM-$5MM",
+      "age": 78,
+      "gender": "Male"
+    },
+    {
+      "name": "Silberman Jeffrey H",
+      "netWorth": "$10MM-$25MM",
+      "giftCapacity": "$500K-$1MM",
+      "p2g": "10",
+      "totalAssets": "$10MM-$25MM",
+      "realEstate": "$10MM+",
+      "age": 68,
+      "gender": "Male"
+    },
+    {
+      "name": "Silberman Karen F",
+      "netWorth": "$10MM-$25MM",
+      "giftCapacity": "$500K-$1MM",
+      "p2g": "10",
+      "totalAssets": "$10MM-$25MM",
+      "realEstate": "$10MM+",
+      "age": 65,
+      "gender": "Female"
+    },
+    {
+      "name": "Feuerstein Diane I",
+      "netWorth": "$10MM-$25MM",
+      "giftCapacity": "$500K-$1MM",
+      "p2g": "10",
+      "totalAssets": "$10MM-$25MM",
+      "realEstate": "$5MM-$10MM",
+      "age": 73,
+      "gender": "Female"
+    }
+  ]
+}

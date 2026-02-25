@@ -1,22 +1,6 @@
 {
-  "asOfDate": "2026-02-20T06:04:31-08:00",
+  "asOfDate": "2026-02-23T06:03:42-08:00",
   "actionItems": [
-    {
-      "type": "needs_review",
-      "merchant": "D.Z. Akin's",
-      "amount": 975.63,
-      "cardholder": "Matt Goldberg",
-      "date": "2026-02-15",
-      "reason": "High-value transaction ($975.63)"
-    },
-    {
-      "type": "policy_exception",
-      "merchant": "D.Z. Akin's",
-      "amount": 975.63,
-      "cardholder": "Matt Goldberg",
-      "date": "2026-02-15",
-      "reason": "Weekend purchase"
-    },
     {
       "type": "needs_review",
       "merchant": "Dirt Cheap Car Rental",
@@ -26,59 +10,51 @@
       "reason": "High-value transaction ($800.00)"
     },
     {
-      "type": "needs_review",
-      "merchant": "Republic Services",
-      "amount": 557.41,
-      "cardholder": "Joanna Chiu",
-      "date": "2026-02-14",
-      "reason": "High-value transaction ($557.41)"
-    },
-    {
       "type": "policy_exception",
-      "merchant": "Republic Services",
-      "amount": 557.41,
-      "cardholder": "Joanna Chiu",
-      "date": "2026-02-14",
+      "merchant": "Anthropic",
+      "amount": 475,
+      "cardholder": "David Fuhriman",
+      "date": "2026-02-22",
       "reason": "Weekend purchase"
     },
     {
-      "type": "policy_exception",
-      "merchant": "Staples",
-      "amount": 209.66,
+      "type": "missing_receipt",
+      "merchant": "The Home Depot",
+      "amount": 260.59,
       "cardholder": "Miliah Rodriguez",
-      "date": "2026-02-14",
+      "date": "2026-02-20",
+      "txnId": "c4f137b3-4b69-4a1c-8a65-09b08d4fe535"
+    },
+    {
+      "type": "policy_exception",
+      "merchant": "The Taj Mahal Palace",
+      "amount": 172.58,
+      "cardholder": "Michael Rabkin",
+      "date": "2026-02-21",
       "reason": "Weekend purchase"
     },
     {
       "type": "missing_receipt",
-      "merchant": "Microsoft Office / Azure",
-      "amount": 147,
-      "cardholder": "Joanna Chiu",
-      "date": "2026-02-19",
-      "txnId": "f7c468ba-5a54-40cd-9f83-10c05c791ded"
-    },
-    {
-      "type": "policy_exception",
-      "merchant": "Itc Maurya",
-      "amount": 133.69,
+      "merchant": "The Indian Hotels Company",
+      "amount": 162.37,
       "cardholder": "Heidi Gantwerk",
-      "date": "2026-02-14",
-      "reason": "Weekend purchase"
-    },
-    {
-      "type": "missing_receipt",
-      "merchant": "OpenAI",
-      "amount": 100,
-      "cardholder": "David Fuhriman",
-      "date": "2026-02-15",
-      "txnId": "01ee9c40-2b8b-4d95-8a4b-78a0f8759e43"
+      "date": "2026-02-22",
+      "txnId": "43a120f9-3059-4d84-ac36-78cf708eadd1"
     },
     {
       "type": "policy_exception",
-      "merchant": "OpenAI",
-      "amount": 100,
-      "cardholder": "David Fuhriman",
-      "date": "2026-02-15",
+      "merchant": "The Indian Hotels Company",
+      "amount": 162.37,
+      "cardholder": "Heidi Gantwerk",
+      "date": "2026-02-22",
+      "reason": "Weekend purchase"
+    },
+    {
+      "type": "policy_exception",
+      "merchant": "Amazon",
+      "amount": 121.52,
+      "cardholder": "Miliah Rodriguez",
+      "date": "2026-02-22",
       "reason": "Weekend purchase"
     },
     {
@@ -90,17 +66,25 @@
       "txnId": "61e91c6f-bdeb-4e0f-b516-a9ae551b6f45"
     },
     {
-      "type": "policy_exception",
-      "merchant": "Smart & Final",
-      "amount": 85.58,
-      "cardholder": "Matt Goldberg",
-      "date": "2026-02-15",
-      "reason": "Weekend purchase"
+      "type": "missing_receipt",
+      "merchant": "Uber",
+      "amount": 80.81,
+      "cardholder": "David Fuhriman",
+      "date": "2026-02-20",
+      "txnId": "8817c515-7769-4dac-bfe2-65792d445ee0"
+    },
+    {
+      "type": "missing_receipt",
+      "merchant": "Best Car",
+      "amount": 59.65,
+      "cardholder": "Shoshana Munk",
+      "date": "2026-02-23",
+      "txnId": "8f93add5-fc90-4040-9773-208ecfae9a2c"
     },
     {
       "type": "missing_receipt",
       "merchant": "Shell",
-      "amount": 57.22,
+      "amount": 55.32,
       "cardholder": "Ofri Ismailov",
       "date": "2026-02-19",
       "txnId": "f638f88f-c1d1-453a-80d6-3ef5c427e7f5"
@@ -114,78 +98,86 @@
       "txnId": "cb0d29cc-ace7-4706-bb7f-34de7ebd7efa"
     },
     {
-      "type": "missing_receipt",
-      "merchant": "Yekev Oren",
-      "amount": 52.03,
-      "cardholder": "Ori Bar",
-      "date": "2026-02-14",
-      "txnId": "1402d30d-339e-4bb6-a1ac-2bc490c525fb"
-    },
-    {
       "type": "policy_exception",
-      "merchant": "Yekev Oren",
-      "amount": 52.03,
-      "cardholder": "Ori Bar",
-      "date": "2026-02-14",
+      "merchant": "Chevron",
+      "amount": 50.68,
+      "cardholder": "Libi Bar-On",
+      "date": "2026-02-22",
       "reason": "Weekend purchase"
     },
     {
       "type": "missing_receipt",
-      "merchant": "Amazon",
-      "amount": 38.78,
-      "cardholder": "Debbie Tirouda",
-      "date": "2026-02-19",
-      "txnId": "80334465-ad47-4d7e-9e3e-9e6f5b29604e"
+      "merchant": "Morning Lavender",
+      "amount": 41.32,
+      "cardholder": "Amit Ben Dov",
+      "date": "2026-02-21",
+      "txnId": "db73b815-dcfe-4715-bfb8-ce447f1d2e2a"
     },
     {
       "type": "missing_receipt",
-      "merchant": "Amazon",
-      "amount": 37.85,
-      "cardholder": "Debbie Tirouda",
-      "date": "2026-02-19",
-      "txnId": "56b21e70-9cbf-4cf4-829e-1ee6299c2640"
+      "merchant": "Shell",
+      "amount": 30,
+      "cardholder": "Hadar Cohen",
+      "date": "2026-02-20",
+      "txnId": "50388af1-f631-4fb5-ac8e-bd119c3588b3"
     },
     {
       "type": "missing_receipt",
-      "merchant": "Yekev Oren",
-      "amount": 35.25,
-      "cardholder": "Ori Bar",
-      "date": "2026-02-14",
-      "txnId": "bd67886a-0df6-4872-9430-5d25191f3252"
+      "merchant": "Ayu Sushi & Noodles",
+      "amount": 26.08,
+      "cardholder": "Libi Bar-On",
+      "date": "2026-02-22",
+      "txnId": "8ffefdcd-ac13-4b39-9f48-4243d0cdc38b"
+    },
+    {
+      "type": "missing_receipt",
+      "merchant": "ORYOSSS",
+      "amount": 25.51,
+      "cardholder": "Shoshana Munk",
+      "date": "2026-02-22",
+      "txnId": "203f3ecc-bfc6-4d48-a69e-6278035ddc93"
+    },
+    {
+      "type": "policy_exception",
+      "merchant": "The Kitchen at MCASD",
+      "amount": 24.41,
+      "cardholder": "Maya Steinberg",
+      "date": "2026-02-18",
+      "reason": "Policy violation flagged by Ramp"
     }
   ],
   "expenseSummary": {
-    "totalSpend7d": 12226.01,
-    "totalSpend30d": 18705.23,
+    "totalSpend7d": 11796.92,
+    "totalSpend30d": 11796.92,
     "byDepartment": [
       {
         "dept": "Programs",
-        "amount": 10072.07,
-        "txnCount": 50
-      },
-      {
-        "dept": "Development",
-        "amount": 4270.93,
-        "txnCount": 18
+        "amount": 8839.03,
+        "txnCount": 53
       },
       {
         "dept": "Admin",
-        "amount": 2061.82,
-        "txnCount": 28
-      },
-      {
-        "dept": "Marketing",
-        "amount": 1645,
-        "txnCount": 2
+        "amount": 2388.94,
+        "txnCount": 32
       },
       {
         "dept": "Administration",
-        "amount": 557.41,
-        "txnCount": 1
+        "amount": 588.62,
+        "txnCount": 5
       },
       {
         "dept": "Legacy of Light Goldberg Institute for Holocaust Education",
         "amount": 98,
+        "txnCount": 1
+      },
+      {
+        "dept": "Development",
+        "amount": -52.67,
+        "txnCount": 8
+      },
+      {
+        "dept": "Marketing",
+        "amount": -65,
         "txnCount": 1
       }
     ],
@@ -196,23 +188,13 @@
         "txnCount": 9
       },
       {
-        "merchant": "El Al",
-        "amount": 4340,
-        "txnCount": 1
+        "merchant": "Amazon",
+        "amount": 672.64,
+        "txnCount": 17
       },
       {
-        "merchant": "monday.com",
-        "amount": 1710,
-        "txnCount": 1
-      },
-      {
-        "merchant": "D.Z. Akin's",
-        "amount": 975.63,
-        "txnCount": 1
-      },
-      {
-        "merchant": "Republic Services",
-        "amount": 557.41,
+        "merchant": "Anthropic",
+        "amount": 475,
         "txnCount": 1
       },
       {
@@ -221,27 +203,37 @@
         "txnCount": 1
       },
       {
-        "merchant": "Amazon",
-        "amount": 356.45,
-        "txnCount": 20
-      },
-      {
         "merchant": "Docusign",
         "amount": 285,
         "txnCount": 1
       },
       {
-        "merchant": "Staples",
-        "amount": 250.52,
-        "txnCount": 2
+        "merchant": "The Home Depot",
+        "amount": 260.59,
+        "txnCount": 1
       },
       {
         "merchant": "Afi Technologies",
         "amount": 239.99,
         "txnCount": 1
+      },
+      {
+        "merchant": "70 Faces Media",
+        "amount": 180,
+        "txnCount": 1
+      },
+      {
+        "merchant": "The Taj Mahal Palace",
+        "amount": 172.58,
+        "txnCount": 1
+      },
+      {
+        "merchant": "Shell",
+        "amount": 171.8,
+        "txnCount": 4
       }
     ],
-    "receiptComplianceRate": 77.0
+    "receiptComplianceRate": 65.0
   },
   "budgetPace": [
     {
@@ -329,7 +321,7 @@
   },
   "glHealth": {
     "manualEntries7d": 0,
-    "unclearedItems30d": 63,
+    "unclearedItems30d": 34,
     "apAgingBuckets": [
       {
         "bucket": "0-30",
@@ -354,9 +346,9 @@
     ]
   },
   "kpis": {
-    "totalSpendThisWeek": 12226.01,
-    "missingReceipts": 9,
-    "receiptComplianceRate": 77.0,
+    "totalSpendThisWeek": 11796.92,
+    "missingReceipts": 11,
+    "receiptComplianceRate": 65.0,
     "apOutstanding": 3687917.65,
     "overBudgetDepts": 4,
     "dormantCards": 0

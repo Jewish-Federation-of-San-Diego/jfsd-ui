@@ -1,27 +1,22 @@
 {
-  "asOfDate": "2026-02-20 06:04",
+  "asOfDate": "2026-02-24 09:32",
   "annualCampaign": {
     "name": "Annual Campaign 26",
     "goal": 9000000,
-    "raised": 5918239.29,
-    "pctOfGoal": 65.8,
-    "donorCount": 1013,
-    "avgGift": 5842.0,
-    "priorYearSamePoint": 7883609.27
+    "raised": 5991770.91,
+    "pctOfGoal": 66.6,
+    "donorCount": 1015,
+    "avgGift": 5903.0,
+    "priorYearSamePoint": 7905709.27
   },
   "momentum": {
-    "giftsThisWeek": 12,
-    "amountThisWeek": 40334.59,
-    "giftsLastWeek": 150,
-    "amountLastWeek": 135671.71,
-    "weekOverWeekPct": -70.3
+    "giftsThisWeek": 16,
+    "amountThisWeek": 7075.4,
+    "giftsLastWeek": 59,
+    "amountLastWeek": 117209.84,
+    "weekOverWeekPct": -94.0
   },
   "weeklyMomentum": [
-    {
-      "weekOf": "2025-12-29",
-      "gifts": 189,
-      "amount": 404295.34
-    },
     {
       "weekOf": "2026-01-05",
       "gifts": 121,
@@ -44,128 +39,133 @@
     },
     {
       "weekOf": "2026-02-02",
-      "gifts": 74,
-      "amount": 27692.85
+      "gifts": 75,
+      "amount": 28525.85
     },
     {
       "weekOf": "2026-02-09",
-      "gifts": 150,
-      "amount": 135671.71
+      "gifts": 170,
+      "amount": 145540.33
     },
     {
       "weekOf": "2026-02-16",
-      "gifts": 12,
-      "amount": 40334.59
+      "gifts": 59,
+      "amount": 117209.84
+    },
+    {
+      "weekOf": "2026-02-23",
+      "gifts": 16,
+      "amount": 7075.4
     }
   ],
   "donorBreakdown": {
-    "newDonors": 204,
-    "returningDonors": 576,
+    "newDonors": 205,
+    "returningDonors": 578,
     "lybuntRecovered": 103,
-    "retentionRate": 30.9
+    "retentionRate": 31.0
   },
   "givingLevels": [
     {
       "level": "$1-99",
       "donors": 151,
-      "amount": 6454.99
+      "amount": 6449.61
     },
     {
       "level": "$100-499",
-      "donors": 328,
-      "amount": 70117.92
+      "donors": 329,
+      "amount": 70281.92
     },
     {
       "level": "$500-999",
-      "donors": 128,
-      "amount": 73415.88
+      "donors": 129,
+      "amount": 73955.88
     },
     {
       "level": "$1K-4,999",
-      "donors": 222,
-      "amount": 389447.27
+      "donors": 223,
+      "amount": 393947.27
     },
     {
       "level": "$5K-9,999",
-      "donors": 91,
-      "amount": 509147.73
+      "donors": 89,
+      "amount": 499147.73
     },
     {
       "level": "$10K-24,999",
-      "donors": 60,
-      "amount": 731305.82
+      "donors": 61,
+      "amount": 758805.82
     },
     {
       "level": "$25K+",
       "donors": 32,
-      "amount": 4137349.69
+      "amount": 4188182.69
     }
   ],
   "topGiftsThisWeek": [
     {
-      "name": "Rita S. Hartman Z\"L",
-      "amount": 13000.0,
-      "campaign": "Endowment - FY26",
-      "date": "2026-02-19"
+      "name": "Jewish Community Foundation",
+      "amount": 3000.0,
+      "campaign": "DRM Call 2025",
+      "date": "2026-02-23"
     },
     {
-      "name": "Rady Foundation",
-      "amount": 10000.0,
-      "campaign": "DRM - FY26",
-      "date": "2026-02-19"
+      "name": "Jewish Community Foundation",
+      "amount": 1000.0,
+      "campaign": "FED360 - FY26 - Donations - Attended",
+      "date": "2026-02-23"
     },
     {
-      "name": "Howard A Katz",
-      "amount": 10000.0,
-      "campaign": "DRM - FY26",
-      "date": "2026-02-19"
+      "name": "Jewish Community Foundation",
+      "amount": 1000.0,
+      "campaign": "FEDERATION 360 - FY25",
+      "date": "2026-02-23"
     },
     {
-      "name": "Dafgiving360",
-      "amount": 2500.0,
-      "campaign": "DRM - FY26",
-      "date": "2026-02-19"
-    },
-    {
-      "name": "Vivian Giudice",
-      "amount": 2000.0,
-      "campaign": "Unsolicited Annual Gifts - FY26",
-      "date": "2026-02-19"
-    },
-    {
-      "name": "Vera Pienknagura",
+      "name": "Jewish Community Foundation",
       "amount": 1000.0,
       "campaign": "Unsolicited Annual Gifts - FY26",
-      "date": "2026-02-17"
+      "date": "2026-02-23"
     },
     {
-      "name": "General Atomics",
-      "amount": 748.38,
+      "name": "Jewish Community Foundation",
+      "amount": 540.0,
+      "campaign": "FED360 - FY26 - Donations - Attended",
+      "date": "2026-02-23"
+    },
+    {
+      "name": "Schindler Brokerage LLC",
+      "amount": 208.7,
       "campaign": "Unsolicited Annual Gifts - FY26",
-      "date": "2026-02-19"
+      "date": "2026-02-23"
     },
     {
-      "name": "Alexandra Shubin Hirschhorn",
-      "amount": 598.0,
-      "campaign": "Payment on Pledge - FY26",
-      "date": "2026-02-16"
-    },
-    {
-      "name": "Give Lively Foundation Inc.",
-      "amount": 235.81,
+      "name": "Schindler Brokerage LLC",
+      "amount": 208.7,
       "campaign": "Unsolicited Annual Gifts - FY26",
-      "date": "2026-02-19"
+      "date": "2026-02-23"
     },
     {
-      "name": "Nigel Goldenfeld",
-      "amount": 100.0,
-      "campaign": "Monthly - FY26",
-      "date": "2026-02-19"
+      "name": "Jewish Community Foundation",
+      "amount": 118.0,
+      "campaign": "Tributes - FY26",
+      "date": "2026-02-23"
+    },
+    {
+      "name": "Jason Bercovitch",
+      "amount": 0.0,
+      "campaign": "Yom HaShoah - FY26",
+      "date": "2026-02-24"
+    },
+    {
+      "name": "Daniel Eyal",
+      "amount": 0.0,
+      "campaign": "Yom HaShoah - FY26",
+      "date": "2026-02-23"
     }
   ],
   "pipeline": {
-    "openPledges": 634,
-    "openPledgeAmount": 13856172.15,
+    "openPledges": 630,
+    "openPledgeAmount": 13841222.15,
     "expectedThisMonth": 175.0
   },
   "campaigns": [
@@ -199,9 +199,9 @@
     },
     {
       "name": "Tributes - FY26",
-      "raised": 15855.97,
+      "raised": 17573.97,
       "goal": 0.0,
-      "donors": 76,
+      "donors": 80,
       "pctOfGoal": 0
     },
     {
@@ -220,16 +220,16 @@
     },
     {
       "name": "Mission to India - FY26",
-      "raised": 402817.0,
+      "raised": 406147.0,
       "goal": 0.0,
-      "donors": 71,
+      "donors": 74,
       "pctOfGoal": 0
     },
     {
       "name": "Monthly - FY26",
-      "raised": 18295.23,
+      "raised": 17893.44,
       "goal": 0.0,
-      "donors": 214,
+      "donors": 220,
       "pctOfGoal": 0
     },
     {
@@ -276,9 +276,9 @@
     },
     {
       "name": "DRM - FY26",
-      "raised": 1696701.24,
+      "raised": 1756701.24,
       "goal": 0.0,
-      "donors": 130,
+      "donors": 132,
       "pctOfGoal": 0
     },
     {

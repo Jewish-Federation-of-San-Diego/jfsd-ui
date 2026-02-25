@@ -1,0 +1,4746 @@
+[
+  {
+    "id": "206680076951",
+    "name": "Fed360 KBYG",
+    "subject": "Know Before You Go \u2013 FED360",
+    "state": "DRAFT",
+    "type": "BATCH_EMAIL",
+    "created": "2026-02-02T21:40:09.695Z",
+    "updated": "2026-02-03T00:12:27.986Z",
+    "publishedAt": null,
+    "campaignName": "FED360 - FY26",
+    "campaignIds": []
+  },
+  {
+    "id": "206663659013",
+    "name": "01b - Book Your Interview for IU 2026! (Clone)",
+    "subject": "Thank you for your interest in Israel Unfiltered 2026!",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2026-02-02T18:31:11.653Z",
+    "updated": "2026-02-02T18:34:47.999Z",
+    "publishedAt": "2026-02-02T18:33:41.221Z",
+    "campaignName": null,
+    "campaignIds": [
+      "401637592"
+    ],
+    "stats": {
+      "sent": 2,
+      "delivered": 2,
+      "opens": 1,
+      "clicks": 1,
+      "bounces": 0,
+      "unsubscribes": 0,
+      "spamReports": 0
+    },
+    "openRate": 50.0,
+    "clickRate": 50.0
+  },
+  {
+    "id": "206425438515",
+    "name": "Federation Staff Newsletter #20",
+    "subject": "Federation Staff Newsletter",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2026-01-30T19:12:44.862Z",
+    "updated": "2026-01-30T22:01:22.363Z",
+    "publishedAt": "2026-01-30T20:34:19.661Z",
+    "campaignName": "Federation Internal Newsletter - FY26",
+    "campaignIds": [
+      "401312113"
+    ],
+    "stats": {
+      "sent": 37,
+      "delivered": 37,
+      "opens": 21,
+      "clicks": 5,
+      "bounces": 0,
+      "unsubscribes": 0,
+      "spamReports": 0
+    },
+    "openRate": 56.8,
+    "clickRate": 13.5
+  },
+  {
+    "id": "206420027436",
+    "name": "Heidi's Shabbat Message 1.30.26",
+    "subject": "From Mexico City to San Diego: Jewish Connection, Resilience, and Hope",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2026-01-30T16:42:27.809Z",
+    "updated": "2026-01-30T21:03:07.525Z",
+    "publishedAt": "2026-01-30T20:47:30.373Z",
+    "campaignName": null,
+    "campaignIds": [
+      "401313517"
+    ],
+    "stats": {
+      "sent": 20228,
+      "delivered": 20182,
+      "opens": 3191,
+      "clicks": 210,
+      "bounces": 5,
+      "unsubscribes": 90,
+      "spamReports": 3
+    },
+    "openRate": 15.8,
+    "clickRate": 1.0
+  },
+  {
+    "id": "206240593760",
+    "name": "Points of Pride Jan '26 1.29.26",
+    "subject": "Points of Pride: All Made Possible By You",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2026-01-28T17:56:52.548Z",
+    "updated": "2026-01-29T22:07:24.540Z",
+    "publishedAt": "2026-01-29T21:33:06.495Z",
+    "campaignName": "Points of Pride",
+    "campaignIds": [
+      "401155421"
+    ],
+    "stats": {
+      "sent": 295,
+      "delivered": 295,
+      "opens": 93,
+      "clicks": 14,
+      "bounces": 0,
+      "unsubscribes": 1,
+      "spamReports": 0
+    },
+    "openRate": 31.5,
+    "clickRate": 4.7
+  },
+  {
+    "id": "196438750370",
+    "name": "Points of Pride Sep '25 9.25.25",
+    "subject": "Points of Pride: All Made Possible By You",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-09-22T20:06:30.750Z",
+    "updated": "2026-01-29T21:52:43.105Z",
+    "publishedAt": "2025-09-26T16:47:58.932Z",
+    "campaignName": "Points of Pride",
+    "campaignIds": [
+      "382459218"
+    ],
+    "stats": {
+      "sent": 205,
+      "delivered": 205,
+      "opens": 80,
+      "clicks": 9,
+      "bounces": 0,
+      "unsubscribes": 0,
+      "spamReports": 0
+    },
+    "openRate": 39.0,
+    "clickRate": 4.4
+  },
+  {
+    "id": "190754505595",
+    "name": "Points of Pride May '25 5.29.25",
+    "subject": "Points of Pride: All Made Possible By You",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-05-28T20:37:19.104Z",
+    "updated": "2026-01-29T21:52:32.614Z",
+    "publishedAt": "2025-05-29T23:15:36.710Z",
+    "campaignName": "Points of Pride",
+    "campaignIds": [
+      "363959818"
+    ],
+    "stats": {
+      "sent": 338,
+      "delivered": 333,
+      "opens": 105,
+      "clicks": 30,
+      "bounces": 5,
+      "unsubscribes": 0,
+      "spamReports": 0
+    },
+    "openRate": 31.5,
+    "clickRate": 9.0
+  },
+  {
+    "id": "200104393304",
+    "name": "Points of Pride Nov '25 11.21.25",
+    "subject": "Points of Pride: All Made Possible By You",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-11-18T16:45:03.495Z",
+    "updated": "2026-01-29T21:52:06.594Z",
+    "publishedAt": "2025-11-19T22:48:02.897Z",
+    "campaignName": "Points of Pride",
+    "campaignIds": [
+      "390784570"
+    ],
+    "stats": {
+      "sent": 191,
+      "delivered": 191,
+      "opens": 80,
+      "clicks": 4,
+      "bounces": 0,
+      "unsubscribes": 0,
+      "spamReports": 0
+    },
+    "openRate": 41.9,
+    "clickRate": 2.1
+  },
+  {
+    "id": "206241046306",
+    "name": "Ziv & Gali Community Event 1.28.26",
+    "subject": "An Evening with Returned Hostages Ziv & Gali Berman",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2026-01-28T20:07:40.100Z",
+    "updated": "2026-01-29T18:40:21.457Z",
+    "publishedAt": "2026-01-29T18:35:52.840Z",
+    "campaignName": null,
+    "campaignIds": [
+      "401119030"
+    ],
+    "stats": {
+      "sent": 20365,
+      "delivered": 20323,
+      "opens": 3281,
+      "clicks": 213,
+      "bounces": 5,
+      "unsubscribes": 67,
+      "spamReports": 6
+    },
+    "openRate": 16.1,
+    "clickRate": 1.0
+  },
+  {
+    "id": "206240721297",
+    "name": "Spark Launch (Clone for Intesa)",
+    "subject": "Spark Interactive Launch - May 3rd!",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2026-01-28T18:25:48.025Z",
+    "updated": "2026-01-28T18:29:44.543Z",
+    "publishedAt": "2026-01-28T18:28:22.281Z",
+    "campaignName": "Holocaust Education - FY26",
+    "campaignIds": [
+      "400904298"
+    ],
+    "stats": {
+      "sent": 1,
+      "delivered": 1,
+      "opens": 1,
+      "clicks": 1,
+      "bounces": 0,
+      "unsubscribes": 0,
+      "spamReports": 0
+    },
+    "openRate": 100.0,
+    "clickRate": 100.0
+  },
+  {
+    "id": "206143204665",
+    "name": "Spark Launch (Correction)",
+    "subject": "Date Correction: Join Us SUNDAY, May 3 for Spark Interactive",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2026-01-28T04:19:28.477Z",
+    "updated": "2026-01-28T05:15:04.610Z",
+    "publishedAt": "2026-01-28T05:11:16.237Z",
+    "campaignName": "Holocaust Education - FY26",
+    "campaignIds": [
+      "400789800"
+    ],
+    "stats": {
+      "sent": 628,
+      "delivered": 624,
+      "opens": 139,
+      "clicks": 19,
+      "bounces": 3,
+      "unsubscribes": 1,
+      "spamReports": 0
+    },
+    "openRate": 22.3,
+    "clickRate": 3.0
+  },
+  {
+    "id": "206099924739",
+    "name": "Spark Launch",
+    "subject": "Spark Interactive Launch - May 3rd!",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2026-01-27T15:35:08.306Z",
+    "updated": "2026-01-28T01:14:52.765Z",
+    "publishedAt": "2026-01-28T01:11:10.371Z",
+    "campaignName": null,
+    "campaignIds": [
+      "400764680"
+    ],
+    "stats": {
+      "sent": 871,
+      "delivered": 824,
+      "opens": 166,
+      "clicks": 40,
+      "bounces": 46,
+      "unsubscribes": 2,
+      "spamReports": 0
+    },
+    "openRate": 20.1,
+    "clickRate": 4.9
+  },
+  {
+    "id": "206125477172",
+    "name": "Holocaust Rem. Day 2026",
+    "subject": "81 Years After Auschwitz: Remembering, Resisting, and Responding",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2026-01-27T20:42:40.032Z",
+    "updated": "2026-01-27T21:33:27.392Z",
+    "publishedAt": "2026-01-27T21:28:52.474Z",
+    "campaignName": null,
+    "campaignIds": [
+      "400738010"
+    ],
+    "stats": {
+      "sent": 20431,
+      "delivered": 20361,
+      "opens": 3146,
+      "clicks": 124,
+      "bounces": 36,
+      "unsubscribes": 55,
+      "spamReports": 2
+    },
+    "openRate": 15.5,
+    "clickRate": 0.6
+  },
+  {
+    "id": "205765825622",
+    "name": "Fed360 01.26.26 Last Chance",
+    "subject": "Only a Few Days Left to Get Your Ticket",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2026-01-23T18:15:59.779Z",
+    "updated": "2026-01-26T20:41:55.037Z",
+    "publishedAt": "2026-01-26T20:37:07.918Z",
+    "campaignName": "FED360 - FY26",
+    "campaignIds": [
+      "400483601"
+    ],
+    "stats": {
+      "sent": 20459,
+      "delivered": 20382,
+      "opens": 1935,
+      "clicks": 106,
+      "bounces": 41,
+      "unsubscribes": 55,
+      "spamReports": 5
+    },
+    "openRate": 9.5,
+    "clickRate": 0.5
+  },
+  {
+    "id": "205592467003",
+    "name": "GAP 2026 1.22.26",
+    "subject": "GAP 2026: Applications Now Open!",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2026-01-21T23:35:10.257Z",
+    "updated": "2026-01-22T23:03:58.571Z",
+    "publishedAt": "2026-01-22T19:34:17.242Z",
+    "campaignName": null,
+    "campaignIds": [
+      "399933985"
+    ],
+    "stats": {
+      "sent": 19932,
+      "delivered": 19858,
+      "opens": 2107,
+      "clicks": 27,
+      "bounces": 40,
+      "unsubscribes": 96,
+      "spamReports": 3
+    },
+    "openRate": 10.6,
+    "clickRate": 0.1
+  },
+  {
+    "id": "205695397466",
+    "name": "Fed360 01.22.26 (Clone)",
+    "subject": "Last Chance: FED360 tickets are almost sold out!",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2026-01-22T20:03:05.958Z",
+    "updated": "2026-01-22T20:12:19.669Z",
+    "publishedAt": "2026-01-22T20:05:40.053Z",
+    "campaignName": "FED360 - FY26",
+    "campaignIds": [
+      "399945696"
+    ],
+    "stats": {
+      "sent": 9811,
+      "delivered": 9742,
+      "opens": 95,
+      "clicks": 42,
+      "bounces": 57,
+      "unsubscribes": 14,
+      "spamReports": 2
+    },
+    "openRate": 1.0,
+    "clickRate": 0.4
+  },
+  {
+    "id": "205485366928",
+    "name": "Fed360 01.22.26",
+    "subject": "Last Chance: FED360 tickets are almost sold out!",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2026-01-20T19:59:22.419Z",
+    "updated": "2026-01-22T19:05:07.518Z",
+    "publishedAt": "2026-01-22T17:07:29.707Z",
+    "campaignName": "FED360 - FY26",
+    "campaignIds": [
+      "399777352"
+    ],
+    "stats": {
+      "sent": 10310,
+      "delivered": 10219,
+      "opens": 1723,
+      "clicks": 94,
+      "bounces": 70,
+      "unsubscribes": 62,
+      "spamReports": 5
+    },
+    "openRate": 16.9,
+    "clickRate": 0.9
+  },
+  {
+    "id": "204252206971",
+    "name": "Outstanding Invoice",
+    "subject": "Upcoming Payment Reminder \u2013 Israel Unfiltered 2026",
+    "state": "DRAFT",
+    "type": "BATCH_EMAIL",
+    "created": "2026-01-05T19:33:44.248Z",
+    "updated": "2026-01-21T23:01:36.560Z",
+    "publishedAt": null,
+    "campaignName": null,
+    "campaignIds": []
+  },
+  {
+    "id": "199612329596",
+    "name": "Info Session Reminder",
+    "subject": "Join us for the first Israel Unfiltered Info Session!",
+    "state": "DRAFT",
+    "type": "BATCH_EMAIL",
+    "created": "2025-11-13T00:49:46.315Z",
+    "updated": "2026-01-21T23:01:15.462Z",
+    "publishedAt": null,
+    "campaignName": null,
+    "campaignIds": []
+  },
+  {
+    "id": "199993212689",
+    "name": "Template 1",
+    "subject": "Israel Unfiltered: A Life-Changing Teen Trip \u2014 Summer 2026",
+    "state": "DRAFT",
+    "type": "BATCH_EMAIL",
+    "created": "2025-11-17T21:39:07.314Z",
+    "updated": "2026-01-21T23:01:00.638Z",
+    "publishedAt": null,
+    "campaignName": null,
+    "campaignIds": []
+  },
+  {
+    "id": "199616098925",
+    "name": "IU Toolkit",
+    "subject": "Your Israel Unfiltered Toolkit is Here!",
+    "state": "DRAFT",
+    "type": "BATCH_EMAIL",
+    "created": "2025-11-13T00:44:49.194Z",
+    "updated": "2026-01-21T23:00:44.044Z",
+    "publishedAt": null,
+    "campaignName": null,
+    "campaignIds": []
+  },
+  {
+    "id": "200117142186",
+    "name": "Final Travel Updates + Reminders Before We Depart for Israel!",
+    "subject": "Israel Unfiltered Waivers and Forms",
+    "state": "DRAFT",
+    "type": "BATCH_EMAIL",
+    "created": "2025-11-18T19:03:21.448Z",
+    "updated": "2026-01-21T23:00:21.895Z",
+    "publishedAt": null,
+    "campaignName": null,
+    "campaignIds": []
+  },
+  {
+    "id": "199616098891",
+    "name": "Family Shabbat invite",
+    "subject": "You\u2019re Invited: Israel Unfiltered Family Shabbat \u2013 Friday, June 13 at 6 PM",
+    "state": "DRAFT",
+    "type": "BATCH_EMAIL",
+    "created": "2025-11-13T00:43:05.645Z",
+    "updated": "2026-01-21T23:00:05.906Z",
+    "publishedAt": null,
+    "campaignName": null,
+    "campaignIds": []
+  },
+  {
+    "id": "199616130212",
+    "name": "IU 2026 post-trip survey",
+    "subject": "IU post-trip survey",
+    "state": "DRAFT",
+    "type": "BATCH_EMAIL",
+    "created": "2025-11-13T00:46:33.715Z",
+    "updated": "2026-01-21T22:59:50.600Z",
+    "publishedAt": null,
+    "campaignName": null,
+    "campaignIds": []
+  },
+  {
+    "id": "199604380689",
+    "name": "Israel Travel Update for Parents",
+    "subject": "Important Israel Travel Update",
+    "state": "DRAFT",
+    "type": "BATCH_EMAIL",
+    "created": "2025-11-13T00:50:01.948Z",
+    "updated": "2026-01-21T22:14:52.249Z",
+    "publishedAt": null,
+    "campaignName": null,
+    "campaignIds": []
+  },
+  {
+    "id": "200001267833",
+    "name": "1st pre-trip meeting reminder",
+    "subject": "February 10th Pre-Trip Meeting Reminders",
+    "state": "DRAFT",
+    "type": "BATCH_EMAIL",
+    "created": "2025-11-17T23:33:07.438Z",
+    "updated": "2026-01-21T22:14:33.539Z",
+    "publishedAt": null,
+    "campaignName": null,
+    "campaignIds": []
+  },
+  {
+    "id": "205587113520",
+    "name": "Fed & FCC MLK Exclusion Response",
+    "subject": "Our Unified Response to Antisemitic Exclusion in San Diego",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2026-01-21T19:52:02.732Z",
+    "updated": "2026-01-21T22:04:36.216Z",
+    "publishedAt": "2026-01-21T21:43:30.128Z",
+    "campaignName": null,
+    "campaignIds": [
+      "399767719"
+    ],
+    "stats": {
+      "sent": 20657,
+      "delivered": 20604,
+      "opens": 4312,
+      "clicks": 425,
+      "bounces": 16,
+      "unsubscribes": 123,
+      "spamReports": 7
+    },
+    "openRate": 20.9,
+    "clickRate": 2.1
+  },
+  {
+    "id": "199995593570",
+    "name": "04 - Welcome to RootOne",
+    "subject": "Welcome to RootOne!",
+    "state": "AUTOMATED_DRAFT",
+    "type": "AUTOMATED_EMAIL",
+    "created": "2025-11-18T00:27:34.182Z",
+    "updated": "2026-01-21T18:30:44.152Z",
+    "publishedAt": "2026-01-13T00:03:27.605Z",
+    "campaignName": "Israel Unfiltered 2026",
+    "campaignIds": [
+      "397178970",
+      "397178689"
+    ]
+  },
+  {
+    "id": "200128123444",
+    "name": "05 - 2nd Payment Reminder",
+    "subject": "Payment Reminder \u2013 Israel Unfiltered 2026",
+    "state": "AUTOMATED",
+    "type": "AUTOMATED_EMAIL",
+    "created": "2025-11-18T22:06:30.965Z",
+    "updated": "2026-01-21T18:30:13.686Z",
+    "publishedAt": "2026-01-21T18:30:13.180Z",
+    "campaignName": "Israel Unfiltered 2026",
+    "campaignIds": [
+      "397179899",
+      "397178688"
+    ]
+  },
+  {
+    "id": "199994055597",
+    "name": "03 - Waivers and forms instructions",
+    "subject": "Israel Unfiltered Waivers and Forms",
+    "state": "AUTOMATED",
+    "type": "AUTOMATED_EMAIL",
+    "created": "2025-11-17T23:50:34.008Z",
+    "updated": "2026-01-21T18:29:44.412Z",
+    "publishedAt": "2026-01-21T18:29:43.852Z",
+    "campaignName": "Israel Unfiltered 2026",
+    "campaignIds": [
+      "397179263",
+      "397179953"
+    ]
+  },
+  {
+    "id": "200125729971",
+    "name": "02b - Rejected After Interview",
+    "subject": "Regarding Your Israel Unfiltered Interview",
+    "state": "AUTOMATED",
+    "type": "AUTOMATED_EMAIL",
+    "created": "2025-11-18T21:41:47.931Z",
+    "updated": "2026-01-21T18:29:16.592Z",
+    "publishedAt": "2026-01-21T18:29:16.112Z",
+    "campaignName": "Israel Unfiltered 2026",
+    "campaignIds": [
+      "397178596",
+      "397178467"
+    ]
+  },
+  {
+    "id": "200119575353",
+    "name": "02a - Accepted After Interview",
+    "subject": "Congratulations! You've Been Accepted for IU 2026!",
+    "state": "AUTOMATED",
+    "type": "AUTOMATED_EMAIL",
+    "created": "2025-11-18T20:05:23.421Z",
+    "updated": "2026-01-21T18:27:25.620Z",
+    "publishedAt": "2026-01-21T18:27:25.005Z",
+    "campaignName": null,
+    "campaignIds": [
+      "397178454",
+      "397175485"
+    ]
+  },
+  {
+    "id": "200118396952",
+    "name": "01b - Book Your Interview for IU 2026!",
+    "subject": "Thank you for your interest in Israel Unfiltered 2026!",
+    "state": "AUTOMATED",
+    "type": "AUTOMATED_EMAIL",
+    "created": "2025-11-18T19:31:24.225Z",
+    "updated": "2026-01-21T18:26:57.527Z",
+    "publishedAt": "2026-01-21T18:26:56.828Z",
+    "campaignName": null,
+    "campaignIds": [
+      "398389719",
+      "397053031",
+      "397054469"
+    ]
+  },
+  {
+    "id": "205226013337",
+    "name": "LEADS 2026 Announcement 1.20.26",
+    "subject": "Apply Now for LEADS",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2026-01-16T16:54:19.663Z",
+    "updated": "2026-01-21T00:04:27.027Z",
+    "publishedAt": "2026-01-20T21:58:50.407Z",
+    "campaignName": null,
+    "campaignIds": [
+      "399559889"
+    ],
+    "stats": {
+      "sent": 2785,
+      "delivered": 2783,
+      "opens": 352,
+      "clicks": 13,
+      "bounces": 1,
+      "unsubscribes": 9,
+      "spamReports": 0
+    },
+    "openRate": 12.6,
+    "clickRate": 0.5
+  },
+  {
+    "id": "199616099072",
+    "name": "Registration is Open Email",
+    "subject": "Israel Unfiltered: Registration Now Open!",
+    "state": "DRAFT",
+    "type": "BATCH_EMAIL",
+    "created": "2025-11-13T00:49:29.632Z",
+    "updated": "2026-01-19T21:25:52.613Z",
+    "publishedAt": null,
+    "campaignName": null,
+    "campaignIds": []
+  },
+  {
+    "id": "205244528414",
+    "name": "Federation Staff Newsletter #19",
+    "subject": "Federation Staff Newsletter",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2026-01-16T19:44:24.069Z",
+    "updated": "2026-01-16T22:01:34.915Z",
+    "publishedAt": "2026-01-16T20:43:16.853Z",
+    "campaignName": "Federation Internal Newsletter - FY26",
+    "campaignIds": [
+      "398968421"
+    ],
+    "stats": {
+      "sent": 34,
+      "delivered": 34,
+      "opens": 25,
+      "clicks": 3,
+      "bounces": 0,
+      "unsubscribes": 0,
+      "spamReports": 0
+    },
+    "openRate": 73.5,
+    "clickRate": 8.8
+  },
+  {
+    "id": "205169756507",
+    "name": "Book Your Interview for IU 2026! (to early interests)",
+    "subject": "Thank you for your interest in Israel Unfiltered 2026!",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2026-01-16T01:08:29.637Z",
+    "updated": "2026-01-16T21:01:06.391Z",
+    "publishedAt": "2026-01-16T17:58:59.986Z",
+    "campaignName": null,
+    "campaignIds": [
+      "398944344"
+    ],
+    "stats": {
+      "sent": 13,
+      "delivered": 13,
+      "opens": 4,
+      "clicks": 0,
+      "bounces": 0,
+      "unsubscribes": 0,
+      "spamReports": 0
+    },
+    "openRate": 30.8,
+    "clickRate": 0.0
+  },
+  {
+    "id": "204538311825",
+    "name": "The Community Trip FAQs",
+    "subject": "The Community Trip to Israel: Your Questions Answered",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2026-01-08T21:11:33.947Z",
+    "updated": "2026-01-16T00:35:52.682Z",
+    "publishedAt": "2026-01-15T22:30:53.006Z",
+    "campaignName": "The Community Trip - CY27",
+    "campaignIds": [
+      "398821496"
+    ],
+    "stats": {
+      "sent": 205,
+      "delivered": 205,
+      "opens": 94,
+      "clicks": 19,
+      "bounces": 0,
+      "unsubscribes": 0,
+      "spamReports": 0
+    },
+    "openRate": 45.9,
+    "clickRate": 9.3
+  },
+  {
+    "id": "205147045656",
+    "name": "IU Registration is Open Email",
+    "subject": "Israel Unfiltered: Registration Now Open!",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2026-01-15T18:08:41.572Z",
+    "updated": "2026-01-15T22:30:50.208Z",
+    "publishedAt": "2026-01-15T22:26:23.714Z",
+    "campaignName": "Israel Unfiltered 2026",
+    "campaignIds": [
+      "398820699"
+    ],
+    "stats": {
+      "sent": 20726,
+      "delivered": 20679,
+      "opens": 1919,
+      "clicks": 42,
+      "bounces": 14,
+      "unsubscribes": 113,
+      "spamReports": 7
+    },
+    "openRate": 9.3,
+    "clickRate": 0.2
+  },
+  {
+    "id": "204940340591",
+    "name": "LOJ Luncheon Announcement 1.13.26",
+    "subject": "Save the Date, Lions!",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2026-01-13T19:32:57.071Z",
+    "updated": "2026-01-14T22:06:02.259Z",
+    "publishedAt": "2026-01-14T21:47:44.523Z",
+    "campaignName": "Women's Philanthropy - FY26",
+    "campaignIds": [
+      "398613893"
+    ],
+    "stats": {
+      "sent": 251,
+      "delivered": 251,
+      "opens": 80,
+      "clicks": 6,
+      "bounces": 0,
+      "unsubscribes": 0,
+      "spamReports": 0
+    },
+    "openRate": 31.9,
+    "clickRate": 2.4
+  },
+  {
+    "id": "204977355171",
+    "name": "FED360 Template",
+    "subject": "Grab your ticket to FED360 before the New Year",
+    "state": "DRAFT",
+    "type": "BATCH_EMAIL",
+    "created": "2026-01-13T23:17:42.741Z",
+    "updated": "2026-01-13T23:17:44.622Z",
+    "publishedAt": null,
+    "campaignName": "FED360 - FY26",
+    "campaignIds": []
+  },
+  {
+    "id": "204821360041",
+    "name": "StandUpSD Email #1",
+    "subject": "Tools to Stand Up Against Antisemitism",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2026-01-12T19:33:54.026Z",
+    "updated": "2026-01-12T23:19:19.346Z",
+    "publishedAt": "2026-01-12T20:39:54.183Z",
+    "campaignName": "Antisemitism - FY26",
+    "campaignIds": [
+      "398156501"
+    ],
+    "stats": {
+      "sent": 20946,
+      "delivered": 20860,
+      "opens": 2214,
+      "clicks": 306,
+      "bounces": 53,
+      "unsubscribes": 97,
+      "spamReports": 0
+    },
+    "openRate": 10.6,
+    "clickRate": 1.5
+  },
+  {
+    "id": "204370519848",
+    "name": "Fed360 Ziv & Gali 01.07.26",
+    "subject": "Announcing FED360 Special Guests: A Story You\u2019ll Never Forget",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2026-01-06T17:23:57.479Z",
+    "updated": "2026-01-07T21:51:15.803Z",
+    "publishedAt": "2026-01-07T21:36:12.026Z",
+    "campaignName": "FED360 - FY26",
+    "campaignIds": [
+      "397382979"
+    ],
+    "stats": {
+      "sent": 21217,
+      "delivered": 21035,
+      "opens": 3994,
+      "clicks": 354,
+      "bounces": 154,
+      "unsubscribes": 186,
+      "spamReports": 3
+    },
+    "openRate": 19.0,
+    "clickRate": 1.7
+  },
+  {
+    "id": "203456809366",
+    "name": "Heidi's Shabbat Message 1.2.26",
+    "subject": "We Are Here. We Are Ready. Hineinu.",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-12-24T19:30:55.151Z",
+    "updated": "2026-01-02T18:04:54.958Z",
+    "publishedAt": "2025-12-31T21:50:33.794Z",
+    "campaignName": null,
+    "campaignIds": [
+      "396545415"
+    ],
+    "stats": {
+      "sent": 10056,
+      "delivered": 10001,
+      "opens": 1952,
+      "clicks": 67,
+      "bounces": 37,
+      "unsubscribes": 233,
+      "spamReports": 8
+    },
+    "openRate": 19.5,
+    "clickRate": 0.7
+  },
+  {
+    "id": "203459645766",
+    "name": "IU Information Sessions Coming Up",
+    "subject": "Join us for Israel Unfiltered 2026 Info Sessions!",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-12-24T22:40:25.017Z",
+    "updated": "2025-12-30T21:03:03.540Z",
+    "publishedAt": "2025-12-30T20:48:38.101Z",
+    "campaignName": null,
+    "campaignIds": [
+      "396441679"
+    ],
+    "stats": {
+      "sent": 10263,
+      "delivered": 10203,
+      "opens": 1871,
+      "clicks": 28,
+      "bounces": 41,
+      "unsubscribes": 163,
+      "spamReports": 7
+    },
+    "openRate": 18.3,
+    "clickRate": 0.3
+  },
+  {
+    "id": "203826486304",
+    "name": "EOY FY26 12.29.25",
+    "subject": "We Refuse to Disappear",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-12-29T19:14:02.588Z",
+    "updated": "2025-12-29T22:03:51.352Z",
+    "publishedAt": "2025-12-29T21:04:24.024Z",
+    "campaignName": null,
+    "campaignIds": [
+      "396329799"
+    ],
+    "stats": {
+      "sent": 10733,
+      "delivered": 10606,
+      "opens": 3683,
+      "clicks": 43,
+      "bounces": 107,
+      "unsubscribes": 357,
+      "spamReports": 12
+    },
+    "openRate": 34.7,
+    "clickRate": 0.4
+  },
+  {
+    "id": "203827857726",
+    "name": "New Staff Newsletter Template",
+    "subject": "",
+    "state": "DRAFT",
+    "type": "BATCH_EMAIL",
+    "created": "2025-12-29T19:23:18.503Z",
+    "updated": "2025-12-29T19:23:34.408Z",
+    "publishedAt": null,
+    "campaignName": null,
+    "campaignIds": []
+  },
+  {
+    "id": "203293418661",
+    "name": "Fed360 Reg. Reminder 12.28.25",
+    "subject": "Grab your ticket to FED360 before the New Year",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-12-22T21:44:12.333Z",
+    "updated": "2025-12-28T20:01:55.033Z",
+    "publishedAt": "2025-12-24T17:11:43.280Z",
+    "campaignName": "FED360 - FY26",
+    "campaignIds": [
+      "395897650"
+    ],
+    "stats": {
+      "sent": 14197,
+      "delivered": 11115,
+      "opens": 2215,
+      "clicks": 233,
+      "bounces": 3069,
+      "unsubscribes": 350,
+      "spamReports": 15
+    },
+    "openRate": 19.9,
+    "clickRate": 2.1
+  },
+  {
+    "id": "199207516168",
+    "name": "New Newsletter TEMPLATE_DRAFT",
+    "subject": "",
+    "state": "DRAFT",
+    "type": "BATCH_EMAIL",
+    "created": "2025-11-06T18:22:31.255Z",
+    "updated": "2025-12-19T23:06:01.738Z",
+    "publishedAt": null,
+    "campaignName": null,
+    "campaignIds": []
+  },
+  {
+    "id": "203026302518",
+    "name": "Federation Staff Newsletter #18",
+    "subject": "Federation Staff Newsletter",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-12-19T21:43:39.328Z",
+    "updated": "2025-12-19T22:01:56.042Z",
+    "publishedAt": "2025-12-19T22:00:53.381Z",
+    "campaignName": "Federation Internal Newsletter - FY26",
+    "campaignIds": [
+      "395361885"
+    ],
+    "stats": {
+      "sent": 33,
+      "delivered": 33,
+      "opens": 25,
+      "clicks": 4,
+      "bounces": 0,
+      "unsubscribes": 0,
+      "spamReports": 0
+    },
+    "openRate": 75.8,
+    "clickRate": 12.1
+  },
+  {
+    "id": "202742825612",
+    "name": "Fed360 Reg. Launch 12.17.25",
+    "subject": "Buy Your FED360 Ticket Now!",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-12-16T20:38:29.189Z",
+    "updated": "2025-12-17T22:05:23.672Z",
+    "publishedAt": "2025-12-17T19:29:36.349Z",
+    "campaignName": "FED360 - FY26",
+    "campaignIds": [
+      "394959338"
+    ],
+    "stats": {
+      "sent": 5403,
+      "delivered": 5400,
+      "opens": 1496,
+      "clicks": 194,
+      "bounces": 3,
+      "unsubscribes": 20,
+      "spamReports": 1
+    },
+    "openRate": 27.7,
+    "clickRate": 3.6
+  },
+  {
+    "id": "202652004921",
+    "name": "GAP 2026 12.15.25",
+    "subject": "GAP 2026: A Jewish teen experience in Budapest",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-12-15T19:56:19.081Z",
+    "updated": "2025-12-16T22:03:24.234Z",
+    "publishedAt": "2025-12-16T21:35:57.810Z",
+    "campaignName": null,
+    "campaignIds": [
+      "394788204"
+    ],
+    "stats": {
+      "sent": 135,
+      "delivered": 135,
+      "opens": 74,
+      "clicks": 7,
+      "bounces": 0,
+      "unsubscribes": 0,
+      "spamReports": 0
+    },
+    "openRate": 54.8,
+    "clickRate": 5.2
+  },
+  {
+    "id": "202655635311",
+    "name": "Fed360 Reg. Launch 12.16.25 Draft A",
+    "subject": "Buy Your FED360 Ticket Now",
+    "state": "DRAFT",
+    "type": "BATCH_EMAIL",
+    "created": "2025-12-15T20:18:08.317Z",
+    "updated": "2025-12-16T21:02:28.036Z",
+    "publishedAt": null,
+    "campaignName": "The Community Trip - CY27",
+    "campaignIds": []
+  },
+  {
+    "id": "202578274452",
+    "name": "Heidi Message Bondi Beach Shooting 12.14.25",
+    "subject": "We Will Not Let the Light Go Out",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-12-14T22:47:13.333Z",
+    "updated": "2025-12-14T23:45:50.559Z",
+    "publishedAt": "2025-12-14T23:42:31.516Z",
+    "campaignName": null,
+    "campaignIds": [
+      "394421212"
+    ],
+    "stats": {
+      "sent": 5530,
+      "delivered": 5520,
+      "opens": 1465,
+      "clicks": 86,
+      "bounces": 10,
+      "unsubscribes": 21,
+      "spamReports": 1
+    },
+    "openRate": 26.5,
+    "clickRate": 1.6
+  },
+  {
+    "id": "201434288232",
+    "name": "EOY FY26 12.12.25",
+    "subject": "Be the Light This Chanukah\u00a0",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-12-01T18:48:27.963Z",
+    "updated": "2025-12-12T18:06:17.227Z",
+    "publishedAt": "2025-12-12T17:14:52.842Z",
+    "campaignName": null,
+    "campaignIds": [
+      "394113004"
+    ],
+    "stats": {
+      "sent": 5664,
+      "delivered": 5658,
+      "opens": 2156,
+      "clicks": 16,
+      "bounces": 6,
+      "unsubscribes": 38,
+      "spamReports": 2
+    },
+    "openRate": 38.1,
+    "clickRate": 0.3
+  },
+  {
+    "id": "202137518400",
+    "name": "The Community Trip Promo 12.10.25",
+    "subject": "The Community Trip to Israel 2027: A Life-Changing Experience",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-12-09T23:11:30.016Z",
+    "updated": "2025-12-10T19:04:17.357Z",
+    "publishedAt": "2025-12-10T18:30:40.272Z",
+    "campaignName": "The Community Trip - CY27",
+    "campaignIds": [
+      "393879714"
+    ],
+    "stats": {
+      "sent": 5787,
+      "delivered": 5782,
+      "opens": 1437,
+      "clicks": 95,
+      "bounces": 5,
+      "unsubscribes": 16,
+      "spamReports": 0
+    },
+    "openRate": 24.9,
+    "clickRate": 1.6
+  },
+  {
+    "id": "201858545753",
+    "name": "Brunch Club TY 12.5.25",
+    "subject": "Thank you for attending the Women\u2019s Philanthropy Brunch Club",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-12-05T19:24:31.459Z",
+    "updated": "2025-12-05T22:03:56.474Z",
+    "publishedAt": "2025-12-05T21:26:04.613Z",
+    "campaignName": "Brunch Club FY26 - Dec 2025",
+    "campaignIds": [
+      "393198085"
+    ],
+    "stats": {
+      "sent": 111,
+      "delivered": 111,
+      "opens": 60,
+      "clicks": 36,
+      "bounces": 0,
+      "unsubscribes": 0,
+      "spamReports": 0
+    },
+    "openRate": 54.1,
+    "clickRate": 32.4
+  },
+  {
+    "id": "201780384274",
+    "name": "Federation Staff Newsletter #17",
+    "subject": "Federation Staff Newsletter",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-12-05T00:11:18.265Z",
+    "updated": "2025-12-05T21:46:20.461Z",
+    "publishedAt": "2025-12-05T21:37:41.945Z",
+    "campaignName": "Federation Internal Newsletter - FY26",
+    "campaignIds": [
+      "393199492"
+    ],
+    "stats": {
+      "sent": 33,
+      "delivered": 33,
+      "opens": 21,
+      "clicks": 3,
+      "bounces": 0,
+      "unsubscribes": 0,
+      "spamReports": 0
+    },
+    "openRate": 63.6,
+    "clickRate": 9.1
+  },
+  {
+    "id": "200959790133",
+    "name": "Momentum Trip Update 12.3.25",
+    "subject": "An extraordinary Israel journey just for Jewish moms \ud83d\udc99",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-11-25T18:09:24.201Z",
+    "updated": "2025-12-03T22:04:11.455Z",
+    "publishedAt": "2025-12-03T20:35:16.468Z",
+    "campaignName": null,
+    "campaignIds": [
+      "392868812"
+    ],
+    "stats": {
+      "sent": 2479,
+      "delivered": 2477,
+      "opens": 660,
+      "clicks": 25,
+      "bounces": 2,
+      "unsubscribes": 16,
+      "spamReports": 3
+    },
+    "openRate": 26.6,
+    "clickRate": 1.0
+  },
+  {
+    "id": "201464137000",
+    "name": "Z3 2025 Outreach",
+    "subject": "Join in a Day of Community & Dialogue",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-12-01T23:01:12.320Z",
+    "updated": "2025-12-02T22:08:13.557Z",
+    "publishedAt": "2025-12-02T18:08:47.750Z",
+    "campaignName": null,
+    "campaignIds": [
+      "392498774"
+    ],
+    "stats": {
+      "sent": 5989,
+      "delivered": 5980,
+      "opens": 1440,
+      "clicks": 56,
+      "bounces": 9,
+      "unsubscribes": 28,
+      "spamReports": 0
+    },
+    "openRate": 24.1,
+    "clickRate": 0.9
+  },
+  {
+    "id": "201448787790",
+    "name": "Brunch Club KBYG 12.2.25",
+    "subject": "Know Before You Go: Brunch Club",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-12-01T22:35:43.160Z",
+    "updated": "2025-12-02T19:02:37.663Z",
+    "publishedAt": "2025-12-02T16:48:08.780Z",
+    "campaignName": "Brunch Club FY26 - Dec 2025",
+    "campaignIds": [
+      "392627572"
+    ],
+    "stats": {
+      "sent": 107,
+      "delivered": 107,
+      "opens": 66,
+      "clicks": 5,
+      "bounces": 1,
+      "unsubscribes": 0,
+      "spamReports": 0
+    },
+    "openRate": 61.7,
+    "clickRate": 4.7
+  },
+  {
+    "id": "200484351882",
+    "name": "The Community Trip Announcement 12.1.25",
+    "subject": "The Community Trip to Israel 2027: A Journey You Will Not Want to Miss!",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-11-21T23:31:34.594Z",
+    "updated": "2025-12-01T21:04:05.668Z",
+    "publishedAt": "2025-12-01T19:46:14.576Z",
+    "campaignName": "The Community Trip - CY27",
+    "campaignIds": [
+      "392447905"
+    ],
+    "stats": {
+      "sent": 6116,
+      "delivered": 6106,
+      "opens": 2604,
+      "clicks": 195,
+      "bounces": 9,
+      "unsubscribes": 37,
+      "spamReports": 0
+    },
+    "openRate": 42.6,
+    "clickRate": 3.2
+  },
+  {
+    "id": "200981805226",
+    "name": "Michael's Shabbat Message 11.28.25",
+    "subject": "The Greatest Way to Give Thanks? Empower the Next Generation",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-11-25T23:49:35.164Z",
+    "updated": "2025-11-28T18:04:49.172Z",
+    "publishedAt": "2025-11-26T20:21:31.731Z",
+    "campaignName": null,
+    "campaignIds": [
+      "391848317"
+    ],
+    "stats": {
+      "sent": 6239,
+      "delivered": 6229,
+      "opens": 1275,
+      "clicks": 9,
+      "bounces": 9,
+      "unsubscribes": 55,
+      "spamReports": 6
+    },
+    "openRate": 20.5,
+    "clickRate": 0.1
+  },
+  {
+    "id": "200979841045",
+    "name": "Interest List Addition",
+    "subject": "Thank you for joining The Community Trip interest list",
+    "state": "AUTOMATED",
+    "type": "AUTOMATED_EMAIL",
+    "created": "2025-11-25T22:54:16.842Z",
+    "updated": "2025-11-25T23:07:09.234Z",
+    "publishedAt": "2025-11-25T23:07:08.132Z",
+    "campaignName": "The Community Trip - CY27",
+    "campaignIds": [
+      "391696247",
+      "391694831"
+    ]
+  },
+  {
+    "id": "200959791690",
+    "name": "IU Announcement Email 2026",
+    "subject": "Israel Unfiltered: A Life-Changing Teen Trip \u2014 Summer 2026 \u2708\ufe0f",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-11-25T18:30:22.684Z",
+    "updated": "2025-11-25T21:22:26.287Z",
+    "publishedAt": "2025-11-25T19:15:50.093Z",
+    "campaignName": null,
+    "campaignIds": [
+      "391647638"
+    ],
+    "stats": {
+      "sent": 6319,
+      "delivered": 6308,
+      "opens": 1229,
+      "clicks": 21,
+      "bounces": 10,
+      "unsubscribes": 28,
+      "spamReports": 0
+    },
+    "openRate": 19.5,
+    "clickRate": 0.3
+  },
+  {
+    "id": "200897495666",
+    "name": "Brunch Club Last Chance 11.26.25",
+    "subject": "Last Chance! Register for Brunch Club by Nov 30",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-11-24T21:42:33.606Z",
+    "updated": "2025-11-25T19:03:20.786Z",
+    "publishedAt": "2025-11-24T22:15:25.957Z",
+    "campaignName": "Brunch Club FY26 - Dec 2025",
+    "campaignIds": [
+      "391487567"
+    ],
+    "stats": {
+      "sent": 2790,
+      "delivered": 2785,
+      "opens": 561,
+      "clicks": 31,
+      "bounces": 5,
+      "unsubscribes": 13,
+      "spamReports": 0
+    },
+    "openRate": 20.1,
+    "clickRate": 1.1
+  },
+  {
+    "id": "197338478920",
+    "name": "Brunch Club Save the Date 10.10.25",
+    "subject": "Save the Date: Brunch Club",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-10-09T20:21:31.690Z",
+    "updated": "2025-11-24T22:18:13.334Z",
+    "publishedAt": "2025-10-10T16:46:14.115Z",
+    "campaignName": "Brunch Club FY26 - Dec 2025",
+    "campaignIds": [
+      "384620088"
+    ],
+    "stats": {
+      "sent": 7941,
+      "delivered": 7927,
+      "opens": 821,
+      "clicks": 32,
+      "bounces": 9,
+      "unsubscribes": 16,
+      "spamReports": 2
+    },
+    "openRate": 10.4,
+    "clickRate": 0.4
+  },
+  {
+    "id": "198013370905",
+    "name": "Brunch Club Invite 10.24.25",
+    "subject": "You\u2019re Invited: Brunch Club",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-10-22T19:09:26.469Z",
+    "updated": "2025-11-24T22:18:13.190Z",
+    "publishedAt": "2025-10-23T20:06:54.446Z",
+    "campaignName": "Brunch Club FY26 - Dec 2025",
+    "campaignIds": [
+      "386618877"
+    ],
+    "stats": {
+      "sent": 7898,
+      "delivered": 7884,
+      "opens": 831,
+      "clicks": 119,
+      "bounces": 6,
+      "unsubscribes": 15,
+      "spamReports": 1
+    },
+    "openRate": 10.5,
+    "clickRate": 1.5
+  },
+  {
+    "id": "199137032528",
+    "name": "Brunch Club Reminder 11.6.25",
+    "subject": "Reminder: Register for Brunch Club by Nov 30",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-11-05T18:05:28.374Z",
+    "updated": "2025-11-24T22:18:13.047Z",
+    "publishedAt": "2025-11-06T17:27:53.435Z",
+    "campaignName": "Brunch Club FY26 - Dec 2025",
+    "campaignIds": [
+      "388745166"
+    ],
+    "stats": {
+      "sent": 2905,
+      "delivered": 2898,
+      "opens": 684,
+      "clicks": 76,
+      "bounces": 7,
+      "unsubscribes": 18,
+      "spamReports": 2
+    },
+    "openRate": 23.6,
+    "clickRate": 2.6
+  },
+  {
+    "id": "200437478950",
+    "name": "FED360 Host Committee Reminder Invite 11.21.25",
+    "subject": "Friendly Reminder: We\u2019d Love to Have You on the FED360 Host Committee",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-11-21T17:38:10.482Z",
+    "updated": "2025-11-21T23:08:18.983Z",
+    "publishedAt": "2025-11-21T23:04:17.977Z",
+    "campaignName": "FED360 - FY26",
+    "campaignIds": [
+      "391129772"
+    ],
+    "stats": {
+      "sent": 80,
+      "delivered": 80,
+      "opens": 28,
+      "clicks": 0,
+      "bounces": 0,
+      "unsubscribes": 0,
+      "spamReports": 0
+    },
+    "openRate": 35.0,
+    "clickRate": 0.0
+  },
+  {
+    "id": "200441584715",
+    "name": "Federation Staff Newsletter #16",
+    "subject": "Federation Staff Newsletter",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-11-21T17:56:02.799Z",
+    "updated": "2025-11-21T22:00:28.880Z",
+    "publishedAt": "2025-11-21T21:01:18.676Z",
+    "campaignName": "Federation Internal Newsletter - FY26",
+    "campaignIds": [
+      "391114400"
+    ],
+    "stats": {
+      "sent": 33,
+      "delivered": 33,
+      "opens": 25,
+      "clicks": 5,
+      "bounces": 0,
+      "unsubscribes": 0,
+      "spamReports": 0
+    },
+    "openRate": 75.8,
+    "clickRate": 15.2
+  },
+  {
+    "id": "200215176498",
+    "name": "The Community Trip Announcement",
+    "subject": "The Community Trip: May 2027",
+    "state": "DRAFT",
+    "type": "BATCH_EMAIL",
+    "created": "2025-11-19T22:09:49.924Z",
+    "updated": "2025-11-21T21:54:44.778Z",
+    "publishedAt": null,
+    "campaignName": null,
+    "campaignIds": []
+  },
+  {
+    "id": "200214523314",
+    "name": "Momentum Trip Announcement 11.20.25",
+    "subject": "Applications Open: Momentum Journey of Growth 2026",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-11-19T22:49:46.915Z",
+    "updated": "2025-11-20T19:03:21.665Z",
+    "publishedAt": "2025-11-20T18:13:06.725Z",
+    "campaignName": null,
+    "campaignIds": [
+      "390924349"
+    ],
+    "stats": {
+      "sent": 115,
+      "delivered": 115,
+      "opens": 54,
+      "clicks": 8,
+      "bounces": 0,
+      "unsubscribes": 1,
+      "spamReports": 0
+    },
+    "openRate": 47.0,
+    "clickRate": 7.0
+  },
+  {
+    "id": "199768490587",
+    "name": "Heidi's Shabbat Message 11.14.25 (Global Experiences)",
+    "subject": "An Unprecedented Week of Travel",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-11-14T17:16:34.538Z",
+    "updated": "2025-11-14T22:03:46.835Z",
+    "publishedAt": "2025-11-14T21:39:40.488Z",
+    "campaignName": null,
+    "campaignIds": [
+      "390025162"
+    ],
+    "stats": {
+      "sent": 6431,
+      "delivered": 6411,
+      "opens": 2554,
+      "clicks": 79,
+      "bounces": 19,
+      "unsubscribes": 48,
+      "spamReports": 0
+    },
+    "openRate": 39.8,
+    "clickRate": 1.2
+  },
+  {
+    "id": "199612047361",
+    "name": "Annual Report 11.13.25",
+    "subject": "See the Impact You Made Possible",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-11-12T21:05:14.192Z",
+    "updated": "2025-11-13T17:59:29.754Z",
+    "publishedAt": "2025-11-12T23:42:02.977Z",
+    "campaignName": null,
+    "campaignIds": [
+      "389695710"
+    ],
+    "stats": {
+      "sent": 6574,
+      "delivered": 6550,
+      "opens": 1668,
+      "clicks": 61,
+      "bounces": 23,
+      "unsubscribes": 59,
+      "spamReports": 2
+    },
+    "openRate": 25.5,
+    "clickRate": 0.9
+  },
+  {
+    "id": "199226950004",
+    "name": "Federation Staff Newsletter #15",
+    "subject": "Federation Staff Newsletter",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-11-06T22:56:45.982Z",
+    "updated": "2025-11-07T22:01:26.742Z",
+    "publishedAt": "2025-11-07T20:51:41.438Z",
+    "campaignName": "Federation Internal Newsletter - FY26",
+    "campaignIds": [
+      "388943607"
+    ],
+    "stats": {
+      "sent": 33,
+      "delivered": 33,
+      "opens": 22,
+      "clicks": 2,
+      "bounces": 0,
+      "unsubscribes": 0,
+      "spamReports": 0
+    },
+    "openRate": 66.7,
+    "clickRate": 6.1
+  },
+  {
+    "id": "192980835669",
+    "name": "Federation Staff Newsletter #7",
+    "subject": "Federation Staff Newsletter",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-07-18T19:45:49.198Z",
+    "updated": "2025-11-06T22:17:34.737Z",
+    "publishedAt": "2025-07-18T20:16:32.362Z",
+    "campaignName": "Federation Internal Newsletter - FY26",
+    "campaignIds": [
+      "371970439"
+    ],
+    "stats": {
+      "sent": 31,
+      "delivered": 31,
+      "opens": 23,
+      "clicks": 1,
+      "bounces": 0,
+      "unsubscribes": 0,
+      "spamReports": 0
+    },
+    "openRate": 74.2,
+    "clickRate": 3.2
+  },
+  {
+    "id": "195966746499",
+    "name": "Federation Staff Newsletter #11 (Correction)",
+    "subject": "Federation Staff Newsletter: Corrected",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-09-12T23:02:28.478Z",
+    "updated": "2025-11-06T22:11:30.681Z",
+    "publishedAt": "2025-09-12T23:09:42.824Z",
+    "campaignName": "Federation Internal Newsletter - FY26",
+    "campaignIds": [
+      "380344014"
+    ],
+    "stats": {
+      "sent": 32,
+      "delivered": 32,
+      "opens": 19,
+      "clicks": 3,
+      "bounces": 0,
+      "unsubscribes": 0,
+      "spamReports": 0
+    },
+    "openRate": 59.4,
+    "clickRate": 9.4
+  },
+  {
+    "id": "195880954410",
+    "name": "Federation Staff Newsletter #11",
+    "subject": "Federation Staff Newsletter",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-09-11T16:16:13.190Z",
+    "updated": "2025-11-06T22:11:22.078Z",
+    "publishedAt": "2025-09-12T21:32:26.636Z",
+    "campaignName": "Federation Internal Newsletter - FY26",
+    "campaignIds": [
+      "380335472"
+    ],
+    "stats": {
+      "sent": 32,
+      "delivered": 32,
+      "opens": 20,
+      "clicks": 8,
+      "bounces": 0,
+      "unsubscribes": 0,
+      "spamReports": 0
+    },
+    "openRate": 62.5,
+    "clickRate": 25.0
+  },
+  {
+    "id": "195300850190",
+    "name": "Federation Staff Newsletter #10",
+    "subject": "Federation Staff Newsletter",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-08-29T19:01:18.321Z",
+    "updated": "2025-11-06T22:11:11.045Z",
+    "publishedAt": "2025-08-29T22:54:00.507Z",
+    "campaignName": "Federation Internal Newsletter - FY26",
+    "campaignIds": [
+      "378247339"
+    ],
+    "stats": {
+      "sent": 31,
+      "delivered": 31,
+      "opens": 19,
+      "clicks": 1,
+      "bounces": 0,
+      "unsubscribes": 0,
+      "spamReports": 0
+    },
+    "openRate": 61.3,
+    "clickRate": 3.2
+  },
+  {
+    "id": "194575093873",
+    "name": "Federation Staff Newsletter #9",
+    "subject": "Federation Staff Newsletter",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-08-15T21:33:58.547Z",
+    "updated": "2025-11-06T22:11:00.027Z",
+    "publishedAt": "2025-08-15T22:54:11.688Z",
+    "campaignName": "Federation Internal Newsletter - FY26",
+    "campaignIds": [
+      "376151052"
+    ],
+    "stats": {
+      "sent": 37,
+      "delivered": 37,
+      "opens": 22,
+      "clicks": 1,
+      "bounces": 0,
+      "unsubscribes": 0,
+      "spamReports": 0
+    },
+    "openRate": 59.5,
+    "clickRate": 2.7
+  },
+  {
+    "id": "193820134737",
+    "name": "Federation Staff Newsletter #8",
+    "subject": "Federation Staff Newsletter",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-08-01T20:37:32.967Z",
+    "updated": "2025-11-06T22:10:43.511Z",
+    "publishedAt": "2025-08-01T20:53:57.938Z",
+    "campaignName": "Federation Internal Newsletter - FY26",
+    "campaignIds": [
+      "374087667"
+    ],
+    "stats": {
+      "sent": 28,
+      "delivered": 28,
+      "opens": 19,
+      "clicks": 2,
+      "bounces": 0,
+      "unsubscribes": 0,
+      "spamReports": 0
+    },
+    "openRate": 67.9,
+    "clickRate": 7.1
+  },
+  {
+    "id": "191611640400",
+    "name": "Federation Staff Newsletter #6",
+    "subject": "Federation Staff Newsletter",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-06-20T21:22:20.941Z",
+    "updated": "2025-11-06T22:10:03.133Z",
+    "publishedAt": "2025-06-20T21:52:10.871Z",
+    "campaignName": "Federation Internal Newsletter - FY26",
+    "campaignIds": [
+      "367806643"
+    ],
+    "stats": {
+      "sent": 37,
+      "delivered": 37,
+      "opens": 21,
+      "clicks": 0,
+      "bounces": 0,
+      "unsubscribes": 0,
+      "spamReports": 0
+    },
+    "openRate": 56.8,
+    "clickRate": 0.0
+  },
+  {
+    "id": "191106156178",
+    "name": "Federation Staff Newsletter #5",
+    "subject": "Federation Staff Newsletter",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-06-06T20:47:18.910Z",
+    "updated": "2025-11-06T22:09:21.798Z",
+    "publishedAt": "2025-06-06T21:02:07.734Z",
+    "campaignName": "Federation Internal Newsletter - FY26",
+    "campaignIds": [
+      "365482794"
+    ],
+    "stats": {
+      "sent": 34,
+      "delivered": 34,
+      "opens": 18,
+      "clicks": 0,
+      "bounces": 0,
+      "unsubscribes": 0,
+      "spamReports": 0
+    },
+    "openRate": 52.9,
+    "clickRate": 0.0
+  },
+  {
+    "id": "190560379980",
+    "name": "Federation Staff Newsletter #4",
+    "subject": "Federation Staff Newsletter",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-05-23T21:42:44.383Z",
+    "updated": "2025-11-06T22:09:07.436Z",
+    "publishedAt": "2025-05-23T22:04:07.134Z",
+    "campaignName": "Federation Internal Newsletter - FY26",
+    "campaignIds": [
+      "363036265"
+    ],
+    "stats": {
+      "sent": 33,
+      "delivered": 33,
+      "opens": 23,
+      "clicks": 4,
+      "bounces": 0,
+      "unsubscribes": 0,
+      "spamReports": 0
+    },
+    "openRate": 69.7,
+    "clickRate": 12.1
+  },
+  {
+    "id": "189324518446",
+    "name": "Federation Staff Newsletter #3",
+    "subject": "Federation Staff Newsletter",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-04-24T22:58:01.839Z",
+    "updated": "2025-11-06T22:08:29.671Z",
+    "publishedAt": "2025-05-09T21:21:15.536Z",
+    "campaignName": "Federation Internal Newsletter - FY26",
+    "campaignIds": [
+      "360796153"
+    ],
+    "stats": {
+      "sent": 33,
+      "delivered": 33,
+      "opens": 25,
+      "clicks": 6,
+      "bounces": 0,
+      "unsubscribes": 0,
+      "spamReports": 0
+    },
+    "openRate": 75.8,
+    "clickRate": 18.2
+  },
+  {
+    "id": "198011088050",
+    "name": "Federation Staff Newsletter #14",
+    "subject": "Federation Staff Newsletter",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-10-22T18:56:17.729Z",
+    "updated": "2025-11-06T22:07:54.040Z",
+    "publishedAt": "2025-10-24T20:56:13.559Z",
+    "campaignName": "Federation Internal Newsletter - FY26",
+    "campaignIds": [
+      "386778327"
+    ],
+    "stats": {
+      "sent": 33,
+      "delivered": 33,
+      "opens": 23,
+      "clicks": 5,
+      "bounces": 0,
+      "unsubscribes": 0,
+      "spamReports": 0
+    },
+    "openRate": 69.7,
+    "clickRate": 15.2
+  },
+  {
+    "id": "198694548598",
+    "name": "BRIDGE Initiative Announcement 11.3.25",
+    "subject": "Building a Stronger Jewish Future",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-10-29T20:55:03.993Z",
+    "updated": "2025-11-03T19:05:32.988Z",
+    "publishedAt": "2025-11-03T18:15:49.096Z",
+    "campaignName": "BRIDGE Initiative - FY26",
+    "campaignIds": [
+      "388155070"
+    ],
+    "stats": {
+      "sent": 6638,
+      "delivered": 6632,
+      "opens": 1520,
+      "clicks": 28,
+      "bounces": 4,
+      "unsubscribes": 48,
+      "spamReports": 1
+    },
+    "openRate": 22.9,
+    "clickRate": 0.4
+  },
+  {
+    "id": "198874069401",
+    "name": "Shabbat Message 10.31.25",
+    "subject": "Lean on Us: Resources During Government Shutdown",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-10-31T14:09:51.606Z",
+    "updated": "2025-10-31T20:30:59.387Z",
+    "publishedAt": "2025-10-31T17:59:13.846Z",
+    "campaignName": null,
+    "campaignIds": [
+      "387814850"
+    ],
+    "stats": {
+      "sent": 6997,
+      "delivered": 6984,
+      "opens": 1556,
+      "clicks": 80,
+      "bounces": 12,
+      "unsubscribes": 45,
+      "spamReports": 3
+    },
+    "openRate": 22.3,
+    "clickRate": 1.1
+  },
+  {
+    "id": "198782678556",
+    "name": "IEC Update 10.16.25_Beit Melachah donors",
+    "subject": "Your Impact in Israel: Healing, Resilience, and What Comes Next",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-10-30T17:04:33.400Z",
+    "updated": "2025-10-30T17:41:14.605Z",
+    "publishedAt": "2025-10-30T17:39:56.096Z",
+    "campaignName": null,
+    "campaignIds": [
+      "387660712"
+    ],
+    "stats": {
+      "sent": 21,
+      "delivered": 21,
+      "opens": 15,
+      "clicks": 1,
+      "bounces": 0,
+      "unsubscribes": 0,
+      "spamReports": 0
+    },
+    "openRate": 71.4,
+    "clickRate": 4.8
+  },
+  {
+    "id": "198472645763",
+    "name": "FED360 Host Committee - 10.27.25",
+    "subject": "Your invitation to join the 2026 FED360 Host Committee",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-10-27T20:50:18.491Z",
+    "updated": "2025-10-28T20:40:29.162Z",
+    "publishedAt": "2025-10-28T20:36:23.110Z",
+    "campaignName": "FED360 - FY26",
+    "campaignIds": [
+      "387306405"
+    ],
+    "stats": {
+      "sent": 123,
+      "delivered": 122,
+      "opens": 63,
+      "clicks": 2,
+      "bounces": 1,
+      "unsubscribes": 1,
+      "spamReports": 0
+    },
+    "openRate": 51.6,
+    "clickRate": 1.6
+  },
+  {
+    "id": "198014084979",
+    "name": "Student to Student Email 3 - 10.23.25 - Parent Info Night",
+    "subject": "Help Your Jewish Student Combat Antisemitism in High School",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-10-22T19:29:40.532Z",
+    "updated": "2025-10-23T23:01:01.022Z",
+    "publishedAt": "2025-10-23T17:52:54.397Z",
+    "campaignName": null,
+    "campaignIds": [
+      "386596297"
+    ],
+    "stats": {
+      "sent": 7083,
+      "delivered": 7076,
+      "opens": 1559,
+      "clicks": 15,
+      "bounces": 6,
+      "unsubscribes": 35,
+      "spamReports": 0
+    },
+    "openRate": 22.0,
+    "clickRate": 0.2
+  },
+  {
+    "id": "196690920857",
+    "name": "IEC Update 10.16.25",
+    "subject": "Your Impact in Israel: Healing, Resilience, and What Comes Next",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-09-26T20:31:00.657Z",
+    "updated": "2025-10-23T17:17:35.582Z",
+    "publishedAt": "2025-10-23T17:04:21.256Z",
+    "campaignName": null,
+    "campaignIds": [
+      "386586724"
+    ],
+    "stats": {
+      "sent": 4630,
+      "delivered": 4622,
+      "opens": 516,
+      "clicks": 13,
+      "bounces": 6,
+      "unsubscribes": 9,
+      "spamReports": 1
+    },
+    "openRate": 11.2,
+    "clickRate": 0.3
+  },
+  {
+    "id": "198062420818",
+    "name": "TEST",
+    "subject": "You\u2019re Invited: Blueprint Forum \u2013 A Special Gathering of San Diego Jewish Leaders",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-10-23T17:08:25.624Z",
+    "updated": "2025-10-23T17:13:43.823Z",
+    "publishedAt": "2025-10-23T17:12:26.358Z",
+    "campaignName": null,
+    "campaignIds": [
+      "386588167"
+    ],
+    "stats": {
+      "sent": 1,
+      "delivered": 1,
+      "opens": 1,
+      "clicks": 0,
+      "bounces": 0,
+      "unsubscribes": 0,
+      "spamReports": 0
+    },
+    "openRate": 100.0,
+    "clickRate": 0.0
+  },
+  {
+    "id": "198011130295",
+    "name": "Birthright 10.21.25 (Clone)",
+    "subject": "Volunteer in Israel with Jewish Federation this February\u2014apply by December 7",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-10-22T19:03:08.099Z",
+    "updated": "2025-10-22T19:08:28.016Z",
+    "publishedAt": "2025-10-22T19:04:48.961Z",
+    "campaignName": "Birthright - FY26",
+    "campaignIds": [
+      "386423481"
+    ],
+    "stats": {
+      "sent": 14297,
+      "delivered": 14257,
+      "opens": 1481,
+      "clicks": 101,
+      "bounces": 25,
+      "unsubscribes": 39,
+      "spamReports": 6
+    },
+    "openRate": 10.4,
+    "clickRate": 0.7
+  },
+  {
+    "id": "197946460014",
+    "name": "Birthright 10.21.25",
+    "subject": "Volunteer in Israel with Jewish Federation this February\u2014apply by December 7",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-10-21T17:11:57.179Z",
+    "updated": "2025-10-22T18:03:40.752Z",
+    "publishedAt": "2025-10-21T23:27:31.042Z",
+    "campaignName": "Birthright - FY26",
+    "campaignIds": [
+      "386277429"
+    ],
+    "stats": {
+      "sent": 2425,
+      "delivered": 2419,
+      "opens": 245,
+      "clicks": 16,
+      "bounces": 6,
+      "unsubscribes": 15,
+      "spamReports": 0
+    },
+    "openRate": 10.1,
+    "clickRate": 0.7
+  },
+  {
+    "id": "197350578967",
+    "name": "Dana Horn Invite 1 10.13.25",
+    "subject": "Join us for a night with renowned author Dara Horn",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-10-09T22:03:46.762Z",
+    "updated": "2025-10-13T19:33:10.965Z",
+    "publishedAt": "2025-10-10T21:50:30.972Z",
+    "campaignName": null,
+    "campaignIds": [
+      "384664652"
+    ],
+    "stats": {
+      "sent": 16753,
+      "delivered": 16718,
+      "opens": 1887,
+      "clicks": 132,
+      "bounces": 21,
+      "unsubscribes": 49,
+      "spamReports": 6
+    },
+    "openRate": 11.3,
+    "clickRate": 0.8
+  },
+  {
+    "id": "197492022934",
+    "name": "Hostage Update 10.13.25",
+    "subject": "A Day of Hope & Healing",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-10-12T23:56:57.479Z",
+    "updated": "2025-10-13T14:39:38.359Z",
+    "publishedAt": "2025-10-13T14:35:55.592Z",
+    "campaignName": null,
+    "campaignIds": [
+      "384898277"
+    ],
+    "stats": {
+      "sent": 16782,
+      "delivered": 16745,
+      "opens": 2834,
+      "clicks": 14,
+      "bounces": 22,
+      "unsubscribes": 75,
+      "spamReports": 6
+    },
+    "openRate": 16.9,
+    "clickRate": 0.1
+  },
+  {
+    "id": "197413492355",
+    "name": "Federation Staff Newsletter #13",
+    "subject": "Federation Staff Newsletter",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-10-10T22:43:58.419Z",
+    "updated": "2025-10-10T22:54:36.936Z",
+    "publishedAt": "2025-10-10T22:53:24.256Z",
+    "campaignName": "Federation Internal Newsletter - FY26",
+    "campaignIds": [
+      "384671820"
+    ],
+    "stats": {
+      "sent": 41,
+      "delivered": 41,
+      "opens": 18,
+      "clicks": 0,
+      "bounces": 0,
+      "unsubscribes": 0,
+      "spamReports": 0
+    },
+    "openRate": 43.9,
+    "clickRate": 0.0
+  },
+  {
+    "id": "197340282762",
+    "name": "Oct 7 TY 10.13.25",
+    "subject": "Thank You For Attending!",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-10-09T20:44:13.534Z",
+    "updated": "2025-10-10T21:46:54.888Z",
+    "publishedAt": "2025-10-10T21:44:06.210Z",
+    "campaignName": null,
+    "campaignIds": [
+      "384663281"
+    ],
+    "stats": {
+      "sent": 634,
+      "delivered": 634,
+      "opens": 288,
+      "clicks": 74,
+      "bounces": 0,
+      "unsubscribes": 0,
+      "spamReports": 0
+    },
+    "openRate": 45.4,
+    "clickRate": 11.7
+  },
+  {
+    "id": "197327641346",
+    "name": "Israel Update 10.9.25",
+    "subject": "War in Israel: Update on Current Situation",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-10-09T16:15:41.046Z",
+    "updated": "2025-10-09T17:23:31.554Z",
+    "publishedAt": "2025-10-09T17:19:50.687Z",
+    "campaignName": null,
+    "campaignIds": [
+      "384476170"
+    ],
+    "stats": {
+      "sent": 16829,
+      "delivered": 16792,
+      "opens": 3267,
+      "clicks": 166,
+      "bounces": 21,
+      "unsubscribes": 68,
+      "spamReports": 5
+    },
+    "openRate": 19.5,
+    "clickRate": 1.0
+  },
+  {
+    "id": "197158383705",
+    "name": "Oct 7 KBYG 10.9.25 (duplicated)",
+    "subject": "Know Before You Go \u2013 Marking October 7th Commemoration",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-10-06T20:06:06.862Z",
+    "updated": "2025-10-09T17:03:15.407Z",
+    "publishedAt": "2025-10-06T20:07:06.446Z",
+    "campaignName": null,
+    "campaignIds": [
+      "383936251"
+    ],
+    "stats": {
+      "sent": 547,
+      "delivered": 546,
+      "opens": 256,
+      "clicks": 30,
+      "bounces": 0,
+      "unsubscribes": 1,
+      "spamReports": 0
+    },
+    "openRate": 46.9,
+    "clickRate": 5.5
+  },
+  {
+    "id": "197016171631",
+    "name": "Oct 7 KBYG 10.6.25",
+    "subject": "Know Before You Go \u2013 Marking October 7th Commemoration",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-10-03T17:41:34.458Z",
+    "updated": "2025-10-06T20:13:50.248Z",
+    "publishedAt": "2025-10-06T20:05:39.700Z",
+    "campaignName": null,
+    "campaignIds": [
+      "383935133"
+    ],
+    "stats": {
+      "sent": 640,
+      "delivered": 634,
+      "opens": 305,
+      "clicks": 42,
+      "bounces": 5,
+      "unsubscribes": 0,
+      "spamReports": 0
+    },
+    "openRate": 48.1,
+    "clickRate": 6.6
+  },
+  {
+    "id": "197151653788",
+    "name": "Sukkot Message from Heidi 10.6.25",
+    "subject": "Finding Light on Sukkot, Two Years After October 7",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-10-06T17:38:07.826Z",
+    "updated": "2025-10-06T18:22:35.537Z",
+    "publishedAt": "2025-10-06T18:19:02.839Z",
+    "campaignName": null,
+    "campaignIds": [
+      "383909979"
+    ],
+    "stats": {
+      "sent": 16717,
+      "delivered": 16671,
+      "opens": 2846,
+      "clicks": 70,
+      "bounces": 29,
+      "unsubscribes": 73,
+      "spamReports": 4
+    },
+    "openRate": 17.1,
+    "clickRate": 0.4
+  },
+  {
+    "id": "196853012814",
+    "name": "Birthright Announcement 10.3.25",
+    "subject": "Volunteer in Israel with Jewish Federation",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-09-30T17:32:49.140Z",
+    "updated": "2025-10-03T18:03:38.843Z",
+    "publishedAt": "2025-10-03T16:35:17.495Z",
+    "campaignName": "Birthright - FY26",
+    "campaignIds": [
+      "383555472"
+    ],
+    "stats": {
+      "sent": 2538,
+      "delivered": 2526,
+      "opens": 317,
+      "clicks": 21,
+      "bounces": 12,
+      "unsubscribes": 26,
+      "spamReports": 0
+    },
+    "openRate": 12.5,
+    "clickRate": 0.8
+  },
+  {
+    "id": "196974035318",
+    "name": "Tribute: Mazel Tov",
+    "subject": "Mazel Tov! {{ personalization_token('contact.hubspot_owner_id.firstname', 'a') }} made a tribute in your honor!",
+    "state": "AUTOMATED",
+    "type": "AUTOMATED_EMAIL",
+    "created": "2025-10-02T22:29:35.697Z",
+    "updated": "2025-10-02T22:41:59.958Z",
+    "publishedAt": "2025-10-02T22:41:58.754Z",
+    "campaignName": "Tribute Giving - FY26",
+    "campaignIds": [
+      "383452842",
+      "383454272"
+    ]
+  },
+  {
+    "id": "196860083358",
+    "name": "Fall 2025 High Holiday Appeal 9.30.25",
+    "subject": "Answer the Call This High Holiday Season",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-09-30T20:42:51.145Z",
+    "updated": "2025-10-01T16:44:44.341Z",
+    "publishedAt": "2025-10-01T16:41:09.048Z",
+    "campaignName": null,
+    "campaignIds": [
+      "383190475"
+    ],
+    "stats": {
+      "sent": 16816,
+      "delivered": 16730,
+      "opens": 1855,
+      "clicks": 23,
+      "bounces": 69,
+      "unsubscribes": 79,
+      "spamReports": 8
+    },
+    "openRate": 11.1,
+    "clickRate": 0.1
+  },
+  {
+    "id": "196854463498",
+    "name": "October 7th Commemoration 9.30.25",
+    "subject": "Don\u2019t miss the special October 7 Commemoration",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-09-30T18:01:54.085Z",
+    "updated": "2025-09-30T21:07:27.300Z",
+    "publishedAt": "2025-09-30T20:27:53.879Z",
+    "campaignName": null,
+    "campaignIds": [
+      "383043792"
+    ],
+    "stats": {
+      "sent": 7279,
+      "delivered": 7269,
+      "opens": 1689,
+      "clicks": 109,
+      "bounces": 9,
+      "unsubscribes": 44,
+      "spamReports": 1
+    },
+    "openRate": 23.2,
+    "clickRate": 1.5
+  },
+  {
+    "id": "196849257040",
+    "name": "New System Donor Update 9.30.25",
+    "subject": "Action Required - \u00a0New C.C. Processing Vehicle Begins Oct 1",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-09-30T16:56:32.463Z",
+    "updated": "2025-09-30T20:13:37.508Z",
+    "publishedAt": "2025-09-30T20:11:04.817Z",
+    "campaignName": null,
+    "campaignIds": [
+      "383041718"
+    ],
+    "stats": {
+      "sent": 151,
+      "delivered": 149,
+      "opens": 58,
+      "clicks": 16,
+      "bounces": 1,
+      "unsubscribes": 1,
+      "spamReports": 0
+    },
+    "openRate": 38.9,
+    "clickRate": 10.7
+  },
+  {
+    "id": "196635047826",
+    "name": "HMI Feb Trip (Alumni) 9.29.25",
+    "subject": "Help Us Connect More San Diego Couples to HMI",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-09-25T17:43:07.145Z",
+    "updated": "2025-09-29T20:36:34.166Z",
+    "publishedAt": "2025-09-29T20:34:15.463Z",
+    "campaignName": null,
+    "campaignIds": [
+      "382839607"
+    ],
+    "stats": {
+      "sent": 363,
+      "delivered": 359,
+      "opens": 80,
+      "clicks": 2,
+      "bounces": 4,
+      "unsubscribes": 4,
+      "spamReports": 0
+    },
+    "openRate": 22.3,
+    "clickRate": 0.6
+  },
+  {
+    "id": "196435773083",
+    "name": "FED360 FY26 #2 - 9.26.25",
+    "subject": "Save the Date for a Dazzling Celebration at FED360: All In",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-09-22T17:13:40.690Z",
+    "updated": "2025-09-26T22:01:13.689Z",
+    "publishedAt": "2025-09-26T21:37:15.855Z",
+    "campaignName": "FED360 - FY26",
+    "campaignIds": [
+      "382501819"
+    ],
+    "stats": {
+      "sent": 7365,
+      "delivered": 7299,
+      "opens": 1664,
+      "clicks": 13,
+      "bounces": 66,
+      "unsubscribes": 73,
+      "spamReports": 2
+    },
+    "openRate": 22.8,
+    "clickRate": 0.2
+  },
+  {
+    "id": "196632682044",
+    "name": "Federation Staff Newsletter #12",
+    "subject": "Federation Staff Newsletter",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-09-25T17:34:12.001Z",
+    "updated": "2025-09-26T19:55:50.991Z",
+    "publishedAt": "2025-09-26T19:54:34.066Z",
+    "campaignName": "Federation Internal Newsletter - FY26",
+    "campaignIds": [
+      "382488079"
+    ],
+    "stats": {
+      "sent": 39,
+      "delivered": 39,
+      "opens": 20,
+      "clicks": 1,
+      "bounces": 0,
+      "unsubscribes": 0,
+      "spamReports": 0
+    },
+    "openRate": 51.3,
+    "clickRate": 2.6
+  },
+  {
+    "id": "196279472526",
+    "name": "Student to Student Email 2 - 9.25.25",
+    "subject": "Help Your Jewish Student Combat Antisemitism in High School",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-09-18T22:38:06.311Z",
+    "updated": "2025-09-25T20:05:27.506Z",
+    "publishedAt": "2025-09-25T18:33:49.465Z",
+    "campaignName": null,
+    "campaignIds": [
+      "382315448"
+    ],
+    "stats": {
+      "sent": 6594,
+      "delivered": 6586,
+      "opens": 2174,
+      "clicks": 18,
+      "bounces": 7,
+      "unsubscribes": 22,
+      "spamReports": 1
+    },
+    "openRate": 33.0,
+    "clickRate": 0.3
+  },
+  {
+    "id": "193677124378",
+    "name": "FED360 2026- Save the Date",
+    "subject": "Save the Date for FED360: All In",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-07-30T19:54:51.679Z",
+    "updated": "2025-09-25T18:19:26.021Z",
+    "publishedAt": "2025-08-25T20:36:36.222Z",
+    "campaignName": "FED360 - FY26",
+    "campaignIds": [
+      "377498815"
+    ],
+    "stats": {
+      "sent": 16257,
+      "delivered": 16223,
+      "opens": 1763,
+      "clicks": 26,
+      "bounces": 21,
+      "unsubscribes": 47,
+      "spamReports": 3
+    },
+    "openRate": 10.9,
+    "clickRate": 0.2
+  },
+  {
+    "id": "196435228480",
+    "name": "Shana Tova from Heidi 9.22.25",
+    "subject": "From Crisis to Creation: a Rosh Hashanah Message",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-09-22T16:56:34.654Z",
+    "updated": "2025-09-22T17:36:46.169Z",
+    "publishedAt": "2025-09-22T17:33:20.226Z",
+    "campaignName": null,
+    "campaignIds": [
+      "381718530"
+    ],
+    "stats": {
+      "sent": 6738,
+      "delivered": 6717,
+      "opens": 2499,
+      "clicks": 18,
+      "bounces": 21,
+      "unsubscribes": 29,
+      "spamReports": 0
+    },
+    "openRate": 37.2,
+    "clickRate": 0.3
+  },
+  {
+    "id": "196147190671",
+    "name": "October 7th Commemoration Reminder 9.18.25",
+    "subject": "October 7 Commemoration at The Sound",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-09-16T19:22:25.417Z",
+    "updated": "2025-09-18T16:58:56.074Z",
+    "publishedAt": "2025-09-17T16:37:42.322Z",
+    "campaignName": null,
+    "campaignIds": [
+      "381041101"
+    ],
+    "stats": {
+      "sent": 6867,
+      "delivered": 6857,
+      "opens": 1641,
+      "clicks": 140,
+      "bounces": 9,
+      "unsubscribes": 22,
+      "spamReports": 0
+    },
+    "openRate": 23.9,
+    "clickRate": 2.0
+  },
+  {
+    "id": "195891838602",
+    "name": "Cornerstone Thank You 9.15.25",
+    "subject": "Thank you for joining us at Cornerstone",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-09-11T19:58:17.502Z",
+    "updated": "2025-09-15T22:28:55.929Z",
+    "publishedAt": "2025-09-15T22:26:15.592Z",
+    "campaignName": null,
+    "campaignIds": [
+      "380698151"
+    ],
+    "stats": {
+      "sent": 116,
+      "delivered": 116,
+      "opens": 64,
+      "clicks": 20,
+      "bounces": 0,
+      "unsubscribes": 0,
+      "spamReports": 0
+    },
+    "openRate": 55.2,
+    "clickRate": 17.2
+  },
+  {
+    "id": "195953926288",
+    "name": "HMI Feb Trip 9.15.25",
+    "subject": "Register Now for Honeymoon Israel",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-09-12T17:07:14.634Z",
+    "updated": "2025-09-15T18:07:38.249Z",
+    "publishedAt": "2025-09-12T17:34:59.051Z",
+    "campaignName": null,
+    "campaignIds": [
+      "380303922"
+    ],
+    "stats": {
+      "sent": 7011,
+      "delivered": 6991,
+      "opens": 1661,
+      "clicks": 45,
+      "bounces": 19,
+      "unsubscribes": 23,
+      "spamReports": 0
+    },
+    "openRate": 23.8,
+    "clickRate": 0.6
+  },
+  {
+    "id": "195880658949",
+    "name": "Cornerstone KBYG 9.12.25",
+    "subject": "Know Before You Go: Sunday\u2019s Cornerstone Reception",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-09-11T15:48:43.540Z",
+    "updated": "2025-09-12T21:02:56.874Z",
+    "publishedAt": "2025-09-12T17:05:36.773Z",
+    "campaignName": null,
+    "campaignIds": [
+      "380154168"
+    ],
+    "stats": {
+      "sent": 100,
+      "delivered": 100,
+      "opens": 49,
+      "clicks": 2,
+      "bounces": 0,
+      "unsubscribes": 0,
+      "spamReports": 0
+    },
+    "openRate": 49.0,
+    "clickRate": 2.0
+  },
+  {
+    "id": "195831948099",
+    "name": "Student to Student Email 1 - 9.11.25",
+    "subject": "Help Jewish Students Defend Against Antisemitism",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-09-10T22:27:16.721Z",
+    "updated": "2025-09-11T20:04:03.215Z",
+    "publishedAt": "2025-09-11T19:40:28.480Z",
+    "campaignName": null,
+    "campaignIds": [
+      "380160896"
+    ],
+    "stats": {
+      "sent": 16134,
+      "delivered": 16085,
+      "opens": 1659,
+      "clicks": 45,
+      "bounces": 33,
+      "unsubscribes": 31,
+      "spamReports": 1
+    },
+    "openRate": 10.3,
+    "clickRate": 0.3
+  },
+  {
+    "id": "195583756299",
+    "name": "October 7th Commemoration Announcement 9.5.25",
+    "subject": "October 7 Commemoration Featuring Project Heroes",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-09-05T01:03:03.580Z",
+    "updated": "2025-09-05T21:01:57.933Z",
+    "publishedAt": "2025-09-05T20:26:41.146Z",
+    "campaignName": null,
+    "campaignIds": [
+      "379257471"
+    ],
+    "stats": {
+      "sent": 16181,
+      "delivered": 16116,
+      "opens": 1688,
+      "clicks": 179,
+      "bounces": 51,
+      "unsubscribes": 33,
+      "spamReports": 0
+    },
+    "openRate": 10.5,
+    "clickRate": 1.1
+  },
+  {
+    "id": "195614056467",
+    "name": "Shabbat Shalom from Heidi 9.5.25",
+    "subject": "Shabbat Shalom from Israel",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-09-05T17:13:14.441Z",
+    "updated": "2025-09-05T19:30:03.460Z",
+    "publishedAt": "2025-09-05T19:25:51.729Z",
+    "campaignName": null,
+    "campaignIds": [
+      "379248684"
+    ],
+    "stats": {
+      "sent": 7090,
+      "delivered": 7083,
+      "opens": 2652,
+      "clicks": 21,
+      "bounces": 6,
+      "unsubscribes": 32,
+      "spamReports": 1
+    },
+    "openRate": 37.4,
+    "clickRate": 0.3
+  },
+  {
+    "id": "195250897691",
+    "name": "Cornerstone Last Chance 9.2.25",
+    "subject": "Last Chance to Join Us at Cornerstone",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-08-28T17:01:20.618Z",
+    "updated": "2025-09-02T22:13:21.189Z",
+    "publishedAt": "2025-09-02T22:10:38.027Z",
+    "campaignName": null,
+    "campaignIds": [
+      "378733568"
+    ],
+    "stats": {
+      "sent": 216,
+      "delivered": 216,
+      "opens": 80,
+      "clicks": 7,
+      "bounces": 0,
+      "unsubscribes": 0,
+      "spamReports": 0
+    },
+    "openRate": 37.0,
+    "clickRate": 3.2
+  },
+  {
+    "id": "195303314095",
+    "name": "Shabbat Shalom from Darren 8.29.25",
+    "subject": "Building Belonging in San Diego\u2019s Jewish Community",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-08-29T21:39:42.722Z",
+    "updated": "2025-08-29T22:28:19.847Z",
+    "publishedAt": "2025-08-29T22:24:39.578Z",
+    "campaignName": null,
+    "campaignIds": [
+      "378245696"
+    ],
+    "stats": {
+      "sent": 7204,
+      "delivered": 7188,
+      "opens": 3146,
+      "clicks": 99,
+      "bounces": 14,
+      "unsubscribes": 41,
+      "spamReports": 2
+    },
+    "openRate": 43.8,
+    "clickRate": 1.4
+  },
+  {
+    "id": "195071542018",
+    "name": "Blueprint Thank You - 8.25",
+    "subject": "Thank You for Joining Us at the Blueprint San Diego Jewish Community Forum",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-08-25T17:52:25.831Z",
+    "updated": "2025-08-25T22:50:40.114Z",
+    "publishedAt": "2025-08-25T22:30:17.184Z",
+    "campaignName": null,
+    "campaignIds": [
+      "377516510"
+    ],
+    "stats": {
+      "sent": 123,
+      "delivered": 123,
+      "opens": 83,
+      "clicks": 45,
+      "bounces": 0,
+      "unsubscribes": 0,
+      "spamReports": 0
+    },
+    "openRate": 67.5,
+    "clickRate": 36.6
+  },
+  {
+    "id": "194765327650",
+    "name": "Blueprint KBYG 8.19.25",
+    "subject": "Know Before You Go \u2013 Blueprint San Diego Jewish Community Forum",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-08-19T16:05:23.548Z",
+    "updated": "2025-08-19T22:22:51.573Z",
+    "publishedAt": "2025-08-19T22:18:53.695Z",
+    "campaignName": null,
+    "campaignIds": [
+      "376674213"
+    ],
+    "stats": {
+      "sent": 137,
+      "delivered": 137,
+      "opens": 116,
+      "clicks": 80,
+      "bounces": 0,
+      "unsubscribes": 0,
+      "spamReports": 0
+    },
+    "openRate": 84.7,
+    "clickRate": 58.4
+  },
+  {
+    "id": "194502536757",
+    "name": "JDC Entwine Apps close soon 8.14.25",
+    "subject": "Last Chance to Travel to Argentina\u00a0",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-08-14T19:00:35.502Z",
+    "updated": "2025-08-17T16:58:20.530Z",
+    "publishedAt": "2025-08-14T22:46:34.650Z",
+    "campaignName": null,
+    "campaignIds": [
+      "376013957"
+    ],
+    "stats": {
+      "sent": 1709,
+      "delivered": 1706,
+      "opens": 166,
+      "clicks": 6,
+      "bounces": 3,
+      "unsubscribes": 13,
+      "spamReports": 0
+    },
+    "openRate": 9.7,
+    "clickRate": 0.4
+  },
+  {
+    "id": "194565078565",
+    "name": "Shabbat Shalom from Heidi 8.15.25",
+    "subject": "Learning, Listening, and Leading Together",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-08-15T17:29:01.576Z",
+    "updated": "2025-08-15T21:58:37.484Z",
+    "publishedAt": "2025-08-15T21:54:25.012Z",
+    "campaignName": null,
+    "campaignIds": [
+      "376145613"
+    ],
+    "stats": {
+      "sent": 16288,
+      "delivered": 16256,
+      "opens": 1598,
+      "clicks": 5,
+      "bounces": 20,
+      "unsubscribes": 67,
+      "spamReports": 1
+    },
+    "openRate": 9.8,
+    "clickRate": 0.0
+  },
+  {
+    "id": "194293303579",
+    "name": "Blueprint Reminder 8.14.25",
+    "subject": "Last Chance! Register for Blueprint Forum",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-08-11T21:47:52.233Z",
+    "updated": "2025-08-14T19:03:23.985Z",
+    "publishedAt": "2025-08-14T18:47:14.884Z",
+    "campaignName": null,
+    "campaignIds": [
+      "375974447"
+    ],
+    "stats": {
+      "sent": 60,
+      "delivered": 60,
+      "opens": 19,
+      "clicks": 5,
+      "bounces": 0,
+      "unsubscribes": 0,
+      "spamReports": 0
+    },
+    "openRate": 31.7,
+    "clickRate": 8.3
+  },
+  {
+    "id": "194410286623",
+    "name": "Cornerstone Reminder 8.13.25",
+    "subject": "Be All In for an Evening of Gratitude & Impact",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-08-13T15:55:18.666Z",
+    "updated": "2025-08-13T23:35:09.770Z",
+    "publishedAt": "2025-08-13T23:32:49.998Z",
+    "campaignName": null,
+    "campaignIds": [
+      "375841824"
+    ],
+    "stats": {
+      "sent": 303,
+      "delivered": 303,
+      "opens": 101,
+      "clicks": 19,
+      "bounces": 0,
+      "unsubscribes": 0,
+      "spamReports": 0
+    },
+    "openRate": 33.3,
+    "clickRate": 6.3
+  },
+  {
+    "id": "194289493278",
+    "name": "Blueprint Reminder 8.7.25 (Clone for Julie) (Clone #2 8.11)",
+    "subject": "Register Now: Blueprint Forum \u2013 Over 40 Organizations Have Registered!",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-08-11T19:34:58.091Z",
+    "updated": "2025-08-11T19:36:25.811Z",
+    "publishedAt": "2025-08-11T19:35:37.754Z",
+    "campaignName": null,
+    "campaignIds": [
+      "375422763"
+    ],
+    "stats": {
+      "sent": 1,
+      "delivered": 1,
+      "opens": 1,
+      "clicks": 1,
+      "bounces": 0,
+      "unsubscribes": 0,
+      "spamReports": 0
+    },
+    "openRate": 100.0,
+    "clickRate": 100.0
+  },
+  {
+    "id": "194288876896",
+    "name": "JDC Entwine Apps close soon 8.6.25 (Clone for Julie) (Clone #2 8.11.25)",
+    "subject": "Explore Argentina with Us\u2014Applications Close Soon",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-08-11T19:28:04.371Z",
+    "updated": "2025-08-11T19:29:12.543Z",
+    "publishedAt": "2025-08-11T19:28:28.876Z",
+    "campaignName": null,
+    "campaignIds": [
+      "375421050"
+    ],
+    "stats": {
+      "sent": 1,
+      "delivered": 1,
+      "opens": 1,
+      "clicks": 1,
+      "bounces": 0,
+      "unsubscribes": 0,
+      "spamReports": 0
+    },
+    "openRate": 100.0,
+    "clickRate": 100.0
+  },
+  {
+    "id": "194157632676",
+    "name": "Israel Update 8.8.25",
+    "subject": "War in Israel: Update on Current Situation",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-08-08T20:22:31.695Z",
+    "updated": "2025-08-08T21:34:26.087Z",
+    "publishedAt": "2025-08-08T21:31:04.149Z",
+    "campaignName": null,
+    "campaignIds": [
+      "375115763"
+    ],
+    "stats": {
+      "sent": 16325,
+      "delivered": 16291,
+      "opens": 3015,
+      "clicks": 211,
+      "bounces": 20,
+      "unsubscribes": 43,
+      "spamReports": 2
+    },
+    "openRate": 18.5,
+    "clickRate": 1.3
+  },
+  {
+    "id": "194107863400",
+    "name": "JDC Entwine Apps close soon 8.6.25 (Clone for Julie)",
+    "subject": "Explore Argentina with Us\u2014Applications Close Soon",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-08-07T20:30:34.523Z",
+    "updated": "2025-08-07T20:32:25.364Z",
+    "publishedAt": "2025-08-07T20:31:01.707Z",
+    "campaignName": null,
+    "campaignIds": [
+      "374962647"
+    ],
+    "stats": {
+      "sent": 0,
+      "delivered": 0,
+      "opens": 0,
+      "clicks": 0,
+      "bounces": 0,
+      "unsubscribes": 0,
+      "spamReports": 0
+    }
+  },
+  {
+    "id": "194107863349",
+    "name": "Blueprint Reminder 8.7.25 (Clone for Julie)",
+    "subject": "Register Now: Blueprint Forum \u2013 Over 40 Organizations Have Registered!",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-08-07T20:29:58.072Z",
+    "updated": "2025-08-07T20:31:04.319Z",
+    "publishedAt": "2025-08-07T20:30:18.665Z",
+    "campaignName": null,
+    "campaignIds": [
+      "374962544"
+    ],
+    "stats": {
+      "sent": 0,
+      "delivered": 0,
+      "opens": 0,
+      "clicks": 0,
+      "bounces": 0,
+      "unsubscribes": 0,
+      "spamReports": 0
+    }
+  },
+  {
+    "id": "194067584863",
+    "name": "Blueprint Reminder 8.7.25",
+    "subject": "Register Now: Blueprint Forum \u2013 Over 40 Organizations Have Registered!",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-08-06T20:25:46.967Z",
+    "updated": "2025-08-07T20:04:05.291Z",
+    "publishedAt": "2025-08-07T19:59:58.826Z",
+    "campaignName": null,
+    "campaignIds": [
+      "374956121"
+    ],
+    "stats": {
+      "sent": 70,
+      "delivered": 70,
+      "opens": 33,
+      "clicks": 14,
+      "bounces": 0,
+      "unsubscribes": 0,
+      "spamReports": 0
+    },
+    "openRate": 47.1,
+    "clickRate": 20.0
+  },
+  {
+    "id": "194013366798",
+    "name": "JDC Entwine Apps close soon 8.6.25",
+    "subject": "Explore Argentina with Us\u2014Applications Close Soon",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-08-05T19:13:17.610Z",
+    "updated": "2025-08-06T20:05:24.474Z",
+    "publishedAt": "2025-08-05T23:04:58.090Z",
+    "campaignName": null,
+    "campaignIds": [
+      "374608318"
+    ],
+    "stats": {
+      "sent": 1711,
+      "delivered": 1706,
+      "opens": 168,
+      "clicks": 3,
+      "bounces": 5,
+      "unsubscribes": 8,
+      "spamReports": 1
+    },
+    "openRate": 9.8,
+    "clickRate": 0.2
+  },
+  {
+    "id": "193952003167",
+    "name": "Cuba: Men's Mission Announcement 7.31.25 (Clone for Eric)",
+    "subject": "Men\u2019s Mission to Cuba, Nov 2025",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-08-04T23:25:31.057Z",
+    "updated": "2025-08-04T23:27:45.270Z",
+    "publishedAt": "2025-08-04T23:26:43.932Z",
+    "campaignName": null,
+    "campaignIds": [
+      "374422741"
+    ],
+    "stats": {
+      "sent": 1,
+      "delivered": 1,
+      "opens": 1,
+      "clicks": 1,
+      "bounces": 0,
+      "unsubscribes": 0,
+      "spamReports": 0
+    },
+    "openRate": 100.0,
+    "clickRate": 100.0
+  },
+  {
+    "id": "193721496505",
+    "name": "Cuba: Men's Mission Announcement 7.31.25",
+    "subject": "Men\u2019s Mission to Cuba, Nov 2025",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-07-31T15:20:09.941Z",
+    "updated": "2025-07-31T22:03:29.788Z",
+    "publishedAt": "2025-07-31T20:37:00.100Z",
+    "campaignName": null,
+    "campaignIds": [
+      "373936141"
+    ],
+    "stats": {
+      "sent": 16384,
+      "delivered": 16350,
+      "opens": 2162,
+      "clicks": 226,
+      "bounces": 23,
+      "unsubscribes": 73,
+      "spamReports": 5
+    },
+    "openRate": 13.2,
+    "clickRate": 1.4
+  },
+  {
+    "id": "193550109042",
+    "name": "Cornerstone Reminder 7.29.25",
+    "subject": "Join Us for Cornerstone 2025: An Evening of Gratitude & Impact",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-07-28T21:13:39.214Z",
+    "updated": "2025-07-29T17:03:07.640Z",
+    "publishedAt": "2025-07-28T22:34:01.164Z",
+    "campaignName": null,
+    "campaignIds": [
+      "373383827"
+    ],
+    "stats": {
+      "sent": 304,
+      "delivered": 303,
+      "opens": 96,
+      "clicks": 33,
+      "bounces": 1,
+      "unsubscribes": 0,
+      "spamReports": 0
+    },
+    "openRate": 31.7,
+    "clickRate": 10.9
+  },
+  {
+    "id": "193395904070",
+    "name": "Shabbat Shalom from Heidi 7.25.25",
+    "subject": "Building Belonging: A Transformative Moment for San Diego\u2019s Jewish Community",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-07-25T15:50:54.121Z",
+    "updated": "2025-07-25T21:03:28.931Z",
+    "publishedAt": "2025-07-25T19:25:32.298Z",
+    "campaignName": null,
+    "campaignIds": [
+      "373025093"
+    ],
+    "stats": {
+      "sent": 16431,
+      "delivered": 16412,
+      "opens": 2730,
+      "clicks": 25,
+      "bounces": 14,
+      "unsubscribes": 70,
+      "spamReports": 3
+    },
+    "openRate": 16.6,
+    "clickRate": 0.2
+  },
+  {
+    "id": "193206056370",
+    "name": "Thank you from CDO 7.22.25",
+    "subject": "What We Accomplished Together in 2024-25",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-07-22T18:51:02.314Z",
+    "updated": "2025-07-23T22:42:07.157Z",
+    "publishedAt": "2025-07-23T22:38:36.968Z",
+    "campaignName": null,
+    "campaignIds": [
+      "372719997"
+    ],
+    "stats": {
+      "sent": 16471,
+      "delivered": 16444,
+      "opens": 1922,
+      "clicks": 148,
+      "bounces": 14,
+      "unsubscribes": 58,
+      "spamReports": 7
+    },
+    "openRate": 11.7,
+    "clickRate": 0.9
+  },
+  {
+    "id": "193209380266",
+    "name": "JDC Entwine Reminder 7.23.25",
+    "subject": "Discover Argentina with San Diego Young Professionals!",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-07-22T20:36:04.877Z",
+    "updated": "2025-07-23T17:03:21.163Z",
+    "publishedAt": "2025-07-23T16:40:23.642Z",
+    "campaignName": null,
+    "campaignIds": [
+      "372510776"
+    ],
+    "stats": {
+      "sent": 1731,
+      "delivered": 1729,
+      "opens": 167,
+      "clicks": 7,
+      "bounces": 2,
+      "unsubscribes": 10,
+      "spamReports": 1
+    },
+    "openRate": 9.7,
+    "clickRate": 0.4
+  },
+  {
+    "id": "193150755714",
+    "name": "Blueprint Reminder 7.22.25",
+    "subject": "Register Now: Blueprint Forum \u2013 Over 40 Organizations Have Registered!",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-07-21T22:52:35.355Z",
+    "updated": "2025-07-22T21:01:55.860Z",
+    "publishedAt": "2025-07-22T20:57:59.989Z",
+    "campaignName": null,
+    "campaignIds": [
+      "372508651"
+    ],
+    "stats": {
+      "sent": 125,
+      "delivered": 125,
+      "opens": 56,
+      "clicks": 23,
+      "bounces": 0,
+      "unsubscribes": 0,
+      "spamReports": 0
+    },
+    "openRate": 44.8,
+    "clickRate": 18.4
+  },
+  {
+    "id": "192913788685",
+    "name": "Shabbat Shalom from Jeff Schindler 7.18.25",
+    "subject": "My Commitment to You as Board Chair",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-07-17T22:15:55.859Z",
+    "updated": "2025-07-18T22:03:42.855Z",
+    "publishedAt": "2025-07-18T20:38:04.837Z",
+    "campaignName": null,
+    "campaignIds": [
+      "371978006"
+    ],
+    "stats": {
+      "sent": 16546,
+      "delivered": 16496,
+      "opens": 2543,
+      "clicks": 61,
+      "bounces": 34,
+      "unsubscribes": 61,
+      "spamReports": 5
+    },
+    "openRate": 15.4,
+    "clickRate": 0.4
+  },
+  {
+    "id": "192914409788",
+    "name": "Israel & Syria 7.17.25",
+    "subject": "War in Israel: Update on Current Situation",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-07-17T21:57:27.738Z",
+    "updated": "2025-07-18T17:18:46.498Z",
+    "publishedAt": "2025-07-18T17:14:48.837Z",
+    "campaignName": null,
+    "campaignIds": [
+      "371949402"
+    ],
+    "stats": {
+      "sent": 16561,
+      "delivered": 16512,
+      "opens": 2607,
+      "clicks": 43,
+      "bounces": 40,
+      "unsubscribes": 54,
+      "spamReports": 3
+    },
+    "openRate": 15.8,
+    "clickRate": 0.3
+  },
+  {
+    "id": "192905109071",
+    "name": "JPride 7.17.25",
+    "subject": "JPride Weekend Starts Tomorrow \u2013 RSVP Now!",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-07-17T17:55:39.841Z",
+    "updated": "2025-07-17T21:48:05.975Z",
+    "publishedAt": "2025-07-17T21:33:40.966Z",
+    "campaignName": null,
+    "campaignIds": [
+      "371831082"
+    ],
+    "stats": {
+      "sent": 7460,
+      "delivered": 7449,
+      "opens": 1621,
+      "clicks": 118,
+      "bounces": 7,
+      "unsubscribes": 37,
+      "spamReports": 1
+    },
+    "openRate": 21.8,
+    "clickRate": 1.6
+  },
+  {
+    "id": "192721320809",
+    "name": "Pauline Foster Cohort Last Chance 7.15.25",
+    "subject": "Final Call: Unlock Your Leadership Journey with PFWLI",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-07-15T19:54:19.805Z",
+    "updated": "2025-07-15T22:07:50.276Z",
+    "publishedAt": "2025-07-15T22:04:35.500Z",
+    "campaignName": null,
+    "campaignIds": [
+      "371479340"
+    ],
+    "stats": {
+      "sent": 8341,
+      "delivered": 8322,
+      "opens": 1037,
+      "clicks": 59,
+      "bounces": 12,
+      "unsubscribes": 57,
+      "spamReports": 6
+    },
+    "openRate": 12.5,
+    "clickRate": 0.7
+  },
+  {
+    "id": "192663972417",
+    "name": "Cornerstone Invite 7.14.25",
+    "subject": "Recognizing the Leaders Who Are All In \u2014 Cornerstone 2025",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-07-14T20:21:55.211Z",
+    "updated": "2025-07-15T18:30:46.162Z",
+    "publishedAt": "2025-07-15T18:28:05.882Z",
+    "campaignName": null,
+    "campaignIds": [
+      "371442002"
+    ],
+    "stats": {
+      "sent": 309,
+      "delivered": 306,
+      "opens": 85,
+      "clicks": 17,
+      "bounces": 3,
+      "unsubscribes": 1,
+      "spamReports": 0
+    },
+    "openRate": 27.8,
+    "clickRate": 5.6
+  },
+  {
+    "id": "192323156789",
+    "name": "JDC Entwine Reminder 7.9.25",
+    "subject": "Travel to Argentina & Uruguay with Us!",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-07-07T23:05:41.039Z",
+    "updated": "2025-07-09T19:03:35.887Z",
+    "publishedAt": "2025-07-09T16:46:13.821Z",
+    "campaignName": null,
+    "campaignIds": [
+      "370354502"
+    ],
+    "stats": {
+      "sent": 1754,
+      "delivered": 1749,
+      "opens": 182,
+      "clicks": 10,
+      "bounces": 5,
+      "unsubscribes": 6,
+      "spamReports": 0
+    },
+    "openRate": 10.4,
+    "clickRate": 0.6
+  },
+  {
+    "id": "192091362219",
+    "name": "JPride Reminder 7.3.25",
+    "subject": "JPride Weekend is Almost Here \u2013 RSVP Now!",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-07-02T18:46:42.335Z",
+    "updated": "2025-07-03T18:03:30.847Z",
+    "publishedAt": "2025-07-02T22:07:42.351Z",
+    "campaignName": null,
+    "campaignIds": [
+      "369615412"
+    ],
+    "stats": {
+      "sent": 16631,
+      "delivered": 16591,
+      "opens": 1618,
+      "clicks": 88,
+      "bounces": 35,
+      "unsubscribes": 38,
+      "spamReports": 2
+    },
+    "openRate": 9.8,
+    "clickRate": 0.5
+  },
+  {
+    "id": "191260630057",
+    "name": "Holocaust Ed. Donor Update May / June",
+    "subject": "Goldberg Family Holocaust Education Program & Mobile Museum: Donor Update",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-06-11T16:38:38.073Z",
+    "updated": "2025-06-30T22:13:49.403Z",
+    "publishedAt": "2025-06-30T22:07:13.542Z",
+    "campaignName": null,
+    "campaignIds": [
+      "369266415"
+    ],
+    "stats": {
+      "sent": 72,
+      "delivered": 72,
+      "opens": 35,
+      "clicks": 5,
+      "bounces": 0,
+      "unsubscribes": 0,
+      "spamReports": 0
+    },
+    "openRate": 48.6,
+    "clickRate": 6.9
+  },
+  {
+    "id": "191862577970",
+    "name": "Shabbat Shalom from David Bark 6.27.25",
+    "subject": "A Very Humble Thank You",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-06-26T21:00:10.998Z",
+    "updated": "2025-06-27T21:02:49.014Z",
+    "publishedAt": "2025-06-27T15:59:07.537Z",
+    "campaignName": null,
+    "campaignIds": [
+      "368857175"
+    ],
+    "stats": {
+      "sent": 16683,
+      "delivered": 16651,
+      "opens": 3463,
+      "clicks": 35,
+      "bounces": 26,
+      "unsubscribes": 60,
+      "spamReports": 3
+    },
+    "openRate": 20.8,
+    "clickRate": 0.2
+  },
+  {
+    "id": "191223698828",
+    "name": "EOY #4 6.26.25",
+    "subject": "Protect San Diego's Jewish Community \u2014 Act by June 30 \u00a0",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-06-10T18:35:34.420Z",
+    "updated": "2025-06-26T19:35:29.702Z",
+    "publishedAt": "2025-06-26T19:31:46.122Z",
+    "campaignName": null,
+    "campaignIds": [
+      "368732243"
+    ],
+    "stats": {
+      "sent": 16710,
+      "delivered": 16681,
+      "opens": 3196,
+      "clicks": 67,
+      "bounces": 26,
+      "unsubscribes": 57,
+      "spamReports": 6
+    },
+    "openRate": 19.2,
+    "clickRate": 0.4
+  },
+  {
+    "id": "191223363392",
+    "name": "EOY #3 6.24.25",
+    "subject": "Give today to support Jews in San Diego, Israel, and beyond",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-06-10T18:24:58.870Z",
+    "updated": "2025-06-24T17:37:21.814Z",
+    "publishedAt": "2025-06-24T16:52:21.925Z",
+    "campaignName": null,
+    "campaignIds": [
+      "368292497"
+    ],
+    "stats": {
+      "sent": 16748,
+      "delivered": 16713,
+      "opens": 1606,
+      "clicks": 20,
+      "bounces": 29,
+      "unsubscribes": 55,
+      "spamReports": 6
+    },
+    "openRate": 9.6,
+    "clickRate": 0.1
+  },
+  {
+    "id": "191729301575",
+    "name": "Pauline Foster #2 6.23.25",
+    "subject": "Apply Now for the Pauline Foster Women\u2019s Leadership Institute",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-06-23T19:32:29.740Z",
+    "updated": "2025-06-23T22:58:49.211Z",
+    "publishedAt": "2025-06-23T22:55:42.911Z",
+    "campaignName": null,
+    "campaignIds": [
+      "368166061"
+    ],
+    "stats": {
+      "sent": 8418,
+      "delivered": 8405,
+      "opens": 884,
+      "clicks": 90,
+      "bounces": 6,
+      "unsubscribes": 9,
+      "spamReports": 1
+    },
+    "openRate": 10.5,
+    "clickRate": 1.1
+  },
+  {
+    "id": "191477378332",
+    "name": "Blueprint Invitation 6.23.25",
+    "subject": "You\u2019re Invited: Blueprint Forum \u2013 A Special Gathering of San Diego Jewish Leaders",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-06-17T15:36:31.064Z",
+    "updated": "2025-06-23T17:07:10.666Z",
+    "publishedAt": "2025-06-23T16:40:11.304Z",
+    "campaignName": null,
+    "campaignIds": [
+      "368086270"
+    ],
+    "stats": {
+      "sent": 161,
+      "delivered": 161,
+      "opens": 103,
+      "clicks": 50,
+      "bounces": 0,
+      "unsubscribes": 0,
+      "spamReports": 0
+    },
+    "openRate": 64.0,
+    "clickRate": 31.1
+  },
+  {
+    "id": "191537465767",
+    "name": "Sha'ar HaNegev Webinar 6.22.25",
+    "subject": "You\u2019re Invited: A Moment of Global Solidarity with Sha\u2019ar HaNegev",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-06-18T22:33:35.987Z",
+    "updated": "2025-06-22T17:58:17.242Z",
+    "publishedAt": "2025-06-20T22:35:29.523Z",
+    "campaignName": null,
+    "campaignIds": [
+      "367814034"
+    ],
+    "stats": {
+      "sent": 239,
+      "delivered": 239,
+      "opens": 107,
+      "clicks": 40,
+      "bounces": 0,
+      "unsubscribes": 1,
+      "spamReports": 0
+    },
+    "openRate": 44.8,
+    "clickRate": 16.7
+  },
+  {
+    "id": "191608970049",
+    "name": "Shabbat Shalom from Heidi 6.20.25",
+    "subject": "From Heartbreak to Action: Reflections from This Week",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-06-20T19:31:28.371Z",
+    "updated": "2025-06-20T21:31:57.383Z",
+    "publishedAt": "2025-06-20T21:28:35.449Z",
+    "campaignName": null,
+    "campaignIds": [
+      "367799877"
+    ],
+    "stats": {
+      "sent": 16799,
+      "delivered": 16754,
+      "opens": 1721,
+      "clicks": 39,
+      "bounces": 30,
+      "unsubscribes": 48,
+      "spamReports": 3
+    },
+    "openRate": 10.3,
+    "clickRate": 0.2
+  },
+  {
+    "id": "191223362433",
+    "name": "EOY #2 6.20.25",
+    "subject": "The next generation is waiting. Will you show up for them?",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-06-10T18:18:48.773Z",
+    "updated": "2025-06-20T16:58:50.851Z",
+    "publishedAt": "2025-06-20T16:29:58.207Z",
+    "campaignName": null,
+    "campaignIds": [
+      "367757922"
+    ],
+    "stats": {
+      "sent": 2547,
+      "delivered": 2545,
+      "opens": 376,
+      "clicks": 7,
+      "bounces": 1,
+      "unsubscribes": 7,
+      "spamReports": 0
+    },
+    "openRate": 14.8,
+    "clickRate": 0.3
+  },
+  {
+    "id": "191444295271",
+    "name": "JDC Entwine Apps Open 6.17.25",
+    "subject": "Explore Argentina and Uruguay with Us\u2014Apply Now!",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-06-16T21:20:56.346Z",
+    "updated": "2025-06-19T20:59:04.896Z",
+    "publishedAt": "2025-06-18T21:06:20.330Z",
+    "campaignName": null,
+    "campaignIds": [
+      "367436909"
+    ],
+    "stats": {
+      "sent": 1772,
+      "delivered": 1768,
+      "opens": 180,
+      "clicks": 7,
+      "bounces": 4,
+      "unsubscribes": 3,
+      "spamReports": 1
+    },
+    "openRate": 10.2,
+    "clickRate": 0.4
+  },
+  {
+    "id": "191491633677",
+    "name": "India 5K Invite",
+    "subject": "Journey of a Lifetime: Join Our 2026 Federation Mission to India",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-06-17T21:48:20.497Z",
+    "updated": "2025-06-19T16:59:22.606Z",
+    "publishedAt": "2025-06-18T20:48:12.232Z",
+    "campaignName": null,
+    "campaignIds": [
+      "367476107"
+    ],
+    "stats": {
+      "sent": 173,
+      "delivered": 173,
+      "opens": 55,
+      "clicks": 7,
+      "bounces": 0,
+      "unsubscribes": 1,
+      "spamReports": 0
+    },
+    "openRate": 31.8,
+    "clickRate": 4.0
+  },
+  {
+    "id": "191492241445",
+    "name": "India 10K Invite",
+    "subject": "Journey of a Lifetime: Join Our 2026 Federation Mission to India",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-06-17T22:18:55.104Z",
+    "updated": "2025-06-19T16:59:20.299Z",
+    "publishedAt": "2025-06-18T20:50:40.493Z",
+    "campaignName": null,
+    "campaignIds": [
+      "367478098"
+    ],
+    "stats": {
+      "sent": 261,
+      "delivered": 261,
+      "opens": 77,
+      "clicks": 20,
+      "bounces": 0,
+      "unsubscribes": 1,
+      "spamReports": 0
+    },
+    "openRate": 29.5,
+    "clickRate": 7.7
+  },
+  {
+    "id": "191482100339",
+    "name": "JPride Weekend",
+    "subject": "\ud83c\udf08 J Pride is coming this July!",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-06-17T17:53:11.859Z",
+    "updated": "2025-06-18T21:59:33.659Z",
+    "publishedAt": "2025-06-18T16:59:24.177Z",
+    "campaignName": null,
+    "campaignIds": [
+      "367275759"
+    ],
+    "stats": {
+      "sent": 16846,
+      "delivered": 16801,
+      "opens": 2820,
+      "clicks": 131,
+      "bounces": 33,
+      "unsubscribes": 53,
+      "spamReports": 2
+    },
+    "openRate": 16.8,
+    "clickRate": 0.8
+  },
+  {
+    "id": "191220445842",
+    "name": "EOY #1 6.16.25",
+    "subject": "Help Holocaust Survivors Live in Dignity",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-06-10T17:57:55.800Z",
+    "updated": "2025-06-18T17:07:38.558Z",
+    "publishedAt": "2025-06-17T22:46:43.917Z",
+    "campaignName": null,
+    "campaignIds": [
+      "367288372"
+    ],
+    "stats": {
+      "sent": 2562,
+      "delivered": 2560,
+      "opens": 326,
+      "clicks": 11,
+      "bounces": 2,
+      "unsubscribes": 13,
+      "spamReports": 0
+    },
+    "openRate": 12.7,
+    "clickRate": 0.4
+  },
+  {
+    "id": "191492005418",
+    "name": "Pride test Rick 5",
+    "subject": "Pride test from template",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-06-17T22:14:56.353Z",
+    "updated": "2025-06-17T22:17:12.423Z",
+    "publishedAt": "2025-06-17T22:16:25.942Z",
+    "campaignName": null,
+    "campaignIds": [
+      "367270577"
+    ],
+    "stats": {
+      "sent": 1,
+      "delivered": 1,
+      "opens": 1,
+      "clicks": 1,
+      "bounces": 0,
+      "unsubscribes": 0,
+      "spamReports": 0
+    },
+    "openRate": 100.0,
+    "clickRate": 100.0
+  },
+  {
+    "id": "191479744806",
+    "name": "IEC 6.17.25",
+    "subject": "Staying Informed and Connected: Israel Emergency Update & Webinar Opportunity",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-06-17T17:08:56.108Z",
+    "updated": "2025-06-17T22:07:25.046Z",
+    "publishedAt": "2025-06-17T22:02:38.173Z",
+    "campaignName": null,
+    "campaignIds": [
+      "367272999"
+    ],
+    "stats": {
+      "sent": 16845,
+      "delivered": 16800,
+      "opens": 3073,
+      "clicks": 277,
+      "bounces": 31,
+      "unsubscribes": 64,
+      "spamReports": 5
+    },
+    "openRate": 18.3,
+    "clickRate": 1.6
+  },
+  {
+    "id": "191486962360",
+    "name": "JPride Weekend (Rick Web Version test 4)",
+    "subject": "\ud83c\udf08 J Pride is coming this July!",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-06-17T21:20:35.428Z",
+    "updated": "2025-06-17T21:40:32.485Z",
+    "publishedAt": "2025-06-17T21:39:14.223Z",
+    "campaignName": null,
+    "campaignIds": [
+      "367267411"
+    ],
+    "stats": {
+      "sent": 1,
+      "delivered": 1,
+      "opens": 1,
+      "clicks": 1,
+      "bounces": 0,
+      "unsubscribes": 0,
+      "spamReports": 0
+    },
+    "openRate": 100.0,
+    "clickRate": 100.0
+  },
+  {
+    "id": "191490946670",
+    "name": "JPride Weekend (Rick Web Version test 2)",
+    "subject": "\ud83c\udf08 J Pride is coming this July!",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-06-17T21:02:29.972Z",
+    "updated": "2025-06-17T21:06:10.889Z",
+    "publishedAt": "2025-06-17T21:05:23.533Z",
+    "campaignName": null,
+    "campaignIds": [
+      "367258771"
+    ],
+    "stats": {
+      "sent": 1,
+      "delivered": 1,
+      "opens": 1,
+      "clicks": 1,
+      "bounces": 0,
+      "unsubscribes": 0,
+      "spamReports": 0
+    },
+    "openRate": 100.0,
+    "clickRate": 100.0
+  },
+  {
+    "id": "191438594888",
+    "name": "Sha'ar HaNegev Leadership Webinar 6.16.25",
+    "subject": "Israeli Civilians Under Attack: Join Urgent Webinar",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-06-16T18:44:20.486Z",
+    "updated": "2025-06-16T20:27:45.820Z",
+    "publishedAt": "2025-06-16T20:23:50.726Z",
+    "campaignName": null,
+    "campaignIds": [
+      "367008108"
+    ],
+    "stats": {
+      "sent": 16802,
+      "delivered": 16758,
+      "opens": 1933,
+      "clicks": 163,
+      "bounces": 33,
+      "unsubscribes": 43,
+      "spamReports": 8
+    },
+    "openRate": 11.5,
+    "clickRate": 1.0
+  },
+  {
+    "id": "191347039273",
+    "name": "Security Update (Israel & Iran) 6.13.25",
+    "subject": "Standing with Israel: An Update from San Diego",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-06-13T15:16:59.270Z",
+    "updated": "2025-06-13T21:27:07.337Z",
+    "publishedAt": "2025-06-13T21:22:52.277Z",
+    "campaignName": null,
+    "campaignIds": [
+      "366665719"
+    ],
+    "stats": {
+      "sent": 16829,
+      "delivered": 16786,
+      "opens": 3091,
+      "clicks": 82,
+      "bounces": 32,
+      "unsubscribes": 45,
+      "spamReports": 5
+    },
+    "openRate": 18.4,
+    "clickRate": 0.5
+  },
+  {
+    "id": "191310966192",
+    "name": "Pauline Foster Cohort #5 Apps Open 6.12.2025",
+    "subject": "Ready to lead with purpose? Join the next Pauline Foster Women\u2019s Leadership Initiative cohort",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-06-12T17:33:49.058Z",
+    "updated": "2025-06-12T23:14:07.853Z",
+    "publishedAt": "2025-06-12T23:10:44.123Z",
+    "campaignName": null,
+    "campaignIds": [
+      "366504439"
+    ],
+    "stats": {
+      "sent": 8491,
+      "delivered": 8479,
+      "opens": 852,
+      "clicks": 70,
+      "bounces": 8,
+      "unsubscribes": 11,
+      "spamReports": 2
+    },
+    "openRate": 10.0,
+    "clickRate": 0.8
+  },
+  {
+    "id": "191102140781",
+    "name": "Shabbat Shalom from Heidi 6.6.25",
+    "subject": "Responding to Antisemitism with Strength, Solidarity, and Resolve",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-06-06T19:13:38.683Z",
+    "updated": "2025-06-06T21:34:36.517Z",
+    "publishedAt": "2025-06-06T21:31:15.175Z",
+    "campaignName": null,
+    "campaignIds": [
+      "365485402"
+    ],
+    "stats": {
+      "sent": 16887,
+      "delivered": 16841,
+      "opens": 3110,
+      "clicks": 59,
+      "bounces": 35,
+      "unsubscribes": 46,
+      "spamReports": 5
+    },
+    "openRate": 18.5,
+    "clickRate": 0.4
+  },
+  {
+    "id": "190900326763",
+    "name": "Security Update (Colorado Attack) 6.1.25",
+    "subject": "Our Response to the Attack in Boulder",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-06-01T22:42:52.232Z",
+    "updated": "2025-06-02T00:30:37.235Z",
+    "publishedAt": "2025-06-02T00:26:50.927Z",
+    "campaignName": null,
+    "campaignIds": [
+      "364297180"
+    ],
+    "stats": {
+      "sent": 16931,
+      "delivered": 16885,
+      "opens": 3600,
+      "clicks": 264,
+      "bounces": 41,
+      "unsubscribes": 49,
+      "spamReports": 5
+    },
+    "openRate": 21.3,
+    "clickRate": 1.6
+  },
+  {
+    "id": "190765548388",
+    "name": "Brunch Club TY 5.30.25",
+    "subject": "Thank you for attending Brunch Club After Dark",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-05-28T23:47:33.585Z",
+    "updated": "2025-05-30T21:53:51.219Z",
+    "publishedAt": "2025-05-30T21:49:38.722Z",
+    "campaignName": null,
+    "campaignIds": [
+      "364119107"
+    ],
+    "stats": {
+      "sent": 103,
+      "delivered": 103,
+      "opens": 61,
+      "clicks": 29,
+      "bounces": 0,
+      "unsubscribes": 0,
+      "spamReports": 0
+    },
+    "openRate": 59.2,
+    "clickRate": 28.2
+  },
+  {
+    "id": "190804339555",
+    "name": "IEC Webinar TY 5.29.25",
+    "subject": "Thank You for Attending the IEC Webinar",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-05-29T21:14:49.250Z",
+    "updated": "2025-05-29T22:23:35.676Z",
+    "publishedAt": "2025-05-29T22:20:51.187Z",
+    "campaignName": null,
+    "campaignIds": [
+      "363954972"
+    ],
+    "stats": {
+      "sent": 104,
+      "delivered": 104,
+      "opens": 53,
+      "clicks": 14,
+      "bounces": 0,
+      "unsubscribes": 0,
+      "spamReports": 0
+    },
+    "openRate": 51.0,
+    "clickRate": 13.5
+  },
+  {
+    "id": "190739534984",
+    "name": "Brunch Club KBYG FINAL 5.28.25",
+    "subject": "Know Before You Go: Brunch Club After Dark",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-05-28T17:24:11.335Z",
+    "updated": "2025-05-28T19:01:02.237Z",
+    "publishedAt": "2025-05-28T18:58:42.123Z",
+    "campaignName": null,
+    "campaignIds": [
+      "363713656"
+    ],
+    "stats": {
+      "sent": 98,
+      "delivered": 98,
+      "opens": 58,
+      "clicks": 4,
+      "bounces": 0,
+      "unsubscribes": 0,
+      "spamReports": 0
+    },
+    "openRate": 59.2,
+    "clickRate": 4.1
+  },
+  {
+    "id": "190698402378",
+    "name": "Global Shabbat Last Chance 5.28.25",
+    "subject": "Last Chance! Don\u2019t Miss Global Shabbat on June 6!",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-05-27T23:47:24.127Z",
+    "updated": "2025-05-28T18:34:55.660Z",
+    "publishedAt": "2025-05-28T17:36:16.367Z",
+    "campaignName": null,
+    "campaignIds": [
+      "363691805"
+    ],
+    "stats": {
+      "sent": 1808,
+      "delivered": 1803,
+      "opens": 199,
+      "clicks": 11,
+      "bounces": 5,
+      "unsubscribes": 7,
+      "spamReports": 0
+    },
+    "openRate": 11.0,
+    "clickRate": 0.6
+  },
+  {
+    "id": "190689005585",
+    "name": "WP Survey Outreach 5.27.25",
+    "subject": "Shape the Future of Women's Philanthropy",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-05-27T21:58:42.934Z",
+    "updated": "2025-05-27T23:41:56.461Z",
+    "publishedAt": "2025-05-27T23:38:48.501Z",
+    "campaignName": null,
+    "campaignIds": [
+      "363556900"
+    ],
+    "stats": {
+      "sent": 8579,
+      "delivered": 8570,
+      "opens": 1058,
+      "clicks": 186,
+      "bounces": 7,
+      "unsubscribes": 52,
+      "spamReports": 6
+    },
+    "openRate": 12.3,
+    "clickRate": 2.2
+  },
+  {
+    "id": "190559232129",
+    "name": "Israel Webinar Last Chance 5.26.25",
+    "subject": "Special Webinar on Israel",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-05-23T20:18:37.413Z",
+    "updated": "2025-05-26T17:01:25.986Z",
+    "publishedAt": "2025-05-23T22:52:44.552Z",
+    "campaignName": null,
+    "campaignIds": [
+      "363041279"
+    ],
+    "stats": {
+      "sent": 16888,
+      "delivered": 16842,
+      "opens": 1731,
+      "clicks": 68,
+      "bounces": 37,
+      "unsubscribes": 29,
+      "spamReports": 3
+    },
+    "openRate": 10.3,
+    "clickRate": 0.4
+  },
+  {
+    "id": "190486646089",
+    "name": "Security Update (Washington Attack) 5.22.25",
+    "subject": "In Solidarity After the Tragedy in Washington, DC",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-05-22T15:49:34.375Z",
+    "updated": "2025-05-22T16:55:40.532Z",
+    "publishedAt": "2025-05-22T16:51:41.223Z",
+    "campaignName": null,
+    "campaignIds": [
+      "362808015"
+    ],
+    "stats": {
+      "sent": 16927,
+      "delivered": 16883,
+      "opens": 3127,
+      "clicks": 87,
+      "bounces": 32,
+      "unsubscribes": 34,
+      "spamReports": 2
+    },
+    "openRate": 18.5,
+    "clickRate": 0.5
+  },
+  {
+    "id": "190385769357",
+    "name": "Israel Webinar 5.21.25",
+    "subject": "Join Us For an Exclusive Donor Briefing",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-05-20T23:28:41.249Z",
+    "updated": "2025-05-21T23:35:43.392Z",
+    "publishedAt": "2025-05-21T23:32:38.015Z",
+    "campaignName": null,
+    "campaignIds": [
+      "362682191"
+    ],
+    "stats": {
+      "sent": 5033,
+      "delivered": 4987,
+      "opens": 724,
+      "clicks": 36,
+      "bounces": 46,
+      "unsubscribes": 11,
+      "spamReports": 0
+    },
+    "openRate": 14.5,
+    "clickRate": 0.7
+  },
+  {
+    "id": "190145393176",
+    "name": "March of Living recap & Holo Ed update",
+    "subject": "\u201cWe Are Still Here\u201d: Reflections from the March of the Living",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-05-14T17:54:13.504Z",
+    "updated": "2025-05-21T00:00:24.405Z",
+    "publishedAt": "2025-05-20T23:57:47.529Z",
+    "campaignName": null,
+    "campaignIds": [
+      "362478721"
+    ],
+    "stats": {
+      "sent": 63,
+      "delivered": 62,
+      "opens": 28,
+      "clicks": 5,
+      "bounces": 1,
+      "unsubscribes": 0,
+      "spamReports": 0
+    },
+    "openRate": 45.2,
+    "clickRate": 8.1
+  },
+  {
+    "id": "190247309584",
+    "name": "Brunch Club Last Chance 5.19.25",
+    "subject": "Last Chance! RSVP for Brunch Club After Dark by May 22",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-05-16T22:19:28.999Z",
+    "updated": "2025-05-19T18:15:10.332Z",
+    "publishedAt": "2025-05-19T18:11:52.635Z",
+    "campaignName": null,
+    "campaignIds": [
+      "362216808"
+    ],
+    "stats": {
+      "sent": 8628,
+      "delivered": 8616,
+      "opens": 897,
+      "clicks": 80,
+      "bounces": 6,
+      "unsubscribes": 13,
+      "spamReports": 1
+    },
+    "openRate": 10.4,
+    "clickRate": 0.9
+  },
+  {
+    "id": "190246763105",
+    "name": "Global Shabbat #2 5.18.25",
+    "subject": "Your Global Shabbat Adventure Awaits!",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-05-16T20:45:17.063Z",
+    "updated": "2025-05-18T18:01:02.632Z",
+    "publishedAt": "2025-05-16T22:01:35.771Z",
+    "campaignName": null,
+    "campaignIds": [
+      "361906725"
+    ],
+    "stats": {
+      "sent": 1825,
+      "delivered": 1820,
+      "opens": 181,
+      "clicks": 13,
+      "bounces": 5,
+      "unsubscribes": 4,
+      "spamReports": 0
+    },
+    "openRate": 9.9,
+    "clickRate": 0.7
+  },
+  {
+    "id": "190143943068",
+    "name": "Beit Melachah 1",
+    "subject": "Stand with the Families of Sha\u2019ar HaNegev and Revitalize Beit Melachah",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-05-14T17:53:52.396Z",
+    "updated": "2025-05-16T22:39:09.630Z",
+    "publishedAt": "2025-05-16T22:35:18.509Z",
+    "campaignName": null,
+    "campaignIds": [
+      "361910847"
+    ],
+    "stats": {
+      "sent": 16777,
+      "delivered": 16739,
+      "opens": 1803,
+      "clicks": 61,
+      "bounces": 29,
+      "unsubscribes": 34,
+      "spamReports": 3
+    },
+    "openRate": 10.8,
+    "clickRate": 0.4
+  },
+  {
+    "id": "190096300916",
+    "name": "Save the Date: Cornerstone 5.13.25",
+    "subject": "Save the Date for an Evening Celebrating Your Impact",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-05-13T19:08:50.454Z",
+    "updated": "2025-05-13T22:40:11.130Z",
+    "publishedAt": "2025-05-13T22:37:37.589Z",
+    "campaignName": null,
+    "campaignIds": [
+      "361359165"
+    ],
+    "stats": {
+      "sent": 221,
+      "delivered": 221,
+      "opens": 89,
+      "clicks": 2,
+      "bounces": 0,
+      "unsubscribes": 0,
+      "spamReports": 0
+    },
+    "openRate": 40.3,
+    "clickRate": 0.9
+  },
+  {
+    "id": "189749662133",
+    "name": "Brunch Club Reminder 5.7.25",
+    "subject": "Haven\u2019t RSVP\u2019d Yet? You\u2019re Invited to Brunch Club After Dark",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-05-05T20:02:17.469Z",
+    "updated": "2025-05-07T20:02:41.534Z",
+    "publishedAt": "2025-05-07T18:32:16.308Z",
+    "campaignName": null,
+    "campaignIds": [
+      "360425315"
+    ],
+    "stats": {
+      "sent": 8635,
+      "delivered": 8622,
+      "opens": 937,
+      "clicks": 96,
+      "bounces": 7,
+      "unsubscribes": 10,
+      "spamReports": 0
+    },
+    "openRate": 10.9,
+    "clickRate": 1.1
+  },
+  {
+    "id": "189608450088",
+    "name": "Global Shabbat #1 5.5.25",
+    "subject": "Now Boarding for Global Shabbat",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-05-01T16:52:50.796Z",
+    "updated": "2025-05-05T18:05:38.468Z",
+    "publishedAt": "2025-05-02T20:46:50.155Z",
+    "campaignName": null,
+    "campaignIds": [
+      "359723929"
+    ],
+    "stats": {
+      "sent": 1843,
+      "delivered": 1839,
+      "opens": 234,
+      "clicks": 16,
+      "bounces": 4,
+      "unsubscribes": 7,
+      "spamReports": 0
+    },
+    "openRate": 12.7,
+    "clickRate": 0.9
+  },
+  {
+    "id": "189656753253",
+    "name": "MOTL Israel Extension Shabbat 5.2.25",
+    "subject": "A Transformative Two Weeks",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-05-02T19:30:52.137Z",
+    "updated": "2025-05-02T22:22:44.425Z",
+    "publishedAt": "2025-05-02T22:19:38.004Z",
+    "campaignName": null,
+    "campaignIds": [
+      "359740677"
+    ],
+    "stats": {
+      "sent": 16833,
+      "delivered": 16796,
+      "opens": 2932,
+      "clicks": 184,
+      "bounces": 29,
+      "unsubscribes": 53,
+      "spamReports": 4
+    },
+    "openRate": 17.5,
+    "clickRate": 1.1
+  },
+  {
+    "id": "189464623498",
+    "name": "Yom HaShoah TY 4.28.25",
+    "subject": "Thank You for Joining Us to Commemorate Yom HaShoah",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-04-28T18:54:01.861Z",
+    "updated": "2025-04-29T21:07:15.804Z",
+    "publishedAt": "2025-04-29T18:20:01.031Z",
+    "campaignName": null,
+    "campaignIds": [
+      "359054405"
+    ],
+    "stats": {
+      "sent": 410,
+      "delivered": 407,
+      "opens": 207,
+      "clicks": 69,
+      "bounces": 3,
+      "unsubscribes": 0,
+      "spamReports": 0
+    },
+    "openRate": 50.9,
+    "clickRate": 17.0
+  },
+  {
+    "id": "189523512707",
+    "name": "Yom HaZikaron 2025 KBYG (Clone)",
+    "subject": "Know Before You Go: Yom Hazikaron Israel\u2019s Day of Remembrance",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-04-29T19:45:18.769Z",
+    "updated": "2025-04-29T19:50:14.815Z",
+    "publishedAt": "2025-04-29T19:46:13.933Z",
+    "campaignName": null,
+    "campaignIds": [
+      "359072363"
+    ],
+    "stats": {
+      "sent": 123,
+      "delivered": 120,
+      "opens": 66,
+      "clicks": 1,
+      "bounces": 3,
+      "unsubscribes": 1,
+      "spamReports": 0
+    },
+    "openRate": 55.0,
+    "clickRate": 0.8
+  },
+  {
+    "id": "189515010618",
+    "name": "Celebrate Israel 2025 KBYG",
+    "subject": "Know Before You Go: Celebrate Israel, Yom Hatzmaut Music Festival",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-04-29T16:36:25.536Z",
+    "updated": "2025-04-29T19:18:44.257Z",
+    "publishedAt": "2025-04-29T19:15:45.243Z",
+    "campaignName": null,
+    "campaignIds": [
+      "359060687"
+    ],
+    "stats": {
+      "sent": 782,
+      "delivered": 772,
+      "opens": 365,
+      "clicks": 56,
+      "bounces": 10,
+      "unsubscribes": 2,
+      "spamReports": 0
+    },
+    "openRate": 47.3,
+    "clickRate": 7.3
+  },
+  {
+    "id": "189465028753",
+    "name": "Yom HaZikaron 2025 KBYG",
+    "subject": "Know Before You Go: Yom Hazikaron Israel\u2019s Day of Remembrance",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-04-28T19:13:57.078Z",
+    "updated": "2025-04-28T21:32:44.938Z",
+    "publishedAt": "2025-04-28T21:27:04.983Z",
+    "campaignName": null,
+    "campaignIds": [
+      "358898012"
+    ],
+    "stats": {
+      "sent": 183,
+      "delivered": 183,
+      "opens": 81,
+      "clicks": 1,
+      "bounces": 0,
+      "unsubscribes": 0,
+      "spamReports": 0
+    },
+    "openRate": 44.3,
+    "clickRate": 0.5
+  },
+  {
+    "id": "189329095816",
+    "name": "MOTL Co-Chairs Shabbat 4.25.25",
+    "subject": "Reflections from Poland \u2013 March of the Living",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-04-24T23:52:34.840Z",
+    "updated": "2025-04-25T21:07:53.236Z",
+    "publishedAt": "2025-04-25T19:58:40.139Z",
+    "campaignName": null,
+    "campaignIds": [
+      "358546775"
+    ],
+    "stats": {
+      "sent": 16359,
+      "delivered": 16317,
+      "opens": 2878,
+      "clicks": 212,
+      "bounces": 31,
+      "unsubscribes": 54,
+      "spamReports": 6
+    },
+    "openRate": 17.6,
+    "clickRate": 1.3
+  },
+  {
+    "id": "189221520496",
+    "name": "Brunch Club Invite 4.23.25",
+    "subject": "You\u2019re Invited! Brunch Club After Dark",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-04-22T23:34:58.335Z",
+    "updated": "2025-04-24T17:04:42.697Z",
+    "publishedAt": "2025-04-24T16:30:58.914Z",
+    "campaignName": null,
+    "campaignIds": [
+      "358316277"
+    ],
+    "stats": {
+      "sent": 8716,
+      "delivered": 8701,
+      "opens": 895,
+      "clicks": 136,
+      "bounces": 11,
+      "unsubscribes": 13,
+      "spamReports": 2
+    },
+    "openRate": 10.3,
+    "clickRate": 1.6
+  },
+  {
+    "id": "189158283186",
+    "name": "All Yoms Reminder 4.21.25",
+    "subject": "Three Community Gatherings. One Powerful Week.",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-04-21T16:55:28.732Z",
+    "updated": "2025-04-21T22:05:00.768Z",
+    "publishedAt": "2025-04-21T21:25:31.597Z",
+    "campaignName": null,
+    "campaignIds": [
+      "357723321"
+    ],
+    "stats": {
+      "sent": 16390,
+      "delivered": 16362,
+      "opens": 2677,
+      "clicks": 137,
+      "bounces": 28,
+      "unsubscribes": 26,
+      "spamReports": 3
+    },
+    "openRate": 16.4,
+    "clickRate": 0.8
+  },
+  {
+    "id": "188933168775",
+    "name": "Darren Yoms/Shabbat 4.18.25",
+    "subject": "From Darkness to Light: Why We Remember, Mourn, and Celebrate in This Order",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-04-15T20:08:17.446Z",
+    "updated": "2025-04-18T21:14:26.595Z",
+    "publishedAt": "2025-04-18T16:12:49.880Z",
+    "campaignName": null,
+    "campaignIds": [
+      "357380052"
+    ],
+    "stats": {
+      "sent": 16503,
+      "delivered": 16466,
+      "opens": 2953,
+      "clicks": 105,
+      "bounces": 30,
+      "unsubscribes": 93,
+      "spamReports": 11
+    },
+    "openRate": 17.9,
+    "clickRate": 0.6
+  },
+  {
+    "id": "188505652600",
+    "name": "New Website Announcement 4.15.25",
+    "subject": "Discover Our New Website: Your Gateway to Jewish Life in San Diego",
+    "state": "PUBLISHED",
+    "type": "BATCH_EMAIL",
+    "created": "2025-04-07T19:20:22.935Z",
+    "updated": "2025-04-15T19:23:39.014Z",
+    "publishedAt": "2025-04-15T16:17:52.599Z",
+    "campaignName": null,
+    "campaignIds": [
+      "356818510"
+    ],
+    "stats": {
+      "sent": 16632,
+      "delivered": 16498,
+      "opens": 1795,
+      "clicks": 313,
+      "bounces": 128,
+      "unsubscribes": 47,
+      "spamReports": 2
+    },
+    "openRate": 10.9,
+    "clickRate": 1.9
+  },
+  {
+    "id": "187118855689",
+    "name": "Points of Pride Email Template",
+    "subject": "",
+    "state": "DRAFT",
+    "type": "BATCH_EMAIL",
+    "created": "2025-03-10T18:13:03.565Z",
+    "updated": "2025-04-09T20:30:36.860Z",
+    "publishedAt": null,
+    "campaignName": null,
+    "campaignIds": []
+  },
+  {
+    "id": "187515471787",
+    "name": "Event Email Template",
+    "subject": "",
+    "state": "DRAFT",
+    "type": "BATCH_EMAIL",
+    "created": "2025-03-18T21:54:20.570Z",
+    "updated": "2025-04-09T20:30:15.296Z",
+    "publishedAt": null,
+    "campaignName": null,
+    "campaignIds": []
+  },
+  {
+    "id": "187515468716",
+    "name": "Generic Email Template",
+    "subject": "",
+    "state": "DRAFT",
+    "type": "BATCH_EMAIL",
+    "created": "2025-03-18T21:47:10.189Z",
+    "updated": "2025-04-09T20:28:26.325Z",
+    "publishedAt": null,
+    "campaignName": null,
+    "campaignIds": []
+  },
+  {
+    "id": "187192916134",
+    "name": "Israel Unfiltered Template 2",
+    "subject": "",
+    "state": "DRAFT",
+    "type": "BATCH_EMAIL",
+    "created": "2025-03-11T22:59:49.568Z",
+    "updated": "2025-03-14T17:46:35.307Z",
+    "publishedAt": null,
+    "campaignName": null,
+    "campaignIds": []
+  },
+  {
+    "id": "187188629528",
+    "name": "Israel Unfiltered Template 1",
+    "subject": "",
+    "state": "DRAFT",
+    "type": "BATCH_EMAIL",
+    "created": "2025-03-11T21:08:45.674Z",
+    "updated": "2025-03-14T17:44:29.078Z",
+    "publishedAt": null,
+    "campaignName": null,
+    "campaignIds": []
+  }
+]

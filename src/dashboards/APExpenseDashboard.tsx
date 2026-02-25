@@ -1,18 +1,15 @@
-import { Card, Col, Row, Statistic, Table, Tag, Typography, Space, Progress, Spin, Alert } from 'antd';
+import { Card, Col, Row, Statistic, Table, Tag, Typography, Space, Progress, Alert } from 'antd';
+import { DashboardSkeleton } from '../components/DashboardSkeleton';
 import { CsvExport } from '../components/CsvExport';
 import { useEffect, useRef, useState, useCallback } from 'react';
 
 const { Text } = Typography;
+import { DataFreshness } from '../components/DataFreshness';
 import { DefinitionTooltip } from "../components/DefinitionTooltip";
+import { NAVY, SUCCESS, ERROR, WARNING, MUTED } from '../theme/jfsdTheme';
 
 // ── Brand tokens ────────────────────────────────────────────────────────
-const NAVY = '#1B365D';
-const SUCCESS = '#3D8B37';
-const ERROR = '#C4314B';
-const WARNING = '#D4880F';
 const GRID = '#E8E8ED';
-const MUTED = '#8C8C8C';
-
 // ── Types ───────────────────────────────────────────────────────────────
 interface ActionItem {
   type: 'missing_receipt' | 'needs_review' | 'policy_exception';
@@ -429,6 +426,7 @@ function GLHealth({ data }: { data: APExpenseData['glHealth'] }) {
 export default function APExpenseDashboard() {
   const [data, setData] = useState<APExpenseData | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const [refreshing, setRefreshing] = useState(false);
 
   useEffect(() => {
     fetch('/jfsd-ui/data/james-ap-expense.json')
@@ -440,17 +438,24 @@ export default function APExpenseDashboard() {
       .catch((e) => setError(e.message));
   }, []);
 
-  if (error) return <Alert type="error" message="Failed to load AP & Expense data" description={error} showIcon style={{ margin: 24 }} />;
-  if (!data) return <div style={{ textAlign: 'center', padding: 80 }}><Spin size="large" /><br /><Text type="secondary">Loading AP &amp; Expense data…</Text></div>;
+  const refresh = useCallback(() => {
+    setRefreshing(true);
+    fetch('/jfsd-ui/data/james-ap-expense.json')
+      .then(r => r.ok ? r.json() : null)
+      .then(setData)
+      .catch(() => {})
+      .finally(() => setRefreshing(false));
+  }, []);
 
-  const asOf = new Date(data.asOfDate).toLocaleString('en-US', { dateStyle: 'medium', timeStyle: 'short' });
+  if (error) return <Alert type="error" message="Failed to load AP & Expense data" description={error} showIcon style={{ margin: 24 }} />;
+  if (!data) return <DashboardSkeleton />;
 
   return (
     <Space direction="vertical" size={16} style={{ width: '100%' }}>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>
         <Text strong style={{ fontSize: 20, color: NAVY }}>AP &amp; Expense Dashboard</Text>
-        <Text type="secondary" style={{ fontSize: 12 }}>As of {asOf} · Source: Ramp + Sage Intacct</Text>
       </div>
+      <DataFreshness asOfDate={data.asOfDate} onRefresh={refresh} refreshing={refreshing} />
 
       <KPICards kpis={data.kpis} />
 

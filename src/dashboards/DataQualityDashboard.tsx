@@ -1,4 +1,5 @@
-import { Card, Col, Row, Table, Tag, Typography, Progress, Spin, Alert, Collapse, Statistic, Space } from 'antd';
+import { Card, Col, Row, Table, Tag, Typography, Progress, Alert, Collapse, Statistic, Space } from 'antd';
+import { DashboardSkeleton } from '../components/DashboardSkeleton';
 import { CsvExport } from '../components/CsvExport';
 import {
   CheckCircleOutlined,
@@ -11,20 +12,16 @@ import {
   AuditOutlined,
   SafetyCertificateOutlined,
 } from '@ant-design/icons';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useCallback } from 'react';
+import { DataFreshness } from '../components/DataFreshness';
 import { DefinitionTooltip } from '../components/DefinitionTooltip';
+import { NAVY, SUCCESS, ERROR, WARNING, MUTED } from '../theme/jfsdTheme';
 
 const { Text } = Typography;
 const { Panel } = Collapse;
 
 // ── Brand tokens ────────────────────────────────────────────────────────
-const NAVY = '#1B365D';
-const SUCCESS = '#3D8B37';
-const ERROR = '#C4314B';
-const WARNING = '#D4880F';
 const CRITICAL = '#8B0000';
-const MUTED = '#8C8C8C';
-
 // ── Types ───────────────────────────────────────────────────────────────
 interface IssueDetail {
   name?: string;
@@ -318,6 +315,7 @@ export function DataQualityDashboard() {
   const [data, setData] = useState<DataQualityData | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [refreshing, setRefreshing] = useState(false);
 
   useEffect(() => {
     fetch('/jfsd-ui/data/data-quality.json')
@@ -330,7 +328,16 @@ export function DataQualityDashboard() {
       .finally(() => setLoading(false));
   }, []);
 
-  if (loading) return <div style={{ textAlign: 'center', padding: 80 }}><Spin size="large" /><br /><Text type="secondary">Loading data quality metrics…</Text></div>;
+  const refresh = useCallback(() => {
+    setRefreshing(true);
+    fetch('/jfsd-ui/data/data-quality.json')
+      .then(r => r.ok ? r.json() : null)
+      .then(setData)
+      .catch(() => {})
+      .finally(() => setRefreshing(false));
+  }, []);
+
+  if (loading) return <DashboardSkeleton kpiCount={4} hasChart={false} />;
   if (error) return <Alert type="error" message="Failed to load data quality data" description={error} showIcon />;
   if (!data) return <Alert type="warning" message="No data available" showIcon />;
 
@@ -343,7 +350,7 @@ export function DataQualityDashboard() {
           <div style={{ textAlign: 'center', marginTop: 4 }}>
             <Text type="secondary" style={{ fontSize: 12 }}>Overall Data Quality Score</Text>
             <br />
-            <Text type="secondary" style={{ fontSize: 11 }}>As of {data.asOfDate}</Text>
+            <DataFreshness asOfDate={data.asOfDate} onRefresh={refresh} refreshing={refreshing} />
           </div>
         </Col>
         <Col xs={24} md={16}>

@@ -1,19 +1,15 @@
-import { Card, Col, Row, Statistic, Table, Tag, Typography, Spin, Alert, Space, Progress } from 'antd';
+import { Card, Col, Row, Statistic, Table, Tag, Typography, Alert, Space, Progress } from 'antd';
+import { DashboardSkeleton } from '../components/DashboardSkeleton';
 import { CsvExport } from '../components/CsvExport';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useCallback } from 'react';
 
 const { Text, Title } = Typography;
+import { DataFreshness } from '../components/DataFreshness';
 import { DefinitionTooltip } from "../components/DefinitionTooltip";
+import { NAVY, GOLD, SUCCESS, ERROR, WARNING, MUTED } from '../theme/jfsdTheme';
 
 // ── Brand tokens ────────────────────────────────────────────────────────
-const NAVY  = '#1B365D';
-const GOLD  = '#C5A258';
-const SUCCESS = '#3D8B37';
-const ERROR   = '#C4314B';
-const WARNING = '#D4880F';
 const GRID    = '#E8E8ED';
-const MUTED   = '#8C8C8C';
-
 // ── Types ───────────────────────────────────────────────────────────────
 interface MonthlyRow { month: string; amount: number; recurringAmount: number; contributions: number; }
 interface ProductRow { name: string; amount: number; count: number; }
@@ -123,6 +119,7 @@ export function GiveCloudDashboard() {
   const [data, setData] = useState<GiveCloudData | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
+  const [refreshing, setRefreshing] = useState(false);
 
   useEffect(() => {
     fetch('/jfsd-ui/data/givecloud.json')
@@ -132,7 +129,16 @@ export function GiveCloudDashboard() {
       .finally(() => setLoading(false));
   }, []);
 
-  if (loading) return <div style={{ textAlign: 'center', padding: 80 }}><Spin size="large" /></div>;
+  const refresh = useCallback(() => {
+    setRefreshing(true);
+    fetch('/jfsd-ui/data/givecloud.json')
+      .then(r => r.ok ? r.json() : null)
+      .then(setData)
+      .catch(() => {})
+      .finally(() => setRefreshing(false));
+  }, []);
+
+  if (loading) return <DashboardSkeleton />;
   if (error) return <Alert type="error" message="Failed to load GiveCloud data" description={error} showIcon />;
   if (!data) return null;
 
@@ -145,7 +151,7 @@ export function GiveCloudDashboard() {
         <Title level={3} style={{ color: NAVY, margin: 0 }}>
           <span style={{ marginRight: 8 }}>🌐</span>GiveCloud — Online Giving
         </Title>
-        <Text type="secondary">FY26 • Data as of {data.asOfDate}</Text>
+        <DataFreshness asOfDate={data.asOfDate} onRefresh={refresh} refreshing={refreshing} />
         {data.notes && data.notes.map((n, i) => (
           <Alert key={i} type="warning" message={n} style={{ marginTop: 8 }} showIcon banner />
         ))}

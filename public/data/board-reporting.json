@@ -1,14 +1,14 @@
 {
-  "asOfDate": "2026-02-20",
+  "asOfDate": "2026-02-24",
   "boards": [
     {
       "name": "Jewish Community Foundation of San Diego",
       "shortName": "JCF",
       "totalMembers": 20,
       "matchedInSF": 15,
-      "gaveFY26": 4,
-      "participationRate": 20.0,
-      "totalGiven": 41084.0,
+      "gaveFY26": 5,
+      "participationRate": 25.0,
+      "totalGiven": 44084.0,
       "totalFY25": 8150.0,
       "members": [
         {
@@ -49,8 +49,8 @@
         {
           "name": "Jeff Platt",
           "role": "",
-          "status": "lybunt",
-          "fy26Amount": 0.0,
+          "status": "gave",
+          "fy26Amount": 3000.0,
           "fy25Amount": 1000.0
         },
         {
@@ -456,7 +456,7 @@
     "raised": 4400.0,
     "pctOfGoal": 0.0,
     "donorCount": 0,
-    "priorYearComparison": 0
+    "priorYearComparison": 4300.0
   },
   "givingLevels": [
     {
@@ -481,8 +481,8 @@
     },
     {
       "level": "$1K\u2013$4K",
-      "donors": 2,
-      "amount": 4884.0
+      "donors": 3,
+      "amount": 7884.0
     },
     {
       "level": "Under $1K",
@@ -493,7 +493,7 @@
   "highlights": [
     {
       "metric": "Board Participation",
-      "value": "22.0%",
+      "value": "23.7%",
       "trend": "down"
     },
     {
@@ -503,19 +503,19 @@
     },
     {
       "metric": "Board Giving Total",
-      "value": "$551,104",
+      "value": "$554,104",
       "trend": "up"
     },
     {
       "metric": "YoY Change",
-      "value": "+3421.4%",
+      "value": "+3440.6%",
       "trend": "up"
     }
   ],
   "kpis": {
-    "overallBoardParticipation": 22.0,
+    "overallBoardParticipation": 23.7,
     "campaignPctOfGoal": 0.0,
-    "totalBoardGiving": 551104.0,
-    "yoyChange": 3421.4
+    "totalBoardGiving": 554104.0,
+    "yoyChange": 3440.6
   }
 }

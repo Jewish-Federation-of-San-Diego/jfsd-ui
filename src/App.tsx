@@ -16,9 +16,17 @@ import {
   SafetyCertificateOutlined,
   SearchOutlined,
   FileTextOutlined,
-  AlertOutlined,
   PhoneOutlined,
   PieChartOutlined,
+  ProjectOutlined,
+  MailOutlined,
+  AlertOutlined,
+  TrophyOutlined,
+  BarChartOutlined,
+  BankOutlined,
+  CalendarOutlined,
+  ApartmentOutlined,
+  LineChartOutlined,
 } from '@ant-design/icons';
 import { jfsdTheme } from './theme/jfsdTheme';
 import { OverviewDashboard } from './dashboards/OverviewDashboard';
@@ -34,10 +42,20 @@ import { BoardReportingDashboard } from './dashboards/BoardReportingDashboard';
 import { DataQualityDashboard } from './dashboards/DataQualityDashboard';
 import { ProspectResearchDashboard } from './dashboards/ProspectResearchDashboard';
 import { PledgeManagementDashboard } from './dashboards/PledgeManagementDashboard';
-import { SilenceAlertsDashboard } from './dashboards/SilenceAlertsDashboard';
 import { WeeklyAskListDashboard } from './dashboards/WeeklyAskListDashboard';
 import { FinancialStatementsDashboard } from './dashboards/FinancialStatementsDashboard';
+import { ProjectTrackerDashboard } from './dashboards/ProjectTrackerDashboard';
+import { HubSpotDashboard } from './dashboards/HubSpotDashboard';
+import { SilenceAlertsDashboard } from './dashboards/SilenceAlertsDashboard';
+import { WealthEngineDashboard } from './dashboards/WealthEngineDashboard';
+import { NonprofitBoardsDashboard } from './dashboards/NonprofitBoardsDashboard';
+import { DataDuelDashboard } from './dashboards/DataDuelDashboard';
+import { EcobeeTrendsDashboard } from './dashboards/EcobeeTrendsDashboard';
+import { MondayDashboard } from './dashboards/MondayDashboard';
+import { ChartGalleryDashboard } from './dashboards/ChartGalleryDashboard';
 import { DefinitionsDrawer } from './components/DefinitionsDrawer';
+import { PrintButton } from './components/PrintButton';
+import { GlobalSearch } from './components/GlobalSearch';
 import './App.css';
 
 const { Header, Sider, Content } = Layout;
@@ -54,11 +72,14 @@ const menuItems = [
       { key: 'campaign', icon: <FundOutlined />, label: 'Campaign Tracker' },
       { key: 'donor-health', icon: <HeartOutlined />, label: 'Donor Health' },
       { key: 'drm', icon: <UsergroupAddOutlined />, label: 'DRM Portfolios' },
-      { key: 'ask-list', icon: <PhoneOutlined />, label: 'Weekly Ask List' },
-      { key: 'silence', icon: <AlertOutlined />, label: 'Silence Alerts' },
+      { key: 'ask-list', icon: <PhoneOutlined />, label: 'Outreach' },
       { key: 'prospect', icon: <SearchOutlined />, label: 'Prospect Research' },
       { key: 'pledge', icon: <FileTextOutlined />, label: 'Pledge Management' },
       { key: 'board', icon: <TeamOutlined />, label: 'Board Reporting' },
+      { key: 'hubspot', icon: <MailOutlined />, label: 'HubSpot' },
+      { key: 'silence', icon: <AlertOutlined />, label: 'Silence Alerts' },
+      { key: 'wealth', icon: <BankOutlined />, label: 'WealthEngine' },
+      { key: 'boards', icon: <ApartmentOutlined />, label: 'Nonprofit Boards' },
     ],
   },
   {
@@ -78,6 +99,11 @@ const menuItems = [
     children: [
       { key: 'facilities', icon: <HomeOutlined />, label: 'Facilities' },
       { key: 'data-quality', icon: <SafetyCertificateOutlined />, label: 'Data Quality' },
+      { key: 'projects', icon: <ProjectOutlined />, label: 'Project Tracker' },
+      { key: 'data-duel', icon: <TrophyOutlined />, label: 'Data Duel' },
+      { key: 'ecobee-trends', icon: <LineChartOutlined />, label: 'Ecobee Trends' },
+      { key: 'monday', icon: <CalendarOutlined />, label: 'Monday.com' },
+      { key: 'chart-gallery', icon: <BarChartOutlined />, label: 'Chart Gallery' },
     ],
   },
 ];
@@ -87,8 +113,7 @@ const dashboardTitles: Record<string, string> = {
   campaign: 'Campaign Tracker',
   'donor-health': 'Donor Health',
   drm: 'DRM Portfolios',
-  'ask-list': 'Weekly Ask List',
-  silence: 'Silence Alerts',
+  'ask-list': 'Outreach',
   prospect: 'Prospect Research',
   pledge: 'Pledge Management',
   board: 'Board Reporting',
@@ -99,6 +124,15 @@ const dashboardTitles: Record<string, string> = {
   'ap-expense': 'AP & Expense',
   facilities: 'Facilities',
   'data-quality': 'Data Quality',
+  projects: 'Project Tracker',
+  hubspot: 'HubSpot',
+  silence: 'Silence Alerts',
+  wealth: 'WealthEngine',
+  boards: 'Nonprofit Boards',
+  'data-duel': 'Data Duel',
+  'ecobee-trends': 'Ecobee Trends',
+  monday: 'Monday.com',
+  'chart-gallery': 'Chart Gallery',
 };
 
 function App() {
@@ -138,7 +172,6 @@ function App() {
       case 'donor-health': return <DonorHealthDashboard />;
       case 'drm': return <DRMPortfolioDashboard />;
       case 'ask-list': return <WeeklyAskListDashboard />;
-      case 'silence': return <SilenceAlertsDashboard />;
       case 'prospect': return <ProspectResearchDashboard />;
       case 'pledge': return <PledgeManagementDashboard />;
       case 'board': return <BoardReportingDashboard />;
@@ -149,6 +182,15 @@ function App() {
       case 'ap-expense': return <APExpenseDashboard />;
       case 'facilities': return <FacilitiesDashboard />;
       case 'data-quality': return <DataQualityDashboard />;
+      case 'projects': return <ProjectTrackerDashboard />;
+      case 'hubspot': return <HubSpotDashboard />;
+      case 'silence': return <SilenceAlertsDashboard />;
+      case 'wealth': return <WealthEngineDashboard />;
+      case 'boards': return <NonprofitBoardsDashboard />;
+      case 'data-duel': return <DataDuelDashboard />;
+      case 'ecobee-trends': return <EcobeeTrendsDashboard />;
+      case 'monday': return <MondayDashboard />;
+      case 'chart-gallery': return <ChartGalleryDashboard />;
       default: return null;
     }
   };
@@ -192,13 +234,16 @@ function App() {
             <Title level={4} style={{ margin: 0, fontSize: 16, whiteSpace: 'nowrap' }}>
               {dashboardTitles[selectedKey] || 'Dashboard'}
             </Title>
+            <GlobalSearch onNavigate={(key) => setSelectedKey(key)} />
             <Button
               type="text"
               icon={<InfoCircleOutlined />}
               onClick={() => setDefsOpen(true)}
               style={{ color: '#8C8C8C' }}
               title="Definitions"
+              className="no-print"
             />
+            {(selectedKey === 'board' || selectedKey === 'financial') && <PrintButton />}
             <div style={{ marginLeft: 'auto', color: '#8C8C8C', fontSize: 12, whiteSpace: 'nowrap' }}>
               FY26
             </div>
