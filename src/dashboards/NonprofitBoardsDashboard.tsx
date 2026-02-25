@@ -21,7 +21,7 @@ export function NonprofitBoardsDashboard() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('/data/nonprofit-boards.json').then(r => r.json()).then(d => { setData(d); setLoading(false); });
+    fetch(`${import.meta.env.BASE_URL}data/nonprofit-boards.json`).then(r => r.json()).then(d => { setData(d); setLoading(false); });
   }, []);
 
   if (loading || !data) return <DashboardSkeleton />;

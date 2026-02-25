@@ -118,7 +118,7 @@ function DeptBarChart({ data }: { data: DeptSpend[] }) {
 // ── Category Treemap Grid ───────────────────────────────────────────────
 function CategoryGrid({ data }: { data: CategoryRow[] }) {
   if (!data.length) return null;
-  const total = data.reduce((s, d) => s + d.amount, 0);
+  const total = Math.max(data.reduce((s, d) => s + d.amount, 0), 1);
   const colors = [NAVY, GOLD, SUCCESS, WARNING, '#5B8DB8', '#8B6B3D', '#6B8E6B', '#9B6B6B', '#7B7B9B', '#4B7B7B'];
 
   return (
@@ -180,7 +180,7 @@ export function RampAnalyticsDashboard() {
   const [refreshing, setRefreshing] = useState(false);
 
   useEffect(() => {
-    fetch('/jfsd-ui/data/ramp-analytics.json')
+    fetch(`${import.meta.env.BASE_URL}data/ramp-analytics.json`)
       .then(r => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json(); })
       .then(setData)
       .catch(e => setError(e.message))
@@ -189,7 +189,7 @@ export function RampAnalyticsDashboard() {
 
   const refresh = useCallback(() => {
     setRefreshing(true);
-    fetch('/jfsd-ui/data/ramp-analytics.json')
+    fetch(`${import.meta.env.BASE_URL}data/ramp-analytics.json`)
       .then(r => r.ok ? r.json() : null)
       .then(setData)
       .catch(() => {})

@@ -1,11 +1,12 @@
+import { useMemo } from 'react';
 import { Typography, Button, Tooltip } from 'antd';
 import { ReloadOutlined, ClockCircleOutlined } from '@ant-design/icons';
 import { MUTED, WARNING } from '../theme/jfsdTheme';
 
 const { Text } = Typography;
 
-function timeAgo(dateStr: string): string {
-  const diff = Date.now() - new Date(dateStr).getTime();
+function timeAgo(dateStr: string, now: number): string {
+  const diff = now - new Date(dateStr).getTime();
   const mins = Math.floor(diff / 60000);
   if (mins < 1) return 'just now';
   if (mins < 60) return `${mins}m ago`;
@@ -22,15 +23,16 @@ interface DataFreshnessProps {
 }
 
 export function DataFreshness({ asOfDate, onRefresh, refreshing }: DataFreshnessProps) {
+  const now = useMemo(() => Date.now(), []);
   if (!asOfDate) return null;
-  const hoursOld = (Date.now() - new Date(asOfDate).getTime()) / 3600000;
+  const hoursOld = (now - new Date(asOfDate).getTime()) / 3600000;
   const isStale = hoursOld > 12;
   
   return (
     <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 12 }} className="no-print">
       <ClockCircleOutlined style={{ color: isStale ? WARNING : MUTED, fontSize: 12 }} />
       <Text type="secondary" style={{ fontSize: 12, color: isStale ? WARNING : MUTED }}>
-        Updated {timeAgo(asOfDate)}
+        Updated {timeAgo(asOfDate, now)}
         {' · '}
         {new Date(asOfDate).toLocaleString()}
       </Text>

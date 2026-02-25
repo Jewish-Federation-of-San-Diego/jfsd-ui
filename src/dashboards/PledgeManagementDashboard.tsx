@@ -74,7 +74,7 @@ export function PledgeManagementDashboard() {
   const [refreshing, setRefreshing] = useState(false);
 
   useEffect(() => {
-    fetch('/jfsd-ui/data/pledge-management.json')
+    fetch(`${import.meta.env.BASE_URL}data/pledge-management.json`)
       .then(r => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json(); })
       .then(setData)
       .catch(e => setError(e.message))
@@ -83,7 +83,7 @@ export function PledgeManagementDashboard() {
 
   const refresh = useCallback(() => {
     setRefreshing(true);
-    fetch('/jfsd-ui/data/pledge-management.json')
+    fetch(`${import.meta.env.BASE_URL}data/pledge-management.json`)
       .then(r => r.ok ? r.json() : null)
       .then(setData)
       .catch(() => {})

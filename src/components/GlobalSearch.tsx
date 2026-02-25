@@ -35,7 +35,7 @@ const fmt = (n: number | undefined) => {
 
 async function fetchJson(file: string) {
   try {
-    const r = await fetch(`/jfsd-ui/data/${file}`);
+    const r = await fetch(`${import.meta.env.BASE_URL}data/${file}`);
     return r.ok ? r.json() : null;
   } catch { return null; }
 }

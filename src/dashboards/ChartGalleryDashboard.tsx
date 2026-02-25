@@ -81,7 +81,7 @@ export function ChartGalleryDashboard() {
         title={selected?.name} width="90%" style={{ top: 20 }}
         styles={{ body: { padding: 0, height: '70vh' } }}>
         {selected && (
-          <iframe src={`/charts/${selected.file}`} style={{ width: '100%', height: '100%', border: 'none' }} />
+          <iframe src={`${import.meta.env.BASE_URL}charts/${selected.file}`} style={{ width: '100%', height: '100%', border: 'none' }} />
         )}
       </Modal>
     </Space>
