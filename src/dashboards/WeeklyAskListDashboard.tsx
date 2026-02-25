@@ -384,7 +384,7 @@ function RiskAlertsContent() {
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    fetch('/jfsd-ui/data/silence-alerts.json')
+    fetch(`${import.meta.env.BASE_URL}data/silence-alerts.json`)
       .then(r => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json(); })
       .then(setData)
       .catch(e => setError(e.message))
@@ -518,7 +518,7 @@ export function WeeklyAskListDashboard() {
   const [refreshing, setRefreshing] = useState(false);
 
   useEffect(() => {
-    fetch('/jfsd-ui/data/weekly-ask-list.json')
+    fetch(`${import.meta.env.BASE_URL}data/weekly-ask-list.json`)
       .then((r) => {
         if (!r.ok) throw new Error(`HTTP ${r.status}`);
         return r.json();
@@ -542,7 +542,7 @@ export function WeeklyAskListDashboard() {
 
   // Fetch critical count for badge
   useEffect(() => {
-    fetch('/jfsd-ui/data/silence-alerts.json')
+    fetch(`${import.meta.env.BASE_URL}data/silence-alerts.json`)
       .then(r => r.ok ? r.json() : null)
       .then((d: SilenceData | null) => { if (d?.kpis) setCriticalCount(d.kpis.criticalCount); })
       .catch(() => {});
@@ -550,7 +550,7 @@ export function WeeklyAskListDashboard() {
 
   const refresh = useCallback(() => {
     setRefreshing(true);
-    fetch('/jfsd-ui/data/weekly-ask-list.json')
+    fetch(`${import.meta.env.BASE_URL}data/weekly-ask-list.json`)
       .then(r => r.ok ? r.json() : null)
       .then(setData)
       .catch(() => {})

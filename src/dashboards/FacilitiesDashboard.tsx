@@ -339,7 +339,7 @@ export function FacilitiesDashboard() {
   const [refreshing, setRefreshing] = useState(false);
 
   useEffect(() => {
-    fetch('/jfsd-ui/data/facilities.json')
+    fetch(`${import.meta.env.BASE_URL}data/facilities.json`)
       .then(r => { if (!r.ok) throw new Error(`${r.status}`); return r.json(); })
       .then(setData)
       .catch(e => setError(e.message))
@@ -348,7 +348,7 @@ export function FacilitiesDashboard() {
 
   const refresh = useCallback(() => {
     setRefreshing(true);
-    fetch('/jfsd-ui/data/facilities.json')
+    fetch(`${import.meta.env.BASE_URL}data/facilities.json`)
       .then(r => r.ok ? r.json() : null)
       .then(setData)
       .catch(() => {})

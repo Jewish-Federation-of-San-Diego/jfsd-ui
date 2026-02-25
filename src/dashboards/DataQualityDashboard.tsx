@@ -318,7 +318,7 @@ export function DataQualityDashboard() {
   const [refreshing, setRefreshing] = useState(false);
 
   useEffect(() => {
-    fetch('/jfsd-ui/data/data-quality.json')
+    fetch(`${import.meta.env.BASE_URL}data/data-quality.json`)
       .then(r => {
         if (!r.ok) throw new Error(`HTTP ${r.status}`);
         return r.json();
@@ -330,7 +330,7 @@ export function DataQualityDashboard() {
 
   const refresh = useCallback(() => {
     setRefreshing(true);
-    fetch('/jfsd-ui/data/data-quality.json')
+    fetch(`${import.meta.env.BASE_URL}data/data-quality.json`)
       .then(r => r.ok ? r.json() : null)
       .then(setData)
       .catch(() => {})

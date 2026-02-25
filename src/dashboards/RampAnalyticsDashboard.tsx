@@ -180,7 +180,7 @@ export function RampAnalyticsDashboard() {
   const [refreshing, setRefreshing] = useState(false);
 
   useEffect(() => {
-    fetch('/jfsd-ui/data/ramp-analytics.json')
+    fetch(`${import.meta.env.BASE_URL}data/ramp-analytics.json`)
       .then(r => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json(); })
       .then(setData)
       .catch(e => setError(e.message))
@@ -189,7 +189,7 @@ export function RampAnalyticsDashboard() {
 
   const refresh = useCallback(() => {
     setRefreshing(true);
-    fetch('/jfsd-ui/data/ramp-analytics.json')
+    fetch(`${import.meta.env.BASE_URL}data/ramp-analytics.json`)
       .then(r => r.ok ? r.json() : null)
       .then(setData)
       .catch(() => {})

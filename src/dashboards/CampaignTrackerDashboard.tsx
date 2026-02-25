@@ -382,7 +382,7 @@ export function CampaignTrackerDashboard() {
   const [refreshing, setRefreshing] = useState(false);
 
   const fetchData = useCallback(() => {
-    fetch('/jfsd-ui/data/campaign-tracker.json')
+    fetch(`${import.meta.env.BASE_URL}data/campaign-tracker.json`)
       .then(r => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json(); })
       .then(setData)
       .catch(e => setError(e.message));
@@ -392,7 +392,7 @@ export function CampaignTrackerDashboard() {
 
   const refresh = useCallback(() => {
     setRefreshing(true);
-    fetch('/jfsd-ui/data/campaign-tracker.json')
+    fetch(`${import.meta.env.BASE_URL}data/campaign-tracker.json`)
       .then(r => r.ok ? r.json() : null)
       .then(setData)
       .catch(() => {})
