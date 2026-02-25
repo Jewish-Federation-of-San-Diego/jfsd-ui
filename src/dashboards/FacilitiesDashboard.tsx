@@ -1,6 +1,6 @@
 import { Card, Col, Row, Statistic, Tag, Typography, Alert, Space, Badge, Tooltip as AntTooltip, Modal } from 'antd';
 import { DashboardSkeleton } from '../components/DashboardSkeleton';
-import { useEffect, useState, useCallback } from 'react';
+import { useEffect, useState, useCallback, useId } from 'react';
 
 import { DataFreshness } from '../components/DataFreshness';
 import { DefinitionTooltip } from '../components/DefinitionTooltip';
@@ -207,6 +207,7 @@ function ExpandedTrendChart({ thermostat }: { thermostat: Thermostat }) {
 
 // ── Server Room Temperature Gauge ───────────────────────────────────────
 function TempGauge({ temp }: { temp: number | null }) {
+  const clipId = useId();
   if (temp == null) return <span style={{ color: MUTED }}>—</span>;
 
   const minG = 60;
@@ -226,10 +227,10 @@ function TempGauge({ temp }: { temp: number | null }) {
         {/* Background */}
         <rect x={4} y={2} width={12} height={barH} rx={3} fill="#f0f0f0" stroke="#d9d9d9" strokeWidth={1} />
         {/* Zones (bottom to top): green, yellow, red */}
-        <clipPath id="gauge-clip">
+        <clipPath id={clipId}>
           <rect x={4} y={2} width={12} height={barH} rx={3} />
         </clipPath>
-        <g clipPath="url(#gauge-clip)">
+        <g clipPath={`url(#${clipId})`}>
           {/* Green zone: 60-74 → bottom portion */}
           <rect x={4} y={2 + barH * (1 - (74 - minG) / range)} width={12} height={barH * ((74 - minG) / range)} fill={`${SUCCESS}30`} />
           {/* Yellow zone: 74-78 */}
@@ -338,7 +339,7 @@ export function FacilitiesDashboard() {
   const [refreshing, setRefreshing] = useState(false);
 
   useEffect(() => {
-    fetch('/jfsd-ui/data/facilities.json')
+    fetch(`${import.meta.env.BASE_URL}data/facilities.json`)
       .then(r => { if (!r.ok) throw new Error(`${r.status}`); return r.json(); })
       .then(setData)
       .catch(e => setError(e.message))
@@ -347,7 +348,7 @@ export function FacilitiesDashboard() {
 
   const refresh = useCallback(() => {
     setRefreshing(true);
-    fetch('/jfsd-ui/data/facilities.json')
+    fetch(`${import.meta.env.BASE_URL}data/facilities.json`)
       .then(r => r.ok ? r.json() : null)
       .then(setData)
       .catch(() => {})

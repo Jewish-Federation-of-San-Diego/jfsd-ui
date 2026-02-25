@@ -122,7 +122,7 @@ export function GiveCloudDashboard() {
   const [refreshing, setRefreshing] = useState(false);
 
   useEffect(() => {
-    fetch('/jfsd-ui/data/givecloud.json')
+    fetch(`${import.meta.env.BASE_URL}data/givecloud.json`)
       .then(r => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json(); })
       .then(setData)
       .catch(e => setError(e.message))
@@ -131,7 +131,7 @@ export function GiveCloudDashboard() {
 
   const refresh = useCallback(() => {
     setRefreshing(true);
-    fetch('/jfsd-ui/data/givecloud.json')
+    fetch(`${import.meta.env.BASE_URL}data/givecloud.json`)
       .then(r => r.ok ? r.json() : null)
       .then(setData)
       .catch(() => {})

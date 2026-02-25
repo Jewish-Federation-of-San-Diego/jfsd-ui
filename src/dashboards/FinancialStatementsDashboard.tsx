@@ -259,7 +259,7 @@ export function FinancialStatementsDashboard() {
   const [refreshing, setRefreshing] = useState(false);
 
   useEffect(() => {
-    fetch('/jfsd-ui/data/financial-statements.json')
+    fetch(`${import.meta.env.BASE_URL}data/financial-statements.json`)
       .then(r => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json(); })
       .then(d => { setData(d); setLoading(false); })
       .catch(e => { setError(e.message); setLoading(false); });
@@ -267,7 +267,7 @@ export function FinancialStatementsDashboard() {
 
   const refresh = useCallback(() => {
     setRefreshing(true);
-    fetch('/jfsd-ui/data/financial-statements.json')
+    fetch(`${import.meta.env.BASE_URL}data/financial-statements.json`)
       .then(r => r.ok ? r.json() : null)
       .then(setData)
       .catch(() => {})

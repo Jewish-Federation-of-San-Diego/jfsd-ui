@@ -429,7 +429,7 @@ export default function APExpenseDashboard() {
   const [refreshing, setRefreshing] = useState(false);
 
   useEffect(() => {
-    fetch('/jfsd-ui/data/james-ap-expense.json')
+    fetch(`${import.meta.env.BASE_URL}data/james-ap-expense.json`)
       .then((r) => {
         if (!r.ok) throw new Error(`HTTP ${r.status}`);
         return r.json();
@@ -440,7 +440,7 @@ export default function APExpenseDashboard() {
 
   const refresh = useCallback(() => {
     setRefreshing(true);
-    fetch('/jfsd-ui/data/james-ap-expense.json')
+    fetch(`${import.meta.env.BASE_URL}data/james-ap-expense.json`)
       .then(r => r.ok ? r.json() : null)
       .then(setData)
       .catch(() => {})

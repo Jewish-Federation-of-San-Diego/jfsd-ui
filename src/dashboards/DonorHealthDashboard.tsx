@@ -413,7 +413,7 @@ export function DonorHealthDashboard() {
   const [refreshing, setRefreshing] = useState(false);
 
   useEffect(() => {
-    fetch('/jfsd-ui/data/sharon-donor-health.json')
+    fetch(`${import.meta.env.BASE_URL}data/sharon-donor-health.json`)
       .then(res => {
         if (!res.ok) throw new Error(`Failed to load data (${res.status})`);
         return res.json();
@@ -424,7 +424,7 @@ export function DonorHealthDashboard() {
 
   const refresh = useCallback(() => {
     setRefreshing(true);
-    fetch('/jfsd-ui/data/sharon-donor-health.json')
+    fetch(`${import.meta.env.BASE_URL}data/sharon-donor-health.json`)
       .then(r => r.ok ? r.json() : null)
       .then(setData)
       .catch(() => {})

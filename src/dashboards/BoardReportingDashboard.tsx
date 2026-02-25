@@ -287,7 +287,7 @@ export function BoardReportingDashboard() {
   const [refreshing, setRefreshing] = useState(false);
 
   useEffect(() => {
-    fetch('/jfsd-ui/data/board-reporting.json')
+    fetch(`${import.meta.env.BASE_URL}data/board-reporting.json`)
       .then(r => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json(); })
       .then(d => { setData(d); setLoading(false); })
       .catch(e => { setError(e.message); setLoading(false); });
@@ -295,7 +295,7 @@ export function BoardReportingDashboard() {
 
   const refresh = useCallback(() => {
     setRefreshing(true);
-    fetch('/jfsd-ui/data/board-reporting.json')
+    fetch(`${import.meta.env.BASE_URL}data/board-reporting.json`)
       .then(r => r.ok ? r.json() : null)
       .then(setData)
       .catch(() => {})

@@ -146,7 +146,7 @@ export function ProspectResearchDashboard() {
   const [refreshing, setRefreshing] = useState(false);
 
   useEffect(() => {
-    fetch('/jfsd-ui/data/prospect-research.json')
+    fetch(`${import.meta.env.BASE_URL}data/prospect-research.json`)
       .then(r => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json(); })
       .then(d => { setData(d); setLoading(false); })
       .catch(e => { setError(e.message); setLoading(false); });
@@ -154,7 +154,7 @@ export function ProspectResearchDashboard() {
 
   const refresh = useCallback(() => {
     setRefreshing(true);
-    fetch('/jfsd-ui/data/prospect-research.json')
+    fetch(`${import.meta.env.BASE_URL}data/prospect-research.json`)
       .then(r => r.ok ? r.json() : null)
       .then(setData)
       .catch(() => {})
