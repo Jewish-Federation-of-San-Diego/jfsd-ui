@@ -1,20 +1,20 @@
 {
-  "asOfDate": "2026-02-25 11:04",
+  "asOfDate": "2026-02-26 06:04",
   "annualCampaign": {
     "name": "Annual Campaign 26",
     "goal": 9000000,
-    "raised": 7355845.86,
-    "pctOfGoal": 81.7,
-    "donorCount": 1021,
-    "avgGift": 7205.0,
-    "priorYearSamePoint": 7431300.67
+    "raised": 6872854.56,
+    "pctOfGoal": 76.4,
+    "donorCount": 1022,
+    "avgGift": 6725.0,
+    "priorYearSamePoint": 7904300.67
   },
   "momentum": {
-    "giftsThisWeek": 74,
-    "amountThisWeek": 27137.96,
-    "giftsLastWeek": 64,
-    "amountLastWeek": 119609.84,
-    "weekOverWeekPct": -77.3
+    "giftsThisWeek": 98,
+    "amountThisWeek": 30737.96,
+    "giftsLastWeek": 71,
+    "amountLastWeek": 123009.84,
+    "weekOverWeekPct": -75.0
   },
   "weeklyMomentum": [
     {
@@ -49,20 +49,20 @@
     },
     {
       "weekOf": "2026-02-16",
-      "gifts": 64,
-      "amount": 119609.84
+      "gifts": 71,
+      "amount": 123009.84
     },
     {
       "weekOf": "2026-02-23",
-      "gifts": 74,
-      "amount": 27137.96
+      "gifts": 98,
+      "amount": 30737.96
     }
   ],
   "donorBreakdown": {
-    "newDonors": 210,
-    "returningDonors": 578,
+    "newDonors": 209,
+    "returningDonors": 579,
     "lybuntRecovered": 106,
-    "retentionRate": 31.0
+    "retentionRate": 31.1
   },
   "givingLevels": [
     {
@@ -72,8 +72,8 @@
     },
     {
       "level": "$100-499",
-      "donors": 331,
-      "amount": 70645.47
+      "donors": 332,
+      "amount": 70854.17
     },
     {
       "level": "$500-999",
@@ -83,7 +83,7 @@
     {
       "level": "$1K-4,999",
       "donors": 225,
-      "amount": 400347.27
+      "amount": 399647.27
     },
     {
       "level": "$5K-9,999",
@@ -93,12 +93,12 @@
     {
       "level": "$10K-24,999",
       "donors": 60,
-      "amount": 749510.42
+      "amount": 742010.42
     },
     {
       "level": "$25K+",
       "donors": 33,
-      "amount": 5543479.19
+      "amount": 5068479.19
     }
   ],
   "topGiftsThisWeek": [
@@ -151,20 +151,20 @@
       "date": "2026-02-23"
     },
     {
-      "name": "Schindler Brokerage LLC",
-      "amount": 208.7,
-      "campaign": "Unsolicited Annual Gifts - FY26",
+      "name": "Jennifer Lutz",
+      "amount": 500.0,
+      "campaign": "The Community Trip - CY27",
       "date": "2026-02-23"
     },
     {
-      "name": "Schindler Brokerage LLC",
-      "amount": 208.7,
-      "campaign": "Unsolicited Annual Gifts - FY26",
+      "name": "Marie Raftery",
+      "amount": 400.0,
+      "campaign": "Lion of Judah Luncheon - FY26 - Event",
       "date": "2026-02-23"
     }
   ],
   "pipeline": {
-    "openPledges": 630,
+    "openPledges": 629,
     "openPledgeAmount": 13841222.15,
     "expectedThisMonth": 175.0
   },
@@ -276,9 +276,9 @@
     },
     {
       "name": "DRM - FY26",
-      "raised": 2278205.84,
+      "raised": 1778205.84,
       "goal": 0.0,
-      "donors": 136,
+      "donors": 135,
       "pctOfGoal": 0
     },
     {

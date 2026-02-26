@@ -1,5 +1,5 @@
 {
-  "asOfDate": "2026-02-25",
+  "asOfDate": "2026-02-26",
   "boards": [
     {
       "name": "Jewish Community Foundation of San Diego",
@@ -319,15 +319,15 @@
       "matchedInSF": 11,
       "gaveFY26": 4,
       "participationRate": 22.2,
-      "totalGiven": 1002189.15,
+      "totalGiven": 527189.15,
       "totalFY25": 7500.0,
       "members": [
         {
           "name": "Alan Viterbi",
           "role": "Board President",
           "status": "gave",
-          "fy26Amount": 975000.0,
-          "fy25Amount": 25000.0
+          "fy26Amount": 500000.0,
+          "fy25Amount": 500000.0
         },
         {
           "name": "David Bark",
@@ -462,7 +462,7 @@
     {
       "level": "$100K+",
       "donors": 1,
-      "amount": 975000.0
+      "amount": 500000.0
     },
     {
       "level": "$25K\u2013$99K",
@@ -503,19 +503,19 @@
     },
     {
       "metric": "Board Giving Total",
-      "value": "$1,069,293",
+      "value": "$594,293",
       "trend": "up"
     },
     {
       "metric": "YoY Change",
-      "value": "+6732.5%",
+      "value": "+3697.4%",
       "trend": "up"
     }
   ],
   "kpis": {
     "overallBoardParticipation": 25.4,
     "campaignPctOfGoal": 0.0,
-    "totalBoardGiving": 1069293.15,
-    "yoyChange": 6732.5
+    "totalBoardGiving": 594293.15,
+    "yoyChange": 3697.4
   }
 }

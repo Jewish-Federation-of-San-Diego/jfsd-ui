@@ -1,7 +1,7 @@
 {
-  "asOfDate": "2026-02-25",
+  "asOfDate": "2026-02-26",
   "totalProfiled": 552,
-  "capacityGap": 28823664,
+  "capacityGap": 29795100,
   "upgradeProspects": [
     {
       "name": "Michael S. Levinson",
@@ -316,7 +316,7 @@
       "trend": "up"
     },
     {
-      "name": "Rabbi Ralph Dalin",
+      "name": "Ralph Dalin",
       "currentGiving": 1300,
       "estimatedCapacity": 12958,
       "gap": 11658,
@@ -832,27 +832,27 @@
   "givingVsCapacity": [
     {
       "level": "$0",
-      "donors": 2915,
+      "donors": 2914,
       "avgGiving": 0,
-      "avgCapacity": 3003
+      "avgCapacity": 2998
     },
     {
       "level": "$1-999",
-      "donors": 632,
-      "avgGiving": 253,
-      "avgCapacity": 2185
+      "donors": 633,
+      "avgGiving": 252,
+      "avgCapacity": 2189
     },
     {
       "level": "$1K-4,999",
       "donors": 234,
-      "avgGiving": 1782,
-      "avgCapacity": 8660
+      "avgGiving": 1781,
+      "avgCapacity": 8661
     },
     {
       "level": "$5K-24,999",
       "donors": 163,
-      "avgGiving": 8549,
-      "avgCapacity": 43858
+      "avgGiving": 8503,
+      "avgCapacity": 43861
     },
     {
       "level": "$25K-99,999",
@@ -863,18 +863,11 @@
     {
       "level": "$100K+",
       "donors": 10,
-      "avgGiving": 646377,
-      "avgCapacity": 1064999
+      "avgGiving": 548877,
+      "avgCapacity": 1065005
     }
   ],
   "trajectoryAnalysis": [
-    {
-      "name": "Jewish Community Foundation",
-      "fy24": 668500,
-      "fy25": 1366471,
-      "fy26": 1930435,
-      "trajectory": "increasing"
-    },
     {
       "name": "Dana Zeff",
       "fy24": 800000,
@@ -883,11 +876,11 @@
       "trajectory": "increasing"
     },
     {
-      "name": "Alan Viterbi",
-      "fy24": 475000,
-      "fy25": 25000,
-      "fy26": 975000,
-      "trajectory": "increasing"
+      "name": "Jewish Community Foundation",
+      "fy24": 668500,
+      "fy25": 1866471,
+      "fy26": 1430435,
+      "trajectory": "decreasing"
     },
     {
       "name": "Andrew James Viterbi",
@@ -895,6 +888,13 @@
       "fy25": 250000,
       "fy26": 750000,
       "trajectory": "increasing"
+    },
+    {
+      "name": "Alan Viterbi",
+      "fy24": 475000,
+      "fy25": 500000,
+      "fy26": 500000,
+      "trajectory": "stable"
     },
     {
       "name": "Elaine Galinson",
@@ -967,18 +967,18 @@
       "trajectory": "increasing"
     },
     {
-      "name": "Karen Foster Silberman",
-      "fy24": 0,
-      "fy25": 0,
-      "fy26": 60233,
-      "trajectory": "increasing"
-    },
-    {
       "name": "Marcia Hazan",
       "fy24": 180,
       "fy25": 60333,
       "fy26": 60233,
       "trajectory": "decreasing"
+    },
+    {
+      "name": "Karen Foster Silberman",
+      "fy24": 0,
+      "fy25": 0,
+      "fy26": 60233,
+      "trajectory": "increasing"
     },
     {
       "name": "Fidelity Charitable Trust",
@@ -988,16 +988,9 @@
       "trajectory": "increasing"
     },
     {
-      "name": "American Endowment Foundation",
-      "fy24": 0,
-      "fy25": 0,
-      "fy26": 50000,
-      "trajectory": "increasing"
-    },
-    {
-      "name": "Jack M. Schuster",
-      "fy24": 47000,
-      "fy25": 42000,
+      "name": "Diane Feuerstein",
+      "fy24": 40000,
+      "fy25": 25000,
       "fy26": 50000,
       "trajectory": "increasing"
     },
@@ -1009,9 +1002,9 @@
       "trajectory": "stable"
     },
     {
-      "name": "Diane Feuerstein",
-      "fy24": 40000,
-      "fy25": 25000,
+      "name": "American Endowment Foundation",
+      "fy24": 0,
+      "fy25": 0,
       "fy26": 50000,
       "trajectory": "increasing"
     },
@@ -1023,18 +1016,18 @@
       "trajectory": "increasing"
     },
     {
+      "name": "Jack M. Schuster",
+      "fy24": 47000,
+      "fy25": 42000,
+      "fy26": 50000,
+      "trajectory": "increasing"
+    },
+    {
       "name": "Ronald J. Cohn",
       "fy24": 0,
       "fy25": 5000,
       "fy26": 45000,
       "trajectory": "increasing"
-    },
-    {
-      "name": "David Shlomo Kabakoff",
-      "fy24": 36165,
-      "fy25": 36180,
-      "fy26": 36000,
-      "trajectory": "decreasing"
     },
     {
       "name": "Sonia Ancoli Israel",
@@ -1049,6 +1042,13 @@
       "fy25": 18000,
       "fy26": 36000,
       "trajectory": "increasing"
+    },
+    {
+      "name": "David Shlomo Kabakoff",
+      "fy24": 36165,
+      "fy25": 36180,
+      "fy26": 36000,
+      "trajectory": "decreasing"
     },
     {
       "name": "Esther Fischer",
@@ -1086,20 +1086,6 @@
       "trajectory": "decreasing"
     },
     {
-      "name": "Barry J. Galgut",
-      "fy24": 20000,
-      "fy25": 180,
-      "fy26": 25000,
-      "trajectory": "increasing"
-    },
-    {
-      "name": "Sheryl J. Kaufman",
-      "fy24": 10000,
-      "fy25": 77500,
-      "fy26": 25000,
-      "trajectory": "decreasing"
-    },
-    {
       "name": "Judi Gottschalk",
       "fy24": 13600,
       "fy25": 0,
@@ -1107,9 +1093,23 @@
       "trajectory": "increasing"
     },
     {
-      "name": "Klaff Family Foundation",
-      "fy24": 0,
-      "fy25": 0,
+      "name": "Mitchell Siegler",
+      "fy24": 32000,
+      "fy25": 50000,
+      "fy26": 25000,
+      "trajectory": "decreasing"
+    },
+    {
+      "name": "Elliot Feuerstein",
+      "fy24": 40000,
+      "fy25": 25000,
+      "fy26": 25000,
+      "trajectory": "stable"
+    },
+    {
+      "name": "Barry J. Galgut",
+      "fy24": 20000,
+      "fy25": 180,
       "fy26": 25000,
       "trajectory": "increasing"
     },
@@ -1121,22 +1121,22 @@
       "trajectory": "increasing"
     },
     {
-      "name": "Elliot Feuerstein",
-      "fy24": 40000,
-      "fy25": 25000,
+      "name": "Morgan Stanley Private Wealth Management",
+      "fy24": 25000,
+      "fy25": 0,
       "fy26": 25000,
-      "trajectory": "stable"
+      "trajectory": "increasing"
     },
     {
-      "name": "Mitchell Siegler",
-      "fy24": 32000,
-      "fy25": 50000,
+      "name": "Sheryl J. Kaufman",
+      "fy24": 10000,
+      "fy25": 77500,
       "fy26": 25000,
       "trajectory": "decreasing"
     },
     {
-      "name": "Morgan Stanley Private Wealth Management",
-      "fy24": 25000,
+      "name": "Klaff Family Foundation",
+      "fy24": 0,
       "fy25": 0,
       "fy26": 25000,
       "trajectory": "increasing"
@@ -1184,6 +1184,13 @@
       "trajectory": "increasing"
     },
     {
+      "name": "Graeme Gabriel",
+      "fy24": 54000,
+      "fy25": 18180,
+      "fy26": 18000,
+      "trajectory": "decreasing"
+    },
+    {
       "name": "Vanguard Charitable",
       "fy24": 0,
       "fy25": 0,
@@ -1202,20 +1209,6 @@
       "fy24": 7018,
       "fy25": 16582,
       "fy26": 18000,
-      "trajectory": "increasing"
-    },
-    {
-      "name": "Graeme Gabriel",
-      "fy24": 54000,
-      "fy25": 18180,
-      "fy26": 18000,
-      "trajectory": "decreasing"
-    },
-    {
-      "name": "Cheryl Rattner Price",
-      "fy24": 0,
-      "fy25": 12500,
-      "fy26": 17500,
       "trajectory": "increasing"
     },
     {
@@ -1261,16 +1254,16 @@
       "trajectory": "stable"
     },
     {
-      "name": "Lawrence M. Sherman",
-      "fy24": 0,
-      "fy25": 12500,
+      "name": "Barbara Sherman",
+      "fy24": 10000,
+      "fy25": 0,
       "fy26": 15625,
       "trajectory": "increasing"
     },
     {
-      "name": "Barbara Sherman",
-      "fy24": 10000,
-      "fy25": 0,
+      "name": "Lawrence M. Sherman",
+      "fy24": 0,
+      "fy25": 12500,
       "fy26": 15625,
       "trajectory": "increasing"
     },
@@ -1331,18 +1324,18 @@
       "trajectory": "stable"
     },
     {
-      "name": "Raulf Polichar",
-      "fy24": 10000,
-      "fy25": 12000,
-      "fy26": 12000,
-      "trajectory": "stable"
-    },
-    {
       "name": "Richard Bockoff",
       "fy24": 15000,
       "fy25": 0,
       "fy26": 12000,
       "trajectory": "increasing"
+    },
+    {
+      "name": "Raulf Polichar",
+      "fy24": 10000,
+      "fy25": 12000,
+      "fy26": 12000,
+      "trajectory": "stable"
     },
     {
       "name": "Emily R Jennewein",
@@ -1373,22 +1366,8 @@
       "trajectory": "increasing"
     },
     {
-      "name": "Kira Elizabeth Finkenberg",
-      "fy24": 11965,
-      "fy25": 10400,
-      "fy26": 10000,
-      "trajectory": "decreasing"
-    },
-    {
-      "name": "John D. Freedman",
+      "name": "Joan Berg",
       "fy24": 0,
-      "fy25": 0,
-      "fy26": 10000,
-      "trajectory": "increasing"
-    },
-    {
-      "name": "Marjorie Kalmanson",
-      "fy24": 55000,
       "fy25": 0,
       "fy26": 10000,
       "trajectory": "increasing"
@@ -1401,20 +1380,6 @@
       "trajectory": "increasing"
     },
     {
-      "name": "Adam Jacobs",
-      "fy24": 10000,
-      "fy25": 10000,
-      "fy26": 10000,
-      "trajectory": "stable"
-    },
-    {
-      "name": "Marvin J. Zaguli",
-      "fy24": 0,
-      "fy25": 10000,
-      "fy26": 10000,
-      "trajectory": "stable"
-    },
-    {
       "name": "Zita Liebermensch",
       "fy24": 10000,
       "fy25": 11844,
@@ -1422,18 +1387,11 @@
       "trajectory": "decreasing"
     },
     {
-      "name": "Melissa Bartell",
-      "fy24": 20000,
-      "fy25": 10000,
+      "name": "Kira Elizabeth Finkenberg",
+      "fy24": 11965,
+      "fy25": 10400,
       "fy26": 10000,
-      "trajectory": "stable"
-    },
-    {
-      "name": "Suzi Feldman",
-      "fy24": 5036,
-      "fy25": 6000,
-      "fy26": 10000,
-      "trajectory": "increasing"
+      "trajectory": "decreasing"
     },
     {
       "name": "Jackie Stein",
@@ -1443,72 +1401,9 @@
       "trajectory": "increasing"
     },
     {
-      "name": "Luis Maizel",
-      "fy24": 50180,
-      "fy25": 0,
-      "fy26": 10000,
-      "trajectory": "increasing"
-    },
-    {
-      "name": "The Stein Family Foundation",
-      "fy24": 0,
-      "fy25": 0,
-      "fy26": 10000,
-      "trajectory": "increasing"
-    },
-    {
-      "name": "Susana Cohen Corrigan",
-      "fy24": 20000,
-      "fy25": 10180,
-      "fy26": 10000,
-      "trajectory": "decreasing"
-    },
-    {
-      "name": "Lauren Cohen",
-      "fy24": 0,
-      "fy25": 0,
-      "fy26": 10000,
-      "trajectory": "increasing"
-    },
-    {
-      "name": "Susan Odenheimer Kabakoff",
-      "fy24": 10000,
-      "fy25": 10000,
-      "fy26": 10000,
-      "trajectory": "stable"
-    },
-    {
-      "name": "Marsha Berkson",
-      "fy24": 20000,
-      "fy25": 10000,
-      "fy26": 10000,
-      "trajectory": "stable"
-    },
-    {
-      "name": "Joan Berg",
-      "fy24": 0,
-      "fy25": 0,
-      "fy26": 10000,
-      "trajectory": "increasing"
-    },
-    {
-      "name": "Debbie Ann Deverett",
-      "fy24": 5000,
-      "fy25": 10000,
-      "fy26": 10000,
-      "trajectory": "stable"
-    },
-    {
       "name": "Erica Weinberg",
       "fy24": 0,
       "fy25": 1800,
-      "fy26": 10000,
-      "trajectory": "increasing"
-    },
-    {
-      "name": "Robyn F. Goldberg",
-      "fy24": 0,
-      "fy25": 0,
       "fy26": 10000,
       "trajectory": "increasing"
     },
@@ -1520,6 +1415,55 @@
       "trajectory": "increasing"
     },
     {
+      "name": "Melissa Bartell",
+      "fy24": 20000,
+      "fy25": 10000,
+      "fy26": 10000,
+      "trajectory": "stable"
+    },
+    {
+      "name": "Cheryl Rattner Price",
+      "fy24": 10000,
+      "fy25": 10000,
+      "fy26": 10000,
+      "trajectory": "stable"
+    },
+    {
+      "name": "Lauren Cohen",
+      "fy24": 0,
+      "fy25": 0,
+      "fy26": 10000,
+      "trajectory": "increasing"
+    },
+    {
+      "name": "Howard A Katz",
+      "fy24": 5000,
+      "fy25": 5000,
+      "fy26": 10000,
+      "trajectory": "increasing"
+    },
+    {
+      "name": "Susan Odenheimer Kabakoff",
+      "fy24": 10000,
+      "fy25": 10000,
+      "fy26": 10000,
+      "trajectory": "stable"
+    },
+    {
+      "name": "Debbie Ann Deverett",
+      "fy24": 5000,
+      "fy25": 10000,
+      "fy26": 10000,
+      "trajectory": "stable"
+    },
+    {
+      "name": "Gail Satter",
+      "fy24": 0,
+      "fy25": 0,
+      "fy26": 10000,
+      "trajectory": "increasing"
+    },
+    {
       "name": "Barbara Bry",
       "fy24": 10000,
       "fy25": 10000,
@@ -1527,23 +1471,16 @@
       "trajectory": "stable"
     },
     {
-      "name": "Dan Gordon Carnick",
-      "fy24": 5000,
-      "fy25": 15000,
-      "fy26": 10000,
-      "trajectory": "decreasing"
-    },
-    {
-      "name": "Jan Stiglitz",
+      "name": "Jean Somers",
       "fy24": 0,
       "fy25": 0,
       "fy26": 10000,
       "trajectory": "increasing"
     },
     {
-      "name": "Danielle L. Miller",
-      "fy24": 10000,
-      "fy25": 5036,
+      "name": "Lisa Beth Pearl",
+      "fy24": 7000,
+      "fy25": 6000,
       "fy26": 10000,
       "trajectory": "increasing"
     },
@@ -1555,11 +1492,25 @@
       "trajectory": "increasing"
     },
     {
-      "name": "Jeremy Berg",
-      "fy24": 10000,
-      "fy25": 10000,
+      "name": "Jan Stiglitz",
+      "fy24": 0,
+      "fy25": 0,
       "fy26": 10000,
-      "trajectory": "stable"
+      "trajectory": "increasing"
+    },
+    {
+      "name": "Robyn F. Goldberg",
+      "fy24": 0,
+      "fy25": 0,
+      "fy26": 10000,
+      "trajectory": "increasing"
+    },
+    {
+      "name": "Dan Gordon Carnick",
+      "fy24": 5000,
+      "fy25": 15000,
+      "fy26": 10000,
+      "trajectory": "decreasing"
     },
     {
       "name": "Laura Galinson",
@@ -1567,13 +1518,62 @@
       "fy25": 180,
       "fy26": 10000,
       "trajectory": "increasing"
+    },
+    {
+      "name": "Marsha Berkson",
+      "fy24": 20000,
+      "fy25": 10000,
+      "fy26": 10000,
+      "trajectory": "stable"
+    },
+    {
+      "name": "Luis Maizel",
+      "fy24": 50180,
+      "fy25": 0,
+      "fy26": 10000,
+      "trajectory": "increasing"
+    },
+    {
+      "name": "Suzi Feldman",
+      "fy24": 5036,
+      "fy25": 6000,
+      "fy26": 10000,
+      "trajectory": "increasing"
+    },
+    {
+      "name": "Adam Jacobs",
+      "fy24": 10000,
+      "fy25": 10000,
+      "fy26": 10000,
+      "trajectory": "stable"
+    },
+    {
+      "name": "Marjorie Kalmanson",
+      "fy24": 55000,
+      "fy25": 0,
+      "fy26": 10000,
+      "trajectory": "increasing"
+    },
+    {
+      "name": "John D. Freedman",
+      "fy24": 0,
+      "fy25": 0,
+      "fy26": 10000,
+      "trajectory": "increasing"
+    },
+    {
+      "name": "Marvin J. Zaguli",
+      "fy24": 0,
+      "fy25": 10000,
+      "fy26": 10000,
+      "trajectory": "stable"
     }
   ],
   "kpis": {
     "totalProfiled": 552,
-    "totalCapacityGap": 28823664,
+    "totalCapacityGap": 29795100,
     "upgradeCount": 107,
-    "avgUpgradeAmount": 14352,
+    "avgUpgradeAmount": 14359,
     "highCapacityNonDonors": 65
   }
 }

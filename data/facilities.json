@@ -1,5 +1,5 @@
 {
-  "asOfDate": "2026-02-25T11:00:01.062070",
+  "asOfDate": "2026-02-26T06:04:00.137455",
   "buildings": [
     {
       "name": "ADL",
@@ -7,90 +7,110 @@
         {
           "id": "417325331773",
           "name": "ADL-Conference (HP11)",
-          "temperature": 71.1,
-          "humidity": 44,
+          "temperature": 70.8,
+          "humidity": 45,
           "hvacMode": "cool",
-          "desiredCool": 73.0,
-          "desiredHeat": 70.0,
+          "desiredCool": 82.0,
+          "desiredHeat": 60.0,
           "isConnected": true,
           "isCooling": false,
           "isHeating": false,
           "isServerRoom": false,
-          "lastReading": "2026-02-25T11:00:01.062070",
+          "lastReading": "2026-02-26T06:04:00.137455",
           "trend24h": [
-            {
-              "hour": "2026-02-24T11:00",
-              "avgTemp": 70.7
-            },
-            {
-              "hour": "2026-02-24T12:00",
-              "avgTemp": 71.4
-            },
-            {
-              "hour": "2026-02-24T13:00",
-              "avgTemp": 72.5
-            },
-            {
-              "hour": "2026-02-24T14:00",
-              "avgTemp": 73.2
-            },
-            {
-              "hour": "2026-02-24T15:00",
-              "avgTemp": 73.7
-            },
-            {
-              "hour": "2026-02-24T16:00",
-              "avgTemp": 73.8
-            },
-            {
-              "hour": "2026-02-24T17:00",
-              "avgTemp": 74.2
-            },
-            {
-              "hour": "2026-02-24T18:00",
-              "avgTemp": 74.6
-            },
-            {
-              "hour": "2026-02-24T19:00",
-              "avgTemp": 74.8
-            },
-            {
-              "hour": "2026-02-24T20:00",
-              "avgTemp": 74.5
-            },
-            {
-              "hour": "2026-02-24T21:00",
-              "avgTemp": 74.4
-            },
-            {
-              "hour": "2026-02-24T22:00",
-              "avgTemp": 74.0
-            },
-            {
-              "hour": "2026-02-24T23:00",
-              "avgTemp": 73.5
-            },
-            {
-              "hour": "2026-02-25T00:00",
-              "avgTemp": 73.0
-            },
-            {
-              "hour": "2026-02-25T01:00",
-              "avgTemp": 72.5
-            },
             {
               "hour": "2026-02-25T10:00",
               "avgTemp": 70.8
+            },
+            {
+              "hour": "2026-02-25T11:00",
+              "avgTemp": 71.5
+            },
+            {
+              "hour": "2026-02-25T12:00",
+              "avgTemp": 72.4
+            },
+            {
+              "hour": "2026-02-25T13:00",
+              "avgTemp": 73.4
+            },
+            {
+              "hour": "2026-02-25T14:00",
+              "avgTemp": 73.5
+            },
+            {
+              "hour": "2026-02-25T15:00",
+              "avgTemp": 73.5
+            },
+            {
+              "hour": "2026-02-25T16:00",
+              "avgTemp": 73.2
+            },
+            {
+              "hour": "2026-02-25T17:00",
+              "avgTemp": 73.9
+            },
+            {
+              "hour": "2026-02-25T18:00",
+              "avgTemp": 74.5
+            },
+            {
+              "hour": "2026-02-25T19:00",
+              "avgTemp": 74.8
+            },
+            {
+              "hour": "2026-02-25T20:00",
+              "avgTemp": 74.9
+            },
+            {
+              "hour": "2026-02-25T21:00",
+              "avgTemp": 74.6
+            },
+            {
+              "hour": "2026-02-25T22:00",
+              "avgTemp": 74.4
+            },
+            {
+              "hour": "2026-02-25T23:00",
+              "avgTemp": 74.1
+            },
+            {
+              "hour": "2026-02-26T00:00",
+              "avgTemp": 73.6
+            },
+            {
+              "hour": "2026-02-26T01:00",
+              "avgTemp": 73.2
+            },
+            {
+              "hour": "2026-02-26T02:00",
+              "avgTemp": 72.7
+            },
+            {
+              "hour": "2026-02-26T03:00",
+              "avgTemp": 72.2
+            },
+            {
+              "hour": "2026-02-26T04:00",
+              "avgTemp": 71.6
+            },
+            {
+              "hour": "2026-02-26T05:00",
+              "avgTemp": 71.1
+            },
+            {
+              "hour": "2026-02-26T06:00",
+              "avgTemp": 70.8
             }
           ],
-          "coolingHours24h": 0.0,
+          "coolingHours24h": 0.6,
           "heatingHours24h": 0.0
         },
         {
           "id": "417326324194",
           "name": "ADL-Server",
-          "temperature": 71.0,
-          "humidity": 43,
+          "temperature": 71.1,
+          "humidity": 44,
           "hvacMode": "auto",
           "desiredCool": 77.0,
           "desiredHeat": 64.0,
@@ -98,71 +118,91 @@
           "isCooling": false,
           "isHeating": false,
           "isServerRoom": true,
-          "lastReading": "2026-02-25T11:00:01.062070",
+          "lastReading": "2026-02-26T06:04:00.137455",
           "trend24h": [
-            {
-              "hour": "2026-02-24T11:00",
-              "avgTemp": 70.5
-            },
-            {
-              "hour": "2026-02-24T12:00",
-              "avgTemp": 71.1
-            },
-            {
-              "hour": "2026-02-24T13:00",
-              "avgTemp": 72.2
-            },
-            {
-              "hour": "2026-02-24T14:00",
-              "avgTemp": 73.0
-            },
-            {
-              "hour": "2026-02-24T15:00",
-              "avgTemp": 73.4
-            },
-            {
-              "hour": "2026-02-24T16:00",
-              "avgTemp": 73.7
-            },
-            {
-              "hour": "2026-02-24T17:00",
-              "avgTemp": 74.2
-            },
-            {
-              "hour": "2026-02-24T18:00",
-              "avgTemp": 74.5
-            },
-            {
-              "hour": "2026-02-24T19:00",
-              "avgTemp": 74.6
-            },
-            {
-              "hour": "2026-02-24T20:00",
-              "avgTemp": 74.5
-            },
-            {
-              "hour": "2026-02-24T21:00",
-              "avgTemp": 74.4
-            },
-            {
-              "hour": "2026-02-24T22:00",
-              "avgTemp": 74.2
-            },
-            {
-              "hour": "2026-02-24T23:00",
-              "avgTemp": 73.6
-            },
-            {
-              "hour": "2026-02-25T00:00",
-              "avgTemp": 73.4
-            },
-            {
-              "hour": "2026-02-25T01:00",
-              "avgTemp": 72.8
-            },
             {
               "hour": "2026-02-25T10:00",
               "avgTemp": 70.9
+            },
+            {
+              "hour": "2026-02-25T11:00",
+              "avgTemp": 71.4
+            },
+            {
+              "hour": "2026-02-25T12:00",
+              "avgTemp": 72.4
+            },
+            {
+              "hour": "2026-02-25T13:00",
+              "avgTemp": 73.1
+            },
+            {
+              "hour": "2026-02-25T14:00",
+              "avgTemp": 73.8
+            },
+            {
+              "hour": "2026-02-25T15:00",
+              "avgTemp": 74.3
+            },
+            {
+              "hour": "2026-02-25T16:00",
+              "avgTemp": 74.2
+            },
+            {
+              "hour": "2026-02-25T17:00",
+              "avgTemp": 74.7
+            },
+            {
+              "hour": "2026-02-25T18:00",
+              "avgTemp": 75.0
+            },
+            {
+              "hour": "2026-02-25T19:00",
+              "avgTemp": 75.1
+            },
+            {
+              "hour": "2026-02-25T20:00",
+              "avgTemp": 75.0
+            },
+            {
+              "hour": "2026-02-25T21:00",
+              "avgTemp": 75.0
+            },
+            {
+              "hour": "2026-02-25T22:00",
+              "avgTemp": 74.7
+            },
+            {
+              "hour": "2026-02-25T23:00",
+              "avgTemp": 74.5
+            },
+            {
+              "hour": "2026-02-26T00:00",
+              "avgTemp": 74.1
+            },
+            {
+              "hour": "2026-02-26T01:00",
+              "avgTemp": 73.6
+            },
+            {
+              "hour": "2026-02-26T02:00",
+              "avgTemp": 73.2
+            },
+            {
+              "hour": "2026-02-26T03:00",
+              "avgTemp": 72.7
+            },
+            {
+              "hour": "2026-02-26T04:00",
+              "avgTemp": 72.0
+            },
+            {
+              "hour": "2026-02-26T05:00",
+              "avgTemp": 71.6
+            },
+            {
+              "hour": "2026-02-26T06:00",
+              "avgTemp": 71.2
             }
           ],
           "coolingHours24h": 0.0,
@@ -171,165 +211,205 @@
         {
           "id": "417372040422",
           "name": "ADL-South Office (HP10)",
-          "temperature": 74.1,
-          "humidity": 43,
+          "temperature": 65.8,
+          "humidity": 50,
           "hvacMode": "auto",
-          "desiredCool": 73.0,
-          "desiredHeat": 70.0,
+          "desiredCool": 82.0,
+          "desiredHeat": 60.0,
           "isConnected": true,
-          "isCooling": true,
+          "isCooling": false,
           "isHeating": false,
           "isServerRoom": false,
-          "lastReading": "2026-02-25T11:00:01.062070",
+          "lastReading": "2026-02-26T06:04:00.137455",
           "trend24h": [
-            {
-              "hour": "2026-02-24T11:00",
-              "avgTemp": 73.6
-            },
-            {
-              "hour": "2026-02-24T12:00",
-              "avgTemp": 73.2
-            },
-            {
-              "hour": "2026-02-24T13:00",
-              "avgTemp": 73.0
-            },
-            {
-              "hour": "2026-02-24T14:00",
-              "avgTemp": 73.6
-            },
-            {
-              "hour": "2026-02-24T15:00",
-              "avgTemp": 73.2
-            },
-            {
-              "hour": "2026-02-24T16:00",
-              "avgTemp": 73.1
-            },
-            {
-              "hour": "2026-02-24T17:00",
-              "avgTemp": 73.8
-            },
-            {
-              "hour": "2026-02-24T18:00",
-              "avgTemp": 74.4
-            },
-            {
-              "hour": "2026-02-24T19:00",
-              "avgTemp": 74.0
-            },
-            {
-              "hour": "2026-02-24T20:00",
-              "avgTemp": 73.7
-            },
-            {
-              "hour": "2026-02-24T21:00",
-              "avgTemp": 73.1
-            },
-            {
-              "hour": "2026-02-24T22:00",
-              "avgTemp": 72.5
-            },
-            {
-              "hour": "2026-02-24T23:00",
-              "avgTemp": 71.8
-            },
-            {
-              "hour": "2026-02-25T00:00",
-              "avgTemp": 71.1
-            },
-            {
-              "hour": "2026-02-25T01:00",
-              "avgTemp": 70.5
-            },
             {
               "hour": "2026-02-25T10:00",
               "avgTemp": 72.8
+            },
+            {
+              "hour": "2026-02-25T11:00",
+              "avgTemp": 73.7
+            },
+            {
+              "hour": "2026-02-25T12:00",
+              "avgTemp": 74.5
+            },
+            {
+              "hour": "2026-02-25T13:00",
+              "avgTemp": 74.2
+            },
+            {
+              "hour": "2026-02-25T14:00",
+              "avgTemp": 74.5
+            },
+            {
+              "hour": "2026-02-25T15:00",
+              "avgTemp": 74.7
+            },
+            {
+              "hour": "2026-02-25T16:00",
+              "avgTemp": 74.2
+            },
+            {
+              "hour": "2026-02-25T17:00",
+              "avgTemp": 74.7
+            },
+            {
+              "hour": "2026-02-25T18:00",
+              "avgTemp": 74.7
+            },
+            {
+              "hour": "2026-02-25T19:00",
+              "avgTemp": 74.2
+            },
+            {
+              "hour": "2026-02-25T20:00",
+              "avgTemp": 73.5
+            },
+            {
+              "hour": "2026-02-25T21:00",
+              "avgTemp": 72.8
+            },
+            {
+              "hour": "2026-02-25T22:00",
+              "avgTemp": 72.0
+            },
+            {
+              "hour": "2026-02-25T23:00",
+              "avgTemp": 71.3
+            },
+            {
+              "hour": "2026-02-26T00:00",
+              "avgTemp": 70.4
+            },
+            {
+              "hour": "2026-02-26T01:00",
+              "avgTemp": 69.6
+            },
+            {
+              "hour": "2026-02-26T02:00",
+              "avgTemp": 68.7
+            },
+            {
+              "hour": "2026-02-26T03:00",
+              "avgTemp": 67.9
+            },
+            {
+              "hour": "2026-02-26T04:00",
+              "avgTemp": 67.1
+            },
+            {
+              "hour": "2026-02-26T05:00",
+              "avgTemp": 66.4
+            },
+            {
+              "hour": "2026-02-26T06:00",
+              "avgTemp": 65.9
             }
           ],
-          "coolingHours24h": 3.1,
+          "coolingHours24h": 4.0,
           "heatingHours24h": 0.0
         },
         {
           "id": "417350269676",
           "name": "ADL-West Office (HP12)",
-          "temperature": 70.8,
-          "humidity": 46,
+          "temperature": 69.6,
+          "humidity": 47,
           "hvacMode": "cool",
-          "desiredCool": 73.0,
-          "desiredHeat": 70.0,
+          "desiredCool": 82.0,
+          "desiredHeat": 60.0,
           "isConnected": true,
           "isCooling": false,
           "isHeating": false,
           "isServerRoom": false,
-          "lastReading": "2026-02-25T11:00:01.062070",
+          "lastReading": "2026-02-26T06:04:00.137455",
           "trend24h": [
-            {
-              "hour": "2026-02-24T11:00",
-              "avgTemp": 70.3
-            },
-            {
-              "hour": "2026-02-24T12:00",
-              "avgTemp": 71.3
-            },
-            {
-              "hour": "2026-02-24T13:00",
-              "avgTemp": 72.4
-            },
-            {
-              "hour": "2026-02-24T14:00",
-              "avgTemp": 73.2
-            },
-            {
-              "hour": "2026-02-24T15:00",
-              "avgTemp": 73.5
-            },
-            {
-              "hour": "2026-02-24T16:00",
-              "avgTemp": 73.2
-            },
-            {
-              "hour": "2026-02-24T17:00",
-              "avgTemp": 73.9
-            },
-            {
-              "hour": "2026-02-24T18:00",
-              "avgTemp": 74.2
-            },
-            {
-              "hour": "2026-02-24T19:00",
-              "avgTemp": 74.1
-            },
-            {
-              "hour": "2026-02-24T20:00",
-              "avgTemp": 73.8
-            },
-            {
-              "hour": "2026-02-24T21:00",
-              "avgTemp": 73.4
-            },
-            {
-              "hour": "2026-02-24T22:00",
-              "avgTemp": 73.0
-            },
-            {
-              "hour": "2026-02-24T23:00",
-              "avgTemp": 72.5
-            },
-            {
-              "hour": "2026-02-25T00:00",
-              "avgTemp": 72.0
-            },
-            {
-              "hour": "2026-02-25T01:00",
-              "avgTemp": 71.5
-            },
             {
               "hour": "2026-02-25T10:00",
               "avgTemp": 70.5
+            },
+            {
+              "hour": "2026-02-25T11:00",
+              "avgTemp": 71.4
+            },
+            {
+              "hour": "2026-02-25T12:00",
+              "avgTemp": 72.6
+            },
+            {
+              "hour": "2026-02-25T13:00",
+              "avgTemp": 73.4
+            },
+            {
+              "hour": "2026-02-25T14:00",
+              "avgTemp": 73.2
+            },
+            {
+              "hour": "2026-02-25T15:00",
+              "avgTemp": 73.4
+            },
+            {
+              "hour": "2026-02-25T16:00",
+              "avgTemp": 73.1
+            },
+            {
+              "hour": "2026-02-25T17:00",
+              "avgTemp": 73.6
+            },
+            {
+              "hour": "2026-02-25T18:00",
+              "avgTemp": 74.2
+            },
+            {
+              "hour": "2026-02-25T19:00",
+              "avgTemp": 74.3
+            },
+            {
+              "hour": "2026-02-25T20:00",
+              "avgTemp": 74.2
+            },
+            {
+              "hour": "2026-02-25T21:00",
+              "avgTemp": 73.9
+            },
+            {
+              "hour": "2026-02-25T22:00",
+              "avgTemp": 73.5
+            },
+            {
+              "hour": "2026-02-25T23:00",
+              "avgTemp": 73.0
+            },
+            {
+              "hour": "2026-02-26T00:00",
+              "avgTemp": 72.5
+            },
+            {
+              "hour": "2026-02-26T01:00",
+              "avgTemp": 72.0
+            },
+            {
+              "hour": "2026-02-26T02:00",
+              "avgTemp": 71.6
+            },
+            {
+              "hour": "2026-02-26T03:00",
+              "avgTemp": 71.0
+            },
+            {
+              "hour": "2026-02-26T04:00",
+              "avgTemp": 70.5
+            },
+            {
+              "hour": "2026-02-26T05:00",
+              "avgTemp": 70.0
+            },
+            {
+              "hour": "2026-02-26T06:00",
+              "avgTemp": 69.6
             }
           ],
-          "coolingHours24h": 0.8,
+          "coolingHours24h": 1.6,
           "heatingHours24h": 0.0
         }
       ]
@@ -340,80 +420,100 @@
         {
           "id": "417311107362",
           "name": "Common Lobby (CU7) 1st",
-          "temperature": 72.3,
-          "humidity": 48,
+          "temperature": 70.1,
+          "humidity": 51,
           "hvacMode": "heat",
-          "desiredCool": 72.0,
-          "desiredHeat": 72.0,
+          "desiredCool": 82.0,
+          "desiredHeat": 60.0,
           "isConnected": true,
           "isCooling": false,
           "isHeating": false,
           "isServerRoom": false,
-          "lastReading": "2026-02-25T11:00:01.062070",
+          "lastReading": "2026-02-26T06:04:00.137455",
           "trend24h": [
-            {
-              "hour": "2026-02-24T11:00",
-              "avgTemp": 72.1
-            },
-            {
-              "hour": "2026-02-24T12:00",
-              "avgTemp": 72.1
-            },
-            {
-              "hour": "2026-02-24T13:00",
-              "avgTemp": 72.3
-            },
-            {
-              "hour": "2026-02-24T14:00",
-              "avgTemp": 72.3
-            },
-            {
-              "hour": "2026-02-24T15:00",
-              "avgTemp": 72.5
-            },
-            {
-              "hour": "2026-02-24T16:00",
-              "avgTemp": 72.5
-            },
-            {
-              "hour": "2026-02-24T17:00",
-              "avgTemp": 72.4
-            },
-            {
-              "hour": "2026-02-24T18:00",
-              "avgTemp": 72.1
-            },
-            {
-              "hour": "2026-02-24T19:00",
-              "avgTemp": 71.7
-            },
-            {
-              "hour": "2026-02-24T20:00",
-              "avgTemp": 71.4
-            },
-            {
-              "hour": "2026-02-24T21:00",
-              "avgTemp": 71.1
-            },
-            {
-              "hour": "2026-02-24T22:00",
-              "avgTemp": 70.9
-            },
-            {
-              "hour": "2026-02-24T23:00",
-              "avgTemp": 70.5
-            },
-            {
-              "hour": "2026-02-25T00:00",
-              "avgTemp": 70.4
-            },
-            {
-              "hour": "2026-02-25T01:00",
-              "avgTemp": 70.1
-            },
             {
               "hour": "2026-02-25T10:00",
               "avgTemp": 72.2
+            },
+            {
+              "hour": "2026-02-25T11:00",
+              "avgTemp": 72.3
+            },
+            {
+              "hour": "2026-02-25T12:00",
+              "avgTemp": 72.4
+            },
+            {
+              "hour": "2026-02-25T13:00",
+              "avgTemp": 72.7
+            },
+            {
+              "hour": "2026-02-25T14:00",
+              "avgTemp": 72.9
+            },
+            {
+              "hour": "2026-02-25T15:00",
+              "avgTemp": 73.1
+            },
+            {
+              "hour": "2026-02-25T16:00",
+              "avgTemp": 73.1
+            },
+            {
+              "hour": "2026-02-25T17:00",
+              "avgTemp": 72.7
+            },
+            {
+              "hour": "2026-02-25T18:00",
+              "avgTemp": 72.6
+            },
+            {
+              "hour": "2026-02-25T19:00",
+              "avgTemp": 72.4
+            },
+            {
+              "hour": "2026-02-25T20:00",
+              "avgTemp": 72.3
+            },
+            {
+              "hour": "2026-02-25T21:00",
+              "avgTemp": 72.3
+            },
+            {
+              "hour": "2026-02-25T22:00",
+              "avgTemp": 72.0
+            },
+            {
+              "hour": "2026-02-25T23:00",
+              "avgTemp": 71.7
+            },
+            {
+              "hour": "2026-02-26T00:00",
+              "avgTemp": 71.5
+            },
+            {
+              "hour": "2026-02-26T01:00",
+              "avgTemp": 71.2
+            },
+            {
+              "hour": "2026-02-26T02:00",
+              "avgTemp": 71.1
+            },
+            {
+              "hour": "2026-02-26T03:00",
+              "avgTemp": 70.7
+            },
+            {
+              "hour": "2026-02-26T04:00",
+              "avgTemp": 70.3
+            },
+            {
+              "hour": "2026-02-26T05:00",
+              "avgTemp": 70.2
+            },
+            {
+              "hour": "2026-02-26T06:00",
+              "avgTemp": 70.1
             }
           ],
           "coolingHours24h": 0.0,
@@ -422,80 +522,100 @@
         {
           "id": "417311564626",
           "name": "Common-ADL Hall (HP13)",
-          "temperature": 70.8,
-          "humidity": 45,
+          "temperature": 69.7,
+          "humidity": 46,
           "hvacMode": "auto",
-          "desiredCool": 74.0,
-          "desiredHeat": 68.0,
+          "desiredCool": 82.0,
+          "desiredHeat": 60.0,
           "isConnected": true,
           "isCooling": false,
           "isHeating": false,
           "isServerRoom": false,
-          "lastReading": "2026-02-25T11:00:01.062070",
+          "lastReading": "2026-02-26T06:04:00.137455",
           "trend24h": [
-            {
-              "hour": "2026-02-24T11:00",
-              "avgTemp": 70.2
-            },
-            {
-              "hour": "2026-02-24T12:00",
-              "avgTemp": 70.7
-            },
-            {
-              "hour": "2026-02-24T13:00",
-              "avgTemp": 71.4
-            },
-            {
-              "hour": "2026-02-24T14:00",
-              "avgTemp": 72.4
-            },
-            {
-              "hour": "2026-02-24T15:00",
-              "avgTemp": 72.4
-            },
-            {
-              "hour": "2026-02-24T16:00",
-              "avgTemp": 72.7
-            },
-            {
-              "hour": "2026-02-24T17:00",
-              "avgTemp": 73.1
-            },
-            {
-              "hour": "2026-02-24T18:00",
-              "avgTemp": 73.5
-            },
-            {
-              "hour": "2026-02-24T19:00",
-              "avgTemp": 73.5
-            },
-            {
-              "hour": "2026-02-24T20:00",
-              "avgTemp": 73.3
-            },
-            {
-              "hour": "2026-02-24T21:00",
-              "avgTemp": 73.0
-            },
-            {
-              "hour": "2026-02-24T22:00",
-              "avgTemp": 72.7
-            },
-            {
-              "hour": "2026-02-24T23:00",
-              "avgTemp": 72.3
-            },
-            {
-              "hour": "2026-02-25T00:00",
-              "avgTemp": 71.8
-            },
-            {
-              "hour": "2026-02-25T01:00",
-              "avgTemp": 71.4
-            },
             {
               "hour": "2026-02-25T10:00",
               "avgTemp": 70.5
+            },
+            {
+              "hour": "2026-02-25T11:00",
+              "avgTemp": 71.1
+            },
+            {
+              "hour": "2026-02-25T12:00",
+              "avgTemp": 72.0
+            },
+            {
+              "hour": "2026-02-25T13:00",
+              "avgTemp": 72.7
+            },
+            {
+              "hour": "2026-02-25T14:00",
+              "avgTemp": 72.8
+            },
+            {
+              "hour": "2026-02-25T15:00",
+              "avgTemp": 73.1
+            },
+            {
+              "hour": "2026-02-25T16:00",
+              "avgTemp": 73.2
+            },
+            {
+              "hour": "2026-02-25T17:00",
+              "avgTemp": 73.8
+            },
+            {
+              "hour": "2026-02-25T18:00",
+              "avgTemp": 74.1
+            },
+            {
+              "hour": "2026-02-25T19:00",
+              "avgTemp": 74.0
+            },
+            {
+              "hour": "2026-02-25T20:00",
+              "avgTemp": 73.8
+            },
+            {
+              "hour": "2026-02-25T21:00",
+              "avgTemp": 73.6
+            },
+            {
+              "hour": "2026-02-25T22:00",
+              "avgTemp": 73.4
+            },
+            {
+              "hour": "2026-02-25T23:00",
+              "avgTemp": 73.1
+            },
+            {
+              "hour": "2026-02-26T00:00",
+              "avgTemp": 72.8
+            },
+            {
+              "hour": "2026-02-26T01:00",
+              "avgTemp": 72.2
+            },
+            {
+              "hour": "2026-02-26T02:00",
+              "avgTemp": 71.7
+            },
+            {
+              "hour": "2026-02-26T03:00",
+              "avgTemp": 71.2
+            },
+            {
+              "hour": "2026-02-26T04:00",
+              "avgTemp": 70.8
+            },
+            {
+              "hour": "2026-02-26T05:00",
+              "avgTemp": 70.2
+            },
+            {
+              "hour": "2026-02-26T06:00",
+              "avgTemp": 69.7
             }
           ],
           "coolingHours24h": 0.0,
@@ -504,162 +624,202 @@
         {
           "id": "417326509973",
           "name": "Common-Conference Room A (HP4)",
-          "temperature": 73.7,
-          "humidity": 44,
+          "temperature": 68.7,
+          "humidity": 48,
           "hvacMode": "auto",
-          "desiredCool": 74.0,
-          "desiredHeat": 68.0,
+          "desiredCool": 82.0,
+          "desiredHeat": 60.0,
           "isConnected": true,
           "isCooling": false,
           "isHeating": false,
           "isServerRoom": false,
-          "lastReading": "2026-02-25T11:00:01.062070",
+          "lastReading": "2026-02-26T06:04:00.137455",
           "trend24h": [
-            {
-              "hour": "2026-02-24T11:00",
-              "avgTemp": 73.5
-            },
-            {
-              "hour": "2026-02-24T12:00",
-              "avgTemp": 73.7
-            },
-            {
-              "hour": "2026-02-24T13:00",
-              "avgTemp": 74.2
-            },
-            {
-              "hour": "2026-02-24T14:00",
-              "avgTemp": 74.4
-            },
-            {
-              "hour": "2026-02-24T15:00",
-              "avgTemp": 74.5
-            },
-            {
-              "hour": "2026-02-24T16:00",
-              "avgTemp": 74.4
-            },
-            {
-              "hour": "2026-02-24T17:00",
-              "avgTemp": 74.2
-            },
-            {
-              "hour": "2026-02-24T18:00",
-              "avgTemp": 74.0
-            },
-            {
-              "hour": "2026-02-24T19:00",
-              "avgTemp": 73.8
-            },
-            {
-              "hour": "2026-02-24T20:00",
-              "avgTemp": 73.4
-            },
-            {
-              "hour": "2026-02-24T21:00",
-              "avgTemp": 73.0
-            },
-            {
-              "hour": "2026-02-24T22:00",
-              "avgTemp": 72.4
-            },
-            {
-              "hour": "2026-02-24T23:00",
-              "avgTemp": 71.7
-            },
-            {
-              "hour": "2026-02-25T00:00",
-              "avgTemp": 71.3
-            },
-            {
-              "hour": "2026-02-25T01:00",
-              "avgTemp": 70.7
-            },
             {
               "hour": "2026-02-25T10:00",
               "avgTemp": 73.7
+            },
+            {
+              "hour": "2026-02-25T11:00",
+              "avgTemp": 74.1
+            },
+            {
+              "hour": "2026-02-25T12:00",
+              "avgTemp": 74.3
+            },
+            {
+              "hour": "2026-02-25T13:00",
+              "avgTemp": 74.3
+            },
+            {
+              "hour": "2026-02-25T14:00",
+              "avgTemp": 74.0
+            },
+            {
+              "hour": "2026-02-25T15:00",
+              "avgTemp": 73.8
+            },
+            {
+              "hour": "2026-02-25T16:00",
+              "avgTemp": 73.9
+            },
+            {
+              "hour": "2026-02-25T17:00",
+              "avgTemp": 74.3
+            },
+            {
+              "hour": "2026-02-25T18:00",
+              "avgTemp": 74.4
+            },
+            {
+              "hour": "2026-02-25T19:00",
+              "avgTemp": 74.1
+            },
+            {
+              "hour": "2026-02-25T20:00",
+              "avgTemp": 73.8
+            },
+            {
+              "hour": "2026-02-25T21:00",
+              "avgTemp": 73.3
+            },
+            {
+              "hour": "2026-02-25T22:00",
+              "avgTemp": 72.8
+            },
+            {
+              "hour": "2026-02-25T23:00",
+              "avgTemp": 72.3
+            },
+            {
+              "hour": "2026-02-26T00:00",
+              "avgTemp": 71.8
+            },
+            {
+              "hour": "2026-02-26T01:00",
+              "avgTemp": 71.2
+            },
+            {
+              "hour": "2026-02-26T02:00",
+              "avgTemp": 70.6
+            },
+            {
+              "hour": "2026-02-26T03:00",
+              "avgTemp": 70.1
+            },
+            {
+              "hour": "2026-02-26T04:00",
+              "avgTemp": 69.6
+            },
+            {
+              "hour": "2026-02-26T05:00",
+              "avgTemp": 69.0
+            },
+            {
+              "hour": "2026-02-26T06:00",
+              "avgTemp": 68.8
             }
           ],
-          "coolingHours24h": 0.0,
+          "coolingHours24h": 0.2,
           "heatingHours24h": 0.0
         },
         {
           "id": "417391495904",
           "name": "Common-Data Room (HP6)",
-          "temperature": 74.2,
+          "temperature": 74.1,
           "humidity": 43,
           "hvacMode": "heat",
-          "desiredCool": 74.0,
-          "desiredHeat": 68.0,
+          "desiredCool": 82.0,
+          "desiredHeat": 60.0,
           "isConnected": true,
           "isCooling": false,
           "isHeating": false,
           "isServerRoom": true,
-          "lastReading": "2026-02-25T11:00:01.062070",
+          "lastReading": "2026-02-26T06:04:00.137455",
           "trend24h": [
-            {
-              "hour": "2026-02-24T11:00",
-              "avgTemp": 73.5
-            },
-            {
-              "hour": "2026-02-24T12:00",
-              "avgTemp": 73.8
-            },
-            {
-              "hour": "2026-02-24T13:00",
-              "avgTemp": 74.8
-            },
-            {
-              "hour": "2026-02-24T14:00",
-              "avgTemp": 75.3
-            },
-            {
-              "hour": "2026-02-24T15:00",
-              "avgTemp": 75.6
-            },
-            {
-              "hour": "2026-02-24T16:00",
-              "avgTemp": 75.7
-            },
-            {
-              "hour": "2026-02-24T17:00",
-              "avgTemp": 75.8
-            },
-            {
-              "hour": "2026-02-24T18:00",
-              "avgTemp": 75.9
-            },
-            {
-              "hour": "2026-02-24T19:00",
-              "avgTemp": 76.0
-            },
-            {
-              "hour": "2026-02-24T20:00",
-              "avgTemp": 76.0
-            },
-            {
-              "hour": "2026-02-24T21:00",
-              "avgTemp": 75.9
-            },
-            {
-              "hour": "2026-02-24T22:00",
-              "avgTemp": 75.8
-            },
-            {
-              "hour": "2026-02-24T23:00",
-              "avgTemp": 75.6
-            },
-            {
-              "hour": "2026-02-25T00:00",
-              "avgTemp": 75.4
-            },
-            {
-              "hour": "2026-02-25T01:00",
-              "avgTemp": 75.1
-            },
             {
               "hour": "2026-02-25T10:00",
               "avgTemp": 73.9
+            },
+            {
+              "hour": "2026-02-25T11:00",
+              "avgTemp": 74.2
+            },
+            {
+              "hour": "2026-02-25T12:00",
+              "avgTemp": 74.7
+            },
+            {
+              "hour": "2026-02-25T13:00",
+              "avgTemp": 75.2
+            },
+            {
+              "hour": "2026-02-25T14:00",
+              "avgTemp": 75.7
+            },
+            {
+              "hour": "2026-02-25T15:00",
+              "avgTemp": 76.1
+            },
+            {
+              "hour": "2026-02-25T16:00",
+              "avgTemp": 76.1
+            },
+            {
+              "hour": "2026-02-25T17:00",
+              "avgTemp": 76.2
+            },
+            {
+              "hour": "2026-02-25T18:00",
+              "avgTemp": 76.4
+            },
+            {
+              "hour": "2026-02-25T19:00",
+              "avgTemp": 76.5
+            },
+            {
+              "hour": "2026-02-25T20:00",
+              "avgTemp": 76.6
+            },
+            {
+              "hour": "2026-02-25T21:00",
+              "avgTemp": 76.5
+            },
+            {
+              "hour": "2026-02-25T22:00",
+              "avgTemp": 76.4
+            },
+            {
+              "hour": "2026-02-25T23:00",
+              "avgTemp": 76.2
+            },
+            {
+              "hour": "2026-02-26T00:00",
+              "avgTemp": 75.8
+            },
+            {
+              "hour": "2026-02-26T01:00",
+              "avgTemp": 75.6
+            },
+            {
+              "hour": "2026-02-26T02:00",
+              "avgTemp": 75.2
+            },
+            {
+              "hour": "2026-02-26T03:00",
+              "avgTemp": 75.0
+            },
+            {
+              "hour": "2026-02-26T04:00",
+              "avgTemp": 74.7
+            },
+            {
+              "hour": "2026-02-26T05:00",
+              "avgTemp": 74.3
+            },
+            {
+              "hour": "2026-02-26T06:00",
+              "avgTemp": 74.1
             }
           ],
           "coolingHours24h": 0.0,
@@ -668,329 +828,409 @@
         {
           "id": "417305803645",
           "name": "Common-Lobby (HP8)",
-          "temperature": 69.7,
-          "humidity": 48,
+          "temperature": 67.2,
+          "humidity": 51,
           "hvacMode": "cool",
-          "desiredCool": 74.0,
-          "desiredHeat": 68.0,
+          "desiredCool": 82.0,
+          "desiredHeat": 60.0,
           "isConnected": true,
           "isCooling": false,
           "isHeating": false,
           "isServerRoom": false,
-          "lastReading": "2026-02-25T11:00:01.062070",
+          "lastReading": "2026-02-26T06:04:00.137455",
           "trend24h": [
-            {
-              "hour": "2026-02-24T11:00",
-              "avgTemp": 71.0
-            },
-            {
-              "hour": "2026-02-24T12:00",
-              "avgTemp": 72.5
-            },
-            {
-              "hour": "2026-02-24T13:00",
-              "avgTemp": 73.8
-            },
-            {
-              "hour": "2026-02-24T14:00",
-              "avgTemp": 76.1
-            },
-            {
-              "hour": "2026-02-24T15:00",
-              "avgTemp": 74.6
-            },
-            {
-              "hour": "2026-02-24T16:00",
-              "avgTemp": 72.3
-            },
-            {
-              "hour": "2026-02-24T17:00",
-              "avgTemp": 73.5
-            },
-            {
-              "hour": "2026-02-24T18:00",
-              "avgTemp": 73.5
-            },
-            {
-              "hour": "2026-02-24T19:00",
-              "avgTemp": 72.9
-            },
-            {
-              "hour": "2026-02-24T20:00",
-              "avgTemp": 72.3
-            },
-            {
-              "hour": "2026-02-24T21:00",
-              "avgTemp": 71.8
-            },
-            {
-              "hour": "2026-02-24T22:00",
-              "avgTemp": 71.2
-            },
-            {
-              "hour": "2026-02-24T23:00",
-              "avgTemp": 70.6
-            },
-            {
-              "hour": "2026-02-25T00:00",
-              "avgTemp": 70.1
-            },
-            {
-              "hour": "2026-02-25T01:00",
-              "avgTemp": 69.5
-            },
             {
               "hour": "2026-02-25T10:00",
               "avgTemp": 69.4
+            },
+            {
+              "hour": "2026-02-25T11:00",
+              "avgTemp": 70.6
+            },
+            {
+              "hour": "2026-02-25T12:00",
+              "avgTemp": 72.2
+            },
+            {
+              "hour": "2026-02-25T13:00",
+              "avgTemp": 73.8
+            },
+            {
+              "hour": "2026-02-25T14:00",
+              "avgTemp": 74.4
+            },
+            {
+              "hour": "2026-02-25T15:00",
+              "avgTemp": 74.5
+            },
+            {
+              "hour": "2026-02-25T16:00",
+              "avgTemp": 74.4
+            },
+            {
+              "hour": "2026-02-25T17:00",
+              "avgTemp": 74.6
+            },
+            {
+              "hour": "2026-02-25T18:00",
+              "avgTemp": 74.1
+            },
+            {
+              "hour": "2026-02-25T19:00",
+              "avgTemp": 73.7
+            },
+            {
+              "hour": "2026-02-25T20:00",
+              "avgTemp": 73.1
+            },
+            {
+              "hour": "2026-02-25T21:00",
+              "avgTemp": 72.8
+            },
+            {
+              "hour": "2026-02-25T22:00",
+              "avgTemp": 72.1
+            },
+            {
+              "hour": "2026-02-25T23:00",
+              "avgTemp": 71.5
+            },
+            {
+              "hour": "2026-02-26T00:00",
+              "avgTemp": 70.9
+            },
+            {
+              "hour": "2026-02-26T01:00",
+              "avgTemp": 70.1
+            },
+            {
+              "hour": "2026-02-26T02:00",
+              "avgTemp": 69.5
+            },
+            {
+              "hour": "2026-02-26T03:00",
+              "avgTemp": 68.9
+            },
+            {
+              "hour": "2026-02-26T04:00",
+              "avgTemp": 68.3
+            },
+            {
+              "hour": "2026-02-26T05:00",
+              "avgTemp": 67.6
+            },
+            {
+              "hour": "2026-02-26T06:00",
+              "avgTemp": 67.2
             }
           ],
-          "coolingHours24h": 1.8,
+          "coolingHours24h": 2.0,
           "heatingHours24h": 0.0
         },
         {
           "id": "417330199847",
           "name": "Common-Server Room",
-          "temperature": 71.2,
-          "humidity": 46,
+          "temperature": 72.8,
+          "humidity": 44,
           "hvacMode": "auto",
           "desiredCool": 72.0,
           "desiredHeat": 67.0,
           "isConnected": true,
-          "isCooling": false,
+          "isCooling": true,
           "isHeating": false,
           "isServerRoom": true,
-          "lastReading": "2026-02-25T11:00:01.062070",
+          "lastReading": "2026-02-26T06:04:00.137455",
           "trend24h": [
-            {
-              "hour": "2026-02-24T11:00",
-              "avgTemp": 71.9
-            },
-            {
-              "hour": "2026-02-24T12:00",
-              "avgTemp": 71.9
-            },
-            {
-              "hour": "2026-02-24T13:00",
-              "avgTemp": 72.2
-            },
-            {
-              "hour": "2026-02-24T14:00",
-              "avgTemp": 72.3
-            },
-            {
-              "hour": "2026-02-24T15:00",
-              "avgTemp": 72.0
-            },
-            {
-              "hour": "2026-02-24T16:00",
-              "avgTemp": 71.9
-            },
-            {
-              "hour": "2026-02-24T17:00",
-              "avgTemp": 72.2
-            },
-            {
-              "hour": "2026-02-24T18:00",
-              "avgTemp": 72.1
-            },
-            {
-              "hour": "2026-02-24T19:00",
-              "avgTemp": 71.8
-            },
-            {
-              "hour": "2026-02-24T20:00",
-              "avgTemp": 71.8
-            },
-            {
-              "hour": "2026-02-24T21:00",
-              "avgTemp": 72.4
-            },
-            {
-              "hour": "2026-02-24T22:00",
-              "avgTemp": 71.7
-            },
-            {
-              "hour": "2026-02-24T23:00",
-              "avgTemp": 71.6
-            },
-            {
-              "hour": "2026-02-25T00:00",
-              "avgTemp": 72.3
-            },
-            {
-              "hour": "2026-02-25T01:00",
-              "avgTemp": 71.5
-            },
             {
               "hour": "2026-02-25T10:00",
               "avgTemp": 72.6
+            },
+            {
+              "hour": "2026-02-25T11:00",
+              "avgTemp": 71.6
+            },
+            {
+              "hour": "2026-02-25T12:00",
+              "avgTemp": 72.2
+            },
+            {
+              "hour": "2026-02-25T13:00",
+              "avgTemp": 72.0
+            },
+            {
+              "hour": "2026-02-25T14:00",
+              "avgTemp": 72.4
+            },
+            {
+              "hour": "2026-02-25T15:00",
+              "avgTemp": 72.4
+            },
+            {
+              "hour": "2026-02-25T16:00",
+              "avgTemp": 72.5
+            },
+            {
+              "hour": "2026-02-25T17:00",
+              "avgTemp": 71.7
+            },
+            {
+              "hour": "2026-02-25T18:00",
+              "avgTemp": 72.1
+            },
+            {
+              "hour": "2026-02-25T19:00",
+              "avgTemp": 72.2
+            },
+            {
+              "hour": "2026-02-25T20:00",
+              "avgTemp": 72.0
+            },
+            {
+              "hour": "2026-02-25T21:00",
+              "avgTemp": 72.2
+            },
+            {
+              "hour": "2026-02-25T22:00",
+              "avgTemp": 71.9
+            },
+            {
+              "hour": "2026-02-25T23:00",
+              "avgTemp": 72.2
+            },
+            {
+              "hour": "2026-02-26T00:00",
+              "avgTemp": 71.9
+            },
+            {
+              "hour": "2026-02-26T01:00",
+              "avgTemp": 72.0
+            },
+            {
+              "hour": "2026-02-26T02:00",
+              "avgTemp": 71.6
+            },
+            {
+              "hour": "2026-02-26T03:00",
+              "avgTemp": 71.9
+            },
+            {
+              "hour": "2026-02-26T04:00",
+              "avgTemp": 71.9
+            },
+            {
+              "hour": "2026-02-26T05:00",
+              "avgTemp": 72.2
+            },
+            {
+              "hour": "2026-02-26T06:00",
+              "avgTemp": 72.9
             }
           ],
-          "coolingHours24h": 5.2,
+          "coolingHours24h": 5.4,
           "heatingHours24h": 0.0
         },
         {
           "id": "417311299522",
           "name": "Conference-Foster S (CU10)",
-          "temperature": 72.0,
-          "humidity": 46,
+          "temperature": 67.2,
+          "humidity": 53,
           "hvacMode": "auto",
-          "desiredCool": 73.0,
-          "desiredHeat": 68.0,
+          "desiredCool": 82.0,
+          "desiredHeat": 65.0,
           "isConnected": true,
           "isCooling": false,
           "isHeating": false,
           "isServerRoom": false,
-          "lastReading": "2026-02-25T11:00:01.062070",
+          "lastReading": "2026-02-26T06:04:00.137455",
           "trend24h": [
-            {
-              "hour": "2026-02-24T11:00",
-              "avgTemp": 72.7
-            },
-            {
-              "hour": "2026-02-24T12:00",
-              "avgTemp": 72.4
-            },
-            {
-              "hour": "2026-02-24T13:00",
-              "avgTemp": 72.6
-            },
-            {
-              "hour": "2026-02-24T14:00",
-              "avgTemp": 72.5
-            },
-            {
-              "hour": "2026-02-24T15:00",
-              "avgTemp": 72.5
-            },
-            {
-              "hour": "2026-02-24T16:00",
-              "avgTemp": 72.4
-            },
-            {
-              "hour": "2026-02-24T17:00",
-              "avgTemp": 72.2
-            },
-            {
-              "hour": "2026-02-24T18:00",
-              "avgTemp": 71.6
-            },
-            {
-              "hour": "2026-02-24T19:00",
-              "avgTemp": 70.8
-            },
-            {
-              "hour": "2026-02-24T20:00",
-              "avgTemp": 70.3
-            },
-            {
-              "hour": "2026-02-24T21:00",
-              "avgTemp": 69.6
-            },
-            {
-              "hour": "2026-02-24T22:00",
-              "avgTemp": 69.1
-            },
-            {
-              "hour": "2026-02-24T23:00",
-              "avgTemp": 68.6
-            },
-            {
-              "hour": "2026-02-25T00:00",
-              "avgTemp": 68.6
-            },
-            {
-              "hour": "2026-02-25T01:00",
-              "avgTemp": 68.1
-            },
             {
               "hour": "2026-02-25T10:00",
               "avgTemp": 73.9
+            },
+            {
+              "hour": "2026-02-25T11:00",
+              "avgTemp": 72.9
+            },
+            {
+              "hour": "2026-02-25T12:00",
+              "avgTemp": 73.1
+            },
+            {
+              "hour": "2026-02-25T13:00",
+              "avgTemp": 73.0
+            },
+            {
+              "hour": "2026-02-25T14:00",
+              "avgTemp": 72.8
+            },
+            {
+              "hour": "2026-02-25T15:00",
+              "avgTemp": 72.6
+            },
+            {
+              "hour": "2026-02-25T16:00",
+              "avgTemp": 72.3
+            },
+            {
+              "hour": "2026-02-25T17:00",
+              "avgTemp": 72.0
+            },
+            {
+              "hour": "2026-02-25T18:00",
+              "avgTemp": 71.6
+            },
+            {
+              "hour": "2026-02-25T19:00",
+              "avgTemp": 71.0
+            },
+            {
+              "hour": "2026-02-25T20:00",
+              "avgTemp": 70.4
+            },
+            {
+              "hour": "2026-02-25T21:00",
+              "avgTemp": 69.9
+            },
+            {
+              "hour": "2026-02-25T22:00",
+              "avgTemp": 69.5
+            },
+            {
+              "hour": "2026-02-25T23:00",
+              "avgTemp": 69.0
+            },
+            {
+              "hour": "2026-02-26T00:00",
+              "avgTemp": 68.8
+            },
+            {
+              "hour": "2026-02-26T01:00",
+              "avgTemp": 68.6
+            },
+            {
+              "hour": "2026-02-26T02:00",
+              "avgTemp": 68.2
+            },
+            {
+              "hour": "2026-02-26T03:00",
+              "avgTemp": 68.0
+            },
+            {
+              "hour": "2026-02-26T04:00",
+              "avgTemp": 67.5
+            },
+            {
+              "hour": "2026-02-26T05:00",
+              "avgTemp": 67.3
+            },
+            {
+              "hour": "2026-02-26T06:00",
+              "avgTemp": 67.2
             }
           ],
-          "coolingHours24h": 0.5,
+          "coolingHours24h": 0.4,
           "heatingHours24h": 0.0
         },
         {
           "id": "417325423500",
           "name": "Conference-Galinson (CU8)",
-          "temperature": 72.2,
-          "humidity": 48,
+          "temperature": 68.7,
+          "humidity": 52,
           "hvacMode": "auto",
-          "desiredCool": 72.0,
-          "desiredHeat": 67.0,
+          "desiredCool": 82.0,
+          "desiredHeat": 60.0,
           "isConnected": true,
           "isCooling": false,
           "isHeating": false,
           "isServerRoom": false,
-          "lastReading": "2026-02-25T11:00:01.062070",
+          "lastReading": "2026-02-26T06:04:00.137455",
           "trend24h": [
-            {
-              "hour": "2026-02-24T11:00",
-              "avgTemp": 73.8
-            },
-            {
-              "hour": "2026-02-24T12:00",
-              "avgTemp": 73.6
-            },
-            {
-              "hour": "2026-02-24T13:00",
-              "avgTemp": 73.9
-            },
-            {
-              "hour": "2026-02-24T14:00",
-              "avgTemp": 73.8
-            },
-            {
-              "hour": "2026-02-24T15:00",
-              "avgTemp": 73.2
-            },
-            {
-              "hour": "2026-02-24T16:00",
-              "avgTemp": 73.0
-            },
-            {
-              "hour": "2026-02-24T17:00",
-              "avgTemp": 72.8
-            },
-            {
-              "hour": "2026-02-24T18:00",
-              "avgTemp": 72.3
-            },
-            {
-              "hour": "2026-02-24T19:00",
-              "avgTemp": 71.9
-            },
-            {
-              "hour": "2026-02-24T20:00",
-              "avgTemp": 71.4
-            },
-            {
-              "hour": "2026-02-24T21:00",
-              "avgTemp": 71.2
-            },
-            {
-              "hour": "2026-02-24T22:00",
-              "avgTemp": 70.7
-            },
-            {
-              "hour": "2026-02-24T23:00",
-              "avgTemp": 70.4
-            },
-            {
-              "hour": "2026-02-25T00:00",
-              "avgTemp": 70.0
-            },
-            {
-              "hour": "2026-02-25T01:00",
-              "avgTemp": 69.6
-            },
             {
               "hour": "2026-02-25T10:00",
               "avgTemp": 71.3
+            },
+            {
+              "hour": "2026-02-25T11:00",
+              "avgTemp": 72.6
+            },
+            {
+              "hour": "2026-02-25T12:00",
+              "avgTemp": 71.9
+            },
+            {
+              "hour": "2026-02-25T13:00",
+              "avgTemp": 72.0
+            },
+            {
+              "hour": "2026-02-25T14:00",
+              "avgTemp": 71.2
+            },
+            {
+              "hour": "2026-02-25T15:00",
+              "avgTemp": 70.9
+            },
+            {
+              "hour": "2026-02-25T16:00",
+              "avgTemp": 70.9
+            },
+            {
+              "hour": "2026-02-25T17:00",
+              "avgTemp": 71.6
+            },
+            {
+              "hour": "2026-02-25T18:00",
+              "avgTemp": 72.0
+            },
+            {
+              "hour": "2026-02-25T19:00",
+              "avgTemp": 71.9
+            },
+            {
+              "hour": "2026-02-25T20:00",
+              "avgTemp": 71.6
+            },
+            {
+              "hour": "2026-02-25T21:00",
+              "avgTemp": 71.3
+            },
+            {
+              "hour": "2026-02-25T22:00",
+              "avgTemp": 71.0
+            },
+            {
+              "hour": "2026-02-25T23:00",
+              "avgTemp": 70.7
+            },
+            {
+              "hour": "2026-02-26T00:00",
+              "avgTemp": 70.3
+            },
+            {
+              "hour": "2026-02-26T01:00",
+              "avgTemp": 70.0
+            },
+            {
+              "hour": "2026-02-26T02:00",
+              "avgTemp": 69.7
+            },
+            {
+              "hour": "2026-02-26T03:00",
+              "avgTemp": 69.4
+            },
+            {
+              "hour": "2026-02-26T04:00",
+              "avgTemp": 69.3
+            },
+            {
+              "hour": "2026-02-26T05:00",
+              "avgTemp": 69.0
+            },
+            {
+              "hour": "2026-02-26T06:00",
+              "avgTemp": 68.7
             }
           ],
-          "coolingHours24h": 0.0,
+          "coolingHours24h": 1.0,
           "heatingHours24h": 0.0
         }
       ]
@@ -1001,80 +1241,100 @@
         {
           "id": "417390401467",
           "name": "Federation Room 124 (CU1)",
-          "temperature": 68.8,
-          "humidity": 53,
+          "temperature": 63.4,
+          "humidity": 58,
           "hvacMode": "auto",
-          "desiredCool": 74.0,
-          "desiredHeat": 69.0,
+          "desiredCool": 82.0,
+          "desiredHeat": 60.0,
           "isConnected": true,
           "isCooling": false,
           "isHeating": false,
           "isServerRoom": false,
-          "lastReading": "2026-02-25T11:00:01.062070",
+          "lastReading": "2026-02-26T06:04:00.137455",
           "trend24h": [
-            {
-              "hour": "2026-02-24T11:00",
-              "avgTemp": 69.2
-            },
-            {
-              "hour": "2026-02-24T12:00",
-              "avgTemp": 69.5
-            },
-            {
-              "hour": "2026-02-24T13:00",
-              "avgTemp": 70.2
-            },
-            {
-              "hour": "2026-02-24T14:00",
-              "avgTemp": 71.5
-            },
-            {
-              "hour": "2026-02-24T15:00",
-              "avgTemp": 71.8
-            },
-            {
-              "hour": "2026-02-24T16:00",
-              "avgTemp": 71.4
-            },
-            {
-              "hour": "2026-02-24T17:00",
-              "avgTemp": 70.1
-            },
-            {
-              "hour": "2026-02-24T18:00",
-              "avgTemp": 69.1
-            },
-            {
-              "hour": "2026-02-24T19:00",
-              "avgTemp": 68.4
-            },
-            {
-              "hour": "2026-02-24T20:00",
-              "avgTemp": 67.7
-            },
-            {
-              "hour": "2026-02-24T21:00",
-              "avgTemp": 67.0
-            },
-            {
-              "hour": "2026-02-24T22:00",
-              "avgTemp": 66.2
-            },
-            {
-              "hour": "2026-02-24T23:00",
-              "avgTemp": 65.6
-            },
-            {
-              "hour": "2026-02-25T00:00",
-              "avgTemp": 65.0
-            },
-            {
-              "hour": "2026-02-25T01:00",
-              "avgTemp": 64.4
-            },
             {
               "hour": "2026-02-25T10:00",
               "avgTemp": 68.6
+            },
+            {
+              "hour": "2026-02-25T11:00",
+              "avgTemp": 69.1
+            },
+            {
+              "hour": "2026-02-25T12:00",
+              "avgTemp": 70.0
+            },
+            {
+              "hour": "2026-02-25T13:00",
+              "avgTemp": 71.0
+            },
+            {
+              "hour": "2026-02-25T14:00",
+              "avgTemp": 73.3
+            },
+            {
+              "hour": "2026-02-25T15:00",
+              "avgTemp": 73.0
+            },
+            {
+              "hour": "2026-02-25T16:00",
+              "avgTemp": 72.1
+            },
+            {
+              "hour": "2026-02-25T17:00",
+              "avgTemp": 70.8
+            },
+            {
+              "hour": "2026-02-25T18:00",
+              "avgTemp": 69.9
+            },
+            {
+              "hour": "2026-02-25T19:00",
+              "avgTemp": 69.2
+            },
+            {
+              "hour": "2026-02-25T20:00",
+              "avgTemp": 68.4
+            },
+            {
+              "hour": "2026-02-25T21:00",
+              "avgTemp": 67.8
+            },
+            {
+              "hour": "2026-02-25T22:00",
+              "avgTemp": 67.0
+            },
+            {
+              "hour": "2026-02-25T23:00",
+              "avgTemp": 66.4
+            },
+            {
+              "hour": "2026-02-26T00:00",
+              "avgTemp": 65.8
+            },
+            {
+              "hour": "2026-02-26T01:00",
+              "avgTemp": 65.4
+            },
+            {
+              "hour": "2026-02-26T02:00",
+              "avgTemp": 64.8
+            },
+            {
+              "hour": "2026-02-26T03:00",
+              "avgTemp": 64.3
+            },
+            {
+              "hour": "2026-02-26T04:00",
+              "avgTemp": 64.0
+            },
+            {
+              "hour": "2026-02-26T05:00",
+              "avgTemp": 63.6
+            },
+            {
+              "hour": "2026-02-26T06:00",
+              "avgTemp": 63.4
             }
           ],
           "coolingHours24h": 0.0,
@@ -1083,80 +1343,100 @@
         {
           "id": "417313368811",
           "name": "Federation-Cubicle Area (CU3)",
-          "temperature": 71.5,
-          "humidity": 49,
+          "temperature": 67.5,
+          "humidity": 53,
           "hvacMode": "heat",
-          "desiredCool": 74.0,
-          "desiredHeat": 68.0,
+          "desiredCool": 82.0,
+          "desiredHeat": 60.0,
           "isConnected": true,
           "isCooling": false,
           "isHeating": false,
           "isServerRoom": false,
-          "lastReading": "2026-02-25T11:00:01.062070",
+          "lastReading": "2026-02-26T06:04:00.137455",
           "trend24h": [
-            {
-              "hour": "2026-02-24T11:00",
-              "avgTemp": 71.6
-            },
-            {
-              "hour": "2026-02-24T12:00",
-              "avgTemp": 71.6
-            },
-            {
-              "hour": "2026-02-24T13:00",
-              "avgTemp": 71.6
-            },
-            {
-              "hour": "2026-02-24T14:00",
-              "avgTemp": 71.7
-            },
-            {
-              "hour": "2026-02-24T15:00",
-              "avgTemp": 71.7
-            },
-            {
-              "hour": "2026-02-24T16:00",
-              "avgTemp": 71.8
-            },
-            {
-              "hour": "2026-02-24T17:00",
-              "avgTemp": 71.5
-            },
-            {
-              "hour": "2026-02-24T18:00",
-              "avgTemp": 70.9
-            },
-            {
-              "hour": "2026-02-24T19:00",
-              "avgTemp": 70.4
-            },
-            {
-              "hour": "2026-02-24T20:00",
-              "avgTemp": 70.0
-            },
-            {
-              "hour": "2026-02-24T21:00",
-              "avgTemp": 69.6
-            },
-            {
-              "hour": "2026-02-24T22:00",
-              "avgTemp": 69.2
-            },
-            {
-              "hour": "2026-02-24T23:00",
-              "avgTemp": 68.8
-            },
-            {
-              "hour": "2026-02-25T00:00",
-              "avgTemp": 68.5
-            },
-            {
-              "hour": "2026-02-25T01:00",
-              "avgTemp": 68.3
-            },
             {
               "hour": "2026-02-25T10:00",
               "avgTemp": 71.2
+            },
+            {
+              "hour": "2026-02-25T11:00",
+              "avgTemp": 71.5
+            },
+            {
+              "hour": "2026-02-25T12:00",
+              "avgTemp": 71.7
+            },
+            {
+              "hour": "2026-02-25T13:00",
+              "avgTemp": 71.8
+            },
+            {
+              "hour": "2026-02-25T14:00",
+              "avgTemp": 72.5
+            },
+            {
+              "hour": "2026-02-25T15:00",
+              "avgTemp": 72.4
+            },
+            {
+              "hour": "2026-02-25T16:00",
+              "avgTemp": 72.5
+            },
+            {
+              "hour": "2026-02-25T17:00",
+              "avgTemp": 71.9
+            },
+            {
+              "hour": "2026-02-25T18:00",
+              "avgTemp": 71.4
+            },
+            {
+              "hour": "2026-02-25T19:00",
+              "avgTemp": 70.8
+            },
+            {
+              "hour": "2026-02-25T20:00",
+              "avgTemp": 70.5
+            },
+            {
+              "hour": "2026-02-25T21:00",
+              "avgTemp": 70.4
+            },
+            {
+              "hour": "2026-02-25T22:00",
+              "avgTemp": 70.1
+            },
+            {
+              "hour": "2026-02-25T23:00",
+              "avgTemp": 69.8
+            },
+            {
+              "hour": "2026-02-26T00:00",
+              "avgTemp": 69.4
+            },
+            {
+              "hour": "2026-02-26T01:00",
+              "avgTemp": 69.2
+            },
+            {
+              "hour": "2026-02-26T02:00",
+              "avgTemp": 68.9
+            },
+            {
+              "hour": "2026-02-26T03:00",
+              "avgTemp": 68.5
+            },
+            {
+              "hour": "2026-02-26T04:00",
+              "avgTemp": 68.1
+            },
+            {
+              "hour": "2026-02-26T05:00",
+              "avgTemp": 67.7
+            },
+            {
+              "hour": "2026-02-26T06:00",
+              "avgTemp": 67.6
             }
           ],
           "coolingHours24h": 0.0,
@@ -1165,162 +1445,202 @@
         {
           "id": "417385554923",
           "name": "Federation-Cubicle Area (HP5)",
-          "temperature": 73.8,
-          "humidity": 44,
+          "temperature": 71.7,
+          "humidity": 45,
           "hvacMode": "auto",
-          "desiredCool": 74.0,
-          "desiredHeat": 68.0,
+          "desiredCool": 82.0,
+          "desiredHeat": 60.0,
           "isConnected": true,
           "isCooling": false,
           "isHeating": false,
           "isServerRoom": false,
-          "lastReading": "2026-02-25T11:00:01.062070",
+          "lastReading": "2026-02-26T06:04:00.137455",
           "trend24h": [
-            {
-              "hour": "2026-02-24T11:00",
-              "avgTemp": 74.1
-            },
-            {
-              "hour": "2026-02-24T12:00",
-              "avgTemp": 74.2
-            },
-            {
-              "hour": "2026-02-24T13:00",
-              "avgTemp": 74.4
-            },
-            {
-              "hour": "2026-02-24T14:00",
-              "avgTemp": 74.3
-            },
-            {
-              "hour": "2026-02-24T15:00",
-              "avgTemp": 74.3
-            },
-            {
-              "hour": "2026-02-24T16:00",
-              "avgTemp": 74.2
-            },
-            {
-              "hour": "2026-02-24T17:00",
-              "avgTemp": 74.5
-            },
-            {
-              "hour": "2026-02-24T18:00",
-              "avgTemp": 75.0
-            },
-            {
-              "hour": "2026-02-24T19:00",
-              "avgTemp": 75.3
-            },
-            {
-              "hour": "2026-02-24T20:00",
-              "avgTemp": 75.5
-            },
-            {
-              "hour": "2026-02-24T21:00",
-              "avgTemp": 75.1
-            },
-            {
-              "hour": "2026-02-24T22:00",
-              "avgTemp": 74.9
-            },
-            {
-              "hour": "2026-02-24T23:00",
-              "avgTemp": 74.4
-            },
-            {
-              "hour": "2026-02-25T00:00",
-              "avgTemp": 74.2
-            },
-            {
-              "hour": "2026-02-25T01:00",
-              "avgTemp": 73.6
-            },
             {
               "hour": "2026-02-25T10:00",
               "avgTemp": 73.6
+            },
+            {
+              "hour": "2026-02-25T11:00",
+              "avgTemp": 74.2
+            },
+            {
+              "hour": "2026-02-25T12:00",
+              "avgTemp": 74.5
+            },
+            {
+              "hour": "2026-02-25T13:00",
+              "avgTemp": 74.4
+            },
+            {
+              "hour": "2026-02-25T14:00",
+              "avgTemp": 74.3
+            },
+            {
+              "hour": "2026-02-25T15:00",
+              "avgTemp": 74.3
+            },
+            {
+              "hour": "2026-02-25T16:00",
+              "avgTemp": 74.2
+            },
+            {
+              "hour": "2026-02-25T17:00",
+              "avgTemp": 74.5
+            },
+            {
+              "hour": "2026-02-25T18:00",
+              "avgTemp": 75.2
+            },
+            {
+              "hour": "2026-02-25T19:00",
+              "avgTemp": 75.7
+            },
+            {
+              "hour": "2026-02-25T20:00",
+              "avgTemp": 75.7
+            },
+            {
+              "hour": "2026-02-25T21:00",
+              "avgTemp": 75.3
+            },
+            {
+              "hour": "2026-02-25T22:00",
+              "avgTemp": 75.1
+            },
+            {
+              "hour": "2026-02-25T23:00",
+              "avgTemp": 74.9
+            },
+            {
+              "hour": "2026-02-26T00:00",
+              "avgTemp": 74.4
+            },
+            {
+              "hour": "2026-02-26T01:00",
+              "avgTemp": 74.0
+            },
+            {
+              "hour": "2026-02-26T02:00",
+              "avgTemp": 73.5
+            },
+            {
+              "hour": "2026-02-26T03:00",
+              "avgTemp": 73.1
+            },
+            {
+              "hour": "2026-02-26T04:00",
+              "avgTemp": 72.3
+            },
+            {
+              "hour": "2026-02-26T05:00",
+              "avgTemp": 71.9
+            },
+            {
+              "hour": "2026-02-26T06:00",
+              "avgTemp": 71.7
             }
           ],
-          "coolingHours24h": 6.8,
+          "coolingHours24h": 5.6,
           "heatingHours24h": 0.0
         },
         {
           "id": "417373945850",
           "name": "Federation-East Offices (CU6)",
-          "temperature": 73.1,
-          "humidity": 47,
+          "temperature": 67.9,
+          "humidity": 53,
           "hvacMode": "heat",
-          "desiredCool": 72.0,
-          "desiredHeat": 72.0,
+          "desiredCool": 82.0,
+          "desiredHeat": 60.0,
           "isConnected": true,
           "isCooling": false,
           "isHeating": false,
           "isServerRoom": false,
-          "lastReading": "2026-02-25T11:00:01.062070",
+          "lastReading": "2026-02-26T06:04:00.137455",
           "trend24h": [
-            {
-              "hour": "2026-02-24T11:00",
-              "avgTemp": 74.7
-            },
-            {
-              "hour": "2026-02-24T12:00",
-              "avgTemp": 74.4
-            },
-            {
-              "hour": "2026-02-24T13:00",
-              "avgTemp": 73.5
-            },
-            {
-              "hour": "2026-02-24T14:00",
-              "avgTemp": 73.3
-            },
-            {
-              "hour": "2026-02-24T15:00",
-              "avgTemp": 73.9
-            },
-            {
-              "hour": "2026-02-24T16:00",
-              "avgTemp": 73.7
-            },
-            {
-              "hour": "2026-02-24T17:00",
-              "avgTemp": 72.9
-            },
-            {
-              "hour": "2026-02-24T18:00",
-              "avgTemp": 71.8
-            },
-            {
-              "hour": "2026-02-24T19:00",
-              "avgTemp": 70.9
-            },
-            {
-              "hour": "2026-02-24T20:00",
-              "avgTemp": 70.4
-            },
-            {
-              "hour": "2026-02-24T21:00",
-              "avgTemp": 69.7
-            },
-            {
-              "hour": "2026-02-24T22:00",
-              "avgTemp": 69.1
-            },
-            {
-              "hour": "2026-02-24T23:00",
-              "avgTemp": 68.8
-            },
-            {
-              "hour": "2026-02-25T00:00",
-              "avgTemp": 68.4
-            },
-            {
-              "hour": "2026-02-25T01:00",
-              "avgTemp": 68.0
-            },
             {
               "hour": "2026-02-25T10:00",
               "avgTemp": 73.0
+            },
+            {
+              "hour": "2026-02-25T11:00",
+              "avgTemp": 73.2
+            },
+            {
+              "hour": "2026-02-25T12:00",
+              "avgTemp": 73.2
+            },
+            {
+              "hour": "2026-02-25T13:00",
+              "avgTemp": 73.7
+            },
+            {
+              "hour": "2026-02-25T14:00",
+              "avgTemp": 74.2
+            },
+            {
+              "hour": "2026-02-25T15:00",
+              "avgTemp": 74.2
+            },
+            {
+              "hour": "2026-02-25T16:00",
+              "avgTemp": 73.9
+            },
+            {
+              "hour": "2026-02-25T17:00",
+              "avgTemp": 73.5
+            },
+            {
+              "hour": "2026-02-25T18:00",
+              "avgTemp": 72.5
+            },
+            {
+              "hour": "2026-02-25T19:00",
+              "avgTemp": 71.6
+            },
+            {
+              "hour": "2026-02-25T20:00",
+              "avgTemp": 71.2
+            },
+            {
+              "hour": "2026-02-25T21:00",
+              "avgTemp": 70.9
+            },
+            {
+              "hour": "2026-02-25T22:00",
+              "avgTemp": 70.3
+            },
+            {
+              "hour": "2026-02-25T23:00",
+              "avgTemp": 69.9
+            },
+            {
+              "hour": "2026-02-26T00:00",
+              "avgTemp": 69.4
+            },
+            {
+              "hour": "2026-02-26T01:00",
+              "avgTemp": 69.1
+            },
+            {
+              "hour": "2026-02-26T02:00",
+              "avgTemp": 68.8
+            },
+            {
+              "hour": "2026-02-26T03:00",
+              "avgTemp": 68.4
+            },
+            {
+              "hour": "2026-02-26T04:00",
+              "avgTemp": 68.1
+            },
+            {
+              "hour": "2026-02-26T05:00",
+              "avgTemp": 68.0
+            },
+            {
+              "hour": "2026-02-26T06:00",
+              "avgTemp": 67.9
             }
           ],
           "coolingHours24h": 0.0,
@@ -1329,162 +1649,202 @@
         {
           "id": "417397253447",
           "name": "Federation-East Program Offices (HP9)",
-          "temperature": 73.2,
-          "humidity": 44,
+          "temperature": 69.5,
+          "humidity": 47,
           "hvacMode": "auto",
-          "desiredCool": 74.0,
-          "desiredHeat": 69.0,
+          "desiredCool": 82.0,
+          "desiredHeat": 60.0,
           "isConnected": true,
           "isCooling": false,
           "isHeating": false,
           "isServerRoom": false,
-          "lastReading": "2026-02-25T11:00:01.062070",
+          "lastReading": "2026-02-26T06:04:00.137455",
           "trend24h": [
-            {
-              "hour": "2026-02-24T11:00",
-              "avgTemp": 73.4
-            },
-            {
-              "hour": "2026-02-24T12:00",
-              "avgTemp": 73.7
-            },
-            {
-              "hour": "2026-02-24T13:00",
-              "avgTemp": 74.6
-            },
-            {
-              "hour": "2026-02-24T14:00",
-              "avgTemp": 74.5
-            },
-            {
-              "hour": "2026-02-24T15:00",
-              "avgTemp": 74.2
-            },
-            {
-              "hour": "2026-02-24T16:00",
-              "avgTemp": 74.2
-            },
-            {
-              "hour": "2026-02-24T17:00",
-              "avgTemp": 74.1
-            },
-            {
-              "hour": "2026-02-24T18:00",
-              "avgTemp": 74.0
-            },
-            {
-              "hour": "2026-02-24T19:00",
-              "avgTemp": 73.9
-            },
-            {
-              "hour": "2026-02-24T20:00",
-              "avgTemp": 73.5
-            },
-            {
-              "hour": "2026-02-24T21:00",
-              "avgTemp": 73.1
-            },
-            {
-              "hour": "2026-02-24T22:00",
-              "avgTemp": 72.8
-            },
-            {
-              "hour": "2026-02-24T23:00",
-              "avgTemp": 72.2
-            },
-            {
-              "hour": "2026-02-25T00:00",
-              "avgTemp": 71.7
-            },
-            {
-              "hour": "2026-02-25T01:00",
-              "avgTemp": 71.5
-            },
             {
               "hour": "2026-02-25T10:00",
               "avgTemp": 73.2
+            },
+            {
+              "hour": "2026-02-25T11:00",
+              "avgTemp": 73.4
+            },
+            {
+              "hour": "2026-02-25T12:00",
+              "avgTemp": 74.2
+            },
+            {
+              "hour": "2026-02-25T13:00",
+              "avgTemp": 74.5
+            },
+            {
+              "hour": "2026-02-25T14:00",
+              "avgTemp": 74.6
+            },
+            {
+              "hour": "2026-02-25T15:00",
+              "avgTemp": 74.6
+            },
+            {
+              "hour": "2026-02-25T16:00",
+              "avgTemp": 74.5
+            },
+            {
+              "hour": "2026-02-25T17:00",
+              "avgTemp": 74.2
+            },
+            {
+              "hour": "2026-02-25T18:00",
+              "avgTemp": 74.3
+            },
+            {
+              "hour": "2026-02-25T19:00",
+              "avgTemp": 74.1
+            },
+            {
+              "hour": "2026-02-25T20:00",
+              "avgTemp": 74.0
+            },
+            {
+              "hour": "2026-02-25T21:00",
+              "avgTemp": 73.6
+            },
+            {
+              "hour": "2026-02-25T22:00",
+              "avgTemp": 73.1
+            },
+            {
+              "hour": "2026-02-25T23:00",
+              "avgTemp": 72.7
+            },
+            {
+              "hour": "2026-02-26T00:00",
+              "avgTemp": 72.2
+            },
+            {
+              "hour": "2026-02-26T01:00",
+              "avgTemp": 71.8
+            },
+            {
+              "hour": "2026-02-26T02:00",
+              "avgTemp": 71.3
+            },
+            {
+              "hour": "2026-02-26T03:00",
+              "avgTemp": 70.7
+            },
+            {
+              "hour": "2026-02-26T04:00",
+              "avgTemp": 70.3
+            },
+            {
+              "hour": "2026-02-26T05:00",
+              "avgTemp": 69.7
+            },
+            {
+              "hour": "2026-02-26T06:00",
+              "avgTemp": 69.5
             }
           ],
-          "coolingHours24h": 1.0,
+          "coolingHours24h": 0.4,
           "heatingHours24h": 0.0
         },
         {
           "id": "417344692907",
           "name": "Federation-Heidi (CU2)",
-          "temperature": 70.3,
-          "humidity": 52,
+          "temperature": 64.5,
+          "humidity": 58,
           "hvacMode": "auto",
-          "desiredCool": 72.0,
-          "desiredHeat": 70.0,
+          "desiredCool": 82.0,
+          "desiredHeat": 60.0,
           "isConnected": true,
           "isCooling": false,
           "isHeating": false,
           "isServerRoom": false,
-          "lastReading": "2026-02-25T11:00:01.062070",
+          "lastReading": "2026-02-26T06:04:00.137455",
           "trend24h": [
-            {
-              "hour": "2026-02-24T11:00",
-              "avgTemp": 70.0
-            },
-            {
-              "hour": "2026-02-24T12:00",
-              "avgTemp": 69.5
-            },
-            {
-              "hour": "2026-02-24T13:00",
-              "avgTemp": 69.4
-            },
-            {
-              "hour": "2026-02-24T14:00",
-              "avgTemp": 69.5
-            },
-            {
-              "hour": "2026-02-24T15:00",
-              "avgTemp": 69.5
-            },
-            {
-              "hour": "2026-02-24T16:00",
-              "avgTemp": 69.6
-            },
-            {
-              "hour": "2026-02-24T17:00",
-              "avgTemp": 69.1
-            },
-            {
-              "hour": "2026-02-24T18:00",
-              "avgTemp": 68.4
-            },
-            {
-              "hour": "2026-02-24T19:00",
-              "avgTemp": 67.9
-            },
-            {
-              "hour": "2026-02-24T20:00",
-              "avgTemp": 67.3
-            },
-            {
-              "hour": "2026-02-24T21:00",
-              "avgTemp": 66.9
-            },
-            {
-              "hour": "2026-02-24T22:00",
-              "avgTemp": 66.5
-            },
-            {
-              "hour": "2026-02-24T23:00",
-              "avgTemp": 66.1
-            },
-            {
-              "hour": "2026-02-25T00:00",
-              "avgTemp": 65.8
-            },
-            {
-              "hour": "2026-02-25T01:00",
-              "avgTemp": 65.4
-            },
             {
               "hour": "2026-02-25T10:00",
               "avgTemp": 70.3
+            },
+            {
+              "hour": "2026-02-25T11:00",
+              "avgTemp": 70.1
+            },
+            {
+              "hour": "2026-02-25T12:00",
+              "avgTemp": 69.8
+            },
+            {
+              "hour": "2026-02-25T13:00",
+              "avgTemp": 69.7
+            },
+            {
+              "hour": "2026-02-25T14:00",
+              "avgTemp": 70.1
+            },
+            {
+              "hour": "2026-02-25T15:00",
+              "avgTemp": 70.0
+            },
+            {
+              "hour": "2026-02-25T16:00",
+              "avgTemp": 70.0
+            },
+            {
+              "hour": "2026-02-25T17:00",
+              "avgTemp": 69.4
+            },
+            {
+              "hour": "2026-02-25T18:00",
+              "avgTemp": 68.9
+            },
+            {
+              "hour": "2026-02-25T19:00",
+              "avgTemp": 68.3
+            },
+            {
+              "hour": "2026-02-25T20:00",
+              "avgTemp": 67.9
+            },
+            {
+              "hour": "2026-02-25T21:00",
+              "avgTemp": 67.4
+            },
+            {
+              "hour": "2026-02-25T22:00",
+              "avgTemp": 67.1
+            },
+            {
+              "hour": "2026-02-25T23:00",
+              "avgTemp": 66.7
+            },
+            {
+              "hour": "2026-02-26T00:00",
+              "avgTemp": 66.4
+            },
+            {
+              "hour": "2026-02-26T01:00",
+              "avgTemp": 66.1
+            },
+            {
+              "hour": "2026-02-26T02:00",
+              "avgTemp": 65.8
+            },
+            {
+              "hour": "2026-02-26T03:00",
+              "avgTemp": 65.4
+            },
+            {
+              "hour": "2026-02-26T04:00",
+              "avgTemp": 65.2
+            },
+            {
+              "hour": "2026-02-26T05:00",
+              "avgTemp": 64.9
+            },
+            {
+              "hour": "2026-02-26T06:00",
+              "avgTemp": 64.6
             }
           ],
           "coolingHours24h": 0.0,
@@ -1493,165 +1853,205 @@
         {
           "id": "417383486129",
           "name": "Federation-Programs Conference (HP7)",
-          "temperature": 72.8,
+          "temperature": 71.0,
           "humidity": 45,
           "hvacMode": "auto",
-          "desiredCool": 74.0,
-          "desiredHeat": 68.0,
+          "desiredCool": 82.0,
+          "desiredHeat": 60.0,
           "isConnected": true,
           "isCooling": false,
           "isHeating": false,
           "isServerRoom": false,
-          "lastReading": "2026-02-25T11:00:01.062070",
+          "lastReading": "2026-02-26T06:04:00.137455",
           "trend24h": [
-            {
-              "hour": "2026-02-24T11:00",
-              "avgTemp": 73.0
-            },
-            {
-              "hour": "2026-02-24T12:00",
-              "avgTemp": 73.6
-            },
-            {
-              "hour": "2026-02-24T13:00",
-              "avgTemp": 74.2
-            },
-            {
-              "hour": "2026-02-24T14:00",
-              "avgTemp": 74.3
-            },
-            {
-              "hour": "2026-02-24T15:00",
-              "avgTemp": 73.9
-            },
-            {
-              "hour": "2026-02-24T16:00",
-              "avgTemp": 74.0
-            },
-            {
-              "hour": "2026-02-24T17:00",
-              "avgTemp": 74.2
-            },
-            {
-              "hour": "2026-02-24T18:00",
-              "avgTemp": 74.4
-            },
-            {
-              "hour": "2026-02-24T19:00",
-              "avgTemp": 74.3
-            },
-            {
-              "hour": "2026-02-24T20:00",
-              "avgTemp": 74.4
-            },
-            {
-              "hour": "2026-02-24T21:00",
-              "avgTemp": 74.4
-            },
-            {
-              "hour": "2026-02-24T22:00",
-              "avgTemp": 74.0
-            },
-            {
-              "hour": "2026-02-24T23:00",
-              "avgTemp": 73.4
-            },
-            {
-              "hour": "2026-02-25T00:00",
-              "avgTemp": 73.2
-            },
-            {
-              "hour": "2026-02-25T01:00",
-              "avgTemp": 72.8
-            },
             {
               "hour": "2026-02-25T10:00",
               "avgTemp": 72.6
+            },
+            {
+              "hour": "2026-02-25T11:00",
+              "avgTemp": 73.2
+            },
+            {
+              "hour": "2026-02-25T12:00",
+              "avgTemp": 74.0
+            },
+            {
+              "hour": "2026-02-25T13:00",
+              "avgTemp": 74.4
+            },
+            {
+              "hour": "2026-02-25T14:00",
+              "avgTemp": 74.4
+            },
+            {
+              "hour": "2026-02-25T15:00",
+              "avgTemp": 74.8
+            },
+            {
+              "hour": "2026-02-25T16:00",
+              "avgTemp": 74.5
+            },
+            {
+              "hour": "2026-02-25T17:00",
+              "avgTemp": 74.5
+            },
+            {
+              "hour": "2026-02-25T18:00",
+              "avgTemp": 74.6
+            },
+            {
+              "hour": "2026-02-25T19:00",
+              "avgTemp": 74.9
+            },
+            {
+              "hour": "2026-02-25T20:00",
+              "avgTemp": 74.8
+            },
+            {
+              "hour": "2026-02-25T21:00",
+              "avgTemp": 74.5
+            },
+            {
+              "hour": "2026-02-25T22:00",
+              "avgTemp": 74.3
+            },
+            {
+              "hour": "2026-02-25T23:00",
+              "avgTemp": 74.0
+            },
+            {
+              "hour": "2026-02-26T00:00",
+              "avgTemp": 73.8
+            },
+            {
+              "hour": "2026-02-26T01:00",
+              "avgTemp": 73.3
+            },
+            {
+              "hour": "2026-02-26T02:00",
+              "avgTemp": 72.8
+            },
+            {
+              "hour": "2026-02-26T03:00",
+              "avgTemp": 72.4
+            },
+            {
+              "hour": "2026-02-26T04:00",
+              "avgTemp": 72.0
+            },
+            {
+              "hour": "2026-02-26T05:00",
+              "avgTemp": 71.3
+            },
+            {
+              "hour": "2026-02-26T06:00",
+              "avgTemp": 71.0
             }
           ],
-          "coolingHours24h": 0.3,
+          "coolingHours24h": 0.4,
           "heatingHours24h": 0.0
         },
         {
           "id": "417395277128",
           "name": "Federation-West Offices (CU4)",
-          "temperature": 71.8,
-          "humidity": 48,
+          "temperature": 67.0,
+          "humidity": 52,
           "hvacMode": "auto",
-          "desiredCool": 74.0,
-          "desiredHeat": 68.0,
+          "desiredCool": 82.0,
+          "desiredHeat": 60.0,
           "isConnected": true,
           "isCooling": false,
           "isHeating": false,
           "isServerRoom": false,
-          "lastReading": "2026-02-25T11:00:01.062070",
+          "lastReading": "2026-02-26T06:04:00.137455",
           "trend24h": [
-            {
-              "hour": "2026-02-24T11:00",
-              "avgTemp": 71.7
-            },
-            {
-              "hour": "2026-02-24T12:00",
-              "avgTemp": 71.6
-            },
-            {
-              "hour": "2026-02-24T13:00",
-              "avgTemp": 72.3
-            },
-            {
-              "hour": "2026-02-24T14:00",
-              "avgTemp": 72.2
-            },
-            {
-              "hour": "2026-02-24T15:00",
-              "avgTemp": 72.5
-            },
-            {
-              "hour": "2026-02-24T16:00",
-              "avgTemp": 72.3
-            },
-            {
-              "hour": "2026-02-24T17:00",
-              "avgTemp": 72.2
-            },
-            {
-              "hour": "2026-02-24T18:00",
-              "avgTemp": 71.5
-            },
-            {
-              "hour": "2026-02-24T19:00",
-              "avgTemp": 70.9
-            },
-            {
-              "hour": "2026-02-24T20:00",
-              "avgTemp": 70.3
-            },
-            {
-              "hour": "2026-02-24T21:00",
-              "avgTemp": 69.8
-            },
-            {
-              "hour": "2026-02-24T22:00",
-              "avgTemp": 69.4
-            },
-            {
-              "hour": "2026-02-24T23:00",
-              "avgTemp": 68.9
-            },
-            {
-              "hour": "2026-02-25T00:00",
-              "avgTemp": 68.5
-            },
-            {
-              "hour": "2026-02-25T01:00",
-              "avgTemp": 68.1
-            },
             {
               "hour": "2026-02-25T10:00",
               "avgTemp": 72.3
+            },
+            {
+              "hour": "2026-02-25T11:00",
+              "avgTemp": 71.8
+            },
+            {
+              "hour": "2026-02-25T12:00",
+              "avgTemp": 72.8
+            },
+            {
+              "hour": "2026-02-25T13:00",
+              "avgTemp": 73.2
+            },
+            {
+              "hour": "2026-02-25T14:00",
+              "avgTemp": 74.5
+            },
+            {
+              "hour": "2026-02-25T15:00",
+              "avgTemp": 74.4
+            },
+            {
+              "hour": "2026-02-25T16:00",
+              "avgTemp": 74.1
+            },
+            {
+              "hour": "2026-02-25T17:00",
+              "avgTemp": 73.5
+            },
+            {
+              "hour": "2026-02-25T18:00",
+              "avgTemp": 72.6
+            },
+            {
+              "hour": "2026-02-25T19:00",
+              "avgTemp": 71.8
+            },
+            {
+              "hour": "2026-02-25T20:00",
+              "avgTemp": 71.1
+            },
+            {
+              "hour": "2026-02-25T21:00",
+              "avgTemp": 70.6
+            },
+            {
+              "hour": "2026-02-25T22:00",
+              "avgTemp": 70.0
+            },
+            {
+              "hour": "2026-02-25T23:00",
+              "avgTemp": 69.5
+            },
+            {
+              "hour": "2026-02-26T00:00",
+              "avgTemp": 69.1
+            },
+            {
+              "hour": "2026-02-26T01:00",
+              "avgTemp": 68.7
+            },
+            {
+              "hour": "2026-02-26T02:00",
+              "avgTemp": 68.4
+            },
+            {
+              "hour": "2026-02-26T03:00",
+              "avgTemp": 68.0
+            },
+            {
+              "hour": "2026-02-26T04:00",
+              "avgTemp": 67.6
+            },
+            {
+              "hour": "2026-02-26T05:00",
+              "avgTemp": 67.2
+            },
+            {
+              "hour": "2026-02-26T06:00",
+              "avgTemp": 67.0
             }
           ],
-          "coolingHours24h": 1.6,
+          "coolingHours24h": 0.2,
           "heatingHours24h": 0.0
         }
       ]
@@ -1662,80 +2062,100 @@
         {
           "id": "417396087614",
           "name": "Conference-Foster N (CU9)",
-          "temperature": 72.5,
-          "humidity": 45,
+          "temperature": 67.1,
+          "humidity": 53,
           "hvacMode": "auto",
-          "desiredCool": 73.0,
-          "desiredHeat": 68.0,
+          "desiredCool": 82.0,
+          "desiredHeat": 64.0,
           "isConnected": true,
           "isCooling": false,
           "isHeating": false,
           "isServerRoom": false,
-          "lastReading": "2026-02-25T11:00:01.062070",
+          "lastReading": "2026-02-26T06:04:00.137455",
           "trend24h": [
-            {
-              "hour": "2026-02-24T11:00",
-              "avgTemp": 72.5
-            },
-            {
-              "hour": "2026-02-24T12:00",
-              "avgTemp": 72.4
-            },
-            {
-              "hour": "2026-02-24T13:00",
-              "avgTemp": 72.0
-            },
-            {
-              "hour": "2026-02-24T14:00",
-              "avgTemp": 72.0
-            },
-            {
-              "hour": "2026-02-24T15:00",
-              "avgTemp": 72.1
-            },
-            {
-              "hour": "2026-02-24T16:00",
-              "avgTemp": 72.3
-            },
-            {
-              "hour": "2026-02-24T17:00",
-              "avgTemp": 72.3
-            },
-            {
-              "hour": "2026-02-24T18:00",
-              "avgTemp": 71.6
-            },
-            {
-              "hour": "2026-02-24T19:00",
-              "avgTemp": 71.0
-            },
-            {
-              "hour": "2026-02-24T20:00",
-              "avgTemp": 70.5
-            },
-            {
-              "hour": "2026-02-24T21:00",
-              "avgTemp": 69.9
-            },
-            {
-              "hour": "2026-02-24T22:00",
-              "avgTemp": 69.5
-            },
-            {
-              "hour": "2026-02-24T23:00",
-              "avgTemp": 68.9
-            },
-            {
-              "hour": "2026-02-25T00:00",
-              "avgTemp": 68.7
-            },
-            {
-              "hour": "2026-02-25T01:00",
-              "avgTemp": 68.4
-            },
             {
               "hour": "2026-02-25T10:00",
               "avgTemp": 73.5
+            },
+            {
+              "hour": "2026-02-25T11:00",
+              "avgTemp": 72.6
+            },
+            {
+              "hour": "2026-02-25T12:00",
+              "avgTemp": 72.7
+            },
+            {
+              "hour": "2026-02-25T13:00",
+              "avgTemp": 72.6
+            },
+            {
+              "hour": "2026-02-25T14:00",
+              "avgTemp": 72.4
+            },
+            {
+              "hour": "2026-02-25T15:00",
+              "avgTemp": 72.1
+            },
+            {
+              "hour": "2026-02-25T16:00",
+              "avgTemp": 71.8
+            },
+            {
+              "hour": "2026-02-25T17:00",
+              "avgTemp": 71.5
+            },
+            {
+              "hour": "2026-02-25T18:00",
+              "avgTemp": 71.1
+            },
+            {
+              "hour": "2026-02-25T19:00",
+              "avgTemp": 70.6
+            },
+            {
+              "hour": "2026-02-25T20:00",
+              "avgTemp": 70.2
+            },
+            {
+              "hour": "2026-02-25T21:00",
+              "avgTemp": 69.7
+            },
+            {
+              "hour": "2026-02-25T22:00",
+              "avgTemp": 69.3
+            },
+            {
+              "hour": "2026-02-25T23:00",
+              "avgTemp": 69.0
+            },
+            {
+              "hour": "2026-02-26T00:00",
+              "avgTemp": 68.7
+            },
+            {
+              "hour": "2026-02-26T01:00",
+              "avgTemp": 68.3
+            },
+            {
+              "hour": "2026-02-26T02:00",
+              "avgTemp": 68.1
+            },
+            {
+              "hour": "2026-02-26T03:00",
+              "avgTemp": 67.8
+            },
+            {
+              "hour": "2026-02-26T04:00",
+              "avgTemp": 67.5
+            },
+            {
+              "hour": "2026-02-26T05:00",
+              "avgTemp": 67.2
+            },
+            {
+              "hour": "2026-02-26T06:00",
+              "avgTemp": 67.1
             }
           ],
           "coolingHours24h": 0.0,
@@ -1744,80 +2164,100 @@
         {
           "id": "417361797001",
           "name": "JCF-Common Receptionist N (CU17)",
-          "temperature": 71.9,
-          "humidity": 47,
+          "temperature": 68.4,
+          "humidity": 50,
           "hvacMode": "auto",
-          "desiredCool": 75.0,
-          "desiredHeat": 70.0,
+          "desiredCool": 82.0,
+          "desiredHeat": 60.0,
           "isConnected": true,
           "isCooling": false,
           "isHeating": false,
           "isServerRoom": false,
-          "lastReading": "2026-02-25T11:00:01.062070",
+          "lastReading": "2026-02-26T06:04:00.137455",
           "trend24h": [
-            {
-              "hour": "2026-02-24T11:00",
-              "avgTemp": 72.1
-            },
-            {
-              "hour": "2026-02-24T12:00",
-              "avgTemp": 72.6
-            },
-            {
-              "hour": "2026-02-24T13:00",
-              "avgTemp": 73.3
-            },
-            {
-              "hour": "2026-02-24T14:00",
-              "avgTemp": 73.5
-            },
-            {
-              "hour": "2026-02-24T15:00",
-              "avgTemp": 73.7
-            },
-            {
-              "hour": "2026-02-24T16:00",
-              "avgTemp": 73.5
-            },
-            {
-              "hour": "2026-02-24T17:00",
-              "avgTemp": 73.5
-            },
-            {
-              "hour": "2026-02-24T18:00",
-              "avgTemp": 72.9
-            },
-            {
-              "hour": "2026-02-24T19:00",
-              "avgTemp": 71.9
-            },
-            {
-              "hour": "2026-02-24T20:00",
-              "avgTemp": 71.2
-            },
-            {
-              "hour": "2026-02-24T21:00",
-              "avgTemp": 70.5
-            },
-            {
-              "hour": "2026-02-24T22:00",
-              "avgTemp": 70.2
-            },
-            {
-              "hour": "2026-02-24T23:00",
-              "avgTemp": 70.0
-            },
-            {
-              "hour": "2026-02-25T00:00",
-              "avgTemp": 69.6
-            },
-            {
-              "hour": "2026-02-25T01:00",
-              "avgTemp": 69.4
-            },
             {
               "hour": "2026-02-25T10:00",
               "avgTemp": 71.9
+            },
+            {
+              "hour": "2026-02-25T11:00",
+              "avgTemp": 72.2
+            },
+            {
+              "hour": "2026-02-25T12:00",
+              "avgTemp": 72.8
+            },
+            {
+              "hour": "2026-02-25T13:00",
+              "avgTemp": 73.1
+            },
+            {
+              "hour": "2026-02-25T14:00",
+              "avgTemp": 72.8
+            },
+            {
+              "hour": "2026-02-25T15:00",
+              "avgTemp": 72.7
+            },
+            {
+              "hour": "2026-02-25T16:00",
+              "avgTemp": 72.8
+            },
+            {
+              "hour": "2026-02-25T17:00",
+              "avgTemp": 72.7
+            },
+            {
+              "hour": "2026-02-25T18:00",
+              "avgTemp": 72.5
+            },
+            {
+              "hour": "2026-02-25T19:00",
+              "avgTemp": 72.1
+            },
+            {
+              "hour": "2026-02-25T20:00",
+              "avgTemp": 71.6
+            },
+            {
+              "hour": "2026-02-25T21:00",
+              "avgTemp": 71.3
+            },
+            {
+              "hour": "2026-02-25T22:00",
+              "avgTemp": 70.9
+            },
+            {
+              "hour": "2026-02-25T23:00",
+              "avgTemp": 70.4
+            },
+            {
+              "hour": "2026-02-26T00:00",
+              "avgTemp": 70.1
+            },
+            {
+              "hour": "2026-02-26T01:00",
+              "avgTemp": 69.7
+            },
+            {
+              "hour": "2026-02-26T02:00",
+              "avgTemp": 69.4
+            },
+            {
+              "hour": "2026-02-26T03:00",
+              "avgTemp": 69.1
+            },
+            {
+              "hour": "2026-02-26T04:00",
+              "avgTemp": 68.8
+            },
+            {
+              "hour": "2026-02-26T05:00",
+              "avgTemp": 68.6
+            },
+            {
+              "hour": "2026-02-26T06:00",
+              "avgTemp": 68.4
             }
           ],
           "coolingHours24h": 0.0,
@@ -1826,326 +2266,406 @@
         {
           "id": "417316798190",
           "name": "JCF-Conf North (CU18) First Floor",
-          "temperature": 70.7,
-          "humidity": 48,
+          "temperature": 66.3,
+          "humidity": 53,
           "hvacMode": "auto",
-          "desiredCool": 74.0,
-          "desiredHeat": 68.0,
+          "desiredCool": 82.0,
+          "desiredHeat": 60.0,
           "isConnected": true,
           "isCooling": false,
           "isHeating": false,
           "isServerRoom": false,
-          "lastReading": "2026-02-25T11:00:01.062070",
+          "lastReading": "2026-02-26T06:04:00.137455",
           "trend24h": [
-            {
-              "hour": "2026-02-24T11:00",
-              "avgTemp": 71.3
-            },
-            {
-              "hour": "2026-02-24T12:00",
-              "avgTemp": 72.5
-            },
-            {
-              "hour": "2026-02-24T13:00",
-              "avgTemp": 74.1
-            },
-            {
-              "hour": "2026-02-24T14:00",
-              "avgTemp": 74.4
-            },
-            {
-              "hour": "2026-02-24T15:00",
-              "avgTemp": 74.2
-            },
-            {
-              "hour": "2026-02-24T16:00",
-              "avgTemp": 74.4
-            },
-            {
-              "hour": "2026-02-24T17:00",
-              "avgTemp": 74.0
-            },
-            {
-              "hour": "2026-02-24T18:00",
-              "avgTemp": 73.0
-            },
-            {
-              "hour": "2026-02-24T19:00",
-              "avgTemp": 71.9
-            },
-            {
-              "hour": "2026-02-24T20:00",
-              "avgTemp": 71.0
-            },
-            {
-              "hour": "2026-02-24T21:00",
-              "avgTemp": 70.2
-            },
-            {
-              "hour": "2026-02-24T22:00",
-              "avgTemp": 69.5
-            },
-            {
-              "hour": "2026-02-24T23:00",
-              "avgTemp": 68.8
-            },
-            {
-              "hour": "2026-02-25T00:00",
-              "avgTemp": 68.2
-            },
-            {
-              "hour": "2026-02-25T01:00",
-              "avgTemp": 67.7
-            },
             {
               "hour": "2026-02-25T10:00",
               "avgTemp": 70.6
+            },
+            {
+              "hour": "2026-02-25T11:00",
+              "avgTemp": 71.6
+            },
+            {
+              "hour": "2026-02-25T12:00",
+              "avgTemp": 73.5
+            },
+            {
+              "hour": "2026-02-25T13:00",
+              "avgTemp": 74.3
+            },
+            {
+              "hour": "2026-02-25T14:00",
+              "avgTemp": 74.5
+            },
+            {
+              "hour": "2026-02-25T15:00",
+              "avgTemp": 74.2
+            },
+            {
+              "hour": "2026-02-25T16:00",
+              "avgTemp": 74.1
+            },
+            {
+              "hour": "2026-02-25T17:00",
+              "avgTemp": 74.1
+            },
+            {
+              "hour": "2026-02-25T18:00",
+              "avgTemp": 72.9
+            },
+            {
+              "hour": "2026-02-25T19:00",
+              "avgTemp": 71.9
+            },
+            {
+              "hour": "2026-02-25T20:00",
+              "avgTemp": 71.2
+            },
+            {
+              "hour": "2026-02-25T21:00",
+              "avgTemp": 70.4
+            },
+            {
+              "hour": "2026-02-25T22:00",
+              "avgTemp": 69.7
+            },
+            {
+              "hour": "2026-02-25T23:00",
+              "avgTemp": 69.0
+            },
+            {
+              "hour": "2026-02-26T00:00",
+              "avgTemp": 68.4
+            },
+            {
+              "hour": "2026-02-26T01:00",
+              "avgTemp": 68.0
+            },
+            {
+              "hour": "2026-02-26T02:00",
+              "avgTemp": 67.6
+            },
+            {
+              "hour": "2026-02-26T03:00",
+              "avgTemp": 67.2
+            },
+            {
+              "hour": "2026-02-26T04:00",
+              "avgTemp": 66.8
+            },
+            {
+              "hour": "2026-02-26T05:00",
+              "avgTemp": 66.5
+            },
+            {
+              "hour": "2026-02-26T06:00",
+              "avgTemp": 66.3
             }
           ],
-          "coolingHours24h": 1.0,
+          "coolingHours24h": 1.2,
           "heatingHours24h": 0.0
         },
         {
           "id": "417318223050",
           "name": "JCF-Conference SE (CU14)",
-          "temperature": 75.3,
-          "humidity": 43,
+          "temperature": 65.4,
+          "humidity": 52,
           "hvacMode": "auto",
-          "desiredCool": 74.0,
-          "desiredHeat": 68.0,
+          "desiredCool": 82.0,
+          "desiredHeat": 60.0,
           "isConnected": true,
-          "isCooling": true,
+          "isCooling": false,
           "isHeating": false,
           "isServerRoom": false,
-          "lastReading": "2026-02-25T11:00:01.062070",
+          "lastReading": "2026-02-26T06:04:00.137455",
           "trend24h": [
-            {
-              "hour": "2026-02-24T11:00",
-              "avgTemp": 74.7
-            },
-            {
-              "hour": "2026-02-24T12:00",
-              "avgTemp": 74.8
-            },
-            {
-              "hour": "2026-02-24T13:00",
-              "avgTemp": 73.9
-            },
-            {
-              "hour": "2026-02-24T14:00",
-              "avgTemp": 76.8
-            },
-            {
-              "hour": "2026-02-24T15:00",
-              "avgTemp": 76.8
-            },
-            {
-              "hour": "2026-02-24T16:00",
-              "avgTemp": 76.4
-            },
-            {
-              "hour": "2026-02-24T17:00",
-              "avgTemp": 75.2
-            },
-            {
-              "hour": "2026-02-24T18:00",
-              "avgTemp": 73.7
-            },
-            {
-              "hour": "2026-02-24T19:00",
-              "avgTemp": 72.1
-            },
-            {
-              "hour": "2026-02-24T20:00",
-              "avgTemp": 71.0
-            },
-            {
-              "hour": "2026-02-24T21:00",
-              "avgTemp": 69.9
-            },
-            {
-              "hour": "2026-02-24T22:00",
-              "avgTemp": 68.9
-            },
-            {
-              "hour": "2026-02-24T23:00",
-              "avgTemp": 68.2
-            },
-            {
-              "hour": "2026-02-25T00:00",
-              "avgTemp": 67.4
-            },
-            {
-              "hour": "2026-02-25T01:00",
-              "avgTemp": 66.8
-            },
             {
               "hour": "2026-02-25T10:00",
               "avgTemp": 74.1
+            },
+            {
+              "hour": "2026-02-25T11:00",
+              "avgTemp": 74.7
+            },
+            {
+              "hour": "2026-02-25T12:00",
+              "avgTemp": 74.4
+            },
+            {
+              "hour": "2026-02-25T13:00",
+              "avgTemp": 74.2
+            },
+            {
+              "hour": "2026-02-25T14:00",
+              "avgTemp": 74.1
+            },
+            {
+              "hour": "2026-02-25T15:00",
+              "avgTemp": 73.1
+            },
+            {
+              "hour": "2026-02-25T16:00",
+              "avgTemp": 72.9
+            },
+            {
+              "hour": "2026-02-25T17:00",
+              "avgTemp": 73.2
+            },
+            {
+              "hour": "2026-02-25T18:00",
+              "avgTemp": 72.4
+            },
+            {
+              "hour": "2026-02-25T19:00",
+              "avgTemp": 71.6
+            },
+            {
+              "hour": "2026-02-25T20:00",
+              "avgTemp": 70.8
+            },
+            {
+              "hour": "2026-02-25T21:00",
+              "avgTemp": 70.0
+            },
+            {
+              "hour": "2026-02-25T22:00",
+              "avgTemp": 69.2
+            },
+            {
+              "hour": "2026-02-25T23:00",
+              "avgTemp": 68.5
+            },
+            {
+              "hour": "2026-02-26T00:00",
+              "avgTemp": 67.9
+            },
+            {
+              "hour": "2026-02-26T01:00",
+              "avgTemp": 67.4
+            },
+            {
+              "hour": "2026-02-26T02:00",
+              "avgTemp": 66.8
+            },
+            {
+              "hour": "2026-02-26T03:00",
+              "avgTemp": 66.4
+            },
+            {
+              "hour": "2026-02-26T04:00",
+              "avgTemp": 66.0
+            },
+            {
+              "hour": "2026-02-26T05:00",
+              "avgTemp": 65.6
+            },
+            {
+              "hour": "2026-02-26T06:00",
+              "avgTemp": 65.4
             }
           ],
-          "coolingHours24h": 2.9,
+          "coolingHours24h": 3.2,
           "heatingHours24h": 0.0
         },
         {
           "id": "417371789739",
           "name": "JCF-Estella W (CU16)",
-          "temperature": 72.8,
-          "humidity": 48,
+          "temperature": 67.7,
+          "humidity": 51,
           "hvacMode": "auto",
-          "desiredCool": 74.0,
-          "desiredHeat": 68.0,
+          "desiredCool": 82.0,
+          "desiredHeat": 60.0,
           "isConnected": true,
           "isCooling": false,
           "isHeating": false,
           "isServerRoom": false,
-          "lastReading": "2026-02-25T11:00:01.062070",
+          "lastReading": "2026-02-26T06:04:00.137455",
           "trend24h": [
-            {
-              "hour": "2026-02-24T11:00",
-              "avgTemp": 72.2
-            },
-            {
-              "hour": "2026-02-24T12:00",
-              "avgTemp": 73.0
-            },
-            {
-              "hour": "2026-02-24T13:00",
-              "avgTemp": 74.5
-            },
-            {
-              "hour": "2026-02-24T14:00",
-              "avgTemp": 74.7
-            },
-            {
-              "hour": "2026-02-24T15:00",
-              "avgTemp": 74.4
-            },
-            {
-              "hour": "2026-02-24T16:00",
-              "avgTemp": 74.5
-            },
-            {
-              "hour": "2026-02-24T17:00",
-              "avgTemp": 74.4
-            },
-            {
-              "hour": "2026-02-24T18:00",
-              "avgTemp": 73.4
-            },
-            {
-              "hour": "2026-02-24T19:00",
-              "avgTemp": 72.6
-            },
-            {
-              "hour": "2026-02-24T20:00",
-              "avgTemp": 72.0
-            },
-            {
-              "hour": "2026-02-24T21:00",
-              "avgTemp": 71.2
-            },
-            {
-              "hour": "2026-02-24T22:00",
-              "avgTemp": 70.5
-            },
-            {
-              "hour": "2026-02-24T23:00",
-              "avgTemp": 70.0
-            },
-            {
-              "hour": "2026-02-25T00:00",
-              "avgTemp": 69.5
-            },
-            {
-              "hour": "2026-02-25T01:00",
-              "avgTemp": 69.0
-            },
             {
               "hour": "2026-02-25T10:00",
               "avgTemp": 72.5
+            },
+            {
+              "hour": "2026-02-25T11:00",
+              "avgTemp": 73.1
+            },
+            {
+              "hour": "2026-02-25T12:00",
+              "avgTemp": 73.8
+            },
+            {
+              "hour": "2026-02-25T13:00",
+              "avgTemp": 73.3
+            },
+            {
+              "hour": "2026-02-25T14:00",
+              "avgTemp": 71.8
+            },
+            {
+              "hour": "2026-02-25T15:00",
+              "avgTemp": 70.6
+            },
+            {
+              "hour": "2026-02-25T16:00",
+              "avgTemp": 68.8
+            },
+            {
+              "hour": "2026-02-25T17:00",
+              "avgTemp": 70.2
+            },
+            {
+              "hour": "2026-02-25T18:00",
+              "avgTemp": 71.8
+            },
+            {
+              "hour": "2026-02-25T19:00",
+              "avgTemp": 71.8
+            },
+            {
+              "hour": "2026-02-25T20:00",
+              "avgTemp": 71.4
+            },
+            {
+              "hour": "2026-02-25T21:00",
+              "avgTemp": 71.0
+            },
+            {
+              "hour": "2026-02-25T22:00",
+              "avgTemp": 70.5
+            },
+            {
+              "hour": "2026-02-25T23:00",
+              "avgTemp": 70.1
+            },
+            {
+              "hour": "2026-02-26T00:00",
+              "avgTemp": 69.7
+            },
+            {
+              "hour": "2026-02-26T01:00",
+              "avgTemp": 69.2
+            },
+            {
+              "hour": "2026-02-26T02:00",
+              "avgTemp": 68.9
+            },
+            {
+              "hour": "2026-02-26T03:00",
+              "avgTemp": 68.6
+            },
+            {
+              "hour": "2026-02-26T04:00",
+              "avgTemp": 68.3
+            },
+            {
+              "hour": "2026-02-26T05:00",
+              "avgTemp": 68.0
+            },
+            {
+              "hour": "2026-02-26T06:00",
+              "avgTemp": 67.8
             }
           ],
-          "coolingHours24h": 1.8,
+          "coolingHours24h": 3.2,
           "heatingHours24h": 0.0
         },
         {
           "id": "417357922286",
           "name": "JCF-Josie (CU 11 or 12)",
-          "temperature": 73.9,
-          "humidity": 41,
+          "temperature": 66.5,
+          "humidity": 51,
           "hvacMode": "auto",
-          "desiredCool": 74.0,
-          "desiredHeat": 68.0,
+          "desiredCool": 82.0,
+          "desiredHeat": 60.0,
           "isConnected": true,
           "isCooling": false,
           "isHeating": false,
           "isServerRoom": false,
-          "lastReading": "2026-02-25T11:00:01.062070",
+          "lastReading": "2026-02-26T06:04:00.137455",
           "trend24h": [
-            {
-              "hour": "2026-02-24T11:00",
-              "avgTemp": 74.1
-            },
-            {
-              "hour": "2026-02-24T12:00",
-              "avgTemp": 74.1
-            },
-            {
-              "hour": "2026-02-24T13:00",
-              "avgTemp": 73.8
-            },
-            {
-              "hour": "2026-02-24T14:00",
-              "avgTemp": 74.0
-            },
-            {
-              "hour": "2026-02-24T15:00",
-              "avgTemp": 73.8
-            },
-            {
-              "hour": "2026-02-24T16:00",
-              "avgTemp": 73.7
-            },
-            {
-              "hour": "2026-02-24T17:00",
-              "avgTemp": 73.3
-            },
-            {
-              "hour": "2026-02-24T18:00",
-              "avgTemp": 72.6
-            },
-            {
-              "hour": "2026-02-24T19:00",
-              "avgTemp": 71.8
-            },
-            {
-              "hour": "2026-02-24T20:00",
-              "avgTemp": 71.0
-            },
-            {
-              "hour": "2026-02-24T21:00",
-              "avgTemp": 70.4
-            },
-            {
-              "hour": "2026-02-24T22:00",
-              "avgTemp": 69.6
-            },
-            {
-              "hour": "2026-02-24T23:00",
-              "avgTemp": 69.0
-            },
-            {
-              "hour": "2026-02-25T00:00",
-              "avgTemp": 68.5
-            },
-            {
-              "hour": "2026-02-25T01:00",
-              "avgTemp": 67.9
-            },
             {
               "hour": "2026-02-25T10:00",
               "avgTemp": 74.8
+            },
+            {
+              "hour": "2026-02-25T11:00",
+              "avgTemp": 74.6
+            },
+            {
+              "hour": "2026-02-25T12:00",
+              "avgTemp": 74.1
+            },
+            {
+              "hour": "2026-02-25T13:00",
+              "avgTemp": 74.4
+            },
+            {
+              "hour": "2026-02-25T14:00",
+              "avgTemp": 73.9
+            },
+            {
+              "hour": "2026-02-25T15:00",
+              "avgTemp": 74.0
+            },
+            {
+              "hour": "2026-02-25T16:00",
+              "avgTemp": 74.3
+            },
+            {
+              "hour": "2026-02-25T17:00",
+              "avgTemp": 74.0
+            },
+            {
+              "hour": "2026-02-25T18:00",
+              "avgTemp": 73.5
+            },
+            {
+              "hour": "2026-02-25T19:00",
+              "avgTemp": 72.6
+            },
+            {
+              "hour": "2026-02-25T20:00",
+              "avgTemp": 71.7
+            },
+            {
+              "hour": "2026-02-25T21:00",
+              "avgTemp": 70.8
+            },
+            {
+              "hour": "2026-02-25T22:00",
+              "avgTemp": 70.1
+            },
+            {
+              "hour": "2026-02-25T23:00",
+              "avgTemp": 69.4
+            },
+            {
+              "hour": "2026-02-26T00:00",
+              "avgTemp": 68.8
+            },
+            {
+              "hour": "2026-02-26T01:00",
+              "avgTemp": 68.3
+            },
+            {
+              "hour": "2026-02-26T02:00",
+              "avgTemp": 67.8
+            },
+            {
+              "hour": "2026-02-26T03:00",
+              "avgTemp": 67.4
+            },
+            {
+              "hour": "2026-02-26T04:00",
+              "avgTemp": 67.0
+            },
+            {
+              "hour": "2026-02-26T05:00",
+              "avgTemp": 66.6
+            },
+            {
+              "hour": "2026-02-26T06:00",
+              "avgTemp": 66.5
             }
           ],
           "coolingHours24h": 0.0,
@@ -2154,162 +2674,202 @@
         {
           "id": "417357472367",
           "name": "JCF-Room 101 (CU15)",
-          "temperature": 70.8,
-          "humidity": 49,
+          "temperature": 67.4,
+          "humidity": 51,
           "hvacMode": "auto",
-          "desiredCool": 70.0,
-          "desiredHeat": 64.0,
+          "desiredCool": 82.0,
+          "desiredHeat": 60.0,
           "isConnected": true,
-          "isCooling": true,
+          "isCooling": false,
           "isHeating": false,
           "isServerRoom": false,
-          "lastReading": "2026-02-25T11:00:01.062070",
+          "lastReading": "2026-02-26T06:04:00.137455",
           "trend24h": [
-            {
-              "hour": "2026-02-24T11:00",
-              "avgTemp": 72.2
-            },
-            {
-              "hour": "2026-02-24T12:00",
-              "avgTemp": 73.2
-            },
-            {
-              "hour": "2026-02-24T13:00",
-              "avgTemp": 73.8
-            },
-            {
-              "hour": "2026-02-24T14:00",
-              "avgTemp": 74.3
-            },
-            {
-              "hour": "2026-02-24T15:00",
-              "avgTemp": 74.5
-            },
-            {
-              "hour": "2026-02-24T16:00",
-              "avgTemp": 74.2
-            },
-            {
-              "hour": "2026-02-24T17:00",
-              "avgTemp": 74.3
-            },
-            {
-              "hour": "2026-02-24T18:00",
-              "avgTemp": 73.6
-            },
-            {
-              "hour": "2026-02-24T19:00",
-              "avgTemp": 72.8
-            },
-            {
-              "hour": "2026-02-24T20:00",
-              "avgTemp": 72.1
-            },
-            {
-              "hour": "2026-02-24T21:00",
-              "avgTemp": 71.6
-            },
-            {
-              "hour": "2026-02-24T22:00",
-              "avgTemp": 71.0
-            },
-            {
-              "hour": "2026-02-24T23:00",
-              "avgTemp": 70.2
-            },
-            {
-              "hour": "2026-02-25T00:00",
-              "avgTemp": 69.6
-            },
-            {
-              "hour": "2026-02-25T01:00",
-              "avgTemp": 69.1
-            },
             {
               "hour": "2026-02-25T10:00",
               "avgTemp": 69.9
+            },
+            {
+              "hour": "2026-02-25T11:00",
+              "avgTemp": 70.7
+            },
+            {
+              "hour": "2026-02-25T12:00",
+              "avgTemp": 70.3
+            },
+            {
+              "hour": "2026-02-25T13:00",
+              "avgTemp": 71.2
+            },
+            {
+              "hour": "2026-02-25T14:00",
+              "avgTemp": 71.8
+            },
+            {
+              "hour": "2026-02-25T15:00",
+              "avgTemp": 71.8
+            },
+            {
+              "hour": "2026-02-25T16:00",
+              "avgTemp": 71.3
+            },
+            {
+              "hour": "2026-02-25T17:00",
+              "avgTemp": 72.0
+            },
+            {
+              "hour": "2026-02-25T18:00",
+              "avgTemp": 72.9
+            },
+            {
+              "hour": "2026-02-25T19:00",
+              "avgTemp": 72.5
+            },
+            {
+              "hour": "2026-02-25T20:00",
+              "avgTemp": 72.1
+            },
+            {
+              "hour": "2026-02-25T21:00",
+              "avgTemp": 71.7
+            },
+            {
+              "hour": "2026-02-25T22:00",
+              "avgTemp": 71.1
+            },
+            {
+              "hour": "2026-02-25T23:00",
+              "avgTemp": 70.5
+            },
+            {
+              "hour": "2026-02-26T00:00",
+              "avgTemp": 70.0
+            },
+            {
+              "hour": "2026-02-26T01:00",
+              "avgTemp": 69.4
+            },
+            {
+              "hour": "2026-02-26T02:00",
+              "avgTemp": 69.0
+            },
+            {
+              "hour": "2026-02-26T03:00",
+              "avgTemp": 68.5
+            },
+            {
+              "hour": "2026-02-26T04:00",
+              "avgTemp": 68.1
+            },
+            {
+              "hour": "2026-02-26T05:00",
+              "avgTemp": 67.8
+            },
+            {
+              "hour": "2026-02-26T06:00",
+              "avgTemp": 67.4
             }
           ],
-          "coolingHours24h": 1.0,
+          "coolingHours24h": 4.8,
           "heatingHours24h": 0.0
         },
         {
           "id": "417370063816",
           "name": "JCF-South Common (CU13)",
-          "temperature": 71.9,
-          "humidity": 48,
+          "temperature": 68.4,
+          "humidity": 49,
           "hvacMode": "auto",
-          "desiredCool": 74.0,
-          "desiredHeat": 68.0,
+          "desiredCool": 82.0,
+          "desiredHeat": 60.0,
           "isConnected": true,
           "isCooling": false,
           "isHeating": false,
           "isServerRoom": false,
-          "lastReading": "2026-02-25T11:00:01.062070",
+          "lastReading": "2026-02-26T06:04:00.137455",
           "trend24h": [
-            {
-              "hour": "2026-02-24T11:00",
-              "avgTemp": 71.6
-            },
-            {
-              "hour": "2026-02-24T12:00",
-              "avgTemp": 71.9
-            },
-            {
-              "hour": "2026-02-24T13:00",
-              "avgTemp": 72.4
-            },
-            {
-              "hour": "2026-02-24T14:00",
-              "avgTemp": 72.7
-            },
-            {
-              "hour": "2026-02-24T15:00",
-              "avgTemp": 73.0
-            },
-            {
-              "hour": "2026-02-24T16:00",
-              "avgTemp": 73.0
-            },
-            {
-              "hour": "2026-02-24T17:00",
-              "avgTemp": 73.0
-            },
-            {
-              "hour": "2026-02-24T18:00",
-              "avgTemp": 72.5
-            },
-            {
-              "hour": "2026-02-24T19:00",
-              "avgTemp": 71.9
-            },
-            {
-              "hour": "2026-02-24T20:00",
-              "avgTemp": 71.4
-            },
-            {
-              "hour": "2026-02-24T21:00",
-              "avgTemp": 71.0
-            },
-            {
-              "hour": "2026-02-24T22:00",
-              "avgTemp": 70.6
-            },
-            {
-              "hour": "2026-02-24T23:00",
-              "avgTemp": 70.2
-            },
-            {
-              "hour": "2026-02-25T00:00",
-              "avgTemp": 69.9
-            },
-            {
-              "hour": "2026-02-25T01:00",
-              "avgTemp": 69.5
-            },
             {
               "hour": "2026-02-25T10:00",
               "avgTemp": 71.7
+            },
+            {
+              "hour": "2026-02-25T11:00",
+              "avgTemp": 71.9
+            },
+            {
+              "hour": "2026-02-25T12:00",
+              "avgTemp": 72.3
+            },
+            {
+              "hour": "2026-02-25T13:00",
+              "avgTemp": 72.6
+            },
+            {
+              "hour": "2026-02-25T14:00",
+              "avgTemp": 72.2
+            },
+            {
+              "hour": "2026-02-25T15:00",
+              "avgTemp": 72.4
+            },
+            {
+              "hour": "2026-02-25T16:00",
+              "avgTemp": 72.3
+            },
+            {
+              "hour": "2026-02-25T17:00",
+              "avgTemp": 72.5
+            },
+            {
+              "hour": "2026-02-25T18:00",
+              "avgTemp": 72.2
+            },
+            {
+              "hour": "2026-02-25T19:00",
+              "avgTemp": 71.8
+            },
+            {
+              "hour": "2026-02-25T20:00",
+              "avgTemp": 71.4
+            },
+            {
+              "hour": "2026-02-25T21:00",
+              "avgTemp": 71.1
+            },
+            {
+              "hour": "2026-02-25T22:00",
+              "avgTemp": 70.8
+            },
+            {
+              "hour": "2026-02-25T23:00",
+              "avgTemp": 70.5
+            },
+            {
+              "hour": "2026-02-26T00:00",
+              "avgTemp": 70.1
+            },
+            {
+              "hour": "2026-02-26T01:00",
+              "avgTemp": 69.8
+            },
+            {
+              "hour": "2026-02-26T02:00",
+              "avgTemp": 69.5
+            },
+            {
+              "hour": "2026-02-26T03:00",
+              "avgTemp": 69.1
+            },
+            {
+              "hour": "2026-02-26T04:00",
+              "avgTemp": 68.9
+            },
+            {
+              "hour": "2026-02-26T05:00",
+              "avgTemp": 68.7
+            },
+            {
+              "hour": "2026-02-26T06:00",
+              "avgTemp": 68.5
             }
           ],
           "coolingHours24h": 0.0,
@@ -2323,80 +2883,100 @@
         {
           "id": "417386543807",
           "name": "AJC-Sarah (HP2)",
-          "temperature": 68.5,
-          "humidity": 51,
+          "temperature": 63.9,
+          "humidity": 56,
           "hvacMode": "auto",
-          "desiredCool": 74.0,
-          "desiredHeat": 68.0,
+          "desiredCool": 82.0,
+          "desiredHeat": 60.0,
           "isConnected": true,
           "isCooling": false,
           "isHeating": false,
           "isServerRoom": false,
-          "lastReading": "2026-02-25T11:00:01.062070",
+          "lastReading": "2026-02-26T06:04:00.137455",
           "trend24h": [
-            {
-              "hour": "2026-02-24T11:00",
-              "avgTemp": 68.8
-            },
-            {
-              "hour": "2026-02-24T12:00",
-              "avgTemp": 69.5
-            },
-            {
-              "hour": "2026-02-24T13:00",
-              "avgTemp": 70.7
-            },
-            {
-              "hour": "2026-02-24T14:00",
-              "avgTemp": 72.5
-            },
-            {
-              "hour": "2026-02-24T15:00",
-              "avgTemp": 73.7
-            },
-            {
-              "hour": "2026-02-24T16:00",
-              "avgTemp": 73.0
-            },
-            {
-              "hour": "2026-02-24T17:00",
-              "avgTemp": 72.2
-            },
-            {
-              "hour": "2026-02-24T18:00",
-              "avgTemp": 71.2
-            },
-            {
-              "hour": "2026-02-24T19:00",
-              "avgTemp": 70.5
-            },
-            {
-              "hour": "2026-02-24T20:00",
-              "avgTemp": 69.9
-            },
-            {
-              "hour": "2026-02-24T21:00",
-              "avgTemp": 69.1
-            },
-            {
-              "hour": "2026-02-24T22:00",
-              "avgTemp": 68.4
-            },
-            {
-              "hour": "2026-02-24T23:00",
-              "avgTemp": 67.7
-            },
-            {
-              "hour": "2026-02-25T00:00",
-              "avgTemp": 67.0
-            },
-            {
-              "hour": "2026-02-25T01:00",
-              "avgTemp": 66.3
-            },
             {
               "hour": "2026-02-25T10:00",
               "avgTemp": 68.4
+            },
+            {
+              "hour": "2026-02-25T11:00",
+              "avgTemp": 68.5
+            },
+            {
+              "hour": "2026-02-25T12:00",
+              "avgTemp": 69.4
+            },
+            {
+              "hour": "2026-02-25T13:00",
+              "avgTemp": 70.7
+            },
+            {
+              "hour": "2026-02-25T14:00",
+              "avgTemp": 73.0
+            },
+            {
+              "hour": "2026-02-25T15:00",
+              "avgTemp": 74.6
+            },
+            {
+              "hour": "2026-02-25T16:00",
+              "avgTemp": 73.6
+            },
+            {
+              "hour": "2026-02-25T17:00",
+              "avgTemp": 72.2
+            },
+            {
+              "hour": "2026-02-25T18:00",
+              "avgTemp": 71.3
+            },
+            {
+              "hour": "2026-02-25T19:00",
+              "avgTemp": 70.6
+            },
+            {
+              "hour": "2026-02-25T20:00",
+              "avgTemp": 70.0
+            },
+            {
+              "hour": "2026-02-25T21:00",
+              "avgTemp": 69.5
+            },
+            {
+              "hour": "2026-02-25T22:00",
+              "avgTemp": 68.9
+            },
+            {
+              "hour": "2026-02-25T23:00",
+              "avgTemp": 68.2
+            },
+            {
+              "hour": "2026-02-26T00:00",
+              "avgTemp": 67.5
+            },
+            {
+              "hour": "2026-02-26T01:00",
+              "avgTemp": 66.9
+            },
+            {
+              "hour": "2026-02-26T02:00",
+              "avgTemp": 66.3
+            },
+            {
+              "hour": "2026-02-26T03:00",
+              "avgTemp": 65.6
+            },
+            {
+              "hour": "2026-02-26T04:00",
+              "avgTemp": 65.0
+            },
+            {
+              "hour": "2026-02-26T05:00",
+              "avgTemp": 64.4
+            },
+            {
+              "hour": "2026-02-26T06:00",
+              "avgTemp": 63.9
             }
           ],
           "coolingHours24h": 0.0,
@@ -2405,80 +2985,100 @@
         {
           "id": "417330910873",
           "name": "FIDF-Storage Room (HP3)",
-          "temperature": 69.1,
+          "temperature": 69.5,
           "humidity": 49,
           "hvacMode": "auto",
-          "desiredCool": 74.0,
-          "desiredHeat": 68.0,
+          "desiredCool": 82.0,
+          "desiredHeat": 60.0,
           "isConnected": true,
           "isCooling": false,
           "isHeating": false,
           "isServerRoom": false,
-          "lastReading": "2026-02-25T11:00:01.062070",
+          "lastReading": "2026-02-26T06:04:00.137455",
           "trend24h": [
-            {
-              "hour": "2026-02-24T11:00",
-              "avgTemp": 68.7
-            },
-            {
-              "hour": "2026-02-24T12:00",
-              "avgTemp": 69.0
-            },
-            {
-              "hour": "2026-02-24T13:00",
-              "avgTemp": 69.6
-            },
-            {
-              "hour": "2026-02-24T14:00",
-              "avgTemp": 70.2
-            },
-            {
-              "hour": "2026-02-24T15:00",
-              "avgTemp": 70.6
-            },
-            {
-              "hour": "2026-02-24T16:00",
-              "avgTemp": 70.9
-            },
-            {
-              "hour": "2026-02-24T17:00",
-              "avgTemp": 71.0
-            },
-            {
-              "hour": "2026-02-24T18:00",
-              "avgTemp": 71.2
-            },
-            {
-              "hour": "2026-02-24T19:00",
-              "avgTemp": 71.4
-            },
-            {
-              "hour": "2026-02-24T20:00",
-              "avgTemp": 71.4
-            },
-            {
-              "hour": "2026-02-24T21:00",
-              "avgTemp": 71.3
-            },
-            {
-              "hour": "2026-02-24T22:00",
-              "avgTemp": 71.1
-            },
-            {
-              "hour": "2026-02-24T23:00",
-              "avgTemp": 70.9
-            },
-            {
-              "hour": "2026-02-25T00:00",
-              "avgTemp": 70.6
-            },
-            {
-              "hour": "2026-02-25T01:00",
-              "avgTemp": 70.5
-            },
             {
               "hour": "2026-02-25T10:00",
               "avgTemp": 69.0
+            },
+            {
+              "hour": "2026-02-25T11:00",
+              "avgTemp": 69.3
+            },
+            {
+              "hour": "2026-02-25T12:00",
+              "avgTemp": 69.6
+            },
+            {
+              "hour": "2026-02-25T13:00",
+              "avgTemp": 70.3
+            },
+            {
+              "hour": "2026-02-25T14:00",
+              "avgTemp": 70.9
+            },
+            {
+              "hour": "2026-02-25T15:00",
+              "avgTemp": 71.2
+            },
+            {
+              "hour": "2026-02-25T16:00",
+              "avgTemp": 71.7
+            },
+            {
+              "hour": "2026-02-25T17:00",
+              "avgTemp": 71.8
+            },
+            {
+              "hour": "2026-02-25T18:00",
+              "avgTemp": 72.0
+            },
+            {
+              "hour": "2026-02-25T19:00",
+              "avgTemp": 72.1
+            },
+            {
+              "hour": "2026-02-25T20:00",
+              "avgTemp": 72.1
+            },
+            {
+              "hour": "2026-02-25T21:00",
+              "avgTemp": 72.0
+            },
+            {
+              "hour": "2026-02-25T22:00",
+              "avgTemp": 71.8
+            },
+            {
+              "hour": "2026-02-25T23:00",
+              "avgTemp": 71.5
+            },
+            {
+              "hour": "2026-02-26T00:00",
+              "avgTemp": 71.2
+            },
+            {
+              "hour": "2026-02-26T01:00",
+              "avgTemp": 70.9
+            },
+            {
+              "hour": "2026-02-26T02:00",
+              "avgTemp": 70.6
+            },
+            {
+              "hour": "2026-02-26T03:00",
+              "avgTemp": 70.4
+            },
+            {
+              "hour": "2026-02-26T04:00",
+              "avgTemp": 70.0
+            },
+            {
+              "hour": "2026-02-26T05:00",
+              "avgTemp": 69.9
+            },
+            {
+              "hour": "2026-02-26T06:00",
+              "avgTemp": 69.5
             }
           ],
           "coolingHours24h": 0.0,
@@ -2487,80 +3087,100 @@
         {
           "id": "417322188118",
           "name": "SWU-Oz (HP1)",
-          "temperature": 68.6,
-          "humidity": 51,
+          "temperature": 64.2,
+          "humidity": 53,
           "hvacMode": "auto",
-          "desiredCool": 74.0,
-          "desiredHeat": 68.0,
+          "desiredCool": 82.0,
+          "desiredHeat": 60.0,
           "isConnected": true,
           "isCooling": false,
           "isHeating": false,
           "isServerRoom": false,
-          "lastReading": "2026-02-25T11:00:01.062070",
+          "lastReading": "2026-02-26T06:04:00.137455",
           "trend24h": [
-            {
-              "hour": "2026-02-24T11:00",
-              "avgTemp": 68.9
-            },
-            {
-              "hour": "2026-02-24T12:00",
-              "avgTemp": 69.4
-            },
-            {
-              "hour": "2026-02-24T13:00",
-              "avgTemp": 69.8
-            },
-            {
-              "hour": "2026-02-24T14:00",
-              "avgTemp": 70.5
-            },
-            {
-              "hour": "2026-02-24T15:00",
-              "avgTemp": 70.7
-            },
-            {
-              "hour": "2026-02-24T16:00",
-              "avgTemp": 70.8
-            },
-            {
-              "hour": "2026-02-24T17:00",
-              "avgTemp": 70.6
-            },
-            {
-              "hour": "2026-02-24T18:00",
-              "avgTemp": 70.2
-            },
-            {
-              "hour": "2026-02-24T19:00",
-              "avgTemp": 69.7
-            },
-            {
-              "hour": "2026-02-24T20:00",
-              "avgTemp": 69.1
-            },
-            {
-              "hour": "2026-02-24T21:00",
-              "avgTemp": 68.5
-            },
-            {
-              "hour": "2026-02-24T22:00",
-              "avgTemp": 67.9
-            },
-            {
-              "hour": "2026-02-24T23:00",
-              "avgTemp": 67.3
-            },
-            {
-              "hour": "2026-02-25T00:00",
-              "avgTemp": 66.8
-            },
-            {
-              "hour": "2026-02-25T01:00",
-              "avgTemp": 66.2
-            },
             {
               "hour": "2026-02-25T10:00",
               "avgTemp": 68.3
+            },
+            {
+              "hour": "2026-02-25T11:00",
+              "avgTemp": 68.9
+            },
+            {
+              "hour": "2026-02-25T12:00",
+              "avgTemp": 69.8
+            },
+            {
+              "hour": "2026-02-25T13:00",
+              "avgTemp": 70.4
+            },
+            {
+              "hour": "2026-02-25T14:00",
+              "avgTemp": 71.0
+            },
+            {
+              "hour": "2026-02-25T15:00",
+              "avgTemp": 71.3
+            },
+            {
+              "hour": "2026-02-25T16:00",
+              "avgTemp": 71.2
+            },
+            {
+              "hour": "2026-02-25T17:00",
+              "avgTemp": 70.8
+            },
+            {
+              "hour": "2026-02-25T18:00",
+              "avgTemp": 70.5
+            },
+            {
+              "hour": "2026-02-25T19:00",
+              "avgTemp": 70.0
+            },
+            {
+              "hour": "2026-02-25T20:00",
+              "avgTemp": 69.5
+            },
+            {
+              "hour": "2026-02-25T21:00",
+              "avgTemp": 69.0
+            },
+            {
+              "hour": "2026-02-25T22:00",
+              "avgTemp": 68.4
+            },
+            {
+              "hour": "2026-02-25T23:00",
+              "avgTemp": 68.0
+            },
+            {
+              "hour": "2026-02-26T00:00",
+              "avgTemp": 67.4
+            },
+            {
+              "hour": "2026-02-26T01:00",
+              "avgTemp": 66.8
+            },
+            {
+              "hour": "2026-02-26T02:00",
+              "avgTemp": 66.3
+            },
+            {
+              "hour": "2026-02-26T03:00",
+              "avgTemp": 65.8
+            },
+            {
+              "hour": "2026-02-26T04:00",
+              "avgTemp": 65.2
+            },
+            {
+              "hour": "2026-02-26T05:00",
+              "avgTemp": 64.5
+            },
+            {
+              "hour": "2026-02-26T06:00",
+              "avgTemp": 64.2
             }
           ],
           "coolingHours24h": 0.0,
@@ -2574,10 +3194,10 @@
     "totalThermostats": 31,
     "online": 31,
     "offline": 0,
-    "avgTemp": 71.8,
+    "avgTemp": 68.2,
     "alertCount": 0,
-    "serverRoomTemp": 74.2,
-    "coolingHours24h": 27.8,
+    "serverRoomTemp": 74.1,
+    "coolingHours24h": 34.2,
     "heatingHours24h": 0.0
   }
 }

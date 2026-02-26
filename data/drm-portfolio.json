@@ -1,16 +1,16 @@
 {
-  "asOfDate": "2026-02-25 11:04",
+  "asOfDate": "2026-02-26 06:05",
   "drms": [
     {
       "name": "Michael Rabkin",
       "slug": "michael-rabkin",
-      "totalDonors": 30508,
-      "totalRecognitionFY26": 708492.68,
-      "totalRecognitionFY25": 1072894.63,
+      "totalDonors": 30510,
+      "totalRecognitionFY26": 701201.38,
+      "totalRecognitionFY25": 1075394.63,
       "lybuntCount": 1024,
       "lybuntAmount": 625087.25,
       "sybuntCount": 589,
-      "recentGifts30d": 62,
+      "recentGifts30d": 53,
       "topDonors": [
         {
           "name": "Marcia Hazan",
@@ -20,17 +20,17 @@
           "phone": "(858) 735-9361"
         },
         {
-          "name": "Jack M. Schuster",
-          "fy26": 50000.0,
-          "fy25": 42000.0,
-          "email": "jms1046@gmail.com",
-          "phone": ""
-        },
-        {
           "name": "Sherron C. Schuster",
           "fy26": 50000.0,
           "fy25": 100.0,
           "email": "sherron1046@gmail.com",
+          "phone": ""
+        },
+        {
+          "name": "Jack M. Schuster",
+          "fy26": 50000.0,
+          "fy25": 42000.0,
+          "email": "jms1046@gmail.com",
           "phone": ""
         },
         {
@@ -55,13 +55,6 @@
           "phone": ""
         },
         {
-          "name": "Cheryl Rattner Price",
-          "fy26": 17500.0,
-          "fy25": 12500.0,
-          "email": "cherylprice@me.com",
-          "phone": "6197086883"
-        },
-        {
           "name": "Heidi Gantwerk",
           "fy26": 16500.16,
           "fy25": 21892.84,
@@ -76,18 +69,18 @@
           "phone": "(858) 775-5887"
         },
         {
-          "name": "Danielle L. Miller",
-          "fy26": 10000.0,
-          "fy25": 5036.0,
-          "email": "dlmiller4@aol.com",
-          "phone": ""
-        },
-        {
           "name": "Paul Segal",
           "fy26": 10000.0,
           "fy25": 0.0,
           "email": "mrpaulsegal@gmail.com",
           "phone": "+18587751951"
+        },
+        {
+          "name": "Cheryl Rattner Price",
+          "fy26": 10000.0,
+          "fy25": 10000.0,
+          "email": "cherylprice@me.com",
+          "phone": "6197086883"
         },
         {
           "name": "Lauren Cohen",
@@ -108,6 +101,13 @@
           "fy26": 10000.0,
           "fy25": 0.0,
           "email": "robynfgoldberg@yahoo.com",
+          "phone": ""
+        },
+        {
+          "name": "Danielle L. Miller",
+          "fy26": 10000.0,
+          "fy25": 5036.0,
+          "email": "dlmiller4@aol.com",
           "phone": ""
         },
         {
@@ -297,7 +297,7 @@
         {
           "name": "Marie Raftery",
           "fy25Amount": 5000.0,
-          "lastGiftDate": "2024-05-10",
+          "lastGiftDate": "2026-02-23",
           "email": "smilefan1@hotmail.com",
           "phone": ""
         },
@@ -325,7 +325,7 @@
         {
           "name": "Shari Friedman Schenk",
           "fy25Amount": 5000.0,
-          "lastGiftDate": "2025-12-23",
+          "lastGiftDate": "2026-02-21",
           "email": "sharischenk@gmail.com",
           "phone": "(619) 794-9547"
         },
@@ -542,6 +542,18 @@
       ],
       "recentActivity": [
         {
+          "donorName": "Bank Of America Charitable Gift Fund",
+          "amount": 100.0,
+          "date": "2026-02-25",
+          "type": "Unsolicited Annual Gifts - FY26"
+        },
+        {
+          "donorName": "Bank Of America Charitable Gift Fund",
+          "amount": 200.0,
+          "date": "2026-02-25",
+          "type": "Unsolicited Annual Gifts - FY26"
+        },
+        {
           "donorName": "Mitchell J. Simon",
           "amount": 0.0,
           "date": "2026-02-25",
@@ -584,10 +596,58 @@
           "type": "Yom HaShoah - FY26"
         },
         {
+          "donorName": "Jane Scher",
+          "amount": 400.0,
+          "date": "2026-02-23",
+          "type": "Lion of Judah Luncheon - FY26 - Event"
+        },
+        {
+          "donorName": "Marie Raftery",
+          "amount": 400.0,
+          "date": "2026-02-23",
+          "type": "Lion of Judah Luncheon - FY26 - Event"
+        },
+        {
+          "donorName": "Jennifer Lutz",
+          "amount": 500.0,
+          "date": "2026-02-23",
+          "type": "The Community Trip - CY27"
+        },
+        {
+          "donorName": "Scott David Schindler",
+          "amount": 208.7,
+          "date": "2026-02-23",
+          "type": "FED360 - FY26 - Donations - Tributes"
+        },
+        {
           "donorName": "Daniel Eyal",
           "amount": 0.0,
           "date": "2026-02-23",
           "type": "Yom HaShoah - FY26"
+        },
+        {
+          "donorName": "Michael Berkowitz",
+          "amount": 1000.0,
+          "date": "2026-02-22",
+          "type": "Israel Unfiltered - FY26"
+        },
+        {
+          "donorName": "Shari Friedman Schenk",
+          "amount": 200.0,
+          "date": "2026-02-21",
+          "type": "Lion of Judah Luncheon - FY26 - Event"
+        },
+        {
+          "donorName": "Scott David Schindler",
+          "amount": 0.0,
+          "date": "2026-02-21",
+          "type": "Yom HaShoah - FY26"
+        },
+        {
+          "donorName": "Neal Jacobs",
+          "amount": 18.0,
+          "date": "2026-02-21",
+          "type": "Yom HaShoah - FY26 - Donations"
         },
         {
           "donorName": "Eric Lefkowitz",
@@ -600,66 +660,6 @@
           "amount": 500.0,
           "date": "2026-02-20",
           "type": "The Community Trip - CY27"
-        },
-        {
-          "donorName": "Judy Tullie",
-          "amount": 500.0,
-          "date": "2026-02-20",
-          "type": "The Community Trip - CY27"
-        },
-        {
-          "donorName": "Joseph Fox",
-          "amount": 0.0,
-          "date": "2026-02-20",
-          "type": "Yom HaShoah - FY26"
-        },
-        {
-          "donorName": "Brittany Hawkins",
-          "amount": 52.25,
-          "date": "2026-02-20",
-          "type": "Yom HaShoah - FY26 - Donations"
-        },
-        {
-          "donorName": "Sharon Peterson",
-          "amount": 5.0,
-          "date": "2026-02-20",
-          "type": "Yom HaShoah - FY26 - Donations"
-        },
-        {
-          "donorName": "Barbara Rabkin",
-          "amount": 0.0,
-          "date": "2026-02-20",
-          "type": "Yom HaShoah - FY26"
-        },
-        {
-          "donorName": "Fidelity Charitable Trust",
-          "amount": 500.0,
-          "date": "2026-02-19",
-          "type": "Tributes - FY26"
-        },
-        {
-          "donorName": "Rita S. Hartman Z\"L",
-          "amount": 13000.0,
-          "date": "2026-02-19",
-          "type": "Endowment - FY26"
-        },
-        {
-          "donorName": "Julia Let",
-          "amount": 100.0,
-          "date": "2026-02-19",
-          "type": "Unsolicited Annual Gifts - FY26"
-        },
-        {
-          "donorName": "Give Lively Foundation Inc.",
-          "amount": 235.81,
-          "date": "2026-02-19",
-          "type": "Unsolicited Annual Gifts - FY26"
-        },
-        {
-          "donorName": "Vivian Giudice",
-          "amount": 2000.0,
-          "date": "2026-02-19",
-          "type": "Unsolicited Annual Gifts - FY26"
         }
       ]
     },
@@ -672,7 +672,7 @@
       "lybuntCount": 44,
       "lybuntAmount": 114902.5,
       "sybuntCount": 22,
-      "recentGifts30d": 4,
+      "recentGifts30d": 6,
       "topDonors": [
         {
           "name": "Jessica Effress",
@@ -882,7 +882,7 @@
         {
           "name": "Audrey Beth Levine",
           "fy25Amount": 5750.0,
-          "lastGiftDate": "2026-02-11",
+          "lastGiftDate": "2026-02-23",
           "email": "levinesandiego@gmail.com",
           "phone": "+16198514159"
         },
@@ -1162,6 +1162,30 @@
       ],
       "recentActivity": [
         {
+          "donorName": "Jessica Effress",
+          "amount": 200.0,
+          "date": "2026-02-23",
+          "type": "Lion of Judah Luncheon - FY26 - Event"
+        },
+        {
+          "donorName": "Charlene Steinhauer",
+          "amount": 200.0,
+          "date": "2026-02-23",
+          "type": "Lion of Judah Luncheon - FY26 - Event"
+        },
+        {
+          "donorName": "Audrey Beth Levine",
+          "amount": 200.0,
+          "date": "2026-02-23",
+          "type": "Lion of Judah Luncheon - FY26 - Event"
+        },
+        {
+          "donorName": "Lori Shearer",
+          "amount": 200.0,
+          "date": "2026-02-23",
+          "type": "Lion of Judah Luncheon - FY26 - Event"
+        },
+        {
           "donorName": "Marla White Strich",
           "amount": 198.08,
           "date": "2026-02-15",
@@ -1172,31 +1196,19 @@
           "amount": 500.0,
           "date": "2026-02-12",
           "type": "The Community Trip - CY27"
-        },
-        {
-          "donorName": "Robert Leonard Grazian",
-          "amount": 500.0,
-          "date": "2026-02-12",
-          "type": "The Community Trip - CY27"
-        },
-        {
-          "donorName": "Ariele Sparks",
-          "amount": 500.0,
-          "date": "2026-02-11",
-          "type": "The Community Trip - CY27"
         }
       ]
     },
     {
       "name": "Dustin Biton",
       "slug": "dustin-biton",
-      "totalDonors": 186,
+      "totalDonors": 185,
       "totalRecognitionFY26": 718723.94,
-      "totalRecognitionFY25": 864402.5,
-      "lybuntCount": 40,
-      "lybuntAmount": 255420.5,
+      "totalRecognitionFY25": 859402.5,
+      "lybuntCount": 39,
+      "lybuntAmount": 250420.5,
       "sybuntCount": 25,
-      "recentGifts30d": 11,
+      "recentGifts30d": 14,
       "topDonors": [
         {
           "name": "Diane Feuerstein",
@@ -1425,11 +1437,11 @@
           "phone": ""
         },
         {
-          "name": "Darryl Hall",
+          "name": "Pauline Freedman",
           "fy25Amount": 10000.0,
-          "lastGiftDate": "2025-06-26",
-          "email": "darrylhall55@me.com",
-          "phone": ""
+          "lastGiftDate": "2026-01-31",
+          "email": "amaryoga1@gmail.com",
+          "phone": "+18587744760"
         },
         {
           "name": "Justin Gover",
@@ -1439,11 +1451,11 @@
           "phone": ""
         },
         {
-          "name": "Pauline Freedman",
+          "name": "Darryl Hall",
           "fy25Amount": 10000.0,
-          "lastGiftDate": "2026-01-31",
-          "email": "amaryoga1@gmail.com",
-          "phone": "+18587744760"
+          "lastGiftDate": "2025-06-26",
+          "email": "darrylhall55@me.com",
+          "phone": ""
         },
         {
           "name": "Andrew M. Ratner",
@@ -1467,18 +1479,18 @@
           "phone": "(858)756-6696"
         },
         {
-          "name": "Hannah R. Jarson",
-          "fy25Amount": 6000.0,
-          "lastGiftDate": "2025-06-26",
-          "email": "hjarson@sbcglobal.net",
-          "phone": ""
-        },
-        {
           "name": "Abraham Gleiberman",
           "fy25Amount": 6000.0,
           "lastGiftDate": "2024-04-30",
           "email": "grandpaabe@yahoo.com",
           "phone": "(858) 455-6832"
+        },
+        {
+          "name": "Hannah R. Jarson",
+          "fy25Amount": 6000.0,
+          "lastGiftDate": "2025-06-26",
+          "email": "hjarson@sbcglobal.net",
+          "phone": ""
         },
         {
           "name": "Ronit Droker",
@@ -1495,11 +1507,11 @@
           "phone": "619-540-0070"
         },
         {
-          "name": "Scott David Schindler",
+          "name": "Kay l Gurtin",
           "fy25Amount": 5000.0,
-          "lastGiftDate": "2026-01-30",
-          "email": "scottdschindler@gmail.com",
-          "phone": "(619) 742-3352"
+          "lastGiftDate": "2023-06-27",
+          "email": "klgurtin@yahoo.com",
+          "phone": ""
         },
         {
           "name": "STEVEN DEMETER",
@@ -1541,13 +1553,6 @@
           "fy25Amount": 5000.0,
           "lastGiftDate": "2025-12-25",
           "email": "monicahpg@gmail.com",
-          "phone": ""
-        },
-        {
-          "name": "Kay l Gurtin",
-          "fy25Amount": 5000.0,
-          "lastGiftDate": "2023-06-27",
-          "email": "klgurtin@yahoo.com",
           "phone": ""
         },
         {
@@ -1664,10 +1669,34 @@
           "type": "Yom HaZikaron - FY26"
         },
         {
-          "donorName": "Scott David Schindler",
-          "amount": 0.0,
-          "date": "2026-02-21",
-          "type": "Yom HaShoah - FY26"
+          "donorName": "Sylvia Geffen",
+          "amount": 200.0,
+          "date": "2026-02-23",
+          "type": "Lion of Judah Luncheon - FY26 - Event"
+        },
+        {
+          "donorName": "Kira Elizabeth Finkenberg",
+          "amount": 200.0,
+          "date": "2026-02-23",
+          "type": "Lion of Judah Luncheon - FY26 - Event"
+        },
+        {
+          "donorName": "Marsha Berkson",
+          "amount": 200.0,
+          "date": "2026-02-23",
+          "type": "Lion of Judah Luncheon - FY26 - Event"
+        },
+        {
+          "donorName": "Silvana Anna Christy",
+          "amount": 200.0,
+          "date": "2026-02-22",
+          "type": "Lion of Judah Luncheon - FY26 - Event"
+        },
+        {
+          "donorName": "Nelly Dean",
+          "amount": 1000.0,
+          "date": "2026-02-22",
+          "type": "SD AJMA Medical Mission to Israel - FY26"
         },
         {
           "donorName": "Barbara Bry",
@@ -1716,12 +1745,6 @@
           "amount": 95.0,
           "date": "2026-02-12",
           "type": "Mission to India - FY26"
-        },
-        {
-          "donorName": "Barbara Gitlin",
-          "amount": 5000.0,
-          "date": "2026-02-12",
-          "type": "DRM - FY26"
         }
       ]
     },
@@ -1729,8 +1752,8 @@
       "name": "Heidi Gantwerk",
       "slug": "heidi-gantwerk",
       "totalDonors": 132,
-      "totalRecognitionFY26": 5203568.29,
-      "totalRecognitionFY25": 4564759.14,
+      "totalRecognitionFY26": 4728568.29,
+      "totalRecognitionFY25": 5039759.14,
       "lybuntCount": 35,
       "lybuntAmount": 1141269.45,
       "sybuntCount": 11,
@@ -1742,13 +1765,6 @@
           "fy25": 0.0,
           "email": "danazeff@mac.com",
           "phone": "(619) 818-7366"
-        },
-        {
-          "name": "Alan Viterbi",
-          "fy26": 975000.0,
-          "fy25": 25000.0,
-          "email": "alan.viterbi@elmgroves.com",
-          "phone": "(858)775-8252"
         },
         {
           "name": "Andrew James Viterbi",
@@ -1763,6 +1779,13 @@
           "fy25": 500100.0,
           "email": "elainegalinson@mac.com",
           "phone": ""
+        },
+        {
+          "name": "Alan Viterbi",
+          "fy26": 500000.0,
+          "fy25": 500000.0,
+          "email": "alan.viterbi@elmgroves.com",
+          "phone": "(858)775-8252"
         },
         {
           "name": "Gary Shekhter",
@@ -2091,7 +2114,7 @@
         {
           "name": "Sharon Gabriel",
           "fy25Amount": 1000.0,
-          "lastGiftDate": "2026-01-30",
+          "lastGiftDate": "2026-02-23",
           "email": "szgabs10@gmail.com",
           "phone": ""
         },
@@ -2179,10 +2202,22 @@
           "type": "Yom HaZikaron - FY26"
         },
         {
-          "donorName": "Rabbi Ralph Dalin",
+          "donorName": "Ralph Dalin",
           "amount": 0.0,
           "date": "2026-02-24",
           "type": "Yom HaZikaron - FY26"
+        },
+        {
+          "donorName": "Sharon Gabriel",
+          "amount": 200.0,
+          "date": "2026-02-23",
+          "type": "Lion of Judah Luncheon - FY26 - Event"
+        },
+        {
+          "donorName": "Jean Somers",
+          "amount": 200.0,
+          "date": "2026-02-23",
+          "type": "Lion of Judah Luncheon - FY26 - Event"
         },
         {
           "donorName": "Jewish Community Foundation",
@@ -2221,13 +2256,25 @@
           "type": "FED360 - FY26 - Donations - Attended"
         },
         {
+          "donorName": "Lee Goldberg",
+          "amount": 600.0,
+          "date": "2026-02-22",
+          "type": "Lion of Judah Luncheon - FY26 - Event"
+        },
+        {
+          "donorName": "Susan Rachelle Chortek Weisman",
+          "amount": 200.0,
+          "date": "2026-02-21",
+          "type": "Lion of Judah Luncheon - FY26 - Event"
+        },
+        {
           "donorName": "Stacy Rosenberg",
           "amount": 200.0,
           "date": "2026-02-20",
           "type": "Lion of Judah Luncheon - FY26 - Event"
         },
         {
-          "donorName": "Rabbi Ralph Dalin",
+          "donorName": "Ralph Dalin",
           "amount": 0.0,
           "date": "2026-02-20",
           "type": "Yom HaShoah - FY26"
@@ -2255,43 +2302,19 @@
           "amount": 10000.0,
           "date": "2026-02-18",
           "type": "DRM - FY26"
-        },
-        {
-          "donorName": "Jewish Community Foundation",
-          "amount": 3000.0,
-          "date": "2026-02-18",
-          "type": "FED360 - FY26 - Donations - Attended"
-        },
-        {
-          "donorName": "Jewish Community Foundation",
-          "amount": 5000.0,
-          "date": "2026-02-18",
-          "type": "FED360 - FY26 - Donations - Attended"
-        },
-        {
-          "donorName": "Jewish Community Foundation",
-          "amount": 100.0,
-          "date": "2026-02-18",
-          "type": "Tributes - FY26"
-        },
-        {
-          "donorName": "Jewish Community Foundation",
-          "amount": 50000.0,
-          "date": "2026-02-18",
-          "type": "DRM - FY26"
         }
       ]
     },
     {
       "name": "Paul Sapiano",
       "slug": "paul-sapiano",
-      "totalDonors": 112,
+      "totalDonors": 111,
       "totalRecognitionFY26": 46907.38,
       "totalRecognitionFY25": 0.0,
       "lybuntCount": 0,
       "lybuntAmount": 0.0,
       "sybuntCount": 0,
-      "recentGifts30d": 90,
+      "recentGifts30d": 95,
       "topDonors": [
         {
           "name": "Sandra Hooper",
@@ -2472,6 +2495,60 @@
       "lybuntList": [],
       "recentActivity": [
         {
+          "donorName": "Mark Stra",
+          "amount": 0.0,
+          "date": "2026-02-26",
+          "type": "Yom HaZikaron - FY26"
+        },
+        {
+          "donorName": "David Maya",
+          "amount": 0.0,
+          "date": "2026-02-25",
+          "type": "Yom HaShoah - FY26"
+        },
+        {
+          "donorName": "David Maya",
+          "amount": 0.0,
+          "date": "2026-02-25",
+          "type": "Yom HaZikaron - FY26"
+        },
+        {
+          "donorName": "Ruth Mastron",
+          "amount": 0.0,
+          "date": "2026-02-25",
+          "type": "Yom HaZikaron - FY26"
+        },
+        {
+          "donorName": "Sonia Fox-Ohlbaum",
+          "amount": 0.0,
+          "date": "2026-02-25",
+          "type": "Yom HaShoah - FY26"
+        },
+        {
+          "donorName": "Dalia Breziner",
+          "amount": 0.0,
+          "date": "2026-02-25",
+          "type": "Yom HaZikaron - FY26"
+        },
+        {
+          "donorName": "Robin Dishman",
+          "amount": 0.0,
+          "date": "2026-02-25",
+          "type": "Yom HaZikaron - FY26"
+        },
+        {
+          "donorName": "Julie Gordon",
+          "amount": 0.0,
+          "date": "2026-02-25",
+          "type": "Jewish Heritage Day at the Padres - FY26"
+        },
+        {
+          "donorName": "John Culley",
+          "amount": 0.0,
+          "date": "2026-02-25",
+          "type": "Yom HaShoah - FY26"
+        },
+        {
           "donorName": "Nancy Gordon",
           "amount": 0.0,
           "date": "2026-02-25",
@@ -2536,60 +2613,6 @@
           "amount": 0.0,
           "date": "2026-02-25",
           "type": "Yom HaZikaron - FY26"
-        },
-        {
-          "donorName": "susie meltzer",
-          "amount": 0.0,
-          "date": "2026-02-25",
-          "type": "Yom HaZikaron - FY26"
-        },
-        {
-          "donorName": "Elizabeth Weinrib",
-          "amount": 0.0,
-          "date": "2026-02-25",
-          "type": "Yom HaShoah - FY26 - Donations"
-        },
-        {
-          "donorName": "OMER LESSER-SAZIR",
-          "amount": 0.0,
-          "date": "2026-02-25",
-          "type": "Yom HaShoah - FY26"
-        },
-        {
-          "donorName": "OMER LESSER-SAZIR",
-          "amount": 0.0,
-          "date": "2026-02-25",
-          "type": "Yom HaZikaron - FY26"
-        },
-        {
-          "donorName": "Phil Raimi",
-          "amount": 0.0,
-          "date": "2026-02-25",
-          "type": "Yom HaZikaron - FY26"
-        },
-        {
-          "donorName": "Howard Somers",
-          "amount": 0.0,
-          "date": "2026-02-25",
-          "type": "Yom HaZikaron - FY26"
-        },
-        {
-          "donorName": "Efrat Ling",
-          "amount": 0.0,
-          "date": "2026-02-25",
-          "type": "Yom HaZikaron - FY26"
-        },
-        {
-          "donorName": "Beverly Larner",
-          "amount": 0.0,
-          "date": "2026-02-25",
-          "type": "Yom HaZikaron - FY26"
-        },
-        {
-          "donorName": "Polina Ofer",
-          "amount": 0.0,
-          "date": "2026-02-25",
-          "type": "Yom HaZikaron - FY26"
         }
       ]
     },
@@ -2602,7 +2625,7 @@
       "lybuntCount": 18,
       "lybuntAmount": 159348.0,
       "sybuntCount": 2,
-      "recentGifts30d": 2,
+      "recentGifts30d": 4,
       "topDonors": [
         {
           "name": "Arlene Rosen",
@@ -2910,6 +2933,18 @@
       ],
       "recentActivity": [
         {
+          "donorName": "Sharon R. Davidson",
+          "amount": 200.0,
+          "date": "2026-02-23",
+          "type": "Lion of Judah Luncheon - FY26 - Event"
+        },
+        {
+          "donorName": "Jennifer Dolin",
+          "amount": 200.0,
+          "date": "2026-02-22",
+          "type": "Lion of Judah Luncheon - FY26 - Event"
+        },
+        {
           "donorName": "Alexandra Shubin Hirschhorn",
           "amount": 598.0,
           "date": "2026-02-16",
@@ -2932,7 +2967,7 @@
       "lybuntCount": 3,
       "lybuntAmount": 2586.0,
       "sybuntCount": 0,
-      "recentGifts30d": 6,
+      "recentGifts30d": 3,
       "topDonors": [
         {
           "name": "Anonymous Anonymous",
@@ -3095,24 +3130,6 @@
           "amount": 1000.0,
           "date": "2026-02-12",
           "type": "SD AJMA Medical Mission to Israel - FY26"
-        },
-        {
-          "donorName": "John Van Cleef",
-          "amount": 250.0,
-          "date": "2026-02-12",
-          "type": "The Community Trip - CY27"
-        },
-        {
-          "donorName": "Marsha Lewis",
-          "amount": 250.0,
-          "date": "2026-02-11",
-          "type": "The Community Trip - CY27"
-        },
-        {
-          "donorName": "Andrew Lewis",
-          "amount": 250.0,
-          "date": "2026-02-11",
-          "type": "The Community Trip - CY27"
         }
       ]
     },
@@ -3260,8 +3277,8 @@
   ],
   "kpis": {
     "totalPortfolioDonors": 31252,
-    "totalLYBUNT": 1164,
-    "totalRecognitionFY26": 7093934.61,
+    "totalLYBUNT": 1163,
+    "totalRecognitionFY26": 6611643.31,
     "avgPortfolioSize": 3906
   }
 }
