@@ -374,7 +374,8 @@ td.num { text-align: right; font-variant-numeric: tabular-nums; font-family: var
   cursor: grab;
 }
 .mermaid-wrap.is-panning { cursor: grabbing; user-select: none; }
-.mermaid-wrap .mermaid { transform: scale(1.5); transform-origin: top center; margin-bottom: 200px; }
+.mermaid-wrap { overflow: auto; max-height: 80vh; }
+.mermaid-wrap .mermaid { transform: scale(1.5); transform-origin: top left; margin-bottom: 300px; margin-right: -50%; }
 
 .zoom-controls {
   position: absolute; top: 8px; right: 8px;
@@ -972,14 +973,14 @@ function zoomDiagram(btn, factor) {
   var next = Math.min(Math.max(current * factor, 0.5), 10);
   target.dataset.zoom = next;
   target.style.transform = 'scale(' + next + ')';
-  target.style.transformOrigin = 'top center';
+  target.style.transformOrigin = 'top left';
 }
 function resetZoom(btn) {
   var wrap = btn.closest('.mermaid-wrap');
   var target = wrap.querySelector('.mermaid');
   target.dataset.zoom = INITIAL_ZOOM;
   target.style.transform = 'scale(' + INITIAL_ZOOM + ')';
-  target.style.transformOrigin = 'top center';
+  target.style.transformOrigin = 'top left';
 }
 document.querySelectorAll('.mermaid-wrap').forEach(function(wrap) {
   wrap.addEventListener('wheel', function(e) {
