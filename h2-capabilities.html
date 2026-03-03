@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@page {
+  size: letter;
+  margin: 0.9in 1in;
+  @bottom-center {
+    content: counter(page);
+    font-family: 'Inter', sans-serif;
+    font-size: 9px;
+    color: #999;
+  }
+}
+
+:root {
+  --text: #1a1a1a;
+  --secondary: #444;
+  --muted: #888;
+  --rule: #d4d0c8;
+  --bg: #faf8f5;
+  --card: #f3f0eb;
+  --accent: #2a5a8c;
+  --accent-light: #eef3f8;
+  --warm: #c4956a;
+  --green: #2d7850;
+  --red: #a03030;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Source Serif 4', Georgia, serif;
+  color: var(--text);
+  background: white;
+  line-height: 1.75;
+  font-size: 10.5pt;
+}
+
+h1 {
+  font-size: 28pt;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.5px;
+  margin-bottom: 8px;
+}
+
+h2 {
+  font-family: 'Inter', sans-serif;
+  font-size: 8.5pt;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  color: var(--muted);
+  margin-top: 36pt;
+  margin-bottom: 14pt;
+  padding-bottom: 8pt;
+  border-bottom: 0.75px solid var(--rule);
+  page-break-after: avoid;
+}
+
+h3 {
+  font-size: 14pt;
+  font-weight: 600;
+  line-height: 1.3;
+  margin-top: 24pt;
+  margin-bottom: 8pt;
+  page-break-after: avoid;
+}
+
+h4 {
+  font-family: 'Inter', sans-serif;
+  font-size: 10pt;
+  font-weight: 600;
+  color: var(--accent);
+  margin-top: 14pt;
+  margin-bottom: 6pt;
+}
+
+p {
+  margin-bottom: 12pt;
+  color: var(--secondary);
+}
+
+p strong { color: var(--text); font-weight: 600; }
+
+.sans { font-family: 'Inter', sans-serif; }
+.mono { font-family: 'JetBrains Mono', monospace; font-size: 9.5pt; }
+.right { text-align: right; }
+.muted { color: var(--muted); }
+
+.header {
+  margin-bottom: 32pt;
+  padding-bottom: 20pt;
+  border-bottom: 0.75px solid var(--rule);
+}
+
+.header .org {
+  font-family: 'Inter', sans-serif;
+  font-size: 8pt;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  color: var(--muted);
+  margin-bottom: 16pt;
+}
+
+.header .period {
+  font-family: 'Inter', sans-serif;
+  font-size: 10pt;
+  color: var(--secondary);
+  margin-bottom: 0;
+}
+
+.metrics {
+  display: flex;
+  gap: 0;
+  margin: 20pt 0;
+  border-top: 0.75px solid var(--rule);
+  border-bottom: 0.75px solid var(--rule);
+}
+
+.metric {
+  flex: 1;
+  padding: 16pt 12pt;
+  text-align: center;
+}
+
+.metric:not(:last-child) {
+  border-right: 0.75px solid var(--rule);
+}
+
+.metric .value {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 20pt;
+  font-weight: 500;
+  color: var(--text);
+  line-height: 1;
+  margin-bottom: 4pt;
+}
+
+.metric .label {
+  font-family: 'Inter', sans-serif;
+  font-size: 7.5pt;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--muted);
+}
+
+.metric .context {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 8pt;
+  color: var(--accent);
+  margin-top: 4pt;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 9.5pt;
+  margin: 12pt 0;
+}
+
+thead th {
+  font-family: 'Inter', sans-serif;
+  font-size: 7.5pt;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--muted);
+  text-align: left;
+  padding: 6pt 8pt;
+  border-bottom: 1.5px solid var(--text);
+}
+
+thead th.right { text-align: right; }
+
+tbody td {
+  padding: 8pt 8pt;
+  border-bottom: 0.5px solid var(--rule);
+  color: var(--secondary);
+}
+
+tbody tr:last-child td {
+  border-bottom: 1px solid var(--text);
+}
+
+.callout {
+  margin: 20pt 0;
+  padding: 14pt 18pt;
+  background: var(--accent-light);
+  border-left: 2.5px solid var(--accent);
+  font-size: 10pt;
+  line-height: 1.65;
+  color: var(--secondary);
+}
+.callout strong { color: var(--text); }
+
+.callout-warm {
+  margin: 20pt 0;
+  padding: 14pt 18pt;
+  background: #fdf6f0;
+  border-left: 2.5px solid var(--warm);
+  font-size: 10pt;
+  line-height: 1.65;
+  color: var(--secondary);
+}
+.callout-warm strong { color: var(--text); }
+
+.tag {
+  display: inline-block;
+  font-family: 'Inter', sans-serif;
+  font-size: 7pt;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 2pt 6pt;
+  border-radius: 3pt;
+  margin-right: 4pt;
+  vertical-align: middle;
+}
+.tag-live { background: #e6f4ec; color: var(--green); }
+.tag-partial { background: #fef3e0; color: #b07820; }
+.tag-planned { background: #fce8e8; color: var(--red); }
+.tag-built { background: var(--accent-light); color: var(--accent); }
+.tag-active { background: #e6f4ec; color: var(--green); }
+.tag-spec { background: #fef3e0; color: #b07820; }
+
+.position-card {
+  margin: 16pt 0;
+  padding: 18pt 20pt;
+  background: var(--card);
+  border-radius: 4pt;
+  page-break-inside: avoid;
+}
+
+.position-card h3 {
+  margin-top: 0;
+  margin-bottom: 4pt;
+  font-size: 13pt;
+}
+
+.position-card .status {
+  font-family: 'Inter', sans-serif;
+  font-size: 8pt;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10pt;
+}
+
+.position-card .systems {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 8.5pt;
+  color: var(--accent);
+  margin-bottom: 10pt;
+}
+
+.position-card p {
+  font-size: 10pt;
+  margin-bottom: 6pt;
+}
+
+.position-card ul {
+  margin: 6pt 0 0 18pt;
+  font-size: 9.5pt;
+  color: var(--secondary);
+}
+
+.position-card li {
+  margin-bottom: 4pt;
+}
+
+.two-col {
+  display: flex;
+  gap: 20pt;
+}
+
+.two-col > div {
+  flex: 1;
+}
+
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="org">Jewish Federation of San Diego</div>
+  <h1>H2: Systems, Capabilities<br>&amp; Position Coverage</h1>
+  <p class="period">February 2026 &mdash; Internal Reference</p>
+</div>
+
+<p>
+H2 is an AI operations platform deployed on OpenClaw with direct API access to 20+ Federation
+systems. It runs parallel sub-agents, operates on scheduled cron jobs, and coordinates across
+departments. This document catalogs every connected system and maps H2's capabilities to the
+staff positions it can perform or substantially augment.
+</p>
+
+<p>
+The model is not replacement. It is leverage. Staff shift from building deliverables to
+reviewing them, from chasing data to making decisions, from transaction processing to
+exception handling.
+</p>
+
+<div class="metrics">
+  <div class="metric">
+    <div class="value">20+</div>
+    <div class="label">Live Systems</div>
+  </div>
+  <div class="metric">
+    <div class="value">5</div>
+    <div class="label">Voice Agents</div>
+  </div>
+  <div class="metric">
+    <div class="value">15</div>
+    <div class="label">Projects Shipped</div>
+  </div>
+  <div class="metric">
+    <div class="value">13</div>
+    <div class="label">Positions Covered</div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════ -->
+<h2>Connected Systems</h2>
+
+<h3>Finance &amp; Accounting</h3>
+<table>
+  <thead>
+    <tr><th>System</th><th>Capabilities</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Sage Intacct</strong> <span class="tag tag-live">LIVE</span></td>
+      <td>GL actuals, budgets, trial balance, financial statements, budget vs actual, restricted fund tracking. SQLite shadow DB with 94K GL rows; live API access pending.</td>
+    </tr>
+    <tr>
+      <td><strong>Ramp</strong> <span class="tag tag-live">LIVE</span></td>
+      <td>Full transaction history, card management, receipt compliance, reimbursements, bills, policy violation detection, department coding, vendor analysis.</td>
+    </tr>
+    <tr>
+      <td><strong>Stripe</strong> (6 accounts) <span class="tag tag-live">LIVE</span></td>
+      <td>Charges, balance transactions, refunds, disputes, fee analysis across GiveCloud, WeTravel, FormAssembly, Webconnex, JotForm, and Israel Unfiltered accounts.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Fundraising &amp; CRM</h3>
+<table>
+  <thead>
+    <tr><th>System</th><th>Capabilities</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Salesforce NPC</strong> <span class="tag tag-live">LIVE</span></td>
+      <td>Full SOQL: donors, gifts, pledges, campaigns, recognition credits, LYBUNT/SYBUNT, Person Accounts, CampaignMembers, household rollups, DRM portfolios.</td>
+    </tr>
+    <tr>
+      <td><strong>GiveCloud</strong> <span class="tag tag-live">LIVE</span></td>
+      <td>Contributions, supporters, products, recurring gifts, event registrations with per-ticket attendee data extraction.</td>
+    </tr>
+    <tr>
+      <td><strong>WealthEngine</strong> <span class="tag tag-live">LIVE</span></td>
+      <td>Wealth screening: capacity scores, asset ranges, giving history, P2G scores. 2,568 donors screened, 600 calls/min capacity.</td>
+    </tr>
+    <tr>
+      <td><strong>HubSpot</strong> <span class="tag tag-live">LIVE</span></td>
+      <td>Marketing engagement: email opens, clicks, ghost/dormant analysis, audience segmentation.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Operations &amp; Productivity</h3>
+<table>
+  <thead>
+    <tr><th>System</th><th>Capabilities</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Microsoft Graph</strong> <span class="tag tag-live">LIVE</span></td>
+      <td>Send/read email (H2@ and davidf@), calendar, SharePoint file access across Accounting, IT, and team sites.</td>
+    </tr>
+    <tr>
+      <td><strong>Monday.com</strong> <span class="tag tag-live">LIVE</span></td>
+      <td>Query and update boards: Grants FY26, Lion of Judah, Marketing Requests, Employee Onboarding, Corporate Insurance.</td>
+    </tr>
+    <tr>
+      <td><strong>Ecobee</strong> <span class="tag tag-live">LIVE</span></td>
+      <td>HVAC monitoring: thermostat readings, alerts, temperature history for all Federation buildings. Server room protection.</td>
+    </tr>
+    <tr>
+      <td><strong>GitHub</strong> <span class="tag tag-live">LIVE</span></td>
+      <td>Full org repo access: issues, PRs, CI/CD, code review, deployments. Cursor Cloud Agents for autonomous coding.</td>
+    </tr>
+    <tr>
+      <td><strong>Formbricks</strong> <span class="tag tag-live">LIVE</span></td>
+      <td>Internal survey creation, response collection and analysis.</td>
+    </tr>
+    <tr>
+      <td><strong>DocuSeal</strong> <span class="tag tag-live">LIVE</span></td>
+      <td>E-signature workflows: templates, send for signing, status tracking.</td>
+    </tr>
+    <tr>
+      <td><strong>Lob</strong> <span class="tag tag-live">LIVE</span></td>
+      <td>Direct mail: address verification, letter printing, physical mailing from 4950 Murphy Canyon Rd.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Communication &amp; Voice</h3>
+<table>
+  <thead>
+    <tr><th>System</th><th>Capabilities</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Telegram + Slack</strong> <span class="tag tag-live">LIVE</span></td>
+      <td>Direct messaging, group chat, reactions, inline buttons, cross-channel routing.</td>
+    </tr>
+    <tr>
+      <td><strong>ElevenLabs + Twilio</strong> <span class="tag tag-live">LIVE</span></td>
+      <td>5 voice agents with dedicated phone numbers. Text-to-speech, outbound/inbound calls, SMS.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Pending Connections</h3>
+<table>
+  <thead>
+    <tr><th>System</th><th>What It Unlocks</th><th>Status</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Paylocity</strong></td>
+      <td>Payroll data, employee records, PTO, benefits, ghost employee detection, functional expense allocation</td>
+      <td><span class="tag tag-planned">API AGREEMENT SIGNED</span></td>
+    </tr>
+    <tr>
+      <td><strong>Bank API</strong></td>
+      <td>Real-time cash position, transaction feeds, automated bank reconciliation</td>
+      <td><span class="tag tag-planned">IN DISCUSSION</span></td>
+    </tr>
+    <tr>
+      <td><strong>Sage Intacct (Live)</strong></td>
+      <td>Real-time GL queries, direct JE posting (replacing SQLite shadow)</td>
+      <td><span class="tag tag-planned">IN DISCUSSION</span></td>
+    </tr>
+    <tr>
+      <td><strong>Verkada</strong></td>
+      <td>Security camera feeds, occupancy tracking, facilities monitoring</td>
+      <td><span class="tag tag-partial">KEYS READY</span></td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- ═══════════════════════════════════════════════════ -->
+<h2>Projects Shipped</h2>
+
+<table>
+  <thead>
+    <tr><th>Project</th><th>Description</th></tr>
+  </thead>
+  <tbody>
+    <tr><td><strong>Federation Analytics Platform</strong></td><td>16-dashboard suite on GitHub Pages. Finance, Development, Facilities, Operations, Project Tracker. Daily automated refresh at 6 AM.</td></tr>
+    <tr><td><strong>Virtual Accounting Team</strong></td><td>4 AI agent roles (Internal Auditor, Revenue Accountant, Assistant Controller, FP&amp;A) with weekly cron schedules, SharePoint deliverables, and escalation rules.</td></tr>
+    <tr><td><strong>Donor Intelligence Pipeline</strong></td><td>1,320 prospect profiles, 788 household rollups, WealthEngine screening, Share of Wallet analysis, $11.9M capacity gap identified.</td></tr>
+    <tr><td><strong>Finance Committee Report Suite</strong></td><td>Three reports (Summary, Financial Statements, Operations) as PDF + PowerPoint from real Sage/SF/Ramp data.</td></tr>
+    <tr><td><strong>Journal Entry Generator</strong></td><td>Auto-classifies Salesforce gifts to Sage GL accounts using Jessica's coding map. 100% classification rate on 507 gifts ($3.57M).</td></tr>
+    <tr><td><strong>Internal Audit System</strong></td><td>Weekly scans across Ramp, Stripe, SF, Sage. Findings tracker synced to SharePoint with escalation rules. 35 actionable findings in first run.</td></tr>
+    <tr><td><strong>Continuous Close</strong></td><td>10-module monthly reconciliation: GC&harr;Stripe, GC&harr;SF, Designation mapping, Revenue&harr;GL, Pledge aging.</td></tr>
+    <tr><td><strong>GiveCloud &harr; SF Bridge</strong></td><td>Reconciliation audit: 340 missing CampaignMembers, 11 unsplit combos, 118 missing attendees identified.</td></tr>
+    <tr><td><strong>Birthday Card Automation</strong></td><td>Monthly cron: SF birthdays &rarr; 6 segmented lists &rarr; Excel to Sharon.</td></tr>
+    <tr><td><strong>Donor Restriction Release</strong></td><td>ASC 958 compliant: detect unreleased restricted funds, generate release JEs. $2.48M processed in FY26.</td></tr>
+    <tr><td><strong>CFO Daily Brief</strong></td><td>Exception-based morning brief: Ramp violations, budget overruns, revenue pacing, system health. No noise.</td></tr>
+    <tr><td><strong>SF Database Cleanup</strong></td><td>Reduced ~74K to ~44K active accounts. 29K archived, 18K contradictions fixed, 7K limbo synced.</td></tr>
+    <tr><td><strong>Deceased Donor Audit</strong></td><td>3,177 candidates identified, 97 confirmed via web search. Awaiting bulk SF update.</td></tr>
+    <tr><td><strong>Ramp Analysis</strong></td><td>Receipt compliance + Shinshinim stipend utilization. Identified 185 miscoded transactions.</td></tr>
+    <tr><td><strong>FedGive</strong> (spec)</td><td>GiveCloud + Webconnex replacement. Cloudflare Workers + D1 + Stripe + SF direct. $11.5-22K/yr savings.</td></tr>
+  </tbody>
+</table>
+
+<!-- ═══════════════════════════════════════════════════ -->
+<h2>Voice Agents</h2>
+
+<table>
+  <thead>
+    <tr><th>Agent</th><th>Phone</th><th>Purpose</th><th>Available To</th></tr>
+  </thead>
+  <tbody>
+    <tr><td><strong>Dalia</strong></td><td class="mono">619-345-4232</td><td>Donor thank-you calls</td><td>Advancement team</td></tr>
+    <tr><td><strong>Mira</strong></td><td class="mono">619-626-2549</td><td>DRM portfolio assistant</td><td>DRMs</td></tr>
+    <tr><td><strong>Hala</strong></td><td class="mono">619-853-0227</td><td>Policy Q&amp;A bot</td><td>All staff</td></tr>
+    <tr><td><strong>Scout</strong></td><td class="mono">619-374-0587</td><td>Team data requests</td><td>All staff</td></tr>
+    <tr><td><strong>H2</strong></td><td class="mono">619-612-5503</td><td>Personal assistant</td><td>David only</td></tr>
+  </tbody>
+</table>
+
+<!-- ═══════════════════════════════════════════════════ -->
+<h2 style="page-break-before: always;">Positions H2 Can Perform</h2>
+
+<p>
+H2 maps to 13 distinct staff positions across finance, development, operations, and technology.
+Four of these are already running as scheduled agents in the Virtual Accounting Team. The rest
+represent capabilities that are built and available on demand.
+</p>
+
+<p>
+Each position lists what H2 handles, which systems it uses, and where human judgment remains
+essential. The goal is not headcount elimination. It is capacity multiplication. Staff shift from
+building deliverables to reviewing them, from transaction processing to exception handling.
+</p>
+
+<div class="callout">
+  <strong>Governance model:</strong> H2 reads freely but writes nothing to production systems
+  without explicit human approval. All external communications (emails, letters, calls)
+  require authorization. Every proposed change is documented before execution.
+</div>
+
+<!-- ──── VIRTUAL ACCOUNTING TEAM ──── -->
+
+<h3>Virtual Accounting Team</h3>
+<p class="muted sans" style="font-size: 9pt;">These four roles run on weekly cron schedules with findings delivered via email and SharePoint. All built, tested on real data, and in production.</p>
+
+<div class="position-card">
+  <h3>Internal Auditor</h3>
+  <div class="status"><span class="tag tag-active">ACTIVE</span> Weekly full scan (Mon 8 AM) + daily quick scan (Tue-Fri 6 AM)</div>
+  <div class="systems">Ramp &bull; Stripe (6 accts) &bull; Salesforce &bull; Sage Intacct &bull; GiveCloud</div>
+  <p>Provides continuous, independent assurance over financial controls between annual external audits. The Federation had no internal auditor before H2. EisnerAmper does the external audit annually, but nobody was testing controls in real time.</p>
+  <ul>
+    <li><strong>Expense controls:</strong> Transaction sampling, duplicate payment detection ($6K El Al and $2.5K Wyndham flagged), receipt compliance scoring, policy violation monitoring, department coding accuracy</li>
+    <li><strong>Revenue integrity:</strong> Cross-system reconciliation (GiveCloud &harr; Stripe &harr; Salesforce), designation compliance, large gift review</li>
+    <li><strong>GL health:</strong> Journal entry testing (round numbers, missing memos, weekend entries), balance anomalies, vendor concentration risk</li>
+    <li><strong>Findings management:</strong> SharePoint tracker with escalation rules (CRITICAL 3d, HIGH 7d, MEDIUM 30d), deduplication, remediation verification</li>
+  </ul>
+  <p><strong>Human role:</strong> Investigate flagged items, determine if exceptions are legitimate, implement corrective actions. David reviews weekly report.</p>
+</div>
+
+<div class="position-card">
+  <h3>Revenue Accountant</h3>
+  <div class="status"><span class="tag tag-active">ACTIVE</span> Weekly reconciliation (Mon 7 AM) + monthly JE generation</div>
+  <div class="systems">Salesforce &bull; GiveCloud &bull; Stripe &bull; Sage Intacct &bull; SharePoint</div>
+  <p>Monitors the complete gift-to-GL pipeline from donor payment through journal entry posting. Reconciles four systems daily and generates proposed journal entries for closed months using Jessica's coding map (three-tier logic: campaign overrides, designation map, pattern fallback).</p>
+  <ul>
+    <li><strong>Three-way reconciliation:</strong> GiveCloud contributions &harr; Stripe charges &harr; Salesforce GiftTransactions, matched by amount/date/donor</li>
+    <li><strong>Journal entry generation:</strong> 100% classification rate on 507 gifts ($3.57M). Pass-throughs auto-excluded to liability accounts</li>
+    <li><strong>Campaign pacing:</strong> FY26 Annual Campaign at $7.37M of $11.5M goal (64.1%), with weekly projection to year-end</li>
+    <li><strong>Pledge management:</strong> Aging, allowance calculation, failed recurring payment alerts</li>
+    <li><strong>Designation compliance:</strong> Every gift verified against coding map. Unmapped designations flagged immediately</li>
+  </ul>
+  <p><strong>Human role:</strong> Jessica processes physical checks and complex gifts. James reviews and posts JEs. Revenue Accountant handles the routine coding, reconciliation, and compliance monitoring.</p>
+</div>
+
+<div class="position-card">
+  <h3>Assistant Controller</h3>
+  <div class="status"><span class="tag tag-active">ACTIVE</span> Weekly flux analysis (Mon 7:30 AM) + close-week daily support</div>
+  <div class="systems">Sage Intacct &bull; Ramp &bull; Salesforce &bull; SharePoint</div>
+  <p>Transforms month-end close from a multi-day manual effort into a review-and-approve process. Builds sub-schedules, runs variance analysis, generates draft financial statements, and tracks close progress.</p>
+  <ul>
+    <li><strong>Pre-close checklist:</strong> 3 days before month-end: are all Ramp transactions coded? Pending reimbursements? GiveCloud sync current? Recurring JEs posted?</li>
+    <li><strong>Trial balance review:</strong> 161 accounts tested in September. 22 TB anomalies, 19 BVA + 38 MoM variances auto-flagged</li>
+    <li><strong>Flux analysis:</strong> Month-over-month and budget-vs-actual for every GL account. Auto-generated narrative for variances >$5K or >10%</li>
+    <li><strong>Draft financial statements:</strong> P&amp;L, balance sheet, cash flow from Sage data in editorial PDF format</li>
+    <li><strong>Reconciliation tracking:</strong> Which accounts reconciled, pending, or overdue</li>
+  </ul>
+  <p><strong>Human role:</strong> Joanna reviews draft statements, makes judgment calls on estimates and accruals, approves journal entries, signs off on close.</p>
+</div>
+
+<div class="position-card">
+  <h3>Financial Planning &amp; Analysis Analyst</h3>
+  <div class="status"><span class="tag tag-active">ACTIVE</span> Weekly KPI refresh (Mon 9 AM) + monthly narrative + quarterly packets</div>
+  <div class="systems">Sage Intacct &bull; Ramp &bull; Salesforce &bull; Stripe &bull; GiveCloud &bull; All dashboards</div>
+  <p>David's analytical right hand. Synthesizes data across every system to produce narratives, forecasts, board packets, and dashboards. Maintains the 16-dashboard Federation Analytics Platform with daily automated refresh.</p>
+  <ul>
+    <li><strong>Financial narrative:</strong> Auto-generated "story behind the numbers" for each month. Why revenue is up/down, what's driving expense variance, where risks are</li>
+    <li><strong>Board/committee packets:</strong> Finance Committee report, Operations report, campaign update in editorial PDF format</li>
+    <li><strong>Campaign pacing &amp; forecasting:</strong> FY26 recognition vs goal with YoY comparison and projection to year-end</li>
+    <li><strong>Scenario modeling:</strong> What-if analysis on campaign shortfalls, headcount changes, grant timing</li>
+    <li><strong>Dashboard platform:</strong> 16 live dashboards covering Finance, Development, Facilities, Operations, and a Project Tracker with 95 items</li>
+  </ul>
+  <p><strong>Human role:</strong> David reviews narratives, adjusts forecasts based on institutional knowledge, presents to board. H2 does the math; David provides the judgment.</p>
+</div>
+
+<!-- ──── ADVANCEMENT SERVICES ──── -->
+
+<h3>Advancement Services</h3>
+
+<div class="position-card">
+  <h3>Prospect Research Analyst</h3>
+  <div class="status"><span class="tag tag-built">BUILT</span> On-demand + batch via sub-agents</div>
+  <div class="systems">WealthEngine &bull; Salesforce &bull; Brave Search &bull; SEC/FEC/990 data &bull; Nonprofit board DB</div>
+  <p>The Donor Intelligence Pipeline has screened 2,568 donors through WealthEngine, built 1,320 detailed profiles, and identified $11.9M in capacity gaps. Parallel sub-agents research prospects at ~$0.15 per profile, pulling public filings, board memberships, real estate, and giving history.</p>
+  <ul>
+    <li><strong>Wealth screening:</strong> Bulk WealthEngine screening with capacity scoring. 11 donors at $25MM+, 113 at $10MM+</li>
+    <li><strong>Share of Wallet:</strong> Giving vs capacity analysis. Median SOW 12.5% across screened donors</li>
+    <li><strong>Web research:</strong> SEC filings, FEC contributions, 990 board listings, real estate records, charitable giving databases</li>
+    <li><strong>Board network mapping:</strong> 113 local nonprofits, 1,650 board members, 109 matched to Salesforce contacts</li>
+    <li><strong>Profile consolidation:</strong> Multi-source data merged into master profiles and pushed to Salesforce (711 contacts + 291 accounts updated)</li>
+  </ul>
+  <p><strong>Human role:</strong> Relationship intelligence, cultivation strategy, face-to-face prospect qualification, portfolio prioritization.</p>
+</div>
+
+<div class="position-card">
+  <h3>Gift Processing Coordinator</h3>
+  <div class="status"><span class="tag tag-spec">SPEC COMPLETE</span> Gift Entry Automation pipeline designed, partially built</div>
+  <div class="systems">Salesforce &bull; GiveCloud &bull; Stripe &bull; DocuSeal &bull; Lob &bull; ElevenLabs (Dalia)</div>
+  <p>End-to-end gift processing from check scan through acknowledgment. The pipeline spec covers OCR, donor matching with confidence scoring, GiftTransaction creation, tiered acknowledgment letters, physical mailing, and voice thank-you calls for major gifts.</p>
+  <ul>
+    <li><strong>Donor matching:</strong> Fuzzy match with confidence scoring (90%+ auto, 70-89% top 3 candidates, &lt;70% manual)</li>
+    <li><strong>Acknowledgment tiers:</strong> All gifts (tax receipt), $250+ (enhanced), $1K+ (voice call via Dalia), $5K+ (handwritten note), $25K+ (ED call)</li>
+    <li><strong>Direct mail:</strong> Physical letters via Lob from Federation return address</li>
+    <li><strong>Event registration sync:</strong> GiveCloud Bridge creates missing CampaignMembers and splits combo transactions</li>
+  </ul>
+  <p><strong>Human role:</strong> Physical check handling, low-confidence donor matches, memo-to-fund mapping edge cases, signer approval.</p>
+</div>
+
+<div class="position-card">
+  <h3>Development Operations Analyst</h3>
+  <div class="status"><span class="tag tag-built">BUILT</span> Multiple projects, on-demand</div>
+  <div class="systems">Salesforce &bull; GiveCloud &bull; HubSpot &bull; Monday.com &bull; Formbricks</div>
+  <p>The data backbone of advancement services. Maintains Salesforce data hygiene, generates DRM portfolio dashboards, runs LYBUNT/SYBUNT analysis, and handles birthday card automation.</p>
+  <ul>
+    <li><strong>Data hygiene:</strong> Reduced SF from 74K to 44K active accounts. Deceased donor audit (3,177 candidates). Household greeting maintenance</li>
+    <li><strong>DRM dashboards:</strong> 10 parameterized portfolio dashboards with recognition trends, pipeline, and engagement scoring</li>
+    <li><strong>Segmentation:</strong> Event invite lists (Spark Launch: 1,249 contacts segmented by recognition tier + Goldberg list). LYBUNT/SYBUNT targeting</li>
+    <li><strong>HubSpot analysis:</strong> 43.8% ghost contacts identified, engagement scoring, win-back audience building</li>
+    <li><strong>Workflow tracking:</strong> Monday.com board management for grants, LOJ, marketing requests</li>
+  </ul>
+  <p><strong>Human role:</strong> Donor relationship judgment, event logistics, vendor management, strategic planning.</p>
+</div>
+
+<!-- ──── OPERATIONS ──── -->
+
+<h3>Operations &amp; Administration</h3>
+
+<div class="position-card">
+  <h3>AP &amp; Expense Analyst</h3>
+  <div class="status"><span class="tag tag-spec">DESIGNED</span> Next in virtual accounting team build queue</div>
+  <div class="systems">Ramp &bull; Sage Intacct &bull; Salesforce (staff/dept mapping)</div>
+  <p>Automates the transactional grind of accounts payable: receipt chasing, coding review, reimbursement processing, vendor analysis, and budget gatekeeping.</p>
+  <ul>
+    <li><strong>Receipt compliance:</strong> Auto-remind cardholders with missing receipts after 48 hours. Escalate to manager after 5 days. Current staff compliance: 92.9%</li>
+    <li><strong>Coding accuracy:</strong> Verify Ramp categories match Sage GL. Flagged 185 Shinshinim transactions miscoded to Administration</li>
+    <li><strong>Vendor analysis:</strong> Monthly spend by vendor, concentration risk (any vendor >15% of total), new vendor flagging</li>
+    <li><strong>1099 preparation:</strong> Track vendor payments approaching $600 threshold, maintain W-9 status</li>
+    <li><strong>Budget gatekeeping:</strong> Check department spend against budget before approving card limit increases</li>
+  </ul>
+  <p><strong>Human role:</strong> Approve payments, handle vendor disputes, policy exception judgment calls.</p>
+</div>
+
+<div class="position-card">
+  <h3>Compliance Monitor</h3>
+  <div class="status"><span class="tag tag-spec">DESIGNED</span> In virtual accounting team scope</div>
+  <div class="systems">Sage Intacct &bull; Salesforce &bull; Ramp &bull; SharePoint &bull; Policy documents</div>
+  <p>Systematic compliance testing that nobody is doing today. ASC 958 restricted fund tracking, 990 data preparation, document retention, policy adherence monitoring, and continuous audit readiness.</p>
+  <ul>
+    <li><strong>Restricted fund compliance:</strong> $2.48M in restriction releases processed in FY26. Verify coding per designation, flag misclassified restricted gifts</li>
+    <li><strong>990 data prep:</strong> Continuously compile compensation, program expenses, functional allocation, related party data</li>
+    <li><strong>Audit readiness:</strong> Maintain running file of reconciliations, supporting schedules, and management representations for EisnerAmper</li>
+    <li><strong>Filing calendar:</strong> Track 990, state registration, charitable solicitation deadlines with 30-day advance alerts</li>
+    <li><strong>Functional expense allocation:</strong> Monitor actual allocation against budgeted percentages (Admin 6.4% / Dev 17.4% / Programs 76.2%)</li>
+  </ul>
+  <p><strong>Human role:</strong> Policy interpretation, board governance support, external audit coordination, filing sign-off.</p>
+</div>
+
+<div class="position-card">
+  <h3>Facilities Monitor</h3>
+  <div class="status"><span class="tag tag-built">BUILT</span> Runs 2-3x daily via heartbeat checks</div>
+  <div class="systems">Ecobee &bull; Verkada (pending activation) &bull; Slack</div>
+  <p>Monitors all building thermostats with intelligent alerting. Critical alerts (server room >80&deg;F, thermostat offline) fire even during quiet hours. Non-critical alerts (room >76&deg;F, overnight setback swings) only during business hours.</p>
+  <ul>
+    <li>Real-time HVAC monitoring across all Federation buildings</li>
+    <li>Server room temperature protection with 24/7 alerting</li>
+    <li>Temperature trend analysis and anomaly detection</li>
+    <li>Verkada camera integration ready when activated (occupancy tracking, security monitoring)</li>
+  </ul>
+  <p><strong>Human role:</strong> Physical maintenance, vendor coordination, space planning, emergency response.</p>
+</div>
+
+<div class="position-card">
+  <h3>Executive Assistant to CFO</h3>
+  <div class="status"><span class="tag tag-active">ACTIVE</span> Always on via Telegram + Slack + Voice</div>
+  <div class="systems">Microsoft Graph &bull; Monday.com &bull; Telegram &bull; Slack &bull; ElevenLabs &bull; All data systems</div>
+  <p>Available 24/7 via chat, email, and phone. Manages email triage, calendar monitoring, meeting prep, action item tracking, and real-time data lookups. Can pull from any connected system on demand and deliver answers in seconds.</p>
+  <ul>
+    <li><strong>Email:</strong> Read, triage, draft, and send from H2@ or davidf@ (with approval for external)</li>
+    <li><strong>Calendar &amp; scheduling:</strong> Upcoming event alerts, meeting prep with relevant data pre-pulled</li>
+    <li><strong>Data on demand:</strong> Any question about donors, finances, operations answered in real time from live systems</li>
+    <li><strong>Document generation:</strong> Reports, letters, analyses generated and emailed on request</li>
+    <li><strong>Voice:</strong> Call H2 at 619-612-5503 for hands-free data access</li>
+  </ul>
+  <p><strong>Human role:</strong> In-person meeting support, travel arrangements, confidential document handling, relationship management.</p>
+</div>
+
+<div class="position-card">
+  <h3>Marketing Data Analyst</h3>
+  <div class="status"><span class="tag tag-built">BUILT</span> On-demand analysis</div>
+  <div class="systems">HubSpot &bull; Salesforce &bull; Formbricks &bull; Monday.com</div>
+  <p>Email engagement analysis, audience segmentation, ghost and dormant contact identification, and marketing workflow tracking.</p>
+  <ul>
+    <li>HubSpot audit: 43.8% ghost contacts (never opened), 21.7% dormant, only 2 champions out of 5,000</li>
+    <li>Audience segmentation for events and campaigns (Spark Launch: 1,249 contacts across 2 tiers)</li>
+    <li>Survey creation and response analysis via Formbricks</li>
+    <li>Marketing request tracking via Monday.com</li>
+  </ul>
+  <p><strong>Human role:</strong> Creative strategy, content creation, brand voice, vendor/agency management.</p>
+</div>
+
+<div class="position-card">
+  <h3>IT Systems Administrator</h3>
+  <div class="status"><span class="tag tag-built">BUILT</span> Continuous via GitHub + Cursor + cron jobs</div>
+  <div class="systems">GitHub &bull; Cursor Cloud Agents &bull; SharePoint &bull; All API integrations</div>
+  <p>Manages the Federation's GitHub org (4 repos), deploys dashboard updates, monitors CI/CD pipelines, maintains all API integrations, and can spin up autonomous coding agents for development work.</p>
+  <ul>
+    <li>GitHub repo management: PRs, issues, CI monitoring, automated deployments</li>
+    <li>16-dashboard platform maintenance with daily 6 AM refresh cron</li>
+    <li>API integration health monitoring across 20+ systems</li>
+    <li>Cursor Cloud Agents for autonomous code changes with auto-branching and PR creation</li>
+    <li>Credential rotation and security hardening (completed Feb 25)</li>
+  </ul>
+  <p><strong>Human role:</strong> Network infrastructure, hardware, security policy, vendor management, user provisioning.</p>
+</div>
+
+<!-- ═══════════════════════════════════════════════════ -->
+<h2>How the Team Can Use H2</h2>
+
+<div class="callout-warm">
+  <strong>For any staff member:</strong> Ask David to route a request to H2. The more specific the ask,
+  the better the output. "Pull donor data" is vague. "Pull FY26 Annual Campaign donors over $5K who
+  are LYBUNT from FY25, sorted by recognition amount" is perfect. H2 can spin up parallel sub-agents
+  for complex tasks and deliver results via email, Slack, or dashboard.
+</div>
+
+<p><strong>Response time:</strong> Simple data pulls take seconds. Complex analysis (cross-system reconciliation, prospect research, report generation) takes 5-15 minutes via sub-agent. Scheduled reports arrive automatically on Monday mornings.</p>
+
+<p><strong>Voice access:</strong> Staff can call Scout (619-374-0587) for data requests, Mira (619-626-2549) for DRM portfolio questions, or Hala (619-853-0227) for policy Q&amp;A.</p>
+
+<p class="muted sans" style="margin-top: 36pt; font-size: 8.5pt; text-align: center;">
+  Generated by H2 &mdash; February 26, 2026 &mdash; Jewish Federation of San Diego
+</p>
+
+</body>
+</html>
