@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Cohort Retention Heatmap</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <style>
+        body { margin: 0; padding: 0; font-family: 'Outfit', 'Helvetica Neue', Arial, sans-serif; }
+        #chart { width: 100vw; height: 100vh; }
+    </style>
+</head>
+<body>
+    <div id="chart"></div>
+    <script>
+        // Load data from JSON file
+        fetch('../data/cohort-survival.json')
+            .then(response => response.json())
+            .then(data => {
+                // Cohort retention heatmap data
+                const cohorts = ['FY19', 'FY20', 'FY21', 'FY22', 'FY23', 'FY24', 'FY25'];
+                const years = ['Year 1', 'Year 2', 'Year 3', 'Year 4', 'Year 5', 'Year 6'];
+                
+                // Sample retention matrix (retention rates as percentages)
+                const retentionMatrix = [
+                    [65, 48, 38, 32, 28, 25],  // FY19
+                    [62, 45, 35, 29, 25, 22],  // FY20
+                    [68, 52, 42, 35, 32, null], // FY21
+                    [72, 58, 47, 39, null, null], // FY22
+                    [65, 48, 38, null, null, null], // FY23
+                    [70, 55, null, null, null, null], // FY24
+                    [69, null, null, null, null, null]  // FY25
+                ];
+                
+                // Convert nulls to NaN for proper handling
+                const cleanMatrix = retentionMatrix.map(row => 
+                    row.map(val => val === null ? NaN : val)
+                );
+                
+                const trace = {
+                    z: cleanMatrix,
+                    x: years,
+                    y: cohorts,
+                    type: 'heatmap',
+                    colorscale: [
+                        [0, '#f3f0eb'],
+                        [0.3, '#c4956a'],
+                        [0.6, '#2a5a8c'],
+                        [1, '#1a1a1a']
+                    ],
+                    text: cleanMatrix.map(row => 
+                        row.map(val => isNaN(val) ? '' : `${val}%`)
+                    ),
+                    texttemplate: '%{text}',
+                    textfont: {size: 12, color: 'white'},
+                    hoverongaps: false,
+                    hovertemplate: '<b>%{y}</b><br>%{x}: %{z}%<extra></extra>',
+                    showscale: true,
+                    colorbar: {
+                        title: 'Retention Rate (%)',
+                        titleside: 'right'
+                    }
+                };
+                
+                const layout = {
+                    title: {
+                        text: 'Donor Cohort Retention Heatmap',
+                        font: {size: 24, color: '#2a5a8c', family: 'Outfit, Helvetica Neue, Arial'},
+                        x: 0.5,
+                        xanchor: 'center'
+                    },
+                    xaxis: {
+                        title: 'Years Since First Gift',
+                        side: 'bottom'
+                    },
+                    yaxis: {
+                        title: 'First Gift Cohort',
+                        autorange: 'reversed'
+                    },
+                    font: {family: 'Outfit, Helvetica Neue, Arial', size: 12},
+                    margin: {t: 100, b: 80, l: 80, r: 100},
+                    plot_bgcolor: 'white',
+                    paper_bgcolor: 'white',
+                    annotations: [{
+                        x: 0.98,
+                        y: -0.15,
+                        xref: 'paper',
+                        yref: 'paper',
+                        text: 'Darker colors indicate higher retention rates',
+                        showarrow: false,
+                        font: {size: 10, color: '#666'},
+                        xanchor: 'right'
+                    }]
+                };
+                
+                const config = {responsive: true, displayModeBar: false};
+                
+                Plotly.newPlot('chart', [trace], layout, config);
+            })
+            .catch(error => {
+                console.error('Error loading data:', error);
+                document.getElementById('chart').innerHTML = '<p style="text-align: center; padding: 50px; color: #666;">Error loading chart data</p>';
+            });
+    </script>
+</body>
+</html>

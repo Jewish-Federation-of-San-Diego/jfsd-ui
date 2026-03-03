@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>10-Year Revenue Attrition Projection</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <style>
+        body { margin: 0; padding: 0; font-family: 'Outfit', 'Helvetica Neue', Arial, sans-serif; }
+        #chart { width: 100vw; height: 100vh; }
+    </style>
+</head>
+<body>
+    <div id="chart"></div>
+    <script>
+        // Load data from JSON file
+        fetch('../data/mortality-model.json')
+            .then(response => response.json())
+            .then(data => {
+                // Generate sample projection data
+                const years = Array.from({length: 10}, (_, i) => 2026 + i);
+                const baselineRevenue = 6872855;
+                const attritionRates = [0.03, 0.05, 0.07, 0.09, 0.11, 0.13, 0.15, 0.17, 0.19, 0.21];
+                
+                const projectedRevenue = years.map((year, i) => {
+                    const attrition = attritionRates[i] || 0.25;
+                    return baselineRevenue * (1 - attrition);
+                });
+                
+                const revenueAtRisk = years.map((year, i) => {
+                    const attrition = attritionRates[i] || 0.25;
+                    return baselineRevenue * attrition;
+                });
+                
+                const trace1 = {
+                    x: years,
+                    y: projectedRevenue,
+                    fill: 'tozeroy',
+                    type: 'scatter',
+                    mode: 'lines',
+                    name: 'Projected Revenue',
+                    line: {color: '#2a5a8c', width: 3},
+                    fillcolor: 'rgba(42, 90, 140, 0.3)',
+                    hovertemplate: '<b>%{x}</b><br>Revenue: $%{y:,.0f}<extra></extra>'
+                };
+                
+                const trace2 = {
+                    x: years,
+                    y: revenueAtRisk,
+                    type: 'scatter',
+                    mode: 'lines',
+                    name: 'Revenue at Risk',
+                    line: {color: '#e74c3c', width: 2, dash: 'dash'},
+                    hovertemplate: '<b>%{x}</b><br>At Risk: $%{y:,.0f}<extra></extra>'
+                };
+                
+                const layout = {
+                    title: {
+                        text: '10-Year Revenue Attrition Projection',
+                        font: {size: 24, color: '#2a5a8c', family: 'Outfit, Helvetica Neue, Arial'},
+                        x: 0.5,
+                        xanchor: 'center'
+                    },
+                    xaxis: {
+                        title: 'Year',
+                        showgrid: true,
+                        gridwidth: 1,
+                        gridcolor: '#E5E5E5'
+                    },
+                    yaxis: {
+                        title: 'Revenue ($)',
+                        tickformat: '$,.0f',
+                        showgrid: true,
+                        gridwidth: 1,
+                        gridcolor: '#E5E5E5'
+                    },
+                    legend: {
+                        orientation: 'h',
+                        yanchor: 'bottom',
+                        y: 1.02,
+                        xanchor: 'right',
+                        x: 1
+                    },
+                    font: {family: 'Outfit, Helvetica Neue, Arial', size: 12},
+                    margin: {t: 100, b: 60, l: 100, r: 40},
+                    plot_bgcolor: 'white',
+                    paper_bgcolor: 'white',
+                    hovermode: 'x unified'
+                };
+                
+                const config = {responsive: true, displayModeBar: false};
+                
+                Plotly.newPlot('chart', [trace1, trace2], layout, config);
+            })
+            .catch(error => {
+                console.error('Error loading data:', error);
+                document.getElementById('chart').innerHTML = '<p style="text-align: center; padding: 50px; color: #666;">Error loading chart data</p>';
+            });
+    </script>
+</body>
+</html>

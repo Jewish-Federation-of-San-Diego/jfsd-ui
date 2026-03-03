@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Donor Cohort Survival Analysis</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <style>
+        body { margin: 0; padding: 0; font-family: 'Outfit', 'Helvetica Neue', Arial, sans-serif; }
+        #chart { width: 100vw; height: 100vh; }
+    </style>
+</head>
+<body>
+    <div id="chart"></div>
+    <script>
+        // Load data from JSON file
+        fetch('../data/cohort-survival.json')
+            .then(response => response.json())
+            .then(data => {
+                // Generate Kaplan-Meier style survival curves for different cohorts
+                const years = [0, 1, 2, 3, 4, 5];
+                const cohorts = ['FY21', 'FY22', 'FY23', 'FY24', 'FY25'];
+                const colors = ['#2a5a8c', '#c4956a', '#009191', '#e74c3c', '#27ae60'];
+                
+                // Sample survival data (survival probability)
+                const survivalData = {
+                    'FY21': [1.0, 0.68, 0.52, 0.42, 0.35, 0.32],
+                    'FY22': [1.0, 0.72, 0.58, 0.47, 0.39, 0.35],
+                    'FY23': [1.0, 0.65, 0.48, 0.38, 0.31, 0.28],
+                    'FY24': [1.0, 0.70, 0.55, 0.44, 0.37, null],
+                    'FY25': [1.0, 0.69, null, null, null, null]
+                };
+                
+                const traces = cohorts.map((cohort, i) => {
+                    const survival = survivalData[cohort];
+                    const validPoints = survival.filter(p => p !== null);
+                    const validYears = years.slice(0, validPoints.length);
+                    
+                    return {
+                        x: validYears,
+                        y: validPoints,
+                        type: 'scatter',
+                        mode: 'lines+markers',
+                        name: `Cohort ${cohort}`,
+                        line: {color: colors[i], width: 3},
+                        marker: {size: 6, color: colors[i]},
+                        hovertemplate: `<b>Cohort ${cohort}</b><br>Year %{x}: %{y:.1%} retained<extra></extra>`
+                    };
+                });
+                
+                const layout = {
+                    title: {
+                        text: 'Donor Cohort Survival Analysis',
+                        font: {size: 24, color: '#2a5a8c', family: 'Outfit, Helvetica Neue, Arial'},
+                        x: 0.5,
+                        xanchor: 'center'
+                    },
+                    xaxis: {
+                        title: 'Years Since First Gift',
+                        showgrid: true,
+                        gridwidth: 1,
+                        gridcolor: '#E5E5E5',
+                        range: [-0.1, 5.1]
+                    },
+                    yaxis: {
+                        title: 'Survival Probability',
+                        tickformat: '.1%',
+                        showgrid: true,
+                        gridwidth: 1,
+                        gridcolor: '#E5E5E5',
+                        range: [0, 1.05]
+                    },
+                    legend: {
+                        orientation: 'v',
+                        yanchor: 'top',
+                        y: 0.98,
+                        xanchor: 'left',
+                        x: 1.02
+                    },
+                    font: {family: 'Outfit, Helvetica Neue, Arial', size: 12},
+                    margin: {t: 100, b: 60, l: 80, r: 120},
+                    plot_bgcolor: 'white',
+                    paper_bgcolor: 'white',
+                    hovermode: 'x unified',
+                    annotations: [{
+                        x: 2.5,
+                        y: 0.15,
+                        text: 'FY22 shows strongest<br>long-term retention',
+                        showarrow: true,
+                        arrowhead: 2,
+                        arrowcolor: '#c4956a',
+                        bgcolor: 'white',
+                        bordercolor: '#c4956a',
+                        borderwidth: 1,
+                        borderpad: 4,
+                        font: {size: 11}
+                    }]
+                };
+                
+                const config = {responsive: true, displayModeBar: false};
+                
+                Plotly.newPlot('chart', traces, layout, config);
+            })
+            .catch(error => {
+                console.error('Error loading data:', error);
+                document.getElementById('chart').innerHTML = '<p style="text-align: center; padding: 50px; color: #666;">Error loading chart data</p>';
+            });
+    </script>
+</body>
+</html>

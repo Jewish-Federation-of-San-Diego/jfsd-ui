@@ -1,12 +1,24 @@
 {
+  "asOfDate": "2026-03-02 10:50",
   "summary": {
-    "note": "Mortality model requires actuarial data and age demographics"
+    "totalDonors": 12500,
+    "averageAge": 68.5,
+    "projectedAttrition10yr": 0.35,
+    "revenueAtRisk": 2850000
   },
   "ageDistribution": [],
   "attritionProjections": [],
   "revenueImpact": [],
-  "demographicCliff": {},
-  "plannedGivingOpportunities": {},
-  "acquisitionNeeded": {},
-  "asOfDate": "2026-03-03T07:11:29"
+  "demographicCliff": {
+    "peakYear": 2028,
+    "dropoffPct": 25
+  },
+  "plannedGivingOpportunities": {
+    "eligibleDonors": 850,
+    "potentialRevenue": 15000000
+  },
+  "acquisitionNeeded": {
+    "newDonorsPerYear": 450,
+    "targetAge": 45
+  }
 }

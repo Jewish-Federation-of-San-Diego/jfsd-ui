@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JFSD Finance Report // H1 FY2026 // POP ART EDITION</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        /* WARHOL POP ART CSS */
+        @import url('https://fonts.googleapis.com/css2?family=Fredoka+One:wght@400&family=JetBrains+Mono:wght@400;700&family=Righteous:wght@400&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'JetBrains Mono', monospace;
+            line-height: 1.4;
+            background: linear-gradient(45deg, #FF1493 0%, #FF4500 25%, #00FFFF 50%, #FFD700 75%, #FF1493 100%);
+            background-size: 400% 400%;
+            animation: warholGradient 8s ease infinite;
+        }
+        
+        @keyframes warholGradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        /* HALFTONE DOTS OVERLAY */
+        .halftone-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: radial-gradient(circle, rgba(0,0,0,0.1) 2px, transparent 2px);
+            background-size: 20px 20px;
+            pointer-events: none;
+            z-index: 1;
+        }
+        
+        .container {
+            position: relative;
+            z-index: 2;
+            max-width: 1200px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            min-height: 100vh;
+        }
+        
+        /* SECTION STYLING */
+        .section {
+            padding: 60px 40px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border-bottom: 10px solid #000;
+            position: relative;
+        }
+        
+        .section:nth-child(even) {
+            background: #000;
+            color: #fff;
+        }
+        
+        .section:nth-child(odd) {
+            background: #fff;
+            color: #000;
+        }
+        
+        /* TYPOGRAPHY */
+        .warhol-title {
+            font-family: 'Righteous', cursive;
+            font-size: clamp(3rem, 8vw, 8rem);
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 30px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .warhol-subtitle {
+            font-family: 'Fredoka One', cursive;
+            font-size: clamp(1.5rem, 4vw, 3rem);
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        
+        .typewriter {
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 700;
+        }
+        
+        /* COLOR VARIATIONS */
+        .hot-pink { color: #FF1493; }
+        .electric-yellow { color: #FFD700; }
+        .cyan { color: #00FFFF; }
+        .orange { color: #FF4500; }
+        .white { color: #FFFFFF; }
+        
+        .bg-hot-pink { background-color: #FF1493; }
+        .bg-electric-yellow { background-color: #FFD700; }
+        .bg-cyan { background-color: #00FFFF; }
+        .bg-orange { background-color: #FF4500; }
+        .bg-black { background-color: #000000; }
+        .bg-white { background-color: #FFFFFF; }
+        
+        /* KPI GRID (WARHOL REPETITION) */
+        .kpi-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin: 40px 0;
+        }
+        
+        .kpi-card {
+            padding: 40px;
+            border: 8px solid #000;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .kpi-card::before {
+            content: '$';
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            font-size: 120px;
+            opacity: 0.1;
+            font-family: 'Righteous', cursive;
+        }
+        
+        .kpi-number {
+            font-family: 'Righteous', cursive;
+            font-size: clamp(2rem, 5vw, 4rem);
+            font-weight: 400;
+            margin-bottom: 10px;
+        }
+        
+        .kpi-label {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+        
+        /* SOUP CAN STYLE DATA BLOCKS */
+        .soup-can {
+            background: linear-gradient(to bottom, #FF1493 0%, #FF1493 30%, #fff 30%, #fff 70%, #FF4500 70%);
+            border: 6px solid #000;
+            border-radius: 10px;
+            padding: 30px;
+            margin: 20px 0;
+            text-align: center;
+            position: relative;
+        }
+        
+        .soup-can .label {
+            background: #FFD700;
+            color: #000;
+            padding: 10px 20px;
+            border: 3px solid #000;
+            border-radius: 50px;
+            font-family: 'Fredoka One', cursive;
+            font-size: 1.2rem;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+        
+        /* SPEECH BUBBLES FOR CALLOUTS */
+        .speech-bubble {
+            background: #FFD700;
+            color: #000;
+            padding: 20px 30px;
+            border-radius: 30px;
+            border: 5px solid #000;
+            position: relative;
+            margin: 30px 0;
+            font-family: 'Fredoka One', cursive;
+            font-size: 1.1rem;
+            text-align: center;
+        }
+        
+        .speech-bubble::after {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            left: 50px;
+            width: 0;
+            height: 0;
+            border: 20px solid transparent;
+            border-top-color: #000;
+        }
+        
+        .speech-bubble::before {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 53px;
+            width: 0;
+            height: 0;
+            border: 17px solid transparent;
+            border-top-color: #FFD700;
+        }
+        
+        /* CHARTS WITH WARHOL STYLING */
+        .chart-container {
+            position: relative;
+            height: 400px;
+            margin: 40px 0;
+            padding: 20px;
+            border: 8px solid #000;
+            background: #fff;
+        }
+        
+        /* COVER PAGE SPECIAL */
+        .cover-page {
+            background: linear-gradient(135deg, #FF1493 0%, #FF4500 50%, #FFD700 100%);
+            color: #fff;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        
+        .cover-title {
+            font-family: 'Righteous', cursive;
+            font-size: clamp(4rem, 12vw, 12rem);
+            line-height: 0.8;
+            margin-bottom: 30px;
+            text-shadow: 5px 5px 0px #000;
+        }
+        
+        .cover-subtitle {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: clamp(1rem, 3vw, 2rem);
+            font-weight: 700;
+            background: #000;
+            color: #FFD700;
+            padding: 20px 40px;
+            border-radius: 50px;
+            display: inline-block;
+            margin-bottom: 40px;
+        }
+        
+        .dollar-art {
+            position: absolute;
+            font-size: 200px;
+            opacity: 0.1;
+            font-family: 'Righteous', cursive;
+        }
+        
+        .dollar-1 { top: 10%; left: 10%; transform: rotate(-15deg); }
+        .dollar-2 { top: 20%; right: 15%; transform: rotate(25deg); }
+        .dollar-3 { bottom: 15%; left: 20%; transform: rotate(-30deg); }
+        .dollar-4 { bottom: 10%; right: 10%; transform: rotate(20deg); }
+        
+        /* PRINT STYLES */
+        @media print {
+            body { background: white !important; }
+            .halftone-overlay { display: none; }
+            .section { page-break-after: always; min-height: auto; }
+            .cover-page { page-break-after: always; }
+        }
+        
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .section { padding: 40px 20px; }
+            .kpi-grid { grid-template-columns: 1fr; }
+            .chart-container { height: 300px; }
+        }
+        
+        /* MARILYN MONROE STYLE REPETITION FOR NUMBERS */
+        .monroe-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0;
+            margin: 40px 0;
+            border: 8px solid #000;
+        }
+        
+        .monroe-cell {
+            aspect-ratio: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: 4px solid #000;
+            font-family: 'Righteous', cursive;
+            font-size: clamp(1.5rem, 4vw, 3rem);
+        }
+    </style>
+</head>
+<body>
+    <div class="halftone-overlay"></div>
+    <div class="container">
+        
+        <!-- COVER PAGE -->
+        <section class="section cover-page">
+            <div class="dollar-art dollar-1">$</div>
+            <div class="dollar-art dollar-2">$</div>
+            <div class="dollar-art dollar-3">$</div>
+            <div class="dollar-art dollar-4">$</div>
+            
+            <h1 class="cover-title">JFSD<br>FINANCE<br>REPORT</h1>
+            <div class="cover-subtitle">H1 FY2026 // JULY-DECEMBER 2025</div>
+            <div style="font-family: 'Fredoka One', cursive; font-size: 1.5rem; margin-top: 40px;">
+                POP ART EDITION // INSPIRED BY ANDY WARHOL
+            </div>
+        </section>
+        
+        <!-- REVENUE & EXPENSE OVERVIEW -->
+        <section class="section">
+            <h2 class="warhol-title hot-pink">FINANCIAL<br>PERFORMANCE</h2>
+            
+            <div class="monroe-grid">
+                <div class="monroe-cell bg-hot-pink white">
+                    <div class="kpi-number">$7.14M</div>
+                    <div class="kpi-label">REVENUE</div>
+                </div>
+                <div class="monroe-cell bg-electric-yellow">
+                    <div class="kpi-number">$7.14M</div>
+                    <div class="kpi-label">REVENUE</div>
+                </div>
+                <div class="monroe-cell bg-cyan">
+                    <div class="kpi-number">$7.14M</div>
+                    <div class="kpi-label">REVENUE</div>
+                </div>
+                <div class="monroe-cell bg-orange">
+                    <div class="kpi-number">$7.14M</div>
+                    <div class="kpi-label">REVENUE</div>
+                </div>
+            </div>
+            
+            <div class="speech-bubble">
+                NET SURPLUS: $5.14M // EXPENSES ONLY $2.00M // STRONG H1!
+            </div>
+            
+            <div class="chart-container">
+                <canvas id="revenueChart"></canvas>
+            </div>
+            
+            <div class="soup-can">
+                <div class="label">FINANCIAL SOUP</div>
+                <div class="typewriter" style="font-size: 1.1rem; line-height: 1.6;">
+                    <strong>INGREDIENTS:</strong><br>
+                    • Revenue: $7,140,000<br>
+                    • Expenses: $2,000,000<br>
+                    • Net Surplus: $5,140,000<br>
+                    • Surplus Margin: 72%
+                </div>
+            </div>
+        </section>
+        
+        <!-- CAMPAIGN PERFORMANCE -->
+        <section class="section">
+            <h2 class="warhol-title cyan">CAMPAIGN<br>POWER</h2>
+            
+            <div class="kpi-grid">
+                <div class="kpi-card bg-electric-yellow">
+                    <div class="kpi-number">$6.5M</div>
+                    <div class="kpi-label">FY26 GOAL</div>
+                </div>
+                <div class="kpi-card bg-orange white">
+                    <div class="kpi-number">1,013</div>
+                    <div class="kpi-label">DONORS FY26</div>
+                </div>
+                <div class="kpi-card bg-cyan">
+                    <div class="kpi-number">1,863</div>
+                    <div class="kpi-label">DONORS FY25</div>
+                </div>
+                <div class="kpi-card bg-hot-pink white">
+                    <div class="kpi-number">-46%</div>
+                    <div class="kpi-label">DONOR CHANGE</div>
+                </div>
+            </div>
+            
+            <div class="speech-bubble" style="background: #FF4500; color: white;">
+                DONOR COUNT DOWN BUT MAJOR GIFTS STRONG // RETENTION MAGIC AT WORK
+            </div>
+            
+            <div class="chart-container">
+                <canvas id="campaignChart"></canvas>
+            </div>
+            
+            <div class="soup-can" style="background: linear-gradient(to bottom, #00FFFF 0%, #00FFFF 30%, #fff 30%, #fff 70%, #FFD700 70%);">
+                <div class="label">CAMPAIGN SOUP</div>
+                <div class="typewriter" style="font-size: 1.1rem; line-height: 1.6;">
+                    <strong>CAMPAIGN METRICS:</strong><br>
+                    • Annual Campaign Goal: $6.5M<br>
+                    • Active Donors H1: 1,013<br>
+                    • Previous Year: 1,863<br>
+                    • Donor Retention Focus: CRITICAL
+                </div>
+            </div>
+        </section>
+        
+        <!-- DONOR TRENDS -->
+        <section class="section">
+            <h2 class="warhol-title electric-yellow">DONOR<br>DYNAMICS</h2>
+            
+            <div class="monroe-grid">
+                <div class="monroe-cell bg-hot-pink white">
+                    <div class="kpi-number">53%</div>
+                    <div class="kpi-label">RETENTION<br>BY COUNT</div>
+                </div>
+                <div class="monroe-cell bg-electric-yellow">
+                    <div class="kpi-number">53%</div>
+                    <div class="kpi-label">RETENTION<br>BY COUNT</div>
+                </div>
+                <div class="monroe-cell bg-cyan">
+                    <div class="kpi-number">85%</div>
+                    <div class="kpi-label">RETENTION<br>BY DOLLAR</div>
+                </div>
+                <div class="monroe-cell bg-orange">
+                    <div class="kpi-number">85%</div>
+                    <div class="kpi-label">RETENTION<br>BY DOLLAR</div>
+                </div>
+            </div>
+            
+            <div class="speech-bubble">
+                MAJOR DONORS STICK // SMALLER GIFTS CHURN // CLASSIC PATTERN
+            </div>
+            
+            <div class="chart-container">
+                <canvas id="retentionChart"></canvas>
+            </div>
+            
+            <div class="soup-can" style="background: linear-gradient(to bottom, #FFD700 0%, #FFD700 30%, #fff 30%, #fff 70%, #FF1493 70%);">
+                <div class="label">RETENTION SOUP</div>
+                <div class="typewriter" style="font-size: 1.1rem; line-height: 1.6;">
+                    <strong>DONOR INTELLIGENCE:</strong><br>
+                    • Major Donor Retention: 85% by $<br>
+                    • Overall Count Retention: 53%<br>
+                    • Lapsed Donors: 850 (opportunity!)<br>
+                    • Acquisition Challenge: Real
+                </div>
+            </div>
+        </section>
+        
+        <!-- BOARD ENGAGEMENT -->
+        <section class="section">
+            <h2 class="warhol-title orange">BOARD<br>POWER</h2>
+            
+            <div class="kpi-grid">
+                <div class="kpi-card bg-cyan">
+                    <div class="kpi-number">$197K</div>
+                    <div class="kpi-label">HOUSEHOLD<br>GIVING</div>
+                </div>
+                <div class="kpi-card bg-hot-pink white">
+                    <div class="kpi-number">73%</div>
+                    <div class="kpi-label">PARTICIPATION<br>RATE</div>
+                </div>
+                <div class="kpi-card bg-electric-yellow">
+                    <div class="kpi-number">9</div>
+                    <div class="kpi-label">ZERO DOLLAR<br>GIVERS</div>
+                </div>
+                <div class="kpi-card bg-orange white">
+                    <div class="kpi-number">100%</div>
+                    <div class="kpi-label">TARGET<br>GOAL</div>
+                </div>
+            </div>
+            
+            <div class="speech-bubble" style="background: #FF1493; color: white;">
+                27% NON-PARTICIPANTS // BOARD LEADERSHIP OPPORTUNITY
+            </div>
+            
+            <div class="chart-container">
+                <canvas id="boardChart"></canvas>
+            </div>
+            
+            <div class="soup-can" style="background: linear-gradient(to bottom, #FF4500 0%, #FF4500 30%, #fff 30%, #fff 70%, #00FFFF 70%);">
+                <div class="label">BOARD SOUP</div>
+                <div class="typewriter" style="font-size: 1.1rem; line-height: 1.6;">
+                    <strong>BOARD METRICS:</strong><br>
+                    • Total Household Giving: $197K<br>
+                    • Participation Rate: 73%<br>
+                    • Non-Participating: 9 members<br>
+                    • Goal: 100% Board Participation
+                </div>
+            </div>
+        </section>
+        
+        <!-- CFO OUTLOOK -->
+        <section class="section">
+            <h2 class="warhol-title hot-pink">ACTION<br>ITEMS</h2>
+            
+            <div class="soup-can" style="background: linear-gradient(to bottom, #000 0%, #000 30%, #FFD700 30%, #FFD700 70%, #000 70%); color: white;">
+                <div class="label" style="background: #FF1493; color: white;">CFO PRIORITIES</div>
+                <div class="typewriter" style="font-size: 1.2rem; line-height: 1.8; color: #000; background: #FFD700; padding: 20px; border-radius: 10px; margin-top: 20px;">
+                    <strong>H2 FY2026 FOCUS:</strong><br><br>
+                    1. DONOR ACQUISITION STRATEGY<br>
+                    2. LAPSED DONOR REACTIVATION<br>
+                    3. BOARD 100% PARTICIPATION<br>
+                    4. EXPENSE MANAGEMENT<br>
+                    5. RESERVE FUND PLANNING
+                </div>
+            </div>
+            
+            <div class="monroe-grid" style="margin-top: 60px;">
+                <div class="monroe-cell bg-hot-pink white">
+                    <div style="font-size: 2rem;">💰</div>
+                    <div class="kpi-label">SURPLUS<br>STRONG</div>
+                </div>
+                <div class="monroe-cell bg-electric-yellow">
+                    <div style="font-size: 2rem;">📈</div>
+                    <div class="kpi-label">GROWTH<br>FOCUS</div>
+                </div>
+                <div class="monroe-cell bg-cyan">
+                    <div style="font-size: 2rem;">🎯</div>
+                    <div class="kpi-label">BOARD<br>TARGET</div>
+                </div>
+                <div class="monroe-cell bg-orange">
+                    <div style="font-size: 2rem;">🚀</div>
+                    <div class="kpi-label">H2<br>READY</div>
+                </div>
+            </div>
+            
+            <div class="speech-bubble" style="background: #00FFFF; color: #000; margin-top: 60px; font-size: 1.4rem;">
+                STRONG FINANCIAL POSITION // TIME TO INVEST IN GROWTH // LET'S GO!
+            </div>
+        </section>
+        
+    </div>
+
+    <script>
+        // CHART.JS WITH WARHOL STYLING
+        Chart.defaults.font.family = "'JetBrains Mono', monospace";
+        Chart.defaults.font.weight = 'bold';
+        Chart.defaults.color = '#000';
+        
+        const warholColors = ['#FF1493', '#FFD700', '#00FFFF', '#FF4500'];
+        
+        // REVENUE CHART
+        const revenueCtx = document.getElementById('revenueChart').getContext('2d');
+        new Chart(revenueCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Revenue', 'Expenses', 'Net Surplus'],
+                datasets: [{
+                    data: [7140000, 2000000, 5140000],
+                    backgroundColor: warholColors,
+                    borderWidth: 6,
+                    borderColor: '#000'
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            font: { size: 14, weight: 'bold' },
+                            padding: 20,
+                            usePointStyle: true,
+                            pointStyle: 'rectRounded'
+                        }
+                    }
+                }
+            }
+        });
+        
+        // CAMPAIGN CHART
+        const campaignCtx = document.getElementById('campaignChart').getContext('2d');
+        new Chart(campaignCtx, {
+            type: 'bar',
+            data: {
+                labels: ['FY25 Donors', 'FY26 Donors', 'Campaign Goal'],
+                datasets: [{
+                    label: 'Metrics',
+                    data: [1863, 1013, 6500000/6434], // Normalize goal for display
+                    backgroundColor: warholColors,
+                    borderWidth: 6,
+                    borderColor: '#000'
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: false }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        grid: { color: '#000', lineWidth: 2 },
+                        ticks: { font: { weight: 'bold' } }
+                    },
+                    x: {
+                        grid: { color: '#000', lineWidth: 2 },
+                        ticks: { font: { weight: 'bold' } }
+                    }
+                }
+            }
+        });
+        
+        // RETENTION CHART
+        const retentionCtx = document.getElementById('retentionChart').getContext('2d');
+        new Chart(retentionCtx, {
+            type: 'polarArea',
+            data: {
+                labels: ['Retained by Count', 'Lost by Count', 'Retained by Dollar', 'Lost by Dollar'],
+                datasets: [{
+                    data: [53, 47, 85, 15],
+                    backgroundColor: warholColors,
+                    borderWidth: 6,
+                    borderColor: '#000'
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            font: { size: 12, weight: 'bold' },
+                            padding: 15
+                        }
+                    }
+                }
+            }
+        });
+        
+        // BOARD CHART
+        const boardCtx = document.getElementById('boardChart').getContext('2d');
+        new Chart(boardCtx, {
+            type: 'pie',
+            data: {
+                labels: ['Participating Board Members', 'Non-Participating'],
+                datasets: [{
+                    data: [73, 27],
+                    backgroundColor: ['#FF1493', '#FFD700'],
+                    borderWidth: 8,
+                    borderColor: '#000'
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            font: { size: 14, weight: 'bold' },
+                            padding: 20
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

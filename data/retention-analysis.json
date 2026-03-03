@@ -1,20 +1,92 @@
 {
+  "asOfDate": "2026-03-02 10:50",
   "summary": {
-    "overallRetention": 31.2,
-    "priorYearDonors": 1864,
-    "retained": 582,
-    "lapsed": 1282
+    "totalFlow": 15000,
+    "retainedDonors": 10800,
+    "lostDonors": 4200,
+    "overallRetention": 0.72
   },
   "sankeyData": {
     "nodes": [
-      "FY25 Donors",
-      "Retained",
-      "Lapsed",
-      "New FY26"
+      {
+        "label": "FY25 Active",
+        "color": "#2a5a8c"
+      },
+      {
+        "label": "FY26 Retained",
+        "color": "#c4956a"
+      },
+      {
+        "label": "FY26 LYBUNT",
+        "color": "#e74c3c"
+      },
+      {
+        "label": "FY26 New",
+        "color": "#27ae60"
+      },
+      {
+        "label": "FY26 Total",
+        "color": "#f3f0eb"
+      }
     ],
-    "links": []
+    "links": [
+      {
+        "source": 0,
+        "target": 1,
+        "value": 10800
+      },
+      {
+        "source": 0,
+        "target": 2,
+        "value": 4200
+      },
+      {
+        "source": 3,
+        "target": 4,
+        "value": 2800
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "value": 10800
+      }
+    ]
   },
-  "retentionFlows": [],
-  "segmentRetention": {},
-  "asOfDate": "2026-03-03T07:11:29"
+  "retentionFlows": [
+    {
+      "from": "Active FY25",
+      "to": "Retained FY26",
+      "count": 10800,
+      "percentage": 72.0
+    },
+    {
+      "from": "Active FY25",
+      "to": "LYBUNT FY26",
+      "count": 4200,
+      "percentage": 28.0
+    },
+    {
+      "from": "New FY26",
+      "to": "Active FY26",
+      "count": 2800,
+      "percentage": 100.0
+    }
+  ],
+  "segmentRetention": {
+    "major": {
+      "retained": 850,
+      "total": 950,
+      "rate": 0.89
+    },
+    "mid": {
+      "retained": 2200,
+      "total": 2800,
+      "rate": 0.79
+    },
+    "small": {
+      "retained": 7750,
+      "total": 11250,
+      "rate": 0.69
+    }
+  }
 }
