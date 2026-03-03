@@ -374,7 +374,7 @@ td.num { text-align: right; font-variant-numeric: tabular-nums; font-family: var
   cursor: grab;
 }
 .mermaid-wrap.is-panning { cursor: grabbing; user-select: none; }
-.mermaid-wrap .mermaid { zoom: 1.2; }
+.mermaid-wrap .mermaid { transform: scale(1.5); transform-origin: top center; margin-bottom: 200px; }
 
 .zoom-controls {
   position: absolute; top: 8px; right: 8px;
@@ -964,20 +964,22 @@ mermaid.initialize({
 
 <script>
 // Zoom controls
-var INITIAL_ZOOM = 1.2;
+var INITIAL_ZOOM = 1.5;
 function zoomDiagram(btn, factor) {
   var wrap = btn.closest('.mermaid-wrap');
   var target = wrap.querySelector('.mermaid');
   var current = parseFloat(target.dataset.zoom || INITIAL_ZOOM);
-  var next = Math.min(Math.max(current * factor, 0.3), 5);
+  var next = Math.min(Math.max(current * factor, 0.5), 10);
   target.dataset.zoom = next;
-  target.style.zoom = next;
+  target.style.transform = 'scale(' + next + ')';
+  target.style.transformOrigin = 'top center';
 }
 function resetZoom(btn) {
   var wrap = btn.closest('.mermaid-wrap');
   var target = wrap.querySelector('.mermaid');
   target.dataset.zoom = INITIAL_ZOOM;
-  target.style.zoom = INITIAL_ZOOM;
+  target.style.transform = 'scale(' + INITIAL_ZOOM + ')';
+  target.style.transformOrigin = 'top center';
 }
 document.querySelectorAll('.mermaid-wrap').forEach(function(wrap) {
   wrap.addEventListener('wheel', function(e) {
