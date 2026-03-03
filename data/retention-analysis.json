@@ -1,0 +1,20 @@
+{
+  "summary": {
+    "overallRetention": 31.2,
+    "priorYearDonors": 1864,
+    "retained": 582,
+    "lapsed": 1282
+  },
+  "sankeyData": {
+    "nodes": [
+      "FY25 Donors",
+      "Retained",
+      "Lapsed",
+      "New FY26"
+    ],
+    "links": []
+  },
+  "retentionFlows": [],
+  "segmentRetention": {},
+  "asOfDate": "2026-03-03T07:11:29"
+}

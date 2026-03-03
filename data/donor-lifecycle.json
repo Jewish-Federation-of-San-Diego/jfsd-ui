@@ -1,0 +1,39 @@
+{
+  "summary": {
+    "totalActive": 1129,
+    "newDonors": 442,
+    "retainedDonors": 582,
+    "lybuntCount": 1282,
+    "lybuntRevenue": 2559378.1
+  },
+  "lifecycleDistribution": [
+    {
+      "stage": "New",
+      "count": 442
+    },
+    {
+      "stage": "Retained",
+      "count": 582
+    },
+    {
+      "stage": "LYBUNT",
+      "count": 1282
+    },
+    {
+      "stage": "Reactivated",
+      "count": 105
+    },
+    {
+      "stage": "Deep Lapsed",
+      "count": 703
+    }
+  ],
+  "lybuntRisk": {
+    "count": 1282,
+    "revenueAtRisk": 2559378.1
+  },
+  "migrationPatterns": {},
+  "prospectSegmentation": {},
+  "fy27Scenarios": {},
+  "asOfDate": "2026-03-03T07:11:29"
+}
