@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Development Intelligence — Jewish Federation of San Diego</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --font-body: 'Instrument Serif', Georgia, serif;
+    --font-mono: 'JetBrains Mono', 'SF Mono', Consolas, monospace;
+    --bg: #f7f5f0;
+    --surface: #ffffff;
+    --surface2: #f0ece4;
+    --surface-elevated: #fffdf8;
+    --border: rgba(30, 58, 95, 0.08);
+    --border-bright: rgba(30, 58, 95, 0.16);
+    --text: #1a1a1a;
+    --text-dim: #6b6560;
+    --text-bright: #0f0f0f;
+    --blue: #1e3a5f;
+    --blue-dim: rgba(30, 58, 95, 0.07);
+    --gold: #d4a73a;
+    --gold-dim: rgba(212, 167, 58, 0.10);
+    --gold-bright: #b8922e;
+    --green: #2d6a4f;
+    --green-dim: rgba(45, 106, 79, 0.08);
+    --red: #c2410c;
+    --red-dim: rgba(194, 65, 12, 0.08);
+    --teal: #0e7490;
+    --teal-dim: rgba(14, 116, 144, 0.08);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0f1318;
+      --surface: #1a2030;
+      --surface2: #151b26;
+      --surface-elevated: #1e2640;
+      --border: rgba(212, 167, 58, 0.08);
+      --border-bright: rgba(212, 167, 58, 0.18);
+      --text: #e8e4dc;
+      --text-dim: #9a9490;
+      --text-bright: #f5f0e8;
+      --blue: #4a7ab5;
+      --blue-dim: rgba(74, 122, 181, 0.12);
+      --gold: #e8bc4a;
+      --gold-dim: rgba(232, 188, 74, 0.12);
+      --gold-bright: #f0cc60;
+      --green: #52b788;
+      --green-dim: rgba(82, 183, 136, 0.12);
+      --red: #fb923c;
+      --red-dim: rgba(251, 146, 60, 0.10);
+      --teal: #22d3ee;
+      --teal-dim: rgba(34, 211, 238, 0.10);
+    }
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    background-image:
+      radial-gradient(ellipse at 30% 0%, var(--gold-dim) 0%, transparent 50%),
+      radial-gradient(ellipse at 70% 100%, var(--blue-dim) 0%, transparent 40%);
+    color: var(--text);
+    font-family: var(--font-body);
+    min-height: 100vh;
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(16px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fadeScale {
+    from { opacity: 0; transform: scale(0.92); }
+    to { opacity: 1; transform: scale(1); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
+  .page { max-width: 1000px; margin: 0 auto; padding: 60px 40px 80px; }
+
+  /* ===== HERO ===== */
+  .hero {
+    text-align: center;
+    padding: 0 0 56px;
+    animation: fadeUp 0.5s ease-out both;
+  }
+  .hero-eyebrow {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--gold);
+    margin-bottom: 16px;
+  }
+  .hero h1 {
+    font-size: clamp(36px, 5vw, 52px);
+    font-weight: 400;
+    line-height: 1.15;
+    color: var(--blue);
+    margin-bottom: 16px;
+    letter-spacing: -0.5px;
+  }
+  .hero-sub {
+    font-size: 19px;
+    color: var(--text-dim);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.5;
+    font-style: italic;
+  }
+  .hero-divider {
+    width: 60px;
+    height: 2px;
+    background: var(--gold);
+    margin: 32px auto 0;
+  }
+
+  /* ===== SECTIONS ===== */
+  .layer {
+    margin-bottom: 56px;
+    animation: fadeUp 0.45s ease-out both;
+    animation-delay: calc(var(--i, 0) * 0.08s);
+  }
+  .layer-label {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--gold);
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .layer-label::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--gold);
+  }
+  .layer h2 {
+    font-size: 30px;
+    font-weight: 400;
+    color: var(--blue);
+    margin-bottom: 6px;
+    letter-spacing: -0.3px;
+  }
+  .layer-desc {
+    color: var(--text-dim);
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 28px;
+    max-width: 700px;
+  }
+
+  /* ===== METRIC CARDS ===== */
+  .metric-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px;
+  }
+  .metric-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px 22px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    animation: fadeScale 0.35s ease-out both;
+    animation-delay: calc(var(--i, 0) * 0.06s);
+  }
+  .metric-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(30, 58, 95, 0.08);
+  }
+  .metric-card--hero {
+    background: var(--surface-elevated);
+    border-color: color-mix(in srgb, var(--border) 40%, var(--gold) 60%);
+    box-shadow: 0 2px 12px rgba(212, 167, 58, 0.08);
+  }
+  .metric-num {
+    font-family: var(--font-mono);
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--blue);
+    line-height: 1.1;
+    letter-spacing: -1px;
+    font-variant-numeric: tabular-nums;
+  }
+  .metric-num--gold { color: var(--gold-bright); }
+  .metric-label {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--text-dim);
+    margin-top: 6px;
+  }
+  .metric-detail {
+    font-size: 14px;
+    color: var(--text-dim);
+    line-height: 1.5;
+    margin-top: 8px;
+  }
+
+  /* ===== CAPABILITY CARDS ===== */
+  .cap-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    gap: 16px;
+  }
+  .cap-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--blue);
+    border-radius: 2px 10px 10px 2px;
+    padding: 20px 22px;
+    animation: fadeUp 0.4s ease-out both;
+    animation-delay: calc(var(--i, 0) * 0.06s);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .cap-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(30, 58, 95, 0.06);
+  }
+  .cap-card h3 {
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--text-bright);
+    margin-bottom: 6px;
+  }
+  .cap-card p {
+    font-size: 14px;
+    color: var(--text-dim);
+    line-height: 1.55;
+  }
+  .cap-tag {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 10px;
+    font-weight: 500;
+    padding: 2px 8px;
+    border-radius: 4px;
+    background: var(--gold-dim);
+    color: var(--gold-bright);
+    margin-top: 10px;
+  }
+  .cap-tag--blue { background: var(--blue-dim); color: var(--blue); }
+  .cap-tag--green { background: var(--green-dim); color: var(--green); }
+  .cap-tag--teal { background: var(--teal-dim); color: var(--teal); }
+
+  /* ===== MERMAID ===== */
+  .mermaid-wrap {
+    position: relative;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 32px 24px;
+    overflow: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 420px;
+    cursor: grab;
+    scrollbar-width: thin;
+    scrollbar-color: var(--border) transparent;
+  }
+  .mermaid-wrap.is-panning { cursor: grabbing; user-select: none; }
+  .mermaid-wrap .mermaid { zoom: 1.3; }
+
+  .zoom-controls {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    display: flex;
+    gap: 2px;
+    z-index: 10;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 2px;
+  }
+  .zoom-controls button {
+    width: 28px;
+    height: 28px;
+    border: none;
+    background: transparent;
+    color: var(--text-dim);
+    font-family: var(--font-mono);
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.15s ease, color 0.15s ease;
+  }
+  .zoom-controls button:hover {
+    background: var(--border);
+    color: var(--text);
+  }
+
+  /* ===== ROADMAP ===== */
+  .roadmap {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+  .roadmap-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-top: 3px solid var(--gold);
+    border-radius: 2px 2px 10px 10px;
+    padding: 22px;
+    animation: fadeUp 0.4s ease-out both;
+    animation-delay: calc(var(--i, 0) * 0.06s);
+  }
+  .roadmap-num {
+    font-family: var(--font-mono);
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--gold);
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+  .roadmap-card h3 {
+    font-size: 17px;
+    font-weight: 400;
+    color: var(--text-bright);
+    margin-bottom: 6px;
+  }
+  .roadmap-card p {
+    font-size: 14px;
+    color: var(--text-dim);
+    line-height: 1.55;
+  }
+
+  /* ===== FOOTER ===== */
+  .footer {
+    text-align: center;
+    padding-top: 40px;
+    border-top: 1px solid var(--border);
+    margin-top: 20px;
+  }
+  .footer p {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--text-dim);
+    letter-spacing: 0.5px;
+  }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 768px) {
+    .page { padding: 32px 20px 60px; }
+    .metric-grid { grid-template-columns: 1fr; }
+    .cap-grid { grid-template-columns: 1fr; }
+    .roadmap { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-eyebrow">Jewish Federation of San Diego</div>
+    <h1>Development Intelligence Platform</h1>
+    <p class="hero-sub">What we know, what we can do with it, and where the data lives.</p>
+    <div class="hero-divider"></div>
+  </div>
+
+  <!-- LAYER 1: WHAT WE KNOW -->
+  <div class="layer" style="--i:1">
+    <div class="layer-label">Layer 1</div>
+    <h2>What We Know Now</h2>
+    <p class="layer-desc">Data enrichment completed across the donor base. Every number below represents actionable intelligence already loaded into our systems.</p>
+
+    <div class="metric-grid">
+      <div class="metric-card metric-card--hero" style="--i:2">
+        <div class="metric-num metric-num--gold">$11.9M</div>
+        <div class="metric-label">Capacity Gap Identified</div>
+        <div class="metric-detail">113 donors screened at $10M+ capacity via WealthEngine. 2,568 total donors screened.</div>
+      </div>
+      <div class="metric-card" style="--i:3">
+        <div class="metric-num">1,320</div>
+        <div class="metric-label">AI-Generated Profiles</div>
+        <div class="metric-detail">Prospect profiles with FEC contributions, SEC filings, and nonprofit board positions.</div>
+      </div>
+      <div class="metric-card" style="--i:4">
+        <div class="metric-num">44K</div>
+        <div class="metric-label">Addresses Cleaned</div>
+        <div class="metric-detail">USPS/Lob verification. 93.6% deliverable rate across accounts.</div>
+      </div>
+      <div class="metric-card" style="--i:5">
+        <div class="metric-num">3,177</div>
+        <div class="metric-label">Deceased Candidates</div>
+        <div class="metric-detail">Identified and flagged to prevent embarrassing outreach attempts.</div>
+      </div>
+      <div class="metric-card" style="--i:6">
+        <div class="metric-num">264</div>
+        <div class="metric-label">Invisible Donors</div>
+        <div class="metric-detail">Active donors giving $638K total, invisible in email metrics. Found via HubSpot + Salesforce cross-reference.</div>
+      </div>
+      <div class="metric-card" style="--i:7">
+        <div class="metric-num">12.5%</div>
+        <div class="metric-label">Median Share of Wallet</div>
+        <div class="metric-detail">Significant upgrade potential across the portfolio based on capacity analysis.</div>
+      </div>
+      <div class="metric-card" style="--i:8">
+        <div class="metric-num">1,650</div>
+        <div class="metric-label">Board Members Mapped</div>
+        <div class="metric-detail">113 nonprofit orgs, 1,650 board members identified. 109 matched to existing Salesforce records.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LAYER 2: WHAT WE CAN DO -->
+  <div class="layer" style="--i:9">
+    <div class="layer-label">Layer 2</div>
+    <h2>What We Can Do With It</h2>
+    <p class="layer-desc">Operational tools ready to deploy. Each capability connects directly to the data above.</p>
+
+    <div class="cap-grid">
+      <div class="cap-card" style="--i:10">
+        <h3>Silence &amp; LYBUNT Alerts</h3>
+        <p>Automated identification of lapsed donors with revenue at risk, organized by DRM portfolio. Know who stopped giving before the fiscal year ends.</p>
+        <span class="cap-tag--green cap-tag">Retention</span>
+      </div>
+      <div class="cap-card" style="--i:11">
+        <h3>Retention Simulations</h3>
+        <p>Model upgrade, retain, and reactivate scenarios with projected revenue impact. See what happens if we recover 10% of lapsed mid-level donors.</p>
+        <span class="cap-tag--blue cap-tag">Analytics</span>
+      </div>
+      <div class="cap-card" style="--i:12">
+        <h3>Personalized Outreach at Scale</h3>
+        <p>Lob physical mail at $0.63/letter. ElevenLabs AI thank-you voice calls. DocuSeal digital gift agreements. All triggered from donor data.</p>
+        <span class="cap-tag">Engagement</span>
+      </div>
+      <div class="cap-card" style="--i:13">
+        <h3>DRM Portfolio Dashboards</h3>
+        <p>Real-time portfolio view per fundraiser with capacity analysis, giving history, and next-action recommendations.</p>
+        <span class="cap-tag--teal cap-tag">Dashboards</span>
+      </div>
+      <div class="cap-card" style="--i:14">
+        <h3>Automated Reporting</h3>
+        <p>Finance Committee packets, campaign pacing reports, and board giving summaries generated on schedule or on demand.</p>
+        <span class="cap-tag--blue cap-tag">Reporting</span>
+      </div>
+      <div class="cap-card" style="--i:15">
+        <h3>Conversational Data Queries</h3>
+        <p>MCP server for Claude (in development). Staff will ask plain-English questions and get answers from live data. No SOQL required.</p>
+        <span class="cap-tag--teal cap-tag">In Development</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- LAYER 3: CONNECTED SYSTEMS -->
+  <div class="layer" style="--i:16">
+    <div class="layer-label">Layer 3</div>
+    <h2>Connected Systems</h2>
+    <p class="layer-desc">27 data sources refreshed daily. Every system below has a live API integration feeding into our intelligence layer.</p>
+
+    <div class="mermaid-wrap">
+      <div class="zoom-controls">
+        <button onclick="zoomDiagram(this, 1.2)" title="Zoom in">+</button>
+        <button onclick="zoomDiagram(this, 0.8)" title="Zoom out">&minus;</button>
+        <button onclick="resetZoom(this)" title="Reset zoom">&#8634;</button>
+      </div>
+      <pre class="mermaid">
+flowchart TD
+    SF["Salesforce NPC\n(Donor CRM)"]
+    GC["GiveCloud\n(Online Giving)"]
+    ST["Stripe\n(Payment Processing)"]
+    RM["Ramp\n(Expense Management)"]
+    SI["Sage Intacct\n(General Ledger)"]
+    HS["HubSpot\n(Email Marketing)"]
+    WE["WealthEngine\n(Wealth Screening)"]
+    EC["Ecobee\n(Facilities)"]
+
+    HUB["H2 Intelligence Layer\n27 Data Sources"]
+
+    SF --> HUB
+    GC --> HUB
+    ST --> HUB
+    RM --> HUB
+    SI --> HUB
+    HS --> HUB
+    WE --> HUB
+    EC --> HUB
+
+    HUB --> OUT1["Prospect Profiles"]
+    HUB --> OUT2["Portfolio Dashboards"]
+    HUB --> OUT3["Automated Reports"]
+    HUB --> OUT4["Retention Alerts"]
+    HUB --> OUT5["Outreach Tools"]
+
+    classDef source fill:#1e3a5f,stroke:#2a4f7a,color:#e8e4dc,font-weight:bold
+    classDef hub fill:#d4a73a,stroke:#b8922e,color:#1a1a1a,font-weight:bold
+    classDef output fill:#2d6a4f,stroke:#3d8a6f,color:#e8e4dc,font-weight:bold
+
+    class SF,GC,ST,RM,SI,HS,WE,EC source
+    class HUB hub
+    class OUT1,OUT2,OUT3,OUT4,OUT5 output
+      </pre>
+    </div>
+  </div>
+
+  <!-- LAYER 4: WHERE WE GO -->
+  <div class="layer" style="--i:17">
+    <div class="layer-label">Layer 4</div>
+    <h2>Where We Go From Here</h2>
+    <p class="layer-desc">The infrastructure is built. Now we shape it around what Development actually needs.</p>
+
+    <div class="roadmap">
+      <div class="roadmap-card" style="--i:18">
+        <div class="roadmap-num">01</div>
+        <h3>Pilot with DRMs</h3>
+        <p>Start with 1-2 tools in the hands of frontline fundraisers. Real feedback, real workflows, before scaling.</p>
+      </div>
+      <div class="roadmap-card" style="--i:19">
+        <div class="roadmap-num">02</div>
+        <h3>Michael Shapes the Roadmap</h3>
+        <p>Your priorities drive what we build next. This platform is a tool for Development, not an IT project.</p>
+      </div>
+      <div class="roadmap-card" style="--i:20">
+        <div class="roadmap-num">03</div>
+        <h3>Retention First</h3>
+        <p>Highest-impact area. Every recovered lapsed donor is revenue we already earned once. Start there.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>Prepared for Michael &middot; March 2026 &middot; Data &amp; AI Capabilities Overview</p>
+  </div>
+
+</div>
+
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+  mermaid.initialize({
+    startOnLoad: true,
+    theme: 'base',
+    themeVariables: {
+      primaryColor: '#1e3a5f',
+      primaryTextColor: '#e8e4dc',
+      primaryBorderColor: '#2a4f7a',
+      lineColor: '#8a7e72',
+      secondaryColor: '#d4a73a',
+      tertiaryColor: '#2d6a4f',
+      fontSize: '16px',
+      fontFamily: 'JetBrains Mono, monospace'
+    },
+    flowchart: {
+      curve: 'basis',
+      padding: 16
+    }
+  });
+</script>
+
+<script>
+  var INITIAL_ZOOM = 1.3;
+
+  function zoomDiagram(btn, factor) {
+    var wrap = btn.closest('.mermaid-wrap');
+    var target = wrap.querySelector('.mermaid');
+    var current = parseFloat(target.dataset.zoom || INITIAL_ZOOM);
+    var next = Math.min(Math.max(current * factor, 0.5), 5);
+    target.dataset.zoom = next;
+    target.style.zoom = next;
+  }
+
+  function resetZoom(btn) {
+    var wrap = btn.closest('.mermaid-wrap');
+    var target = wrap.querySelector('.mermaid');
+    target.dataset.zoom = INITIAL_ZOOM;
+    target.style.zoom = INITIAL_ZOOM;
+  }
+
+  document.querySelectorAll('.mermaid-wrap').forEach(function(wrap) {
+    wrap.addEventListener('wheel', function(e) {
+      if (!e.ctrlKey && !e.metaKey) return;
+      e.preventDefault();
+      var target = wrap.querySelector('.mermaid');
+      var current = parseFloat(target.dataset.zoom || INITIAL_ZOOM);
+      var factor = e.deltaY < 0 ? 1.1 : 0.9;
+      var next = Math.min(Math.max(current * factor, 0.5), 5);
+      target.dataset.zoom = next;
+      target.style.zoom = next;
+    }, { passive: false });
+
+    var startX, startY, scrollL, scrollT;
+    wrap.addEventListener('mousedown', function(e) {
+      if (e.target.closest('.zoom-controls')) return;
+      wrap.classList.add('is-panning');
+      startX = e.clientX;
+      startY = e.clientY;
+      scrollL = wrap.scrollLeft;
+      scrollT = wrap.scrollTop;
+    });
+    window.addEventListener('mousemove', function(e) {
+      if (!wrap.classList.contains('is-panning')) return;
+      wrap.scrollLeft = scrollL - (e.clientX - startX);
+      wrap.scrollTop = scrollT - (e.clientY - startY);
+    });
+    window.addEventListener('mouseup', function() {
+      wrap.classList.remove('is-panning');
+    });
+  });
+</script>
+
+</body>
+</html>
