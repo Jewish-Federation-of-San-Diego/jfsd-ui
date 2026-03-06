@@ -1,66 +1,39 @@
 {
-  "asOfDate": "2026-03-02 10:50",
   "summary": {
-    "totalDonors": 15200,
-    "lybuntCount": 2850,
-    "lybuntRate": 0.187,
-    "activeCount": 12350
+    "totalActive": 1149,
+    "newDonors": 453,
+    "retainedDonors": 591,
+    "lybuntCount": 1277,
+    "lybuntRevenue": 2538953.1
   },
   "lifecycleDistribution": [
     {
-      "stage": "First-Time",
-      "count": 2800,
-      "percentage": 18.4
+      "stage": "New",
+      "count": 453
     },
     {
-      "stage": "Repeat",
-      "count": 6200,
-      "percentage": 40.8
-    },
-    {
-      "stage": "Loyal",
-      "count": 3500,
-      "percentage": 23.0
+      "stage": "Retained",
+      "count": 591
     },
     {
       "stage": "LYBUNT",
-      "count": 2850,
-      "percentage": 18.7
+      "count": 1277
     },
     {
-      "stage": "SYBUNT",
-      "count": 850,
-      "percentage": 5.6
+      "stage": "Reactivated",
+      "count": 105
+    },
+    {
+      "stage": "Deep Lapsed",
+      "count": 700
     }
   ],
   "lybuntRisk": {
-    "high": 1200,
-    "medium": 950,
-    "low": 700
+    "count": 1277,
+    "revenueAtRisk": 2538953.1
   },
-  "migrationPatterns": {
-    "firstToRepeat": 0.65,
-    "repeatToLoyal": 0.35,
-    "loyalToLybunt": 0.12,
-    "lybuntRecovery": 0.28
-  },
-  "prospectSegmentation": {
-    "hotProspects": 450,
-    "warmProspects": 1200,
-    "coldProspects": 2100
-  },
-  "fy27Scenarios": {
-    "conservative": {
-      "newDonors": 800,
-      "retention": 0.72
-    },
-    "moderate": {
-      "newDonors": 1200,
-      "retention": 0.76
-    },
-    "aggressive": {
-      "newDonors": 1600,
-      "retention": 0.8
-    }
-  }
+  "migrationPatterns": {},
+  "prospectSegmentation": {},
+  "fy27Scenarios": {},
+  "asOfDate": "2026-03-06T10:20:00"
 }

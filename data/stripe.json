@@ -1,110 +1,68 @@
 {
   "monthlyData": [
     {
-      "month": "Jul",
-      "charges": 27,
-      "amount": 32252,
-      "fees": 945,
-      "feeRate": 2.93
+      "month": "2025-08",
+      "gross": 12831.43,
+      "fees": 0.0,
+      "net": 12831.43,
+      "count": 40
     },
     {
-      "month": "Aug",
-      "charges": 38,
-      "amount": 12960,
-      "fees": 302,
-      "feeRate": 2.33
+      "month": "2025-09",
+      "gross": 19772.75,
+      "fees": 0.0,
+      "net": 19772.75,
+      "count": 45
     },
     {
-      "month": "Sep",
-      "charges": 43,
-      "amount": 19503,
-      "fees": 479,
-      "feeRate": 2.46
+      "month": "2025-10",
+      "gross": 18972.04,
+      "fees": 0.0,
+      "net": 18972.04,
+      "count": 58
     },
     {
-      "month": "Oct",
-      "charges": 61,
-      "amount": 21652,
-      "fees": 472,
-      "feeRate": 2.18
+      "month": "2025-11",
+      "gross": 15979.77,
+      "fees": 0.0,
+      "net": 15979.77,
+      "count": 41
     },
     {
-      "month": "Nov",
-      "charges": 39,
-      "amount": 15921,
-      "fees": 367,
-      "feeRate": 2.31
+      "month": "2025-12",
+      "gross": 105703.13,
+      "fees": 0.0,
+      "net": 105703.13,
+      "count": 100
     },
     {
-      "month": "Dec",
-      "charges": 198,
-      "amount": 182370,
-      "fees": 4296,
-      "feeRate": 2.36
+      "month": "2025-12",
+      "gross": 105703.13,
+      "fees": 0.0,
+      "net": 105703.13,
+      "count": 100
     },
     {
-      "month": "Jan",
-      "charges": 209,
-      "amount": 24836,
-      "fees": 742,
-      "feeRate": 2.99
+      "month": "2026-01",
+      "gross": 5318.83,
+      "fees": 0.0,
+      "net": 5318.83,
+      "count": 100
     },
     {
-      "month": "Feb",
-      "charges": 114,
-      "amount": 43703,
-      "fees": 1131,
-      "feeRate": 2.59
+      "month": "2026-03",
+      "gross": 7528.47,
+      "fees": 0.0,
+      "net": 7528.47,
+      "count": 32
     }
   ],
-  "cardBrandData": [
-    {
-      "brand": "Visa",
-      "amount": 182085,
-      "charges": 463
-    },
-    {
-      "brand": "Mastercard",
-      "amount": 110524,
-      "charges": 150
-    },
-    {
-      "brand": "Amex",
-      "amount": 59077,
-      "charges": 108
-    },
-    {
-      "brand": "Other",
-      "amount": 1221,
-      "charges": 5
-    },
-    {
-      "brand": "Discover",
-      "amount": 291,
-      "charges": 3
-    }
-  ],
-  "sourceData": [
-    {
-      "source": "GiveCloud",
-      "charges": 723,
-      "amount": 348978,
-      "pct": 98.8
-    },
-    {
-      "source": "Direct",
-      "charges": 6,
-      "amount": 4221,
-      "pct": 1.2
-    }
-  ],
+  "cardBrandData": [],
+  "sourceData": [],
   "kpis": {
-    "grossVolume": 353198,
-    "netAfterFees": 344464,
-    "totalFees": 8734,
-    "avgFeeRate": 2.47,
-    "totalCharges": 729,
-    "avgPerCharge": 484,
-    "asOfDate": "Feb 26, 2026"
-  }
+    "totalGross": 291809.55,
+    "totalTransactions": 516,
+    "avgTransaction": 565.52
+  },
+  "asOfDate": "2026-03-06T10:20:00"
 }

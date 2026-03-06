@@ -1,937 +1,2048 @@
 {
-  "asOfDate": "2026-02-26",
   "summary": {
-    "totalOpenPledges": 604,
-    "totalPledgedAmount": 13841022.150000002,
-    "totalPaidAmount": 368496.26999999996,
-    "totalOutstanding": 13472525.880000003,
-    "fulfillmentRate": 2.7,
-    "avgPledgeSize": 22916
+    "totalCommitted": 12843915.83,
+    "totalPaid": 189916.49,
+    "totalBalance": 11601499.34,
+    "pledgeCount": 100,
+    "collectionRate": 1.5
   },
   "agingBuckets": [
     {
-      "bucket": "0-90 days",
-      "count": 237,
-      "amount": 2686699
+      "label": "Current",
+      "amount": 2331222.2199999997
     },
     {
-      "bucket": "91-180 days",
-      "count": 24,
-      "amount": 272412
+      "label": "30-60 Days",
+      "amount": 0
     },
     {
-      "bucket": "181-365 days",
-      "count": 76,
-      "amount": 2417325
+      "label": "60-90 Days",
+      "amount": 20357.0
     },
     {
-      "bucket": "365+ days",
-      "count": 267,
-      "amount": 8096090
+      "label": "90+ Days",
+      "amount": 10000.0
     }
   ],
   "writeOffRisk": [
     {
-      "name": "Andrew Garman",
-      "pledgeAmount": 18000.0,
-      "paidAmount": 0.0,
-      "balance": 18000.0,
-      "endDate": "2025-12-31",
-      "daysOverdue": 57,
-      "campaign": "DRM - FY26"
+      "attributes": {
+        "type": "GiftCommitment",
+        "url": "/services/data/v59.0/sobjects/GiftCommitment/6gcUf00000019g5IAA"
+      },
+      "Id": "6gcUf00000019g5IAA",
+      "Donor": {
+        "attributes": {
+          "type": "Account",
+          "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkLZBIA3"
+        },
+        "Name": "Lee Goldberg"
+      },
+      "ExpectedTotalCmtAmount": 3510000,
+      "TotalPaidTransactionAmount": null,
+      "Total_Expected_Remaining_Balance_Due__c": 3510000,
+      "EffectiveStartDate": "2024-11-15",
+      "ExpectedEndDate": null,
+      "Status": "Active",
+      "Campaign": {
+        "attributes": {
+          "type": "Campaign",
+          "url": "/services/data/v59.0/sobjects/Campaign/701Uf00000WkkvJIAR"
+        },
+        "Name": "Legacy of Light (Spark)"
+      }
     },
     {
-      "name": "AmandaLynn MacLeod",
-      "pledgeAmount": 20000.0,
-      "paidAmount": 9643.0,
-      "balance": 10357.0,
-      "endDate": "2025-12-31",
-      "daysOverdue": 57,
-      "campaign": "DRM - FY26"
+      "attributes": {
+        "type": "GiftCommitment",
+        "url": "/services/data/v59.0/sobjects/GiftCommitment/6gcUf00000019igIAA"
+      },
+      "Id": "6gcUf00000019igIAA",
+      "Donor": {
+        "attributes": {
+          "type": "Account",
+          "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkLZBIA3"
+        },
+        "Name": "Lee Goldberg"
+      },
+      "ExpectedTotalCmtAmount": 2030000,
+      "TotalPaidTransactionAmount": null,
+      "Total_Expected_Remaining_Balance_Due__c": 2030000,
+      "EffectiveStartDate": "2024-11-15",
+      "ExpectedEndDate": null,
+      "Status": "Active",
+      "Campaign": {
+        "attributes": {
+          "type": "Campaign",
+          "url": "/services/data/v59.0/sobjects/Campaign/701Uf00000WkkvJIAR"
+        },
+        "Name": "Legacy of Light (Spark)"
+      }
     },
     {
-      "name": "Jackie Stein",
-      "pledgeAmount": 10000.0,
-      "paidAmount": 0.0,
-      "balance": 10000.0,
-      "endDate": "2025-10-31",
-      "daysOverdue": 118,
-      "campaign": "DRM - FY26"
+      "attributes": {
+        "type": "GiftCommitment",
+        "url": "/services/data/v59.0/sobjects/GiftCommitment/6gcUf0000001AlCIAU"
+      },
+      "Id": "6gcUf0000001AlCIAU",
+      "Donor": {
+        "attributes": {
+          "type": "Account",
+          "url": "/services/data/v59.0/sobjects/Account/001Uf00000WjQAaIAN"
+        },
+        "Name": "Dana Zeff"
+      },
+      "ExpectedTotalCmtAmount": 750000,
+      "TotalPaidTransactionAmount": null,
+      "Total_Expected_Remaining_Balance_Due__c": 750000,
+      "EffectiveStartDate": "2025-07-01",
+      "ExpectedEndDate": null,
+      "Status": "Active",
+      "Campaign": {
+        "attributes": {
+          "type": "Campaign",
+          "url": "/services/data/v59.0/sobjects/Campaign/701Uf00000YtneFIAR"
+        },
+        "Name": "DRM - FY26"
+      }
     },
     {
-      "name": "Kira Elizabeth Finkenberg",
-      "pledgeAmount": 10000.0,
-      "paidAmount": 0.0,
-      "balance": 10000.0,
-      "endDate": "2026-01-01",
-      "daysOverdue": 56,
-      "campaign": "DRM - FY26"
+      "attributes": {
+        "type": "GiftCommitment",
+        "url": "/services/data/v59.0/sobjects/GiftCommitment/6gcUf0000001YNpIAM"
+      },
+      "Id": "6gcUf0000001YNpIAM",
+      "Donor": {
+        "attributes": {
+          "type": "Account",
+          "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkTrKIAV"
+        },
+        "Name": "Andrew James Viterbi"
+      },
+      "ExpectedTotalCmtAmount": 750000,
+      "TotalPaidTransactionAmount": null,
+      "Total_Expected_Remaining_Balance_Due__c": 750000,
+      "EffectiveStartDate": "2025-12-02",
+      "ExpectedEndDate": "2026-06-30",
+      "Status": "Active",
+      "Campaign": {
+        "attributes": {
+          "type": "Campaign",
+          "url": "/services/data/v59.0/sobjects/Campaign/701Uf00000YtneFIAR"
+        },
+        "Name": "DRM - FY26"
+      }
     },
     {
-      "name": "Eliane Coffler",
-      "pledgeAmount": 6000.0,
-      "paidAmount": 0.0,
-      "balance": 6000.0,
-      "endDate": "2025-04-22",
-      "daysOverdue": 310,
-      "campaign": "DRM - FY26"
+      "attributes": {
+        "type": "GiftCommitment",
+        "url": "/services/data/v59.0/sobjects/GiftCommitment/6gcUf0000001YPRIA2"
+      },
+      "Id": "6gcUf0000001YPRIA2",
+      "Donor": {
+        "attributes": {
+          "type": "Account",
+          "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkTrKIAV"
+        },
+        "Name": "Andrew James Viterbi"
+      },
+      "ExpectedTotalCmtAmount": 750000,
+      "TotalPaidTransactionAmount": null,
+      "Total_Expected_Remaining_Balance_Due__c": 750000,
+      "EffectiveStartDate": "2027-01-01",
+      "ExpectedEndDate": "2027-12-31",
+      "Status": "Active",
+      "Campaign": {
+        "attributes": {
+          "type": "Campaign",
+          "url": "/services/data/v59.0/sobjects/Campaign/701Uf00000WkVWaIAN"
+        },
+        "Name": "DRM - CY27"
+      }
     },
     {
-      "name": "Leah Nierman",
-      "pledgeAmount": 6000.0,
-      "paidAmount": 0.0,
-      "balance": 6000.0,
-      "endDate": "2025-12-31",
-      "daysOverdue": 57,
-      "campaign": "DRM - FY26"
+      "attributes": {
+        "type": "GiftCommitment",
+        "url": "/services/data/v59.0/sobjects/GiftCommitment/6gcUf00000019ilIAA"
+      },
+      "Id": "6gcUf00000019ilIAA",
+      "Donor": {
+        "attributes": {
+          "type": "Account",
+          "url": "/services/data/v59.0/sobjects/Account/001Uf00000Wk62wIAB"
+        },
+        "Name": "California Department Of Social Services"
+      },
+      "ExpectedTotalCmtAmount": 325000,
+      "TotalPaidTransactionAmount": null,
+      "Total_Expected_Remaining_Balance_Due__c": 325000,
+      "EffectiveStartDate": "2024-11-15",
+      "ExpectedEndDate": null,
+      "Status": "Active",
+      "Campaign": {
+        "attributes": {
+          "type": "Campaign",
+          "url": "/services/data/v59.0/sobjects/Campaign/701Uf00000Wl0aEIAR"
+        },
+        "Name": "DRM Call 2025"
+      }
     },
     {
-      "name": "Susana Cohen Corrigan",
-      "pledgeAmount": 5000.0,
-      "paidAmount": 0.0,
-      "balance": 5000.0,
-      "endDate": "2025-12-31",
-      "daysOverdue": 57,
-      "campaign": "DRM - FY26"
+      "attributes": {
+        "type": "GiftCommitment",
+        "url": "/services/data/v59.0/sobjects/GiftCommitment/6gcUf00000018JdIAI"
+      },
+      "Id": "6gcUf00000018JdIAI",
+      "Donor": {
+        "attributes": {
+          "type": "Account",
+          "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkIYuIAN"
+        },
+        "Name": "Alan Viterbi"
+      },
+      "ExpectedTotalCmtAmount": 300000,
+      "TotalPaidTransactionAmount": null,
+      "Total_Expected_Remaining_Balance_Due__c": 300000,
+      "EffectiveStartDate": "2025-07-01",
+      "ExpectedEndDate": null,
+      "Status": "Active",
+      "Campaign": {
+        "attributes": {
+          "type": "Campaign",
+          "url": "/services/data/v59.0/sobjects/Campaign/701Uf00000YtneFIAR"
+        },
+        "Name": "DRM - FY26"
+      }
     },
     {
-      "name": "Defend48",
-      "pledgeAmount": 1800.0,
-      "paidAmount": 0.0,
-      "balance": 1800.0,
-      "endDate": "2026-02-07",
-      "daysOverdue": 19,
-      "campaign": "FED360 - FY26 - Sponsorships"
+      "attributes": {
+        "type": "GiftCommitment",
+        "url": "/services/data/v59.0/sobjects/GiftCommitment/6gcUf00000019qAIAQ"
+      },
+      "Id": "6gcUf00000019qAIAQ",
+      "Donor": {
+        "attributes": {
+          "type": "Account",
+          "url": "/services/data/v59.0/sobjects/Account/001Uf00000Wk6DTIAZ"
+        },
+        "Name": "California Office Of Emergency Services (Cal OES)"
+      },
+      "ExpectedTotalCmtAmount": 250000,
+      "TotalPaidTransactionAmount": null,
+      "Total_Expected_Remaining_Balance_Due__c": 250000,
+      "EffectiveStartDate": "2024-11-25",
+      "ExpectedEndDate": null,
+      "Status": "Active",
+      "Campaign": null
     },
     {
-      "name": "Susan Freeman",
-      "pledgeAmount": 5000.0,
-      "paidAmount": 3500.0,
-      "balance": 1500.0,
-      "endDate": "2025-12-31",
-      "daysOverdue": 57,
-      "campaign": "DRM - FY26"
+      "attributes": {
+        "type": "GiftCommitment",
+        "url": "/services/data/v59.0/sobjects/GiftCommitment/6gcUf000000182aIAA"
+      },
+      "Id": "6gcUf000000182aIAA",
+      "Donor": {
+        "attributes": {
+          "type": "Account",
+          "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkFaYIAV"
+        },
+        "Name": "Gary Shekhter"
+      },
+      "ExpectedTotalCmtAmount": 222222.22,
+      "TotalPaidTransactionAmount": null,
+      "Total_Expected_Remaining_Balance_Due__c": 222222.22,
+      "EffectiveStartDate": "2025-07-01",
+      "ExpectedEndDate": "2026-12-31",
+      "Status": "Active",
+      "Campaign": {
+        "attributes": {
+          "type": "Campaign",
+          "url": "/services/data/v59.0/sobjects/Campaign/701Uf00000YtneFIAR"
+        },
+        "Name": "DRM - FY26"
+      }
     }
   ],
   "topOpenPledges": [
     {
-      "name": "Lee Goldberg",
-      "pledgedAmount": 3510000.0,
-      "paidAmount": 0.0,
-      "balance": 3510000.0,
-      "startDate": "2024-11-15",
-      "endDate": "",
-      "campaign": "Legacy of Light (Spark)"
+      "attributes": {
+        "type": "GiftCommitment",
+        "url": "/services/data/v59.0/sobjects/GiftCommitment/6gcUf00000019g5IAA"
+      },
+      "Id": "6gcUf00000019g5IAA",
+      "Donor": {
+        "attributes": {
+          "type": "Account",
+          "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkLZBIA3"
+        },
+        "Name": "Lee Goldberg"
+      },
+      "ExpectedTotalCmtAmount": 3510000,
+      "TotalPaidTransactionAmount": null,
+      "Total_Expected_Remaining_Balance_Due__c": 3510000,
+      "EffectiveStartDate": "2024-11-15",
+      "ExpectedEndDate": null,
+      "Status": "Active",
+      "Campaign": {
+        "attributes": {
+          "type": "Campaign",
+          "url": "/services/data/v59.0/sobjects/Campaign/701Uf00000WkkvJIAR"
+        },
+        "Name": "Legacy of Light (Spark)"
+      }
     },
     {
-      "name": "Lee Goldberg",
-      "pledgedAmount": 2030000.0,
-      "paidAmount": 0.0,
-      "balance": 2030000.0,
-      "startDate": "2024-11-15",
-      "endDate": "",
-      "campaign": "Legacy of Light (Spark)"
+      "attributes": {
+        "type": "GiftCommitment",
+        "url": "/services/data/v59.0/sobjects/GiftCommitment/6gcUf00000019igIAA"
+      },
+      "Id": "6gcUf00000019igIAA",
+      "Donor": {
+        "attributes": {
+          "type": "Account",
+          "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkLZBIA3"
+        },
+        "Name": "Lee Goldberg"
+      },
+      "ExpectedTotalCmtAmount": 2030000,
+      "TotalPaidTransactionAmount": null,
+      "Total_Expected_Remaining_Balance_Due__c": 2030000,
+      "EffectiveStartDate": "2024-11-15",
+      "ExpectedEndDate": null,
+      "Status": "Active",
+      "Campaign": {
+        "attributes": {
+          "type": "Campaign",
+          "url": "/services/data/v59.0/sobjects/Campaign/701Uf00000WkkvJIAR"
+        },
+        "Name": "Legacy of Light (Spark)"
+      }
     },
     {
-      "name": "Lee Goldberg",
-      "pledgedAmount": 1055000.0,
-      "paidAmount": 0.0,
-      "balance": 1055000.0,
-      "startDate": "2024-11-15",
-      "endDate": "",
-      "campaign": "Legacy of Light (Spark)"
+      "attributes": {
+        "type": "GiftCommitment",
+        "url": "/services/data/v59.0/sobjects/GiftCommitment/6gcUf0000001AlCIAU"
+      },
+      "Id": "6gcUf0000001AlCIAU",
+      "Donor": {
+        "attributes": {
+          "type": "Account",
+          "url": "/services/data/v59.0/sobjects/Account/001Uf00000WjQAaIAN"
+        },
+        "Name": "Dana Zeff"
+      },
+      "ExpectedTotalCmtAmount": 750000,
+      "TotalPaidTransactionAmount": null,
+      "Total_Expected_Remaining_Balance_Due__c": 750000,
+      "EffectiveStartDate": "2025-07-01",
+      "ExpectedEndDate": null,
+      "Status": "Active",
+      "Campaign": {
+        "attributes": {
+          "type": "Campaign",
+          "url": "/services/data/v59.0/sobjects/Campaign/701Uf00000YtneFIAR"
+        },
+        "Name": "DRM - FY26"
+      }
     },
     {
-      "name": "Dana Zeff",
-      "pledgedAmount": 750000.0,
-      "paidAmount": 0.0,
-      "balance": 750000.0,
-      "startDate": "2025-07-01",
-      "endDate": "",
-      "campaign": "Unsolicited Annual Gifts - FY26"
+      "attributes": {
+        "type": "GiftCommitment",
+        "url": "/services/data/v59.0/sobjects/GiftCommitment/6gcUf0000001YNpIAM"
+      },
+      "Id": "6gcUf0000001YNpIAM",
+      "Donor": {
+        "attributes": {
+          "type": "Account",
+          "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkTrKIAV"
+        },
+        "Name": "Andrew James Viterbi"
+      },
+      "ExpectedTotalCmtAmount": 750000,
+      "TotalPaidTransactionAmount": null,
+      "Total_Expected_Remaining_Balance_Due__c": 750000,
+      "EffectiveStartDate": "2025-12-02",
+      "ExpectedEndDate": "2026-06-30",
+      "Status": "Active",
+      "Campaign": {
+        "attributes": {
+          "type": "Campaign",
+          "url": "/services/data/v59.0/sobjects/Campaign/701Uf00000YtneFIAR"
+        },
+        "Name": "DRM - FY26"
+      }
     },
     {
-      "name": "Andrew James Viterbi",
-      "pledgedAmount": 750000.0,
-      "paidAmount": 0.0,
-      "balance": 750000.0,
-      "startDate": "2025-12-02",
-      "endDate": "2026-06-30",
-      "campaign": "DRM - FY26"
+      "attributes": {
+        "type": "GiftCommitment",
+        "url": "/services/data/v59.0/sobjects/GiftCommitment/6gcUf0000001YPRIA2"
+      },
+      "Id": "6gcUf0000001YPRIA2",
+      "Donor": {
+        "attributes": {
+          "type": "Account",
+          "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkTrKIAV"
+        },
+        "Name": "Andrew James Viterbi"
+      },
+      "ExpectedTotalCmtAmount": 750000,
+      "TotalPaidTransactionAmount": null,
+      "Total_Expected_Remaining_Balance_Due__c": 750000,
+      "EffectiveStartDate": "2027-01-01",
+      "ExpectedEndDate": "2027-12-31",
+      "Status": "Active",
+      "Campaign": {
+        "attributes": {
+          "type": "Campaign",
+          "url": "/services/data/v59.0/sobjects/Campaign/701Uf00000WkVWaIAN"
+        },
+        "Name": "DRM - CY27"
+      }
     },
     {
-      "name": "Andrew James Viterbi",
-      "pledgedAmount": 750000.0,
-      "paidAmount": 0.0,
-      "balance": 750000.0,
-      "startDate": "2027-01-01",
-      "endDate": "2027-12-31",
-      "campaign": "DRM - CY27"
+      "attributes": {
+        "type": "GiftCommitment",
+        "url": "/services/data/v59.0/sobjects/GiftCommitment/6gcUf00000019ilIAA"
+      },
+      "Id": "6gcUf00000019ilIAA",
+      "Donor": {
+        "attributes": {
+          "type": "Account",
+          "url": "/services/data/v59.0/sobjects/Account/001Uf00000Wk62wIAB"
+        },
+        "Name": "California Department Of Social Services"
+      },
+      "ExpectedTotalCmtAmount": 325000,
+      "TotalPaidTransactionAmount": null,
+      "Total_Expected_Remaining_Balance_Due__c": 325000,
+      "EffectiveStartDate": "2024-11-15",
+      "ExpectedEndDate": null,
+      "Status": "Active",
+      "Campaign": {
+        "attributes": {
+          "type": "Campaign",
+          "url": "/services/data/v59.0/sobjects/Campaign/701Uf00000Wl0aEIAR"
+        },
+        "Name": "DRM Call 2025"
+      }
     },
     {
-      "name": "California Department Of Social Services",
-      "pledgedAmount": 325000.0,
-      "paidAmount": 0.0,
-      "balance": 325000.0,
-      "startDate": "2024-11-15",
-      "endDate": "",
-      "campaign": "DRM Call 2025"
+      "attributes": {
+        "type": "GiftCommitment",
+        "url": "/services/data/v59.0/sobjects/GiftCommitment/6gcUf00000018JdIAI"
+      },
+      "Id": "6gcUf00000018JdIAI",
+      "Donor": {
+        "attributes": {
+          "type": "Account",
+          "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkIYuIAN"
+        },
+        "Name": "Alan Viterbi"
+      },
+      "ExpectedTotalCmtAmount": 300000,
+      "TotalPaidTransactionAmount": null,
+      "Total_Expected_Remaining_Balance_Due__c": 300000,
+      "EffectiveStartDate": "2025-07-01",
+      "ExpectedEndDate": null,
+      "Status": "Active",
+      "Campaign": {
+        "attributes": {
+          "type": "Campaign",
+          "url": "/services/data/v59.0/sobjects/Campaign/701Uf00000YtneFIAR"
+        },
+        "Name": "DRM - FY26"
+      }
     },
     {
-      "name": "Alan Viterbi",
-      "pledgedAmount": 300000.0,
-      "paidAmount": 0.0,
-      "balance": 300000.0,
-      "startDate": "2025-07-01",
-      "endDate": "",
-      "campaign": "DRM - FY26"
+      "attributes": {
+        "type": "GiftCommitment",
+        "url": "/services/data/v59.0/sobjects/GiftCommitment/6gcUf00000019qAIAQ"
+      },
+      "Id": "6gcUf00000019qAIAQ",
+      "Donor": {
+        "attributes": {
+          "type": "Account",
+          "url": "/services/data/v59.0/sobjects/Account/001Uf00000Wk6DTIAZ"
+        },
+        "Name": "California Office Of Emergency Services (Cal OES)"
+      },
+      "ExpectedTotalCmtAmount": 250000,
+      "TotalPaidTransactionAmount": null,
+      "Total_Expected_Remaining_Balance_Due__c": 250000,
+      "EffectiveStartDate": "2024-11-25",
+      "ExpectedEndDate": null,
+      "Status": "Active",
+      "Campaign": null
     },
     {
-      "name": "California Office Of Emergency Services (Cal OES)",
-      "pledgedAmount": 250000.0,
-      "paidAmount": 0.0,
-      "balance": 250000.0,
-      "startDate": "2024-11-25",
-      "endDate": "",
-      "campaign": "Unknown"
+      "attributes": {
+        "type": "GiftCommitment",
+        "url": "/services/data/v59.0/sobjects/GiftCommitment/6gcUf000000182aIAA"
+      },
+      "Id": "6gcUf000000182aIAA",
+      "Donor": {
+        "attributes": {
+          "type": "Account",
+          "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkFaYIAV"
+        },
+        "Name": "Gary Shekhter"
+      },
+      "ExpectedTotalCmtAmount": 222222.22,
+      "TotalPaidTransactionAmount": null,
+      "Total_Expected_Remaining_Balance_Due__c": 222222.22,
+      "EffectiveStartDate": "2025-07-01",
+      "ExpectedEndDate": "2026-12-31",
+      "Status": "Active",
+      "Campaign": {
+        "attributes": {
+          "type": "Campaign",
+          "url": "/services/data/v59.0/sobjects/Campaign/701Uf00000YtneFIAR"
+        },
+        "Name": "DRM - FY26"
+      }
     },
     {
-      "name": "Gary Shekhter",
-      "pledgedAmount": 222222.22,
-      "paidAmount": 0.0,
-      "balance": 222222.22,
-      "startDate": "2025-07-01",
-      "endDate": "2026-12-31",
-      "campaign": "DRM - FY26"
+      "attributes": {
+        "type": "GiftCommitment",
+        "url": "/services/data/v59.0/sobjects/GiftCommitment/6gcUf00000018JwIAI"
+      },
+      "Id": "6gcUf00000018JwIAI",
+      "Donor": {
+        "attributes": {
+          "type": "Account",
+          "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkIYuIAN"
+        },
+        "Name": "Alan Viterbi"
+      },
+      "ExpectedTotalCmtAmount": 150000,
+      "TotalPaidTransactionAmount": null,
+      "Total_Expected_Remaining_Balance_Due__c": 150000,
+      "EffectiveStartDate": "2025-07-01",
+      "ExpectedEndDate": null,
+      "Status": "Active",
+      "Campaign": {
+        "attributes": {
+          "type": "Campaign",
+          "url": "/services/data/v59.0/sobjects/Campaign/701Uf00000YtneFIAR"
+        },
+        "Name": "DRM - FY26"
+      }
     },
     {
-      "name": "Alan Viterbi",
-      "pledgedAmount": 150000.0,
-      "paidAmount": 0.0,
-      "balance": 150000.0,
-      "startDate": "2025-07-01",
-      "endDate": "",
-      "campaign": "DRM - FY26"
+      "attributes": {
+        "type": "GiftCommitment",
+        "url": "/services/data/v59.0/sobjects/GiftCommitment/6gcUf000000182xIAA"
+      },
+      "Id": "6gcUf000000182xIAA",
+      "Donor": {
+        "attributes": {
+          "type": "Account",
+          "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkFaYIAV"
+        },
+        "Name": "Gary Shekhter"
+      },
+      "ExpectedTotalCmtAmount": 111111.11,
+      "TotalPaidTransactionAmount": null,
+      "Total_Expected_Remaining_Balance_Due__c": 111111.11,
+      "EffectiveStartDate": "2025-07-01",
+      "ExpectedEndDate": null,
+      "Status": "Active",
+      "Campaign": {
+        "attributes": {
+          "type": "Campaign",
+          "url": "/services/data/v59.0/sobjects/Campaign/701Uf00000YtneFIAR"
+        },
+        "Name": "DRM - FY26"
+      }
     },
     {
-      "name": "Gary Shekhter",
-      "pledgedAmount": 111111.11,
-      "paidAmount": 0.0,
-      "balance": 111111.11,
-      "startDate": "2025-07-01",
-      "endDate": "",
-      "campaign": "DRM - FY26"
+      "attributes": {
+        "type": "GiftCommitment",
+        "url": "/services/data/v59.0/sobjects/GiftCommitment/6gcUf0000001bojIAA"
+      },
+      "Id": "6gcUf0000001bojIAA",
+      "Donor": {
+        "attributes": {
+          "type": "Account",
+          "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkNeeIAF"
+        },
+        "Name": "Claire Ellman"
+      },
+      "ExpectedTotalCmtAmount": 100000,
+      "TotalPaidTransactionAmount": null,
+      "Total_Expected_Remaining_Balance_Due__c": 100000,
+      "EffectiveStartDate": "2026-01-27",
+      "ExpectedEndDate": "2028-12-31",
+      "Status": "Active",
+      "Campaign": {
+        "attributes": {
+          "type": "Campaign",
+          "url": "/services/data/v59.0/sobjects/Campaign/701Uf00000fwM5OIAU"
+        },
+        "Name": "Sha\u2019ar HaNegev Resiliency Village - Rady Match"
+      }
     },
     {
-      "name": "Claire Ellman",
-      "pledgedAmount": 100000.0,
-      "paidAmount": 0.0,
-      "balance": 100000.0,
-      "startDate": "2026-01-27",
-      "endDate": "2028-12-31",
-      "campaign": "Sha\u2019ar HaNegev Resiliency Village - Rady Match"
+      "attributes": {
+        "type": "GiftCommitment",
+        "url": "/services/data/v59.0/sobjects/GiftCommitment/6gcUf00000018MgIAI"
+      },
+      "Id": "6gcUf00000018MgIAI",
+      "Donor": {
+        "attributes": {
+          "type": "Account",
+          "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkU70IAF"
+        },
+        "Name": "Mark Gleiberman"
+      },
+      "ExpectedTotalCmtAmount": 100000,
+      "TotalPaidTransactionAmount": null,
+      "Total_Expected_Remaining_Balance_Due__c": 100000,
+      "EffectiveStartDate": "2025-04-10",
+      "ExpectedEndDate": null,
+      "Status": "Active",
+      "Campaign": {
+        "attributes": {
+          "type": "Campaign",
+          "url": "/services/data/v59.0/sobjects/Campaign/701Uf00000WkuBMIAZ"
+        },
+        "Name": "DRM EM 2025"
+      }
     },
     {
-      "name": "Anton Woolf",
-      "pledgedAmount": 100000.0,
-      "paidAmount": 0.0,
-      "balance": 100000.0,
-      "startDate": "2025-10-23",
-      "endDate": "2027-12-31",
-      "campaign": "JDC - Rady Match"
+      "attributes": {
+        "type": "GiftCommitment",
+        "url": "/services/data/v59.0/sobjects/GiftCommitment/6gcUf0000001YE9IAM"
+      },
+      "Id": "6gcUf0000001YE9IAM",
+      "Donor": {
+        "attributes": {
+          "type": "Account",
+          "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkLDpIAN"
+        },
+        "Name": "Anton Woolf"
+      },
+      "ExpectedTotalCmtAmount": 100000,
+      "TotalPaidTransactionAmount": 0,
+      "Total_Expected_Remaining_Balance_Due__c": 100000,
+      "EffectiveStartDate": "2025-10-23",
+      "ExpectedEndDate": "2027-12-31",
+      "Status": "Active",
+      "Campaign": {
+        "attributes": {
+          "type": "Campaign",
+          "url": "/services/data/v59.0/sobjects/Campaign/701Uf00000ff5nUIAQ"
+        },
+        "Name": "JDC - Rady Match"
+      }
     },
     {
-      "name": "Mark Gleiberman",
-      "pledgedAmount": 100000.0,
-      "paidAmount": 0.0,
-      "balance": 100000.0,
-      "startDate": "2025-04-10",
-      "endDate": "",
-      "campaign": "DRM EM 2025"
+      "attributes": {
+        "type": "GiftCommitment",
+        "url": "/services/data/v59.0/sobjects/GiftCommitment/6gcUf0000001bNJIAY"
+      },
+      "Id": "6gcUf0000001bNJIAY",
+      "Donor": {
+        "attributes": {
+          "type": "Account",
+          "url": "/services/data/v59.0/sobjects/Account/001Uf00000Wk5vKIAR"
+        },
+        "Name": "The Melvin Garb Foundation"
+      },
+      "ExpectedTotalCmtAmount": 100000,
+      "TotalPaidTransactionAmount": null,
+      "Total_Expected_Remaining_Balance_Due__c": 100000,
+      "EffectiveStartDate": "2025-12-03",
+      "ExpectedEndDate": "2026-06-30",
+      "Status": "Active",
+      "Campaign": {
+        "attributes": {
+          "type": "Campaign",
+          "url": "/services/data/v59.0/sobjects/Campaign/701Uf00000WkkvJIAR"
+        },
+        "Name": "Legacy of Light (Spark)"
+      }
     },
     {
-      "name": "The Melvin Garb Foundation",
-      "pledgedAmount": 100000.0,
-      "paidAmount": 0.0,
-      "balance": 100000.0,
-      "startDate": "2025-12-03",
-      "endDate": "2026-06-30",
-      "campaign": "Legacy of Light (Spark)"
+      "attributes": {
+        "type": "GiftCommitment",
+        "url": "/services/data/v59.0/sobjects/GiftCommitment/6gcUf00000018LBIAY"
+      },
+      "Id": "6gcUf00000018LBIAY",
+      "Donor": {
+        "attributes": {
+          "type": "Account",
+          "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkMJjIAN"
+        },
+        "Name": "Valerie Marie Viterbi"
+      },
+      "ExpectedTotalCmtAmount": 75000,
+      "TotalPaidTransactionAmount": null,
+      "Total_Expected_Remaining_Balance_Due__c": 75000,
+      "EffectiveStartDate": "2025-03-17",
+      "ExpectedEndDate": null,
+      "Status": "Active",
+      "Campaign": {
+        "attributes": {
+          "type": "Campaign",
+          "url": "/services/data/v59.0/sobjects/Campaign/701Uf00000YtneFIAR"
+        },
+        "Name": "DRM - FY26"
+      }
     },
     {
-      "name": "Carlos David Michan",
-      "pledgedAmount": 75000.0,
-      "paidAmount": 0.0,
-      "balance": 75000.0,
-      "startDate": "2025-05-28",
-      "endDate": "",
-      "campaign": "Beit Melachah Direct Mail 2025"
+      "attributes": {
+        "type": "GiftCommitment",
+        "url": "/services/data/v59.0/sobjects/GiftCommitment/6gcUf00000018K7IAI"
+      },
+      "Id": "6gcUf00000018K7IAI",
+      "Donor": {
+        "attributes": {
+          "type": "Account",
+          "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkCKQIA3"
+        },
+        "Name": "Gloria E. Stone"
+      },
+      "ExpectedTotalCmtAmount": 75000,
+      "TotalPaidTransactionAmount": null,
+      "Total_Expected_Remaining_Balance_Due__c": 75000,
+      "EffectiveStartDate": "2024-06-10",
+      "ExpectedEndDate": null,
+      "Status": "Active",
+      "Campaign": {
+        "attributes": {
+          "type": "Campaign",
+          "url": "/services/data/v59.0/sobjects/Campaign/701Uf00000WkVWtIAN"
+        },
+        "Name": "DRM FACE 2025"
+      }
     },
     {
-      "name": "Gloria E. Stone",
-      "pledgedAmount": 75000.0,
-      "paidAmount": 0.0,
-      "balance": 75000.0,
-      "startDate": "2024-06-10",
-      "endDate": "",
-      "campaign": "DRM FACE 2025"
+      "attributes": {
+        "type": "GiftCommitment",
+        "url": "/services/data/v59.0/sobjects/GiftCommitment/6gcUf00000018NRIAY"
+      },
+      "Id": "6gcUf00000018NRIAY",
+      "Donor": {
+        "attributes": {
+          "type": "Account",
+          "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkMJjIAN"
+        },
+        "Name": "Valerie Marie Viterbi"
+      },
+      "ExpectedTotalCmtAmount": 75000,
+      "TotalPaidTransactionAmount": null,
+      "Total_Expected_Remaining_Balance_Due__c": 75000,
+      "EffectiveStartDate": "2025-03-17",
+      "ExpectedEndDate": null,
+      "Status": "Active",
+      "Campaign": {
+        "attributes": {
+          "type": "Campaign",
+          "url": "/services/data/v59.0/sobjects/Campaign/701Uf00000WkVWaIAN"
+        },
+        "Name": "DRM - CY27"
+      }
     },
     {
-      "name": "Valerie Marie Viterbi",
-      "pledgedAmount": 75000.0,
-      "paidAmount": 0.0,
-      "balance": 75000.0,
-      "startDate": "2025-03-17",
-      "endDate": "",
-      "campaign": "DRM - FY26"
+      "attributes": {
+        "type": "GiftCommitment",
+        "url": "/services/data/v59.0/sobjects/GiftCommitment/6gcUf0000001Z0XIAU"
+      },
+      "Id": "6gcUf0000001Z0XIAU",
+      "Donor": {
+        "attributes": {
+          "type": "Account",
+          "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkK6OIAV"
+        },
+        "Name": "Sonia Ancoli Israel"
+      },
+      "ExpectedTotalCmtAmount": 100000,
+      "TotalPaidTransactionAmount": 50000,
+      "Total_Expected_Remaining_Balance_Due__c": 50000,
+      "EffectiveStartDate": "2025-12-12",
+      "ExpectedEndDate": "2026-12-31",
+      "Status": "Active",
+      "Campaign": {
+        "attributes": {
+          "type": "Campaign",
+          "url": "/services/data/v59.0/sobjects/Campaign/701Uf00000Y78QXIAZ"
+        },
+        "Name": "The Community Trip - Underwriting"
+      }
     },
     {
-      "name": "Valerie Marie Viterbi",
-      "pledgedAmount": 75000.0,
-      "paidAmount": 0.0,
-      "balance": 75000.0,
-      "startDate": "2025-03-17",
-      "endDate": "",
-      "campaign": "DRM - CY27"
+      "attributes": {
+        "type": "GiftCommitment",
+        "url": "/services/data/v59.0/sobjects/GiftCommitment/6gcUf00000018K2IAI"
+      },
+      "Id": "6gcUf00000018K2IAI",
+      "Donor": {
+        "attributes": {
+          "type": "Account",
+          "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkIYuIAN"
+        },
+        "Name": "Alan Viterbi"
+      },
+      "ExpectedTotalCmtAmount": 50000,
+      "TotalPaidTransactionAmount": null,
+      "Total_Expected_Remaining_Balance_Due__c": 50000,
+      "EffectiveStartDate": "2025-07-01",
+      "ExpectedEndDate": null,
+      "Status": "Active",
+      "Campaign": {
+        "attributes": {
+          "type": "Campaign",
+          "url": "/services/data/v59.0/sobjects/Campaign/701Uf00000YtneFIAR"
+        },
+        "Name": "DRM - FY26"
+      }
     },
     {
-      "name": "Lara Woolf Grusd",
-      "pledgedAmount": 100000.0,
-      "paidAmount": 50000.0,
-      "balance": 50000.0,
-      "startDate": "2025-10-23",
-      "endDate": "2026-12-31",
-      "campaign": "JDC - Rady Match"
+      "attributes": {
+        "type": "GiftCommitment",
+        "url": "/services/data/v59.0/sobjects/GiftCommitment/6gcUf0000001A1bIAE"
+      },
+      "Id": "6gcUf0000001A1bIAE",
+      "Donor": {
+        "attributes": {
+          "type": "Account",
+          "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkPvSIAV"
+        },
+        "Name": "Shayna Davis-Schreiber"
+      },
+      "ExpectedTotalCmtAmount": 50000,
+      "TotalPaidTransactionAmount": null,
+      "Total_Expected_Remaining_Balance_Due__c": 50000,
+      "EffectiveStartDate": "2024-07-01",
+      "ExpectedEndDate": null,
+      "Status": "Active",
+      "Campaign": {
+        "attributes": {
+          "type": "Campaign",
+          "url": "/services/data/v59.0/sobjects/Campaign/701Uf00000c0VpHIAU"
+        },
+        "Name": "Beit Melachah - General"
+      }
     },
     {
-      "name": "Sonia Ancoli Israel",
-      "pledgedAmount": 100000.0,
-      "paidAmount": 50000.0,
-      "balance": 50000.0,
-      "startDate": "2025-12-12",
-      "endDate": "2026-12-31",
-      "campaign": "The Community Trip - Underwriting"
+      "attributes": {
+        "type": "GiftCommitment",
+        "url": "/services/data/v59.0/sobjects/GiftCommitment/6gcUf0000001A0OIAU"
+      },
+      "Id": "6gcUf0000001A0OIAU",
+      "Donor": {
+        "attributes": {
+          "type": "Account",
+          "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkPvSIAV"
+        },
+        "Name": "Shayna Davis-Schreiber"
+      },
+      "ExpectedTotalCmtAmount": 50000,
+      "TotalPaidTransactionAmount": null,
+      "Total_Expected_Remaining_Balance_Due__c": 50000,
+      "EffectiveStartDate": "2025-07-01",
+      "ExpectedEndDate": null,
+      "Status": "Active",
+      "Campaign": {
+        "attributes": {
+          "type": "Campaign",
+          "url": "/services/data/v59.0/sobjects/Campaign/701Uf00000YtneFIAR"
+        },
+        "Name": "DRM - FY26"
+      }
     },
     {
-      "name": "Sonia Ancoli Israel",
-      "pledgedAmount": 100000.0,
-      "paidAmount": 50000.0,
-      "balance": 50000.0,
-      "startDate": "2025-12-12",
-      "endDate": "2026-12-31",
-      "campaign": "Legacy of Light (Spark)"
+      "attributes": {
+        "type": "GiftCommitment",
+        "url": "/services/data/v59.0/sobjects/GiftCommitment/6gcUf0000001A1GIAU"
+      },
+      "Id": "6gcUf0000001A1GIAU",
+      "Donor": {
+        "attributes": {
+          "type": "Account",
+          "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkPvSIAV"
+        },
+        "Name": "Shayna Davis-Schreiber"
+      },
+      "ExpectedTotalCmtAmount": 50000,
+      "TotalPaidTransactionAmount": null,
+      "Total_Expected_Remaining_Balance_Due__c": 50000,
+      "EffectiveStartDate": "2025-07-01",
+      "ExpectedEndDate": null,
+      "Status": "Active",
+      "Campaign": {
+        "attributes": {
+          "type": "Campaign",
+          "url": "/services/data/v59.0/sobjects/Campaign/701Uf00000c0VpHIAU"
+        },
+        "Name": "Beit Melachah - General"
+      }
     },
     {
-      "name": "Shayna Davis-Schreiber",
-      "pledgedAmount": 50000.0,
-      "paidAmount": 0.0,
-      "balance": 50000.0,
-      "startDate": "2025-07-01",
-      "endDate": "",
-      "campaign": "Beit Melachah - General"
+      "attributes": {
+        "type": "GiftCommitment",
+        "url": "/services/data/v59.0/sobjects/GiftCommitment/6gcUf00000018BTIAY"
+      },
+      "Id": "6gcUf00000018BTIAY",
+      "Donor": {
+        "attributes": {
+          "type": "Account",
+          "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkDPYIA3"
+        },
+        "Name": "Richard Gabriel"
+      },
+      "ExpectedTotalCmtAmount": 50000,
+      "TotalPaidTransactionAmount": null,
+      "Total_Expected_Remaining_Balance_Due__c": 50000,
+      "EffectiveStartDate": "2027-07-01",
+      "ExpectedEndDate": null,
+      "Status": "Active",
+      "Campaign": {
+        "attributes": {
+          "type": "Campaign",
+          "url": "/services/data/v59.0/sobjects/Campaign/701Uf00000lQCTyIAO"
+        },
+        "Name": "DRM - CY28"
+      }
     },
     {
-      "name": "Shayna Davis-Schreiber",
-      "pledgedAmount": 50000.0,
-      "paidAmount": 0.0,
-      "balance": 50000.0,
-      "startDate": "2024-07-01",
-      "endDate": "",
-      "campaign": "Beit Melachah - General"
+      "attributes": {
+        "type": "GiftCommitment",
+        "url": "/services/data/v59.0/sobjects/GiftCommitment/6gcUf00000018BUIAY"
+      },
+      "Id": "6gcUf00000018BUIAY",
+      "Donor": {
+        "attributes": {
+          "type": "Account",
+          "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkDPYIA3"
+        },
+        "Name": "Richard Gabriel"
+      },
+      "ExpectedTotalCmtAmount": 50000,
+      "TotalPaidTransactionAmount": null,
+      "Total_Expected_Remaining_Balance_Due__c": 50000,
+      "EffectiveStartDate": "2026-07-01",
+      "ExpectedEndDate": null,
+      "Status": "Active",
+      "Campaign": {
+        "attributes": {
+          "type": "Campaign",
+          "url": "/services/data/v59.0/sobjects/Campaign/701Uf00000WkVWaIAN"
+        },
+        "Name": "DRM - CY27"
+      }
     }
   ],
   "byCampaign": [
     {
-      "campaign": "Legacy of Light (Spark)",
-      "pledgeCount": 6,
-      "pledgedAmount": 6805000.0,
-      "paidAmount": 50000.0,
-      "fulfillmentRate": 0.7
-    },
-    {
-      "campaign": "DRM - FY26",
-      "pledgeCount": 72,
-      "pledgedAmount": 2347339.03,
-      "paidAmount": 30141.0,
-      "fulfillmentRate": 1.3
-    },
-    {
-      "campaign": "DRM - CY27",
-      "pledgeCount": 46,
-      "pledgedAmount": 1300505.7,
-      "paidAmount": 0.0,
-      "fulfillmentRate": 0.0
-    },
-    {
-      "campaign": "Unsolicited Annual Gifts - FY26",
-      "pledgeCount": 7,
-      "pledgedAmount": 794638.08,
-      "paidAmount": 460.13,
-      "fulfillmentRate": 0.1
-    },
-    {
-      "campaign": "DRM Call 2025",
-      "pledgeCount": 17,
-      "pledgedAmount": 373140.0,
-      "paidAmount": 8100.0,
-      "fulfillmentRate": 2.2
-    },
-    {
-      "campaign": "Unknown",
-      "pledgeCount": 2,
-      "pledgedAmount": 300000.0,
-      "paidAmount": 0.0,
-      "fulfillmentRate": 0.0
-    },
-    {
-      "campaign": "FED360 - FY26 - Donations - Attended",
-      "pledgeCount": 176,
-      "pledgedAmount": 242857.0,
-      "paidAmount": 780.0,
-      "fulfillmentRate": 0.3
-    },
-    {
-      "campaign": "JDC - Rady Match",
-      "pledgeCount": 3,
-      "pledgedAmount": 201000.0,
-      "paidAmount": 50000.0,
-      "fulfillmentRate": 24.9
-    },
-    {
-      "campaign": "DRM FACE 2025",
-      "pledgeCount": 12,
-      "pledgedAmount": 195050.0,
-      "paidAmount": 15657.599999999999,
-      "fulfillmentRate": 8.0
-    },
-    {
-      "campaign": "DRM FACE 2024",
-      "pledgeCount": 3,
-      "pledgedAmount": 163333.34,
-      "paidAmount": 110440.0,
-      "fulfillmentRate": 67.6
-    },
-    {
-      "campaign": "Beit Melachah - General",
-      "pledgeCount": 4,
-      "pledgedAmount": 155000.0,
-      "paidAmount": 0.0,
-      "fulfillmentRate": 0.0
-    },
-    {
-      "campaign": "Beit Melachah Direct Mail 2025",
-      "pledgeCount": 2,
-      "pledgedAmount": 125000.0,
-      "paidAmount": 25000.0,
-      "fulfillmentRate": 20.0
-    },
-    {
-      "campaign": "The Community Trip - Underwriting",
-      "pledgeCount": 2,
-      "pledgedAmount": 115000.0,
-      "paidAmount": 50000.0,
-      "fulfillmentRate": 43.5
-    },
-    {
-      "campaign": "Ambassador - FY26",
-      "pledgeCount": 16,
-      "pledgedAmount": 111150.0,
-      "paidAmount": 0.0,
-      "fulfillmentRate": 0.0
-    },
-    {
-      "campaign": "DRM EM 2025",
-      "pledgeCount": 2,
-      "pledgedAmount": 106000.0,
-      "paidAmount": 4844.0,
-      "fulfillmentRate": 4.6
-    },
-    {
-      "campaign": "Sha\u2019ar HaNegev Resiliency Village - Rady Match",
-      "pledgeCount": 1,
-      "pledgedAmount": 100000.0,
-      "paidAmount": 0.0,
-      "fulfillmentRate": 0.0
-    },
-    {
-      "campaign": "Ambassador - CY27",
-      "pledgeCount": 7,
-      "pledgedAmount": 77000.0,
-      "paidAmount": 0.0,
-      "fulfillmentRate": 0.0
-    },
-    {
-      "campaign": "DRM - CY28",
-      "pledgeCount": 4,
-      "pledgedAmount": 70000.0,
-      "paidAmount": 0.0,
-      "fulfillmentRate": 0.0
-    },
-    {
-      "campaign": "FEDERATION 360 - FY25",
-      "pledgeCount": 20,
-      "pledgedAmount": 40652.0,
-      "paidAmount": 5019.5,
-      "fulfillmentRate": 12.3
-    },
-    {
-      "campaign": "DRM FACE 2022",
-      "pledgeCount": 1,
-      "pledgedAmount": 20000.0,
-      "paidAmount": 0.0,
-      "fulfillmentRate": 0.0
-    },
-    {
-      "campaign": "AMB FACE 2025",
-      "pledgeCount": 2,
-      "pledgedAmount": 15000.0,
-      "paidAmount": 0.0,
-      "fulfillmentRate": 0.0
-    },
-    {
-      "campaign": "FEDERATION 360 2024",
-      "pledgeCount": 13,
-      "pledgedAmount": 14488.0,
-      "paidAmount": 3645.0,
-      "fulfillmentRate": 25.2
-    },
-    {
-      "campaign": "AMB EM 2025",
-      "pledgeCount": 3,
-      "pledgedAmount": 12000.0,
-      "paidAmount": 0.0,
-      "fulfillmentRate": 0.0
-    },
-    {
-      "campaign": "AMB FACE 2022",
-      "pledgeCount": 2,
-      "pledgedAmount": 10616.0,
-      "paidAmount": 5768.0,
-      "fulfillmentRate": 54.3
-    },
-    {
-      "campaign": "AMB EM 2024",
-      "pledgeCount": 3,
-      "pledgedAmount": 10500.0,
-      "paidAmount": 50.0,
-      "fulfillmentRate": 0.5
-    },
-    {
-      "campaign": "Corporate Event Sponsorships - FY26",
-      "pledgeCount": 2,
-      "pledgedAmount": 10000.0,
-      "paidAmount": 0.0,
-      "fulfillmentRate": 0.0
-    },
-    {
-      "campaign": "EVENT LOJ 2023",
-      "pledgeCount": 4,
-      "pledgedAmount": 9900.0,
-      "paidAmount": 0.0,
-      "fulfillmentRate": 0.0
-    },
-    {
-      "campaign": "DRM CALL 2022",
-      "pledgeCount": 2,
-      "pledgedAmount": 7950.0,
-      "paidAmount": 0.0,
-      "fulfillmentRate": 0.0
-    },
-    {
-      "campaign": "AMB CALL 2025",
-      "pledgeCount": 3,
-      "pledgedAmount": 7300.0,
-      "paidAmount": 0.0,
-      "fulfillmentRate": 0.0
-    },
-    {
-      "campaign": "DRM Em 2023",
-      "pledgeCount": 1,
-      "pledgedAmount": 7000.0,
-      "paidAmount": 432.0,
-      "fulfillmentRate": 6.2
-    },
-    {
-      "campaign": "DRM EM 2022",
-      "pledgeCount": 3,
-      "pledgedAmount": 5780.0,
-      "paidAmount": 0.0,
-      "fulfillmentRate": 0.0
-    },
-    {
-      "campaign": "AMB FACE 2024",
-      "pledgeCount": 1,
-      "pledgedAmount": 5454.0,
-      "paidAmount": 0.0,
-      "fulfillmentRate": 0.0
-    },
-    {
-      "campaign": "NYLC CAUCUS 2023",
-      "pledgeCount": 1,
-      "pledgedAmount": 5436.0,
-      "paidAmount": 0.0,
-      "fulfillmentRate": 0.0
-    },
-    {
-      "campaign": "AMB CALL 2021",
-      "pledgeCount": 1,
-      "pledgedAmount": 5436.0,
-      "paidAmount": 3531.0,
-      "fulfillmentRate": 65.0
-    },
-    {
-      "campaign": "LION OF JUDAH LUNCHEON 2025",
-      "pledgeCount": 3,
-      "pledgedAmount": 5353.0,
-      "paidAmount": 0.0,
-      "fulfillmentRate": 0.0
-    },
-    {
-      "campaign": "ONLINE GEN 2024",
-      "pledgeCount": 1,
-      "pledgedAmount": 5000.0,
-      "paidAmount": 0.0,
-      "fulfillmentRate": 0.0
-    },
-    {
-      "campaign": "AMB EM 2023",
-      "pledgeCount": 1,
-      "pledgedAmount": 5000.0,
-      "paidAmount": 0.0,
-      "fulfillmentRate": 0.0
-    },
-    {
-      "campaign": "Rady Match for Israel\u2019s Recovery - General",
-      "pledgeCount": 1,
-      "pledgedAmount": 5000.0,
-      "paidAmount": 0.0,
-      "fulfillmentRate": 0.0
-    },
-    {
-      "campaign": "CABINET RETREAT 2025",
-      "pledgeCount": 1,
-      "pledgedAmount": 5000.0,
-      "paidAmount": 0.0,
-      "fulfillmentRate": 0.0
-    },
-    {
-      "campaign": "AMB CALL 2024",
-      "pledgeCount": 3,
-      "pledgedAmount": 4600.0,
-      "paidAmount": 100.0,
-      "fulfillmentRate": 2.2
-    },
-    {
-      "campaign": "CMNTY TRIP 2023",
-      "pledgeCount": 9,
-      "pledgedAmount": 3876.0,
-      "paidAmount": 870.0,
-      "fulfillmentRate": 22.4
-    },
-    {
-      "campaign": "FED360 - FY26 - Donations - Tributes",
-      "pledgeCount": 2,
-      "pledgedAmount": 3600.0,
-      "paidAmount": 0.0,
-      "fulfillmentRate": 0.0
-    },
-    {
-      "campaign": "TLMKT DEC 2022",
-      "pledgeCount": 40,
-      "pledgedAmount": 3514.0,
-      "paidAmount": 1088.0,
-      "fulfillmentRate": 31.0
-    },
-    {
-      "campaign": "TLMKT DEC 2023",
-      "pledgeCount": 32,
-      "pledgedAmount": 3425.0,
-      "paidAmount": 0.0,
-      "fulfillmentRate": 0.0
-    },
-    {
-      "campaign": "UNSOL JCF 2024",
-      "pledgeCount": 1,
-      "pledgedAmount": 3000.0,
-      "paidAmount": 0.0,
-      "fulfillmentRate": 0.0
-    },
-    {
-      "campaign": "TLMKT APR 2022",
-      "pledgeCount": 36,
-      "pledgedAmount": 2846.0,
-      "paidAmount": 54.0,
-      "fulfillmentRate": 1.9
-    },
-    {
-      "campaign": "DRM CALL 2023",
-      "pledgeCount": 2,
-      "pledgedAmount": 2820.0,
-      "paidAmount": 2316.04,
-      "fulfillmentRate": 82.1
-    },
-    {
-      "campaign": "FEDERATION 360 2023",
-      "pledgeCount": 3,
-      "pledgedAmount": 2740.0,
-      "paidAmount": 0.0,
-      "fulfillmentRate": 0.0
-    },
-    {
-      "campaign": "Annual - FY26",
-      "pledgeCount": 2,
-      "pledgedAmount": 2600.0,
-      "paidAmount": 0.0,
-      "fulfillmentRate": 0.0
-    },
-    {
-      "campaign": "SPRNG2025GVNG",
-      "pledgeCount": 2,
-      "pledgedAmount": 2025.0,
-      "paidAmount": 0.0,
-      "fulfillmentRate": 0.0
-    },
-    {
-      "campaign": "Tributes - FY26",
-      "pledgeCount": 1,
-      "pledgedAmount": 1800.0,
-      "paidAmount": 0.0,
-      "fulfillmentRate": 0.0
-    },
-    {
-      "campaign": "FED360 - FY26 - Sponsorships",
-      "pledgeCount": 1,
-      "pledgedAmount": 1800.0,
-      "paidAmount": 0.0,
-      "fulfillmentRate": 0.0
-    },
-    {
-      "campaign": "DRM CALL 2024",
-      "pledgeCount": 1,
-      "pledgedAmount": 1800.0,
-      "paidAmount": 0.0,
-      "fulfillmentRate": 0.0
-    },
-    {
-      "campaign": "Monthly - FY26",
-      "pledgeCount": 1,
-      "pledgedAmount": 1500.0,
-      "paidAmount": 125.0,
-      "fulfillmentRate": 8.3
-    },
-    {
-      "campaign": "AMB CALL 2023",
-      "pledgeCount": 2,
-      "pledgedAmount": 1210.0,
-      "paidAmount": 0.0,
-      "fulfillmentRate": 0.0
-    },
-    {
-      "campaign": "DRM EM 2024",
-      "pledgeCount": 1,
-      "pledgedAmount": 1000.0,
-      "paidAmount": 0.0,
-      "fulfillmentRate": 0.0
-    },
-    {
-      "campaign": "EVENT MEN 2021",
-      "pledgeCount": 3,
-      "pledgedAmount": 554.0,
-      "paidAmount": 0.0,
-      "fulfillmentRate": 0.0
-    },
-    {
-      "campaign": "UNSOL ONL 2022",
-      "pledgeCount": 1,
-      "pledgedAmount": 450.0,
-      "paidAmount": 0.0,
-      "fulfillmentRate": 0.0
-    },
-    {
-      "campaign": "LION OF JUDAH LUNCHEON 2024",
-      "pledgeCount": 3,
-      "pledgedAmount": 380.0,
-      "paidAmount": 75.0,
-      "fulfillmentRate": 19.7
-    },
-    {
-      "campaign": "DRM TEXT 2023",
-      "pledgeCount": 1,
-      "pledgedAmount": 360.0,
-      "paidAmount": 0.0,
-      "fulfillmentRate": 0.0
-    },
-    {
-      "campaign": "ONLINE GEN 2022",
-      "pledgeCount": 1,
-      "pledgedAmount": 150.0,
-      "paidAmount": 0.0,
-      "fulfillmentRate": 0.0
-    },
-    {
-      "campaign": "Events - FY24",
-      "pledgeCount": 1,
-      "pledgedAmount": 36.0,
-      "paidAmount": 0.0,
-      "fulfillmentRate": 0.0
-    },
-    {
-      "campaign": "GLOBAL SHABBAT 2024",
-      "pledgeCount": 1,
-      "pledgedAmount": 25.0,
-      "paidAmount": 0.0,
-      "fulfillmentRate": 0.0
-    },
-    {
-      "campaign": "Fall Direct Mail - FY26",
-      "pledgeCount": 1,
-      "pledgedAmount": 18.0,
-      "paidAmount": 0.0,
-      "fulfillmentRate": 0.0
-    },
-    {
-      "campaign": "STAFF 2025",
-      "pledgeCount": 1,
-      "pledgedAmount": 10.0,
-      "paidAmount": 0.0,
-      "fulfillmentRate": 0.0
-    },
-    {
-      "campaign": "ADDTNL ONL 2021",
-      "pledgeCount": 1,
-      "pledgedAmount": 5.0,
-      "paidAmount": 0.0,
-      "fulfillmentRate": 0.0
+      "attributes": {
+        "type": "AggregateResult"
+      },
+      "campaignName": "Legacy of Light (Spark)",
+      "cnt": 6,
+      "committed": 6805000,
+      "paid": 50000,
+      "balance": 5740000
+    },
+    {
+      "attributes": {
+        "type": "AggregateResult"
+      },
+      "campaignName": "DRM - FY26",
+      "cnt": 72,
+      "committed": 3021339.03,
+      "paid": 30141,
+      "balance": 2991198.03
+    },
+    {
+      "attributes": {
+        "type": "AggregateResult"
+      },
+      "campaignName": "DRM - CY27",
+      "cnt": 45,
+      "committed": 1295505.7,
+      "paid": null,
+      "balance": 1295505.7
+    },
+    {
+      "attributes": {
+        "type": "AggregateResult"
+      },
+      "campaignName": "DRM Call 2025",
+      "cnt": 16,
+      "committed": 370140,
+      "paid": 11700,
+      "balance": 358440
+    },
+    {
+      "attributes": {
+        "type": "AggregateResult"
+      },
+      "campaignName": null,
+      "cnt": 3,
+      "committed": 300000,
+      "paid": 360,
+      "balance": 299640
+    },
+    {
+      "attributes": {
+        "type": "AggregateResult"
+      },
+      "campaignName": "FED360 - FY26 - Donations - Attended",
+      "cnt": 173,
+      "committed": 236093,
+      "paid": 780,
+      "balance": 235313
+    },
+    {
+      "attributes": {
+        "type": "AggregateResult"
+      },
+      "campaignName": "DRM FACE 2025",
+      "cnt": 13,
+      "committed": 225166.5,
+      "paid": 16657.6,
+      "balance": 208508.9
+    },
+    {
+      "attributes": {
+        "type": "AggregateResult"
+      },
+      "campaignName": "JDC - Rady Match",
+      "cnt": 3,
+      "committed": 201000,
+      "paid": 50000,
+      "balance": 151000
+    },
+    {
+      "attributes": {
+        "type": "AggregateResult"
+      },
+      "campaignName": "DRM FACE 2024",
+      "cnt": 3,
+      "committed": 163333.34,
+      "paid": 110440,
+      "balance": 50000
+    },
+    {
+      "attributes": {
+        "type": "AggregateResult"
+      },
+      "campaignName": "Beit Melachah - General",
+      "cnt": 4,
+      "committed": 155000,
+      "paid": null,
+      "balance": 155000
+    },
+    {
+      "attributes": {
+        "type": "AggregateResult"
+      },
+      "campaignName": "Beit Melachah Direct Mail 2025",
+      "cnt": 2,
+      "committed": 125000,
+      "paid": 25000,
+      "balance": 62500
+    },
+    {
+      "attributes": {
+        "type": "AggregateResult"
+      },
+      "campaignName": "The Community Trip - Underwriting",
+      "cnt": 2,
+      "committed": 115000,
+      "paid": 50000,
+      "balance": 65000
+    },
+    {
+      "attributes": {
+        "type": "AggregateResult"
+      },
+      "campaignName": "Ambassador - FY26",
+      "cnt": 16,
+      "committed": 111150,
+      "paid": null,
+      "balance": 111150
+    },
+    {
+      "attributes": {
+        "type": "AggregateResult"
+      },
+      "campaignName": "DRM EM 2025",
+      "cnt": 2,
+      "committed": 106000,
+      "paid": 4844,
+      "balance": 101156
+    },
+    {
+      "attributes": {
+        "type": "AggregateResult"
+      },
+      "campaignName": "Sha\u2019ar HaNegev Resiliency Village - Rady Match",
+      "cnt": 1,
+      "committed": 100000,
+      "paid": null,
+      "balance": 100000
+    },
+    {
+      "attributes": {
+        "type": "AggregateResult"
+      },
+      "campaignName": "Ambassador - CY27",
+      "cnt": 7,
+      "committed": 77000,
+      "paid": 0,
+      "balance": 77000
+    },
+    {
+      "attributes": {
+        "type": "AggregateResult"
+      },
+      "campaignName": "DRM - CY28",
+      "cnt": 4,
+      "committed": 70000,
+      "paid": null,
+      "balance": 70000
+    },
+    {
+      "attributes": {
+        "type": "AggregateResult"
+      },
+      "campaignName": "FEDERATION 360 - FY25",
+      "cnt": 19,
+      "committed": 39652,
+      "paid": 5019.5,
+      "balance": 34632.5
+    },
+    {
+      "attributes": {
+        "type": "AggregateResult"
+      },
+      "campaignName": "DRM FACE 2022",
+      "cnt": 1,
+      "committed": 20000,
+      "paid": null,
+      "balance": 20000
+    },
+    {
+      "attributes": {
+        "type": "AggregateResult"
+      },
+      "campaignName": "AMB FACE 2025",
+      "cnt": 2,
+      "committed": 15000,
+      "paid": null,
+      "balance": 15000
+    },
+    {
+      "attributes": {
+        "type": "AggregateResult"
+      },
+      "campaignName": "FEDERATION 360 2024",
+      "cnt": 13,
+      "committed": 14488,
+      "paid": 3645,
+      "balance": 10843
+    },
+    {
+      "attributes": {
+        "type": "AggregateResult"
+      },
+      "campaignName": "AMB EM 2025",
+      "cnt": 3,
+      "committed": 12000,
+      "paid": null,
+      "balance": 12000
+    },
+    {
+      "attributes": {
+        "type": "AggregateResult"
+      },
+      "campaignName": "AMB FACE 2022",
+      "cnt": 2,
+      "committed": 10616,
+      "paid": 5768,
+      "balance": 4848
+    },
+    {
+      "attributes": {
+        "type": "AggregateResult"
+      },
+      "campaignName": "AMB EM 2024",
+      "cnt": 3,
+      "committed": 10500,
+      "paid": 50,
+      "balance": 10450
+    },
+    {
+      "attributes": {
+        "type": "AggregateResult"
+      },
+      "campaignName": "Corporate Event Sponsorships - FY26",
+      "cnt": 2,
+      "committed": 10000,
+      "paid": null,
+      "balance": 10000
+    },
+    {
+      "attributes": {
+        "type": "AggregateResult"
+      },
+      "campaignName": "EVENT LOJ 2023",
+      "cnt": 4,
+      "committed": 9900,
+      "paid": null,
+      "balance": 9900
+    },
+    {
+      "attributes": {
+        "type": "AggregateResult"
+      },
+      "campaignName": "DRM CALL 2022",
+      "cnt": 2,
+      "committed": 7950,
+      "paid": null,
+      "balance": 7950
+    },
+    {
+      "attributes": {
+        "type": "AggregateResult"
+      },
+      "campaignName": "Rady Match for Israel\u2019s Recovery - General",
+      "cnt": 2,
+      "committed": 7500,
+      "paid": null,
+      "balance": 7500
+    },
+    {
+      "attributes": {
+        "type": "AggregateResult"
+      },
+      "campaignName": "AMB CALL 2025",
+      "cnt": 3,
+      "committed": 7300,
+      "paid": null,
+      "balance": 7300
+    },
+    {
+      "attributes": {
+        "type": "AggregateResult"
+      },
+      "campaignName": "DRM Em 2023",
+      "cnt": 1,
+      "committed": 7000,
+      "paid": 432,
+      "balance": 6568
+    },
+    {
+      "attributes": {
+        "type": "AggregateResult"
+      },
+      "campaignName": "DRM EM 2022",
+      "cnt": 3,
+      "committed": 5780,
+      "paid": null,
+      "balance": 5780
+    },
+    {
+      "attributes": {
+        "type": "AggregateResult"
+      },
+      "campaignName": "AMB FACE 2024",
+      "cnt": 1,
+      "committed": 5454,
+      "paid": null,
+      "balance": 5454
+    },
+    {
+      "attributes": {
+        "type": "AggregateResult"
+      },
+      "campaignName": "NYLC CAUCUS 2023",
+      "cnt": 1,
+      "committed": 5436,
+      "paid": null,
+      "balance": 5436
+    },
+    {
+      "attributes": {
+        "type": "AggregateResult"
+      },
+      "campaignName": "AMB CALL 2021",
+      "cnt": 1,
+      "committed": 5436,
+      "paid": 3531,
+      "balance": 1905
+    },
+    {
+      "attributes": {
+        "type": "AggregateResult"
+      },
+      "campaignName": "LION OF JUDAH LUNCHEON 2025",
+      "cnt": 3,
+      "committed": 5353,
+      "paid": null,
+      "balance": 5353
+    },
+    {
+      "attributes": {
+        "type": "AggregateResult"
+      },
+      "campaignName": "AMB EM 2023",
+      "cnt": 1,
+      "committed": 5000,
+      "paid": null,
+      "balance": 5000
+    },
+    {
+      "attributes": {
+        "type": "AggregateResult"
+      },
+      "campaignName": "CABINET RETREAT 2025",
+      "cnt": 1,
+      "committed": 5000,
+      "paid": null,
+      "balance": 5000
+    },
+    {
+      "attributes": {
+        "type": "AggregateResult"
+      },
+      "campaignName": "ONLINE GEN 2024",
+      "cnt": 1,
+      "committed": 5000,
+      "paid": null,
+      "balance": 5000
+    },
+    {
+      "attributes": {
+        "type": "AggregateResult"
+      },
+      "campaignName": "AMB CALL 2024",
+      "cnt": 3,
+      "committed": 4600,
+      "paid": 100,
+      "balance": 4500
+    },
+    {
+      "attributes": {
+        "type": "AggregateResult"
+      },
+      "campaignName": "Unsolicited Annual Gifts - FY26",
+      "cnt": 7,
+      "committed": 4521.58,
+      "paid": 853.36,
+      "balance": 3668.22
+    },
+    {
+      "attributes": {
+        "type": "AggregateResult"
+      },
+      "campaignName": "CMNTY TRIP 2023",
+      "cnt": 9,
+      "committed": 3876,
+      "paid": 870,
+      "balance": 3006
+    },
+    {
+      "attributes": {
+        "type": "AggregateResult"
+      },
+      "campaignName": "FED360 - FY26 - Donations - Tributes",
+      "cnt": 2,
+      "committed": 3600,
+      "paid": null,
+      "balance": 3600
+    },
+    {
+      "attributes": {
+        "type": "AggregateResult"
+      },
+      "campaignName": "TLMKT DEC 2022",
+      "cnt": 40,
+      "committed": 3514,
+      "paid": 1088,
+      "balance": 2426
+    },
+    {
+      "attributes": {
+        "type": "AggregateResult"
+      },
+      "campaignName": "TLMKT DEC 2023",
+      "cnt": 32,
+      "committed": 3425,
+      "paid": null,
+      "balance": 3425
+    },
+    {
+      "attributes": {
+        "type": "AggregateResult"
+      },
+      "campaignName": "UNSOL JCF 2024",
+      "cnt": 1,
+      "committed": 3000,
+      "paid": null,
+      "balance": 3000
+    },
+    {
+      "attributes": {
+        "type": "AggregateResult"
+      },
+      "campaignName": "DRM CALL 2023",
+      "cnt": 2,
+      "committed": 2820,
+      "paid": 2316.04,
+      "balance": 503.96
+    },
+    {
+      "attributes": {
+        "type": "AggregateResult"
+      },
+      "campaignName": "FEDERATION 360 2023",
+      "cnt": 3,
+      "committed": 2740,
+      "paid": null,
+      "balance": 2740
+    },
+    {
+      "attributes": {
+        "type": "AggregateResult"
+      },
+      "campaignName": "TLMKT APR 2022",
+      "cnt": 35,
+      "committed": 2710,
+      "paid": 54,
+      "balance": 2656
+    },
+    {
+      "attributes": {
+        "type": "AggregateResult"
+      },
+      "campaignName": "Annual - FY26",
+      "cnt": 2,
+      "committed": 2600,
+      "paid": null,
+      "balance": 2600
+    },
+    {
+      "attributes": {
+        "type": "AggregateResult"
+      },
+      "campaignName": "SPRNG2025GVNG",
+      "cnt": 3,
+      "committed": 2225,
+      "paid": 200,
+      "balance": 2025
+    },
+    {
+      "attributes": {
+        "type": "AggregateResult"
+      },
+      "campaignName": "DRM CALL 2024",
+      "cnt": 1,
+      "committed": 1800,
+      "paid": 0,
+      "balance": 1100
+    },
+    {
+      "attributes": {
+        "type": "AggregateResult"
+      },
+      "campaignName": "Tributes - FY26",
+      "cnt": 1,
+      "committed": 1800,
+      "paid": null,
+      "balance": 1800
+    },
+    {
+      "attributes": {
+        "type": "AggregateResult"
+      },
+      "campaignName": "FED360 - FY26 - Sponsorships",
+      "cnt": 1,
+      "committed": 1800,
+      "paid": null,
+      "balance": 1800
+    },
+    {
+      "attributes": {
+        "type": "AggregateResult"
+      },
+      "campaignName": "AMB CALL 2023",
+      "cnt": 2,
+      "committed": 1210,
+      "paid": null,
+      "balance": 1210
+    },
+    {
+      "attributes": {
+        "type": "AggregateResult"
+      },
+      "campaignName": "DRM EM 2024",
+      "cnt": 1,
+      "committed": 1000,
+      "paid": null,
+      "balance": 1000
+    },
+    {
+      "attributes": {
+        "type": "AggregateResult"
+      },
+      "campaignName": "EVENT MEN 2021",
+      "cnt": 3,
+      "committed": 554,
+      "paid": null,
+      "balance": 554
+    },
+    {
+      "attributes": {
+        "type": "AggregateResult"
+      },
+      "campaignName": "UNSOL ONL 2022",
+      "cnt": 1,
+      "committed": 450,
+      "paid": null,
+      "balance": 450
+    },
+    {
+      "attributes": {
+        "type": "AggregateResult"
+      },
+      "campaignName": "LION OF JUDAH LUNCHEON 2024",
+      "cnt": 3,
+      "committed": 380,
+      "paid": 75,
+      "balance": 305
+    },
+    {
+      "attributes": {
+        "type": "AggregateResult"
+      },
+      "campaignName": "DRM TEXT 2023",
+      "cnt": 1,
+      "committed": 360,
+      "paid": null,
+      "balance": 360
+    },
+    {
+      "attributes": {
+        "type": "AggregateResult"
+      },
+      "campaignName": "ONLINE GEN 2022",
+      "cnt": 1,
+      "committed": 150,
+      "paid": null,
+      "balance": 150
+    },
+    {
+      "attributes": {
+        "type": "AggregateResult"
+      },
+      "campaignName": "Events - FY24",
+      "cnt": 1,
+      "committed": 36,
+      "paid": null,
+      "balance": 36
+    },
+    {
+      "attributes": {
+        "type": "AggregateResult"
+      },
+      "campaignName": "GLOBAL SHABBAT 2024",
+      "cnt": 1,
+      "committed": 25,
+      "paid": null,
+      "balance": 25
+    },
+    {
+      "attributes": {
+        "type": "AggregateResult"
+      },
+      "campaignName": "Fall Direct Mail - FY26",
+      "cnt": 1,
+      "committed": 18,
+      "paid": null,
+      "balance": 18
+    },
+    {
+      "attributes": {
+        "type": "AggregateResult"
+      },
+      "campaignName": "STAFF 2025",
+      "cnt": 1,
+      "committed": 10,
+      "paid": null,
+      "balance": 10
+    },
+    {
+      "attributes": {
+        "type": "AggregateResult"
+      },
+      "campaignName": "ADDTNL ONL 2021",
+      "cnt": 1,
+      "committed": 5,
+      "paid": null,
+      "balance": 5
+    },
+    {
+      "attributes": {
+        "type": "AggregateResult"
+      },
+      "campaignName": "Monthly - FY26",
+      "cnt": 20,
+      "committed": 0,
+      "paid": 9484.83,
+      "balance": -9484.83
     }
   ],
   "recentPayments": [
     {
-      "name": "Sempra Energy",
-      "amount": 12504.6,
-      "date": "2026-02-24",
-      "pledgeTotal": 12000.0
+      "attributes": {
+        "type": "GiftTransaction",
+        "url": "/services/data/v59.0/sobjects/GiftTransaction/6trUf0000008QlJIAU"
+      },
+      "Donor": {
+        "attributes": {
+          "type": "Account",
+          "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkKaJIAV"
+        },
+        "Name": "Perri L. Wittgrove"
+      },
+      "CurrentAmount": 1000,
+      "TransactionDate": "2026-03-06",
+      "GiftCommitment": {
+        "attributes": {
+          "type": "GiftCommitment",
+          "url": "/services/data/v59.0/sobjects/GiftCommitment/6gcUf0000001D85IAE"
+        },
+        "ExpectedTotalCmtAmount": 10000
+      }
     },
     {
-      "name": "Igor Raginski",
-      "amount": 52.4,
-      "date": "2026-02-19",
-      "pledgeTotal": 0.0
+      "attributes": {
+        "type": "GiftTransaction",
+        "url": "/services/data/v59.0/sobjects/GiftTransaction/6trUf0000008PIzIAM"
+      },
+      "Donor": {
+        "attributes": {
+          "type": "Account",
+          "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkTTBIA3"
+        },
+        "Name": "Todd Kirschen"
+      },
+      "CurrentAmount": 150,
+      "TransactionDate": "2026-03-05",
+      "GiftCommitment": {
+        "attributes": {
+          "type": "GiftCommitment",
+          "url": "/services/data/v59.0/sobjects/GiftCommitment/6gcUf0000001aXhIAI"
+        },
+        "ExpectedTotalCmtAmount": 0
+      }
     },
     {
-      "name": "Alexandra Shubin Hirschhorn",
-      "amount": 598.0,
-      "date": "2026-02-16",
-      "pledgeTotal": 6000.0
+      "attributes": {
+        "type": "GiftTransaction",
+        "url": "/services/data/v59.0/sobjects/GiftTransaction/6trUf0000008PHNIA2"
+      },
+      "Donor": {
+        "attributes": {
+          "type": "Account",
+          "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkGZ5IAN"
+        },
+        "Name": "Heather Keith"
+      },
+      "CurrentAmount": 360,
+      "TransactionDate": "2026-03-05",
+      "GiftCommitment": {
+        "attributes": {
+          "type": "GiftCommitment",
+          "url": "/services/data/v59.0/sobjects/GiftCommitment/6gcUf0000001hVxIAI"
+        },
+        "ExpectedTotalCmtAmount": 0
+      }
     },
     {
-      "name": "Marla White Strich",
-      "amount": 198.08,
-      "date": "2026-02-15",
-      "pledgeTotal": 0.0
+      "attributes": {
+        "type": "GiftTransaction",
+        "url": "/services/data/v59.0/sobjects/GiftTransaction/6trUf0000008PFlIAM"
+      },
+      "Donor": {
+        "attributes": {
+          "type": "Account",
+          "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkRxFIAV"
+        },
+        "Name": "Eileen Gaffen"
+      },
+      "CurrentAmount": 30,
+      "TransactionDate": "2026-03-05",
+      "GiftCommitment": {
+        "attributes": {
+          "type": "GiftCommitment",
+          "url": "/services/data/v59.0/sobjects/GiftCommitment/6gcUf0000001W97IAE"
+        },
+        "ExpectedTotalCmtAmount": 0
+      }
     },
     {
-      "name": "David Bramzon",
-      "amount": 200.0,
-      "date": "2026-02-15",
-      "pledgeTotal": 7000.0
+      "attributes": {
+        "type": "GiftTransaction",
+        "url": "/services/data/v59.0/sobjects/GiftTransaction/6trUf0000008I4bIAE"
+      },
+      "Donor": {
+        "attributes": {
+          "type": "Account",
+          "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkPWlIAN"
+        },
+        "Name": "Marlene Sasson Recht"
+      },
+      "CurrentAmount": 2500,
+      "TransactionDate": "2026-03-01",
+      "GiftCommitment": {
+        "attributes": {
+          "type": "GiftCommitment",
+          "url": "/services/data/v59.0/sobjects/GiftCommitment/6gcUf0000001hNtIAI"
+        },
+        "ExpectedTotalCmtAmount": 0
+      }
     },
     {
-      "name": "Dale Spector",
-      "amount": 52.4,
-      "date": "2026-02-15",
-      "pledgeTotal": 0.0
+      "attributes": {
+        "type": "GiftTransaction",
+        "url": "/services/data/v59.0/sobjects/GiftTransaction/6trUf0000008I2zIAE"
+      },
+      "Donor": {
+        "attributes": {
+          "type": "Account",
+          "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkHpKIAV"
+        },
+        "Name": "Hilary L Srole"
+      },
+      "CurrentAmount": 40.47,
+      "TransactionDate": "2026-03-01",
+      "GiftCommitment": {
+        "attributes": {
+          "type": "GiftCommitment",
+          "url": "/services/data/v59.0/sobjects/GiftCommitment/6gcUf0000001WPFIA2"
+        },
+        "ExpectedTotalCmtAmount": 0
+      }
     },
     {
-      "name": "Janice Alper",
-      "amount": 25.0,
-      "date": "2026-02-15",
-      "pledgeTotal": 0.0
+      "attributes": {
+        "type": "GiftTransaction",
+        "url": "/services/data/v59.0/sobjects/GiftTransaction/6trUf0000008I1NIAU"
+      },
+      "Donor": {
+        "attributes": {
+          "type": "Account",
+          "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkH0cIAF"
+        },
+        "Name": "Frances Lobman"
+      },
+      "CurrentAmount": 18,
+      "TransactionDate": "2026-03-01",
+      "GiftCommitment": {
+        "attributes": {
+          "type": "GiftCommitment",
+          "url": "/services/data/v59.0/sobjects/GiftCommitment/6gcUf0000001ae9IAA"
+        },
+        "ExpectedTotalCmtAmount": 0
+      }
     },
     {
-      "name": "Evan Vapnek",
-      "amount": 300.0,
-      "date": "2026-02-15",
-      "pledgeTotal": 3600.0
+      "attributes": {
+        "type": "GiftTransaction",
+        "url": "/services/data/v59.0/sobjects/GiftTransaction/6trUf0000008HzlIAE"
+      },
+      "Donor": {
+        "attributes": {
+          "type": "Account",
+          "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkQhlIAF"
+        },
+        "Name": "Sharon Goodman"
+      },
+      "CurrentAmount": 125,
+      "TransactionDate": "2026-03-01",
+      "GiftCommitment": {
+        "attributes": {
+          "type": "GiftCommitment",
+          "url": "/services/data/v59.0/sobjects/GiftCommitment/6gcUf0000001asfIAA"
+        },
+        "ExpectedTotalCmtAmount": 0
+      }
     },
     {
-      "name": "Steve Shupper",
-      "amount": 20.77,
-      "date": "2026-02-15",
-      "pledgeTotal": 0.0
+      "attributes": {
+        "type": "GiftTransaction",
+        "url": "/services/data/v59.0/sobjects/GiftTransaction/6trUf0000008Hy9IAE"
+      },
+      "Donor": {
+        "attributes": {
+          "type": "Account",
+          "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkLB7IAN"
+        },
+        "Name": "Joy Sobel"
+      },
+      "CurrentAmount": 40.47,
+      "TransactionDate": "2026-03-01",
+      "GiftCommitment": {
+        "attributes": {
+          "type": "GiftCommitment",
+          "url": "/services/data/v59.0/sobjects/GiftCommitment/6gcUf0000001XBdIAM"
+        },
+        "ExpectedTotalCmtAmount": 0
+      }
     },
     {
-      "name": "Gillian Vapnek",
-      "amount": 300.0,
-      "date": "2026-02-15",
-      "pledgeTotal": 3600.0
+      "attributes": {
+        "type": "GiftTransaction",
+        "url": "/services/data/v59.0/sobjects/GiftTransaction/6trUf0000008HwXIAU"
+      },
+      "Donor": {
+        "attributes": {
+          "type": "Account",
+          "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkKLoIAN"
+        },
+        "Name": "Laurie Hoshaw"
+      },
+      "CurrentAmount": 500,
+      "TransactionDate": "2026-03-01",
+      "GiftCommitment": {
+        "attributes": {
+          "type": "GiftCommitment",
+          "url": "/services/data/v59.0/sobjects/GiftCommitment/6gcUf0000001hPVIAY"
+        },
+        "ExpectedTotalCmtAmount": 0
+      }
     },
     {
-      "name": "Steph Johnson",
-      "amount": 37.81,
-      "date": "2026-02-14",
-      "pledgeTotal": 0.0
+      "attributes": {
+        "type": "GiftTransaction",
+        "url": "/services/data/v59.0/sobjects/GiftTransaction/6trUf0000008HuvIAE"
+      },
+      "Donor": {
+        "attributes": {
+          "type": "Account",
+          "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkBYeIAN"
+        },
+        "Name": "David Gonzalez"
+      },
+      "CurrentAmount": 18,
+      "TransactionDate": "2026-03-01",
+      "GiftCommitment": {
+        "attributes": {
+          "type": "GiftCommitment",
+          "url": "/services/data/v59.0/sobjects/GiftCommitment/6gcUf0000001WU5IAM"
+        },
+        "ExpectedTotalCmtAmount": 0
+      }
     },
     {
-      "name": "Yael Ridberg",
-      "amount": 500.0,
-      "date": "2026-02-12",
-      "pledgeTotal": 1000.0
+      "attributes": {
+        "type": "GiftTransaction",
+        "url": "/services/data/v59.0/sobjects/GiftTransaction/6trUf0000008GsPIAU"
+      },
+      "Donor": {
+        "attributes": {
+          "type": "Account",
+          "url": "/services/data/v59.0/sobjects/Account/001Uf00000mM2cEIAS"
+        },
+        "Name": "iDonate"
+      },
+      "CurrentAmount": 100,
+      "TransactionDate": "2026-02-28",
+      "GiftCommitment": {
+        "attributes": {
+          "type": "GiftCommitment",
+          "url": "/services/data/v59.0/sobjects/GiftCommitment/6gcUf0000001aSrIAI"
+        },
+        "ExpectedTotalCmtAmount": 0
+      }
     },
     {
-      "name": "Ellen Rofman",
-      "amount": 26.0,
-      "date": "2026-02-12",
-      "pledgeTotal": 0.0
+      "attributes": {
+        "type": "GiftTransaction",
+        "url": "/services/data/v59.0/sobjects/GiftTransaction/6trUf0000008BZNIA2"
+      },
+      "Donor": {
+        "attributes": {
+          "type": "Account",
+          "url": "/services/data/v59.0/sobjects/Account/001Uf00000WjWtrIAF"
+        },
+        "Name": "Sempra Energy"
+      },
+      "CurrentAmount": 12504.6,
+      "TransactionDate": "2026-02-24",
+      "GiftCommitment": {
+        "attributes": {
+          "type": "GiftCommitment",
+          "url": "/services/data/v59.0/sobjects/GiftCommitment/6gcUf0000001WsHIAU"
+        },
+        "ExpectedTotalCmtAmount": 12000
+      }
     },
     {
-      "name": "Marc Glazer",
-      "amount": 1100.0,
-      "date": "2026-02-11",
-      "pledgeTotal": 1100.0
+      "attributes": {
+        "type": "GiftTransaction",
+        "url": "/services/data/v59.0/sobjects/GiftTransaction/6trUf00000084G9IAI"
+      },
+      "Donor": {
+        "attributes": {
+          "type": "Account",
+          "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkCEZIA3"
+        },
+        "Name": "Igor Raginski"
+      },
+      "CurrentAmount": 52.4,
+      "TransactionDate": "2026-02-19",
+      "GiftCommitment": {
+        "attributes": {
+          "type": "GiftCommitment",
+          "url": "/services/data/v59.0/sobjects/GiftCommitment/6gcUf0000001baDIAQ"
+        },
+        "ExpectedTotalCmtAmount": 0
+      }
     },
     {
-      "name": "Barbi Dorfan",
-      "amount": 1875.9,
-      "date": "2026-02-10",
-      "pledgeTotal": 1800.0
+      "attributes": {
+        "type": "GiftTransaction",
+        "url": "/services/data/v59.0/sobjects/GiftTransaction/6trUf0000007zhtIAA"
+      },
+      "Donor": {
+        "attributes": {
+          "type": "Account",
+          "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkOZgIAN"
+        },
+        "Name": "Alexandra Shubin Hirschhorn"
+      },
+      "CurrentAmount": 598,
+      "TransactionDate": "2026-02-16",
+      "GiftCommitment": {
+        "attributes": {
+          "type": "GiftCommitment",
+          "url": "/services/data/v59.0/sobjects/GiftCommitment/6gcUf00000019qkIAA"
+        },
+        "ExpectedTotalCmtAmount": 6000
+      }
     },
     {
-      "name": "Robin S. Rubin",
-      "amount": 156.6,
-      "date": "2026-02-10",
-      "pledgeTotal": 0.0
+      "attributes": {
+        "type": "GiftTransaction",
+        "url": "/services/data/v59.0/sobjects/GiftTransaction/6trUf0000007zOXIAY"
+      },
+      "Donor": {
+        "attributes": {
+          "type": "Account",
+          "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkHQpIAN"
+        },
+        "Name": "Marla White Strich"
+      },
+      "CurrentAmount": 198.08,
+      "TransactionDate": "2026-02-15",
+      "GiftCommitment": {
+        "attributes": {
+          "type": "GiftCommitment",
+          "url": "/services/data/v59.0/sobjects/GiftCommitment/6gcUf0000001WDxIAM"
+        },
+        "ExpectedTotalCmtAmount": 0
+      }
     },
     {
-      "name": "Karla B. Silver",
-      "amount": 180.0,
-      "date": "2026-02-10",
-      "pledgeTotal": 3600.0
+      "attributes": {
+        "type": "GiftTransaction",
+        "url": "/services/data/v59.0/sobjects/GiftTransaction/6trUf0000007zMvIAI"
+      },
+      "Donor": {
+        "attributes": {
+          "type": "Account",
+          "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkPXDIA3"
+        },
+        "Name": "David Bramzon"
+      },
+      "CurrentAmount": 200,
+      "TransactionDate": "2026-02-15",
+      "GiftCommitment": {
+        "attributes": {
+          "type": "GiftCommitment",
+          "url": "/services/data/v59.0/sobjects/GiftCommitment/6gcUf00000019aUIAQ"
+        },
+        "ExpectedTotalCmtAmount": 7000
+      }
     },
     {
-      "name": "Philip Lurie",
-      "amount": 2000.0,
-      "date": "2026-02-09",
-      "pledgeTotal": 2000.0
+      "attributes": {
+        "type": "GiftTransaction",
+        "url": "/services/data/v59.0/sobjects/GiftTransaction/6trUf0000007zLJIAY"
+      },
+      "Donor": {
+        "attributes": {
+          "type": "Account",
+          "url": "/services/data/v59.0/sobjects/Account/001Uf00000WjH5hIAF"
+        },
+        "Name": "Dale Spector"
+      },
+      "CurrentAmount": 52.4,
+      "TransactionDate": "2026-02-15",
+      "GiftCommitment": {
+        "attributes": {
+          "type": "GiftCommitment",
+          "url": "/services/data/v59.0/sobjects/GiftCommitment/6gcUf0000001aUTIAY"
+        },
+        "ExpectedTotalCmtAmount": 0
+      }
     },
     {
-      "name": "HRC Fertility",
-      "amount": 5000.0,
-      "date": "2026-02-09",
-      "pledgeTotal": 5000.0
+      "attributes": {
+        "type": "GiftTransaction",
+        "url": "/services/data/v59.0/sobjects/GiftTransaction/6trUf0000007zJhIAI"
+      },
+      "Donor": {
+        "attributes": {
+          "type": "Account",
+          "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkQt7IAF"
+        },
+        "Name": "Janice Alper"
+      },
+      "CurrentAmount": 25,
+      "TransactionDate": "2026-02-15",
+      "GiftCommitment": {
+        "attributes": {
+          "type": "GiftCommitment",
+          "url": "/services/data/v59.0/sobjects/GiftCommitment/6gcUf0000001BizIAE"
+        },
+        "ExpectedTotalCmtAmount": 0
+      }
     },
     {
-      "name": "Jean Somers",
-      "amount": 4698.0,
-      "date": "2026-02-09",
-      "pledgeTotal": 10000.0
+      "attributes": {
+        "type": "GiftTransaction",
+        "url": "/services/data/v59.0/sobjects/GiftTransaction/6trUf0000007zI5IAI"
+      },
+      "Donor": {
+        "attributes": {
+          "type": "Account",
+          "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkJd6IAF"
+        },
+        "Name": "Evan Vapnek"
+      },
+      "CurrentAmount": 300,
+      "TransactionDate": "2026-02-15",
+      "GiftCommitment": {
+        "attributes": {
+          "type": "GiftCommitment",
+          "url": "/services/data/v59.0/sobjects/GiftCommitment/6gcUf0000001h2vIAA"
+        },
+        "ExpectedTotalCmtAmount": 3600
+      }
     }
   ],
   "kpis": {
-    "totalOutstanding": 13472525.880000003,
-    "fulfillmentRate": 2.7,
-    "writeOffRiskAmount": 68657.0,
-    "writeOffRiskCount": 9,
-    "avgDaysToPayment": 0,
-    "pledgesThisMonth": 219
-  }
+    "totalBalance": 11601499.34,
+    "pledgeCount": 100,
+    "collectionRate": 1.5,
+    "over90Amount": 10000.0
+  },
+  "asOfDate": "2026-03-06T10:20:00"
 }

@@ -1,362 +1,284 @@
 {
-  "asOfDate": "2026-02-25T19:07:27Z",
   "monthlyTrend": [
     {
-      "month": "Jul",
-      "amount": 161350.18,
-      "txnCount": 237
+      "month": "2025-10",
+      "amount": 9351.31,
+      "count": 58
     },
     {
-      "month": "Aug",
-      "amount": 119056.27,
-      "txnCount": 762
+      "month": "2025-11",
+      "amount": 51020.03999999997,
+      "count": 493
     },
     {
-      "month": "Sep",
-      "amount": 73355.17,
-      "txnCount": 592
+      "month": "2025-12",
+      "amount": 109485.4899999999,
+      "count": 458
     },
     {
-      "month": "Oct",
-      "amount": 67217.09,
-      "txnCount": 622
+      "month": "2026-01",
+      "amount": 112077.36999999998,
+      "count": 453
     },
     {
-      "month": "Nov",
-      "amount": 49580.11,
-      "txnCount": 486
+      "month": "2026-02",
+      "amount": 104833.52000000006,
+      "count": 458
     },
     {
-      "month": "Dec",
-      "amount": 108530.28,
-      "txnCount": 447
-    },
-    {
-      "month": "Jan",
-      "amount": 111627.7,
-      "txnCount": 444
-    },
-    {
-      "month": "Feb",
-      "amount": 97546.69,
-      "txnCount": 385
+      "month": "2026-03",
+      "amount": 7126.279999999998,
+      "count": 80
     }
   ],
   "departmentSpend": [
     {
-      "dept": "Administration",
-      "amount": 424294.2,
-      "txnCount": 1257,
-      "budget": 1773360.0,
-      "pctOfBudget": 23.9
-    },
-    {
-      "dept": "Programs",
-      "amount": 179188.46,
-      "txnCount": 420,
-      "budget": 466926.0,
-      "pctOfBudget": 38.4
-    },
-    {
-      "dept": "Marketing",
-      "amount": 70448.68,
-      "txnCount": 156,
-      "budget": 2882229.0,
-      "pctOfBudget": 2.4
-    },
-    {
-      "dept": "Development",
-      "amount": 59883.54,
-      "txnCount": 287,
-      "budget": 1915921.0,
-      "pctOfBudget": 3.1
-    },
-    {
-      "dept": "Shinshinim",
-      "amount": 38020.66,
-      "txnCount": 1820,
-      "budget": 466926.0,
-      "pctOfBudget": 8.1
-    },
-    {
-      "dept": "Legacy of Light Goldberg Institute for Holocaust Education",
-      "amount": 16095.23,
-      "txnCount": 33,
-      "budget": 0,
-      "pctOfBudget": 0
-    },
-    {
-      "dept": "UJF Holdings",
-      "amount": 332.72,
-      "txnCount": 2,
-      "budget": 0,
-      "pctOfBudget": 0
+      "department": "Uncategorized",
+      "amount": 393894.0100000002,
+      "count": 2000
     }
   ],
   "categoryBreakdown": [
     {
       "category": "Airlines",
-      "amount": 117588.33,
-      "txnCount": 78
+      "amount": 73654.7,
+      "count": 55
     },
     {
-      "category": "Restaurants",
-      "amount": 91829.21,
-      "txnCount": 736
+      "category": "Car Rental Agencies",
+      "amount": 28859.98,
+      "count": 38
     },
     {
-      "category": "SaaS / Software",
-      "amount": 70337.76,
-      "txnCount": 264
+      "category": "Computer Software Stores",
+      "amount": 18548.12,
+      "count": 94
     },
     {
-      "category": "Professional Services",
-      "amount": 69547.31,
-      "txnCount": 70
+      "category": "Eating Places, Restaurants",
+      "amount": 16822.970000000005,
+      "count": 191
     },
     {
-      "category": "Car Rental",
-      "amount": 44987.09,
-      "txnCount": 59
+      "category": "Sports Clubs/Fields",
+      "amount": 15100.0,
+      "count": 1
     },
     {
-      "category": "Office supplies and cleaning",
-      "amount": 37126.11,
-      "txnCount": 11
+      "category": "Insurance Underwriting, Premiums",
+      "amount": 13972.09,
+      "count": 7
     },
     {
-      "category": "Books and Newspapers",
-      "amount": 33005.36,
-      "txnCount": 271
+      "category": "Hotels/Motels/Inns/Resorts",
+      "amount": 13384.86,
+      "count": 36
     },
     {
-      "category": "Taxi and Rideshare",
-      "amount": 31906.6,
-      "txnCount": 1066
+      "category": "Miscellaneous Publishing and Printing",
+      "amount": 12097.979999999998,
+      "count": 9
     },
     {
-      "category": "Other",
-      "amount": 29184.02,
-      "txnCount": 26
+      "category": "Charitable and Social Service Organizations - Fundraising",
+      "amount": 11122.67,
+      "count": 60
     },
     {
-      "category": "Entertainment",
-      "amount": 28975.6,
-      "txnCount": 29
+      "category": "Computers, Peripherals, and Software",
+      "amount": 10967.329999999998,
+      "count": 64
     },
     {
-      "category": "Lodging",
-      "amount": 28054.27,
-      "txnCount": 62
+      "category": "Travel Agencies, Tour Operators",
+      "amount": 10960.6,
+      "count": 10
     },
     {
-      "category": "General Merchandise",
-      "amount": 26754.17,
-      "txnCount": 340
+      "category": "Book Stores",
+      "amount": 10418.160000000002,
+      "count": 156
     },
     {
-      "category": "Taxes and tax preparation",
-      "amount": 26674.04,
-      "txnCount": 4
+      "category": "Computer Programming",
+      "amount": 9578.57,
+      "count": 10
     },
     {
-      "category": "Office",
-      "amount": 25237.54,
-      "txnCount": 52
+      "category": "Advertising Services",
+      "amount": 9188.08,
+      "count": 3
     },
     {
-      "category": "Charitable donations",
-      "amount": 18943.03,
-      "txnCount": 63
+      "category": "Equipment Rental",
+      "amount": 8833.95,
+      "count": 3
     }
   ],
   "topMerchants": [
     {
       "merchant": "El Al",
-      "amount": 54213.49,
-      "txnCount": 12
+      "amount": 43624.0,
+      "count": 10
     },
     {
       "merchant": "Dirt Cheap Car Rental",
-      "amount": 43199.0,
-      "txnCount": 54
-    },
-    {
-      "merchant": "Offisavvy, LLC",
-      "amount": 35495.54,
-      "txnCount": 1
-    },
-    {
-      "merchant": "United",
-      "amount": 28541.22,
-      "txnCount": 14
-    },
-    {
-      "merchant": "Amazon",
-      "amount": 25716.08,
-      "txnCount": 290
-    },
-    {
-      "merchant": "Tlalim Tours",
-      "amount": 25622.04,
-      "txnCount": 1
-    },
-    {
-      "merchant": "Farmer & The Seahorse",
-      "amount": 21759.08,
-      "txnCount": 5
-    },
-    {
-      "merchant": "Uber",
-      "amount": 15973.93,
-      "txnCount": 656
+      "amount": 28800.0,
+      "count": 36
     },
     {
       "merchant": "San Diego Padres",
-      "amount": 15620.45,
-      "txnCount": 4
-    },
-    {
-      "merchant": "Liquid Screen Design",
-      "amount": 14673.25,
-      "txnCount": 8
+      "amount": 15100.0,
+      "count": 1
     },
     {
       "merchant": "Southwest Airlines",
-      "amount": 14637.26,
-      "txnCount": 18
+      "amount": 11837.540000000003,
+      "count": 14
     },
     {
       "merchant": "Alliant Insurance Servic",
-      "amount": 14522.88,
-      "txnCount": 2
+      "amount": 11147.0,
+      "count": 1
     },
     {
-      "merchant": "Embassy Suites by Hilton",
-      "amount": 13563.77,
-      "txnCount": 6
+      "merchant": "Amazon",
+      "amount": 10857.79,
+      "count": 166
     },
     {
       "merchant": "De Novo Digital Corp.",
-      "amount": 13455.96,
-      "txnCount": 10
+      "amount": 9188.08,
+      "count": 3
     },
     {
-      "merchant": "Catamaran Resort Hotel and Spa",
-      "amount": 11379.75,
-      "txnCount": 3
+      "merchant": "Candle Lab Rentals",
+      "amount": 7345.18,
+      "count": 3
+    },
+    {
+      "merchant": "Airbnb",
+      "amount": 6523.72,
+      "count": 3
+    },
+    {
+      "merchant": "Lounge Appeal",
+      "amount": 6333.95,
+      "count": 2
+    },
+    {
+      "merchant": "United",
+      "amount": 6229.070000000001,
+      "count": 6
+    },
+    {
+      "merchant": "Excellent Party Rental",
+      "amount": 5878.0,
+      "count": 1
+    },
+    {
+      "merchant": "Sheraton",
+      "amount": 5871.849999999999,
+      "count": 14
+    },
+    {
+      "merchant": "Hudson Printing",
+      "amount": 5864.93,
+      "count": 1
+    },
+    {
+      "merchant": "AlphaGraphics Central San Diego",
+      "amount": 5729.59,
+      "count": 7
     }
   ],
   "topSpenders": [
     {
       "name": "Carly Lobenstein",
-      "amount": 128773.11,
-      "txnCount": 197,
-      "dept": "Administration"
+      "amount": 91269.28999999998,
+      "count": 116
     },
     {
       "name": "David Fuhriman",
-      "amount": 104710.9,
-      "txnCount": 99,
-      "dept": "Administration"
+      "amount": 34203.45999999999,
+      "count": 80
     },
     {
       "name": "Moises Arbitman",
-      "amount": 84199.77,
-      "txnCount": 102,
-      "dept": "Programs"
-    },
-    {
-      "name": "Candice Bucky",
-      "amount": 61123.63,
-      "txnCount": 70,
-      "dept": "Administration"
-    },
-    {
-      "name": "Joanna  Chiu",
-      "amount": 54630.95,
-      "txnCount": 186,
-      "dept": "Administration"
+      "amount": 32707.34,
+      "count": 50
     },
     {
       "name": "Hailey Pryce-Shidler",
-      "amount": 33768.21,
-      "txnCount": 35,
-      "dept": "Marketing"
+      "amount": 32358.549999999996,
+      "count": 34
     },
     {
-      "name": "Darren Schwartz",
-      "amount": 32481.99,
-      "txnCount": 60,
-      "dept": "Programs"
-    },
-    {
-      "name": "Sharon Veksler",
-      "amount": 29075.26,
-      "txnCount": 91,
-      "dept": "Administration"
-    },
-    {
-      "name": "Debbie Tirouda",
-      "amount": 24594.78,
-      "txnCount": 86,
-      "dept": "Development"
+      "name": "Candice Bucky",
+      "amount": 26049.40999999999,
+      "count": 52
     },
     {
       "name": "Julie Gordon",
-      "amount": 22792.55,
-      "txnCount": 50,
-      "dept": "Programs"
+      "amount": 21207.849999999995,
+      "count": 38
     },
     {
-      "name": "Lee Weinstein",
-      "amount": 18025.06,
-      "txnCount": 48,
-      "dept": "Marketing"
+      "name": "Sharon Veksler",
+      "amount": 16085.19,
+      "count": 54
+    },
+    {
+      "name": "Joanna  Chiu",
+      "amount": 13926.609999999995,
+      "count": 98
     },
     {
       "name": "Alex Kaufman",
-      "amount": 13808.39,
-      "txnCount": 22,
-      "dept": "Legacy of Light Goldberg Institute for Holocaust Education"
-    },
-    {
-      "name": "Miliah Rodriguez",
-      "amount": 11944.05,
-      "txnCount": 127,
-      "dept": "Administration"
-    },
-    {
-      "name": "Jessica Kretzer",
-      "amount": 11209.32,
-      "txnCount": 60,
-      "dept": "Legacy of Light Goldberg Institute for Holocaust Education"
+      "amount": 13798.050000000003,
+      "count": 21
     },
     {
       "name": "Janese Cassel",
-      "amount": 10841.22,
-      "txnCount": 59,
-      "dept": "Programs"
+      "amount": 8828.280000000002,
+      "count": 39
+    },
+    {
+      "name": "Jessica Kretzer",
+      "amount": 8324.25,
+      "count": 40
+    },
+    {
+      "name": "Debbie Tirouda",
+      "amount": 8293.449999999997,
+      "count": 60
+    },
+    {
+      "name": "Lee Weinstein",
+      "amount": 8085.609999999999,
+      "count": 22
+    },
+    {
+      "name": "Joshua Minzer",
+      "amount": 6862.6,
+      "count": 40
+    },
+    {
+      "name": "Dana Koenig",
+      "amount": 6810.659999999999,
+      "count": 19
     }
   ],
   "cardUtilization": {
-    "active": 100,
-    "dormant30d": 54,
-    "totalLimit": 387006.99,
-    "totalSpent": 788263.49,
-    "utilizationPct": 203.7
+    "totalCards": 0,
+    "activeCards": 0
   },
-  "weekOverWeek": {
-    "thisWeek": 3196.0,
-    "lastWeek": 11945.8,
-    "changePct": -73.2
-  },
+  "weekOverWeek": {},
   "kpis": {
-    "totalSpendFY26": 788263.49,
-    "monthlyAvg": 98532.94,
-    "activeCards": 100,
-    "topDepartment": "Administration",
-    "topDepartmentAmount": 424294.2,
-    "weekOverWeekChange": -73.2
-  }
+    "totalSpend": 393894.0099999999,
+    "transactionCount": 2000,
+    "departments": 1,
+    "avgTransaction": 196.95
+  },
+  "asOfDate": "2026-03-06T10:20:00"
 }

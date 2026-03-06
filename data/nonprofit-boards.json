@@ -1,523 +1,521 @@
 {
-  "asOfDate": "2026-02-24T23:12:37.580110",
   "kpis": {
-    "totalOrgs": 123,
-    "totalMembers": 1651,
-    "matchedToSF": 110,
-    "matchRate": 6.7
+    "organizations": 30,
+    "sfMatches": 50
   },
   "organizations": [
     {
-      "name": "GREATER SAN DIEGO CHAMBER OF COMMERCE",
-      "boardMembers": 91,
-      "revenue": 3772272.0,
-      "city": "San Diego",
-      "state": "CA"
-    },
-    {
-      "name": "Old Globe Theatre",
-      "boardMembers": 68,
-      "revenue": 33161559.0,
-      "city": "San Diego",
-      "state": "CA"
-    },
-    {
-      "name": "San Diego Museum of Art",
-      "boardMembers": 64,
-      "revenue": 17978227.0,
-      "city": "San Diego",
-      "state": "CA"
-    },
-    {
-      "name": "UC San Diego Foundation",
-      "boardMembers": 54,
-      "revenue": 217345772.0,
-      "city": "La Jolla",
-      "state": "CA"
-    },
-    {
-      "name": "Sharp HealthCare Foundation",
-      "boardMembers": 51,
-      "revenue": 32734419.0,
-      "city": "San Diego",
-      "state": "CA"
-    },
-    {
-      "name": "Rady Children's Hospital and Health Center",
-      "boardMembers": 51,
-      "revenue": 7529800.0,
-      "city": "San Diego",
-      "state": "CA"
-    },
-    {
-      "name": "San Diego Symphony Orchestra Association",
-      "boardMembers": 51,
-      "revenue": 96468765.0,
-      "city": "San Diego",
-      "state": "CA"
-    },
-    {
-      "name": "San Diego Opera Association",
-      "boardMembers": 50,
-      "revenue": 6659097.0,
-      "city": "San Diego",
-      "state": "CA"
-    },
-    {
-      "name": "The Salk Institute for Biological Studies",
-      "boardMembers": 49,
-      "revenue": 161166470.0,
-      "city": "La Jolla",
-      "state": "CA"
-    },
-    {
-      "name": "The Campanile Foundation",
-      "boardMembers": 48,
-      "revenue": 61506943.0,
-      "city": "San Diego",
-      "state": "CA"
-    },
-    {
-      "name": "Fleet Science Center",
-      "boardMembers": 46,
-      "revenue": 9468540.0,
-      "city": "San Diego",
-      "state": "CA"
-    },
-    {
-      "name": "San Diego Hebrew Homes",
-      "boardMembers": 42,
-      "revenue": 21890086.0,
-      "city": "Encinitas",
-      "state": "CA"
-    },
-    {
-      "name": "The San Diego Women's Foundation",
-      "boardMembers": 41,
-      "revenue": 823600.0,
-      "city": "San Diego",
-      "state": "CA"
-    },
-    {
-      "name": "Museum of Contemporary Art San Diego",
-      "boardMembers": 40,
-      "revenue": 9472130.0,
-      "city": "La Jolla",
-      "state": "CA"
-    },
-    {
-      "name": "Jacobs & Cushman San Diego Food Bank",
-      "boardMembers": 39,
-      "revenue": 110322332.0,
-      "city": "San Diego",
-      "state": "CA"
-    },
-    {
-      "name": "Jewish Federation of San Diego County",
-      "boardMembers": 38,
-      "revenue": 7849261.0,
-      "city": "San Diego",
-      "state": "CA"
-    },
-    {
       "name": "Scripps Health",
-      "boardMembers": 37,
+      "ein": "95-1684089",
       "revenue": 4869465543.0,
-      "city": "La Jolla",
-      "state": "CA"
-    },
-    {
-      "name": "Hillel of San Diego",
-      "boardMembers": 35,
-      "revenue": 2985306.0,
-      "city": "San Diego",
-      "state": "CA"
-    },
-    {
-      "name": "Jewish Family Service of San Diego",
-      "boardMembers": 34,
-      "revenue": 78117604.0,
-      "city": "San Diego",
-      "state": "CA"
-    },
-    {
-      "name": "San Diego Foundation",
-      "boardMembers": 30,
-      "revenue": 268696192.0,
-      "city": "San Diego",
-      "state": "CA"
-    },
-    {
-      "name": "Mingei International Museum",
-      "boardMembers": 30,
-      "revenue": 8562675.0,
-      "city": "San Diego",
-      "state": "CA"
-    },
-    {
-      "name": "Zoological Society of San Diego DBA San Diego Zoo Wildlife Alliance",
-      "boardMembers": 29,
-      "revenue": 437607695.0,
-      "city": "San Diego",
-      "state": "CA"
-    },
-    {
-      "name": "Sanford Burnham Prebys Medical Discovery Institute",
-      "boardMembers": 27,
-      "revenue": 123272481.0,
-      "city": "La Jolla",
-      "state": "CA"
+      "assets": 9124382316.0,
+      "board_members": 37
     },
     {
       "name": "The Scripps Research Institute",
-      "boardMembers": 27,
+      "ein": "33-0435954",
       "revenue": 641106163.0,
-      "city": "La Jolla",
-      "state": "CA"
+      "assets": 1299917796.0,
+      "board_members": 27
     },
     {
-      "name": "LA Jolla Country Day School",
-      "boardMembers": 27,
-      "revenue": 54026952.0,
-      "city": "La Jolla",
-      "state": "CA"
+      "name": "Zoological Society of San Diego DBA San Diego Zoo Wildlife Alliance",
+      "ein": "95-1648219",
+      "revenue": 437607695.0,
+      "assets": 1046146042.0,
+      "board_members": 29
     },
     {
-      "name": "Catholic Charities Diocese of San Diego",
-      "boardMembers": 27,
-      "revenue": 80422631.0,
-      "city": "San Diego",
-      "state": "CA"
+      "name": "Jewish Community Foundation Of San Diego",
+      "ein": "952504044",
+      "revenue": 273725033.0,
+      "assets": 788612800.0,
+      "board_members": 0
+    },
+    {
+      "name": "San Diego Foundation",
+      "ein": "95-2942582",
+      "revenue": 268696192.0,
+      "assets": 1449190327.0,
+      "board_members": 30
     },
     {
       "name": "San Diego State University Foundation",
-      "boardMembers": 25,
+      "ein": "95-6042721",
       "revenue": 226239172.0,
-      "city": "San Diego",
-      "state": "CA"
+      "assets": 298714165.0,
+      "board_members": 25
+    },
+    {
+      "name": "UC San Diego Foundation",
+      "ein": "95-2872494",
+      "revenue": 217345772.0,
+      "assets": 1737799751.0,
+      "board_members": 54
+    },
+    {
+      "name": "The Salk Institute for Biological Studies",
+      "ein": "95-2160097",
+      "revenue": 161166470.0,
+      "assets": 822778011.0,
+      "board_members": 49
+    },
+    {
+      "name": "Sanford Burnham Prebys Medical Discovery Institute",
+      "ein": "51-0197108",
+      "revenue": 123272481.0,
+      "assets": 326353986.0,
+      "board_members": 27
+    },
+    {
+      "name": "Jacobs & Cushman San Diego Food Bank",
+      "ein": "20-4374795",
+      "revenue": 110322332.0,
+      "assets": 116264697.0,
+      "board_members": 39
+    },
+    {
+      "name": "San Diego Symphony Orchestra Association",
+      "ein": "95-2040874",
+      "revenue": 96468765.0,
+      "assets": 317687118.0,
+      "board_members": 51
+    },
+    {
+      "name": "Aztec Shops Ltd",
+      "ein": "95-0516240",
+      "revenue": 86782964.0,
+      "assets": 201763575.0,
+      "board_members": 18
+    },
+    {
+      "name": "Catholic Charities Diocese of San Diego",
+      "ein": "23-7334012",
+      "revenue": 80422631.0,
+      "assets": 39149428.0,
+      "board_members": 27
+    },
+    {
+      "name": "Jewish Family Service of San Diego",
+      "ein": "95-1644024",
+      "revenue": 78117604.0,
+      "assets": 99399295.0,
+      "board_members": 34
+    },
+    {
+      "name": "The Campanile Foundation",
+      "ein": "33-0868418",
+      "revenue": 61506943.0,
+      "assets": 593662815.0,
+      "board_members": 48
     },
     {
       "name": "Francis Parker School",
-      "boardMembers": 24,
+      "ein": "95-1696720",
       "revenue": 57811443.0,
-      "city": "San Diego",
-      "state": "CA"
+      "assets": 246589766.0,
+      "board_members": 24
     },
     {
-      "name": "San Diego Futures Foundation",
-      "boardMembers": 24,
-      "revenue": 2457700.0,
-      "city": "San Diego",
-      "state": "CA"
+      "name": "LA Jolla Country Day School",
+      "ein": "95-1875978",
+      "revenue": 54026952.0,
+      "assets": 122118616.0,
+      "board_members": 27
     },
     {
-      "name": "SAN DIEGO COUNTY HISPANIC CHAMBER OF COMMERCE",
-      "boardMembers": 23,
-      "revenue": 74945.0,
-      "city": "San Diego",
-      "state": "CA"
+      "name": "Ucsf Health Medical Foundation",
+      "ein": "86-1175591",
+      "revenue": 46667694.0,
+      "assets": 18396696.0,
+      "board_members": 10
+    },
+    {
+      "name": "The Shalom Hartman Institute Of North America",
+      "ein": "13-3014387",
+      "revenue": 34503344.0,
+      "assets": 43446191.0,
+      "board_members": 0
+    },
+    {
+      "name": "Old Globe Theatre",
+      "ein": "95-1543396",
+      "revenue": 33161559.0,
+      "assets": 69563987.0,
+      "board_members": 68
+    },
+    {
+      "name": "Sharp HealthCare Foundation",
+      "ein": "95-3492461",
+      "revenue": 32734419.0,
+      "assets": 188888852.0,
+      "board_members": 51
+    },
+    {
+      "name": "Jewish Funders Network",
+      "ein": "23-2742482",
+      "revenue": 28206829.0,
+      "assets": 11876804.0,
+      "board_members": 0
+    },
+    {
+      "name": "San Diego Jewish Academy",
+      "ein": "95-3287745",
+      "revenue": 27139045.0,
+      "assets": 63557550.0,
+      "board_members": 0
+    },
+    {
+      "name": "Secure Community Network Inc",
+      "ein": "20-1437733",
+      "revenue": 25305278.0,
+      "assets": 6948032.0,
+      "board_members": 0
+    },
+    {
+      "name": "San Diego Rescue Mission Inc",
+      "ein": "95-1874073",
+      "revenue": 25286002.0,
+      "assets": 47400081.0,
+      "board_members": 19
+    },
+    {
+      "name": "CHICANO FEDERATION OF SAN DIEGO COUNTY INC",
+      "ein": "23-7085960",
+      "revenue": 24658051.0,
+      "assets": 20097346.0,
+      "board_members": 17
+    },
+    {
+      "name": "San Diego Hebrew Homes",
+      "ein": "95-1455284",
+      "revenue": 21890086.0,
+      "assets": 42894866.0,
+      "board_members": 42
+    },
+    {
+      "name": "San Diego Museum of Art",
+      "ein": "95-1696715",
+      "revenue": 17978227.0,
+      "assets": 85257019.0,
+      "board_members": 64
+    },
+    {
+      "name": "Museum of Contemporary Art San Diego",
+      "ein": "95-1855640",
+      "revenue": 9472130.0,
+      "assets": 158236939.0,
+      "board_members": 40
+    },
+    {
+      "name": "Fleet Science Center",
+      "ein": "95-6066250",
+      "revenue": 9468540.0,
+      "assets": 14601717.0,
+      "board_members": 46
     }
   ],
   "sfMatches": [
     {
-      "name": "Charlene Seidle",
-      "title": "SECRETARY, EXECUTIVE VP",
-      "org": "Leichtag Foundation",
-      "compensation": 340528.0
-    },
-    {
-      "name": "Sharyn Goodson",
-      "title": "VP PHILANTHROPY",
-      "org": "Leichtag Foundation",
-      "compensation": 244200.0
-    },
-    {
-      "name": "Jessica Kort",
-      "title": "DIRECTOR OF COMMUNIC",
-      "org": "Leichtag Foundation",
-      "compensation": 141152.0
-    },
-    {
-      "name": "Emily Jennewein",
-      "title": "CHAIR",
-      "org": "Jewish Family Service of San Diego",
-      "compensation": 0.0
-    },
-    {
-      "name": "Theresa Dupuis",
-      "title": "DIRECTOR",
-      "org": "Jewish Family Service of San Diego",
-      "compensation": 0.0
-    },
-    {
-      "name": "Kira Finkenberg",
-      "title": "DIRECTOR",
-      "org": "Jewish Family Service of San Diego",
-      "compensation": 0.0
-    },
-    {
-      "name": "Susanna Flaster",
-      "title": "DIRECTOR",
-      "org": "Jewish Family Service of San Diego",
-      "compensation": 0.0
-    },
-    {
-      "name": "Marie G Raftery",
-      "title": "DIRECTOR",
-      "org": "Jewish Family Service of San Diego",
-      "compensation": 0.0
-    },
-    {
-      "name": "Karin Toranto",
-      "title": "DIRECTOR",
-      "org": "Jewish Family Service of San Diego",
-      "compensation": 0.0
-    },
-    {
-      "name": "Amy Corton",
-      "title": "",
-      "org": "Jewish Family Service of San Diego",
-      "compensation": 0.0
-    },
-    {
-      "name": "Meryl Maneker",
-      "title": "",
-      "org": "Jewish Family Service of San Diego",
-      "compensation": 0.0
-    },
-    {
-      "name": "Seth Krosner",
-      "title": "",
-      "org": "Jewish Family Service of San Diego",
-      "compensation": 0.0
-    },
-    {
       "name": "Elliot A Scott",
-      "title": "TRUSTEE",
-      "org": "Scripps Health",
-      "compensation": 0.0
+      "role": "TRUSTEE",
+      "org_name": "Scripps Health",
+      "sf_account_id": "003Uf00000U1G1WIAV"
     },
     {
-      "name": "Michael A Friedman",
-      "title": "VOTING MEMBER",
-      "org": "Rady Children's Hospital and Health Center",
-      "compensation": 0.0
+      "name": "Steve Hamerslag",
+      "role": "Trustee",
+      "org_name": "UC San Diego Foundation",
+      "sf_account_id": "003Uf00000U0m35IAB"
     },
     {
       "name": "Daniel J Epstein",
-      "title": "TRUSTEE",
-      "org": "Sanford Burnham Prebys Medical Discovery Institute",
-      "compensation": 0.0
+      "role": "TRUSTEE",
+      "org_name": "Sanford Burnham Prebys Medical Discovery Institute",
+      "sf_account_id": "003Uf00000U0vWvIAJ"
     },
     {
-      "name": "Heidi Gantwerk",
-      "title": "PRESIDENT & CEO",
-      "org": "Jewish Federation of San Diego County",
-      "compensation": 294030.0
+      "name": "Stephen Cushman",
+      "role": "",
+      "org_name": "Jacobs & Cushman San Diego Food Bank",
+      "sf_account_id": "HH_001Uf00000Wk2FHIAZ"
     },
     {
-      "name": "Darren Schwartz",
-      "title": "CHIEF PLANNING & STRATEGY",
-      "org": "Jewish Federation of San Diego County",
-      "compensation": 156678.0
-    },
-    {
-      "name": "Carly Ezell Lobenstein",
-      "title": "CHIEF MARKETING & ENGAGEMENT OFFICER",
-      "org": "Jewish Federation of San Diego County",
-      "compensation": 91352.0
-    },
-    {
-      "name": "Elliot Scott",
-      "title": "DIRECTOR-AT-LARGE",
-      "org": "Jewish Federation of San Diego County",
-      "compensation": 0.0
-    },
-    {
-      "name": "Jeff Schindler",
-      "title": "DIRECTOR-AT-LARGE",
-      "org": "Jewish Federation of San Diego County",
-      "compensation": 0.0
-    },
-    {
-      "name": "Sabrina Kerbel",
-      "title": "WOMEN'S PHILANTHROPY CAMPA",
-      "org": "Jewish Federation of San Diego County",
-      "compensation": 0.0
-    },
-    {
-      "name": "Jack Maizel",
-      "title": "BOARD CHAIR",
-      "org": "Jewish Federation of San Diego County",
-      "compensation": 0.0
-    },
-    {
-      "name": "Robert Rubenstein",
-      "title": "DIRECTOR-AT-LARGE",
-      "org": "Jewish Federation of San Diego County",
-      "compensation": 0.0
-    },
-    {
-      "name": "David Bramzon",
-      "title": "IMMEDIATE PAST BOARD CHAIR",
-      "org": "Jewish Federation of San Diego County",
-      "compensation": 0.0
-    },
-    {
-      "name": "Seth Krosner",
-      "title": "VICE CO-CHAIR",
-      "org": "Jewish Federation of San Diego County",
-      "compensation": 0.0
-    },
-    {
-      "name": "Larry Katz",
-      "title": "VICE CHAIR AND SECRETARY/T",
-      "org": "Jewish Federation of San Diego County",
-      "compensation": 0.0
-    },
-    {
-      "name": "Judi Gottschalk",
-      "title": "DIRECTOR",
-      "org": "Jewish Federation of San Diego County",
-      "compensation": 0.0
-    },
-    {
-      "name": "Kira Finkenberg",
-      "title": "DIRECTOR-AT-LARGE",
-      "org": "Jewish Federation of San Diego County",
-      "compensation": 0.0
-    },
-    {
-      "name": "Theresa Dupuis",
-      "title": "DIRECTOR-AT-LARGE",
-      "org": "Jewish Federation of San Diego County",
-      "compensation": 0.0
-    },
-    {
-      "name": "Silvana Christy",
-      "title": "VICE CO-CHAIR",
-      "org": "Jewish Federation of San Diego County",
-      "compensation": 0.0
-    },
-    {
-      "name": "David Bark",
-      "title": "DIRECTOR-AT-LARGE",
-      "org": "Jewish Federation of San Diego County",
-      "compensation": 0.0
-    },
-    {
-      "name": "Simone Abelsohn",
-      "title": "DIRECTOR-AT-LARGE",
-      "org": "Jewish Federation of San Diego County",
-      "compensation": 0.0
-    },
-    {
-      "name": "Guri Stark",
-      "title": "DIRECTOR-AT-LARGE",
-      "org": "Jewish Federation of San Diego County",
-      "compensation": 0.0
-    },
-    {
-      "name": "Graeme Gabriel",
-      "title": "JEWISH COMMUNITY FOUNDATION BOARD CHAIR",
-      "org": "Jewish Federation of San Diego County",
-      "compensation": 0.0
-    },
-    {
-      "name": "Lisa Pearl",
-      "title": "WOMEN'S PHILANTHROPY BOARD CHAIR",
-      "org": "Jewish Federation of San Diego County",
-      "compensation": 0.0
-    },
-    {
-      "name": "Howard Somers",
-      "title": "DIRECTOR",
-      "org": "Jewish Federation of San Diego County",
-      "compensation": 0.0
-    },
-    {
-      "name": "Sonia  Israel",
-      "title": "",
-      "org": "Jewish Federation of San Diego County",
-      "compensation": 0.0
-    },
-    {
-      "name": "Debbie Kornberg",
-      "title": "",
-      "org": "Jewish Federation of San Diego County",
-      "compensation": 0.0
-    },
-    {
-      "name": "Ingram Losner",
-      "title": "",
-      "org": "Jewish Federation of San Diego County",
-      "compensation": 0.0
-    },
-    {
-      "name": "Meryl Maneker",
-      "title": "",
-      "org": "Jewish Federation of San Diego County",
-      "compensation": 0.0
-    },
-    {
-      "name": "Sarah Shekhter",
-      "title": "",
-      "org": "Jewish Federation of San Diego County",
-      "compensation": 0.0
-    },
-    {
-      "name": "Cindy Bloch",
-      "title": "TRUSTEE",
-      "org": "San Diego Hebrew Homes",
-      "compensation": 0.0
-    },
-    {
-      "name": "Larry Katz",
-      "title": "TRUSTEE",
-      "org": "San Diego Hebrew Homes",
-      "compensation": 0.0
-    },
-    {
-      "name": "Mona Platt",
-      "title": "TRUSTEE",
-      "org": "San Diego Hebrew Homes",
-      "compensation": 0.0
-    },
-    {
-      "name": "Linda Bennett",
-      "title": "",
-      "org": "San Diego Hebrew Homes",
-      "compensation": 0.0
-    },
-    {
-      "name": "Mary Epsten",
-      "title": "",
-      "org": "San Diego Hebrew Homes",
-      "compensation": 0.0
-    },
-    {
-      "name": "John Kassar",
-      "title": "",
-      "org": "San Diego Hebrew Homes",
-      "compensation": 0.0
-    },
-    {
-      "name": "Anne Nagorner",
-      "title": "",
-      "org": "San Diego Hebrew Homes",
-      "compensation": 0.0
-    },
-    {
-      "name": "Jeff Platt",
-      "title": "",
-      "org": "San Diego Hebrew Homes",
-      "compensation": 0.0
+      "name": "Colette Carson Royston",
+      "role": "VICE CHAIR",
+      "org_name": "San Diego Symphony Orchestra Association",
+      "sf_account_id": "003Uf00000U0ooRIAR"
     },
     {
       "name": "Linda Platt",
-      "title": "",
-      "org": "San Diego Hebrew Homes",
-      "compensation": 0.0
+      "role": "SECRETARY",
+      "org_name": "San Diego Symphony Orchestra Association",
+      "sf_account_id": "003Uf00000U1FoWIAV"
+    },
+    {
+      "name": "Donald Slate",
+      "role": "BOARD MEMBER",
+      "org_name": "San Diego Symphony Orchestra Association",
+      "sf_account_id": "003Uf00000U1EBtIAN"
+    },
+    {
+      "name": "Karen Silberman",
+      "role": "BOARD MEMBER",
+      "org_name": "San Diego Symphony Orchestra Association",
+      "sf_account_id": "HH_001Uf00000Wk3JgIAJ"
+    },
+    {
+      "name": "Martha G Dennis",
+      "role": "BOARD MEMBER",
+      "org_name": "San Diego Symphony Orchestra Association",
+      "sf_account_id": "003Uf00000U0VstIAF"
+    },
+    {
+      "name": "Phyllis Epstein",
+      "role": "BOARD MEMBER",
+      "org_name": "San Diego Symphony Orchestra Association",
+      "sf_account_id": "003Uf00000U0xbiIAB"
+    },
+    {
+      "name": "Warren Kessler",
+      "role": "BOARD MEMBER",
+      "org_name": "San Diego Symphony Orchestra Association",
+      "sf_account_id": "003Uf00000U1G12IAF"
+    },
+    {
+      "name": "Sandra Levinson",
+      "role": "",
+      "org_name": "San Diego Symphony Orchestra Association",
+      "sf_account_id": "003Uf00000U13f3IAB"
+    },
+    {
+      "name": "Elliot Scott",
+      "role": "COMM. BOARD MEMBER - AS OF 09/2023",
+      "org_name": "Aztec Shops Ltd",
+      "sf_account_id": "003Uf00000U1G1WIAV"
+    },
+    {
+      "name": "Emily Jennewein",
+      "role": "CHAIR",
+      "org_name": "Jewish Family Service of San Diego",
+      "sf_account_id": "HH_003Uf00000U11siIAB"
+    },
+    {
+      "name": "Theresa Dupuis",
+      "role": "DIRECTOR",
+      "org_name": "Jewish Family Service of San Diego",
+      "sf_account_id": "003Uf00000U1CkQIAV"
+    },
+    {
+      "name": "Kira Finkenberg",
+      "role": "DIRECTOR",
+      "org_name": "Jewish Family Service of San Diego",
+      "sf_account_id": "003Uf00000U1I1iIAF"
+    },
+    {
+      "name": "Susanna Flaster",
+      "role": "DIRECTOR",
+      "org_name": "Jewish Family Service of San Diego",
+      "sf_account_id": "003Uf00000U14sSIAR"
+    },
+    {
+      "name": "Marie G Raftery",
+      "role": "DIRECTOR",
+      "org_name": "Jewish Family Service of San Diego",
+      "sf_account_id": "003Uf00000U11LRIAZ"
+    },
+    {
+      "name": "Karin Toranto",
+      "role": "DIRECTOR",
+      "org_name": "Jewish Family Service of San Diego",
+      "sf_account_id": "003Uf00000U17nmIAB"
+    },
+    {
+      "name": "Amy Corton",
+      "role": "",
+      "org_name": "Jewish Family Service of San Diego",
+      "sf_account_id": "003Uf00000U15iQIAR"
+    },
+    {
+      "name": "Meryl Maneker",
+      "role": "",
+      "org_name": "Jewish Family Service of San Diego",
+      "sf_account_id": "003Uf00000U12e2IAB"
+    },
+    {
+      "name": "Seth Krosner",
+      "role": "",
+      "org_name": "Jewish Family Service of San Diego",
+      "sf_account_id": "HH_003Uf00000U1ATBIA3"
+    },
+    {
+      "name": "David H Fuhriman",
+      "role": "CFO",
+      "org_name": "The Campanile Foundation",
+      "sf_account_id": "003Uf00000U1Gg5IAF"
+    },
+    {
+      "name": "Elliot Scott",
+      "role": "",
+      "org_name": "The Campanile Foundation",
+      "sf_account_id": "003Uf00000U1G1WIAV"
+    },
+    {
+      "name": "Jeffrey Glazer",
+      "role": "",
+      "org_name": "The Campanile Foundation",
+      "sf_account_id": "003Uf00000U11aCIAR"
+    },
+    {
+      "name": "Graeme Gabriel",
+      "role": "TRUSTEE",
+      "org_name": "Francis Parker School",
+      "sf_account_id": "003Uf00000U0SniIAF"
+    },
+    {
+      "name": "Jeff O'Neill",
+      "role": "BOARD TREASURER",
+      "org_name": "LA Jolla Country Day School",
+      "sf_account_id": "003Uf00000U0pN5IAJ"
+    },
+    {
+      "name": "Michael Feinman",
+      "role": "TRUSTEE",
+      "org_name": "LA Jolla Country Day School",
+      "sf_account_id": "003Uf00000U0m2FIAR"
+    },
+    {
+      "name": "Margie Newman Tsay",
+      "role": "TRUSTEE",
+      "org_name": "LA Jolla Country Day School",
+      "sf_account_id": "HH_003Uf00000U1FxiIAF"
+    },
+    {
+      "name": "Jeff Hughes",
+      "role": "BOARD MEMBER",
+      "org_name": "Old Globe Theatre",
+      "sf_account_id": "003Uf00000i3N6oIAE"
+    },
+    {
+      "name": "Cindy Bloch",
+      "role": "TRUSTEE",
+      "org_name": "San Diego Hebrew Homes",
+      "sf_account_id": "HH_003Uf00000U13C6IAJ"
+    },
+    {
+      "name": "Larry Katz",
+      "role": "TRUSTEE",
+      "org_name": "San Diego Hebrew Homes",
+      "sf_account_id": "003Uf00000U17rsIAB"
+    },
+    {
+      "name": "Mona Platt",
+      "role": "TRUSTEE",
+      "org_name": "San Diego Hebrew Homes",
+      "sf_account_id": "003Uf00000U14aMIAR"
+    },
+    {
+      "name": "Linda Bennett",
+      "role": "",
+      "org_name": "San Diego Hebrew Homes",
+      "sf_account_id": "003Uf00000U1Bl3IAF"
+    },
+    {
+      "name": "Mary Epsten",
+      "role": "",
+      "org_name": "San Diego Hebrew Homes",
+      "sf_account_id": "003Uf00000U13ShIAJ"
+    },
+    {
+      "name": "John Kassar",
+      "role": "",
+      "org_name": "San Diego Hebrew Homes",
+      "sf_account_id": "HH_003Uf00000U0mIQIAZ"
+    },
+    {
+      "name": "Anne Nagorner",
+      "role": "",
+      "org_name": "San Diego Hebrew Homes",
+      "sf_account_id": "003Uf00000U13KJIAZ"
+    },
+    {
+      "name": "Jeff Platt",
+      "role": "",
+      "org_name": "San Diego Hebrew Homes",
+      "sf_account_id": "003Uf00000U199HIAR"
+    },
+    {
+      "name": "Linda Platt",
+      "role": "",
+      "org_name": "San Diego Hebrew Homes",
+      "sf_account_id": "003Uf00000U1FoWIAV"
+    },
+    {
+      "name": "Melissa Garfield Bartell",
+      "role": "VICE PRESIDENT",
+      "org_name": "Museum of Contemporary Art San Diego",
+      "sf_account_id": "003Uf00000U16t8IAB"
+    },
+    {
+      "name": "Marcia Hazan",
+      "role": "TRUSTEE",
+      "org_name": "Museum of Contemporary Art San Diego",
+      "sf_account_id": "003Uf00000U1AW3IAN"
+    },
+    {
+      "name": "Colette Carson Royston",
+      "role": "TRUSTEE",
+      "org_name": "Museum of Contemporary Art San Diego",
+      "sf_account_id": "003Uf00000U0ooRIAR"
+    },
+    {
+      "name": "Heidi Gantwerk",
+      "role": "PRESIDENT & CEO",
+      "org_name": "Jewish Federation of San Diego County",
+      "sf_account_id": "003Uf00000U1BX3IAN"
+    },
+    {
+      "name": "Darren Schwartz",
+      "role": "CHIEF PLANNING & STRATEGY",
+      "org_name": "Jewish Federation of San Diego County",
+      "sf_account_id": "003Uf00000U11JWIAZ"
+    },
+    {
+      "name": "Carly Ezell Lobenstein",
+      "role": "CHIEF MARKETING & ENGAGEMENT OFFICER",
+      "org_name": "Jewish Federation of San Diego County",
+      "sf_account_id": "003Uf00000U10GMIAZ"
+    },
+    {
+      "name": "Elliot Scott",
+      "role": "DIRECTOR-AT-LARGE",
+      "org_name": "Jewish Federation of San Diego County",
+      "sf_account_id": "003Uf00000U1G1WIAV"
+    },
+    {
+      "name": "Jeff Schindler",
+      "role": "DIRECTOR-AT-LARGE",
+      "org_name": "Jewish Federation of San Diego County",
+      "sf_account_id": "003Uf00000U1B7vIAF"
+    },
+    {
+      "name": "Sabrina Kerbel",
+      "role": "WOMEN'S PHILANTHROPY CAMPA",
+      "org_name": "Jewish Federation of San Diego County",
+      "sf_account_id": "HH_001Uf00000WjkD3IAJ"
+    },
+    {
+      "name": "Jack Maizel",
+      "role": "BOARD CHAIR",
+      "org_name": "Jewish Federation of San Diego County",
+      "sf_account_id": "003Uf00000U16AZIAZ"
+    },
+    {
+      "name": "Robert Rubenstein",
+      "role": "DIRECTOR-AT-LARGE",
+      "org_name": "Jewish Federation of San Diego County",
+      "sf_account_id": "003Uf00000U13xnIAB"
     }
-  ]
+  ],
+  "asOfDate": "2026-03-06T10:20:00"
 }

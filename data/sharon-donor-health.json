@@ -1,871 +1,1106 @@
 {
-  "asOfDate": "2026-02-26T06:03:50.105668-08:00",
-  "failedRecurring": [
-    {
-      "name": "Paul Needelman",
-      "amount": 187.66,
-      "reason": null,
-      "date": "2026-02-24"
-    },
-    {
-      "name": "Karin Toranto",
-      "amount": 5210.3,
-      "reason": null,
-      "date": "2026-02-24"
-    },
-    {
-      "name": "Scott Schindler",
-      "amount": 208.7,
-      "reason": null,
-      "date": "2026-02-23"
-    },
-    {
-      "name": "Schindler",
-      "amount": 200.0,
-      "reason": "Your card's security code is invalid.",
-      "date": "2026-02-21"
-    },
-    {
-      "name": "Neal Jacobs",
-      "amount": 18.0,
-      "reason": null,
-      "date": "2026-02-20"
-    },
-    {
-      "name": "Brittany Hawkins",
-      "amount": 52.25,
-      "reason": null,
-      "date": "2026-02-20"
-    },
-    {
-      "name": "Sharon Peterson",
-      "amount": 5.0,
-      "reason": null,
-      "date": "2026-02-20"
-    }
-  ],
+  "failedRecurring": [],
   "refundsOver100": [],
   "newDonorsBySource": [
     {
-      "source": "Unsolicited Annual Gifts - FY26",
-      "count": 2,
-      "totalAmount": 5419.0
+      "attributes": {
+        "type": "AggregateResult"
+      },
+      "source": "DRM - FY26",
+      "cnt": 15,
+      "total": 137314.9
     },
     {
-      "source": "The Community Trip - CY27",
-      "count": 2,
-      "totalAmount": 1500
-    },
-    {
-      "source": "Israel Unfiltered - FY26",
-      "count": 1,
-      "totalAmount": 1000
-    },
-    {
-      "source": "Yom HaZikaron - FY26",
-      "count": 1,
-      "totalAmount": 187.66
-    },
-    {
+      "attributes": {
+        "type": "AggregateResult"
+      },
       "source": "FED360 - FY26 - Donations - Attended",
-      "count": 1,
-      "totalAmount": 180
+      "cnt": 97,
+      "total": 99507.19
+    },
+    {
+      "attributes": {
+        "type": "AggregateResult"
+      },
+      "source": "Endowment - FY26",
+      "cnt": 10,
+      "total": 73970.89
+    },
+    {
+      "attributes": {
+        "type": "AggregateResult"
+      },
+      "source": "The Community Trip - CY27",
+      "cnt": 67,
+      "total": 26250
+    },
+    {
+      "attributes": {
+        "type": "AggregateResult"
+      },
+      "source": "ShinShinim - FY26",
+      "cnt": 2,
+      "total": 22010.63
     }
   ],
-  "newDonorsThisWeek": 6,
-  "firstToSecondConversions": [
-    {
-      "name": "Howard Somers",
-      "firstGift": "2",
-      "secondGift": "2026-02-21",
-      "amount": "2026-02-25"
-    },
-    {
-      "name": "OMER LESSER-SAZIR",
-      "firstGift": "2",
-      "secondGift": "2026-02-25",
-      "amount": "2026-02-25"
-    },
-    {
-      "name": "Julie Gordon",
-      "firstGift": "2",
-      "secondGift": "2026-02-23",
-      "amount": "2026-02-25"
-    },
-    {
-      "name": "David Maya",
-      "firstGift": "2",
-      "secondGift": "2026-02-25",
-      "amount": "2026-02-25"
-    },
-    {
-      "name": "Naomi Jensen",
-      "firstGift": "2",
-      "secondGift": "2026-02-21",
-      "amount": "2026-02-25"
-    },
-    {
-      "name": "Margaux Dinerman",
-      "firstGift": "2",
-      "secondGift": "2026-02-20",
-      "amount": "2026-02-24"
-    },
-    {
-      "name": "Solomon Kempinski",
-      "firstGift": "2",
-      "secondGift": "2026-02-20",
-      "amount": "2026-02-24"
-    },
-    {
-      "name": "Guri Stark",
-      "firstGift": "2",
-      "secondGift": "2026-02-21",
-      "amount": "2026-02-24"
-    },
-    {
-      "name": "Daniel Eyal",
-      "firstGift": "2",
-      "secondGift": "2026-01-29",
-      "amount": "2026-02-23"
-    },
-    {
-      "name": "Jennifer Dolin",
-      "firstGift": "2",
-      "secondGift": "2025-12-09",
-      "amount": "2026-02-22"
-    },
-    {
-      "name": "Ron Levenson",
-      "firstGift": "2",
-      "secondGift": "2026-02-20",
-      "amount": "2026-02-20"
-    },
-    {
-      "name": "Sharon Peterson",
-      "firstGift": "2",
-      "secondGift": "2023-11-30",
-      "amount": "2026-02-20"
-    }
-  ],
+  "newDonorsThisWeek": 20,
+  "firstToSecondConversions": [],
   "newRecurring": [
     {
-      "name": "Jeff Harris",
-      "amount": 180,
-      "frequency": "OpenEnded",
-      "date": "2062-02-07"
+      "attributes": {
+        "type": "GiftCommitment",
+        "url": "/services/data/v59.0/sobjects/GiftCommitment/6gcUf0000001fM5IAI"
+      },
+      "Donor": {
+        "attributes": {
+          "type": "Account",
+          "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkIjXIAV"
+        },
+        "Name": "Jeff Harris"
+      },
+      "ExpectedTotalCmtAmount": 180,
+      "EffectiveStartDate": "2062-02-07"
     },
     {
-      "name": "Marsha Berkson",
-      "amount": 10000,
-      "frequency": "OpenEnded",
-      "date": "2028-01-01"
+      "attributes": {
+        "type": "GiftCommitment",
+        "url": "/services/data/v59.0/sobjects/GiftCommitment/6gcUf0000001a1RIAQ"
+      },
+      "Donor": {
+        "attributes": {
+          "type": "Account",
+          "url": "/services/data/v59.0/sobjects/Account/001Uf00000WjHnmIAF"
+        },
+        "Name": "Marsha Berkson"
+      },
+      "ExpectedTotalCmtAmount": 10000,
+      "EffectiveStartDate": "2028-01-01"
     },
     {
-      "name": "Richard Gabriel",
-      "amount": 50000,
-      "frequency": "OpenEnded",
-      "date": "2027-07-01"
+      "attributes": {
+        "type": "GiftCommitment",
+        "url": "/services/data/v59.0/sobjects/GiftCommitment/6gcUf00000018BTIAY"
+      },
+      "Donor": {
+        "attributes": {
+          "type": "Account",
+          "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkDPYIA3"
+        },
+        "Name": "Richard Gabriel"
+      },
+      "ExpectedTotalCmtAmount": 50000,
+      "EffectiveStartDate": "2027-07-01"
     },
     {
-      "name": "Karen Kogut",
-      "amount": 1800,
-      "frequency": "OpenEnded",
-      "date": "2027-02-07"
+      "attributes": {
+        "type": "GiftCommitment",
+        "url": "/services/data/v59.0/sobjects/GiftCommitment/6gcUf0000001eppIAA"
+      },
+      "Donor": {
+        "attributes": {
+          "type": "Account",
+          "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkE3WIAV"
+        },
+        "Name": "Karen Kogut"
+      },
+      "ExpectedTotalCmtAmount": 1800,
+      "EffectiveStartDate": "2027-02-07"
     },
     {
-      "name": "Heather Keith",
-      "amount": 5000,
-      "frequency": "OpenEnded",
-      "date": "2027-01-01"
+      "attributes": {
+        "type": "GiftCommitment",
+        "url": "/services/data/v59.0/sobjects/GiftCommitment/6gcUf00000018PXIAY"
+      },
+      "Donor": {
+        "attributes": {
+          "type": "Account",
+          "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkEw3IAF"
+        },
+        "Name": "Jean Somers"
+      },
+      "ExpectedTotalCmtAmount": 10000,
+      "EffectiveStartDate": "2027-01-01"
     },
     {
-      "name": "Susie B. Meltzer",
-      "amount": 1500,
-      "frequency": "OpenEnded",
-      "date": "2027-01-01"
+      "attributes": {
+        "type": "GiftCommitment",
+        "url": "/services/data/v59.0/sobjects/GiftCommitment/6gcUf00000018KaIAI"
+      },
+      "Donor": {
+        "attributes": {
+          "type": "Account",
+          "url": "/services/data/v59.0/sobjects/Account/001Uf00000Wk4boIAB"
+        },
+        "Name": "Emma Paterno"
+      },
+      "ExpectedTotalCmtAmount": 3.55,
+      "EffectiveStartDate": "2027-01-01"
     },
     {
-      "name": "Eli O. Meltzer",
-      "amount": 2500,
-      "frequency": "OpenEnded",
-      "date": "2027-01-01"
+      "attributes": {
+        "type": "GiftCommitment",
+        "url": "/services/data/v59.0/sobjects/GiftCommitment/6gcUf00000018PRIAY"
+      },
+      "Donor": {
+        "attributes": {
+          "type": "Account",
+          "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkK6OIAV"
+        },
+        "Name": "Sonia Ancoli Israel"
+      },
+      "ExpectedTotalCmtAmount": 36000,
+      "EffectiveStartDate": "2027-01-01"
     },
     {
-      "name": "Judi Gottschalk",
-      "amount": 5000,
-      "frequency": "OpenEnded",
-      "date": "2027-01-01"
+      "attributes": {
+        "type": "GiftCommitment",
+        "url": "/services/data/v59.0/sobjects/GiftCommitment/6gcUf0000001ZzpIAE"
+      },
+      "Donor": {
+        "attributes": {
+          "type": "Account",
+          "url": "/services/data/v59.0/sobjects/Account/001Uf00000WjHnmIAF"
+        },
+        "Name": "Marsha Berkson"
+      },
+      "ExpectedTotalCmtAmount": 10000,
+      "EffectiveStartDate": "2027-01-01"
     },
     {
-      "name": "Emma Paterno",
-      "amount": 3.55,
-      "frequency": "OpenEnded",
-      "date": "2027-01-01"
+      "attributes": {
+        "type": "GiftCommitment",
+        "url": "/services/data/v59.0/sobjects/GiftCommitment/6gcUf0000001YPRIA2"
+      },
+      "Donor": {
+        "attributes": {
+          "type": "Account",
+          "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkTrKIAV"
+        },
+        "Name": "Andrew James Viterbi"
+      },
+      "ExpectedTotalCmtAmount": 750000,
+      "EffectiveStartDate": "2027-01-01"
     },
     {
-      "name": "Andrew James Viterbi",
-      "amount": 750000,
-      "frequency": "OpenEnded",
-      "date": "2027-01-01"
+      "attributes": {
+        "type": "GiftCommitment",
+        "url": "/services/data/v59.0/sobjects/GiftCommitment/6gcUf0000001YkPIAU"
+      },
+      "Donor": {
+        "attributes": {
+          "type": "Account",
+          "url": "/services/data/v59.0/sobjects/Account/001Uf00000WjZrnIAF"
+        },
+        "Name": "Graeme Gabriel"
+      },
+      "ExpectedTotalCmtAmount": 18000,
+      "EffectiveStartDate": "2027-01-01"
     },
     {
-      "name": "Graeme Gabriel",
-      "amount": 18000,
-      "frequency": "OpenEnded",
-      "date": "2027-01-01"
+      "attributes": {
+        "type": "GiftCommitment",
+        "url": "/services/data/v59.0/sobjects/GiftCommitment/6gcUf00000019fhIAA"
+      },
+      "Donor": {
+        "attributes": {
+          "type": "Account",
+          "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkDPgIAN"
+        },
+        "Name": "Eli O. Meltzer"
+      },
+      "ExpectedTotalCmtAmount": 2500,
+      "EffectiveStartDate": "2027-01-01"
     },
     {
-      "name": "Marsha Berkson",
-      "amount": 10000,
-      "frequency": "OpenEnded",
-      "date": "2027-01-01"
+      "attributes": {
+        "type": "GiftCommitment",
+        "url": "/services/data/v59.0/sobjects/GiftCommitment/6gcUf0000001A0rIAE"
+      },
+      "Donor": {
+        "attributes": {
+          "type": "Account",
+          "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkGZ5IAN"
+        },
+        "Name": "Heather Keith"
+      },
+      "ExpectedTotalCmtAmount": 5000,
+      "EffectiveStartDate": "2027-01-01"
     },
     {
-      "name": "Emma Paterno",
-      "amount": 180,
-      "frequency": "OpenEnded",
-      "date": "2027-01-01"
+      "attributes": {
+        "type": "GiftCommitment",
+        "url": "/services/data/v59.0/sobjects/GiftCommitment/6gcUf00000018TrIAI"
+      },
+      "Donor": {
+        "attributes": {
+          "type": "Account",
+          "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkJngIAF"
+        },
+        "Name": "Larry Michael Katz"
+      },
+      "ExpectedTotalCmtAmount": 5000,
+      "EffectiveStartDate": "2027-01-01"
     },
     {
-      "name": "Irina Shalomayeva",
-      "amount": 100,
-      "frequency": "OpenEnded",
-      "date": "2027-01-01"
+      "attributes": {
+        "type": "GiftCommitment",
+        "url": "/services/data/v59.0/sobjects/GiftCommitment/6gcUf00000019y0IAA"
+      },
+      "Donor": {
+        "attributes": {
+          "type": "Account",
+          "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkEv4IAF"
+        },
+        "Name": "Lisa Beth Pearl"
+      },
+      "ExpectedTotalCmtAmount": 6000,
+      "EffectiveStartDate": "2027-01-01"
     },
     {
-      "name": "David Abraham",
-      "amount": 500,
-      "frequency": "OpenEnded",
-      "date": "2027-01-01"
+      "attributes": {
+        "type": "GiftCommitment",
+        "url": "/services/data/v59.0/sobjects/GiftCommitment/6gcUf00000018KZIAY"
+      },
+      "Donor": {
+        "attributes": {
+          "type": "Account",
+          "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkGkhIAF"
+        },
+        "Name": "Irina Shalomayeva"
+      },
+      "ExpectedTotalCmtAmount": 100,
+      "EffectiveStartDate": "2027-01-01"
     },
     {
-      "name": "Lisa Beth Pearl",
-      "amount": 6000,
-      "frequency": "OpenEnded",
-      "date": "2027-01-01"
+      "attributes": {
+        "type": "GiftCommitment",
+        "url": "/services/data/v59.0/sobjects/GiftCommitment/6gcUf00000018KYIAY"
+      },
+      "Donor": {
+        "attributes": {
+          "type": "Account",
+          "url": "/services/data/v59.0/sobjects/Account/001Uf00000Wk4boIAB"
+        },
+        "Name": "Emma Paterno"
+      },
+      "ExpectedTotalCmtAmount": 180,
+      "EffectiveStartDate": "2027-01-01"
     },
     {
-      "name": "Sonia Ancoli Israel",
-      "amount": 36000,
-      "frequency": "OpenEnded",
-      "date": "2027-01-01"
+      "attributes": {
+        "type": "GiftCommitment",
+        "url": "/services/data/v59.0/sobjects/GiftCommitment/6gcUf00000019fRIAQ"
+      },
+      "Donor": {
+        "attributes": {
+          "type": "Account",
+          "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkOzYIAV"
+        },
+        "Name": "Susie B. Meltzer"
+      },
+      "ExpectedTotalCmtAmount": 1500,
+      "EffectiveStartDate": "2027-01-01"
     },
     {
-      "name": "Larry Michael Katz",
-      "amount": 5000,
-      "frequency": "OpenEnded",
-      "date": "2027-01-01"
+      "attributes": {
+        "type": "GiftCommitment",
+        "url": "/services/data/v59.0/sobjects/GiftCommitment/6gcUf00000018LnIAI"
+      },
+      "Donor": {
+        "attributes": {
+          "type": "Account",
+          "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkBx1IAF"
+        },
+        "Name": "David Abraham"
+      },
+      "ExpectedTotalCmtAmount": 500,
+      "EffectiveStartDate": "2027-01-01"
     },
     {
-      "name": "Jean Somers",
-      "amount": 10000,
-      "frequency": "OpenEnded",
-      "date": "2027-01-01"
+      "attributes": {
+        "type": "GiftCommitment",
+        "url": "/services/data/v59.0/sobjects/GiftCommitment/6gcUf00000019lgIAA"
+      },
+      "Donor": {
+        "attributes": {
+          "type": "Account",
+          "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkNyoIAF"
+        },
+        "Name": "Judi Gottschalk"
+      },
+      "ExpectedTotalCmtAmount": 5000,
+      "EffectiveStartDate": "2027-01-01"
     },
     {
-      "name": "Richard Gabriel",
-      "amount": 50000,
-      "frequency": "OpenEnded",
-      "date": "2026-07-01"
+      "attributes": {
+        "type": "GiftCommitment",
+        "url": "/services/data/v59.0/sobjects/GiftCommitment/6gcUf00000018LoIAI"
+      },
+      "Donor": {
+        "attributes": {
+          "type": "Account",
+          "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkEd3IAF"
+        },
+        "Name": "Meryl Maneker"
+      },
+      "ExpectedTotalCmtAmount": 3600,
+      "EffectiveStartDate": "2027-01-01"
     },
     {
-      "name": "Silvana Anna Christy",
-      "amount": 11000,
-      "frequency": "OpenEnded",
-      "date": "2026-07-01"
+      "attributes": {
+        "type": "GiftCommitment",
+        "url": "/services/data/v59.0/sobjects/GiftCommitment/6gcUf0000001AtlIAE"
+      },
+      "Donor": {
+        "attributes": {
+          "type": "Account",
+          "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkMZFIA3"
+        },
+        "Name": "Charlie Mann"
+      },
+      "ExpectedTotalCmtAmount": 3000,
+      "EffectiveStartDate": "2026-07-01"
     },
     {
-      "name": "Adam Jacobs",
-      "amount": 10000,
-      "frequency": "OpenEnded",
-      "date": "2026-07-01"
+      "attributes": {
+        "type": "GiftCommitment",
+        "url": "/services/data/v59.0/sobjects/GiftCommitment/6gcUf0000001ApyIAE"
+      },
+      "Donor": {
+        "attributes": {
+          "type": "Account",
+          "url": "/services/data/v59.0/sobjects/Account/001Uf00000WjYiJIAV"
+        },
+        "Name": "Barry J. Galgut"
+      },
+      "ExpectedTotalCmtAmount": 25000,
+      "EffectiveStartDate": "2026-07-01"
     },
     {
-      "name": "Karen Foster Silberman",
-      "amount": 30116.5,
-      "frequency": "OpenEnded",
-      "date": "2026-07-01"
+      "attributes": {
+        "type": "GiftCommitment",
+        "url": "/services/data/v59.0/sobjects/GiftCommitment/6gcUf00000018L2IAI"
+      },
+      "Donor": {
+        "attributes": {
+          "type": "Account",
+          "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkKUfIAN"
+        },
+        "Name": "Stacy Rosenberg"
+      },
+      "ExpectedTotalCmtAmount": 10000,
+      "EffectiveStartDate": "2026-07-01"
     },
     {
-      "name": "Jeffrey H. Silberman",
-      "amount": 30116.5,
-      "frequency": "OpenEnded",
-      "date": "2026-07-01"
+      "attributes": {
+        "type": "GiftCommitment",
+        "url": "/services/data/v59.0/sobjects/GiftCommitment/6gcUf00000019zzIAA"
+      },
+      "Donor": {
+        "attributes": {
+          "type": "Account",
+          "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkPvSIAV"
+        },
+        "Name": "Shayna Davis-Schreiber"
+      },
+      "ExpectedTotalCmtAmount": 50000,
+      "EffectiveStartDate": "2026-07-01"
     },
     {
-      "name": "Susanna Karney Flaster",
-      "amount": 18000,
-      "frequency": "OpenEnded",
-      "date": "2026-07-01"
+      "attributes": {
+        "type": "GiftCommitment",
+        "url": "/services/data/v59.0/sobjects/GiftCommitment/6gcUf00000019zvIAA"
+      },
+      "Donor": {
+        "attributes": {
+          "type": "Account",
+          "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkPvSIAV"
+        },
+        "Name": "Shayna Davis-Schreiber"
+      },
+      "ExpectedTotalCmtAmount": 50000,
+      "EffectiveStartDate": "2026-07-01"
     },
     {
-      "name": "Shayna Davis-Schreiber",
-      "amount": 50000,
-      "frequency": "OpenEnded",
-      "date": "2026-07-01"
+      "attributes": {
+        "type": "GiftCommitment",
+        "url": "/services/data/v59.0/sobjects/GiftCommitment/6gcUf00000018P8IAI"
+      },
+      "Donor": {
+        "attributes": {
+          "type": "Account",
+          "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkKUfIAN"
+        },
+        "Name": "Stacy Rosenberg"
+      },
+      "ExpectedTotalCmtAmount": 189.15,
+      "EffectiveStartDate": "2026-07-01"
     },
     {
-      "name": "Shayna Davis-Schreiber",
-      "amount": 50000,
-      "frequency": "OpenEnded",
-      "date": "2026-07-01"
+      "attributes": {
+        "type": "GiftCommitment",
+        "url": "/services/data/v59.0/sobjects/GiftCommitment/6gcUf00000018KvIAI"
+      },
+      "Donor": {
+        "attributes": {
+          "type": "Account",
+          "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkDLgIAN"
+        },
+        "Name": "Toby J. Eisenberg"
+      },
+      "ExpectedTotalCmtAmount": 5000,
+      "EffectiveStartDate": "2026-07-01"
     },
     {
-      "name": "Charlie Mann",
-      "amount": 3000,
-      "frequency": "OpenEnded",
-      "date": "2026-07-01"
+      "attributes": {
+        "type": "GiftCommitment",
+        "url": "/services/data/v59.0/sobjects/GiftCommitment/6gcUf00000018NaIAI"
+      },
+      "Donor": {
+        "attributes": {
+          "type": "Account",
+          "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkKVaIAN"
+        },
+        "Name": "Adam Jacobs"
+      },
+      "ExpectedTotalCmtAmount": 10000,
+      "EffectiveStartDate": "2026-07-01"
     },
     {
-      "name": "Jessica Effress",
-      "amount": 20000,
-      "frequency": "OpenEnded",
-      "date": "2026-07-01"
+      "attributes": {
+        "type": "GiftCommitment",
+        "url": "/services/data/v59.0/sobjects/GiftCommitment/6gcUf00000019y7IAA"
+      },
+      "Donor": {
+        "attributes": {
+          "type": "Account",
+          "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkQ8UIAV"
+        },
+        "Name": "Melanie Spiegelman"
+      },
+      "ExpectedTotalCmtAmount": 5000,
+      "EffectiveStartDate": "2026-07-01"
     },
     {
-      "name": "Alan Litrownik",
-      "amount": 2000,
-      "frequency": "OpenEnded",
-      "date": "2026-07-01"
+      "attributes": {
+        "type": "GiftCommitment",
+        "url": "/services/data/v59.0/sobjects/GiftCommitment/6gcUf0000001AwoIAE"
+      },
+      "Donor": {
+        "attributes": {
+          "type": "Account",
+          "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkTsaIAF"
+        },
+        "Name": "Jessica Effress"
+      },
+      "ExpectedTotalCmtAmount": 20000,
+      "EffectiveStartDate": "2026-07-01"
     },
     {
-      "name": "Jeff M. Schindler",
-      "amount": 12000,
-      "frequency": "OpenEnded",
-      "date": "2026-07-01"
+      "attributes": {
+        "type": "GiftCommitment",
+        "url": "/services/data/v59.0/sobjects/GiftCommitment/6gcUf00000019nVIAQ"
+      },
+      "Donor": {
+        "attributes": {
+          "type": "Account",
+          "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkODRIA3"
+        },
+        "Name": "Jeffrey H. Silberman"
+      },
+      "ExpectedTotalCmtAmount": 30116.5,
+      "EffectiveStartDate": "2026-07-01"
+    },
+    {
+      "attributes": {
+        "type": "GiftCommitment",
+        "url": "/services/data/v59.0/sobjects/GiftCommitment/6gcUf00000019z9IAA"
+      },
+      "Donor": {
+        "attributes": {
+          "type": "Account",
+          "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkGpsIAF"
+        },
+        "Name": "Susanna Karney Flaster"
+      },
+      "ExpectedTotalCmtAmount": 18000,
+      "EffectiveStartDate": "2026-07-01"
+    },
+    {
+      "attributes": {
+        "type": "GiftCommitment",
+        "url": "/services/data/v59.0/sobjects/GiftCommitment/6gcUf00000019nTIAQ"
+      },
+      "Donor": {
+        "attributes": {
+          "type": "Account",
+          "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkFiIIAV"
+        },
+        "Name": "Karen Foster Silberman"
+      },
+      "ExpectedTotalCmtAmount": 30116.5,
+      "EffectiveStartDate": "2026-07-01"
+    },
+    {
+      "attributes": {
+        "type": "GiftCommitment",
+        "url": "/services/data/v59.0/sobjects/GiftCommitment/6gcUf00000018McIAI"
+      },
+      "Donor": {
+        "attributes": {
+          "type": "Account",
+          "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkCZyIAN"
+        },
+        "Name": "Silvana Anna Christy"
+      },
+      "ExpectedTotalCmtAmount": 11000,
+      "EffectiveStartDate": "2026-07-01"
+    },
+    {
+      "attributes": {
+        "type": "GiftCommitment",
+        "url": "/services/data/v59.0/sobjects/GiftCommitment/6gcUf00000018TJIAY"
+      },
+      "Donor": {
+        "attributes": {
+          "type": "Account",
+          "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkJitIAF"
+        },
+        "Name": "Elizabeth Ann Nederlander Coden"
+      },
+      "ExpectedTotalCmtAmount": 5000,
+      "EffectiveStartDate": "2026-07-01"
+    },
+    {
+      "attributes": {
+        "type": "GiftCommitment",
+        "url": "/services/data/v59.0/sobjects/GiftCommitment/6gcUf00000018LeIAI"
+      },
+      "Donor": {
+        "attributes": {
+          "type": "Account",
+          "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkR25IAF"
+        },
+        "Name": "Sharon Leib"
+      },
+      "ExpectedTotalCmtAmount": 5000,
+      "EffectiveStartDate": "2026-07-01"
+    },
+    {
+      "attributes": {
+        "type": "GiftCommitment",
+        "url": "/services/data/v59.0/sobjects/GiftCommitment/6gcUf0000001S77IAE"
+      },
+      "Donor": {
+        "attributes": {
+          "type": "Account",
+          "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkN0YIAV"
+        },
+        "Name": "Jeff M. Schindler"
+      },
+      "ExpectedTotalCmtAmount": 12000,
+      "EffectiveStartDate": "2026-07-01"
+    },
+    {
+      "attributes": {
+        "type": "GiftCommitment",
+        "url": "/services/data/v59.0/sobjects/GiftCommitment/6gcUf0000001B44IAE"
+      },
+      "Donor": {
+        "attributes": {
+          "type": "Account",
+          "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkE8rIAF"
+        },
+        "Name": "Alan Litrownik"
+      },
+      "ExpectedTotalCmtAmount": 2000,
+      "EffectiveStartDate": "2026-07-01"
+    },
+    {
+      "attributes": {
+        "type": "GiftCommitment",
+        "url": "/services/data/v59.0/sobjects/GiftCommitment/6gcUf00000018BUIAY"
+      },
+      "Donor": {
+        "attributes": {
+          "type": "Account",
+          "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkDPYIA3"
+        },
+        "Name": "Richard Gabriel"
+      },
+      "ExpectedTotalCmtAmount": 50000,
+      "EffectiveStartDate": "2026-07-01"
+    },
+    {
+      "attributes": {
+        "type": "GiftCommitment",
+        "url": "/services/data/v59.0/sobjects/GiftCommitment/6gcUf0000001hZBIAY"
+      },
+      "Donor": {
+        "attributes": {
+          "type": "Account",
+          "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkFGpIAN"
+        },
+        "Name": "Richard Schrager"
+      },
+      "ExpectedTotalCmtAmount": 2500,
+      "EffectiveStartDate": "2026-03-06"
+    },
+    {
+      "attributes": {
+        "type": "GiftCommitment",
+        "url": "/services/data/v59.0/sobjects/GiftCommitment/6gcUf0000001hXZIAY"
+      },
+      "Donor": {
+        "attributes": {
+          "type": "Account",
+          "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkKaJIAV"
+        },
+        "Name": "Perri L. Wittgrove"
+      },
+      "ExpectedTotalCmtAmount": 12000,
+      "EffectiveStartDate": "2026-03-05"
+    },
+    {
+      "attributes": {
+        "type": "GiftCommitment",
+        "url": "/services/data/v59.0/sobjects/GiftCommitment/6gcUf0000001h4XIAQ"
+      },
+      "Donor": {
+        "attributes": {
+          "type": "Account",
+          "url": "/services/data/v59.0/sobjects/Account/001Uf00000bHTErIAO"
+        },
+        "Name": "Steven Gerard"
+      },
+      "ExpectedTotalCmtAmount": 1000,
+      "EffectiveStartDate": "2026-02-13"
+    },
+    {
+      "attributes": {
+        "type": "GiftCommitment",
+        "url": "/services/data/v59.0/sobjects/GiftCommitment/6gcUf0000001hCbIAI"
+      },
+      "Donor": {
+        "attributes": {
+          "type": "Account",
+          "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkPhqIAF"
+        },
+        "Name": "Susana Cohen Corrigan"
+      },
+      "ExpectedTotalCmtAmount": 1800,
+      "EffectiveStartDate": "2026-02-12"
+    },
+    {
+      "attributes": {
+        "type": "GiftCommitment",
+        "url": "/services/data/v59.0/sobjects/GiftCommitment/6gcUf0000001cUfIAI"
+      },
+      "Donor": {
+        "attributes": {
+          "type": "Account",
+          "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkBIHIA3"
+        },
+        "Name": "Howard S. Fram"
+      },
+      "ExpectedTotalCmtAmount": 500,
+      "EffectiveStartDate": "2026-02-07"
+    },
+    {
+      "attributes": {
+        "type": "GiftCommitment",
+        "url": "/services/data/v59.0/sobjects/GiftCommitment/6gcUf0000001cT3IAI"
+      },
+      "Donor": {
+        "attributes": {
+          "type": "Account",
+          "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkEteIAF"
+        },
+        "Name": "Debbie Kornberg"
+      },
+      "ExpectedTotalCmtAmount": 3600,
+      "EffectiveStartDate": "2026-02-07"
+    },
+    {
+      "attributes": {
+        "type": "GiftCommitment",
+        "url": "/services/data/v59.0/sobjects/GiftCommitment/6gcUf0000001cRRIAY"
+      },
+      "Donor": {
+        "attributes": {
+          "type": "Account",
+          "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkNPdIAN"
+        },
+        "Name": "Heidi Gantwerk"
+      },
+      "ExpectedTotalCmtAmount": 15000,
+      "EffectiveStartDate": "2026-02-07"
+    },
+    {
+      "attributes": {
+        "type": "GiftCommitment",
+        "url": "/services/data/v59.0/sobjects/GiftCommitment/6gcUf0000001cPpIAI"
+      },
+      "Donor": {
+        "attributes": {
+          "type": "Account",
+          "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkMjJIAV"
+        },
+        "Name": "Tom Waldman"
+      },
+      "ExpectedTotalCmtAmount": 360,
+      "EffectiveStartDate": "2026-02-07"
+    },
+    {
+      "attributes": {
+        "type": "GiftCommitment",
+        "url": "/services/data/v59.0/sobjects/GiftCommitment/6gcUf0000001cODIAY"
+      },
+      "Donor": {
+        "attributes": {
+          "type": "Account",
+          "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkEguIAF"
+        },
+        "Name": "Steven Larky"
+      },
+      "ExpectedTotalCmtAmount": 1100,
+      "EffectiveStartDate": "2026-02-07"
+    },
+    {
+      "attributes": {
+        "type": "GiftCommitment",
+        "url": "/services/data/v59.0/sobjects/GiftCommitment/6gcUf0000001cMbIAI"
+      },
+      "Donor": {
+        "attributes": {
+          "type": "Account",
+          "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkEDBIA3"
+        },
+        "Name": "Uri Feldman"
+      },
+      "ExpectedTotalCmtAmount": 1800,
+      "EffectiveStartDate": "2026-02-07"
+    },
+    {
+      "attributes": {
+        "type": "GiftCommitment",
+        "url": "/services/data/v59.0/sobjects/GiftCommitment/6gcUf0000001cKzIAI"
+      },
+      "Donor": {
+        "attributes": {
+          "type": "Account",
+          "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkLGSIA3"
+        },
+        "Name": "Danielle Marcus"
+      },
+      "ExpectedTotalCmtAmount": 600,
+      "EffectiveStartDate": "2026-02-07"
     }
   ],
-  "cancelledRecurring": [
-    {
-      "name": "Janet Arkin",
-      "amount": 7.2,
-      "date": "2026-02-25"
-    },
-    {
-      "name": "Heidi Gantwerk",
-      "amount": 18.08,
-      "date": "2026-02-25"
-    },
-    {
-      "name": "Jigsaw Analytics Group, Inc.",
-      "amount": 0.24,
-      "date": "2026-02-25"
-    },
-    {
-      "name": "Amanda Zeff",
-      "amount": 18.08,
-      "date": "2026-02-25"
-    },
-    {
-      "name": "Steven Levin",
-      "amount": 30,
-      "date": "2026-02-25"
-    },
-    {
-      "name": "June B Chocheles",
-      "amount": 60,
-      "date": "2026-02-25"
-    },
-    {
-      "name": "Steven D. Solomon",
-      "amount": 30,
-      "date": "2026-02-25"
-    },
-    {
-      "name": "Moises Hassan",
-      "amount": 30,
-      "date": "2026-02-25"
-    },
-    {
-      "name": "Vera Pienknagura",
-      "amount": 15,
-      "date": "2026-02-25"
-    },
-    {
-      "name": "Mark Debby Slonim",
-      "amount": 18.08,
-      "date": "2026-02-25"
-    },
-    {
-      "name": "Howard Pearl",
-      "amount": 40,
-      "date": "2026-02-25"
-    },
-    {
-      "name": "Rosa Grunhaus-Belzer",
-      "amount": 30,
-      "date": "2026-02-25"
-    },
-    {
-      "name": "Marianna Tcherpakov",
-      "amount": 4.47,
-      "date": "2026-02-25"
-    },
-    {
-      "name": "Pamela Marshall",
-      "amount": 4.98,
-      "date": "2026-02-25"
-    },
-    {
-      "name": "Mariana Glaser",
-      "amount": 5.4,
-      "date": "2026-02-25"
-    },
-    {
-      "name": "Dror Hab",
-      "amount": 5.4,
-      "date": "2026-02-25"
-    },
-    {
-      "name": "Rosa Grunhaus-Belzer",
-      "amount": 30,
-      "date": "2026-02-25"
-    },
-    {
-      "name": "Robin S. Rubin",
-      "amount": 2.98,
-      "date": "2026-02-25"
-    },
-    {
-      "name": "Edward Arkans",
-      "amount": 84.11,
-      "date": "2026-02-25"
-    },
-    {
-      "name": "Saul B. Oseroff",
-      "amount": 3,
-      "date": "2026-02-25"
-    },
-    {
-      "name": "Renata K. Saven",
-      "amount": 7.5,
-      "date": "2026-02-25"
-    },
-    {
-      "name": "Liz Yrineo",
-      "amount": 4.98,
-      "date": "2026-02-25"
-    },
-    {
-      "name": "Esther Straus",
-      "amount": 10.52,
-      "date": "2026-02-25"
-    },
-    {
-      "name": "Arnold Tew",
-      "amount": 4,
-      "date": "2026-02-25"
-    },
-    {
-      "name": "Robert D. Jacobson",
-      "amount": 2,
-      "date": "2026-02-25"
-    },
-    {
-      "name": "David Gonzalez",
-      "amount": 0.24,
-      "date": "2026-02-25"
-    },
-    {
-      "name": "Deborah Dale Carnick",
-      "amount": 30,
-      "date": "2026-02-25"
-    },
-    {
-      "name": "Paul J. Pockros",
-      "amount": 4.5,
-      "date": "2026-02-25"
-    },
-    {
-      "name": "Betsy Epstein",
-      "amount": 35.09,
-      "date": "2026-02-25"
-    },
-    {
-      "name": "Lee Friedman",
-      "amount": 35.09,
-      "date": "2026-02-25"
-    },
-    {
-      "name": "Colleen Lukoff",
-      "amount": 4,
-      "date": "2026-02-25"
-    },
-    {
-      "name": "David Gonzalez",
-      "amount": 0.24,
-      "date": "2026-02-25"
-    },
-    {
-      "name": "Ariele Sparks",
-      "amount": 30,
-      "date": "2026-02-25"
-    },
-    {
-      "name": "Kira Elizabeth Finkenberg",
-      "amount": 30,
-      "date": "2026-02-25"
-    },
-    {
-      "name": "Melissa Schneider",
-      "amount": 30,
-      "date": "2026-02-25"
-    },
-    {
-      "name": "Nizar Elie Elie Dahdouh",
-      "amount": 1.1,
-      "date": "2026-02-25"
-    },
-    {
-      "name": "Larry Michael Katz",
-      "amount": 30,
-      "date": "2026-02-25"
-    },
-    {
-      "name": "Ariele Sparks",
-      "amount": 5.4,
-      "date": "2026-02-25"
-    },
-    {
-      "name": "Bill Ganley",
-      "amount": 2,
-      "date": "2026-02-25"
-    },
-    {
-      "name": "Bennett Shiller",
-      "amount": 35.79,
-      "date": "2026-02-25"
-    },
-    {
-      "name": "Ellis Bloch",
-      "amount": 15,
-      "date": "2026-02-25"
-    },
-    {
-      "name": "Ron Jay Shulman",
-      "amount": 30,
-      "date": "2026-02-25"
-    },
-    {
-      "name": "Cory Briggs Briggs",
-      "amount": 15,
-      "date": "2026-02-25"
-    },
-    {
-      "name": "Elena Kucinski",
-      "amount": 30,
-      "date": "2026-02-25"
-    },
-    {
-      "name": "Ina Levin",
-      "amount": 4.98,
-      "date": "2026-02-25"
-    },
-    {
-      "name": "Susanne Schlissel",
-      "amount": 18.08,
-      "date": "2026-02-25"
-    },
-    {
-      "name": "Ruth Karhu",
-      "amount": 2.77,
-      "date": "2026-02-25"
-    },
-    {
-      "name": "Barbara Rabkin",
-      "amount": 18.08,
-      "date": "2026-02-25"
-    },
-    {
-      "name": "Marsha Starr",
-      "amount": 18.08,
-      "date": "2026-02-25"
-    },
-    {
-      "name": "Angela Cornelio Lefter",
-      "amount": 18.08,
-      "date": "2026-02-25"
-    }
-  ],
+  "cancelledRecurring": [],
   "lapsedReactivated": [
     {
-      "name": "Susan Rachelle Chortek Weisman",
-      "fy25Amount": 10000,
-      "fy26Amount": 110000
+      "attributes": {
+        "type": "Account",
+        "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkNyoIAF"
+      },
+      "Name": "Judi Gottschalk",
+      "Recognition_Amount_FY26__c": 25000,
+      "Recognition_Amount_FY24__c": 13600
     },
     {
-      "name": "Silvana Anna Christy",
-      "fy25Amount": 11036,
-      "fy26Amount": 12800
+      "attributes": {
+        "type": "Account",
+        "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkM89IAF"
+      },
+      "Name": "Barbara Sherman",
+      "Recognition_Amount_FY26__c": 15625,
+      "Recognition_Amount_FY24__c": 10000
     },
     {
-      "name": "Stacy Rosenberg",
-      "fy25Amount": 10189.15,
-      "fy26Amount": 10189.15
+      "attributes": {
+        "type": "Account",
+        "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkCwvIAF"
+      },
+      "Name": "Richard Bockoff",
+      "Recognition_Amount_FY26__c": 12000,
+      "Recognition_Amount_FY24__c": 15000
     },
     {
-      "name": "Howard A Katz",
-      "fy25Amount": 5000,
-      "fy26Amount": 10000
+      "attributes": {
+        "type": "Account",
+        "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkQ6qIAF"
+      },
+      "Name": "Marjorie Kalmanson",
+      "Recognition_Amount_FY26__c": 10000,
+      "Recognition_Amount_FY24__c": 55000
     },
     {
-      "name": "Marsha Berkson",
-      "fy25Amount": 10000,
-      "fy26Amount": 10000
+      "attributes": {
+        "type": "Account",
+        "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkR25IAF"
+      },
+      "Name": "Sharon Leib",
+      "Recognition_Amount_FY26__c": 9000,
+      "Recognition_Amount_FY24__c": 8000
     },
     {
-      "name": "Barbara Bry",
-      "fy25Amount": 10000,
-      "fy26Amount": 10000
+      "attributes": {
+        "type": "Account",
+        "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkNZlIAN"
+      },
+      "Name": "Judith Scheinberg",
+      "Recognition_Amount_FY26__c": 6000,
+      "Recognition_Amount_FY24__c": 3000
     },
     {
-      "name": "Kira Elizabeth Finkenberg",
-      "fy25Amount": 10400,
-      "fy26Amount": 10000
+      "attributes": {
+        "type": "Account",
+        "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkOvGIAV"
+      },
+      "Name": "Julie Datnow",
+      "Recognition_Amount_FY26__c": 5000,
+      "Recognition_Amount_FY24__c": 4680
     },
     {
-      "name": "Charlene Steinhauer",
-      "fy25Amount": 5000,
-      "fy26Amount": 6800
+      "attributes": {
+        "type": "Account",
+        "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkEHXIA3"
+      },
+      "Name": "Jeanne Z. Gold",
+      "Recognition_Amount_FY26__c": 5000,
+      "Recognition_Amount_FY24__c": 1800
     },
     {
-      "name": "Sylvia Geffen",
-      "fy25Amount": 5000,
-      "fy26Amount": 5500
+      "attributes": {
+        "type": "Account",
+        "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkMLpIAN"
+      },
+      "Name": "Seth Krosner",
+      "Recognition_Amount_FY26__c": 5000,
+      "Recognition_Amount_FY24__c": 11600
     },
     {
-      "name": "Nelly Dean",
-      "fy25Amount": 5000,
-      "fy26Amount": 5210.3
+      "attributes": {
+        "type": "Account",
+        "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkDDjIAN"
+      },
+      "Name": "Steven Brozinsky",
+      "Recognition_Amount_FY26__c": 4000,
+      "Recognition_Amount_FY24__c": 6800
     },
     {
-      "name": "Sharon R. Davidson",
-      "fy25Amount": 5000,
-      "fy26Amount": 5000
+      "attributes": {
+        "type": "Account",
+        "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkQSEIA3"
+      },
+      "Name": "Jeff Deverett",
+      "Recognition_Amount_FY26__c": 3600,
+      "Recognition_Amount_FY24__c": 1800
     },
     {
-      "name": "Lori Shearer",
-      "fy25Amount": 5072,
-      "fy26Amount": 5000
+      "attributes": {
+        "type": "Account",
+        "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkSgkIAF"
+      },
+      "Name": "Milton K. Erman",
+      "Recognition_Amount_FY26__c": 2500,
+      "Recognition_Amount_FY24__c": 1800
     },
     {
-      "name": "Leonid Zilberman",
-      "fy25Amount": 750,
-      "fy26Amount": 1800
+      "attributes": {
+        "type": "Account",
+        "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkJAlIAN"
+      },
+      "Name": "Jenny Meiselman",
+      "Recognition_Amount_FY26__c": 2500,
+      "Recognition_Amount_FY24__c": 1000
     },
     {
-      "name": "Nigel Goldenfeld",
-      "fy25Amount": 2400,
-      "fy26Amount": 900
+      "attributes": {
+        "type": "Account",
+        "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkOdPIAV"
+      },
+      "Name": "Bonnie Dumanis",
+      "Recognition_Amount_FY26__c": 2042.3,
+      "Recognition_Amount_FY24__c": 1000
     },
     {
-      "name": "Scott David Schindler",
-      "fy25Amount": 5000,
-      "fy26Amount": 208.7
+      "attributes": {
+        "type": "Account",
+        "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkN5mIAF"
+      },
+      "Name": "Marshall E Lewis",
+      "Recognition_Amount_FY26__c": 2000,
+      "Recognition_Amount_FY24__c": 1000
     },
     {
-      "name": "Julia Let",
-      "fy25Amount": 200,
-      "fy26Amount": 100
+      "attributes": {
+        "type": "Account",
+        "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkT1HIAV"
+      },
+      "Name": "BRIAN PETER FIRST",
+      "Recognition_Amount_FY26__c": 2000,
+      "Recognition_Amount_FY24__c": 2000
+    },
+    {
+      "attributes": {
+        "type": "Account",
+        "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkUEsIAN"
+      },
+      "Name": "Anne F. Simon",
+      "Recognition_Amount_FY26__c": 2000,
+      "Recognition_Amount_FY24__c": 500
+    },
+    {
+      "attributes": {
+        "type": "Account",
+        "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkQHLIA3"
+      },
+      "Name": "Richard D. Perlman",
+      "Recognition_Amount_FY26__c": 2000,
+      "Recognition_Amount_FY24__c": 2000
+    },
+    {
+      "attributes": {
+        "type": "Account",
+        "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkEDBIA3"
+      },
+      "Name": "Uri Feldman",
+      "Recognition_Amount_FY26__c": 1980,
+      "Recognition_Amount_FY24__c": 5800
+    },
+    {
+      "attributes": {
+        "type": "Account",
+        "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkM4mIAF"
+      },
+      "Name": "Fred Sheinbein",
+      "Recognition_Amount_FY26__c": 1800,
+      "Recognition_Amount_FY24__c": 1000
     }
   ],
   "milestoneApproaching": [
     {
-      "name": "Jason Levin",
-      "currentTotal": 999,
-      "nextMilestone": 1000,
-      "yearsConsecutive": 0
+      "attributes": {
+        "type": "Account",
+        "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkHtDIAV"
+      },
+      "Name": "Danielle Weizman",
+      "Recognition_Amount_FY26__c": 24504.6
     },
     {
-      "name": "Evelyn R. Engelberg",
-      "currentTotal": 998,
-      "nextMilestone": 1000,
-      "yearsConsecutive": 0
+      "attributes": {
+        "type": "Account",
+        "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkBZnIAN"
+      },
+      "Name": "Laura Williams",
+      "Recognition_Amount_FY26__c": 9750
     },
     {
-      "name": "Rolf Robins Z\"L",
-      "currentTotal": 998,
-      "nextMilestone": 1000,
-      "yearsConsecutive": 0
+      "attributes": {
+        "type": "Account",
+        "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkP72IAF"
+      },
+      "Name": "Amy Spielman",
+      "Recognition_Amount_FY26__c": 9750
     },
     {
-      "name": "Scott E. Miller",
-      "currentTotal": 997,
-      "nextMilestone": 1000,
-      "yearsConsecutive": 0
+      "attributes": {
+        "type": "Account",
+        "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkBpzIAF"
+      },
+      "Name": "Marni Lewis",
+      "Recognition_Amount_FY26__c": 9000
     },
     {
-      "name": "Elissa Shuchter",
-      "currentTotal": 997,
-      "nextMilestone": 1000,
-      "yearsConsecutive": 0
+      "attributes": {
+        "type": "Account",
+        "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkR25IAF"
+      },
+      "Name": "Sharon Leib",
+      "Recognition_Amount_FY26__c": 9000
     },
     {
-      "name": "David Amos",
-      "currentTotal": 4998,
-      "nextMilestone": 5000,
-      "yearsConsecutive": 0
+      "attributes": {
+        "type": "Account",
+        "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkF2aIAF"
+      },
+      "Name": "Robin Gayle Weiner",
+      "Recognition_Amount_FY26__c": 4500
     },
     {
-      "name": "Rose Rosenberg",
-      "currentTotal": 4990,
-      "nextMilestone": 5000,
-      "yearsConsecutive": 0
+      "attributes": {
+        "type": "Account",
+        "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkGZ5IAN"
+      },
+      "Name": "Heather Keith",
+      "Recognition_Amount_FY26__c": 4500
     },
     {
-      "name": "Larry M. Herring",
-      "currentTotal": 4983.38,
-      "nextMilestone": 5000,
-      "yearsConsecutive": 0
+      "attributes": {
+        "type": "Account",
+        "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkHbhIAF"
+      },
+      "Name": "Gillian Vapnek",
+      "Recognition_Amount_FY26__c": 4500
     },
     {
-      "name": "Scott H. Silverman",
-      "currentTotal": 4983,
-      "nextMilestone": 5000,
-      "yearsConsecutive": 0
+      "attributes": {
+        "type": "Account",
+        "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkNSbIAN"
+      },
+      "Name": "Martin M. Gilboa",
+      "Recognition_Amount_FY26__c": 999.99
     },
     {
-      "name": "Bernice Kleid",
-      "currentTotal": 4980,
-      "nextMilestone": 5000,
-      "yearsConsecutive": 0
+      "attributes": {
+        "type": "Account",
+        "url": "/services/data/v59.0/sobjects/Account/001Uf00000Wk1AKIAZ"
+      },
+      "Name": "Michael C Rossler",
+      "Recognition_Amount_FY26__c": 952
     },
     {
-      "name": "Perry Arenson",
-      "currentTotal": 9997.5,
-      "nextMilestone": 10000,
-      "yearsConsecutive": 0
+      "attributes": {
+        "type": "Account",
+        "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkRrzIAF"
+      },
+      "Name": "Margie Newman Tsay",
+      "Recognition_Amount_FY26__c": 907.86
     },
     {
-      "name": "Ruth S. Kwint",
-      "currentTotal": 9968,
-      "nextMilestone": 10000,
-      "yearsConsecutive": 0
+      "attributes": {
+        "type": "Account",
+        "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkJd6IAF"
+      },
+      "Name": "Evan Vapnek",
+      "Recognition_Amount_FY26__c": 900
     },
     {
-      "name": "Yosi Zagursky",
-      "currentTotal": 9958,
-      "nextMilestone": 10000,
-      "yearsConsecutive": 0
+      "attributes": {
+        "type": "Account",
+        "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkEclIAF"
+      },
+      "Name": "Leslie Mereminsky",
+      "Recognition_Amount_FY26__c": 900
     },
     {
-      "name": "Ralph L. Moller",
-      "currentTotal": 9950,
-      "nextMilestone": 10000,
-      "yearsConsecutive": 0
-    },
-    {
-      "name": "Joan Kramer Z\"L",
-      "currentTotal": 9941,
-      "nextMilestone": 10000,
-      "yearsConsecutive": 0
-    },
-    {
-      "name": "Rae Barnett Weiland",
-      "currentTotal": 24930,
-      "nextMilestone": 25000,
-      "yearsConsecutive": 0
-    },
-    {
-      "name": "Terry Cohler",
-      "currentTotal": 24896,
-      "nextMilestone": 25000,
-      "yearsConsecutive": 0
-    },
-    {
-      "name": "Harry Segel Z\"L",
-      "currentTotal": 24892,
-      "nextMilestone": 25000,
-      "yearsConsecutive": 0
-    },
-    {
-      "name": "Martin L. Charlat",
-      "currentTotal": 24869.05,
-      "nextMilestone": 25000,
-      "yearsConsecutive": 0
-    },
-    {
-      "name": "Dale Spector",
-      "currentTotal": 24862,
-      "nextMilestone": 25000,
-      "yearsConsecutive": 0
-    },
-    {
-      "name": "Andrea May Feinswog",
-      "currentTotal": 49978,
-      "nextMilestone": 50000,
-      "yearsConsecutive": 0
-    },
-    {
-      "name": "Jerome N. Eisman",
-      "currentTotal": 49876,
-      "nextMilestone": 50000,
-      "yearsConsecutive": 0
-    },
-    {
-      "name": "Jerry J. Gumpel",
-      "currentTotal": 49860,
-      "nextMilestone": 50000,
-      "yearsConsecutive": 0
-    },
-    {
-      "name": "Barry S. Kassar Z\"L",
-      "currentTotal": 49830,
-      "nextMilestone": 50000,
-      "yearsConsecutive": 0
-    },
-    {
-      "name": "Henry William Haimsohn",
-      "currentTotal": 49700,
-      "nextMilestone": 50000,
-      "yearsConsecutive": 0
-    },
-    {
-      "name": "Brian T. Seltzer",
-      "currentTotal": 99800,
-      "nextMilestone": 100000,
-      "yearsConsecutive": 0
-    },
-    {
-      "name": "Aubrey Stone Z\"L",
-      "currentTotal": 99317.29,
-      "nextMilestone": 100000,
-      "yearsConsecutive": 0
-    },
-    {
-      "name": "Charles Sandy Roseman",
-      "currentTotal": 98580,
-      "nextMilestone": 100000,
-      "yearsConsecutive": 0
-    },
-    {
-      "name": "Gary Reif Z\"L",
-      "currentTotal": 98550,
-      "nextMilestone": 100000,
-      "yearsConsecutive": 0
-    },
-    {
-      "name": "Helene Ziman",
-      "currentTotal": 98426,
-      "nextMilestone": 100000,
-      "yearsConsecutive": 0
+      "attributes": {
+        "type": "Account",
+        "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkTlvIAF"
+      },
+      "Name": "Nigel Goldenfeld",
+      "Recognition_Amount_FY26__c": 900
     }
   ],
-  "dataQuality": {
-    "missingCampaign": 27,
-    "missingAmountOpps": 43,
-    "overdueOpps": 619,
-    "largGiftsNoCampaign": 42,
-    "duplicateRecords": 200,
-    "majorDonorsMissingInfo": 21,
-    "zeroRecognitionWithGifts": 450
-  },
+  "dataQuality": {},
   "kpis": {
-    "totalDonorsThisWeek": 134,
-    "recurringRevenue": 2641.16,
-    "failedChargesCount": 7,
-    "failedChargesAmount": 5881.91,
-    "dataQualityScore": 37.3,
-    "retentionRate": 31.1
-  }
+    "newDonorsThisWeek": 20,
+    "failedRecurring": 0,
+    "cancelledRecurring": 0,
+    "newRecurring": 50,
+    "reactivated": 20
+  },
+  "asOfDate": "2026-03-06T10:20:00"
 }

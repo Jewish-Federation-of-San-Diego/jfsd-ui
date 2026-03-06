@@ -1,32 +1,11 @@
 {
-  "asOfDate": "2026-03-02 10:50",
   "summary": {
-    "totalCohorts": 10,
-    "avgFirstYearRetention": 0.68,
-    "avgFiveYearRetention": 0.32,
-    "bestCohort": "FY22",
-    "worstCohort": "FY20"
+    "note": "Cohort analysis requires historical transaction data processing"
   },
   "cohortSurvivalCurves": [],
   "retentionByYear": [],
   "cohortComparison": [],
-  "heatmapData": {
-    "cohorts": [],
-    "years": [],
-    "retentionMatrix": []
-  },
-  "scenarioModeling": {
-    "baseline": {
-      "revenue": 6500000,
-      "donors": 8500
-    },
-    "optimistic": {
-      "revenue": 7800000,
-      "donors": 9200
-    },
-    "pessimistic": {
-      "revenue": 5200000,
-      "donors": 7100
-    }
-  }
+  "heatmapData": {},
+  "scenarioModeling": {},
+  "asOfDate": "2026-03-06T10:20:00"
 }
