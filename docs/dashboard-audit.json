@@ -1,0 +1,369 @@
+{
+  "summary": {
+    "total": 34,
+    "strong": 3,
+    "good": 10,
+    "needsWork": 20,
+    "critical": 1,
+    "topIssues": [
+      "Generic titles (32/34 dashboards)",
+      "Missing annotations (30/34 dashboards)", 
+      "Chart crimes (8 dashboards)",
+      "Color inconsistency (15 dashboards)"
+    ],
+    "chartCrimes": 8,
+    "totalIssues": 127,
+    "previouslyFixed": 10
+  },
+  "dashboards": [
+    {
+      "name": "Share of Wallet",
+      "file": "ShareOfWalletDashboard.tsx",
+      "score": "Strong",
+      "issues": [
+        {"type": "IMPROVE", "severity": "medium", "description": "Generic titles - needs insight headlines"},
+        {"type": "IMPROVE", "severity": "medium", "description": "Uses decorative PLOTLY_COLORS instead of semantic colors"},
+        {"type": "OK", "severity": "none", "description": "Has proper quadrant annotations - follows decision matrix"},
+        {"type": "OK", "severity": "none", "description": "Scatter plot appropriate for correlation analysis"}
+      ]
+    },
+    {
+      "name": "Campaign Tracker", 
+      "file": "CampaignTrackerDashboard.tsx",
+      "score": "Strong",
+      "issues": [
+        {"type": "IMPROVE", "severity": "medium", "description": "Generic titles throughout"},
+        {"type": "ADD", "severity": "low", "description": "Missing annotations on momentum chart"},
+        {"type": "OK", "severity": "none", "description": "Gold standard architecture and KPI-first layout"},
+        {"type": "OK", "severity": "none", "description": "Good semantic color usage and progress visualization"}
+      ]
+    },
+    {
+      "name": "Retention Flow",
+      "file": "RetentionFlowDashboard.tsx", 
+      "score": "Strong",
+      "issues": [
+        {"type": "IMPROVE", "severity": "medium", "description": "Generic titles"},
+        {"type": "ADD", "severity": "medium", "description": "Missing AFP benchmark reference line (45% retention)"},
+        {"type": "OK", "severity": "none", "description": "Perfect Sankey implementation for flow visualization"},
+        {"type": "OK", "severity": "none", "description": "Good KPI hierarchy"}
+      ]
+    },
+    {
+      "name": "AP Expense",
+      "file": "APExpenseDashboard.tsx",
+      "score": "Mostly Good", 
+      "issues": [
+        {"type": "IMPROVE", "severity": "medium", "description": "All chart titles are generic labels"},
+        {"type": "ADD", "severity": "medium", "description": "No annotations on department spending or budget pace charts"},
+        {"type": "OK", "severity": "none", "description": "Excellent semantic color usage - SUCCESS/WARNING/ERROR"},
+        {"type": "OK", "severity": "none", "description": "Horizontal bar chart appropriate for magnitude comparison"}
+      ]
+    },
+    {
+      "name": "Major Gifts Pipeline",
+      "file": "MajorGiftsDashboard.tsx",
+      "score": "Mostly Good",
+      "issues": [
+        {"type": "IMPROVE", "severity": "medium", "description": "Generic chart titles"},
+        {"type": "ADD", "severity": "medium", "description": "No annotations or reference lines"},
+        {"type": "OK", "severity": "none", "description": "Funnel chart appropriate for pipeline stages"},
+        {"type": "OK", "severity": "none", "description": "Good semantic colors and KPI structure"}
+      ]
+    },
+    {
+      "name": "Voice Agent",
+      "file": "VoiceAgentDashboard.tsx",
+      "score": "Mostly Good",
+      "issues": [
+        {"type": "IMPROVE", "severity": "medium", "description": "Generic titles"},
+        {"type": "IMPROVE", "severity": "medium", "description": "Uses decorative PLOTLY_COLORS"},
+        {"type": "ADD", "severity": "medium", "description": "No annotations on time series"},
+        {"type": "IMPROVE", "severity": "low", "description": "Placeholder data for agents"}
+      ]
+    },
+    {
+      "name": "Ramp Analytics",
+      "file": "RampAnalyticsDashboard.tsx", 
+      "score": "Mostly Good",
+      "issues": [
+        {"type": "IMPROVE", "severity": "medium", "description": "Generic titles"},
+        {"type": "ADD", "severity": "medium", "description": "Missing annotations on spending anomalies"},
+        {"type": "OK", "severity": "none", "description": "Good treemap usage for hierarchical spending data"},
+        {"type": "OK", "severity": "none", "description": "Appropriate time series charts"}
+      ]
+    },
+    {
+      "name": "Financial Statements",
+      "file": "FinancialStatementsDashboard.tsx",
+      "score": "Mostly Good", 
+      "issues": [
+        {"type": "IMPROVE", "severity": "low", "description": "Table-heavy approach, minimal visualization"},
+        {"type": "OK", "severity": "none", "description": "Appropriate for financial statement presentation"},
+        {"type": "OK", "severity": "none", "description": "Good number formatting and structure"}
+      ]
+    },
+    {
+      "name": "Board Reporting",
+      "file": "BoardReportingDashboard.tsx",
+      "score": "Mostly Good",
+      "issues": [
+        {"type": "IMPROVE", "severity": "medium", "description": "Generic titles, missing board-specific insights"},
+        {"type": "ADD", "severity": "medium", "description": "Could benefit from participation trend visualization"},
+        {"type": "OK", "severity": "none", "description": "Clean executive layout appropriate for board audience"}
+      ]
+    },
+    {
+      "name": "DRM Portfolio", 
+      "file": "DRMPortfolioDashboard.tsx",
+      "score": "Mostly Good",
+      "issues": [
+        {"type": "IMPROVE", "severity": "medium", "description": "Dense multi-metric display could be restructured"},
+        {"type": "ADD", "severity": "medium", "description": "Missing portfolio performance visualization"},
+        {"type": "OK", "severity": "none", "description": "Good data organization"}
+      ]
+    },
+    {
+      "name": "Facilities Dashboard",
+      "file": "FacilitiesDashboard.tsx",
+      "score": "Mostly Good", 
+      "issues": [
+        {"type": "IMPROVE", "severity": "medium", "description": "Sparklines too small, hard to read patterns"},
+        {"type": "ADD", "severity": "medium", "description": "Missing alert threshold reference lines"},
+        {"type": "OK", "severity": "none", "description": "Good monitoring pattern with status overview"}
+      ]
+    },
+    {
+      "name": "GiveCloud",
+      "file": "GiveCloudDashboard.tsx",
+      "score": "Mostly Good",
+      "issues": [
+        {"type": "IMPROVE", "severity": "medium", "description": "Generic titles"},
+        {"type": "ADD", "severity": "medium", "description": "Missing trend analysis visualization"},
+        {"type": "OK", "severity": "none", "description": "Good KPI structure for online giving"}
+      ]
+    },
+    {
+      "name": "Stripe",
+      "file": "StripeDashboard.tsx", 
+      "score": "Mostly Good",
+      "issues": [
+        {"type": "IMPROVE", "severity": "medium", "description": "Generic titles, missing variance context"},
+        {"type": "ADD", "severity": "medium", "description": "Could use reference lines for normal ranges"},
+        {"type": "OK", "severity": "none", "description": "Clean payment analytics structure"}
+      ]
+    },
+    {
+      "name": "HubSpot",
+      "file": "HubSpotDashboard.tsx",
+      "score": "Needs Work",
+      "issues": [
+        {"type": "FIX", "severity": "medium", "description": "Funnel area chart could be misleading - use standard funnel or bars"},
+        {"type": "IMPROVE", "severity": "medium", "description": "Generic titles"},
+        {"type": "ADD", "severity": "medium", "description": "Missing engagement benchmarks"}
+      ]
+    },
+    {
+      "name": "Cohort Survival",
+      "file": "CohortSurvivalDashboard.tsx",
+      "score": "Needs Work",
+      "issues": [
+        {"type": "FIX", "severity": "medium", "description": "All survival lines same color - indistinguishable"},
+        {"type": "IMPROVE", "severity": "medium", "description": "Confusing tabs (Native Plotly vs embedded)"},
+        {"type": "ADD", "severity": "medium", "description": "Missing annotation on best/worst performing cohort"}
+      ]
+    },
+    {
+      "name": "Donor Lifecycle",
+      "file": "DonorLifecycleDashboard.tsx", 
+      "score": "Needs Work",
+      "issues": [
+        {"type": "IMPROVE", "severity": "medium", "description": "YoY bars use different colors for same data relationship"},
+        {"type": "FIX", "severity": "medium", "description": "Migration heatmap should use diverging colors (teal=growth, orange=loss)"},
+        {"type": "ADD", "severity": "medium", "description": "Semantic colors on segment bars (New=teal, Lapsed=orange)"}
+      ]
+    },
+    {
+      "name": "The Unasked",
+      "file": "TheUnaskedDashboard.tsx",
+      "score": "Needs Work", 
+      "issues": [
+        {"type": "IMPROVE", "severity": "medium", "description": "Table-heavy - needs magnitude chart by tier"},
+        {"type": "ADD", "severity": "medium", "description": "Missing urgency indicator for 3+ years unasked"},
+        {"type": "ADD", "severity": "medium", "description": "Should add horizontal bar showing total potential by tier"}
+      ]
+    },
+    {
+      "name": "Immersive Travel",
+      "file": "ImmersiveTravelDashboard.tsx",
+      "score": "Needs Work",
+      "issues": [
+        {"type": "FIX", "severity": "medium", "description": "Scatter should be line chart for registration timeline"},
+        {"type": "IMPROVE", "severity": "medium", "description": "Should show bullet charts for fill rate per trip"},
+        {"type": "ADD", "severity": "low", "description": "Revenue per seat KPI card"}
+      ]
+    },
+    {
+      "name": "Community Network",
+      "file": "CommunityNetworkDashboard.tsx", 
+      "score": "Needs Work", 
+      "issues": [
+        {"type": "FIX", "severity": "high", "description": "Needs performance guardrails for large networks (500+ nodes)"},
+        {"type": "ADD", "severity": "medium", "description": "Top 3 connector KPI cards"},
+        {"type": "IMPROVE", "severity": "low", "description": "Legend should be inline color legend vs table"}
+      ]
+    },
+    {
+      "name": "Data Quality",
+      "file": "DataQualityDashboard.tsx",
+      "score": "Needs Work",
+      "issues": [
+        {"type": "FIX", "severity": "high", "description": "Progress type='dashboard' is a gauge - chart crime"},
+        {"type": "IMPROVE", "severity": "medium", "description": "Should use big number + progress bar instead"},
+        {"type": "OK", "severity": "none", "description": "Good semantic color usage and monitoring pattern"}
+      ]
+    },
+    {
+      "name": "Overview Dashboard", 
+      "file": "OverviewDashboard.tsx",
+      "score": "Needs Work",
+      "issues": [
+        {"type": "FIX", "severity": "high", "description": "Circular progress widgets are gauge equivalents - chart crime"},
+        {"type": "IMPROVE", "severity": "medium", "description": "Should use big numbers instead of circular progress"},
+        {"type": "OK", "severity": "none", "description": "Good executive summary structure otherwise"}
+      ]
+    },
+    {
+      "name": "Holdings",
+      "file": "HoldingsDashboard.tsx", 
+      "score": "Needs Work",
+      "issues": [
+        {"type": "ADD", "severity": "high", "description": "No charts at all - needs waterfall or composition chart"},
+        {"type": "IMPROVE", "severity": "medium", "description": "Consider merging into Financial Statements dashboard"},
+        {"type": "ADD", "severity": "low", "description": "Leverage ratio bullet chart against threshold"}
+      ]
+    },
+    {
+      "name": "Ecobee Trends",
+      "file": "EcobeeTrendsDashboard.tsx",
+      "score": "Needs Work",
+      "issues": [
+        {"type": "IMPROVE", "severity": "medium", "description": "Generic titles"},
+        {"type": "ADD", "severity": "medium", "description": "Missing temperature reference bands"},
+        {"type": "OK", "severity": "none", "description": "Time series charts appropriate"}
+      ]
+    },
+    {
+      "name": "Silence Alerts",
+      "file": "SilenceAlertsDashboard.tsx", 
+      "score": "Needs Work",
+      "issues": [
+        {"type": "IMPROVE", "severity": "medium", "description": "Table-heavy, missing risk visualization"},
+        {"type": "ADD", "severity": "medium", "description": "Should add giving timeline or risk scoring chart"},
+        {"type": "ADD", "severity": "low", "description": "Highlight top-value lapsed donors"}
+      ]
+    },
+    {
+      "name": "Pledge Management",
+      "file": "PledgeManagementDashboard.tsx",
+      "score": "Needs Work", 
+      "issues": [
+        {"type": "IMPROVE", "severity": "medium", "description": "Generic structure, needs aging visualization"},
+        {"type": "ADD", "severity": "medium", "description": "Payment trend analysis"},
+        {"type": "ADD", "severity": "low", "description": "Write-off risk flags for 120+ days"}
+      ]
+    },
+    {
+      "name": "Weekly Ask List",
+      "file": "WeeklyAskListDashboard.tsx",
+      "score": "Needs Work",
+      "issues": [
+        {"type": "IMPROVE", "severity": "medium", "description": "Table-only, no prioritization visualization"},
+        {"type": "ADD", "severity": "medium", "description": "Needs impact bars for suggested ask amounts"},
+        {"type": "ADD", "severity": "low", "description": "Top 3 highest-impact asks highlighting"}
+      ]
+    },
+    {
+      "name": "Prospect Research",
+      "file": "ProspectResearchDashboard.tsx", 
+      "score": "Needs Work", 
+      "issues": [
+        {"type": "IMPROVE", "severity": "medium", "description": "Generic titles, missing capacity visualization"},
+        {"type": "ADD", "severity": "medium", "description": "Research workflow status visualization"},
+        {"type": "ADD", "severity": "low", "description": "Prospect scoring distribution chart"}
+      ]
+    },
+    {
+      "name": "Nonprofit Boards", 
+      "file": "NonprofitBoardsDashboard.tsx",
+      "score": "Needs Work",
+      "issues": [
+        {"type": "IMPROVE", "severity": "medium", "description": "Multi-org complexity needs org-specific insights"},
+        {"type": "ADD", "severity": "medium", "description": "Participation comparison across organizations"},
+        {"type": "IMPROVE", "severity": "low", "description": "Generic visualization approach"}
+      ]
+    },
+    {
+      "name": "Donor Health",
+      "file": "DonorHealthDashboard.tsx",
+      "score": "Needs Work", 
+      "issues": [
+        {"type": "IMPROVE", "severity": "medium", "description": "Health score methodology unclear"},
+        {"type": "ADD", "severity": "medium", "description": "Health trend visualization over time"},
+        {"type": "ADD", "severity": "low", "description": "Definition tooltips for health components"}
+      ]
+    },
+    {
+      "name": "WealthEngine",
+      "file": "WealthEngineDashboard.tsx",
+      "score": "Needs Work",
+      "issues": [
+        {"type": "IMPROVE", "severity": "medium", "description": "Scatter plot needs quadrants like Share of Wallet"},
+        {"type": "ADD", "severity": "medium", "description": "Wealth screening visualization missing"},
+        {"type": "ADD", "severity": "low", "description": "Capacity distribution analysis"}
+      ]
+    },
+    {
+      "name": "Project Tracker", 
+      "file": "ProjectTrackerDashboard.tsx",
+      "score": "Needs Work",
+      "issues": [
+        {"type": "IMPROVE", "severity": "medium", "description": "Generic project visualization"},
+        {"type": "ADD", "severity": "medium", "description": "Timeline or Gantt chart needed"},
+        {"type": "ADD", "severity": "low", "description": "Project status distribution"}
+      ]
+    },
+    {
+      "name": "Monday Dashboard",
+      "file": "MondayDashboard.tsx", 
+      "score": "Needs Work",
+      "issues": [
+        {"type": "IMPROVE", "severity": "medium", "description": "Board status visualization gaps"},
+        {"type": "ADD", "severity": "medium", "description": "Board-specific insights missing"},
+        {"type": "ADD", "severity": "low", "description": "Task completion trend analysis"}
+      ]
+    },
+    {
+      "name": "Data Duel",
+      "file": "DataDuelDashboard.tsx", 
+      "score": "Needs Work", 
+      "issues": [
+        {"type": "IMPROVE", "severity": "medium", "description": "Comparison visualization unclear"},
+        {"type": "ADD", "severity": "medium", "description": "A/B test pattern implementation missing"},
+        {"type": "ADD", "severity": "low", "description": "Statistical significance visualization"}
+      ]
+    },
+    {
+      "name": "Chart Gallery",
+      "file": "ChartGalleryDashboard.tsx",
+      "score": "Critical", 
+      "issues": [
+        {"type": "FIX", "severity": "critical", "description": "Contains pie chart examples (05-pie-spend-breakdown.html)"},
+        {"type": "FIX", "severity": "critical", "description": "Contains 3D chart examples (20-scatter3d-rfm.html, 21-line3d-trends.html)"},
+        {"type": "FIX", "severity": "critical", "description": "Contains gauge chart example (33-gauge-campaign.html)"},
+        {"type": "FIX", "severity": "high", "description": "Contains polar chart examples (29-scatter-polar.html, 30-bar-polar-seasonal.html)"},
+        {"type": "IMPROVE", "severity": "medium", "description": "Template gallery teaching chart crimes to other developers"}
+      ]
+    }
+  ]
+}

@@ -99,25 +99,25 @@ const categoryIcons: Record<string, React.ReactNode> = {
   'Recognition Integrity': <SafetyCertificateOutlined />,
 };
 
-// ── Score Gauge ─────────────────────────────────────────────────────────
-function ScoreGauge({ score, size = 160 }: { score: number; size?: number }) {
+// ── Score Display ───────────────────────────────────────────────────────
+function ScoreDisplay({ score }: { score: number }) {
   const color = scoreColor(score);
   const label = score >= 70 ? 'Good' : score >= 40 ? 'Needs Work' : 'Critical';
   return (
     <div style={{ textAlign: 'center' }}>
-      <Progress
-        type="dashboard"
-        percent={score}
-        strokeColor={color}
-        trailColor="#f0f0f0"
-        width={size}
-        format={(pct) => (
-          <div>
-            <div style={{ fontSize: size * 0.25, fontWeight: 700, color }}>{pct}</div>
-            <div style={{ fontSize: size * 0.1, color: MUTED }}>{label}</div>
-          </div>
-        )}
+      <Statistic
+        title="Overall Data Quality Score"
+        value={score}
+        suffix="/100"
+        valueStyle={{
+          fontSize: 48,
+          fontWeight: 700,
+          color: color
+        }}
       />
+      <div style={{ marginTop: 8 }}>
+        <Text style={{ fontSize: 16, color: color, fontWeight: 600 }}>{label}</Text>
+      </div>
     </div>
   );
 }
@@ -347,10 +347,8 @@ export function DataQualityDashboard() {
       {/* Header */}
       <Row gutter={[16, 16]} align="middle" style={{ marginBottom: 16 }}>
         <Col xs={24} md={8}>
-          <ScoreGauge score={data.overallScore ?? 0} size={180} />
-          <div style={{ textAlign: 'center', marginTop: 4 }}>
-            <Text type="secondary" style={{ fontSize: 12 }}>Overall Data Quality Score</Text>
-            <br />
+          <ScoreDisplay score={data.overallScore ?? 0} />
+          <div style={{ textAlign: 'center', marginTop: 16 }}>
             <DataFreshness asOfDate={data.asOfDate ?? ''} onRefresh={refresh} refreshing={refreshing} />
           </div>
         </Col>

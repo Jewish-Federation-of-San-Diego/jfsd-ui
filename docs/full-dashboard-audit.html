@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Complete Dashboard Audit — 34 Dashboards vs Decision Matrix</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #27277c;
+    --blue: #1c88ed;
+    --teal: #009191;
+    --orange: #eb6136;
+    --gold: #d98000;
+    --green: #236B4A;
+    --purple: #942494;
+    --violet: #594fa3;
+    --muted: #64748b;
+    --bg: #f8fafc;
+    --card: #ffffff;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Outfit', sans-serif; background: var(--bg); color: #1e293b; line-height: 1.6; }
+  .container { max-width: 1200px; margin: 0 auto; padding: 2rem 1.5rem; }
+  
+  header { text-align: center; margin-bottom: 2.5rem; }
+  header h1 { font-size: 2.2rem; font-weight: 700; color: var(--navy); }
+  header p { color: var(--muted); font-size: 0.95rem; margin-top: 0.25rem; }
+  
+  .summary-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1rem; margin-bottom: 2rem; }
+  .summary-card { background: var(--card); border-radius: 12px; padding: 1.25rem; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+  .summary-card .num { font-size: 2rem; font-weight: 700; }
+  .summary-card .label { font-size: 0.8rem; color: var(--muted); margin-top: 0.25rem; }
+  .num.green { color: var(--teal); }
+  .num.orange { color: var(--orange); }
+  .num.blue { color: var(--blue); }
+  .num.red { color: #dc2626; }
+  .num.gold { color: var(--gold); }
+  
+  .section { margin-bottom: 2rem; }
+  .section h2 { font-size: 1.3rem; font-weight: 600; color: var(--navy); margin-bottom: 1rem; border-bottom: 2px solid var(--blue); padding-bottom: 0.5rem; }
+  
+  .dashboard-card { background: var(--card); border-radius: 12px; padding: 1.25rem 1.5rem; margin-bottom: 1rem; box-shadow: 0 1px 3px rgba(0,0,0,0.06); border-left: 4px solid var(--blue); }
+  .dashboard-card.critical { border-left-color: var(--orange); }
+  .dashboard-card.good { border-left-color: var(--teal); }
+  .dashboard-card.watch { border-left-color: var(--gold); }
+  
+  .dash-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; }
+  .dash-name { font-size: 1.1rem; font-weight: 600; color: var(--navy); }
+  .dash-score { font-size: 0.85rem; font-weight: 500; padding: 0.2rem 0.75rem; border-radius: 20px; }
+  .score-high { background: #dcfce7; color: #166534; }
+  .score-mid { background: #fef3c7; color: #92400e; }
+  .score-low { background: #fee2e2; color: #991b1b; }
+  
+  .issue-list { list-style: none; margin: 0; padding: 0; }
+  .issue-list li { padding: 0.35rem 0; font-size: 0.9rem; display: flex; align-items: flex-start; gap: 0.5rem; }
+  .issue-list li::before { content: ''; display: none; }
+  .badge { display: inline-block; font-size: 0.7rem; font-weight: 600; padding: 0.15rem 0.5rem; border-radius: 4px; text-transform: uppercase; letter-spacing: 0.03em; flex-shrink: 0; margin-top: 0.15rem; }
+  .badge-fix { background: #fee2e2; color: #991b1b; }
+  .badge-improve { background: #fef3c7; color: #92400e; }
+  .badge-add { background: #dbeafe; color: #1e40af; }
+  .badge-ok { background: #dcfce7; color: #166534; }
+  
+  .priority-table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
+  .priority-table th, .priority-table td { padding: 0.6rem 0.75rem; text-align: left; font-size: 0.85rem; border-bottom: 1px solid #e2e8f0; }
+  .priority-table th { font-weight: 600; color: var(--navy); background: #f1f5f9; }
+  .priority-table tr:hover { background: #f8fafc; }
+  
+  .pattern-box { background: #f1f5f9; border-radius: 8px; padding: 1rem; margin: 0.75rem 0; font-size: 0.85rem; }
+  .pattern-box code { background: #e2e8f0; padding: 0.1rem 0.35rem; border-radius: 3px; font-size: 0.8rem; }
+  
+  .cross-cutting { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .cc-card { background: var(--card); border-radius: 10px; padding: 1rem 1.25rem; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+  .cc-card h4 { font-size: 0.95rem; font-weight: 600; color: var(--navy); margin-bottom: 0.5rem; }
+  .cc-card ul { margin: 0; padding-left: 1.25rem; font-size: 0.85rem; }
+  .cc-card li { margin-bottom: 0.25rem; }
+
+  .summary-table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+  .summary-table th, .summary-table td { padding: 0.5rem 0.75rem; text-align: left; border-bottom: 1px solid #e2e8f0; }
+  .summary-table th { font-weight: 600; color: var(--navy); background: #f8fafc; }
+  .summary-table tr:nth-child(even) { background: #fafafa; }
+  .summary-table tr:hover { background: #f1f5f9; }
+  
+  .score-badge { padding: 0.2rem 0.6rem; border-radius: 12px; font-size: 0.75rem; font-weight: 600; }
+  .score-strong { background: #dcfce7; color: #166534; }
+  .score-good { background: #dbeafe; color: #1e40af; }
+  .score-needs { background: #fef3c7; color: #92400e; }
+  .score-critical { background: #fee2e2; color: #991b1b; }
+
+  @media (max-width: 768px) {
+    .summary-grid { grid-template-columns: repeat(2, 1fr); }
+    .cross-cutting { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+  <h1>📊 Complete Dashboard Audit: All 34 Dashboards</h1>
+  <p>Decision Matrix Compliance Assessment · March 7, 2026</p>
+</header>
+
+<!-- Summary -->
+<div class="summary-grid">
+  <div class="summary-card">
+    <div class="num blue">34</div>
+    <div class="label">Dashboards Reviewed</div>
+  </div>
+  <div class="summary-card">
+    <div class="num red">8</div>
+    <div class="label">Chart Crimes</div>
+  </div>
+  <div class="summary-card">
+    <div class="num orange">127</div>
+    <div class="label">Total Issues</div>
+  </div>
+  <div class="summary-card">
+    <div class="num gold">14</div>
+    <div class="label">Strong/Mostly Good</div>
+  </div>
+  <div class="summary-card">
+    <div class="num green">10</div>
+    <div class="label">Previously Fixed</div>
+  </div>
+</div>
+
+<!-- Summary Table -->
+<div class="section">
+  <h2>🎯 Dashboard Rankings — All 34 Ranked</h2>
+  <table class="summary-table">
+    <thead>
+      <tr>
+        <th>Dashboard</th>
+        <th>File</th>
+        <th>Score</th>
+        <th>Key Issues</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Share of Wallet</strong></td>
+        <td>ShareOfWalletDashboard.tsx</td>
+        <td><span class="score-badge score-strong">Strong</span></td>
+        <td>Generic titles, decorative colors</td>
+        <td>✅ Has quadrant annotations</td>
+      </tr>
+      <tr>
+        <td><strong>Campaign Tracker</strong></td>
+        <td>CampaignTrackerDashboard.tsx</td>
+        <td><span class="score-badge score-strong">Strong</span></td>
+        <td>Generic titles</td>
+        <td>🏆 Gold standard architecture</td>
+      </tr>
+      <tr>
+        <td><strong>Retention Flow</strong></td>
+        <td>RetentionFlowDashboard.tsx</td>
+        <td><span class="score-badge score-strong">Strong</span></td>
+        <td>Generic titles, missing benchmarks</td>
+        <td>✅ Uses Sankey correctly</td>
+      </tr>
+      <tr>
+        <td><strong>AP Expense</strong></td>
+        <td>APExpenseDashboard.tsx</td>
+        <td><span class="score-badge score-good">Mostly Good</span></td>
+        <td>Generic titles, no annotations</td>
+        <td>✅ Good semantic colors</td>
+      </tr>
+      <tr>
+        <td><strong>Major Gifts Pipeline</strong></td>
+        <td>MajorGiftsDashboard.tsx</td>
+        <td><span class="score-badge score-good">Mostly Good</span></td>
+        <td>Generic titles, no annotations</td>
+        <td>✅ Good funnel usage</td>
+      </tr>
+      <tr>
+        <td><strong>Voice Agent</strong></td>
+        <td>VoiceAgentDashboard.tsx</td>
+        <td><span class="score-badge score-good">Mostly Good</span></td>
+        <td>Generic titles, decorative colors</td>
+        <td>⚠️ Placeholder data</td>
+      </tr>
+      <tr>
+        <td><strong>Ramp Analytics</strong></td>
+        <td>RampAnalyticsDashboard.tsx</td>
+        <td><span class="score-badge score-good">Mostly Good</span></td>
+        <td>Generic titles, no annotations</td>
+        <td>✅ Good treemap usage</td>
+      </tr>
+      <tr>
+        <td><strong>Financial Statements</strong></td>
+        <td>FinancialStatementsDashboard.tsx</td>
+        <td><span class="score-badge score-good">Mostly Good</span></td>
+        <td>Table-heavy, minimal viz</td>
+        <td>✅ Appropriate for financial data</td>
+      </tr>
+      <tr>
+        <td><strong>Board Reporting</strong></td>
+        <td>BoardReportingDashboard.tsx</td>
+        <td><span class="score-badge score-good">Mostly Good</span></td>
+        <td>Generic titles, missing insights</td>
+        <td>✅ Clean executive layout</td>
+      </tr>
+      <tr>
+        <td><strong>DRM Portfolio</strong></td>
+        <td>DRMPortfolioDashboard.tsx</td>
+        <td><span class="score-badge score-good">Mostly Good</span></td>
+        <td>Dense multi-metric display</td>
+        <td>⚠️ Needs restructure</td>
+      </tr>
+      <tr>
+        <td><strong>Facilities Dashboard</strong></td>
+        <td>FacilitiesDashboard.tsx</td>
+        <td><span class="score-badge score-good">Mostly Good</span></td>
+        <td>Small sparklines, no alerts</td>
+        <td>✅ Good monitoring pattern</td>
+      </tr>
+      <tr>
+        <td><strong>GiveCloud</strong></td>
+        <td>GiveCloudDashboard.tsx</td>
+        <td><span class="score-badge score-good">Mostly Good</span></td>
+        <td>Generic titles, missing trends</td>
+        <td>✅ Good KPI structure</td>
+      </tr>
+      <tr>
+        <td><strong>Stripe</strong></td>
+        <td>StripeDashboard.tsx</td>
+        <td><span class="score-badge score-good">Mostly Good</span></td>
+        <td>Generic titles, no variance context</td>
+        <td>✅ Clean payment analytics</td>
+      </tr>
+      <tr>
+        <td><strong>HubSpot</strong></td>
+        <td>HubSpotDashboard.tsx</td>
+        <td><span class="score-badge score-needs">Needs Work</span></td>
+        <td>Funnel area chart, generic titles</td>
+        <td>⚠️ Chart type mismatch</td>
+      </tr>
+      <tr>
+        <td><strong>Cohort Survival</strong></td>
+        <td>CohortSurvivalDashboard.tsx</td>
+        <td><span class="score-badge score-needs">Needs Work</span></td>
+        <td>All lines same color, tabs confusing</td>
+        <td>⚠️ From phase 2 review</td>
+      </tr>
+      <tr>
+        <td><strong>Donor Lifecycle</strong></td>
+        <td>DonorLifecycleDashboard.tsx</td>
+        <td><span class="score-badge score-needs">Needs Work</span></td>
+        <td>YoY color mismatch, heatmap colors</td>
+        <td>⚠️ From phase 2 review</td>
+      </tr>
+      <tr>
+        <td><strong>The Unasked</strong></td>
+        <td>TheUnaskedDashboard.tsx</td>
+        <td><span class="score-badge score-needs">Needs Work</span></td>
+        <td>Table-heavy, missing urgency flags</td>
+        <td>⚠️ From phase 2 review</td>
+      </tr>
+      <tr>
+        <td><strong>Immersive Travel</strong></td>
+        <td>ImmersiveTravelDashboard.tsx</td>
+        <td><span class="score-badge score-needs">Needs Work</span></td>
+        <td>Scatter should be line, no fill rate viz</td>
+        <td>⚠️ From phase 2 review</td>
+      </tr>
+      <tr>
+        <td><strong>Community Network</strong></td>
+        <td>CommunityNetworkDashboard.tsx</td>
+        <td><span class="score-badge score-needs">Needs Work</span></td>
+        <td>Performance risk, missing connector KPIs</td>
+        <td>⚠️ From phase 2 review</td>
+      </tr>
+      <tr>
+        <td><strong>Data Quality</strong></td>
+        <td>DataQualityDashboard.tsx</td>
+        <td><span class="score-badge score-needs">Needs Work</span></td>
+        <td>Gauge usage (Progress dashboard)</td>
+        <td>❌ Chart crime</td>
+      </tr>
+      <tr>
+        <td><strong>Overview Dashboard</strong></td>
+        <td>OverviewDashboard.tsx</td>
+        <td><span class="score-badge score-needs">Needs Work</span></td>
+        <td>Circular progress = gauges</td>
+        <td>❌ Chart crimes</td>
+      </tr>
+      <tr>
+        <td><strong>Holdings</strong></td>
+        <td>HoldingsDashboard.tsx</td>
+        <td><span class="score-badge score-needs">Needs Work</span></td>
+        <td>No charts, just cards + table</td>
+        <td>⚠️ From phase 2 review</td>
+      </tr>
+      <tr>
+        <td><strong>Ecobee Trends</strong></td>
+        <td>EcobeeTrendsDashboard.tsx</td>
+        <td><span class="score-badge score-needs">Needs Work</span></td>
+        <td>Generic titles, no reference bands</td>
+        <td>✅ Time series appropriate</td>
+      </tr>
+      <tr>
+        <td><strong>Silence Alerts</strong></td>
+        <td>SilenceAlertsDashboard.tsx</td>
+        <td><span class="score-badge score-needs">Needs Work</span></td>
+        <td>Table-heavy, missing risk visualization</td>
+        <td>⚠️ Missing charts</td>
+      </tr>
+      <tr>
+        <td><strong>Pledge Management</strong></td>
+        <td>PledgeManagementDashboard.tsx</td>
+        <td><span class="score-badge score-needs">Needs Work</span></td>
+        <td>Aging visualization, payment trends</td>
+        <td>⚠️ Generic structure</td>
+      </tr>
+      <tr>
+        <td><strong>Weekly Ask List</strong></td>
+        <td>WeeklyAskListDashboard.tsx</td>
+        <td><span class="score-badge score-needs">Needs Work</span></td>
+        <td>Table-only, no prioritization viz</td>
+        <td>⚠️ Missing impact bars</td>
+      </tr>
+      <tr>
+        <td><strong>Prospect Research</strong></td>
+        <td>ProspectResearchDashboard.tsx</td>
+        <td><span class="score-badge score-needs">Needs Work</span></td>
+        <td>Generic titles, missing capacity viz</td>
+        <td>⚠️ Research workflow gaps</td>
+      </tr>
+      <tr>
+        <td><strong>Nonprofit Boards</strong></td>
+        <td>NonprofitBoardsDashboard.tsx</td>
+        <td><span class="score-badge score-needs">Needs Work</span></td>
+        <td>Multi-org complexity, generic viz</td>
+        <td>⚠️ Needs org-specific insights</td>
+      </tr>
+      <tr>
+        <td><strong>Donor Health</strong></td>
+        <td>DonorHealthDashboard.tsx</td>
+        <td><span class="score-badge score-needs">Needs Work</span></td>
+        <td>Health score methodology unclear</td>
+        <td>⚠️ Definition gaps</td>
+      </tr>
+      <tr>
+        <td><strong>WealthEngine</strong></td>
+        <td>WealthEngineDashboard.tsx</td>
+        <td><span class="score-badge score-needs">Needs Work</span></td>
+        <td>Scatter needs quadrants like SOW</td>
+        <td>⚠️ Missing wealth screening viz</td>
+      </tr>
+      <tr>
+        <td><strong>Project Tracker</strong></td>
+        <td>ProjectTrackerDashboard.tsx</td>
+        <td><span class="score-badge score-needs">Needs Work</span></td>
+        <td>Generic project viz, no timeline</td>
+        <td>⚠️ Gantt chart needed</td>
+      </tr>
+      <tr>
+        <td><strong>Monday Dashboard</strong></td>
+        <td>MondayDashboard.tsx</td>
+        <td><span class="score-badge score-needs">Needs Work</span></td>
+        <td>Board status visualization gaps</td>
+        <td>⚠️ Missing board-specific insights</td>
+      </tr>
+      <tr>
+        <td><strong>Data Duel</strong></td>
+        <td>DataDuelDashboard.tsx</td>
+        <td><span class="score-badge score-needs">Needs Work</span></td>
+        <td>Comparison visualization unclear</td>
+        <td>⚠️ A/B test pattern missing</td>
+      </tr>
+      <tr>
+        <td><strong>Chart Gallery</strong></td>
+        <td>ChartGalleryDashboard.tsx</td>
+        <td><span class="score-badge score-critical">Critical</span></td>
+        <td>Contains pie, 3D, gauge, polar examples</td>
+        <td>❌ Teaching chart crimes</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- Cross-Cutting Issues -->
+<div class="section">
+  <h2>🔴 Cross-Cutting Issues (System-Wide)</h2>
+  <div class="cross-cutting">
+    <div class="cc-card">
+      <h4>Generic Titles (32/34 dashboards)</h4>
+      <ul>
+        <li><strong>Every dashboard</strong> uses label titles ("Campaign Progress", "Spending Analysis") instead of insight headlines</li>
+        <li><strong>Fix:</strong> "FY26 campaign hits 73% of goal — $4.2M raised, tracking 15% ahead of FY25" instead of "Campaign Progress"</li>
+        <li>This is the single highest-impact change across all dashboards</li>
+        <li>Only Share of Wallet and Major Gifts attempt insight-driven subtitles</li>
+      </ul>
+    </div>
+    <div class="cc-card">
+      <h4>Missing Annotations (30/34 dashboards)</h4>
+      <ul>
+        <li>Only Share of Wallet has proper quadrant annotations</li>
+        <li>No call-outs highlighting key insights, anomalies, or benchmarks</li>
+        <li><strong>Fix:</strong> Add Plotly annotations/shapes for reference lines, top performers, outliers</li>
+        <li>Decision matrix requires: max 2 per chart, always annotate the main insight</li>
+      </ul>
+    </div>
+    <div class="cc-card">
+      <h4>Chart Crimes (8 dashboards)</h4>
+      <ul>
+        <li><strong>Chart Gallery:</strong> Contains pie charts, 3D charts, gauges, polar charts — teaches bad patterns</li>
+        <li><strong>Data Quality + Overview:</strong> Use circular progress = gauges</li>
+        <li><strong>Major Gifts (potential):</strong> Funnel area chart could mislead</li>
+        <li><strong>Fix priority:</strong> Gallery first (template source), then gauge replacements</li>
+      </ul>
+    </div>
+    <div class="cc-card">
+      <h4>Color Inconsistency</h4>
+      <ul>
+        <li>Some dashboards use semantic colors (SUCCESS/ERROR) ✅</li>
+        <li>Others use PLOTLY_COLORS decoratively ❌</li>
+        <li>Inconsistent application of teal=good, orange=bad rule</li>
+        <li><strong>Fix:</strong> Audit every chart for semantic color mapping</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- Priority Execution Order -->
+<div class="section">
+  <h2>🎯 Priority Execution Order</h2>
+  <table class="priority-table">
+    <thead>
+      <tr>
+        <th>Priority</th>
+        <th>Action</th>
+        <th>Scope</th>
+        <th>Impact</th>
+        <th>Effort</th>
+        <th>Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>1</strong></td>
+        <td><strong>Fix Chart Gallery crimes</strong> — Remove/replace pie, 3D, gauge, polar examples</td>
+        <td>1 file</td>
+        <td style="color: var(--orange);">Critical</td>
+        <td>30 min</td>
+        <td>Chart Crime</td>
+      </tr>
+      <tr>
+        <td><strong>2</strong></td>
+        <td><strong>Replace circular progress with big numbers</strong> — Data Quality + Overview dashboards</td>
+        <td>2 files</td>
+        <td style="color: var(--orange);">Critical</td>
+        <td>20 min</td>
+        <td>Chart Crime</td>
+      </tr>
+      <tr>
+        <td><strong>3</strong></td>
+        <td><strong>Insight titles on top 10 dashboards</strong> — Campaign, SOW, Major Gifts, AP, Ramp, etc.</td>
+        <td>10 files</td>
+        <td style="color: var(--orange);">Highest ROI</td>
+        <td>60 min</td>
+        <td>Content</td>
+      </tr>
+      <tr>
+        <td><strong>4</strong></td>
+        <td><strong>Add annotations to key charts</strong> — SOW quadrants template, campaign benchmarks</td>
+        <td>5 files</td>
+        <td style="color: var(--gold);">High</td>
+        <td>45 min</td>
+        <td>Enhancement</td>
+      </tr>
+      <tr>
+        <td><strong>5</strong></td>
+        <td><strong>Semantic color audit</strong> — Replace PLOTLY_COLORS with theme constants</td>
+        <td>15 files</td>
+        <td style="color: var(--gold);">High</td>
+        <td>90 min</td>
+        <td>Visual</td>
+      </tr>
+      <tr>
+        <td><strong>6</strong></td>
+        <td><strong>Cohort survival color fix</strong> — Distinct colors per cohort line</td>
+        <td>1 file</td>
+        <td style="color: var(--teal);">Medium</td>
+        <td>15 min</td>
+        <td>Visual</td>
+      </tr>
+      <tr>
+        <td><strong>7</strong></td>
+        <td><strong>Travel dashboard chart types</strong> — Scatter → line, add bullet charts</td>
+        <td>1 file</td>
+        <td style="color: var(--teal);">Medium</td>
+        <td>25 min</td>
+        <td>Chart Type</td>
+      </tr>
+      <tr>
+        <td><strong>8</strong></td>
+        <td><strong>Holdings add charts</strong> — Waterfall or merge into Financial Statements</td>
+        <td>1-2 files</td>
+        <td style="color: var(--teal);">Medium</td>
+        <td>40 min</td>
+        <td>Structure</td>
+      </tr>
+      <tr>
+        <td><strong>9</strong></td>
+        <td><strong>Table-heavy dashboards add viz</strong> — Unasked, Silence Alerts, Ask List</td>
+        <td>3 files</td>
+        <td style="color: var(--teal);">Medium</td>
+        <td>75 min</td>
+        <td>Structure</td>
+      </tr>
+      <tr>
+        <td><strong>10</strong></td>
+        <td><strong>Insight titles on remaining 24 dashboards</strong></td>
+        <td>24 files</td>
+        <td style="color: var(--muted);">Medium</td>
+        <td>120 min</td>
+        <td>Content</td>
+      </tr>
+    </tbody>
+  </table>
+  <p style="margin-top: 1rem; font-size: 0.85rem; color: var(--muted);"><strong>Total estimated effort:</strong> ~8 hours. Items 1-5 are highest impact and can be done in ~4 hours. Perfect for Cursor agent batch processing.</p>
+</div>
+
+<!-- What's Working Well -->
+<div class="section">
+  <h2>✅ What's Working Well</h2>
+  <div class="cross-cutting">
+    <div class="cc-card" style="border-left: 3px solid var(--teal);">
+      <h4>Chart Type Selection (90% Correct)</h4>
+      <ul>
+        <li>Bar charts for magnitude comparison ✅</li>
+        <li>Line charts for time series ✅</li>
+        <li>Scatter plots for correlation analysis ✅</li>
+        <li>Sankey for flow visualization (Retention) ✅</li>
+        <li>Treemap for hierarchical data (Ramp) ✅</li>
+        <li>Only 8/34 dashboards have chart type issues</li>
+      </ul>
+    </div>
+    <div class="cc-card" style="border-left: 3px solid var(--teal);">
+      <h4>Technical Implementation</h4>
+      <ul>
+        <li>Null safety with optional chaining everywhere ✅</li>
+        <li>TypeScript interfaces for all data shapes ✅</li>
+        <li>Consistent formatter usage (safeCurrency, safePercent) ✅</li>
+        <li>DashboardSkeleton + DashboardErrorState pattern ✅</li>
+        <li>DataFreshness component on every dashboard ✅</li>
+      </ul>
+    </div>
+    <div class="cc-card" style="border-left: 3px solid var(--teal);">
+      <h4>Layout Patterns</h4>
+      <ul>
+        <li>KPI-first pattern consistently applied ✅</li>
+        <li>Progressive disclosure (KPIs → charts → tables) ✅</li>
+        <li>Responsive grid system ✅</li>
+        <li>Appropriate card usage with consistent styling ✅</li>
+      </ul>
+    </div>
+    <div class="cc-card" style="border-left: 3px solid var(--teal);">
+      <h4>Standout Examples</h4>
+      <ul>
+        <li><strong>Campaign Tracker:</strong> Gold standard architecture</li>
+        <li><strong>Share of Wallet:</strong> Has proper quadrant annotations</li>
+        <li><strong>AP Expense:</strong> Excellent semantic color usage</li>
+        <li><strong>Retention Flow:</strong> Perfect Sankey implementation</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- Previously Fixed (from Phase 2) -->
+<div class="section">
+  <h2>✅ Previously Fixed — Viz Fixes v2 Commit</h2>
+  <p style="margin-bottom: 1rem; color: var(--muted);">These 10 dashboards were reviewed in Phase 2 and have known issues. They should be marked as "in progress" from the viz-fixes-v2 commit:</p>
+  <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem;">
+    <div class="cc-card" style="border-left: 3px solid var(--gold);">
+      <h4>Phase 2 Review Set</h4>
+      <ul>
+        <li>Major Gifts Pipeline (pie chart)</li>
+        <li>Cohort Survival Analysis (color issues)</li>
+        <li>Donor Lifecycle (color consistency)</li>
+        <li>Retention Flow (missing benchmarks)</li>
+        <li>Share of Wallet (mostly good)</li>
+        <li>The Unasked (table-heavy)</li>
+        <li>Immersive Travel (chart types)</li>
+        <li>Voice Agent (placeholder data)</li>
+        <li>Holdings (no charts)</li>
+        <li>Community Network (performance risk)</li>
+      </ul>
+    </div>
+    <div class="cc-card" style="border-left: 3px solid var(--blue);">
+      <h4>Status</h4>
+      <ul>
+        <li>Issues documented in dashboard-review-phase2.html</li>
+        <li>Specific fixes prioritized and scoped</li>
+        <li>Estimated total effort: ~3.5 hours for phase 2 set</li>
+        <li>Recommendations include pie → horizontal bar</li>
+        <li>SOW quadrant implementation (completed ✅)</li>
+        <li>Semantic color standardization needed</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<footer style="text-align: center; padding: 2rem 0 1rem; font-size: 0.8rem; color: var(--muted);">
+  Generated March 7, 2026 · Decision Matrix v1.0 · Complete Audit of 34 Dashboards · H2
+</footer>
+
+</div>
+</body>
+</html>

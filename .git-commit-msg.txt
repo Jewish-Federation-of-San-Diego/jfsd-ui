@@ -1,0 +1,30 @@
+fix: apply viz best practices to 10 dashboards per decision-matrix.md
+
+Priority fixes from dashboard-review-phase2.html:
+
+1. Kill pie chart - MajorGiftsDashboard
+   - Replace pie chart with sorted horizontal bar (descending)
+   - Maintain same stage count data with better clarity
+
+2. Insight-driven titles - All 10 dashboards
+   - Replace generic labels with dynamic computed insights
+   - Reference KPIs, counts, rates in section headers
+   - CohortSurvivalDashboard, CommunityNetworkDashboard, DonorLifecycleDashboard
+   - HoldingsDashboard, ImmersiveTravelDashboard, MajorGiftsDashboard
+   - RetentionFlowDashboard, ShareOfWalletDashboard, TheUnaskedDashboard
+   - VoiceAgentDashboard
+
+3. Semantic colors - All 10 dashboards
+   - Apply SUCCESS/ERROR/GOLD/NAVY from theme instead of decorative colors
+   - Lifecycle segments: favorable=SUCCESS, unfavorable=ERROR, caution=GOLD
+   - Retention Sankey: Retained/Upgraded=SUCCESS, Lapsed=ERROR, Downgraded=GOLD
+   - Cohort survival: distinct colors per cohort line
+
+4. SOW quadrant labels - ShareOfWalletDashboard
+   - Add diagonal reference lines at 5%, 15%, 40% SOW
+   - Add quadrant annotations: Big Upside, Upgrade, Engaged, Champion
+   - Color-coded by segment urgency
+
+Build verified: only pre-existing CommunityNetworkDashboard TS errors remain
+
+Co-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>

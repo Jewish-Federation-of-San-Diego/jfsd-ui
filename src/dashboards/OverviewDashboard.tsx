@@ -227,30 +227,32 @@ export function OverviewDashboard({ onNavigate }: { onNavigate?: (key: string) =
         <Row gutter={[16, 16]}>
           <Col xs={24} sm={8}>
             <div style={{ textAlign: 'center' }}>
-              <Text style={{ fontSize: 12, color: MUTED }}>Data Quality Score</Text>
-              <div>
-                <Progress
-                  type="circle"
-                  percent={dataQuality ?? 0}
-                  size={80}
-                  strokeColor={dataQuality != null && dataQuality >= 80 ? SUCCESS : dataQuality != null && dataQuality >= 60 ? WARNING : ERROR}
-                  format={p => <span style={{ fontSize: 18, fontWeight: 700 }}>{safeCount(p)}</span>}
-                />
-              </div>
+              <Statistic
+                title="Data Quality Score"
+                value={dataQuality ?? 0}
+                suffix="/100"
+                valueStyle={{
+                  fontSize: 36,
+                  fontWeight: 700,
+                  color: dataQuality != null && dataQuality >= 80 ? SUCCESS : dataQuality != null && dataQuality >= 60 ? WARNING : ERROR
+                }}
+                style={{ textAlign: 'center' }}
+              />
             </div>
           </Col>
           <Col xs={24} sm={8}>
             <div style={{ textAlign: 'center' }}>
-              <Text style={{ fontSize: 12, color: MUTED }}>Receipt Compliance</Text>
-              <div>
-                <Progress
-                  type="circle"
-                  percent={receiptComp ?? 0}
-                  size={80}
-                  strokeColor={receiptComp != null && receiptComp >= 90 ? SUCCESS : receiptComp != null && receiptComp >= 75 ? WARNING : ERROR}
-                  format={p => <span style={{ fontSize: 18, fontWeight: 700 }}>{safePercent(p, { decimals: 0 })}</span>}
-                />
-              </div>
+              <Statistic
+                title="Receipt Compliance"
+                value={receiptComp ?? 0}
+                suffix="%"
+                valueStyle={{
+                  fontSize: 36,
+                  fontWeight: 700,
+                  color: receiptComp != null && receiptComp >= 90 ? SUCCESS : receiptComp != null && receiptComp >= 75 ? WARNING : ERROR
+                }}
+                style={{ textAlign: 'center' }}
+              />
             </div>
           </Col>
           <Col xs={24} sm={8}>

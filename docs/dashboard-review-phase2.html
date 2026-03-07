@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard Review — 10 New Dashboards vs Decision Matrix</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #27277c;
+    --blue: #1c88ed;
+    --teal: #009191;
+    --orange: #eb6136;
+    --gold: #d98000;
+    --green: #236B4A;
+    --purple: #942494;
+    --violet: #594fa3;
+    --muted: #64748b;
+    --bg: #f8fafc;
+    --card: #ffffff;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Outfit', sans-serif; background: var(--bg); color: #1e293b; line-height: 1.6; }
+  .container { max-width: 1100px; margin: 0 auto; padding: 2rem 1.5rem; }
+  
+  header { text-align: center; margin-bottom: 2.5rem; }
+  header h1 { font-size: 2rem; font-weight: 700; color: var(--navy); }
+  header p { color: var(--muted); font-size: 0.95rem; margin-top: 0.25rem; }
+  
+  .summary-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-bottom: 2rem; }
+  .summary-card { background: var(--card); border-radius: 12px; padding: 1.25rem; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+  .summary-card .num { font-size: 2rem; font-weight: 700; }
+  .summary-card .label { font-size: 0.8rem; color: var(--muted); margin-top: 0.25rem; }
+  .num.green { color: var(--teal); }
+  .num.orange { color: var(--orange); }
+  .num.blue { color: var(--blue); }
+  .num.red { color: #dc2626; }
+  
+  .section { margin-bottom: 2rem; }
+  .section h2 { font-size: 1.3rem; font-weight: 600; color: var(--navy); margin-bottom: 1rem; border-bottom: 2px solid var(--blue); padding-bottom: 0.5rem; }
+  
+  .dashboard-card { background: var(--card); border-radius: 12px; padding: 1.25rem 1.5rem; margin-bottom: 1rem; box-shadow: 0 1px 3px rgba(0,0,0,0.06); border-left: 4px solid var(--blue); }
+  .dashboard-card.critical { border-left-color: var(--orange); }
+  .dashboard-card.good { border-left-color: var(--teal); }
+  .dashboard-card.watch { border-left-color: var(--gold); }
+  
+  .dash-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; }
+  .dash-name { font-size: 1.1rem; font-weight: 600; color: var(--navy); }
+  .dash-score { font-size: 0.85rem; font-weight: 500; padding: 0.2rem 0.75rem; border-radius: 20px; }
+  .score-high { background: #dcfce7; color: #166534; }
+  .score-mid { background: #fef3c7; color: #92400e; }
+  .score-low { background: #fee2e2; color: #991b1b; }
+  
+  .issue-list { list-style: none; margin: 0; padding: 0; }
+  .issue-list li { padding: 0.35rem 0; font-size: 0.9rem; display: flex; align-items: flex-start; gap: 0.5rem; }
+  .issue-list li::before { content: ''; display: none; }
+  .badge { display: inline-block; font-size: 0.7rem; font-weight: 600; padding: 0.15rem 0.5rem; border-radius: 4px; text-transform: uppercase; letter-spacing: 0.03em; flex-shrink: 0; margin-top: 0.15rem; }
+  .badge-fix { background: #fee2e2; color: #991b1b; }
+  .badge-improve { background: #fef3c7; color: #92400e; }
+  .badge-add { background: #dbeafe; color: #1e40af; }
+  .badge-ok { background: #dcfce7; color: #166534; }
+  
+  .priority-table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
+  .priority-table th, .priority-table td { padding: 0.6rem 0.75rem; text-align: left; font-size: 0.85rem; border-bottom: 1px solid #e2e8f0; }
+  .priority-table th { font-weight: 600; color: var(--navy); background: #f1f5f9; }
+  .priority-table tr:hover { background: #f8fafc; }
+  
+  .pattern-box { background: #f1f5f9; border-radius: 8px; padding: 1rem; margin: 0.75rem 0; font-size: 0.85rem; }
+  .pattern-box code { background: #e2e8f0; padding: 0.1rem 0.35rem; border-radius: 3px; font-size: 0.8rem; }
+  
+  .cross-cutting { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .cc-card { background: var(--card); border-radius: 10px; padding: 1rem 1.25rem; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+  .cc-card h4 { font-size: 0.95rem; font-weight: 600; color: var(--navy); margin-bottom: 0.5rem; }
+  .cc-card ul { margin: 0; padding-left: 1.25rem; font-size: 0.85rem; }
+  .cc-card li { margin-bottom: 0.25rem; }
+  
+  @media (max-width: 768px) {
+    .summary-grid { grid-template-columns: repeat(2, 1fr); }
+    .cross-cutting { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+  <h1>📊 Dashboard Review: 10 New Dashboards</h1>
+  <p>Decision Matrix Assessment · March 7, 2026</p>
+</header>
+
+<!-- Summary -->
+<div class="summary-grid">
+  <div class="summary-card">
+    <div class="num blue">10</div>
+    <div class="label">Dashboards Reviewed</div>
+  </div>
+  <div class="summary-card">
+    <div class="num red">1</div>
+    <div class="label">Chart Crime (pie chart)</div>
+  </div>
+  <div class="summary-card">
+    <div class="num orange">23</div>
+    <div class="label">Issues Found</div>
+  </div>
+  <div class="summary-card">
+    <div class="num green">7</div>
+    <div class="label">Structurally Sound</div>
+  </div>
+</div>
+
+<!-- Cross-Cutting Issues -->
+<div class="section">
+  <h2>🔴 Cross-Cutting Issues (All 10 Dashboards)</h2>
+  <div class="cross-cutting">
+    <div class="cc-card">
+      <h4>Generic Titles</h4>
+      <ul>
+        <li>Every chart uses <strong>label titles</strong> ("Survival Curves", "Pipeline Funnel") instead of <strong>insight headlines</strong></li>
+        <li><strong>Fix:</strong> "FY25→FY26 retention averages 42% — pre-2015 cohorts retain 2x better" instead of "Survival Curves"</li>
+        <li>This is the single highest-impact change across all 10</li>
+      </ul>
+    </div>
+    <div class="cc-card">
+      <h4>Missing Data Freshness</h4>
+      <ul>
+        <li>DataFreshness component exists but most dashboards show <code>asOfDate</code> from JSON — if JSON is stale, user doesn't know</li>
+        <li><strong>Fix:</strong> Show both data date AND render date: "Data as of Mar 5 · Rendered Mar 7"</li>
+      </ul>
+    </div>
+    <div class="cc-card">
+      <h4>Color Inconsistency</h4>
+      <ul>
+        <li>Uses <code>PLOTLY_COLORS[0..6]</code> array (decorative) instead of semantic colors</li>
+        <li>Teal should mean favorable, orange should mean unfavorable — but colors are assigned by array index</li>
+        <li><strong>Fix:</strong> Map semantic meaning to color, not position</li>
+      </ul>
+    </div>
+    <div class="cc-card">
+      <h4>No Annotations</h4>
+      <ul>
+        <li>Zero call-outs, reference lines, or annotations on any chart</li>
+        <li>Decision matrix requires: max 2 per chart, always annotate the insight</li>
+        <li><strong>Fix:</strong> Add Plotly annotations to key data points (largest value, anomaly, benchmark)</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- Per-Dashboard Review -->
+<div class="section">
+  <h2>📋 Per-Dashboard Assessment</h2>
+
+  <!-- 1. Major Gifts -->
+  <div class="dashboard-card critical">
+    <div class="dash-header">
+      <span class="dash-name">1. Major Gifts Pipeline</span>
+      <span class="dash-score score-low">Needs Work</span>
+    </div>
+    <ul class="issue-list">
+      <li><span class="badge badge-fix">Fix</span> <strong>Pie chart for stage distribution</strong> — Decision matrix explicitly bans pie charts. Replace with horizontal bar sorted by value. This is the only chart crime across all 10 dashboards.</li>
+      <li><span class="badge badge-improve">Improve</span> <strong>Funnel chart for pipeline stages</strong> — Funnel implies sequential drop-off (which is correct for pipeline), but the funnel visualization in Plotly is often misleading with width proportions. Consider a horizontal bar with stage-based ordering instead.</li>
+      <li><span class="badge badge-add">Add</span> <strong>Pipeline ratio context</strong> — Show 3:1 pipeline-to-goal benchmark line. The matrix prescribes: "Bullet chart (actual vs goal)" for pipeline metrics.</li>
+      <li><span class="badge badge-improve">Improve</span> KPI titles are generic ("Pipeline Value", "Close Rate"). Should state insight: "Pipeline at $2.8M needs 3x velocity to hit $9M goal".</li>
+    </ul>
+    <div class="pattern-box">
+      <strong>Prescribed pattern:</strong> KPI-First (Executive). Funnel → horizontal bar. Pie → sorted horizontal bar. Add close-rate trend sparkline.
+    </div>
+  </div>
+
+  <!-- 2. Cohort Survival -->
+  <div class="dashboard-card watch">
+    <div class="dash-header">
+      <span class="dash-name">2. Cohort Survival Analysis</span>
+      <span class="dash-score score-mid">Mostly Good</span>
+    </div>
+    <ul class="issue-list">
+      <li><span class="badge badge-ok">OK</span> <strong>Line chart for survival curves</strong> — Correct for change-over-time with multiple cohorts.</li>
+      <li><span class="badge badge-ok">OK</span> <strong>Heatmap for retention</strong> — Good for showing density/pattern across cohorts × periods.</li>
+      <li><span class="badge badge-improve">Improve</span> <strong>All survival lines same color</strong> — <code>PLOTLY_COLORS[0]</code> used for every cohort. They'll overlap and be indistinguishable. Use distinct colors or small multiples.</li>
+      <li><span class="badge badge-add">Add</span> <strong>Annotation on best/worst cohort</strong> — Call out which cohort retains best and which is hemorrhaging.</li>
+      <li><span class="badge badge-improve">Improve</span> Tabs ("Native Plotly" vs embedded) — confusing for end users. Pick one, remove the toggle.</li>
+    </ul>
+    <div class="pattern-box">
+      <strong>Prescribed pattern:</strong> Analytical. Survival = change-over-time (line, correct). Consider small multiples if >5 cohorts to reduce clutter.
+    </div>
+  </div>
+
+  <!-- 3. Donor Lifecycle -->
+  <div class="dashboard-card watch">
+    <div class="dash-header">
+      <span class="dash-name">3. Donor Lifecycle</span>
+      <span class="dash-score score-mid">Mostly Good</span>
+    </div>
+    <ul class="issue-list">
+      <li><span class="badge badge-ok">OK</span> <strong>Bar chart for segment distribution</strong> — Correct for magnitude comparison across categories.</li>
+      <li><span class="badge badge-ok">OK</span> <strong>Heatmap for migration matrix</strong> — Perfect for showing flow between giving bands.</li>
+      <li><span class="badge badge-improve">Improve</span> <strong>YoY bars use different colors per metric but same data relationship</strong> — Donor counts and dollars are both "magnitude" but plotted in separate charts. Consider paired bar or butterfly chart to show them together.</li>
+      <li><span class="badge badge-add">Add</span> <strong>Semantic colors on segment bars</strong> — "New" and "Upgraded" should be teal, "Lapsed" and "Downgraded" should be orange. Currently all one color.</li>
+      <li><span class="badge badge-improve">Improve</span> Migration heatmap colorscale uses navy→blue. Should use diverging: teal for growth cells, orange for loss cells.</li>
+    </ul>
+    <div class="pattern-box">
+      <strong>Prescribed pattern:</strong> Analytical. Lifecycle = flow. Consider Sankey for the migration instead of heatmap — more intuitive for non-analysts.
+    </div>
+  </div>
+
+  <!-- 4. Retention Flow -->
+  <div class="dashboard-card good">
+    <div class="dash-header">
+      <span class="dash-name">4. Retention Flow</span>
+      <span class="dash-score score-high">Strong</span>
+    </div>
+    <ul class="issue-list">
+      <li><span class="badge badge-ok">OK</span> <strong>Sankey diagram</strong> — Perfect chart type for showing flow between states (FY25 → FY26 retention paths).</li>
+      <li><span class="badge badge-ok">OK</span> <strong>KPI cards</strong> — Retention rate, retained dollars, lapsed dollars at top. Good hierarchy.</li>
+      <li><span class="badge badge-improve">Improve</span> <strong>Sankey node colors</strong> — Should use semantic: teal for retained/upgraded nodes, orange for lapsed/downgraded.</li>
+      <li><span class="badge badge-add">Add</span> <strong>Dollar retention rate</strong> — Currently shows donor count retention. Add dollar retention (often 70%+ even when donor count is 40%) — more reassuring metric.</li>
+    </ul>
+    <div class="pattern-box">
+      <strong>Prescribed pattern:</strong> Flow (Sankey = correct). Add AFP benchmark reference line: 45% overall retention (industry).
+    </div>
+  </div>
+
+  <!-- 5. Share of Wallet -->
+  <div class="dashboard-card good">
+    <div class="dash-header">
+      <span class="dash-name">5. Share of Wallet</span>
+      <span class="dash-score score-high">Strong</span>
+    </div>
+    <ul class="issue-list">
+      <li><span class="badge badge-ok">OK</span> <strong>Scatter plot (capacity vs giving)</strong> — Perfect for correlation analysis. Exactly what the matrix prescribes.</li>
+      <li><span class="badge badge-ok">OK</span> <strong>Histogram for SOW distribution</strong> — Correct for showing how SOW % is spread.</li>
+      <li><span class="badge badge-add">Add</span> <strong>Quadrant labels on scatter</strong> — The matrix prescribes: "Quadrant labels: Champion/Engaged/Upgrade/Big Upside." Add reference lines at 5%, 15%, 40% SOW thresholds with quadrant shading.</li>
+      <li><span class="badge badge-improve">Improve</span> <strong>Scatter point sizing</strong> — Size by SOW gap (bigger = more upside). Currently appears uniform.</li>
+    </ul>
+    <div class="pattern-box">
+      <strong>Prescribed pattern:</strong> Correlation (scatter = correct). Add regression line + quadrant shading for instant classification.
+    </div>
+  </div>
+
+  <!-- 6. The Unasked -->
+  <div class="dashboard-card watch">
+    <div class="dash-header">
+      <span class="dash-name">6. The Unasked</span>
+      <span class="dash-score score-mid">Mostly Good</span>
+    </div>
+    <ul class="issue-list">
+      <li><span class="badge badge-ok">OK</span> <strong>Histogram for capacity distribution</strong> — Correct for showing spread of estimated capacity.</li>
+      <li><span class="badge badge-ok">OK</span> <strong>Filters (tier, DRM)</strong> — Good interactive pattern matching Analytical layout.</li>
+      <li><span class="badge badge-improve">Improve</span> <strong>Table-heavy</strong> — This is essentially a smart list. Consider adding a horizontal bar chart showing total potential by tier (Tier 1 vs 2 vs 3 vs 4) as the primary viz, with table as drill-down.</li>
+      <li><span class="badge badge-add">Add</span> <strong>Urgency indicator</strong> — Donors unasked for 3+ years should be visually flagged (orange background in table, or separate "urgent" section).</li>
+    </ul>
+    <div class="pattern-box">
+      <strong>Prescribed pattern:</strong> Ranking (ordered table with bars). Add magnitude chart (horizontal bar by tier) above the table.
+    </div>
+  </div>
+
+  <!-- 7. Immersive Travel -->
+  <div class="dashboard-card watch">
+    <div class="dash-header">
+      <span class="dash-name">7. Immersive Travel</span>
+      <span class="dash-score score-mid">Mostly Good</span>
+    </div>
+    <ul class="issue-list">
+      <li><span class="badge badge-ok">OK</span> <strong>Scatter for registrations over time</strong> — Acceptable for time-series.</li>
+      <li><span class="badge badge-ok">OK</span> <strong>Bar chart for revenue by trip</strong> — Correct for magnitude comparison.</li>
+      <li><span class="badge badge-improve">Improve</span> <strong>Scatter should be line</strong> — Registration timeline is change-over-time, not correlation. Use line chart with markers.</li>
+      <li><span class="badge badge-improve">Improve</span> <strong>Fill rate is the key metric</strong> — Show bullet charts (registered/capacity) per trip instead of separate registered + capacity columns. Visual > numbers.</li>
+      <li><span class="badge badge-add">Add</span> <strong>Revenue per seat</strong> — Calculated in table but not visualized. A simple KPI card would help.</li>
+    </ul>
+    <div class="pattern-box">
+      <strong>Prescribed pattern:</strong> KPI-First + Deviation (bullet charts for fill rate per trip).
+    </div>
+  </div>
+
+  <!-- 8. Voice Agent -->
+  <div class="dashboard-card watch">
+    <div class="dash-header">
+      <span class="dash-name">8. Voice Agent</span>
+      <span class="dash-score score-mid">Functional</span>
+    </div>
+    <ul class="issue-list">
+      <li><span class="badge badge-ok">OK</span> <strong>Line chart for calls over time</strong> — Correct for change-over-time.</li>
+      <li><span class="badge badge-ok">OK</span> <strong>Bar chart for calls by agent</strong> — Correct for magnitude comparison.</li>
+      <li><span class="badge badge-improve">Improve</span> <strong>Default agents are hardcoded placeholders</strong> — Shows Dalia, Mira, Hala, Scout, H2 with generic purposes ("Donor follow-up" instead of actual). Should reflect real agent config from TOOLS.md.</li>
+      <li><span class="badge badge-improve">Improve</span> <strong>Low utility without call data</strong> — This dashboard needs a data feed (ElevenLabs call logs → JSON). Until then, it's a placeholder. Consider deprioritizing.</li>
+    </ul>
+    <div class="pattern-box">
+      <strong>Prescribed pattern:</strong> Monitoring (status bar + activity chart). Needs data integration to be useful.
+    </div>
+  </div>
+
+  <!-- 9. Holdings -->
+  <div class="dashboard-card watch">
+    <div class="dash-header">
+      <span class="dash-name">9. UJF Holdings Corp</span>
+      <span class="dash-score score-mid">Placeholder</span>
+    </div>
+    <ul class="issue-list">
+      <li><span class="badge badge-improve">Improve</span> <strong>No charts at all</strong> — Just 3 KPI cards + a table. For a financial overview, the matrix prescribes: waterfall (assets → liabilities → net), or at minimum a stacked bar showing composition.</li>
+      <li><span class="badge badge-add">Add</span> <strong>Leverage ratio visualization</strong> — The ratio is calculated but only shown as a number. A bullet chart against a threshold (e.g., 60% max) would add context.</li>
+      <li><span class="badge badge-improve">Improve</span> <strong>126 lines total</strong> — Thinnest dashboard. Either flesh out with real GL data from the Holdings SQLite table, or merge into Financial Statements as a tab.</li>
+    </ul>
+    <div class="pattern-box">
+      <strong>Prescribed pattern:</strong> KPI-First (Financial). Needs waterfall or composition chart. Consider merging into Financial Statements dashboard.
+    </div>
+  </div>
+
+  <!-- 10. Community Network -->
+  <div class="dashboard-card good">
+    <div class="dash-header">
+      <span class="dash-name">10. Community Network</span>
+      <span class="dash-score score-high">Ambitious</span>
+    </div>
+    <ul class="issue-list">
+      <li><span class="badge badge-ok">OK</span> <strong>D3 force-directed graph</strong> — Correct for network/relationship visualization. Not a standard Plotly chart, but appropriate for this use case.</li>
+      <li><span class="badge badge-ok">OK</span> <strong>Filters (search, min size)</strong> — Good for exploring dense networks.</li>
+      <li><span class="badge badge-improve">Improve</span> <strong>Needs guardrails on node count</strong> — Large networks (500+ nodes) will crush browser performance. Add a default filter or cap.</li>
+      <li><span class="badge badge-improve">Improve</span> <strong>Color by group is functional but legend is just a table</strong> — Add an inline color legend above the graph, matching group colors.</li>
+      <li><span class="badge badge-add">Add</span> <strong>Key connector insight</strong> — Highlight the top 3 most-connected nodes as KPI cards: "Sarah M. connects to 47 community nodes."</li>
+    </ul>
+    <div class="pattern-box">
+      <strong>Prescribed pattern:</strong> Spatial/Network (force-directed = appropriate). Add performance guardrails + connector insights.
+    </div>
+  </div>
+</div>
+
+<!-- Priority Execution Order -->
+<div class="section">
+  <h2>🎯 Recommended Fix Priority</h2>
+  <table class="priority-table">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Action</th>
+        <th>Scope</th>
+        <th>Impact</th>
+        <th>Effort</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td><strong>Kill the pie chart</strong> (Major Gifts)</td>
+        <td>1 file</td>
+        <td style="color: var(--orange);">Chart crime</td>
+        <td>10 min</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td><strong>Insight titles on all 10 dashboards</strong></td>
+        <td>10 files</td>
+        <td style="color: var(--orange);">Highest ROI</td>
+        <td>30 min</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td><strong>Semantic colors</strong> — teal=favorable, orange=unfavorable across all charts</td>
+        <td>8 files</td>
+        <td style="color: var(--gold);">High</td>
+        <td>45 min</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td><strong>SOW quadrant labels + reference lines</strong></td>
+        <td>1 file</td>
+        <td style="color: var(--gold);">High</td>
+        <td>20 min</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td><strong>Retention Flow — add AFP benchmark + dollar retention</strong></td>
+        <td>1 file</td>
+        <td style="color: var(--teal);">Medium</td>
+        <td>15 min</td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td><strong>Cohort survival — distinct colors per cohort</strong></td>
+        <td>1 file</td>
+        <td style="color: var(--teal);">Medium</td>
+        <td>10 min</td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td><strong>Lifecycle — semantic colors on segment bars + diverging heatmap</strong></td>
+        <td>1 file</td>
+        <td style="color: var(--teal);">Medium</td>
+        <td>20 min</td>
+      </tr>
+      <tr>
+        <td>8</td>
+        <td><strong>Travel — scatter → line, add bullet charts for fill rate</strong></td>
+        <td>1 file</td>
+        <td style="color: var(--teal);">Medium</td>
+        <td>25 min</td>
+      </tr>
+      <tr>
+        <td>9</td>
+        <td><strong>Holdings — add waterfall/composition chart or merge into Financial Statements</strong></td>
+        <td>1-2 files</td>
+        <td style="color: var(--muted);">Low</td>
+        <td>30 min</td>
+      </tr>
+      <tr>
+        <td>10</td>
+        <td><strong>Network — performance cap + connector KPIs</strong></td>
+        <td>1 file</td>
+        <td style="color: var(--muted);">Low</td>
+        <td>20 min</td>
+      </tr>
+    </tbody>
+  </table>
+  <p style="margin-top: 1rem; font-size: 0.85rem; color: var(--muted);"><strong>Total estimated effort:</strong> ~3.5 hours. Items 1-4 are highest ROI and can be done in ~2 hours. Ideal for a Cursor agent batch.</p>
+</div>
+
+<!-- What's Working Well -->
+<div class="section">
+  <h2>✅ What's Working Well</h2>
+  <div class="cross-cutting">
+    <div class="cc-card" style="border-left: 3px solid var(--teal);">
+      <h4>Null Safety</h4>
+      <ul>
+        <li>All 10 use <code>safePercent</code>, <code>safeCurrency</code>, <code>safeCount</code></li>
+        <li>No more SPA crashes from undefined data</li>
+        <li>TypeScript interfaces on all data shapes</li>
+      </ul>
+    </div>
+    <div class="cc-card" style="border-left: 3px solid var(--teal);">
+      <h4>Consistent Structure</h4>
+      <ul>
+        <li>All follow the same pattern: fetch → state → loading → error → render</li>
+        <li>DashboardSkeleton + DashboardErrorState on every dashboard</li>
+        <li>Consistent Ant Design component usage</li>
+      </ul>
+    </div>
+    <div class="cc-card" style="border-left: 3px solid var(--teal);">
+      <h4>Chart Types (Mostly)</h4>
+      <ul>
+        <li>8/10 dashboards use appropriate chart types</li>
+        <li>Sankey for retention flow = excellent choice</li>
+        <li>D3 network graph = right tool for community viz</li>
+      </ul>
+    </div>
+    <div class="cc-card" style="border-left: 3px solid var(--teal);">
+      <h4>Progressive Disclosure</h4>
+      <ul>
+        <li>KPIs → charts → tables pattern followed</li>
+        <li>Tabs used for multi-view dashboards</li>
+        <li>Filters on The Unasked + Community Network</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<footer style="text-align: center; padding: 2rem 0 1rem; font-size: 0.8rem; color: var(--muted);">
+  Generated March 7, 2026 · Decision Matrix v1.0 · H2
+</footer>
+
+</div>
+</body>
+</html>

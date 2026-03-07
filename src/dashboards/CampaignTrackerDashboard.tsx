@@ -142,7 +142,7 @@ function CampaignThermometer({ data }: { data: CampaignData }) {
   const pct = Math.min(ac.pctOfGoal, 100);
   const priorPct = ac.goal > 0 ? Math.min(ac.priorYearSamePoint / ac.goal * 100, 100) : 0;
   return (
-    <Card title={<span style={{ color: NAVY }}><TrophyOutlined /> Campaign Progress</span>} size="small">
+    <Card title={<span style={{ color: NAVY }}><TrophyOutlined /> Campaign: {safePercent(ac.pctOfGoal)} to goal — {fmtUSD(ac.raised)} from {ac.donorCount} donors</span>} size="small">
       <div style={{ position: 'relative', height: 40, background: '#E8E8ED', borderRadius: 20, overflow: 'hidden' }}>
         <div style={{
           height: '100%', width: `${pct}%`, background: `linear-gradient(90deg, ${NAVY}, ${GOLD})`,
@@ -179,8 +179,11 @@ function MomentumChart({ weeks }: { weeks: WeeklyMomentum[] }) {
   const h = 160;
   const barGap = 6;
   const barW = Math.max(20, (width - barGap * (weeks.length + 1)) / weeks.length);
+  const latestWeek = weeks[weeks.length - 1];
+  const title = latestWeek ? `Weekly Momentum: ${fmtUSD(latestWeek.amount)} this week` : "Weekly Giving Momentum";
+  
   return (
-    <Card title={<span style={{ color: NAVY }}><FieldTimeOutlined /> Weekly Giving Momentum</span>} size="small">
+    <Card title={<span style={{ color: NAVY }}><FieldTimeOutlined /> {title}</span>} size="small">
       <div ref={ref}>
         {width > 0 && (
           <svg width={width} height={h + 30}>

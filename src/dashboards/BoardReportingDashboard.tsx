@@ -373,7 +373,9 @@ export function BoardReportingDashboard() {
       </Row>
 
       {/* Campaign Thermometer */}
-      <Card title={<Text strong style={{ color: NAVY }}>Annual Campaign FY26</Text>}
+      <Card title={<Text strong style={{ color: NAVY }}>
+        Annual Campaign: {safePercent(campaignSummary.pctOfGoal)} to goal — {fmtUSD(campaignSummary.raised)} raised
+      </Text>}
         style={{ borderRadius: 12, marginBottom: 32 }}>
         <CampaignThermometer raised={campaignSummary.raised} goal={campaignSummary.goal} />
         <Row gutter={24} justify="center" style={{ marginTop: 8 }}>
@@ -383,19 +385,25 @@ export function BoardReportingDashboard() {
       </Card>
 
       {/* Board Participation Cards */}
-      <Title level={4} style={{ color: NAVY, marginBottom: 16 }}>Board Participation</Title>
+      <Title level={4} style={{ color: NAVY, marginBottom: 16 }}>
+        Board Participation: {safePercent(kpis.overallBoardParticipation)} overall — {boards.length} boards tracked
+      </Title>
       {boards.map(b => <BoardCard key={b.shortName} board={b} />)}
 
       {/* Bottom row: Giving Levels + Highlights */}
       <Row gutter={[24, 24]} style={{ marginTop: 16 }}>
         <Col xs={24} lg={14}>
-          <Card title={<Text strong style={{ color: NAVY }}>Giving Level Distribution</Text>}
+          <Card title={<Text strong style={{ color: NAVY }}>
+            Giving Levels: {givingLevels.reduce((sum, level) => sum + level.donors, 0)} total donors across {givingLevels.length} levels
+          </Text>}
             style={{ borderRadius: 12 }}>
             <GivingLevelBars levels={givingLevels} />
           </Card>
         </Col>
         <Col xs={24} lg={10}>
-          <Card title={<Text strong style={{ color: NAVY }}>Highlights</Text>}
+          <Card title={<Text strong style={{ color: NAVY }}>
+            Key Insights: {highlights.length} metrics to watch
+          </Text>}
             style={{ borderRadius: 12 }}>
             <Space direction="vertical" size={16} style={{ width: '100%' }}>
               {highlights.map((h, i) => (

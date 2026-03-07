@@ -225,8 +225,14 @@ function ActionItemsTable({ items }: { items: ActionItem[] }) {
     },
   ];
 
+  const actionCount = items.length;
+  const totalActionAmount = items.reduce((sum, item) => sum + item.amount, 0);
+  const title = actionCount > 0 
+    ? `${actionCount} action items need attention — ${fmtK(totalActionAmount)} total value`
+    : `All caught up — no action items this week`;
+
   return (
-    <Card title="Action Items — This Week" size="small"
+    <Card title={title} size="small"
       extra={<CsvExport data={items} columns={[
         { title: 'Type', dataIndex: 'type' },
         { title: 'Merchant', dataIndex: 'merchant' },
@@ -274,8 +280,14 @@ function DeptBarChart({ data, width: w }: { data: DeptSpend[]; width: number }) 
 
 function DeptSpendChart({ data }: { data: DeptSpend[] }) {
   const { ref, width } = useWidth();
+  const topDept = data[0];
+  const totalSpend = data.reduce((sum, dept) => sum + dept.amount, 0);
+  const title = topDept 
+    ? `Top spender: ${topDept.dept} at ${fmtK(topDept.amount)} — ${safePercent(topDept.amount / totalSpend)} of ${fmtK(totalSpend)} total`
+    : "Department spending (30d)";
+  
   return (
-    <Card title="Spending by Department (30d)" size="small">
+    <Card title={title} size="small">
       <div ref={ref} style={{ width: '100%', minHeight: 100 }}>
         {width > 0 && <DeptBarChart data={data} width={width} />}
       </div>
@@ -404,8 +416,11 @@ function GLHealth({ data }: { data: APExpenseData['glHealth'] }) {
   ];
   const totalAP = data.apAgingBuckets.reduce((s, b) => s + b.amount, 0);
 
+  const healthScore = data.manualEntries7d <= 10 && data.unclearedItems30d <= 20 ? "Good" : "Needs attention";
+  const title = `GL Health: ${healthScore} — ${data.manualEntries7d} manual entries, ${data.unclearedItems30d} uncleared items`;
+  
   return (
-    <Card title="GL Health" size="small">
+    <Card title={title} size="small">
       <Space direction="vertical" style={{ width: '100%' }} size={16}>
         <Row gutter={16}>
           <Col span={12}>
