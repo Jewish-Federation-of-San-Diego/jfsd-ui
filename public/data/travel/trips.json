@@ -1,0 +1,41 @@
+{
+  "trips": [
+    {
+      "id": "trip-001",
+      "name": "Israel Discovery 2025",
+      "destination": "Israel",
+      "start_date": "2025-03-15",
+      "end_date": "2025-03-25",
+      "capacity": 40,
+      "budget": 125000,
+      "status": "active",
+      "price_per_person": 4500,
+      "deposit_amount": 500
+    },
+    {
+      "id": "trip-002",
+      "name": "Jewish Heritage Poland",
+      "destination": "Poland",
+      "start_date": "2025-06-01",
+      "end_date": "2025-06-10",
+      "capacity": 25,
+      "budget": 75000,
+      "status": "active",
+      "price_per_person": 3800,
+      "deposit_amount": 400
+    },
+    {
+      "id": "trip-003",
+      "name": "Morocco Jewish Trail",
+      "destination": "Morocco",
+      "start_date": "2025-10-12",
+      "end_date": "2025-10-20",
+      "capacity": 30,
+      "budget": 90000,
+      "status": "planning",
+      "price_per_person": 4200,
+      "deposit_amount": 450
+    }
+  ],
+  "last_updated": "2025-02-03T10:00:00Z"
+}
