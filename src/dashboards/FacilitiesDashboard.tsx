@@ -396,7 +396,11 @@ export function FacilitiesDashboard() {
       {/* Server Room Spotlight (Enhanced) */}
       {serverThermostats.length > 0 && (
         <Card
-          title={<span style={{ color: NAVY, fontSize: 16 }}>🖥️ Server Room Spotlight</span>}
+          title={
+            <span style={{ color: NAVY, fontSize: 16 }}>
+              🖥️ {serverThermostats.length} server zones — Avg {serverThermostats.length > 0 ? Math.round(serverThermostats.reduce((sum, t) => sum + (t.temperature || 0), 0) / serverThermostats.length * 10) / 10 : 0}°F, {serverThermostats.filter(t => (t.temperature || 0) >= 78).length > 0 ? `${serverThermostats.filter(t => (t.temperature || 0) >= 78).length} alert` : 'all normal'}
+            </span>
+          }
           size="small"
           style={{ marginBottom: 20, borderTop: `3px solid ${NAVY}` }}
         >

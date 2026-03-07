@@ -79,7 +79,14 @@ export function SilenceAlertsDashboard() {
         <Col xs={12} sm={6}><Card><Statistic title={<DefinitionTooltip term="Silence Period" dashboardKey="silence">Avg Days Silent</DefinitionTooltip>} value={safeCount(kpis.avgDaysSinceGift)} valueStyle={{ color: GOLD }} /></Card></Col>
       </Row>
 
-      <Card title={<DefinitionTooltip term="Risk Tier" dashboardKey="silence">Risk Tiers</DefinitionTooltip>}>
+      <Card title={
+        <DefinitionTooltip term="Risk Tier" dashboardKey="silence">
+          {byTier.length > 0 
+            ? `${fmtUSD(kpis.revenueAtRisk)} at risk — ${byTier[0]?.tier || 'None'} tier: ${Math.round((byTier[0]?.count || 0) / totalCount * 100)}%`
+            : "Risk Tiers"
+          }
+        </DefinitionTooltip>
+      }>
         {byTier.map(t => (
           <div key={t.tier} style={{ marginBottom: 12 }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 4 }}>
@@ -91,7 +98,11 @@ export function SilenceAlertsDashboard() {
         ))}
       </Card>
 
-      <Card title={`Silent Donors (${safeCount(data.count)})`}>
+      <Card title={
+        donors.length > 0 
+          ? `${safeCount(data.count)} silent donors — ${Math.max(...donors.map(d => d.daysSinceGift))} days longest silence`
+          : `Silent Donors (${safeCount(data.count)})`
+      }>
         <Table dataSource={donors} columns={columns} rowKey="name"
           size="small" pagination={{ pageSize: 20 }} scroll={{ x: 900 }} />
       </Card>

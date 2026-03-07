@@ -47,7 +47,11 @@ export function MondayDashboard() {
         <Col xs={12}><Card><Statistic title={<DefinitionTooltip term="Items" dashboardKey="monday">Total Items</DefinitionTooltip>} value={safeCount(kpis.totalItems)} valueStyle={{ color: GOLD }} /></Card></Col>
       </Row>
 
-      <Card title="Boards by Item Count">
+      <Card title={
+        boards.length > 0 
+          ? `${boards.length} boards, ${safeCount(kpis.totalItems)} items — ${sorted[0]?.name || 'None'} leads with ${safeCount(sorted[0]?.totalItems || 0)}`
+          : "Boards by Item Count"
+      }>
         <Row gutter={[12, 12]}>
           {sorted.map(b => (
             <Col xs={24} sm={12} md={8} key={b.id}>

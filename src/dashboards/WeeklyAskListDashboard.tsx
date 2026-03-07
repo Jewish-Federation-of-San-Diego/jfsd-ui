@@ -592,7 +592,11 @@ export function WeeklyAskListDashboard() {
 
           <Row gutter={[16, 16]} style={{ marginTop: 16 }}>
             <Col xs={24} lg={18}>
-              <Card size="small" title="Ask List" styles={{ body: { padding: 0 } }}>
+              <Card size="small" title={
+                data.donors.length > 0 
+                  ? `${data.donors.length} prospects — ${fmtUSD(data.kpis.totalPotential)} potential, top ask: ${fmtUSD(Math.max(...data.donors.map(d => d.suggestedAsk)))}`
+                  : "Ask List"
+              } styles={{ body: { padding: 0 } }}>
                 <AskListTable donors={data.donors} />
               </Card>
             </Col>

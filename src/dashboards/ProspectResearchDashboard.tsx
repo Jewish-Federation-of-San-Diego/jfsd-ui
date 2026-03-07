@@ -234,7 +234,14 @@ export function ProspectResearchDashboard() {
       </Row>
 
       {/* Upgrade Opportunities */}
-          <Card title={<Text style={{ color: NAVY, fontWeight: 600 }}>Upgrade Opportunities</Text>}
+          <Card title={
+            <Text style={{ color: NAVY, fontWeight: 600 }}>
+              {upgradeProspects.length > 0 
+                ? `${upgradeProspects.length} upgrade prospects — ${fmtCompact(upgradeProspects.reduce((sum, p) => sum + p.gap, 0))} capacity gap`
+                : "Upgrade Opportunities"
+              }
+            </Text>
+          }
         extra={<Space><CsvExport data={upgradeProspects} columns={[
           { title: 'Name', dataIndex: 'name' },
           { title: 'Current Giving', dataIndex: 'currentGiving' },
@@ -252,7 +259,14 @@ export function ProspectResearchDashboard() {
       {/* Major Donor Pipeline + Giving vs Capacity */}
       <Row gutter={[16, 16]} style={{ marginBottom: 24 }}>
         <Col xs={24} lg={14}>
-          <Card title={<Text style={{ color: NAVY, fontWeight: 600 }}>Major Donor Pipeline</Text>}
+          <Card title={
+            <Text style={{ color: NAVY, fontWeight: 600 }}>
+              {majorDonorPipeline.length > 0 
+                ? `${majorDonorPipeline.length} major prospects — ${fmtCompact(majorDonorPipeline.reduce((sum, p) => sum + p.capacity, 0))} total capacity`
+                : "Major Donor Pipeline"
+              }
+            </Text>
+          }
             extra={<Space><CsvExport data={majorDonorPipeline} columns={[
               { title: 'Name', dataIndex: 'name' },
               { title: 'Tier', dataIndex: 'capacityTier' },
@@ -273,7 +287,14 @@ export function ProspectResearchDashboard() {
       </Row>
 
       {/* Trajectory Analysis */}
-      <Card title={<Text style={{ color: NAVY, fontWeight: 600 }}>Trajectory Analysis</Text>}
+      <Card title={
+        <Text style={{ color: NAVY, fontWeight: 600 }}>
+          {trajectoryAnalysis.length > 0 
+            ? `${trajectoryAnalysis.length} donors tracked — ${trajectoryAnalysis.filter(t => t.trajectory === 'increasing').length} increasing, ${trajectoryAnalysis.filter(t => t.trajectory === 'decreasing').length} decreasing`
+            : "Trajectory Analysis"
+          }
+        </Text>
+      }
         extra={<Space><CsvExport data={trajectoryAnalysis} columns={[
           { title: 'Name', dataIndex: 'name' },
           { title: 'FY24', dataIndex: 'fy24' },

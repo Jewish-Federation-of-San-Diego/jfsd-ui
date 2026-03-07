@@ -69,7 +69,11 @@ export function NonprofitBoardsDashboard() {
         <Col xs={12} sm={6}><Card><Statistic title={<DefinitionTooltip term="Match Rate" dashboardKey="boards">Match Rate</DefinitionTooltip>} value={safePercent(kpis.matchRate, { decimals: 0 })} valueStyle={{ color: NAVY }} /></Card></Col>
       </Row>
 
-      <Card title="Top Organizations">
+      <Card title={
+        organizations.length > 0 
+          ? `${organizations.length} organizations, ${kpis.totalMembers} board members — ${safePercent(kpis.matchRate, { decimals: 0 })} match rate`
+          : "Top Organizations"
+      }>
         <Table dataSource={organizations} columns={orgCols} rowKey="name"
           size="small" pagination={{ pageSize: 15 }} scroll={{ x: 600 }} />
       </Card>

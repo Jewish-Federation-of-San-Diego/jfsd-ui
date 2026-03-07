@@ -99,7 +99,11 @@ export function WealthEngineDashboard() {
         data={p2gDistribution.filter(d => (d?.count ?? 0) > 5).map(d => ({ label: `Score ${d?.score ?? 'N/A'}`, count: d?.count ?? 0 }))}
         title={<DefinitionTooltip term="P2G Score" dashboardKey="wealth">P2G Score Distribution</DefinitionTooltip>} color={SUCCESS} />
 
-      <Card title="Top Prospects">
+      <Card title={
+        topProspects.length > 0 
+          ? `${topProspects.length} prospects screened — ${topProspects.filter(p => p.giftCapacity && p.giftCapacity !== '$0').length} with capacity, top tier: ${topProspects[0]?.giftCapacity || 'N/A'}`
+          : "Top Prospects"
+      }>
         <Table dataSource={topProspects.slice(0, 50)} columns={prospectCols} rowKey="name"
           size="small" pagination={{ pageSize: 20 }} scroll={{ x: 600 }} />
       </Card>

@@ -85,7 +85,11 @@ export function HubSpotDashboard() {
         <Col xs={12} sm={6}><Card><Statistic title={<DefinitionTooltip term="Ghost" dashboardKey="hubspot">Ghosts</DefinitionTooltip>} value={fmtNum(ghosts)} valueStyle={{ color: MUTED }} /></Card></Col>
       </Row>
 
-      <Card title={<DefinitionTooltip term="Engagement Segment" dashboardKey="hubspot">Contact Segments</DefinitionTooltip>}>
+      <Card title={
+        <DefinitionTooltip term="Engagement Segment" dashboardKey="hubspot">
+          {`${fmtNum(summary.total_contacts)} contacts — ${safePercent(engagementRate, { decimals: 1 })} engaged, ${segments.length > 0 ? segments[0][0] : 'None'} leads at ${safePercent(segments[0]?.[1]?.pct, { decimals: 1 })}`}
+        </DefinitionTooltip>
+      }>
         {segments.map(([name, seg]) => (
           <div key={name} style={{ marginBottom: 12 }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 4 }}>
@@ -98,7 +102,11 @@ export function HubSpotDashboard() {
         ))}
       </Card>
 
-      <Card title={`Email Campaigns (${emails.length})`}>
+      <Card title={
+        emails.length > 0 
+          ? `${emails.length} email campaigns — ${emails.filter(e => e.state === 'PUBLISHED').length} published, ${emails.filter(e => e.state === 'DRAFT').length} draft`
+          : `Email Campaigns (${emails.length})`
+      }>
         <Table dataSource={emails} columns={emailColumns} rowKey="id"
           size="small" pagination={{ pageSize: 15 }} scroll={{ x: 700 }} />
       </Card>

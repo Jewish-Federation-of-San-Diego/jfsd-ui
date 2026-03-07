@@ -196,7 +196,7 @@ function RefundsTable({ data }: { data: Refund[] }) {
     { title: 'Date', dataIndex: 'date', key: 'date', width: 100 },
   ];
   return (
-    <Card title="Refunds Over $100" size="small">
+    <Card title={`${data.length} refunds over $100 — ${fmtUSD(data.reduce((sum, r) => sum + r.amount, 0))} total`} size="small">
       <Table dataSource={data.map((d, i) => ({ ...d, key: i }))} columns={columns} pagination={false} size="small" scroll={{ x: 400 }} />
     </Card>
   );
@@ -246,8 +246,15 @@ function SourceBarChart({ data, width: w }: { data: DonorSource[]; width: number
 
 function NewDonorsBySource({ data }: { data: DonorSource[] }) {
   const { ref, width } = useWidth();
+  const totalDonors = data.reduce((sum, d) => sum + d.count, 0);
+  const totalAmount = data.reduce((sum, d) => sum + d.totalAmount, 0);
+  const topSource = data.length > 0 ? data.reduce((max, d) => d.count > max.count ? d : max, { source: 'None', count: 0 }) : { source: 'None', count: 0 };
+  
   return (
-    <Card title="New Donors by Source" size="small">
+    <Card title={data.length > 0 
+      ? `${totalDonors} new donors, ${fmtUSD(totalAmount)} — ${topSource.source} leads with ${topSource.count}`
+      : "New Donors by Source"
+    } size="small">
       <div ref={ref} style={{ width: '100%', minHeight: 200 }}>
         {width > 0 && <SourceBarChart data={data} width={width} />}
       </div>
@@ -280,8 +287,9 @@ function ConversionsCard({ data }: { data: Conversion[] }) {
 // ── Lapsed Reactivated ──────────────────────────────────────────────────
 function LapsedCard({ data }: { data: LapsedItem[] }) {
   if (data.length === 0) return null;
+  const totalFy26 = data.reduce((sum, d) => sum + d.fy26Amount, 0);
   return (
-    <Card title="Lapsed Donors Reactivated" size="small">
+    <Card title={`${data.length} lapsed donors reactivated — ${fmtUSD(totalFy26)} recovered in FY26`} size="small">
       <Space direction="vertical" style={{ width: '100%' }} size={6}>
         {data.slice(0, 10).map((d, i) => (
           <div key={i} style={{ display: 'flex', justifyContent: 'space-between', padding: '6px 0', borderBottom: `1px solid ${GRID}` }}>
@@ -300,8 +308,9 @@ function LapsedCard({ data }: { data: LapsedItem[] }) {
 // ── Milestone Approaching ───────────────────────────────────────────────
 function MilestoneCard({ data }: { data: MilestoneItem[] }) {
   if (data.length === 0) return null;
+  const avgProgress = data.length > 0 ? Math.round(data.reduce((sum, d) => sum + (d.currentTotal / d.nextMilestone), 0) / data.length * 100) : 0;
   return (
-    <Card title="Approaching Milestones" size="small">
+    <Card title={`${data.length} donors approaching milestones — ${avgProgress}% average progress`} size="small">
       <Space direction="vertical" style={{ width: '100%' }} size={6}>
         {data.slice(0, 10).map((d, i) => {
           const pct = Math.round((d.currentTotal / d.nextMilestone) * 100);

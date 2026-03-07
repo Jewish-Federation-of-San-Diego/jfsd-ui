@@ -111,16 +111,29 @@ export function DataDuelDashboard() {
         ))}
       </Row>
 
-      <Card title="Run History">
+      <Card title={data.runs?.length > 0 
+        ? `${safeCount(data.runs.length)} runs — ${(() => {
+            const winCounts = Object.entries(analysts).map(([key, analyst]) => ({ key, wins: analyst.wins, label: ANALYST_LABELS[key] || key }));
+            const topAnalyst = winCounts.reduce((max, current) => current.wins > max.wins ? current : max, { wins: 0, label: 'None' });
+            return `${topAnalyst.label} leads with ${safeCount(topAnalyst.wins)} wins`;
+          })()}`
+        : "Run History"
+      }>
         <Table dataSource={data.runs} columns={runCols} rowKey="date" size="small" pagination={false} scroll={{ x: 500 }} />
       </Card>
 
-      <Card title="Top Findings by Impact">
+      <Card title={data.topFindings?.length > 0 
+        ? `${safeCount(data.topFindings.length)} findings — Total impact ${fmtUSD(data.topFindings.reduce((sum, f) => sum + (f.impact || 0), 0))}`
+        : "Top Findings by Impact"
+      }>
         <Table dataSource={data.topFindings} columns={findingCols} rowKey={(r) => `${r.date}-${r.title}`}
           size="small" pagination={{ pageSize: 10 }} scroll={{ x: 600 }} />
       </Card>
 
-      <Card title="Active Trends">
+      <Card title={data.trends?.length > 0 
+        ? `${safeCount(data.trends.length)} active trends — ${data.trends.filter(t => t.direction === 'improving').length} improving, ${data.trends.filter(t => t.direction === 'declining').length} declining`
+        : "Active Trends"
+      }>
         <Table dataSource={data.trends} columns={trendCols} rowKey="title" size="small" pagination={false} scroll={{ x: 500 }} />
       </Card>
     </Space>

@@ -203,7 +203,11 @@ export function PledgeManagementDashboard() {
 
         {/* ── Top Open Pledges ────────────────────────────────── */}
         <Col xs={24} lg={12}>
-          <Card title="Top Open Pledges" size="small"
+          <Card title={
+            topOpenPledges.length > 0 
+              ? `${topOpenPledges.length} open pledges — ${fmtUSD(topOpenPledges.reduce((sum, p) => sum + p.balance, 0))} outstanding`
+              : "Top Open Pledges"
+          } size="small"
             extra={<CsvExport data={topOpenPledges} columns={[
               { title: 'Donor', dataIndex: 'name' },
               { title: 'Pledged', dataIndex: 'pledgedAmount' },
@@ -245,7 +249,11 @@ export function PledgeManagementDashboard() {
       <Row gutter={[16, 16]} style={{ marginTop: 16 }}>
         {/* ── By Campaign ─────────────────────────────────────── */}
         <Col xs={24} lg={14}>
-          <Card title="Pledges by Campaign" size="small"
+          <Card title={
+            byCampaign.length > 0 
+              ? `${byCampaign.length} campaigns — ${fmtUSD(byCampaign.reduce((sum, c) => sum + c.pledgedAmount, 0))} pledged, ${Math.round(byCampaign.reduce((sum, c) => sum + c.fulfillmentRate, 0) / byCampaign.length)}% avg fulfillment`
+              : "Pledges by Campaign"
+          } size="small"
             extra={<CsvExport data={byCampaign} columns={[
               { title: 'Campaign', dataIndex: 'campaign' },
               { title: 'Pledge Count', dataIndex: 'pledgeCount' },
@@ -274,7 +282,11 @@ export function PledgeManagementDashboard() {
 
         {/* ── Recent Payments ─────────────────────────────────── */}
         <Col xs={24} lg={10}>
-          <Card title="Recent Pledge Payments" size="small">
+          <Card title={
+            recentPayments.length > 0 
+              ? `${recentPayments.length} recent payments — ${fmtUSD(recentPayments.reduce((sum, p) => sum + p.amount, 0))} total`
+              : "Recent Pledge Payments"
+          } size="small">
             <div style={{ maxHeight: 420, overflowY: 'auto' }}>
               {recentPayments.length === 0 && <Text type="secondary">No recent payments</Text>}
               {recentPayments.map((p, i) => (

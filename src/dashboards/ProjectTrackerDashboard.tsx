@@ -330,7 +330,11 @@ export function ProjectTrackerDashboard() {
       {/* Summary Table */}
       <Card
         size="small"
-        title="All Items"
+        title={
+          filtered.length > 0 
+            ? `${filtered.length} project items — ${filtered.filter(i => i.column === 'blocked').length} blocked, ${filtered.filter(i => i.column === 'done').length} done`
+            : "All Items"
+        }
         extra={
           <CsvExport
             data={filtered}

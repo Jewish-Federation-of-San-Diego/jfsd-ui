@@ -191,12 +191,25 @@ export function GiveCloudDashboard() {
       {/* Monthly Trend + Recurring Health */}
       <Row gutter={[16, 16]} style={{ marginBottom: 24 }}>
         <Col xs={24} lg={16}>
-          <Card title={<Text strong style={{ color: NAVY }}>Monthly Giving Trend</Text>} size="small">
+          <Card title={
+            <Text strong style={{ color: NAVY }}>
+              {monthlyTrend.length > 0 
+                ? `${monthlyTrend.length} months of giving — ${fmt(monthlyTrend.reduce((sum, m) => sum + m.amount, 0))} total, ${
+                    monthlyTrend.length > 1 && monthlyTrend[monthlyTrend.length - 1].amount > monthlyTrend[monthlyTrend.length - 2].amount ? '📈 trending up' : '📊 stable'
+                  }`
+                : "Monthly Giving Trend"
+              }
+            </Text>
+          } size="small">
             <MonthlyChart data={monthlyTrend} />
           </Card>
         </Col>
         <Col xs={24} lg={8}>
-          <Card title={<Text strong style={{ color: NAVY }}>Recurring Health</Text>} size="small">
+          <Card title={
+            <Text strong style={{ color: NAVY }}>
+              {`${fmt(recurring.monthlyRecurringRevenue)} MRR — ${recurring.newThisMonth - recurring.cancelledThisMonth >= 0 ? '+' : ''}${recurring.newThisMonth - recurring.cancelledThisMonth} net monthly`}
+            </Text>
+          } size="small">
             <Space direction="vertical" style={{ width: '100%' }} size="middle">
               <Statistic
                 title={<DefinitionTooltip term="MRR" dashboardKey="givecloud">Monthly Recurring Revenue</DefinitionTooltip>}
@@ -246,7 +259,14 @@ export function GiveCloudDashboard() {
       {/* Top Products + Source */}
       <Row gutter={[16, 16]} style={{ marginBottom: 24 }}>
         <Col xs={24} lg={14}>
-          <Card title={<Text strong style={{ color: NAVY }}>Top Giving Pages / Products</Text>} size="small">
+          <Card title={
+            <Text strong style={{ color: NAVY }}>
+              {topProducts.length > 0 
+                ? `${topProducts.length} giving pages — ${topProducts[0]?.name || 'N/A'} leads with ${fmt(topProducts[0]?.amount || 0)}`
+                : "Top Giving Pages / Products"
+              }
+            </Text>
+          } size="small">
             <Table
               dataSource={topProducts}
               rowKey="name"
@@ -267,7 +287,14 @@ export function GiveCloudDashboard() {
           </Card>
         </Col>
         <Col xs={24} lg={10}>
-          <Card title={<Text strong style={{ color: NAVY }}>By Source</Text>} size="small">
+          <Card title={
+            <Text strong style={{ color: NAVY }}>
+              {conversionBySource.length > 0 
+                ? `${conversionBySource.length} sources — ${conversionBySource[0]?.source || 'N/A'} leads with ${fmt(conversionBySource[0]?.amount || 0)}`
+                : "By Source"
+              }
+            </Text>
+          } size="small">
             <Table
               dataSource={conversionBySource}
               rowKey="source"
@@ -288,7 +315,14 @@ export function GiveCloudDashboard() {
       {/* Recent Contributions */}
       <Row gutter={[16, 16]} style={{ marginBottom: 24 }}>
         <Col span={24}>
-          <Card title={<Text strong style={{ color: NAVY }}>Recent Contributions</Text>} size="small"
+          <Card title={
+            <Text strong style={{ color: NAVY }}>
+              {recentContributions.length > 0 
+                ? `${recentContributions.length} recent contributions — ${fmt(recentContributions.reduce((sum, c) => sum + c.amount, 0))} total`
+                : "Recent Contributions"
+              }
+            </Text>
+          } size="small"
             extra={<CsvExport data={recentContributions} columns={[
               { title: 'Date', dataIndex: 'date' },
               { title: 'Donor', dataIndex: 'name' },
@@ -321,7 +355,11 @@ export function GiveCloudDashboard() {
         <Row gutter={[16, 16]}>
           <Col span={24}>
             <Card
-              title={<Text strong style={{ color: ERROR }}>⚠️ Failed Payments</Text>}
+              title={
+                <Text strong style={{ color: ERROR }}>
+                  ⚠️ {failedPayments.length} failed payments — {fmt(failedPayments.reduce((sum, f) => sum + f.amount, 0))} at risk
+                </Text>
+              }
               size="small"
               style={{ borderTop: `3px solid ${ERROR}` }}
             >

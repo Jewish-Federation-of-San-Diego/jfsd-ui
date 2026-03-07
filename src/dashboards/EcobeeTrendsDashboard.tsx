@@ -90,7 +90,10 @@ export function EcobeeTrendsDashboard() {
         <Col xs={12} sm={6}><Card><Statistic title={<DefinitionTooltip term="Heating Hours" dashboardKey="ecobee-trends">HVAC Hours</DefinitionTooltip>} value={`${safeNumber((totalHeating + totalCooling) / 60, { minimumFractionDigits: 0, maximumFractionDigits: 0 })}h`} valueStyle={{ color: GOLD }} /></Card></Col>
       </Row>
 
-      <Card title="28-Day Temperature Trend">
+      <Card title={buildingDaily.length > 0 
+        ? `${buildingDaily.length}-day trend — Current avg ${avgTemp}°F, ${zones.filter(z => z.avgTemp7d > 78).length} zones warm`
+        : "28-Day Temperature Trend"
+      }>
         <div style={{ display: 'flex', alignItems: 'flex-end', gap: 2, height: barH + 20, overflow: 'auto' }}>
           {buildingDaily.map(d => {
             const h = ((d.avgTemp - tempRange.min) / ((tempRange.max - tempRange.min) || 1)) * barH + 10;
@@ -105,13 +108,20 @@ export function EcobeeTrendsDashboard() {
         </div>
       </Card>
 
-      <Card title="Daily Averages">
+      <Card title={buildingDaily.length > 0 
+        ? `${buildingDaily.length} days of readings — Range ${safeNumber(Math.min(...buildingDaily.map(d => d.minTemp)), { maximumFractionDigits: 1 })}°F to ${safeNumber(Math.max(...buildingDaily.map(d => d.maxTemp)), { maximumFractionDigits: 1 })}°F`
+        : "Daily Averages"
+      }>
         <Table dataSource={buildingDaily} columns={dailyCols} rowKey="date"
           size="small" pagination={false} scroll={{ x: 600 }} />
       </Card>
 
       {serverRoom.length > 0 && (
-        <Card title={<DefinitionTooltip term="Server Room" dashboardKey="ecobee-trends">Server Room Monitoring</DefinitionTooltip>}>
+        <Card title={
+          <DefinitionTooltip term="Server Room" dashboardKey="ecobee-trends">
+            {`${serverRoom.length} server zones — Avg ${safeNumber(serverRoom.reduce((sum, z) => sum + z.avgTemp7d, 0) / serverRoom.length, { maximumFractionDigits: 1 })}°F, ${serverRoom.filter(z => z.avgTemp7d > 75).length > 0 ? `${serverRoom.filter(z => z.avgTemp7d > 75).length} alert` : 'all normal'}`}
+          </DefinitionTooltip>
+        }>
           <Table dataSource={serverRoom} columns={zoneCols} rowKey="name"
             size="small" pagination={false} />
         </Card>
