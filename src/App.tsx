@@ -53,6 +53,7 @@ import { DataDuelDashboard } from './dashboards/DataDuelDashboard';
 import { EcobeeTrendsDashboard } from './dashboards/EcobeeTrendsDashboard';
 import { MondayDashboard } from './dashboards/MondayDashboard';
 import { ChartGalleryDashboard } from './dashboards/ChartGalleryDashboard';
+import { DashboardAuditDashboard } from './dashboards/DashboardAuditDashboard';
 import { ShareOfWalletDashboard } from './dashboards/ShareOfWalletDashboard';
 import { DonorLifecycleDashboard } from './dashboards/DonorLifecycleDashboard';
 import { CommunityNetworkDashboard } from './dashboards/CommunityNetworkDashboard';
@@ -130,6 +131,7 @@ const menuItems = [
       { key: 'cohort-analysis', icon: <LineChartOutlined />, label: 'Cohort Analysis' },
       { key: 'retention-flow', icon: <ApartmentOutlined />, label: 'Retention Flow' },
       { key: 'community-network', icon: <ApartmentOutlined />, label: 'Community Network' },
+      { key: 'dashboard-audit', icon: <SafetyCertificateOutlined />, label: 'Dashboard Audit' },
     ],
   },
 ];
@@ -244,6 +246,7 @@ function App() {
       case 'voice-agent': return <VoiceAgentDashboard />;
       case 'immersive-travel': return <ImmersiveTravelDashboard />;
       case 'holdings': return <HoldingsDashboard />;
+      case 'dashboard-audit': return <DashboardAuditDashboard />;
       default: return null;
     }
   };
