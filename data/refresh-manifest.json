@@ -1,0 +1,140 @@
+{
+  "refreshedAt": "2026-03-07T15:47:02.799345",
+  "totalTime": 299.1,
+  "results": [
+    {
+      "name": "campaign",
+      "status": "ok",
+      "time": 10.3,
+      "size_before": 1896,
+      "size_after": 1896,
+      "error": null
+    },
+    {
+      "name": "stripe",
+      "status": "ok",
+      "time": 43.3,
+      "size_before": 1968,
+      "size_after": 1968,
+      "error": null
+    },
+    {
+      "name": "ramp",
+      "status": "ok",
+      "time": 113.6,
+      "size_before": 7245,
+      "size_after": 7245,
+      "error": null
+    },
+    {
+      "name": "givecloud",
+      "status": "ok",
+      "time": 93.2,
+      "size_before": 7264,
+      "size_after": 7264,
+      "error": null
+    },
+    {
+      "name": "facilities",
+      "status": "ok",
+      "time": 0.2,
+      "size_before": 102567,
+      "size_after": 102567,
+      "error": null
+    },
+    {
+      "name": "financial",
+      "status": "ok",
+      "time": 0.2,
+      "size_before": 6210,
+      "size_after": 14411,
+      "error": null
+    },
+    {
+      "name": "board",
+      "status": "ok",
+      "time": 3.3,
+      "size_before": 12017,
+      "size_after": 12079,
+      "error": null
+    },
+    {
+      "name": "donor-health",
+      "status": "ok",
+      "time": 16.9,
+      "size_before": 6249,
+      "size_after": 6249,
+      "error": null
+    },
+    {
+      "name": "ap-expense",
+      "status": "error",
+      "time": 4.5,
+      "size_before": 6154,
+      "size_after": 6154,
+      "error": "Traceback (most recent call last):\n  File \"/Users/davidfuhriman/clawd/projects/templates/jfsd-ui/scripts/generate-james-data.py\", line 509, in <module>\n    main()\n    ~~~~^^\n  File \"/Users/davidfuhriman/clawd/projects/templates/jfsd-ui/scripts/generate-james-data.py\", line 468, in main\n    card_mgmt = build_card_management(cards, txns_30d)\n  File \"/Users/davidfuhriman/clawd/projects/templates/jfsd-ui/scripts/generate-james-data.py\", line 328, in build_card_management\n    if limit_amt > 0 and car"
+    },
+    {
+      "name": "data-quality",
+      "status": "ok",
+      "time": 7.1,
+      "size_before": 628,
+      "size_after": 2245,
+      "error": null
+    },
+    {
+      "name": "project",
+      "status": "error",
+      "time": 0.1,
+      "size_before": 18071,
+      "size_after": 18071,
+      "error": "Traceback (most recent call last):\n  File \"/Users/davidfuhriman/clawd/projects/templates/jfsd-ui/scripts/generate-project-tracker.py\", line 564, in <module>\n    data = build_tracker()\n  File \"/Users/davidfuhriman/clawd/projects/templates/jfsd-ui/scripts/generate-project-tracker.py\", line 55, in build_tracker\n    existing_items[item[\"id\"]] = item\n                   ~~~~^^^^^^\nKeyError: 'id'\n"
+    },
+    {
+      "name": "drm",
+      "status": "error",
+      "time": 0.6,
+      "size_before": 2740,
+      "size_after": 2740,
+      "error": "SF no JSON: [dotenv@17.2.3] injecting env (0) from ../../../skills/mcp-servers/salesforce/.env -- tip: \ud83d\udce1 add observability to secrets: https://dotenvx.com/ops\n\n\u274c No DRM users found. Check DRM_NAMES list.\n"
+    },
+    {
+      "name": "pledge",
+      "status": "ok",
+      "time": 1.9,
+      "size_before": 55621,
+      "size_after": 819,
+      "error": null
+    },
+    {
+      "name": "prospect",
+      "status": "ok",
+      "time": 1.4,
+      "size_before": 53775,
+      "size_after": 329,
+      "error": null
+    },
+    {
+      "name": "ask-list",
+      "status": "ok",
+      "time": 1.9,
+      "size_before": 32396,
+      "size_after": 492,
+      "error": null
+    },
+    {
+      "name": "silence",
+      "status": "error",
+      "time": 0.7,
+      "size_before": 280537,
+      "size_after": 280537,
+      "error": "No JSON in output:\n[dotenv@17.2.3] injecting env (0) from ../../../skills/mcp-servers/salesforce/.env -- tip: \ud83d\udd10 encrypt with Dotenvx: https://dotenvx.com\n\n"
+    }
+  ],
+  "summary": {
+    "ok": 12,
+    "errors": 4,
+    "skipped": 0,
+    "totalBytes": 465066
+  }
+}

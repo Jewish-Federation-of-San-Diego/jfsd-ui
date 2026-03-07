@@ -1,571 +1,111 @@
 {
+  "asOfDate": "2026-03-07 15:42",
   "annualCampaign": {
     "name": "Annual Campaign 26",
     "goal": 9000000,
-    "raised": 5958177.87,
-    "pctOfGoal": 66.2,
-    "donorCount": 1044,
-    "avgGift": 5707.0,
-    "priorYearSamePoint": 8812417.17,
-    "priorYearFinalTotal": 8812417.17,
-    "priorYearDonorCount": 1200
+    "raised": 0.0,
+    "pctOfGoal": 0.0,
+    "donorCount": 0,
+    "avgGift": 0.0,
+    "priorYearSamePoint": 0.0
   },
   "momentum": {
-    "thisWeek": {
-      "weekEnding": "2026-03-06",
-      "gifts": 85,
-      "amount": 127210.5
-    },
-    "lastWeek": {
-      "weekEnding": "2026-02-27",
-      "gifts": 92,
-      "amount": 48458.07
-    }
+    "giftsThisWeek": 0,
+    "amountThisWeek": 0.0,
+    "giftsLastWeek": 0,
+    "amountLastWeek": 0.0,
+    "weekOverWeekPct": 0
   },
   "weeklyMomentum": [
     {
-      "weekEnding": "2026-01-16",
-      "gifts": 103,
-      "amount": 2393262.48
+      "weekOf": "2026-01-12",
+      "gifts": 0,
+      "amount": 0.0
     },
     {
-      "weekEnding": "2026-01-23",
-      "gifts": 75,
-      "amount": 459443.67
+      "weekOf": "2026-01-19",
+      "gifts": 0,
+      "amount": 0.0
     },
     {
-      "weekEnding": "2026-01-30",
-      "gifts": 133,
-      "amount": 591654.27
+      "weekOf": "2026-01-26",
+      "gifts": 0,
+      "amount": 0.0
     },
     {
-      "weekEnding": "2026-02-06",
-      "gifts": 150,
-      "amount": 26215.43
+      "weekOf": "2026-02-02",
+      "gifts": 0,
+      "amount": 0.0
     },
     {
-      "weekEnding": "2026-02-13",
-      "gifts": 174,
-      "amount": 163645.35
+      "weekOf": "2026-02-09",
+      "gifts": 0,
+      "amount": 0.0
     },
     {
-      "weekEnding": "2026-02-20",
-      "gifts": 43,
-      "amount": 121754.38
+      "weekOf": "2026-02-16",
+      "gifts": 0,
+      "amount": 0.0
     },
     {
-      "weekEnding": "2026-02-27",
-      "gifts": 92,
-      "amount": 48458.07
+      "weekOf": "2026-02-23",
+      "gifts": 0,
+      "amount": 0.0
     },
     {
-      "weekEnding": "2026-03-06",
-      "gifts": 85,
-      "amount": 127210.5
+      "weekOf": "2026-03-02",
+      "gifts": 0,
+      "amount": 0.0
     }
   ],
   "donorBreakdown": {
-    "new": 0,
-    "returning": 0,
-    "upgraded": 0,
-    "downgraded": 0
+    "newDonors": 0,
+    "returningDonors": 0,
+    "lybuntRecovered": 0,
+    "retentionRate": 0
   },
   "givingLevels": [
     {
-      "level": "Lion of Judah / King David ($100K+)",
-      "donorCount": 7,
-      "total": 3108333.33
+      "level": "$1-99",
+      "donors": 0,
+      "amount": 0.0
     },
     {
-      "level": "Pacesetters ($25K-$99K)",
-      "donorCount": 24,
-      "total": 974029.36
+      "level": "$100-499",
+      "donors": 0,
+      "amount": 0.0
     },
     {
-      "level": "Builders ($10K-$24K)",
-      "donorCount": 63,
-      "total": 795610.42
+      "level": "$500-999",
+      "donors": 0,
+      "amount": 0.0
     },
     {
-      "level": "Pillars ($5K-$9K)",
-      "donorCount": 93,
-      "total": 522558.03
+      "level": "$1K-4,999",
+      "donors": 0,
+      "amount": 0.0
     },
     {
-      "level": "Community ($1K-$4K)",
-      "donorCount": 228,
-      "total": 401897.27
+      "level": "$5K-9,999",
+      "donors": 0,
+      "amount": 0.0
     },
     {
-      "level": "Friends (Under $1K)",
-      "donorCount": 629,
-      "total": 155749.46
+      "level": "$10K-24,999",
+      "donors": 0,
+      "amount": 0.0
+    },
+    {
+      "level": "$25K+",
+      "donors": 0,
+      "amount": 0.0
     }
   ],
-  "topGiftsThisWeek": [
-    {
-      "attributes": {
-        "type": "GiftTransaction",
-        "url": "/services/data/v59.0/sobjects/GiftTransaction/6trUf0000008ORlIAM"
-      },
-      "Donor": {
-        "attributes": {
-          "type": "Account",
-          "url": "/services/data/v59.0/sobjects/Account/001Uf00000Wk3uHIAR"
-        },
-        "Name": "Jewish Community Foundation"
-      },
-      "CurrentAmount": 16343.16,
-      "TransactionDate": "2026-03-03",
-      "Campaign": {
-        "attributes": {
-          "type": "Campaign",
-          "url": "/services/data/v59.0/sobjects/Campaign/701Uf00000ZBCORIA5"
-        },
-        "Name": "Endowment - FY26"
-      }
-    },
-    {
-      "attributes": {
-        "type": "GiftTransaction",
-        "url": "/services/data/v59.0/sobjects/GiftTransaction/6trUf0000008Ol7IAE"
-      },
-      "Donor": {
-        "attributes": {
-          "type": "Account",
-          "url": "/services/data/v59.0/sobjects/Account/001Uf00000Wk3uHIAR"
-        },
-        "Name": "Jewish Community Foundation"
-      },
-      "CurrentAmount": 13328.16,
-      "TransactionDate": "2026-03-03",
-      "Campaign": {
-        "attributes": {
-          "type": "Campaign",
-          "url": "/services/data/v59.0/sobjects/Campaign/701Uf00000ZBCORIA5"
-        },
-        "Name": "Endowment - FY26"
-      }
-    },
-    {
-      "attributes": {
-        "type": "GiftTransaction",
-        "url": "/services/data/v59.0/sobjects/GiftTransaction/6trUf0000008OmjIAE"
-      },
-      "Donor": {
-        "attributes": {
-          "type": "Account",
-          "url": "/services/data/v59.0/sobjects/Account/001Uf00000Wk3uHIAR"
-        },
-        "Name": "Jewish Community Foundation"
-      },
-      "CurrentAmount": 10000,
-      "TransactionDate": "2026-03-03",
-      "Campaign": {
-        "attributes": {
-          "type": "Campaign",
-          "url": "/services/data/v59.0/sobjects/Campaign/701Uf00000WkVWtIAN"
-        },
-        "Name": "DRM FACE 2025"
-      }
-    },
-    {
-      "attributes": {
-        "type": "GiftTransaction",
-        "url": "/services/data/v59.0/sobjects/GiftTransaction/6trUf0000008LTtIAM"
-      },
-      "Donor": {
-        "attributes": {
-          "type": "Account",
-          "url": "/services/data/v59.0/sobjects/Account/001Uf00000WjvfVIAR"
-        },
-        "Name": "Dafgiving360"
-      },
-      "CurrentAmount": 10000,
-      "TransactionDate": "2026-03-03",
-      "Campaign": {
-        "attributes": {
-          "type": "Campaign",
-          "url": "/services/data/v59.0/sobjects/Campaign/701Uf00000kWTM9IAO"
-        },
-        "Name": "FED360 - FY26 - Donations - Attended"
-      }
-    },
-    {
-      "attributes": {
-        "type": "GiftTransaction",
-        "url": "/services/data/v59.0/sobjects/GiftTransaction/6trUf0000008Od3IAE"
-      },
-      "Donor": {
-        "attributes": {
-          "type": "Account",
-          "url": "/services/data/v59.0/sobjects/Account/001Uf00000Wk3uHIAR"
-        },
-        "Name": "Jewish Community Foundation"
-      },
-      "CurrentAmount": 7956,
-      "TransactionDate": "2026-03-03",
-      "Campaign": {
-        "attributes": {
-          "type": "Campaign",
-          "url": "/services/data/v59.0/sobjects/Campaign/701Uf00000ZBCORIA5"
-        },
-        "Name": "Endowment - FY26"
-      }
-    },
-    {
-      "attributes": {
-        "type": "GiftTransaction",
-        "url": "/services/data/v59.0/sobjects/GiftTransaction/6trUf0000008ObRIAU"
-      },
-      "Donor": {
-        "attributes": {
-          "type": "Account",
-          "url": "/services/data/v59.0/sobjects/Account/001Uf00000Wk3uHIAR"
-        },
-        "Name": "Jewish Community Foundation"
-      },
-      "CurrentAmount": 7723,
-      "TransactionDate": "2026-03-03",
-      "Campaign": {
-        "attributes": {
-          "type": "Campaign",
-          "url": "/services/data/v59.0/sobjects/Campaign/701Uf00000ZBCORIA5"
-        },
-        "Name": "Endowment - FY26"
-      }
-    },
-    {
-      "attributes": {
-        "type": "GiftTransaction",
-        "url": "/services/data/v59.0/sobjects/GiftTransaction/6trUf0000008OWbIAM"
-      },
-      "Donor": {
-        "attributes": {
-          "type": "Account",
-          "url": "/services/data/v59.0/sobjects/Account/001Uf00000Wk3uHIAR"
-        },
-        "Name": "Jewish Community Foundation"
-      },
-      "CurrentAmount": 5425,
-      "TransactionDate": "2026-03-03",
-      "Campaign": {
-        "attributes": {
-          "type": "Campaign",
-          "url": "/services/data/v59.0/sobjects/Campaign/701Uf00000ZBCORIA5"
-        },
-        "Name": "Endowment - FY26"
-      }
-    },
-    {
-      "attributes": {
-        "type": "GiftTransaction",
-        "url": "/services/data/v59.0/sobjects/GiftTransaction/6trUf0000008OhtIAE"
-      },
-      "Donor": {
-        "attributes": {
-          "type": "Account",
-          "url": "/services/data/v59.0/sobjects/Account/001Uf00000Wk3uHIAR"
-        },
-        "Name": "Jewish Community Foundation"
-      },
-      "CurrentAmount": 5183.3,
-      "TransactionDate": "2026-03-03",
-      "Campaign": {
-        "attributes": {
-          "type": "Campaign",
-          "url": "/services/data/v59.0/sobjects/Campaign/701Uf00000ZBCORIA5"
-        },
-        "Name": "Endowment - FY26"
-      }
-    },
-    {
-      "attributes": {
-        "type": "GiftTransaction",
-        "url": "/services/data/v59.0/sobjects/GiftTransaction/6trUf0000008NU5IAM"
-      },
-      "Donor": {
-        "attributes": {
-          "type": "Account",
-          "url": "/services/data/v59.0/sobjects/Account/001Uf00000WjnaSIAR"
-        },
-        "Name": "Jewish Federation Of Metropolitan Chicago"
-      },
-      "CurrentAmount": 5000,
-      "TransactionDate": "2026-03-03",
-      "Campaign": {
-        "attributes": {
-          "type": "Campaign",
-          "url": "/services/data/v59.0/sobjects/Campaign/701Uf00000ZZGDvIAP"
-        },
-        "Name": "Unsolicited Annual Gifts - FY26"
-      }
-    },
-    {
-      "attributes": {
-        "type": "GiftTransaction",
-        "url": "/services/data/v59.0/sobjects/GiftTransaction/6trUf0000008OoLIAU"
-      },
-      "Donor": {
-        "attributes": {
-          "type": "Account",
-          "url": "/services/data/v59.0/sobjects/Account/001Uf00000Wk3uHIAR"
-        },
-        "Name": "Jewish Community Foundation"
-      },
-      "CurrentAmount": 5000,
-      "TransactionDate": "2026-03-03",
-      "Campaign": {
-        "attributes": {
-          "type": "Campaign",
-          "url": "/services/data/v59.0/sobjects/Campaign/701Uf00000Wkp75IAB"
-        },
-        "Name": "LION OF JUDAH LUNCHEON 2025"
-      }
-    }
-  ],
-  "pipeline": {},
-  "campaigns": [
-    {
-      "attributes": {
-        "type": "Campaign",
-        "url": "/services/data/v59.0/sobjects/Campaign/701Uf00000YtneFIAR"
-      },
-      "Name": "DRM - FY26",
-      "AmountWonOpportunities": 1959586.01,
-      "NumberOfContacts": 0,
-      "Status": "In Progress",
-      "StartDate": "2025-07-01",
-      "EndDate": "2026-06-30"
-    },
-    {
-      "attributes": {
-        "type": "Campaign",
-        "url": "/services/data/v59.0/sobjects/Campaign/701Uf00000WkkvJIAR"
-      },
-      "Name": "Legacy of Light (Spark)",
-      "AmountWonOpportunities": 500000,
-      "NumberOfContacts": 22,
-      "Status": "In Progress",
-      "StartDate": "2024-07-01",
-      "EndDate": null
-    },
-    {
-      "attributes": {
-        "type": "Campaign",
-        "url": "/services/data/v59.0/sobjects/Campaign/701Uf00000fel8nIAA"
-      },
-      "Name": "The Community Trip - CY27",
-      "AmountWonOpportunities": 450375,
-      "NumberOfContacts": 12,
-      "Status": "Planned",
-      "StartDate": "2027-05-18",
-      "EndDate": "2027-05-26"
-    },
-    {
-      "attributes": {
-        "type": "Campaign",
-        "url": "/services/data/v59.0/sobjects/Campaign/701Uf00000YSmKpIAL"
-      },
-      "Name": "Rady Match for Israel\u2019s Recovery",
-      "AmountWonOpportunities": 275000,
-      "NumberOfContacts": 87,
-      "Status": "In Progress",
-      "StartDate": "2025-07-01",
-      "EndDate": null
-    },
-    {
-      "attributes": {
-        "type": "Campaign",
-        "url": "/services/data/v59.0/sobjects/Campaign/701Uf00000WmjhwIAB"
-      },
-      "Name": "Annual - FY26",
-      "AmountWonOpportunities": 251000,
-      "NumberOfContacts": 62,
-      "Status": "In Progress",
-      "StartDate": "2025-07-01",
-      "EndDate": "2026-06-30"
-    },
-    {
-      "attributes": {
-        "type": "Campaign",
-        "url": "/services/data/v59.0/sobjects/Campaign/701Uf00000YTF8HIAX"
-      },
-      "Name": "FED360 2026",
-      "AmountWonOpportunities": 216505,
-      "NumberOfContacts": 784,
-      "Status": "Draft",
-      "StartDate": "2026-02-07",
-      "EndDate": "2026-02-07"
-    },
-    {
-      "attributes": {
-        "type": "Campaign",
-        "url": "/services/data/v59.0/sobjects/Campaign/701Uf00000ff5nUIAQ"
-      },
-      "Name": "JDC - Rady Match",
-      "AmountWonOpportunities": 200000,
-      "NumberOfContacts": 0,
-      "Status": "In Progress",
-      "StartDate": "2025-10-20",
-      "EndDate": "2027-07-31"
-    },
-    {
-      "attributes": {
-        "type": "Campaign",
-        "url": "/services/data/v59.0/sobjects/Campaign/701Uf00000bqmWLIAY"
-      },
-      "Name": "Rady Match for Israel\u2019s Recovery - General",
-      "AmountWonOpportunities": 125000,
-      "NumberOfContacts": 0,
-      "Status": "In Progress",
-      "StartDate": "2025-07-01",
-      "EndDate": null
-    },
-    {
-      "attributes": {
-        "type": "Campaign",
-        "url": "/services/data/v59.0/sobjects/Campaign/701Uf00000YZwGEIA1"
-      },
-      "Name": "ShinShinim - FY26",
-      "AmountWonOpportunities": 123850,
-      "NumberOfContacts": 0,
-      "Status": "In Progress",
-      "StartDate": "2025-07-01",
-      "EndDate": "2026-06-30"
-    },
-    {
-      "attributes": {
-        "type": "Campaign",
-        "url": "/services/data/v59.0/sobjects/Campaign/701Uf00000YYVNfIAP"
-      },
-      "Name": "Men's Mission to Cuba - FY26",
-      "AmountWonOpportunities": 69680,
-      "NumberOfContacts": 19,
-      "Status": "In Progress",
-      "StartDate": "2025-11-05",
-      "EndDate": "2025-11-09"
-    },
-    {
-      "attributes": {
-        "type": "Campaign",
-        "url": "/services/data/v59.0/sobjects/Campaign/701Uf00000ZZ2hCIAT"
-      },
-      "Name": "Corporate Event Sponsorships - FY26",
-      "AmountWonOpportunities": 41800,
-      "NumberOfContacts": 1,
-      "Status": "In Progress",
-      "StartDate": "2025-07-01",
-      "EndDate": "2026-06-30"
-    },
-    {
-      "attributes": {
-        "type": "Campaign",
-        "url": "/services/data/v59.0/sobjects/Campaign/701Uf00000XzBV8IAN"
-      },
-      "Name": "Mission to India - FY26",
-      "AmountWonOpportunities": 34995,
-      "NumberOfContacts": 24,
-      "Status": "In Progress",
-      "StartDate": "2026-02-11",
-      "EndDate": "2026-02-26"
-    },
-    {
-      "attributes": {
-        "type": "Campaign",
-        "url": "/services/data/v59.0/sobjects/Campaign/701Uf00000htVDhIAM"
-      },
-      "Name": "ECC Tepper Security Grants - FY26",
-      "AmountWonOpportunities": 27408,
-      "NumberOfContacts": 0,
-      "Status": "In Progress",
-      "StartDate": "2025-07-01",
-      "EndDate": "2026-06-30"
-    },
-    {
-      "attributes": {
-        "type": "Campaign",
-        "url": "/services/data/v59.0/sobjects/Campaign/701Uf00000Wkp88IAB"
-      },
-      "Name": "Ambassador - FY26",
-      "AmountWonOpportunities": 18800,
-      "NumberOfContacts": 2,
-      "Status": "In Progress",
-      "StartDate": "2025-07-01",
-      "EndDate": "2026-06-30"
-    },
-    {
-      "attributes": {
-        "type": "Campaign",
-        "url": "/services/data/v59.0/sobjects/Campaign/701Uf00000aZ2IfIAK"
-      },
-      "Name": "Pauline Foster Women's Leadership Institute - FY26 - Mexico City Included",
-      "AmountWonOpportunities": 18627.07,
-      "NumberOfContacts": 16,
-      "Status": "In Progress",
-      "StartDate": "2025-08-26",
-      "EndDate": null
-    },
-    {
-      "attributes": {
-        "type": "Campaign",
-        "url": "/services/data/v59.0/sobjects/Campaign/701Uf00000leWSnIAM"
-      },
-      "Name": "SD AJMA Medical Mission to Israel - FY26",
-      "AmountWonOpportunities": 13000,
-      "NumberOfContacts": 0,
-      "Status": "Planned",
-      "StartDate": "2026-04-26",
-      "EndDate": "2026-04-30"
-    },
-    {
-      "attributes": {
-        "type": "Campaign",
-        "url": "/services/data/v59.0/sobjects/Campaign/701Uf00000oUTknIAG"
-      },
-      "Name": "Lion of Judah Luncheon - FY26 - Event",
-      "AmountWonOpportunities": 11400,
-      "NumberOfContacts": 67,
-      "Status": "In Progress",
-      "StartDate": "2026-01-19",
-      "EndDate": "2026-03-31"
-    },
-    {
-      "attributes": {
-        "type": "Campaign",
-        "url": "/services/data/v59.0/sobjects/Campaign/701Uf00000YTl3GIAT"
-      },
-      "Name": "Programs - FY26",
-      "AmountWonOpportunities": 9600,
-      "NumberOfContacts": 0,
-      "Status": "In Progress",
-      "StartDate": "2025-07-01",
-      "EndDate": "2026-06-30"
-    },
-    {
-      "attributes": {
-        "type": "Campaign",
-        "url": "/services/data/v59.0/sobjects/Campaign/701Uf00000a7F42IAE"
-      },
-      "Name": "Israel Unfiltered - FY26",
-      "AmountWonOpportunities": 6495,
-      "NumberOfContacts": 31,
-      "Status": "In Progress",
-      "StartDate": "2025-07-01",
-      "EndDate": "2026-06-30"
-    },
-    {
-      "attributes": {
-        "type": "Campaign",
-        "url": "/services/data/v59.0/sobjects/Campaign/701Uf00000bbHO9IAM"
-      },
-      "Name": "October 7th Commemoration Sponsorships - FY26",
-      "AmountWonOpportunities": 5680,
-      "NumberOfContacts": 0,
-      "Status": "In Progress",
-      "StartDate": "2025-09-09",
-      "EndDate": "2025-10-31"
-    }
-  ],
-  "asOfDate": "2026-03-06T10:20:00"
+  "topGiftsThisWeek": [],
+  "pipeline": {
+    "openPledges": 0,
+    "openPledgeAmount": 0.0,
+    "expectedThisMonth": 0.0
+  },
+  "campaigns": []
 }
