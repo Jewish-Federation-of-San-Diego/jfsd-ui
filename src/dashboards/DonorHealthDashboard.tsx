@@ -16,6 +16,8 @@ import { DataFreshness } from '../components/DataFreshness';
 const { Text, Title } = Typography;
 import { DefinitionTooltip } from "../components/DefinitionTooltip";
 import { NAVY, GOLD, SUCCESS, ERROR, WARNING, MUTED } from '../theme/jfsdTheme';
+import { fetchJson } from '../utils/dataFetch';
+import { safeCurrency } from '../utils/formatters';
 
 // ── Brand tokens ────────────────────────────────────────────────────────
 const GRID = '#E8E8ED';
@@ -53,7 +55,7 @@ interface DonorHealthData {
   kpis: KPIs;
 }
 
-const fmtUSD = (v: number) => `$${v.toLocaleString(undefined, { minimumFractionDigits: 0, maximumFractionDigits: 0 })}`;
+const fmtUSD = (v: number) => safeCurrency(v, { maximumFractionDigits: 0 });
 
 // ── Hook: measure width ─────────────────────────────────────────────────
 function useWidth() {
@@ -129,7 +131,9 @@ function KPICards({ kpis, newDonors }: { kpis: KPIs; newDonors: number }) {
 
 // ── Action Items ────────────────────────────────────────────────────────
 function ActionItems({ data }: { data: DonorHealthData }) {
-  const { failedRecurring, refundsOver100, dataQuality } = data;
+  const failedRecurring = data.failedRecurring ?? [];
+  const refundsOver100 = data.refundsOver100 ?? [];
+  const dataQuality = data.dataQuality ?? { missingCampaign: 0, missingAmountOpps: 0, overdueOpps: 0, largGiftsNoCampaign: 0, duplicateRecords: 0, majorDonorsMissingInfo: 0, zeroRecognitionWithGifts: 0 };
 
   const items: { label: string; count: number; severity: 'error' | 'warning' | 'success'; detail: string }[] = [];
 
@@ -413,13 +417,10 @@ export function DonorHealthDashboard() {
   const [refreshing, setRefreshing] = useState(false);
 
   useEffect(() => {
-    fetch(`${import.meta.env.BASE_URL}data/sharon-donor-health.json`)
-      .then(res => {
-        if (!res.ok) throw new Error(`Failed to load data (${res.status})`);
-        return res.json();
-      })
-      .then((json: DonorHealthData) => { setData(json); setLoading(false); })
-      .catch(err => { setError(err.message); setLoading(false); });
+    fetchJson<DonorHealthData>(`${import.meta.env.BASE_URL}data/sharon-donor-health.json`)
+      .then(setData)
+      .catch(err => setError(err.message))
+      .finally(() => setLoading(false));
   }, []);
 
   const refresh = useCallback(() => {
@@ -445,38 +446,49 @@ export function DonorHealthDashboard() {
     );
   }
 
+  const kpis = data.kpis ?? { totalDonorsThisWeek: 0, recurringRevenue: 0, failedChargesCount: 0, failedChargesAmount: 0, dataQualityScore: 0, retentionRate: 0 };
+  const failedRecurring = data.failedRecurring ?? [];
+  const refundsOver100 = data.refundsOver100 ?? [];
+  const newDonorsBySource = data.newDonorsBySource ?? [];
+  const firstToSecondConversions = data.firstToSecondConversions ?? [];
+  const lapsedReactivated = data.lapsedReactivated ?? [];
+  const milestoneApproaching = data.milestoneApproaching ?? [];
+  const newRecurring = data.newRecurring ?? [];
+  const cancelledRecurring = data.cancelledRecurring ?? [];
+  const dataQuality = data.dataQuality ?? { missingCampaign: 0, missingAmountOpps: 0, overdueOpps: 0, largGiftsNoCampaign: 0, duplicateRecords: 0, majorDonorsMissingInfo: 0, zeroRecognitionWithGifts: 0 };
+
   return (
     <Space direction="vertical" size={16} style={{ width: '100%' }}>
-      <DataFreshness asOfDate={data.asOfDate} onRefresh={refresh} refreshing={refreshing} />
+      <DataFreshness asOfDate={data.asOfDate ?? ''} onRefresh={refresh} refreshing={refreshing} />
 
       {/* KPI Row */}
-      <KPICards kpis={data.kpis} newDonors={data.newDonorsThisWeek} />
+      <KPICards kpis={kpis} newDonors={data.newDonorsThisWeek} />
 
       {/* Action Items */}
       <ActionItems data={data} />
 
       {/* Failed & Refunds */}
       <Row gutter={[12, 12]}>
-        <Col xs={24} lg={12}><FailedRecurringTable data={data.failedRecurring} /></Col>
-        <Col xs={24} lg={12}><RefundsTable data={data.refundsOver100} /></Col>
+        <Col xs={24} lg={12}><FailedRecurringTable data={failedRecurring} /></Col>
+        <Col xs={24} lg={12}><RefundsTable data={refundsOver100} /></Col>
       </Row>
 
       {/* Donor Lifecycle */}
       <Title level={5} style={{ color: NAVY, margin: '8px 0 0' }}>Donor Lifecycle</Title>
       <Row gutter={[12, 12]}>
-        <Col xs={24} lg={12}><NewDonorsBySource data={data.newDonorsBySource} /></Col>
-        <Col xs={24} lg={12}><ConversionsCard data={data.firstToSecondConversions} /></Col>
+        <Col xs={24} lg={12}><NewDonorsBySource data={newDonorsBySource} /></Col>
+        <Col xs={24} lg={12}><ConversionsCard data={firstToSecondConversions} /></Col>
       </Row>
       <Row gutter={[12, 12]}>
-        <Col xs={24} lg={12}><LapsedCard data={data.lapsedReactivated} /></Col>
-        <Col xs={24} lg={12}><MilestoneCard data={data.milestoneApproaching} /></Col>
+        <Col xs={24} lg={12}><LapsedCard data={lapsedReactivated} /></Col>
+        <Col xs={24} lg={12}><MilestoneCard data={milestoneApproaching} /></Col>
       </Row>
 
       {/* Recurring Health */}
-      <RecurringHealth newRecurring={data.newRecurring} cancelled={data.cancelledRecurring} />
+      <RecurringHealth newRecurring={newRecurring} cancelled={cancelledRecurring} />
 
       {/* Data Quality */}
-      <DataQualitySection dq={data.dataQuality} score={data.kpis.dataQualityScore} />
+      <DataQualitySection dq={dataQuality} score={kpis.dataQualityScore} />
     </Space>
   );
 }

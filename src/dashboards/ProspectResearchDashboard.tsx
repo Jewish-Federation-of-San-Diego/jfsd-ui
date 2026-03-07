@@ -16,6 +16,8 @@ import { DataFreshness } from '../components/DataFreshness';
 const { Text } = Typography;
 import { DefinitionTooltip } from "../components/DefinitionTooltip";
 import { NAVY, GOLD, SUCCESS, ERROR, WARNING } from '../theme/jfsdTheme';
+import { fetchJson } from '../utils/dataFetch';
+import { safeCurrency } from '../utils/formatters';
 
 // ── Brand tokens ────────────────────────────────────────────────────────
 // ── Types ───────────────────────────────────────────────────────────────
@@ -49,14 +51,8 @@ interface ProspectData {
   kpis: KPIs;
 }
 
-const fmtUSD = (v: number) =>
-  `$${v.toLocaleString(undefined, { minimumFractionDigits: 0, maximumFractionDigits: 0 })}`;
-
-const fmtCompact = (v: number) => {
-  if (v >= 1_000_000) return `$${(v / 1_000_000).toFixed(1)}M`;
-  if (v >= 1_000) return `$${(v / 1_000).toFixed(0)}K`;
-  return `$${v.toLocaleString()}`;
-};
+const fmtUSD = (v: number) => safeCurrency(v, { maximumFractionDigits: 0 });
+const fmtCompact = (v: number) => safeCurrency(v, { notation: 'compact', maximumFractionDigits: 1 });
 
 // ── Trend icon ──────────────────────────────────────────────────────────
 function TrendArrow({ trend }: { trend: string }) {
@@ -146,10 +142,10 @@ export function ProspectResearchDashboard() {
   const [refreshing, setRefreshing] = useState(false);
 
   useEffect(() => {
-    fetch(`${import.meta.env.BASE_URL}data/prospect-research.json`)
-      .then(r => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json(); })
-      .then(d => { setData(d); setLoading(false); })
-      .catch(e => { setError(e.message); setLoading(false); });
+    fetchJson<ProspectData>(`${import.meta.env.BASE_URL}data/prospect-research.json`)
+      .then(setData)
+      .catch(e => setError(e.message))
+      .finally(() => setLoading(false));
   }, []);
 
   const refresh = useCallback(() => {
@@ -165,7 +161,11 @@ export function ProspectResearchDashboard() {
   if (error) return <Alert type="error" message="Failed to load prospect research data" description={error} showIcon />;
   if (!data) return null;
 
-  const { kpis } = data;
+  const kpis = data.kpis ?? { totalProfiled: 0, totalCapacityGap: 0, upgradeCount: 0, avgUpgradeAmount: 0, highCapacityNonDonors: 0 };
+  const upgradeProspects = data.upgradeProspects ?? [];
+  const majorDonorPipeline = data.majorDonorPipeline ?? [];
+  const givingVsCapacity = data.givingVsCapacity ?? [];
+  const trajectoryAnalysis = data.trajectoryAnalysis ?? [];
 
   // ── Upgrade table columns ────────────────────────────────────────────
   const upgradeCols = [
@@ -206,7 +206,7 @@ export function ProspectResearchDashboard() {
       <div style={{ marginBottom: 24 }}>
         <Text style={{ fontSize: 24, fontWeight: 700, color: NAVY }}>Prospect Research</Text>
       </div>
-      <DataFreshness asOfDate={data.asOfDate} onRefresh={refresh} refreshing={refreshing} />
+      <DataFreshness asOfDate={data.asOfDate ?? ''} onRefresh={refresh} refreshing={refreshing} />
 
       {/* KPI Row */}
       <Row gutter={[16, 16]} style={{ marginBottom: 24 }}>
@@ -234,8 +234,8 @@ export function ProspectResearchDashboard() {
       </Row>
 
       {/* Upgrade Opportunities */}
-      <Card title={<Text style={{ color: NAVY, fontWeight: 600 }}>Upgrade Opportunities</Text>}
-        extra={<Space><CsvExport data={data.upgradeProspects} columns={[
+          <Card title={<Text style={{ color: NAVY, fontWeight: 600 }}>Upgrade Opportunities</Text>}
+        extra={<Space><CsvExport data={upgradeProspects} columns={[
           { title: 'Name', dataIndex: 'name' },
           { title: 'Current Giving', dataIndex: 'currentGiving' },
           { title: 'Est. Capacity', dataIndex: 'estimatedCapacity' },
@@ -244,7 +244,7 @@ export function ProspectResearchDashboard() {
           { title: 'Trend', dataIndex: 'trend' },
         ]} filename="upgrade-prospects" /><Text type="secondary" style={{ fontSize: 12 }}>Giving $1K–$5K · Capacity $5K+</Text></Space>}
         style={{ marginBottom: 24 }}>
-        <Table dataSource={data.upgradeProspects} columns={upgradeCols}
+        <Table dataSource={upgradeProspects} columns={upgradeCols}
           rowKey="name" size="small" pagination={{ pageSize: 15, showSizeChanger: true }}
           scroll={{ x: 700 }} />
       </Card>
@@ -253,35 +253,35 @@ export function ProspectResearchDashboard() {
       <Row gutter={[16, 16]} style={{ marginBottom: 24 }}>
         <Col xs={24} lg={14}>
           <Card title={<Text style={{ color: NAVY, fontWeight: 600 }}>Major Donor Pipeline</Text>}
-            extra={<Space><CsvExport data={data.majorDonorPipeline} columns={[
+            extra={<Space><CsvExport data={majorDonorPipeline} columns={[
               { title: 'Name', dataIndex: 'name' },
               { title: 'Tier', dataIndex: 'capacityTier' },
               { title: 'Capacity', dataIndex: 'capacity' },
               { title: 'FY26', dataIndex: 'currentFY26' },
               { title: 'FY25', dataIndex: 'priorFY25' },
             ]} filename="major-donor-pipeline" /><Text type="secondary" style={{ fontSize: 12 }}>Capacity $100K+ · Not yet giving at that level</Text></Space>}>
-            <Table dataSource={data.majorDonorPipeline} columns={majorCols}
+            <Table dataSource={majorDonorPipeline} columns={majorCols}
               rowKey="name" size="small" pagination={{ pageSize: 10 }}
               scroll={{ x: 600 }} />
           </Card>
         </Col>
         <Col xs={24} lg={10}>
           <Card title={<Text style={{ color: NAVY, fontWeight: 600 }}>Giving vs Capacity by Level</Text>}>
-            <GroupedBarChart data={data.givingVsCapacity} />
+            <GroupedBarChart data={givingVsCapacity} />
           </Card>
         </Col>
       </Row>
 
       {/* Trajectory Analysis */}
       <Card title={<Text style={{ color: NAVY, fontWeight: 600 }}>Trajectory Analysis</Text>}
-        extra={<Space><CsvExport data={data.trajectoryAnalysis} columns={[
+        extra={<Space><CsvExport data={trajectoryAnalysis} columns={[
           { title: 'Name', dataIndex: 'name' },
           { title: 'FY24', dataIndex: 'fy24' },
           { title: 'FY25', dataIndex: 'fy25' },
           { title: 'FY26', dataIndex: 'fy26' },
           { title: 'Trajectory', dataIndex: 'trajectory' },
         ]} filename="trajectory-analysis" /><Text type="secondary" style={{ fontSize: 12 }}>Year-over-year recognition trends</Text></Space>}>
-        <Table dataSource={data.trajectoryAnalysis} columns={trajCols}
+        <Table dataSource={trajectoryAnalysis} columns={trajCols}
           rowKey="name" size="small" pagination={{ pageSize: 15, showSizeChanger: true }}
           scroll={{ x: 500 }} />
       </Card>

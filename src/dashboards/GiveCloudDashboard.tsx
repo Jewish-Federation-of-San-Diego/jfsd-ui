@@ -7,6 +7,8 @@ const { Text, Title } = Typography;
 import { DataFreshness } from '../components/DataFreshness';
 import { DefinitionTooltip } from "../components/DefinitionTooltip";
 import { NAVY, GOLD, SUCCESS, ERROR, WARNING, MUTED } from '../theme/jfsdTheme';
+import { fetchJson } from '../utils/dataFetch';
+import { safeCurrency, safePercent } from '../utils/formatters';
 
 // ── Brand tokens ────────────────────────────────────────────────────────
 const GRID    = '#E8E8ED';
@@ -31,8 +33,8 @@ interface GiveCloudData {
 }
 
 // ── Helpers ─────────────────────────────────────────────────────────────
-const fmt = (v: number) => v.toLocaleString('en-US', { style: 'currency', currency: 'USD', minimumFractionDigits: 0, maximumFractionDigits: 0 });
-const fmtFull = (v: number) => v.toLocaleString('en-US', { style: 'currency', currency: 'USD', minimumFractionDigits: 2 });
+const fmt = (v: number) => safeCurrency(v, { maximumFractionDigits: 0 });
+const fmtFull = (v: number) => safeCurrency(v, { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 
 // ── SVG Bar Chart ───────────────────────────────────────────────────────
 function MonthlyChart({ data }: { data: MonthlyRow[] }) {
@@ -98,7 +100,7 @@ function MonthlyChart({ data }: { data: MonthlyRow[] }) {
 
 // ── Churn Gauge ─────────────────────────────────────────────────────────
 function ChurnGauge({ rate }: { rate: number }) {
-  const display = (rate * 100).toFixed(1);
+  const display = safePercent(rate, { fromFraction: true, decimals: 1 });
   const color = rate > 0.1 ? ERROR : rate > 0.05 ? WARNING : SUCCESS;
   return (
     <div style={{ textAlign: 'center' }}>
@@ -106,7 +108,7 @@ function ChurnGauge({ rate }: { rate: number }) {
         type="dashboard"
         percent={Math.min(rate * 100, 100)}
         strokeColor={color}
-        format={() => `${display}%`}
+        format={() => display}
         size={100}
       />
       <div style={{ marginTop: 4 }}><Text type="secondary">Monthly Churn</Text></div>
@@ -122,8 +124,7 @@ export function GiveCloudDashboard() {
   const [refreshing, setRefreshing] = useState(false);
 
   useEffect(() => {
-    fetch(`${import.meta.env.BASE_URL}data/givecloud.json`)
-      .then(r => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json(); })
+    fetchJson<GiveCloudData>(`${import.meta.env.BASE_URL}data/givecloud.json`)
       .then(setData)
       .catch(e => setError(e.message))
       .finally(() => setLoading(false));
@@ -142,7 +143,14 @@ export function GiveCloudDashboard() {
   if (error) return <Alert type="error" message="Failed to load GiveCloud data" description={error} showIcon />;
   if (!data) return null;
 
-  const { kpis, onlineGiving, monthlyTrend, recurring, topProducts, conversionBySource, recentContributions, failedPayments } = data;
+  const kpis = data.kpis ?? { totalOnlineRevenue: 0, recurringRevenue: 0, activeRecurring: 0, newDonorsOnline: 0, conversionRate: 0, churnRate: 0 };
+  const onlineGiving = data.onlineGiving ?? { totalFY26: 0, totalContributions: 0, avgGift: 0, medianGift: 0 };
+  const monthlyTrend = data.monthlyTrend ?? [];
+  const recurring = data.recurring ?? { activeProfiles: 0, monthlyRecurringRevenue: 0, newThisMonth: 0, cancelledThisMonth: 0, churnRate: 0, avgRecurringAmount: 0 };
+  const topProducts = data.topProducts ?? [];
+  const conversionBySource = data.conversionBySource ?? [];
+  const recentContributions = data.recentContributions ?? [];
+  const failedPayments = data.failedPayments ?? [];
 
   return (
     <div style={{ padding: 24, maxWidth: 1400, margin: '0 auto' }}>
@@ -151,7 +159,7 @@ export function GiveCloudDashboard() {
         <Title level={3} style={{ color: NAVY, margin: 0 }}>
           <span style={{ marginRight: 8 }}>🌐</span>GiveCloud — Online Giving
         </Title>
-        <DataFreshness asOfDate={data.asOfDate} onRefresh={refresh} refreshing={refreshing} />
+        <DataFreshness asOfDate={data.asOfDate ?? ''} onRefresh={refresh} refreshing={refreshing} />
         {data.notes && data.notes.map((n, i) => (
           <Alert key={i} type="warning" message={n} style={{ marginTop: 8 }} showIcon banner />
         ))}

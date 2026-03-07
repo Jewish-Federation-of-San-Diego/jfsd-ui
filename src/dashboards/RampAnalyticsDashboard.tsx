@@ -6,6 +6,7 @@ import { useEffect, useState, useCallback } from 'react';
 import { DataFreshness } from '../components/DataFreshness';
 import { DefinitionTooltip } from '../components/DefinitionTooltip';
 import { NAVY, GOLD, SUCCESS, ERROR, WARNING, MUTED } from '../theme/jfsdTheme';
+import { safeCount, safeCurrency, safePercent } from '../utils/formatters';
 
 const { Text, Title } = Typography;
 
@@ -29,8 +30,8 @@ interface RampData {
   weekOverWeek: WoW; kpis: KPIs;
 }
 
-const fmt = (n: number) => n.toLocaleString('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 });
-const fmtK = (n: number) => n >= 1000 ? `$${(n / 1000).toFixed(1)}K` : fmt(n);
+const fmt = (n: number) => safeCurrency(n, { maximumFractionDigits: 0 });
+const fmtK = (n: number) => safeCurrency(n, { notation: 'compact', maximumFractionDigits: 1 });
 
 // ── SVG Bar Chart ───────────────────────────────────────────────────────
 function MonthlyBarChart({ data }: { data: MonthlyTrend[] }) {
@@ -134,7 +135,7 @@ function CategoryGrid({ data }: { data: CategoryRow[] }) {
             }}>
               <div style={{ fontSize: 10, opacity: 0.85, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{d.category}</div>
               <div style={{ fontSize: 14, fontWeight: 700 }}>{fmtK(d.amount)}</div>
-              <div style={{ fontSize: 10, opacity: 0.7 }}>{pct.toFixed(1)}%</div>
+              <div style={{ fontSize: 10, opacity: 0.7 }}>{safePercent(pct, { decimals: 1 })}</div>
             </div>
           </Tooltip>
         );
@@ -200,7 +201,14 @@ export function RampAnalyticsDashboard() {
   if (error) return <Alert type="error" message="Failed to load Ramp analytics" description={error} showIcon />;
   if (!data) return null;
 
-  const { kpis, monthlyTrend, departmentSpend, categoryBreakdown, topMerchants, topSpenders, cardUtilization, weekOverWeek } = data;
+  const kpis = data.kpis ?? { totalSpendFY26: 0, monthlyAvg: 0, activeCards: 0, topDepartment: '—', topDepartmentAmount: 0, weekOverWeekChange: 0 };
+  const monthlyTrend = data.monthlyTrend ?? [];
+  const departmentSpend = data.departmentSpend ?? [];
+  const categoryBreakdown = data.categoryBreakdown ?? [];
+  const topMerchants = data.topMerchants ?? [];
+  const topSpenders = data.topSpenders ?? [];
+  const cardUtilization = data.cardUtilization ?? { active: 0, dormant30d: 0, totalLimit: 0, totalSpent: 0, utilizationPct: 0 };
+  const weekOverWeek = data.weekOverWeek ?? { thisWeek: 0, lastWeek: 0, changePct: 0 };
 
   const merchantCols = [
     { title: 'Merchant', dataIndex: 'merchant', key: 'merchant', sorter: (a: MerchantRow, b: MerchantRow) => a.merchant.localeCompare(b.merchant) },
@@ -221,7 +229,7 @@ export function RampAnalyticsDashboard() {
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: 16 }}>
         <Title level={3} style={{ color: NAVY, margin: 0 }}>Ramp Spend Analytics — FY26</Title>
       </div>
-      <DataFreshness asOfDate={data.asOfDate} onRefresh={refresh} refreshing={refreshing} />
+      <DataFreshness asOfDate={data.asOfDate ?? ''} onRefresh={refresh} refreshing={refreshing} />
 
       {/* KPI Row */}
       <Row gutter={[16, 16]} style={{ marginBottom: 20 }}>
@@ -237,7 +245,7 @@ export function RampAnalyticsDashboard() {
         </Col>
         <Col xs={12} sm={8} lg={4}>
           <Card size="small" bordered={false} style={{ borderRadius: 8 }}>
-            <Statistic title="Active Cards" value={kpis.activeCards} valueStyle={{ color: NAVY, fontSize: 20 }} />
+            <Statistic title="Active Cards" value={safeCount(kpis.activeCards)} valueStyle={{ color: NAVY, fontSize: 20 }} />
           </Card>
         </Col>
         <Col xs={12} sm={12} lg={5}>
