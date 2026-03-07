@@ -8,11 +8,11 @@ import type { ThemeConfig } from 'antd';
 export const jfsdTheme: ThemeConfig = {
   token: {
     // Brand colors
-    colorPrimary: '#1B365D',       // Navy — primary actions, headers, links
-    colorInfo: '#1B365D',          // Info states match primary
-    colorSuccess: '#3D8B37',       // Green — positive indicators
-    colorWarning: '#C5A258',       // Gold — accent, warnings, highlights
-    colorError: '#C4314B',         // Red — errors, negative variance
+    colorPrimary: '#27277c',       // Navy — primary actions, headers, links
+    colorInfo: '#27277c',          // Info states match primary
+    colorSuccess: '#236B4A',       // Green — positive indicators
+    colorWarning: '#d98000',       // Gold — accent, warnings, highlights
+    colorError: '#eb6136',         // Orange — errors, negative variance
 
     // Typography
     fontFamily: "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
@@ -78,35 +78,38 @@ export const jfsdTheme: ThemeConfig = {
  * Ordered for visual distinction in multi-series charts.
  */
 export const jfsdChartColors = [
-  '#1B365D',  // Navy (primary)
-  '#C5A258',  // Gold (accent)
-  '#3D8B37',  // Green (positive)
-  '#C4314B',  // Red (negative)
-  '#5B8DB8',  // Light blue
-  '#8B6914',  // Dark gold
-  '#7C9EB8',  // Steel blue
-  '#E8D5A3',  // Light gold
-  '#2D5F2D',  // Dark green
-  '#9B4DCA',  // Purple (overflow)
+  '#1c88ed',  // Development blue
+  '#236B4A',  // Forest green
+  '#d98000',  // Gold
+  '#eb6136',  // Orange
+  '#942494',  // Marketing purple
+  '#009191',  // Analytics teal
+  '#27277c',  // Navy
 ];
 
 /**
  * Traffic light status colors (McKinsey convention)
  */
 export const statusColors = {
-  good: '#3D8B37',
-  warning: '#C5A258',
-  critical: '#C4314B',
-  neutral: '#8C8C8C',
+  good: '#236B4A',
+  warning: '#d98000',
+  critical: '#eb6136',
+  neutral: '#8c8c8c',
 } as const;
 
 /**
  * Dashboard color palette — single source of truth.
  * Import this instead of re-declaring const NAVY/GOLD/etc in each dashboard.
  */
-export const NAVY    = '#1B365D';
-export const GOLD    = '#C5A258';
-export const SUCCESS = '#3D8B37';
-export const ERROR   = '#C4314B';
-export const WARNING = '#D4880F';
-export const MUTED   = '#8C8C8C';
+export const NAVY = '#27277c';
+export const GOLD = '#d98000';
+export const SUCCESS = '#236B4A';
+export const ERROR = '#eb6136';
+export const WARNING = '#d98000';
+export const MUTED = '#8c8c8c';
+
+export const DEVELOPMENT = '#1c88ed';
+export const FINANCE = '#236B4A';
+export const ANALYTICS = '#009191';
+export const OPERATIONS = '#594fa3';
+export const MARKETING = '#942494';

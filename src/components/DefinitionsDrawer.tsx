@@ -20,6 +20,10 @@ const dashboardNames: Record<string, string> = {
   hubspot: 'HubSpot', wealth: 'WealthEngine',
   boards: 'Nonprofit Boards', 'data-duel': 'Data Duel', 'ecobee-trends': 'Ecobee Trends',
   monday: 'Monday.com', 'chart-gallery': 'Chart Gallery',
+  'share-of-wallet': 'Share of Wallet', 'major-gifts': 'Major Gifts', 'the-unasked': 'The Unasked',
+  'donor-lifecycle': 'Donor Lifecycle', 'community-network': 'Community Network',
+  'cohort-analysis': 'Cohort Analysis', 'retention-flow': 'Retention Flow',
+  'voice-agent': 'Voice Agent', 'immersive-travel': 'Immersive Travel', holdings: 'Holdings',
 };
 
 export function DefinitionsDrawer({ dashboardKey, open, onClose }: DefinitionsDrawerProps) {

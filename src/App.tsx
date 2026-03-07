@@ -53,6 +53,16 @@ import { DataDuelDashboard } from './dashboards/DataDuelDashboard';
 import { EcobeeTrendsDashboard } from './dashboards/EcobeeTrendsDashboard';
 import { MondayDashboard } from './dashboards/MondayDashboard';
 import { ChartGalleryDashboard } from './dashboards/ChartGalleryDashboard';
+import { ShareOfWalletDashboard } from './dashboards/ShareOfWalletDashboard';
+import { DonorLifecycleDashboard } from './dashboards/DonorLifecycleDashboard';
+import { CommunityNetworkDashboard } from './dashboards/CommunityNetworkDashboard';
+import { VoiceAgentDashboard } from './dashboards/VoiceAgentDashboard';
+import { ImmersiveTravelDashboard } from './dashboards/ImmersiveTravelDashboard';
+import { MajorGiftsDashboard } from './dashboards/MajorGiftsDashboard';
+import { TheUnaskedDashboard } from './dashboards/TheUnaskedDashboard';
+import { CohortSurvivalDashboard } from './dashboards/CohortSurvivalDashboard';
+import { RetentionFlowDashboard } from './dashboards/RetentionFlowDashboard';
+import { HoldingsDashboard } from './dashboards/HoldingsDashboard';
 import { DefinitionsDrawer } from './components/DefinitionsDrawer';
 import { PrintButton } from './components/PrintButton';
 import { GlobalSearch } from './components/GlobalSearch';
@@ -67,11 +77,15 @@ const menuItems = [
   { key: 'overview', icon: <PieChartOutlined />, label: 'Overview' },
   {
     type: 'group' as const,
-    label: <span style={groupLabelStyle}>FUNDRAISING</span>,
+    label: <span style={groupLabelStyle}>DEVELOPMENT</span>,
     children: [
       { key: 'campaign', icon: <FundOutlined />, label: 'Campaign Tracker' },
       { key: 'donor-health', icon: <HeartOutlined />, label: 'Donor Health' },
       { key: 'drm', icon: <UsergroupAddOutlined />, label: 'DRM Portfolios' },
+      { key: 'share-of-wallet', icon: <DollarOutlined />, label: 'Share of Wallet' },
+      { key: 'major-gifts', icon: <TrophyOutlined />, label: 'Major Gifts' },
+      { key: 'the-unasked', icon: <AlertOutlined />, label: 'The Unasked' },
+      { key: 'donor-lifecycle', icon: <TeamOutlined />, label: 'Donor Lifecycle' },
       { key: 'ask-list', icon: <PhoneOutlined />, label: 'Outreach' },
       { key: 'prospect', icon: <SearchOutlined />, label: 'Prospect Research' },
       { key: 'pledge', icon: <FileTextOutlined />, label: 'Pledge Management' },
@@ -98,12 +112,24 @@ const menuItems = [
     label: <span style={groupLabelStyle}>OPERATIONS</span>,
     children: [
       { key: 'facilities', icon: <HomeOutlined />, label: 'Facilities' },
-      { key: 'data-quality', icon: <SafetyCertificateOutlined />, label: 'Data Quality' },
       { key: 'projects', icon: <ProjectOutlined />, label: 'Project Tracker' },
+      { key: 'monday', icon: <CalendarOutlined />, label: 'Monday.com' },
+      { key: 'voice-agent', icon: <PhoneOutlined />, label: 'Voice Agent' },
+      { key: 'immersive-travel', icon: <CalendarOutlined />, label: 'Immersive Travel' },
+      { key: 'holdings', icon: <HomeOutlined />, label: 'Holdings' },
+    ],
+  },
+  {
+    type: 'group' as const,
+    label: <span style={groupLabelStyle}>ANALYTICS</span>,
+    children: [
+      { key: 'data-quality', icon: <SafetyCertificateOutlined />, label: 'Data Quality' },
       { key: 'data-duel', icon: <TrophyOutlined />, label: 'Data Duel' },
       { key: 'ecobee-trends', icon: <LineChartOutlined />, label: 'Ecobee Trends' },
-      { key: 'monday', icon: <CalendarOutlined />, label: 'Monday.com' },
       { key: 'chart-gallery', icon: <BarChartOutlined />, label: 'Chart Gallery' },
+      { key: 'cohort-analysis', icon: <LineChartOutlined />, label: 'Cohort Analysis' },
+      { key: 'retention-flow', icon: <ApartmentOutlined />, label: 'Retention Flow' },
+      { key: 'community-network', icon: <ApartmentOutlined />, label: 'Community Network' },
     ],
   },
 ];
@@ -113,6 +139,10 @@ const dashboardTitles: Record<string, string> = {
   campaign: 'Campaign Tracker',
   'donor-health': 'Donor Health',
   drm: 'DRM Portfolios',
+  'share-of-wallet': 'Share of Wallet',
+  'major-gifts': 'Major Gifts',
+  'the-unasked': 'The Unasked',
+  'donor-lifecycle': 'Donor Lifecycle',
   'ask-list': 'Outreach',
   prospect: 'Prospect Research',
   pledge: 'Pledge Management',
@@ -133,6 +163,12 @@ const dashboardTitles: Record<string, string> = {
   'ecobee-trends': 'Ecobee Trends',
   monday: 'Monday.com',
   'chart-gallery': 'Chart Gallery',
+  'cohort-analysis': 'Cohort Analysis',
+  'retention-flow': 'Retention Flow',
+  'community-network': 'Community Network',
+  'voice-agent': 'Voice Agent',
+  'immersive-travel': 'Immersive Travel',
+  holdings: 'Holdings',
 };
 
 interface SidebarContentProps {
@@ -178,6 +214,10 @@ function App() {
       case 'campaign': return <CampaignTrackerDashboard />;
       case 'donor-health': return <DonorHealthDashboard />;
       case 'drm': return <DRMPortfolioDashboard />;
+      case 'share-of-wallet': return <ShareOfWalletDashboard />;
+      case 'major-gifts': return <MajorGiftsDashboard />;
+      case 'the-unasked': return <TheUnaskedDashboard />;
+      case 'donor-lifecycle': return <DonorLifecycleDashboard />;
       case 'ask-list': return <WeeklyAskListDashboard />;
       case 'prospect': return <ProspectResearchDashboard />;
       case 'pledge': return <PledgeManagementDashboard />;
@@ -198,6 +238,12 @@ function App() {
       case 'ecobee-trends': return <EcobeeTrendsDashboard />;
       case 'monday': return <MondayDashboard />;
       case 'chart-gallery': return <ChartGalleryDashboard />;
+      case 'cohort-analysis': return <CohortSurvivalDashboard />;
+      case 'retention-flow': return <RetentionFlowDashboard />;
+      case 'community-network': return <CommunityNetworkDashboard />;
+      case 'voice-agent': return <VoiceAgentDashboard />;
+      case 'immersive-travel': return <ImmersiveTravelDashboard />;
+      case 'holdings': return <HoldingsDashboard />;
       default: return null;
     }
   };
