@@ -1,17 +1,26 @@
-import { Card, Col, Row, Statistic, Tabs, Typography } from "antd";
+import { Card, Col, Row, Statistic, Table, Typography, Space, Tag, Tabs } from "antd";
 import { useEffect, useMemo, useState } from "react";
 import Plot from "react-plotly.js";
-import { DashboardErrorState } from "../components/DashboardErrorState";
 import { DashboardSkeleton } from "../components/DashboardSkeleton";
-import { NAVY, SUCCESS, WARNING } from "../theme/jfsdTheme";
+import { DataFreshness } from "../components/DataFreshness";
+import { DashboardErrorState } from "../components/DashboardErrorState";
 import { fetchJson } from "../utils/dataFetch";
 import { parseDonorRecords } from "../utils/donorAnalytics";
 import type { DonorDataResponse } from "../utils/donorAnalytics";
-import { safeCount, safeCurrency, safePercent } from "../utils/formatters";
+import { safeCurrency, safePercent, safeNumber, safeCount } from "../utils/formatters";
+import { NAVY, GOLD, SUCCESS, ERROR, WARNING, MUTED, ANALYTICS } from "../theme/jfsdTheme";
+import { DASHBOARD_CARD_STYLE, PLOTLY_BASE_LAYOUT, PLOTLY_COLORS } from "../utils/dashboardStyles";
 
-const { Title } = Typography;
+const { Title, Text } = Typography;
 
 type FlowStatus = "Retained" | "Lapsed" | "Upgraded" | "Downgraded";
+
+interface FlowTableRow {
+  key: FlowStatus;
+  status: FlowStatus;
+  donors: number;
+  share: number;
+}
 
 export function RetentionFlowDashboard() {
   const [data, setData] = useState<DonorDataResponse | null>(null);
@@ -68,18 +77,33 @@ export function RetentionFlowDashboard() {
     };
   }, [donors]);
 
+  const flowRows = useMemo<FlowTableRow[]>(
+    () =>
+      (["Retained", "Upgraded", "Downgraded", "Lapsed"] as FlowStatus[]).map((status) => ({
+        key: status,
+        status,
+        donors: flow.statusCounts[status] ?? 0,
+        share: flow.baseCount > 0 ? ((flow.statusCounts[status] ?? 0) / flow.baseCount) * 100 : 0,
+      })),
+    [flow],
+  );
+
   if (loading) return <DashboardSkeleton kpiCount={3} />;
   if (error) return <DashboardErrorState message="Failed to load retention flow data" description={error} />;
 
   return (
-    <div style={{ padding: 4 }}>
-      <Title level={3} style={{ color: NAVY, marginTop: 0 }}>
-        Retention Flow
-      </Title>
+    <Space direction="vertical" size={12} style={{ width: "100%" }}>
+      <Space align="center">
+        <Tag color={ANALYTICS}>Analytics</Tag>
+        <Title level={4} style={{ margin: 0, color: NAVY }}>
+          Retention Flow
+        </Title>
+      </Space>
+      <Text style={{ color: MUTED }}>FY25 donor outcomes flowing into FY26 retained, lapsed, upgraded, and downgraded groups.</Text>
 
-      <Row gutter={[12, 12]} style={{ marginBottom: 12 }}>
+      <Row gutter={[12, 12]}>
         <Col xs={24} sm={8}>
-          <Card size="small">
+          <Card bordered={false} style={DASHBOARD_CARD_STYLE}>
             <Statistic
               title="Overall Retention Rate"
               value={safePercent(flow?.retentionRate ?? 0, { decimals: 1 })}
@@ -88,7 +112,7 @@ export function RetentionFlowDashboard() {
           </Card>
         </Col>
         <Col xs={24} sm={8}>
-          <Card size="small">
+          <Card bordered={false} style={DASHBOARD_CARD_STYLE}>
             <Statistic
               title="Dollars Retained"
               value={safeCurrency(flow?.retainedDollars ?? 0, { maximumFractionDigits: 0 })}
@@ -97,17 +121,23 @@ export function RetentionFlowDashboard() {
           </Card>
         </Col>
         <Col xs={24} sm={8}>
-          <Card size="small">
+          <Card bordered={false} style={DASHBOARD_CARD_STYLE}>
             <Statistic
               title="Lapsed Dollars at Risk"
               value={safeCurrency(flow?.lapsedDollars ?? 0, { maximumFractionDigits: 0 })}
               valueStyle={{ color: WARNING }}
             />
+            <Text style={{ color: MUTED }}>
+              Donor base: {safeCount(flow.baseCount)} | Retained avg: {safeNumber(flow.baseCount > 0 ? flow.retainedDollars / flow.baseCount : 0, { maximumFractionDigits: 0 })}
+            </Text>
           </Card>
         </Col>
       </Row>
 
-      <Card size="small" title={`FY25 Donor Base: ${safeCount(flow?.baseCount ?? 0)} donors`}>
+      <Title level={5} style={{ margin: 0, color: NAVY }}>
+        Sankey Flow
+      </Title>
+      <Card bordered={false} style={DASHBOARD_CARD_STYLE}>
         <Tabs
           items={[
             {
@@ -121,7 +151,7 @@ export function RetentionFlowDashboard() {
                       arrangement: "snap",
                       node: {
                         label: ["FY25 Donors", "Retained", "Upgraded", "Downgraded", "Lapsed"],
-                        color: ["#1B365D", "#236B4A", "#1c88ed", "#C5A258", "#C4314B"],
+                        color: [PLOTLY_COLORS[6], PLOTLY_COLORS[1], PLOTLY_COLORS[0], PLOTLY_COLORS[2], PLOTLY_COLORS[3]],
                         pad: 18,
                         thickness: 20,
                       },
@@ -134,17 +164,16 @@ export function RetentionFlowDashboard() {
                           flow?.statusCounts?.Downgraded ?? 0,
                           flow?.statusCounts?.Lapsed ?? 0,
                         ],
-                        color: ["rgba(35,107,74,0.5)", "rgba(28,136,237,0.5)", "rgba(197,162,88,0.5)", "rgba(196,49,75,0.5)"],
+                        color: [SUCCESS, NAVY, GOLD, ERROR],
                       },
                     },
                   ]}
                   layout={{
-                    autosize: true,
+                    ...PLOTLY_BASE_LAYOUT,
                     height: 430,
-                    margin: { l: 20, r: 20, t: 10, b: 10 },
                   }}
                   style={{ width: "100%" }}
-                  config={{ responsive: true, displayModeBar: false }}
+                  config={{ displayModeBar: false }}
                 />
               ),
             },
@@ -155,13 +184,29 @@ export function RetentionFlowDashboard() {
                 <iframe
                   src={`${import.meta.env.BASE_URL}embedded/retention-sankey.html`}
                   title="Retention Sankey Embedded"
-                  style={{ width: "100%", height: 460, border: "1px solid #F0F0F0" }}
+                  style={{ width: "100%", height: 460, border: `1px solid ${MUTED}` }}
                 />
               ),
             },
           ]}
         />
       </Card>
-    </div>
+
+      <Card bordered={false} style={DASHBOARD_CARD_STYLE}>
+        <Table<FlowTableRow>
+          size="small"
+          dataSource={flowRows}
+          pagination={false}
+          rowKey={(row) => row.key}
+          columns={[
+            { title: "Status", dataIndex: "status", key: "status", render: (value: FlowStatus) => <Tag color={value === "Lapsed" ? ERROR : value === "Upgraded" ? SUCCESS : value === "Downgraded" ? GOLD : NAVY}>{value}</Tag> },
+            { title: "Donors", dataIndex: "donors", key: "donors", render: (value: number) => safeCount(value ?? 0) },
+            { title: "Share", dataIndex: "share", key: "share", render: (value: number) => safePercent(value ?? 0, { decimals: 1 }) },
+          ]}
+        />
+      </Card>
+
+      <DataFreshness asOfDate="" />
+    </Space>
   );
 }

@@ -1,12 +1,13 @@
-import { Card, Col, Row, Statistic, Table, Tag, Typography } from "antd";
+import { Card, Col, Row, Statistic, Table, Typography, Space, Tag } from "antd";
 import { useEffect, useMemo, useState } from "react";
 import Plot from "react-plotly.js";
-import { DashboardErrorState } from "../components/DashboardErrorState";
 import { DashboardSkeleton } from "../components/DashboardSkeleton";
 import { DataFreshness } from "../components/DataFreshness";
-import { NAVY, SUCCESS, WARNING } from "../theme/jfsdTheme";
+import { DashboardErrorState } from "../components/DashboardErrorState";
 import { fetchJson } from "../utils/dataFetch";
-import { safeCount, safeCurrency, safePercent } from "../utils/formatters";
+import { safeCurrency, safePercent, safeNumber, safeCount } from "../utils/formatters";
+import { NAVY, GOLD, SUCCESS, ERROR, WARNING, MUTED, DEVELOPMENT } from "../theme/jfsdTheme";
+import { DASHBOARD_CARD_STYLE, PLOTLY_BASE_LAYOUT, PLOTLY_COLORS } from "../utils/dashboardStyles";
 import { calculateSowPercent, parseDonorRecords } from "../utils/donorAnalytics";
 import type { DonorDataResponse } from "../utils/donorAnalytics";
 
@@ -23,7 +24,7 @@ interface UnaskedResponse {
 }
 
 interface OpportunityRow {
-  id: string;
+  key: string;
   name: string;
   drm: string;
   fy26Recognition: number;
@@ -43,50 +44,49 @@ function classifySowBand(sowPercent: number): OpportunityRow["segment"] {
 function median(values: number[]): number {
   if (values.length === 0) return 0;
   const sorted = [...values].sort((a, b) => a - b);
-  const mid = Math.floor(sorted.length / 2);
-  return sorted.length % 2 === 0 ? (sorted[mid - 1] + sorted[mid]) / 2 : sorted[mid];
+  const middle = Math.floor(sorted.length / 2);
+  return sorted.length % 2 === 0 ? (sorted[middle - 1] + sorted[middle]) / 2 : sorted[middle];
 }
 
 export function ShareOfWalletDashboard() {
   const [donorData, setDonorData] = useState<DonorDataResponse | null>(null);
   const [unaskedData, setUnaskedData] = useState<UnaskedResponse | null>(null);
-  const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     Promise.all([
       fetchJson<DonorDataResponse>(`${import.meta.env.BASE_URL}data/donor_data.json`),
       fetchJson<UnaskedResponse>(`${import.meta.env.BASE_URL}data/unasked.json`),
     ])
-      .then(([donors, unasked]) => {
-        setDonorData(donors);
-        setUnaskedData(unasked);
+      .then(([donorPayload, unaskedPayload]) => {
+        setDonorData(donorPayload);
+        setUnaskedData(unaskedPayload);
       })
-      .catch((err) => setError((err as Error)?.message ?? "Failed to load share-of-wallet data"))
+      .catch((err) => setError((err as Error)?.message ?? "Unable to load share of wallet data"))
       .finally(() => setLoading(false));
   }, []);
 
   const opportunities = useMemo<OpportunityRow[]>(() => {
-    const parsed = parseDonorRecords(donorData);
+    const donors = parseDonorRecords(donorData);
     const drmById = new Map<string, string>();
-    const unaskedDonors = Array.isArray(unaskedData?.donors) ? unaskedData?.donors : [];
-    unaskedDonors.forEach((d) => {
-      const id = d?.id ?? "";
-      if (id) drmById.set(id, d?.ownerId ?? "Unassigned");
+    (unaskedData?.donors ?? []).forEach((row) => {
+      const id = row?.id ?? "";
+      if (id) drmById.set(id, row?.ownerId ?? "Unassigned");
     });
 
-    return parsed
-      .filter((d) => (d?.annualCapacity ?? 0) > 0)
-      .map((d) => {
-        const sowPercent = calculateSowPercent(d?.fy26 ?? 0, d?.fiveYearCapacity ?? 0);
-        const annualCapacity = d?.annualCapacity ?? 0;
-        const recognition = d?.fy26 ?? 0;
-        const capacityGap = Math.max(annualCapacity - recognition, 0);
+    return donors
+      .filter((donor) => (donor?.annualCapacity ?? 0) > 0)
+      .map((donor, index) => {
+        const fy26Recognition = donor?.fy26 ?? 0;
+        const annualCapacity = donor?.annualCapacity ?? 0;
+        const sowPercent = calculateSowPercent(fy26Recognition, donor?.fiveYearCapacity ?? 0);
+        const capacityGap = Math.max(annualCapacity - fy26Recognition, 0);
         return {
-          id: d?.id ?? "",
-          name: d?.name ?? "Unknown Donor",
-          drm: drmById.get(d?.id ?? "") ?? "Unassigned",
-          fy26Recognition: recognition,
+          key: donor?.id || `sow-row-${index}`,
+          name: donor?.name ?? "Unknown Donor",
+          drm: drmById.get(donor?.id ?? "") ?? "Unassigned",
+          fy26Recognition,
           annualCapacity,
           sowPercent,
           capacityGap,
@@ -96,20 +96,19 @@ export function ShareOfWalletDashboard() {
   }, [donorData, unaskedData]);
 
   const kpis = useMemo(() => {
-    const sowValues = opportunities.map((o) => o?.sowPercent ?? 0);
-    const medianSow = median(sowValues);
-    const totalGap = opportunities.reduce((sum, row) => sum + (row?.capacityGap ?? 0), 0);
+    const values = opportunities.map((row) => row?.sowPercent ?? 0);
     return {
-      medianSow,
-      totalGap,
+      medianSow: median(values),
+      totalGap: opportunities.reduce((sum, row) => sum + (row?.capacityGap ?? 0), 0),
       donorCount: opportunities.length,
+      averageSow: values.length > 0 ? values.reduce((sum, value) => sum + value, 0) / values.length : 0,
     };
   }, [opportunities]);
 
   const topUpgradeRows = useMemo(
     () =>
       [...opportunities]
-        .filter((r) => r?.segment === "Big Upside" || r?.segment === "Upgrade")
+        .filter((row) => row?.segment === "Big Upside" || row?.segment === "Upgrade")
         .sort((a, b) => (b?.capacityGap ?? 0) - (a?.capacityGap ?? 0))
         .slice(0, 25),
     [opportunities],
@@ -119,151 +118,127 @@ export function ShareOfWalletDashboard() {
   if (error) return <DashboardErrorState message="Failed to load Share of Wallet data" description={error} />;
 
   return (
-    <div style={{ padding: "4px" }}>
-      <Title level={3} style={{ color: NAVY, marginTop: 0 }}>
-        Share of Wallet
-      </Title>
-      <Text type="secondary">
-        SOW = FY26 Recognition / (WE 5-Year Capacity / 5). Segments: Big Upside (&lt;5%), Upgrade (5-15%), Engaged
-        (15-40%), Champion (40%+).
+    <Space direction="vertical" size={12} style={{ width: "100%" }}>
+      <Space align="center">
+        <Tag color={DEVELOPMENT}>Development</Tag>
+        <Title level={4} style={{ margin: 0, color: NAVY }}>
+          Share of Wallet
+        </Title>
+      </Space>
+      <Text style={{ color: MUTED }}>
+        SOW = FY26 Recognition / (WE 5-Year Capacity / 5). Big Upside &lt; 5%, Upgrade 5-15%, Engaged 15-40%, Champion
+        40%+.
       </Text>
-      <DataFreshness asOfDate={unaskedData?.generated ?? ""} />
 
-      <Row gutter={[12, 12]} style={{ marginTop: 12, marginBottom: 12 }}>
+      <Row gutter={[12, 12]}>
         <Col xs={24} sm={8}>
-          <Card size="small">
-            <Statistic
-              title="Median SOW"
-              value={safePercent(kpis?.medianSow ?? 0, { decimals: 1 })}
-              valueStyle={{ color: NAVY }}
-            />
+          <Card bordered={false} style={DASHBOARD_CARD_STYLE}>
+            <Statistic title="Median SOW" value={safePercent(kpis?.medianSow ?? 0, { decimals: 1 })} valueStyle={{ color: NAVY }} />
           </Card>
         </Col>
         <Col xs={24} sm={8}>
-          <Card size="small">
-            <Statistic
-              title="Total Capacity Gap"
-              value={safeCurrency(kpis?.totalGap ?? 0, { maximumFractionDigits: 0 })}
-              valueStyle={{ color: WARNING }}
-            />
+          <Card bordered={false} style={DASHBOARD_CARD_STYLE}>
+            <Statistic title="Capacity Gap" value={safeCurrency(kpis?.totalGap ?? 0)} valueStyle={{ color: GOLD }} />
           </Card>
         </Col>
         <Col xs={24} sm={8}>
-          <Card size="small">
-            <Statistic title="Donors Scored" value={safeCount(kpis?.donorCount ?? 0)} valueStyle={{ color: SUCCESS }} />
+          <Card bordered={false} style={DASHBOARD_CARD_STYLE}>
+            <Statistic title="Donor Count" value={safeCount(kpis?.donorCount ?? 0)} valueStyle={{ color: SUCCESS }} />
+            <Text style={{ color: MUTED }}>Avg SOW: {safeNumber(kpis?.averageSow ?? 0, { maximumFractionDigits: 1 })}%</Text>
           </Card>
         </Col>
       </Row>
 
+      <Title level={5} style={{ margin: 0, color: NAVY }}>
+        Distribution & Capacity Positioning
+      </Title>
       <Row gutter={[12, 12]}>
         <Col xs={24} lg={12}>
-          <Card size="small" title="SOW Distribution">
+          <Card bordered={false} style={DASHBOARD_CARD_STYLE}>
             <Plot
               data={[
                 {
                   type: "histogram",
-                  x: opportunities.map((o) => o?.sowPercent ?? 0),
-                  marker: { color: "#1c88ed" },
-                  nbinsx: 24,
+                  x: opportunities.map((row) => row?.sowPercent ?? 0),
+                  marker: { color: PLOTLY_COLORS[0] },
                 },
               ]}
               layout={{
-                autosize: true,
-                height: 300,
-                margin: { l: 45, r: 15, t: 10, b: 40 },
+                ...PLOTLY_BASE_LAYOUT,
+                height: 320,
                 xaxis: { title: "SOW %" },
                 yaxis: { title: "Donors" },
-                paper_bgcolor: "white",
-                plot_bgcolor: "white",
               }}
               style={{ width: "100%" }}
-              config={{ displayModeBar: false, responsive: true }}
+              config={{ displayModeBar: false }}
             />
           </Card>
         </Col>
         <Col xs={24} lg={12}>
-          <Card size="small" title="Capacity vs Recognition">
+          <Card bordered={false} style={DASHBOARD_CARD_STYLE}>
             <Plot
               data={[
                 {
                   type: "scatter",
                   mode: "markers",
-                  x: opportunities.map((o) => o?.annualCapacity ?? 0),
-                  y: opportunities.map((o) => o?.fy26Recognition ?? 0),
-                  text: opportunities.map((o) => o?.name ?? ""),
+                  x: opportunities.map((row) => row?.annualCapacity ?? 0),
+                  y: opportunities.map((row) => row?.fy26Recognition ?? 0),
+                  text: opportunities.map((row) => row?.name ?? ""),
                   marker: {
-                    size: opportunities.map((o) => Math.min(Math.max((o?.sowPercent ?? 0) / 3, 6), 20)),
-                    color: opportunities.map((o) => o?.sowPercent ?? 0),
-                    colorscale: "Blues",
-                    showscale: true,
+                    color: opportunities.map((row) => row?.sowPercent ?? 0),
+                    colorscale: [
+                      [0, PLOTLY_COLORS[2]],
+                      [0.5, PLOTLY_COLORS[0]],
+                      [1, PLOTLY_COLORS[1]],
+                    ],
+                    size: 10,
                   },
-                  hovertemplate:
-                    "<b>%{text}</b><br>Annual Capacity: %{x:$,.0f}<br>FY26 Recognition: %{y:$,.0f}<extra></extra>",
+                  hovertemplate: "<b>%{text}</b><br>Capacity: %{x:$,.0f}<br>Recognition: %{y:$,.0f}<extra></extra>",
                 },
               ]}
               layout={{
-                autosize: true,
-                height: 300,
-                margin: { l: 55, r: 15, t: 10, b: 45 },
-                xaxis: { title: "Annual Capacity ($)" },
-                yaxis: { title: "FY26 Recognition ($)" },
-                paper_bgcolor: "white",
-                plot_bgcolor: "white",
+                ...PLOTLY_BASE_LAYOUT,
+                height: 320,
+                xaxis: { title: "Annual Capacity" },
+                yaxis: { title: "FY26 Recognition" },
               }}
               style={{ width: "100%" }}
-              config={{ displayModeBar: false, responsive: true }}
+              config={{ displayModeBar: false }}
             />
           </Card>
         </Col>
       </Row>
 
-      <Card size="small" title="Top Upgrade Opportunities" style={{ marginTop: 12 }}>
+      <Title level={5} style={{ margin: 0, color: NAVY }}>
+        Top Upgrade Opportunities
+      </Title>
+      <Card bordered={false} style={DASHBOARD_CARD_STYLE}>
         <Table<OpportunityRow>
-          rowKey={(row) => row?.id || row?.name || "donor-row"}
           dataSource={topUpgradeRows}
+          rowKey={(row) => row?.key ?? "row"}
           pagination={{ pageSize: 10, size: "small" }}
           size="small"
-          scroll={{ x: 700 }}
           columns={[
             { title: "Donor", dataIndex: "name", key: "name", ellipsis: true },
             { title: "DRM", dataIndex: "drm", key: "drm", ellipsis: true },
-            {
-              title: "FY26 Recognition",
-              dataIndex: "fy26Recognition",
-              key: "fy26Recognition",
-              render: (v: number) => safeCurrency(v ?? 0, { maximumFractionDigits: 0 }),
-            },
-            {
-              title: "Annual Capacity",
-              dataIndex: "annualCapacity",
-              key: "annualCapacity",
-              render: (v: number) => safeCurrency(v ?? 0, { maximumFractionDigits: 0 }),
-            },
-            {
-              title: "SOW",
-              dataIndex: "sowPercent",
-              key: "sowPercent",
-              render: (v: number) => safePercent(v ?? 0, { decimals: 1 }),
-            },
-            {
-              title: "Capacity Gap",
-              dataIndex: "capacityGap",
-              key: "capacityGap",
-              render: (v: number) => safeCurrency(v ?? 0, { maximumFractionDigits: 0 }),
-            },
+            { title: "Recognition", dataIndex: "fy26Recognition", key: "fy26Recognition", render: (value: number) => safeCurrency(value ?? 0) },
+            { title: "Annual Capacity", dataIndex: "annualCapacity", key: "annualCapacity", render: (value: number) => safeCurrency(value ?? 0) },
+            { title: "SOW", dataIndex: "sowPercent", key: "sowPercent", render: (value: number) => safePercent(value ?? 0, { decimals: 1 }) },
+            { title: "Gap", dataIndex: "capacityGap", key: "capacityGap", render: (value: number) => safeCurrency(value ?? 0) },
             {
               title: "Segment",
               dataIndex: "segment",
               key: "segment",
-              render: (v: OpportunityRow["segment"]) => (
-                <Tag color={v === "Big Upside" ? "volcano" : v === "Upgrade" ? "gold" : v === "Engaged" ? "blue" : "green"}>
-                  {v ?? "—"}
-                </Tag>
-              ),
+              render: (value: OpportunityRow["segment"]) => {
+                const color = value === "Big Upside" ? ERROR : value === "Upgrade" ? WARNING : value === "Engaged" ? NAVY : SUCCESS;
+                return <Tag color={color}>{value}</Tag>;
+              },
             },
           ]}
         />
       </Card>
-    </div>
+
+      <DataFreshness asOfDate={unaskedData?.generated ?? ""} />
+    </Space>
   );
 }

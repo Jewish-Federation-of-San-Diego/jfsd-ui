@@ -1,13 +1,15 @@
-import { Card, Col, Row, Statistic, Tabs, Typography } from "antd";
+import { Card, Col, Row, Statistic, Table, Typography, Space, Tag, Tabs } from "antd";
 import { useEffect, useMemo, useState } from "react";
 import Plot from "react-plotly.js";
-import { DashboardErrorState } from "../components/DashboardErrorState";
 import { DashboardSkeleton } from "../components/DashboardSkeleton";
-import { NAVY, SUCCESS, GOLD } from "../theme/jfsdTheme";
+import { DataFreshness } from "../components/DataFreshness";
+import { DashboardErrorState } from "../components/DashboardErrorState";
 import { fetchJson } from "../utils/dataFetch";
 import { parseDonorRecords } from "../utils/donorAnalytics";
 import type { DonorDataResponse } from "../utils/donorAnalytics";
-import { safeCount, safePercent } from "../utils/formatters";
+import { safePercent, safeNumber, safeCount } from "../utils/formatters";
+import { NAVY, GOLD, SUCCESS, MUTED, ANALYTICS } from "../theme/jfsdTheme";
+import { DASHBOARD_CARD_STYLE, PLOTLY_BASE_LAYOUT, PLOTLY_COLORS } from "../utils/dashboardStyles";
 
 const { Title, Text } = Typography;
 
@@ -27,6 +29,14 @@ interface CohortSeries {
   size: number;
   survival: [number, number, number];
   retention: [number, number];
+}
+
+interface CohortTableRow {
+  key: string;
+  cohort: string;
+  size: number;
+  fy26Active: number;
+  retention2526: number;
 }
 
 export function CohortSurvivalDashboard() {
@@ -82,31 +92,44 @@ export function CohortSurvivalDashboard() {
     return total / cohorts.length;
   }, [cohorts]);
 
+  const cohortTable = useMemo<CohortTableRow[]>(
+    () =>
+      cohorts.map((cohort) => ({
+        key: cohort.cohort,
+        cohort: cohort.cohort,
+        size: cohort.size,
+        fy26Active: cohort.survival[2] ?? 0,
+        retention2526: cohort.retention[1] ?? 0,
+      })),
+    [cohorts],
+  );
+
   if (loading) return <DashboardSkeleton kpiCount={3} />;
   if (error) return <DashboardErrorState message="Failed to load cohort survival data" description={error} />;
 
   return (
-    <div style={{ padding: 4 }}>
-      <Title level={3} style={{ color: NAVY, marginTop: 0 }}>
-        Cohort Survival Analysis
-      </Title>
-      <Text type="secondary">
-        Cohorts are inferred from historical recognition depth in donor records, then tracked across FY24-FY26.
-      </Text>
+    <Space direction="vertical" size={12} style={{ width: "100%" }}>
+      <Space align="center">
+        <Tag color={ANALYTICS}>Analytics</Tag>
+        <Title level={4} style={{ margin: 0, color: NAVY }}>
+          Cohort Survival Analysis
+        </Title>
+      </Space>
+      <Text style={{ color: MUTED }}>Cohorts are inferred from historical recognition depth and tracked across FY24-FY26.</Text>
 
-      <Row gutter={[12, 12]} style={{ marginTop: 12, marginBottom: 12 }}>
+      <Row gutter={[12, 12]}>
         <Col xs={24} sm={8}>
-          <Card size="small">
+          <Card bordered={false} style={DASHBOARD_CARD_STYLE}>
             <Statistic title="Cohorts Tracked" value={safeCount(cohorts.length)} valueStyle={{ color: NAVY }} />
           </Card>
         </Col>
         <Col xs={24} sm={8}>
-          <Card size="small">
+          <Card bordered={false} style={DASHBOARD_CARD_STYLE}>
             <Statistic title="Donors Modeled" value={safeCount(donors.length)} valueStyle={{ color: SUCCESS }} />
           </Card>
         </Col>
         <Col xs={24} sm={8}>
-          <Card size="small">
+          <Card bordered={false} style={DASHBOARD_CARD_STYLE}>
             <Statistic
               title="Avg FY25→FY26 Retention"
               value={safePercent(avgRetention, { decimals: 1 })}
@@ -116,7 +139,10 @@ export function CohortSurvivalDashboard() {
         </Col>
       </Row>
 
-      <Card size="small" title="Survival Curves and Retention Heatmap" style={{ marginBottom: 12 }}>
+      <Title level={5} style={{ margin: 0, color: NAVY }}>
+        Survival Curves and Retention Heatmap
+      </Title>
+      <Card bordered={false} style={DASHBOARD_CARD_STYLE}>
         <Tabs
           items={[
             {
@@ -132,18 +158,15 @@ export function CohortSurvivalDashboard() {
                         name: `${cohort?.cohort} (${safeCount(cohort?.size ?? 0)})`,
                         x: ["FY24", "FY25", "FY26"],
                         y: cohort?.survival ?? [0, 0, 0],
-                        line: { width: 2 },
+                        line: { width: 2, color: PLOTLY_COLORS[0] },
                       }))}
                       layout={{
-                        autosize: true,
+                        ...PLOTLY_BASE_LAYOUT,
                         height: 340,
-                        margin: { l: 55, r: 15, t: 10, b: 45 },
                         yaxis: { title: "Active Donors (%)", range: [0, 100] },
-                        paper_bgcolor: "white",
-                        plot_bgcolor: "white",
                       }}
                       style={{ width: "100%" }}
-                      config={{ responsive: true, displayModeBar: false }}
+                      config={{ displayModeBar: false }}
                     />
                   </Col>
                   <Col xs={24} lg={12}>
@@ -154,21 +177,19 @@ export function CohortSurvivalDashboard() {
                           x: ["FY24→FY25", "FY25→FY26"],
                           y: cohorts.map((cohort) => cohort?.cohort),
                           z: cohorts.map((cohort) => cohort?.retention ?? [0, 0]),
-                          colorscale: "Blues",
+                          colorscale: [[0, PLOTLY_COLORS[6]], [1, PLOTLY_COLORS[0]]],
                           zmin: 0,
                           zmax: 100,
                           hovertemplate: "Cohort %{y}<br>%{x}: %{z:.1f}%<extra></extra>",
                         },
                       ]}
                       layout={{
-                        autosize: true,
+                        ...PLOTLY_BASE_LAYOUT,
                         height: 340,
-                        margin: { l: 95, r: 10, t: 10, b: 45 },
-                        paper_bgcolor: "white",
-                        plot_bgcolor: "white",
+                        margin: { l: 95, r: 20, t: 40, b: 40 },
                       }}
                       style={{ width: "100%" }}
-                      config={{ responsive: true, displayModeBar: false }}
+                      config={{ displayModeBar: false }}
                     />
                   </Col>
                 </Row>
@@ -181,7 +202,7 @@ export function CohortSurvivalDashboard() {
                 <iframe
                   src={`${import.meta.env.BASE_URL}embedded/cohort-survival.html`}
                   title="Cohort Survival Embedded"
-                  style={{ width: "100%", height: 520, border: "1px solid #F0F0F0" }}
+                  style={{ width: "100%", height: 520, border: `1px solid ${MUTED}` }}
                 />
               ),
             },
@@ -189,13 +210,38 @@ export function CohortSurvivalDashboard() {
         />
       </Card>
 
-      <Card size="small" title="Mortality Model">
+      <Card bordered={false} style={DASHBOARD_CARD_STYLE}>
+        <Table<CohortTableRow>
+          size="small"
+          rowKey={(row) => row.key}
+          dataSource={cohortTable}
+          pagination={false}
+          columns={[
+            { title: "Cohort", dataIndex: "cohort", key: "cohort" },
+            { title: "Size", dataIndex: "size", key: "size", render: (value: number) => safeCount(value ?? 0) },
+            { title: "FY26 Active %", dataIndex: "fy26Active", key: "fy26Active", render: (value: number) => safePercent(value ?? 0, { decimals: 1 }) },
+            { title: "FY25→FY26 Retention", dataIndex: "retention2526", key: "retention2526", render: (value: number) => safePercent(value ?? 0, { decimals: 1 }) },
+            {
+              title: "Expected Active Donors",
+              key: "expected",
+              render: (_: unknown, row: CohortTableRow) => safeNumber(((row?.size ?? 0) * (row?.fy26Active ?? 0)) / 100, { maximumFractionDigits: 0 }),
+            },
+          ]}
+        />
+      </Card>
+
+      <Title level={5} style={{ margin: 0, color: NAVY }}>
+        Mortality Model
+      </Title>
+      <Card bordered={false} style={DASHBOARD_CARD_STYLE}>
         <iframe
           src={`${import.meta.env.BASE_URL}embedded/mortality-model.html`}
           title="Mortality Model Embedded"
-          style={{ width: "100%", height: 520, border: "1px solid #F0F0F0" }}
+          style={{ width: "100%", height: 520, border: `1px solid ${MUTED}` }}
         />
       </Card>
-    </div>
+
+      <DataFreshness asOfDate="" />
+    </Space>
   );
 }

@@ -1,13 +1,15 @@
-import { Card, Col, Input, Row, Select, Statistic, Typography } from "antd";
+import { Card, Col, Row, Statistic, Table, Typography, Space, Tag, Input, Select } from "antd";
 import * as d3 from "d3";
 import { useEffect, useMemo, useRef, useState } from "react";
-import { DashboardErrorState } from "../components/DashboardErrorState";
 import { DashboardSkeleton } from "../components/DashboardSkeleton";
-import { NAVY } from "../theme/jfsdTheme";
+import { DataFreshness } from "../components/DataFreshness";
+import { DashboardErrorState } from "../components/DashboardErrorState";
 import { fetchJson } from "../utils/dataFetch";
-import { safeCount } from "../utils/formatters";
+import { safePercent, safeNumber, safeCount } from "../utils/formatters";
+import { NAVY, GOLD, SUCCESS, WARNING, MUTED, ANALYTICS } from "../theme/jfsdTheme";
+import { DASHBOARD_CARD_STYLE, PLOTLY_COLORS } from "../utils/dashboardStyles";
 
-const { Title } = Typography;
+const { Title, Text } = Typography;
 
 interface NetworkNode {
   id?: string;
@@ -34,13 +36,13 @@ type SimNode = NetworkNode & d3.SimulationNodeDatum & { id: string; name: string
 type SimLink = d3.SimulationLinkDatum<SimNode> & NetworkLink;
 
 const GROUP_COLORS: Record<string, string> = {
-  board: "#1c88ed",
-  campaign: "#236B4A",
-  society: "#C5A258",
-  community: "#8B6914",
-  synagogue: "#5B8DB8",
-  committee: "#9B4DCA",
-  central: "#1B365D",
+  board: PLOTLY_COLORS[0],
+  campaign: PLOTLY_COLORS[1],
+  society: PLOTLY_COLORS[2],
+  community: PLOTLY_COLORS[5],
+  synagogue: PLOTLY_COLORS[4],
+  committee: PLOTLY_COLORS[6],
+  central: NAVY,
 };
 
 export function CommunityNetworkDashboard() {
@@ -77,6 +79,32 @@ export function CommunityNetworkDashboard() {
     });
     return { nodes: searched, links };
   }, [data, minSize, search]);
+
+  const summaryRows = useMemo(() => {
+    const degree = new Map<string, number>();
+    filtered.links.forEach((link) => {
+      const source = link?.source ?? "";
+      const target = link?.target ?? "";
+      degree.set(source, (degree.get(source) ?? 0) + 1);
+      degree.set(target, (degree.get(target) ?? 0) + 1);
+    });
+    return filtered.nodes
+      .map((node, index) => ({
+        key: node?.id || `node-${index}`,
+        name: node?.name ?? "Unknown",
+        type: node?.type ?? "unknown",
+        group: node?.group ?? "other",
+        size: node?.size ?? 0,
+        degree: degree.get(node?.id ?? "") ?? 0,
+      }))
+      .sort((a, b) => (b?.degree ?? 0) - (a?.degree ?? 0))
+      .slice(0, 20);
+  }, [filtered]);
+
+  const avgDegree = useMemo(() => {
+    if (filtered.nodes.length === 0) return 0;
+    return (filtered.links.length * 2) / filtered.nodes.length;
+  }, [filtered]);
 
   useEffect(() => {
     if (!svgRef.current) return;
@@ -116,7 +144,7 @@ export function CommunityNetworkDashboard() {
 
     const link = g
       .append("g")
-      .attr("stroke", "#D9D9D9")
+      .attr("stroke", MUTED)
       .attr("stroke-opacity", 0.65)
       .selectAll("line")
       .data(links)
@@ -125,13 +153,13 @@ export function CommunityNetworkDashboard() {
 
     const node = (g
       .append("g")
-      .attr("stroke", "#FFFFFF")
+      .attr("stroke", "white")
       .attr("stroke-width", 1)
       .selectAll("circle")
       .data(nodes)
       .join("circle")
       .attr("r", (d) => Math.min(Math.max((d?.size ?? 8) * 0.35, 4), 20))
-      .attr("fill", (d) => GROUP_COLORS[d?.group ?? "other"] ?? "#1c88ed")) as d3.Selection<
+      .attr("fill", (d) => GROUP_COLORS[d?.group ?? "other"] ?? NAVY)) as d3.Selection<
       SVGCircleElement,
       SimNode,
       SVGGElement,
@@ -166,7 +194,7 @@ export function CommunityNetworkDashboard() {
       .join("text")
       .text((d) => d?.name ?? "")
       .attr("font-size", 10)
-      .attr("fill", "#555")
+      .attr("fill", MUTED)
       .attr("dy", -10)
       .attr("text-anchor", "middle");
 
@@ -205,32 +233,41 @@ export function CommunityNetworkDashboard() {
   if (error) return <DashboardErrorState message="Failed to load community network data" description={error} />;
 
   return (
-    <div style={{ padding: 4 }}>
-      <Title level={3} style={{ color: NAVY, marginTop: 0 }}>
-        Community Network
-      </Title>
-      <Row gutter={[12, 12]} style={{ marginBottom: 12 }}>
+    <Space direction="vertical" size={12} style={{ width: "100%" }}>
+      <Space align="center">
+        <Tag color={ANALYTICS}>Analytics</Tag>
+        <Title level={4} style={{ margin: 0, color: NAVY }}>
+          Community Network
+        </Title>
+      </Space>
+      <Text style={{ color: MUTED }}>
+        Force-directed donor relationship graph with giving-level filtering, search, and zoom.
+      </Text>
+
+      <Row gutter={[12, 12]}>
         <Col xs={24} sm={8}>
-          <Card size="small">
+          <Card bordered={false} style={DASHBOARD_CARD_STYLE}>
             <Statistic title="Visible Nodes" value={safeCount(filtered?.nodes?.length ?? 0)} />
           </Card>
         </Col>
         <Col xs={24} sm={8}>
-          <Card size="small">
+          <Card bordered={false} style={DASHBOARD_CARD_STYLE}>
             <Statistic title="Visible Edges" value={safeCount(filtered?.links?.length ?? 0)} />
           </Card>
         </Col>
         <Col xs={24} sm={8}>
-          <Card size="small">
+          <Card bordered={false} style={DASHBOARD_CARD_STYLE}>
             <Statistic
-              title="Node Types"
-              value={safeCount(new Set(filtered?.nodes?.map((n) => n?.type ?? "unknown")).size)}
+              title="Average Degree"
+              value={safeNumber(avgDegree, { maximumFractionDigits: 1 })}
+              valueStyle={{ color: GOLD }}
             />
+            <Text style={{ color: MUTED }}>Type count: {safeCount(new Set(filtered.nodes.map((n) => n?.type ?? "unknown")).size)}</Text>
           </Card>
         </Col>
       </Row>
 
-      <Card size="small" style={{ marginBottom: 12 }}>
+      <Card bordered={false} style={DASHBOARD_CARD_STYLE}>
         <Row gutter={[12, 12]}>
           <Col xs={24} md={12}>
             <Input.Search
@@ -256,9 +293,38 @@ export function CommunityNetworkDashboard() {
         </Row>
       </Card>
 
-      <Card size="small" title="D3 Force-Directed Network (drag nodes, scroll to zoom)">
-        <svg ref={svgRef} viewBox="0 0 1100 620" style={{ width: "100%", height: 620, border: "1px solid #F0F0F0" }} />
+      <Title level={5} style={{ margin: 0, color: NAVY }}>
+        Network Visualization
+      </Title>
+      <Card bordered={false} style={DASHBOARD_CARD_STYLE}>
+        <svg ref={svgRef} viewBox="0 0 1100 620" style={{ width: "100%", height: 620, border: `1px solid ${MUTED}` }} />
       </Card>
-    </div>
+
+      <Title level={5} style={{ margin: 0, color: NAVY }}>
+        Most Connected Nodes
+      </Title>
+      <Card bordered={false} style={DASHBOARD_CARD_STYLE}>
+        <Table
+          size="small"
+          dataSource={summaryRows}
+          pagination={{ pageSize: 10, size: "small" }}
+          columns={[
+            { title: "Name", dataIndex: "name", key: "name", ellipsis: true },
+            { title: "Type", dataIndex: "type", key: "type", render: (value: string) => <Tag color={SUCCESS}>{value}</Tag> },
+            { title: "Group", dataIndex: "group", key: "group", render: (value: string) => <Tag color={WARNING}>{value}</Tag> },
+            { title: "Node Size", dataIndex: "size", key: "size", render: (value: number) => safeCount(value ?? 0) },
+            { title: "Degree", dataIndex: "degree", key: "degree", render: (value: number) => safeCount(value ?? 0) },
+            {
+              title: "Share",
+              key: "share",
+              render: (_: unknown, row: { degree: number }) =>
+                safePercent(filtered.links.length > 0 ? (row.degree / (filtered.links.length * 2)) * 100 : 0, { decimals: 1 }),
+            },
+          ]}
+        />
+      </Card>
+
+      <DataFreshness asOfDate="" />
+    </Space>
   );
 }

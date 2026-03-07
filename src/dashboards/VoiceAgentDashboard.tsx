@@ -1,14 +1,15 @@
-import { Card, Col, Row, Statistic, Table, Tabs, Typography } from "antd";
+import { Card, Col, Row, Statistic, Table, Typography, Space, Tag, Tabs } from "antd";
 import { useEffect, useMemo, useState } from "react";
 import Plot from "react-plotly.js";
-import { DashboardErrorState } from "../components/DashboardErrorState";
 import { DashboardSkeleton } from "../components/DashboardSkeleton";
 import { DataFreshness } from "../components/DataFreshness";
-import { NAVY, SUCCESS, GOLD } from "../theme/jfsdTheme";
+import { DashboardErrorState } from "../components/DashboardErrorState";
 import { fetchJson } from "../utils/dataFetch";
-import { safeCount, safeNumber, safePercent } from "../utils/formatters";
+import { safePercent, safeNumber, safeCount } from "../utils/formatters";
+import { NAVY, GOLD, SUCCESS, MUTED, OPERATIONS } from "../theme/jfsdTheme";
+import { DASHBOARD_CARD_STYLE, PLOTLY_BASE_LAYOUT, PLOTLY_COLORS } from "../utils/dashboardStyles";
 
-const { Title } = Typography;
+const { Title, Text } = Typography;
 
 interface VoiceAgent {
   name?: string;
@@ -129,20 +130,23 @@ export function VoiceAgentDashboard() {
   if (error) return <DashboardErrorState message="Failed to load voice agent data" description={error} />;
 
   return (
-    <div style={{ padding: 4 }}>
-      <Title level={3} style={{ color: NAVY, marginTop: 0 }}>
-        Voice Agent Dashboard
-      </Title>
-      <DataFreshness asOfDate={data?.asOfDate ?? ""} />
+    <Space direction="vertical" size={12} style={{ width: "100%" }}>
+      <Space align="center">
+        <Tag color={OPERATIONS}>Operations</Tag>
+        <Title level={4} style={{ margin: 0, color: NAVY }}>
+          Voice Agent Dashboard
+        </Title>
+      </Space>
+      <Text style={{ color: MUTED }}>Operational call volume and completion tracking for the five voice agents.</Text>
 
-      <Row gutter={[12, 12]} style={{ marginTop: 8, marginBottom: 12 }}>
+      <Row gutter={[12, 12]}>
         <Col xs={24} sm={8}>
-          <Card size="small">
+          <Card bordered={false} style={DASHBOARD_CARD_STYLE}>
             <Statistic title="Total Calls" value={safeCount(kpis?.totalCalls ?? 0)} valueStyle={{ color: NAVY }} />
           </Card>
         </Col>
         <Col xs={24} sm={8}>
-          <Card size="small">
+          <Card bordered={false} style={DASHBOARD_CARD_STYLE}>
             <Statistic
               title="Avg Duration (sec)"
               value={safeNumber(kpis?.avgDuration ?? 0, { maximumFractionDigits: 0 })}
@@ -151,17 +155,23 @@ export function VoiceAgentDashboard() {
           </Card>
         </Col>
         <Col xs={24} sm={8}>
-          <Card size="small">
+          <Card bordered={false} style={DASHBOARD_CARD_STYLE}>
             <Statistic
               title="Completion Rate"
               value={safePercent(kpis?.completionRate ?? 0, { decimals: 1 })}
               valueStyle={{ color: SUCCESS }}
             />
+            <Text style={{ color: MUTED }}>
+              Completed calls: {safeCount(calls.filter((call) => call?.completed).length)} / {safeCount(calls.length)}
+            </Text>
           </Card>
         </Col>
       </Row>
 
-      <Card size="small" title="Calls Over Time" style={{ marginBottom: 12 }}>
+      <Title level={5} style={{ margin: 0, color: NAVY }}>
+        Calls Over Time
+      </Title>
+      <Card bordered={false} style={DASHBOARD_CARD_STYLE}>
         <Tabs
           items={[
             {
@@ -175,20 +185,17 @@ export function VoiceAgentDashboard() {
                       mode: "lines+markers",
                       x: dailySeries.map(([x]) => x),
                       y: dailySeries.map(([, y]) => y),
-                      line: { color: "#1c88ed", width: 2 },
+                      line: { color: PLOTLY_COLORS[0], width: 2 },
                     },
                   ]}
                   layout={{
-                    autosize: true,
+                    ...PLOTLY_BASE_LAYOUT,
                     height: 300,
-                    margin: { l: 45, r: 10, t: 10, b: 45 },
                     yaxis: { title: "Calls" },
                     xaxis: { title: "Date" },
-                    paper_bgcolor: "white",
-                    plot_bgcolor: "white",
                   }}
                   style={{ width: "100%" }}
-                  config={{ responsive: true, displayModeBar: false }}
+                  config={{ displayModeBar: false }}
                 />
               ),
             },
@@ -202,20 +209,17 @@ export function VoiceAgentDashboard() {
                       type: "bar",
                       x: weeklySeries.map(([x]) => x),
                       y: weeklySeries.map(([, y]) => y),
-                      marker: { color: "#236B4A" },
+                      marker: { color: PLOTLY_COLORS[1] },
                     },
                   ]}
                   layout={{
-                    autosize: true,
+                    ...PLOTLY_BASE_LAYOUT,
                     height: 300,
-                    margin: { l: 45, r: 10, t: 10, b: 45 },
                     yaxis: { title: "Calls" },
                     xaxis: { title: "Week of" },
-                    paper_bgcolor: "white",
-                    plot_bgcolor: "white",
                   }}
                   style={{ width: "100%" }}
-                  config={{ responsive: true, displayModeBar: false }}
+                  config={{ displayModeBar: false }}
                 />
               ),
             },
@@ -223,7 +227,10 @@ export function VoiceAgentDashboard() {
         />
       </Card>
 
-      <Card size="small" title="Voice Agents">
+      <Title level={5} style={{ margin: 0, color: NAVY }}>
+        Agent Details
+      </Title>
+      <Card bordered={false} style={DASHBOARD_CARD_STYLE}>
         <Table
           dataSource={byAgent}
           pagination={false}
@@ -231,13 +238,21 @@ export function VoiceAgentDashboard() {
           scroll={{ x: 650 }}
           columns={[
             { title: "Agent", dataIndex: "name", key: "name" },
-            { title: "Phone", dataIndex: "phone", key: "phone" },
+            { title: "Phone", dataIndex: "phone", key: "phone", render: (value: string) => value || "—" },
             { title: "Purpose", dataIndex: "purpose", key: "purpose", ellipsis: true },
             { title: "Call Count", dataIndex: "callCount", key: "callCount", render: (v: number) => safeCount(v ?? 0) },
             { title: "Last Active", dataIndex: "lastActive", key: "lastActive" },
+            {
+              title: "Call Share",
+              key: "share",
+              render: (_: unknown, row: { callCount: number }) =>
+                safePercent(calls.length > 0 ? (row.callCount / calls.length) * 100 : 0, { decimals: 1 }),
+            },
           ]}
         />
       </Card>
-    </div>
+
+      <DataFreshness asOfDate={data?.asOfDate ?? ""} />
+    </Space>
   );
 }

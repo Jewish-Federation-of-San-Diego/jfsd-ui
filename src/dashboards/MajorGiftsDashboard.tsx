@@ -1,14 +1,15 @@
-import { Card, Col, Row, Statistic, Table, Tag, Typography } from "antd";
+import { Card, Col, Row, Statistic, Table, Typography, Space, Tag } from "antd";
 import { useEffect, useMemo, useState } from "react";
 import Plot from "react-plotly.js";
-import { DashboardErrorState } from "../components/DashboardErrorState";
 import { DashboardSkeleton } from "../components/DashboardSkeleton";
 import { DataFreshness } from "../components/DataFreshness";
-import { NAVY, GOLD, SUCCESS } from "../theme/jfsdTheme";
+import { DashboardErrorState } from "../components/DashboardErrorState";
 import { fetchJson } from "../utils/dataFetch";
-import { safeCount, safeCurrency, safePercent } from "../utils/formatters";
+import { safeCurrency, safePercent, safeCount } from "../utils/formatters";
+import { NAVY, GOLD, SUCCESS, WARNING, MUTED, DEVELOPMENT } from "../theme/jfsdTheme";
+import { DASHBOARD_CARD_STYLE, PLOTLY_BASE_LAYOUT, PLOTLY_COLORS } from "../utils/dashboardStyles";
 
-const { Title } = Typography;
+const { Title, Text } = Typography;
 
 interface PipelineRecord {
   Id?: string;
@@ -97,15 +98,18 @@ export function MajorGiftsDashboard() {
   if (error) return <DashboardErrorState message="Failed to load major gifts data" description={error} />;
 
   return (
-    <div style={{ padding: 4 }}>
-      <Title level={3} style={{ color: NAVY, marginTop: 0 }}>
-        Major Gifts Pipeline
-      </Title>
-      <DataFreshness asOfDate={data?.fetchedAt ?? ""} />
+    <Space direction="vertical" size={12} style={{ width: "100%" }}>
+      <Space align="center">
+        <Tag color={DEVELOPMENT}>Development</Tag>
+        <Title level={4} style={{ margin: 0, color: NAVY }}>
+          Major Gifts Pipeline
+        </Title>
+      </Space>
+      <Text style={{ color: MUTED }}>Pipeline overview across cultivation, solicitation, pending, and closed stages.</Text>
 
-      <Row gutter={[12, 12]} style={{ marginTop: 8, marginBottom: 12 }}>
+      <Row gutter={[12, 12]}>
         <Col xs={24} sm={8}>
-          <Card size="small">
+          <Card bordered={false} style={DASHBOARD_CARD_STYLE}>
             <Statistic
               title="Pipeline Value"
               value={safeCurrency(kpis?.pipelineValue ?? 0, { maximumFractionDigits: 0 })}
@@ -114,7 +118,7 @@ export function MajorGiftsDashboard() {
           </Card>
         </Col>
         <Col xs={24} sm={8}>
-          <Card size="small">
+          <Card bordered={false} style={DASHBOARD_CARD_STYLE}>
             <Statistic
               title="Avg Gift Size"
               value={safeCurrency(kpis?.avgGiftSize ?? 0, { maximumFractionDigits: 0 })}
@@ -123,19 +127,23 @@ export function MajorGiftsDashboard() {
           </Card>
         </Col>
         <Col xs={24} sm={8}>
-          <Card size="small">
+          <Card bordered={false} style={DASHBOARD_CARD_STYLE}>
             <Statistic
               title="Close Rate"
               value={safePercent(kpis?.closeRate ?? 0, { decimals: 1 })}
               valueStyle={{ color: SUCCESS }}
             />
+            <Text style={{ color: MUTED }}>Closed won / closed outcomes</Text>
           </Card>
         </Col>
       </Row>
 
+      <Title level={5} style={{ margin: 0, color: NAVY }}>
+        Pipeline Visuals
+      </Title>
       <Row gutter={[12, 12]}>
         <Col xs={24} lg={12}>
-          <Card size="small" title="Pipeline Funnel">
+          <Card bordered={false} style={DASHBOARD_CARD_STYLE}>
             <Plot
               data={[
                 {
@@ -147,22 +155,21 @@ export function MajorGiftsDashboard() {
                     stageStats?.Pending?.value ?? 0,
                     stageStats?.Closed?.value ?? 0,
                   ],
-                  textinfo: "value+percent previous",
-                  marker: { color: ["#1c88ed", "#236B4A", "#C5A258", "#1B365D"] },
+                  textinfo: "value+percent",
+                  marker: { color: [PLOTLY_COLORS[0], PLOTLY_COLORS[1], PLOTLY_COLORS[2], PLOTLY_COLORS[6]] },
                 },
               ]}
               layout={{
-                autosize: true,
+                ...PLOTLY_BASE_LAYOUT,
                 height: 320,
-                margin: { l: 90, r: 15, t: 10, b: 20 },
               }}
               style={{ width: "100%" }}
-              config={{ responsive: true, displayModeBar: false }}
+              config={{ displayModeBar: false }}
             />
           </Card>
         </Col>
         <Col xs={24} lg={12}>
-          <Card size="small" title="Stage Distribution (Count)">
+          <Card bordered={false} style={DASHBOARD_CARD_STYLE}>
             <Plot
               data={[
                 {
@@ -174,24 +181,26 @@ export function MajorGiftsDashboard() {
                     stageStats?.Pending?.count ?? 0,
                     stageStats?.Closed?.count ?? 0,
                   ],
-                  marker: { colors: ["#1c88ed", "#236B4A", "#C5A258", "#1B365D"] },
+                  marker: { colors: [PLOTLY_COLORS[0], PLOTLY_COLORS[1], PLOTLY_COLORS[2], PLOTLY_COLORS[6]] },
                   textinfo: "label+percent",
                 },
               ]}
               layout={{
-                autosize: true,
+                ...PLOTLY_BASE_LAYOUT,
                 height: 320,
-                margin: { l: 10, r: 10, t: 10, b: 10 },
                 showlegend: false,
               }}
               style={{ width: "100%" }}
-              config={{ responsive: true, displayModeBar: false }}
+              config={{ displayModeBar: false }}
             />
           </Card>
         </Col>
       </Row>
 
-      <Card size="small" title="Top Prospects" style={{ marginTop: 12 }}>
+      <Title level={5} style={{ margin: 0, color: NAVY }}>
+        Top Prospects
+      </Title>
+      <Card bordered={false} style={DASHBOARD_CARD_STYLE}>
         <Table
           dataSource={topProspects}
           size="small"
@@ -204,7 +213,7 @@ export function MajorGiftsDashboard() {
               title: "Stage",
               dataIndex: "stage",
               key: "stage",
-              render: (stage: string) => <Tag color="blue">{stage ?? "Unknown"}</Tag>,
+              render: (stage: string) => <Tag color={WARNING}>{stage ?? "Unknown"}</Tag>,
             },
             { title: "Owner", dataIndex: "owner", key: "owner", ellipsis: true },
             {
@@ -220,11 +229,11 @@ export function MajorGiftsDashboard() {
         />
       </Card>
 
-      <Card size="small" style={{ marginTop: 12 }} title="Stage Summary">
+      <Card bordered={false} style={DASHBOARD_CARD_STYLE}>
         <Row gutter={[12, 12]}>
           {(["Cultivation", "Solicitation", "Pending", "Closed"] as StageBucket[]).map((stage) => (
             <Col xs={24} sm={12} md={6} key={stage}>
-              <Card size="small">
+              <Card bordered={false} style={DASHBOARD_CARD_STYLE}>
                 <Statistic title={stage} value={safeCount(stageStats?.[stage]?.count ?? 0)} />
                 <div>{safeCurrency(stageStats?.[stage]?.value ?? 0, { maximumFractionDigits: 0 })}</div>
               </Card>
@@ -232,6 +241,8 @@ export function MajorGiftsDashboard() {
           ))}
         </Row>
       </Card>
-    </div>
+
+      <DataFreshness asOfDate={data?.fetchedAt ?? ""} />
+    </Space>
   );
 }

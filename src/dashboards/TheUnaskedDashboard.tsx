@@ -1,14 +1,15 @@
-import { Card, Col, Row, Select, Statistic, Table, Tag, Typography } from "antd";
+import { Card, Col, Row, Statistic, Table, Typography, Space, Tag, Select } from "antd";
 import { useEffect, useMemo, useState } from "react";
 import Plot from "react-plotly.js";
-import { DashboardErrorState } from "../components/DashboardErrorState";
 import { DashboardSkeleton } from "../components/DashboardSkeleton";
 import { DataFreshness } from "../components/DataFreshness";
-import { NAVY, WARNING } from "../theme/jfsdTheme";
+import { DashboardErrorState } from "../components/DashboardErrorState";
 import { fetchJson } from "../utils/dataFetch";
-import { safeCount, safeCurrency } from "../utils/formatters";
+import { safeCurrency, safeNumber, safeCount } from "../utils/formatters";
+import { NAVY, GOLD, ERROR, WARNING, MUTED, DEVELOPMENT } from "../theme/jfsdTheme";
+import { DASHBOARD_CARD_STYLE, PLOTLY_BASE_LAYOUT, PLOTLY_COLORS } from "../utils/dashboardStyles";
 
-const { Title } = Typography;
+const { Title, Text } = Typography;
 
 interface UnaskedDonor {
   id?: string;
@@ -115,38 +116,42 @@ export function TheUnaskedDashboard() {
   if (error) return <DashboardErrorState message="Failed to load The Unasked data" description={error} />;
 
   return (
-    <div style={{ padding: 4 }}>
-      <Title level={3} style={{ color: NAVY, marginTop: 0 }}>
-        The Unasked
-      </Title>
-      <DataFreshness asOfDate={data?.generated ?? ""} />
+    <Space direction="vertical" size={12} style={{ width: "100%" }}>
+      <Space align="center">
+        <Tag color={DEVELOPMENT}>Development</Tag>
+        <Title level={4} style={{ margin: 0, color: NAVY }}>
+          The Unasked
+        </Title>
+      </Space>
+      <Text style={{ color: MUTED }}>Donors with modeled capacity and no tracked solicitation activity.</Text>
 
-      <Row gutter={[12, 12]} style={{ marginTop: 8, marginBottom: 12 }}>
+      <Row gutter={[12, 12]}>
         <Col xs={24} sm={8}>
-          <Card size="small">
+          <Card bordered={false} style={DASHBOARD_CARD_STYLE}>
             <Statistic title="Unasked Count" value={safeCount(kpis?.count ?? 0)} valueStyle={{ color: NAVY }} />
           </Card>
         </Col>
         <Col xs={24} sm={8}>
-          <Card size="small">
+          <Card bordered={false} style={DASHBOARD_CARD_STYLE}>
             <Statistic
               title="Estimated Capacity"
               value={safeCurrency(kpis?.totalCapacity ?? 0, { maximumFractionDigits: 0 })}
-              valueStyle={{ color: WARNING }}
+              valueStyle={{ color: GOLD }}
             />
           </Card>
         </Col>
         <Col xs={24} sm={8}>
-          <Card size="small">
+          <Card bordered={false} style={DASHBOARD_CARD_STYLE}>
             <Statistic
               title="Median Capacity"
               value={safeCurrency(kpis?.medianCapacity ?? 0, { maximumFractionDigits: 0 })}
             />
+            <Text style={{ color: MUTED }}>Average: {safeNumber(kpis.count > 0 ? kpis.totalCapacity / kpis.count : 0, { maximumFractionDigits: 0 })}</Text>
           </Card>
         </Col>
       </Row>
 
-      <Card size="small" style={{ marginBottom: 12 }}>
+      <Card bordered={false} style={DASHBOARD_CARD_STYLE}>
         <Row gutter={[12, 12]}>
           <Col xs={24} md={12}>
             <Select
@@ -173,32 +178,33 @@ export function TheUnaskedDashboard() {
         </Row>
       </Card>
 
+      <Title level={5} style={{ margin: 0, color: NAVY }}>
+        Capacity Distribution
+      </Title>
       <Row gutter={[12, 12]}>
         <Col xs={24} lg={11}>
-          <Card size="small" title="Capacity Distribution">
+          <Card bordered={false} style={DASHBOARD_CARD_STYLE}>
             <Plot
               data={[
                 {
                   type: "histogram",
                   x: filteredRows.map((row) => row?.estimatedCapacity ?? 0),
-                  marker: { color: "#1c88ed" },
-                  nbinsx: 20,
+                  marker: { color: PLOTLY_COLORS[0] },
                 },
               ]}
               layout={{
-                autosize: true,
+                ...PLOTLY_BASE_LAYOUT,
                 height: 320,
-                margin: { l: 50, r: 10, t: 10, b: 45 },
                 xaxis: { title: "Estimated Capacity ($)" },
                 yaxis: { title: "Donors" },
               }}
               style={{ width: "100%" }}
-              config={{ displayModeBar: false, responsive: true }}
+              config={{ displayModeBar: false }}
             />
           </Card>
         </Col>
         <Col xs={24} lg={13}>
-          <Card size="small" title="Top Unasked Donors (by Capacity)">
+          <Card bordered={false} style={DASHBOARD_CARD_STYLE}>
             <Table
               dataSource={topRows}
               size="small"
@@ -211,7 +217,7 @@ export function TheUnaskedDashboard() {
                   dataIndex: "tier",
                   key: "tier",
                   render: (tier: string) => (
-                    <Tag color={tier === "Tier 1" ? "volcano" : tier === "Tier 2" ? "gold" : tier === "Tier 3" ? "blue" : "default"}>
+                    <Tag color={tier === "Tier 1" ? ERROR : tier === "Tier 2" ? WARNING : tier === "Tier 3" ? NAVY : MUTED}>
                       {tier}
                     </Tag>
                   ),
@@ -238,6 +244,8 @@ export function TheUnaskedDashboard() {
           </Card>
         </Col>
       </Row>
-    </div>
+
+      <DataFreshness asOfDate={data?.generated ?? ""} />
+    </Space>
   );
 }
