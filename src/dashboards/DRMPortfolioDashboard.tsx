@@ -14,6 +14,8 @@ import { useEffect, useState, useCallback } from 'react';
 import { DataFreshness } from '../components/DataFreshness';
 import { DefinitionTooltip } from '../components/DefinitionTooltip';
 import { NAVY, GOLD, SUCCESS, ERROR, WARNING, MUTED } from '../theme/jfsdTheme';
+import { fetchJson } from '../utils/dataFetch';
+import { safeCount, safeCurrency } from '../utils/formatters';
 
 const { Text, Title } = Typography;
 
@@ -32,7 +34,7 @@ interface DRM {
 interface KPIs { totalPortfolioDonors: number; totalLYBUNT: number; totalRecognitionFY26: number; avgPortfolioSize: number; }
 interface PortfolioData { asOfDate: string; drms: DRM[]; kpis: KPIs; }
 
-const fmtUSD = (v: number) => `$${v.toLocaleString(undefined, { minimumFractionDigits: 0, maximumFractionDigits: 0 })}`;
+const fmtUSD = (v: number) => safeCurrency(v, { maximumFractionDigits: 0 });
 const fmtDate = (d: string) => d ? new Date(d + 'T00:00:00').toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }) : '—';
 const isUnassignedPool = (drm: DRM) => drm.totalDonors > 5000 || drm.name.includes('Rabkin');
 
@@ -224,10 +226,10 @@ export function DRMPortfolioDashboard() {
   const [refreshing, setRefreshing] = useState(false);
 
   useEffect(() => {
-    fetch(`${import.meta.env.BASE_URL}data/drm-portfolio.json`)
-      .then(r => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json(); })
-      .then(d => { setData(d); setLoading(false); })
-      .catch(e => { setError(e.message); setLoading(false); });
+    fetchJson<PortfolioData>(`${import.meta.env.BASE_URL}data/drm-portfolio.json`)
+      .then(setData)
+      .catch(e => setError(e.message))
+      .finally(() => setLoading(false));
   }, []);
 
   const refresh = useCallback(() => {
@@ -243,7 +245,10 @@ export function DRMPortfolioDashboard() {
   if (error) return <Alert type="error" message="Failed to load data" description={error} showIcon />;
   if (!data) return null;
 
-  const selectedDRM = selectedSlug ? data.drms.find(d => d.slug === selectedSlug) : null;
+  const kpis = data.kpis ?? { totalPortfolioDonors: 0, totalLYBUNT: 0, totalRecognitionFY26: 0, avgPortfolioSize: 0 };
+  const drms = data.drms ?? [];
+
+  const selectedDRM = selectedSlug ? drms.find(d => d.slug === selectedSlug) : null;
 
   return (
     <div style={{ padding: '0 4px' }}>
@@ -258,29 +263,27 @@ export function DRMPortfolioDashboard() {
           allowClear
           value={selectedSlug}
           onChange={(v) => setSelectedSlug(v || null)}
-          options={[
-            ...data.drms.map(d => ({ label: `${d.name} (${d.totalDonors})`, value: d.slug }))
-          ]}
+          options={drms.map(d => ({ label: `${d.name} (${safeCount(d.totalDonors)})`, value: d.slug }))}
         />
       </div>
-      <DataFreshness asOfDate={data.asOfDate} onRefresh={refresh} refreshing={refreshing} />
+      <DataFreshness asOfDate={data.asOfDate ?? ''} onRefresh={refresh} refreshing={refreshing} />
 
       {/* Overview KPIs */}
       {!selectedDRM && (() => {
-        const realDRMs = data.drms.filter(d => !isUnassignedPool(d));
+        const realDRMs = drms.filter(d => !isUnassignedPool(d));
         const avgPortfolioSize = realDRMs.length > 0
           ? Math.round(realDRMs.reduce((sum, d) => sum + d.totalDonors, 0) / realDRMs.length)
-          : data.kpis.avgPortfolioSize;
+          : kpis.avgPortfolioSize;
         return (
           <>
             <KPIRow items={[
-              { title: 'Total Portfolio Donors', value: data.kpis.totalPortfolioDonors.toLocaleString(), icon: <UserOutlined />, color: NAVY },
-              { title: 'FY26 Recognition', value: fmtUSD(data.kpis.totalRecognitionFY26), icon: <DollarOutlined />, color: GOLD },
-              { title: 'Total LYBUNT', value: data.kpis.totalLYBUNT.toLocaleString(), icon: <WarningOutlined />, color: WARNING },
+              { title: 'Total Portfolio Donors', value: safeCount(kpis.totalPortfolioDonors), icon: <UserOutlined />, color: NAVY },
+              { title: 'FY26 Recognition', value: fmtUSD(kpis.totalRecognitionFY26), icon: <DollarOutlined />, color: GOLD },
+              { title: 'Total LYBUNT', value: safeCount(kpis.totalLYBUNT), icon: <WarningOutlined />, color: WARNING },
               { title: 'Avg Portfolio Size *', value: avgPortfolioSize, icon: <UserOutlined />, color: NAVY },
             ]} />
             <Text type="secondary" style={{ fontSize: 11, display: 'block', marginBottom: 12 }}>* Excludes unassigned pool (30K+ donors)</Text>
-            <OverviewGrid drms={data.drms} onSelect={setSelectedSlug} />
+            <OverviewGrid drms={drms} onSelect={setSelectedSlug} />
           </>
         );
       })()}

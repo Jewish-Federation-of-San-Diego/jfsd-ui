@@ -7,6 +7,8 @@ import { InfoCircleOutlined, WarningOutlined, CheckCircleOutlined, BulbOutlined,
 import { DataFreshness } from '../components/DataFreshness';
 import { DefinitionTooltip } from '../components/DefinitionTooltip';
 import { NAVY, GOLD, SUCCESS, ERROR, WARNING, MUTED } from '../theme/jfsdTheme';
+import { fetchJson } from '../utils/dataFetch';
+import { safeCount, safeCurrency, safePercent } from '../utils/formatters';
 
 const { Text } = Typography;
 
@@ -60,8 +62,8 @@ const BRAND_COLORS: Record<string, string> = {
   Other: MUTED,
 };
 
-const fmtUSD = (v: number) => `$${v.toLocaleString()}`;
-const fmtK = (v: number) => v >= 1000 ? `$${(v / 1000).toFixed(0)}K` : `$${v}`;
+const fmtUSD = (v: number) => safeCurrency(v, { maximumFractionDigits: 0 });
+const fmtK = (v: number) => safeCurrency(v, { notation: 'compact', maximumFractionDigits: 1 });
 
 const feeColor = (v: number) => v > 2.6 ? ERROR : v > 2.5 ? WARNING : SUCCESS;
 const feeTag = (v: number): 'error' | 'warning' | 'success' => v > 2.6 ? 'error' : v > 2.5 ? 'warning' : 'success';
@@ -96,7 +98,7 @@ function MonthDelta({ current, prior }: { current: number; prior: number; prefix
   const Icon = up ? ArrowUpOutlined : ArrowDownOutlined;
   return (
     <Text style={{ fontSize: 11, color, marginLeft: 4 }}>
-      <Icon style={{ fontSize: 9 }} /> {Math.abs(pctChange).toFixed(1)}% vs prior mo
+      <Icon style={{ fontSize: 9 }} /> {safePercent(Math.abs(pctChange), { decimals: 1 })} vs prior mo
     </Text>
   );
 }
@@ -118,7 +120,7 @@ function KPICards({ kpis, monthlyData }: { kpis: KPIs; monthlyData: MonthlyRow[]
       <Col xs={12} lg={6}>
         <Card className="kpi-card" size="small">
           <Statistic title={<DefinitionTooltip term="Net After Fees" dashboardKey="stripe">NET AFTER FEES</DefinitionTooltip>} value={kpis.netAfterFees} precision={0} prefix="$" valueStyle={{ color: SUCCESS }} />
-          <Text type="secondary" style={{ fontSize: 11 }}>${kpis.totalFees.toLocaleString()} in fees</Text>
+          <Text type="secondary" style={{ fontSize: 11 }}>{fmtUSD(kpis.totalFees)} in fees</Text>
           {curr && prev && <MonthDelta current={curr.amount - curr.fees} prior={prev.amount - prev.fees} />}
         </Card>
       </Col>
@@ -132,7 +134,7 @@ function KPICards({ kpis, monthlyData }: { kpis: KPIs; monthlyData: MonthlyRow[]
       <Col xs={12} lg={6}>
         <Card className="kpi-card" size="small">
           <Statistic title="TOTAL CHARGES" value={kpis.totalCharges} valueStyle={{ color: NAVY }} />
-          <Text type="secondary" style={{ fontSize: 11 }}>Avg ${kpis.avgPerCharge.toLocaleString()}/charge</Text>
+          <Text type="secondary" style={{ fontSize: 11 }}>Avg {fmtUSD(kpis.avgPerCharge)}/charge</Text>
           {curr && prev && <MonthDelta current={curr.charges} prior={prev.charges} />}
         </Card>
       </Col>
@@ -156,13 +158,13 @@ function generateInsights(data: StripeData): Insight[] {
     insights.push({
       icon: <WarningOutlined />,
       color: WARNING,
-      text: `Consider negotiating Stripe rates — current average ${kpis.avgFeeRate.toFixed(2)}% exceeds industry benchmark of 2.2–2.4% for nonprofits`,
+      text: `Consider negotiating Stripe rates — current average ${safePercent(kpis.avgFeeRate, { decimals: 2 })} exceeds industry benchmark of 2.2–2.4% for nonprofits`,
     });
   } else {
     insights.push({
       icon: <CheckCircleOutlined />,
       color: SUCCESS,
-      text: `Average fee rate of ${kpis.avgFeeRate.toFixed(2)}% is within the nonprofit benchmark range — good`,
+      text: `Average fee rate of ${safePercent(kpis.avgFeeRate, { decimals: 2 })} is within the nonprofit benchmark range — good`,
     });
   }
 
@@ -176,7 +178,7 @@ function generateInsights(data: StripeData): Insight[] {
       insights.push({
         icon: <WarningOutlined />,
         color: WARNING,
-        text: `${recent.month} volume is ${Math.abs(pctDiff).toFixed(0)}% ${direction} average (${recent.charges} vs avg ${Math.round(avgCharges)}) — investigate`,
+        text: `${recent.month} volume is ${safePercent(Math.abs(pctDiff), { decimals: 0 })} ${direction} average (${safeCount(recent.charges)} vs avg ${safeCount(Math.round(avgCharges))}) — investigate`,
       });
     }
   }
@@ -202,7 +204,7 @@ function generateInsights(data: StripeData): Insight[] {
       insights.push({
         icon: <InfoCircleOutlined />,
         color: NAVY,
-        text: `${pct.toFixed(0)}% of charges on ${brand.brand} — consider if payment method diversity is a risk`,
+        text: `${safePercent(pct, { decimals: 0 })} of charges on ${brand.brand} — consider if payment method diversity is a risk`,
       });
     }
   }
@@ -224,7 +226,7 @@ function generateInsights(data: StripeData): Insight[] {
     insights.push({
       icon: <WarningOutlined />,
       color: WARNING,
-      text: `${highFeeMonths.length} month(s) with fee rates above 2.8% (${highFeeMonths.map(m => `${m.month}: ${m.feeRate.toFixed(2)}%`).join(', ')}) — typically caused by small-dollar charges where fixed $0.30 fee dominates`,
+      text: `${highFeeMonths.length} month(s) with fee rates above 2.8% (${highFeeMonths.map(m => `${m.month}: ${safePercent(m.feeRate, { decimals: 2 })}`).join(', ')}) — typically caused by small-dollar charges where fixed $0.30 fee dominates`,
     });
   }
 
@@ -366,7 +368,7 @@ function LineChart({ data, width: w }: { data: MonthlyRow[]; width: number }) {
         return (
           <g key={t}>
             <line x1={PAD.left} y1={y} x2={w - PAD.right} y2={y} stroke={GRID} strokeWidth={1} />
-            <text x={PAD.left - 6} y={y + 4} textAnchor="end" fontSize={10} fill={MUTED}>{t.toFixed(1)}%</text>
+            <text x={PAD.left - 6} y={y + 4} textAnchor="end" fontSize={10} fill={MUTED}>{safePercent(t, { decimals: 1 })}</text>
           </g>
         );
       })}
@@ -375,7 +377,7 @@ function LineChart({ data, width: w }: { data: MonthlyRow[]; width: number }) {
       <path d={linePath} fill="none" stroke={NAVY} strokeWidth={2} />
       {points.map((p) => (
         <g key={p.month}>
-          <AntTooltip title={`${p.month}: ${p.feeRate.toFixed(2)}% (${p.charges} charges, ${fmtUSD(p.amount)})`}>
+          <AntTooltip title={`${p.month}: ${safePercent(p.feeRate, { decimals: 2 })} (${safeCount(p.charges)} charges, ${fmtUSD(p.amount)})`}>
             <circle cx={p.x} cy={p.y} r={5} fill={feeColor(p.feeRate)} stroke="#fff" strokeWidth={2} style={{ cursor: 'pointer' }} />
           </AntTooltip>
           <text x={p.x} y={H - 8} textAnchor="middle" fontSize={11} fill={MUTED}>{p.month}</text>
@@ -392,7 +394,7 @@ function FeeRateChart({ data }: { data: MonthlyRow[] }) {
   const peak = data.reduce((a, b) => a.feeRate > b.feeRate ? a : b);
 
   return (
-    <Card title={`${peak.month} fee rate spiked to ${peak.feeRate.toFixed(2)}% — driven by small-dollar charges`} size="small">
+    <Card title={`${peak.month} fee rate spiked to ${safePercent(peak.feeRate, { decimals: 2 })} — driven by small-dollar charges`} size="small">
       <div ref={ref} style={{ width: '100%', minHeight: 220 }}>
         {width > 0 && <LineChart data={data} width={width} />}
       </div>
@@ -420,7 +422,7 @@ function CardBrandBreakdown({ data }: { data: CardBrandRow[] }) {
                 <Text strong style={{ fontSize: 13 }}>{d.brand}</Text>
                 <Text style={{ fontSize: 13 }}>{fmtUSD(d.amount)} <span style={{ color: MUTED }}>({d.charges})</span></Text>
               </div>
-              <Progress percent={pct} strokeColor={BRAND_COLORS[d.brand] || MUTED} showInfo={true} format={() => `${pct.toFixed(0)}%`} size="small" />
+              <Progress percent={pct} strokeColor={BRAND_COLORS[d.brand] || MUTED} showInfo={true} format={() => `${safePercent(pct, { decimals: 0 })}`} size="small" />
             </div>
           );
         })}
@@ -436,8 +438,8 @@ function MonthlyTable({ data }: { data: MonthlyRow[] }) {
     { title: 'Month', dataIndex: 'month', key: 'month', width: 56, fixed: 'left' as const },
     { title: 'Charges', dataIndex: 'charges', key: 'charges', align: 'right' as const, width: 70, sorter: (a: MonthlyRow, b: MonthlyRow) => a.charges - b.charges },
     { title: 'Gross', dataIndex: 'amount', key: 'amount', align: 'right' as const, width: 100, render: (v: number) => fmtUSD(v), sorter: (a: MonthlyRow, b: MonthlyRow) => a.amount - b.amount },
-    { title: 'Fees', dataIndex: 'fees', key: 'fees', align: 'right' as const, width: 80, render: (v: number) => `$${v.toLocaleString()}` },
-    { title: 'Rate', dataIndex: 'feeRate', key: 'feeRate', align: 'right' as const, width: 80, render: (v: number) => <Tag color={feeTag(v)}>{v.toFixed(2)}%</Tag>, sorter: (a: MonthlyRow, b: MonthlyRow) => a.feeRate - b.feeRate },
+    { title: 'Fees', dataIndex: 'fees', key: 'fees', align: 'right' as const, width: 80, render: (v: number) => fmtUSD(v) },
+    { title: 'Rate', dataIndex: 'feeRate', key: 'feeRate', align: 'right' as const, width: 80, render: (v: number) => <Tag color={feeTag(v)}>{safePercent(v, { decimals: 2 })}</Tag>, sorter: (a: MonthlyRow, b: MonthlyRow) => a.feeRate - b.feeRate },
   ];
 
   return (
@@ -460,10 +462,10 @@ function MonthlyTable({ data }: { data: MonthlyRow[] }) {
           return (
             <Table.Summary.Row style={{ fontWeight: 600 }}>
               <Table.Summary.Cell index={0}>Total</Table.Summary.Cell>
-              <Table.Summary.Cell index={1} align="right">{t.charges}</Table.Summary.Cell>
+              <Table.Summary.Cell index={1} align="right">{safeCount(t.charges)}</Table.Summary.Cell>
               <Table.Summary.Cell index={2} align="right">{fmtUSD(t.amount)}</Table.Summary.Cell>
-              <Table.Summary.Cell index={3} align="right">${t.fees.toLocaleString()}</Table.Summary.Cell>
-              <Table.Summary.Cell index={4} align="right"><Tag color="processing">{(t.fees / t.amount * 100).toFixed(2)}%</Tag></Table.Summary.Cell>
+              <Table.Summary.Cell index={3} align="right">{fmtUSD(t.fees)}</Table.Summary.Cell>
+              <Table.Summary.Cell index={4} align="right"><Tag color="processing">{safePercent((t.fees / (t.amount || 1)) * 100, { decimals: 2 })}</Tag></Table.Summary.Cell>
             </Table.Summary.Row>
           );
         }}
@@ -503,19 +505,10 @@ export function StripeDashboard() {
   const [refreshing, setRefreshing] = useState(false);
 
   useEffect(() => {
-    fetch(`${import.meta.env.BASE_URL}data/stripe.json`)
-      .then(res => {
-        if (!res.ok) throw new Error(`Failed to load data (${res.status})`);
-        return res.json();
-      })
-      .then((json: StripeData) => {
-        setData(json);
-        setLoading(false);
-      })
-      .catch(err => {
-        setError(err.message);
-        setLoading(false);
-      });
+    fetchJson<StripeData>(`${import.meta.env.BASE_URL}data/stripe.json`)
+      .then(setData)
+      .catch(err => setError(err.message))
+      .finally(() => setLoading(false));
   }, []);
 
   const refresh = useCallback(() => {
@@ -541,19 +534,26 @@ export function StripeDashboard() {
     );
   }
 
+  const safeData: StripeData = {
+    kpis: data.kpis ?? { grossVolume: 0, netAfterFees: 0, totalFees: 0, avgFeeRate: 0, totalCharges: 0, avgPerCharge: 0, asOfDate: '' },
+    monthlyData: data.monthlyData ?? [],
+    cardBrandData: data.cardBrandData ?? [],
+    sourceData: data.sourceData ?? [],
+  };
+
   return (
     <Space direction="vertical" size={16} style={{ width: '100%' }}>
-      <DataFreshness asOfDate={data.kpis.asOfDate} onRefresh={refresh} refreshing={refreshing} />
-      <KPICards kpis={data.kpis} monthlyData={data.monthlyData} />
-      <InsightsCard data={data} />
-      <MonthlyRevenueChart data={data.monthlyData} />
-      <FeeRateChart data={data.monthlyData} />
+      <DataFreshness asOfDate={safeData.kpis.asOfDate} onRefresh={refresh} refreshing={refreshing} />
+      <KPICards kpis={safeData.kpis} monthlyData={safeData.monthlyData} />
+      <InsightsCard data={safeData} />
+      <MonthlyRevenueChart data={safeData.monthlyData} />
+      <FeeRateChart data={safeData.monthlyData} />
       <Row gutter={[12, 12]}>
-        <Col xs={24} lg={12}><MonthlyTable data={data.monthlyData} /></Col>
+        <Col xs={24} lg={12}><MonthlyTable data={safeData.monthlyData} /></Col>
         <Col xs={24} lg={12}>
           <Space direction="vertical" size={12} style={{ width: '100%' }}>
-            <CardBrandBreakdown data={data.cardBrandData} />
-            <SourceBreakdown data={data.sourceData} />
+            <CardBrandBreakdown data={safeData.cardBrandData} />
+            <SourceBreakdown data={safeData.sourceData} />
           </Space>
         </Col>
       </Row>

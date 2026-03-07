@@ -13,6 +13,8 @@ import { PdfExport } from '../components/PdfExport';
 import { DataFreshness } from '../components/DataFreshness';
 import { DefinitionTooltip } from '../components/DefinitionTooltip';
 import { NAVY, GOLD, SUCCESS, ERROR, WARNING, MUTED } from '../theme/jfsdTheme';
+import { fetchJson } from '../utils/dataFetch';
+import { safeCurrency, safeNumber, safePercent } from '../utils/formatters';
 
 const { Text, Title } = Typography;
 const { Panel } = Collapse;
@@ -23,14 +25,15 @@ const LIGHT_BG = '#FAFBFD';
 // ── Formatting helpers ──────────────────────────────────────────────────
 const fmtAcct = (v: number) => {
   if (Math.abs(v) < 0.5) return '—';
-  if (v < 0) return `$(${Math.abs(v).toLocaleString(undefined, { minimumFractionDigits: 0, maximumFractionDigits: 0 })})`;
-  return `$${v.toLocaleString(undefined, { minimumFractionDigits: 0, maximumFractionDigits: 0 })}`;
+  const abs = safeCurrency(Math.abs(v), { maximumFractionDigits: 0 }).replace('$', '');
+  if (v < 0) return `$(${abs})`;
+  return safeCurrency(v, { maximumFractionDigits: 0 });
 };
 
 const fmtPct = (v: number) => {
   if (Math.abs(v) < 0.05) return '—';
-  if (v < 0) return `(${Math.abs(v).toFixed(1)}%)`;
-  return `${v.toFixed(1)}%`;
+  if (v < 0) return `(${safeNumber(Math.abs(v), { minimumFractionDigits: 1, maximumFractionDigits: 1 })}%)`;
+  return safePercent(v, { decimals: 1 });
 };
 
 const numStyle: React.CSSProperties = {
@@ -110,7 +113,7 @@ function MonthlyBarChart({ data }: { data: MonthLine[] }) {
           <line x1={PAD.left} x2={W - PAD.right} y1={PAD.top + yScale(t)} y2={PAD.top + yScale(t)}
                 stroke="#e8e8e8" strokeDasharray="3,3" />
           <text x={PAD.left - 8} y={PAD.top + yScale(t) + 4} textAnchor="end" fontSize={10} fill={MUTED}>
-            ${(t / 1000).toFixed(0)}K
+            ${safeNumber(t / 1000, { minimumFractionDigits: 0, maximumFractionDigits: 0 })}K
           </text>
         </g>
       ))}
@@ -259,10 +262,10 @@ export function FinancialStatementsDashboard() {
   const [refreshing, setRefreshing] = useState(false);
 
   useEffect(() => {
-    fetch(`${import.meta.env.BASE_URL}data/financial-statements.json`)
-      .then(r => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json(); })
-      .then(d => { setData(d); setLoading(false); })
-      .catch(e => { setError(e.message); setLoading(false); });
+    fetchJson<FinData>(`${import.meta.env.BASE_URL}data/financial-statements.json`)
+      .then(setData)
+      .catch(e => setError(e.message))
+      .finally(() => setLoading(false));
   }, []);
 
   const refresh = useCallback(() => {
@@ -277,7 +280,12 @@ export function FinancialStatementsDashboard() {
   if (loading) return <DashboardSkeleton kpiCount={4} hasChart={false} />;
   if (error || !data) return <Alert type="error" message="Failed to load financial data" description={error} showIcon />;
 
-  const { kpis, monthlyTrend, balanceSheet: bs, activities: act, functionalExpenses: fe, budgetVsActual: bva } = data;
+  const kpis = data.kpis ?? { totalRevenue: 0, totalExpenses: 0, netSurplusDeficit: 0, operatingMargin: 0, cashPosition: 0, monthsOfReserves: 0 };
+  const monthlyTrend = data.monthlyTrend ?? [];
+  const bs = data.balanceSheet ?? { asOfDate: '', assets: { current: [], fixed: [], other: [], totalCurrent: 0, totalCurrentPriorYear: 0, totalFixed: 0, totalFixedPriorYear: 0, totalOther: 0, totalOtherPriorYear: 0, totalAssets: 0 }, liabilities: { current: [], longTerm: [], totalCurrent: 0, totalCurrentPriorYear: 0, totalLongTerm: 0, totalLongTermPriorYear: 0, totalLiabilities: 0 }, netAssets: { withoutRestriction: 0, withRestriction: 0, totalNetAssets: 0, priorYear: { withoutRestriction: 0, withRestriction: 0, totalNetAssets: 0 } } };
+  const act = data.activities ?? { period: '', revenue: [], totalRevenue: { unrestricted: 0, restricted: 0, total: 0, priorYear: 0, budget: 0 }, expenses: [], totalExpenses: { amount: 0, priorYear: 0, budget: 0 }, changeInNetAssets: { total: 0, priorYear: 0, budget: 0 } };
+  const fe = data.functionalExpenses ?? { rows: [], totals: { programServices: 0, managementGeneral: 0, fundraising: 0, total: 0 } };
+  const bva = data.budgetVsActual ?? { revenue: [], totalRevenue: { budget: 0, actual: 0, variance: 0, variancePct: 0 }, expenses: [], totalExpenses: { budget: 0, actual: 0, variance: 0, variancePct: 0 }, netSurplusDeficit: { budget: 0, actual: 0, variance: 0 } };
 
   // Program ratio
   const programRatio = fe.totals.total ? (fe.totals.programServices / fe.totals.total * 100) : 0;
@@ -298,13 +306,13 @@ export function FinancialStatementsDashboard() {
                      color={kpis.netSurplusDeficit >= 0 ? SUCCESS : ERROR} icon={<RiseOutlined />} />
           </Col>
           <Col xs={12} md={4}>
-            <KPICard title="Operating Margin" value={`${kpis.operatingMargin.toFixed(1)}%`} color={NAVY} icon={<FundOutlined />} defKey="financial" />
+            <KPICard title="Operating Margin" value={safePercent(kpis.operatingMargin, { decimals: 1 })} color={NAVY} icon={<FundOutlined />} defKey="financial" />
           </Col>
           <Col xs={12} md={4}>
             <KPICard title="Cash Position" value={fmtAcct(kpis.cashPosition)} color={NAVY} icon={<BankOutlined />} />
           </Col>
           <Col xs={12} md={4}>
-            <KPICard title="Months of Reserves" value={`${kpis.monthsOfReserves.toFixed(1)}`} color={NAVY} icon={<SafetyCertificateOutlined />} defKey="financial" />
+            <KPICard title="Months of Reserves" value={safeNumber(kpis.monthsOfReserves, { minimumFractionDigits: 1, maximumFractionDigits: 1 })} color={NAVY} icon={<SafetyCertificateOutlined />} defKey="financial" />
           </Col>
         </Row>
 
@@ -494,7 +502,7 @@ export function FinancialStatementsDashboard() {
             </Col>
             <Col>
               <Tag color={programRatio >= 75 ? 'success' : 'warning'} style={{ fontSize: 16, padding: '4px 16px' }}>
-                {programRatio.toFixed(1)}%
+                {safePercent(programRatio, { decimals: 1 })}
               </Tag>
             </Col>
           </Row>
@@ -642,7 +650,7 @@ export function FinancialStatementsDashboard() {
       <div style={{ textAlign: 'center', marginBottom: 16, position: 'relative' }}>
         <Title level={3} style={{ color: NAVY, marginBottom: 0 }}>Financial Statements</Title>
         <Text type="secondary">{data.period}</Text>
-        <DataFreshness asOfDate={data.balanceSheet.asOfDate} onRefresh={refresh} refreshing={refreshing} />
+        <DataFreshness asOfDate={bs.asOfDate ?? ''} onRefresh={refresh} refreshing={refreshing} />
         <Tag color="default" style={{ position: 'absolute', right: 0, top: 4, fontSize: 10, opacity: 0.6 }}>
           UNAUDITED
         </Tag>

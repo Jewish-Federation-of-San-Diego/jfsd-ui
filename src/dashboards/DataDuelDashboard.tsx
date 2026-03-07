@@ -5,6 +5,9 @@ import { DataFreshness } from '../components/DataFreshness';
 import { DashboardSkeleton } from '../components/DashboardSkeleton';
 import { NAVY, GOLD, SUCCESS, ERROR } from '../theme/jfsdTheme';
 import { DefinitionTooltip } from '../components/DefinitionTooltip';
+import { DashboardErrorState } from '../components/DashboardErrorState';
+import { fetchJson } from '../utils/dataFetch';
+import { safeCount, safeCurrency, safePercent } from '../utils/formatters';
 
 interface Run {
   date: string; winner: string; detective: number; oracle: number; whisperer: number; findings: string;
@@ -27,17 +30,33 @@ const ANALYST_COLORS: Record<string, string> = {
 const ANALYST_LABELS: Record<string, string> = {
   donor_whisperer: '🔮 Whisperer', data_detective: '🔍 Detective', operations_oracle: '🏛️ Oracle',
 };
-const fmtUSD = (v: number) => v >= 1e6 ? `$${(v/1e6).toFixed(1)}M` : `$${(v/1e3).toFixed(0)}K`;
+const fmtUSD = (v: number) => safeCurrency(v, { notation: 'compact', maximumFractionDigits: 1 });
 
 export function DataDuelDashboard() {
   const [data, setData] = useState<DuelData | null>(null);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    fetch(`${import.meta.env.BASE_URL}data/data-duel.json`).then(r => r.json()).then(d => { setData(d); setLoading(false); });
+    const load = async () => {
+      try {
+        const json = await fetchJson<DuelData>(`${import.meta.env.BASE_URL}data/data-duel.json`);
+        setData(json);
+      } catch (err) {
+        setError((err as Error).message);
+      } finally {
+        setLoading(false);
+      }
+    };
+    void load();
   }, []);
 
-  if (loading || !data) return <DashboardSkeleton />;
+  if (loading) return <DashboardSkeleton />;
+  if (error) return <DashboardErrorState message="Failed to load Data Duel data" description={error} />;
+  if (!data) return <DashboardErrorState message="Missing Data Duel data" />;
+
+  const kpis = data.kpis ?? { totalRuns: 0, totalFindings: 0, totalImpact: 0, openQuestions: 0 };
+  const analysts = data.analysts ?? {};
 
   const runCols = [
     { title: 'Date', dataIndex: 'date', key: 'date' },
@@ -67,24 +86,24 @@ export function DataDuelDashboard() {
 
   return (
     <Space direction="vertical" size="middle" style={{ width: '100%' }}>
-      <DataFreshness asOfDate={data.asOfDate} />
+      <DataFreshness asOfDate={data.asOfDate ?? ''} />
 
       <Row gutter={[16, 16]}>
-        <Col xs={12} sm={6}><Card><Statistic title="Total Runs" value={data.kpis.totalRuns} valueStyle={{ color: NAVY }} /></Card></Col>
-        <Col xs={12} sm={6}><Card><Statistic title="Findings" value={data.kpis.totalFindings} valueStyle={{ color: GOLD }} /></Card></Col>
-        <Col xs={12} sm={6}><Card><Statistic title={<DefinitionTooltip term="Dollar Impact" dashboardKey="data-duel">Total Impact</DefinitionTooltip>} value={fmtUSD(data.kpis.totalImpact)} valueStyle={{ color: SUCCESS }} /></Card></Col>
-        <Col xs={12} sm={6}><Card><Statistic title="Open Questions" value={data.kpis.openQuestions} valueStyle={{ color: ERROR }} /></Card></Col>
+        <Col xs={12} sm={6}><Card><Statistic title="Total Runs" value={safeCount(kpis.totalRuns)} valueStyle={{ color: NAVY }} /></Card></Col>
+        <Col xs={12} sm={6}><Card><Statistic title="Findings" value={safeCount(kpis.totalFindings)} valueStyle={{ color: GOLD }} /></Card></Col>
+        <Col xs={12} sm={6}><Card><Statistic title={<DefinitionTooltip term="Dollar Impact" dashboardKey="data-duel">Total Impact</DefinitionTooltip>} value={fmtUSD(kpis.totalImpact)} valueStyle={{ color: SUCCESS }} /></Card></Col>
+        <Col xs={12} sm={6}><Card><Statistic title="Open Questions" value={safeCount(kpis.openQuestions)} valueStyle={{ color: ERROR }} /></Card></Col>
       </Row>
 
       <Row gutter={[16, 16]}>
-        {Object.entries(data.analysts).map(([key, a]) => (
+        {Object.entries(analysts).map(([key, a]) => (
           <Col xs={24} sm={8} key={key}>
             <Card style={{ borderTop: `3px solid ${ANALYST_COLORS[key] || NAVY}` }}>
               <div style={{ textAlign: 'center' }}>
                 <div style={{ fontSize: 20, marginBottom: 4 }}>{ANALYST_LABELS[key] || key}</div>
-                <Badge count={`${a.wins}W`} style={{ backgroundColor: ANALYST_COLORS[key] || NAVY, fontSize: 16, padding: '0 12px', height: 28, lineHeight: '28px' }} />
+                <Badge count={`${safeCount(a.wins)}W`} style={{ backgroundColor: ANALYST_COLORS[key] || NAVY, fontSize: 16, padding: '0 12px', height: 28, lineHeight: '28px' }} />
                 <div style={{ marginTop: 8, color: '#8C8C8C', fontSize: 12 }}>
-                  Avg: {a.avgScore.toFixed(1)} | Best: {a.bestScore} | {a.runs} runs
+                  Avg: {safePercent(a.avgScore, { decimals: 1 }).replace('%', '')} | Best: {safeCount(a.bestScore)} | {safeCount(a.runs)} runs
                 </div>
               </div>
             </Card>

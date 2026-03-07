@@ -14,6 +14,8 @@ import { useEffect, useRef, useState, useCallback, useMemo } from 'react';
 import { DataFreshness } from '../components/DataFreshness';
 import { DefinitionTooltip } from '../components/DefinitionTooltip';
 import { NAVY, GOLD, SUCCESS, ERROR, WARNING, MUTED } from '../theme/jfsdTheme';
+import { fetchJson } from '../utils/dataFetch';
+import { safeCount, safeCurrency, safePercent } from '../utils/formatters';
 
 const { Text, Title } = Typography;
 
@@ -44,8 +46,8 @@ interface CampaignData {
   campaigns: CampaignItem[];
 }
 
-const fmtUSD  = (v: number) => `$${v.toLocaleString(undefined, { minimumFractionDigits: 0, maximumFractionDigits: 0 })}`;
-const fmtPct  = (v: number) => `${v >= 0 ? '+' : ''}${v.toFixed(1)}%`;
+const fmtUSD  = (v: number) => safeCurrency(v, { maximumFractionDigits: 0 });
+const fmtPct  = (v: number) => safePercent(v, { decimals: 1, showSign: true });
 const fmtDate = (d: string) => { try { return new Date(d + 'T00:00:00').toLocaleDateString('en-US', { month: 'short', day: 'numeric' }); } catch { return d; } };
 
 // ── Hook: measure width ─────────────────────────────────────────────────
@@ -79,7 +81,7 @@ function ProgressRing({ pct, size = 120, stroke = 10 }: { pct: number; size?: nu
         strokeLinecap="round" transform={`rotate(-90 ${size / 2} ${size / 2})`}
         style={{ transition: 'stroke-dashoffset 0.8s ease' }} />
       <text x={size / 2} y={size / 2 - 6} textAnchor="middle" fill={NAVY} fontSize={20} fontWeight={700}>
-        {capped.toFixed(1)}%
+        {safePercent(capped, { decimals: 1 })}
       </text>
       <text x={size / 2} y={size / 2 + 14} textAnchor="middle" fill={MUTED} fontSize={11}>
         of goal
@@ -189,7 +191,7 @@ function MomentumChart({ weeks }: { weeks: WeeklyMomentum[] }) {
                 <g key={i}>
                   <rect x={x} y={h - bh} width={barW} height={bh} rx={4} fill={i === weeks.length - 1 ? GOLD : NAVY} opacity={0.85} />
                   <text x={x + barW / 2} y={h - bh - 4} textAnchor="middle" fontSize={9} fill={MUTED}>
-                    {w.amount >= 1000 ? `${(w.amount / 1000).toFixed(0)}K` : fmtUSD(w.amount)}
+                    {w.amount >= 1000 ? safeCurrency(w.amount, { notation: 'compact', maximumFractionDigits: 0 }) : fmtUSD(w.amount)}
                   </text>
                   <text x={x + barW / 2} y={h + 16} textAnchor="middle" fontSize={9} fill={MUTED}>
                     {fmtDate(w.weekOf)}
@@ -234,14 +236,14 @@ function DonorDonut({ data }: { data: CampaignData['donorBreakdown'] }) {
             {arcs.map((a, i) => (
               <path key={i} d={a.d} fill="none" stroke={a.color} strokeWidth={sw} strokeLinecap="round" />
             ))}
-            <text x={cx} y={cy + 4} textAnchor="middle" fontSize={18} fontWeight={700} fill={NAVY}>{total.toLocaleString()}</text>
+            <text x={cx} y={cy + 4} textAnchor="middle" fontSize={18} fontWeight={700} fill={NAVY}>{safeCount(total)}</text>
           </svg>
         </Col>
         <Col>
           {segments.map(s => (
             <div key={s.label} style={{ marginBottom: 4 }}>
               <span style={{ display: 'inline-block', width: 10, height: 10, borderRadius: '50%', background: s.color, marginRight: 6 }} />
-              <Text>{s.label === 'LYBUNT Recovered' ? <DefinitionTooltip term="LYBUNT" dashboardKey="campaign">{s.label}</DefinitionTooltip> : s.label}: <strong>{s.value.toLocaleString()}</strong></Text>
+              <Text>{s.label === 'LYBUNT Recovered' ? <DefinitionTooltip term="LYBUNT" dashboardKey="campaign">{s.label}</DefinitionTooltip> : s.label}: <strong>{safeCount(s.value)}</strong></Text>
             </div>
           ))}
         </Col>
@@ -382,8 +384,7 @@ export function CampaignTrackerDashboard() {
   const [refreshing, setRefreshing] = useState(false);
 
   const fetchData = useCallback(() => {
-    fetch(`${import.meta.env.BASE_URL}data/campaign-tracker.json`)
-      .then(r => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json(); })
+    fetchJson<CampaignData>(`${import.meta.env.BASE_URL}data/campaign-tracker.json`)
       .then(setData)
       .catch(e => setError(e.message));
   }, []);
@@ -392,10 +393,9 @@ export function CampaignTrackerDashboard() {
 
   const refresh = useCallback(() => {
     setRefreshing(true);
-    fetch(`${import.meta.env.BASE_URL}data/campaign-tracker.json`)
-      .then(r => r.ok ? r.json() : null)
+    fetchJson<CampaignData>(`${import.meta.env.BASE_URL}data/campaign-tracker.json`)
       .then(setData)
-      .catch(() => {})
+      .catch(e => setError((e as Error).message))
       .finally(() => setRefreshing(false));
   }, []);
 
@@ -406,6 +406,18 @@ export function CampaignTrackerDashboard() {
 
   if (error) return <Alert type="error" message="Failed to load campaign data" description={error} showIcon style={{ margin: 24 }} />;
   if (!data || !filtered) return <DashboardSkeleton />;
+
+  const safeData: CampaignData = {
+    asOfDate: data.asOfDate ?? '',
+    annualCampaign: data.annualCampaign ?? { name: '', goal: 0, raised: 0, pctOfGoal: 0, donorCount: 0, avgGift: 0, priorYearSamePoint: 0 },
+    momentum: data.momentum ?? { giftsThisWeek: 0, amountThisWeek: 0, giftsLastWeek: 0, amountLastWeek: 0, weekOverWeekPct: 0 },
+    weeklyMomentum: data.weeklyMomentum ?? [],
+    donorBreakdown: data.donorBreakdown ?? { newDonors: 0, returningDonors: 0, lybuntRecovered: 0, retentionRate: 0 },
+    givingLevels: data.givingLevels ?? [],
+    topGiftsThisWeek: data.topGiftsThisWeek ?? [],
+    pipeline: data.pipeline ?? { openPledges: 0, openPledgeAmount: 0, expectedThisMonth: 0 },
+    campaigns: data.campaigns ?? [],
+  };
 
   return (
     <div style={{ padding: '16px 24px', maxWidth: 1400, margin: '0 auto' }}>
@@ -421,32 +433,32 @@ export function CampaignTrackerDashboard() {
             </Select>
           </Space>
         </Row>
-        <DataFreshness asOfDate={data.asOfDate} onRefresh={refresh} refreshing={refreshing} />
+        <DataFreshness asOfDate={safeData.asOfDate} onRefresh={refresh} refreshing={refreshing} />
 
-        <KPIRow data={data} filteredMomentum={filtered.momentum} />
-        <CampaignThermometer data={data} />
+        <KPIRow data={safeData} filteredMomentum={filtered.momentum} />
+        <CampaignThermometer data={safeData} />
 
         <Row gutter={[16, 16]}>
           <Col xs={24} lg={14}>
             <MomentumChart weeks={filtered.weeks} />
           </Col>
           <Col xs={24} lg={10}>
-            <DonorDonut data={data.donorBreakdown} />
+            <DonorDonut data={safeData.donorBreakdown} />
           </Col>
         </Row>
 
-        <GivingLevels levels={data.givingLevels} />
+        <GivingLevels levels={safeData.givingLevels} />
 
         <Row gutter={[16, 16]}>
           <Col xs={24} lg={14}>
             <TopGiftsTable gifts={filtered.gifts} />
           </Col>
           <Col xs={24} lg={10}>
-            <PipelineCard pipeline={data.pipeline} />
+            <PipelineCard pipeline={safeData.pipeline} />
           </Col>
         </Row>
 
-        <SubCampaigns campaigns={data.campaigns} />
+        <SubCampaigns campaigns={safeData.campaigns} />
       </Space>
     </div>
   );

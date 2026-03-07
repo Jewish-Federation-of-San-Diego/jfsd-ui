@@ -4,6 +4,9 @@ import { DataFreshness } from '../components/DataFreshness';
 import { DashboardSkeleton } from '../components/DashboardSkeleton';
 import { NAVY, GOLD, SUCCESS, ERROR, MUTED } from '../theme/jfsdTheme';
 import { DefinitionTooltip } from '../components/DefinitionTooltip';
+import { DashboardErrorState } from '../components/DashboardErrorState';
+import { fetchJson } from '../utils/dataFetch';
+import { safeCount, safePercent } from '../utils/formatters';
 
 interface Segment { count: number; pct: number; }
 interface EngagementData {
@@ -23,33 +26,43 @@ const SEGMENT_COLORS: Record<string, string> = {
   Dormant: MUTED, Ghost: '#152B4D', New: '#9B4DCA',
 };
 
-const fmtNum = (v: number) => v.toLocaleString();
+const fmtNum = (v: number) => safeCount(v);
 
 export function HubSpotDashboard() {
   const [engagement, setEngagement] = useState<EngagementData | null>(null);
   const [emails, setEmails] = useState<EmailCampaign[]>([]);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    Promise.all([
-      fetch(`${import.meta.env.BASE_URL}data/hubspot-engagement.json`).then(r => r.json()),
-      fetch(`${import.meta.env.BASE_URL}data/hubspot-emails.json`).then(r => r.json()),
-    ]).then(([eng, em]) => {
-      setEngagement(eng);
-      setEmails(em);
-      setLoading(false);
-    });
+    const load = async () => {
+      try {
+        const [eng, em] = await Promise.all([
+          fetchJson<EngagementData>(`${import.meta.env.BASE_URL}data/hubspot-engagement.json`),
+          fetchJson<EmailCampaign[] | { emails: EmailCampaign[] }>(`${import.meta.env.BASE_URL}data/hubspot-emails.json`),
+        ]);
+        setEngagement(eng);
+        setEmails(Array.isArray(em) ? em : (em?.emails ?? []));
+      } catch (err) {
+        setError((err as Error).message);
+      } finally {
+        setLoading(false);
+      }
+    };
+    void load();
   }, []);
 
-  if (loading || !engagement) return <DashboardSkeleton />;
+  if (loading) return <DashboardSkeleton />;
+  if (error) return <DashboardErrorState message="Failed to load HubSpot data" description={error} />;
+  if (!engagement) return <DashboardErrorState message="Missing HubSpot engagement data" />;
 
-  const { summary } = engagement;
-  const segments = Object.entries(summary.segments).sort((a, b) => b[1].pct - a[1].pct);
+  const summary = engagement.summary ?? { total_contacts: 0, generated_at: '', segments: {} };
+  const segments = Object.entries(summary.segments ?? {}).sort((a, b) => (b[1]?.pct ?? 0) - (a[1]?.pct ?? 0));
   const engagementRate = segments
     .filter(([k]) => ['Champion', 'Active', 'New'].includes(k))
-    .reduce((s, [, v]) => s + v.pct, 0);
-  const champions = summary.segments.Champion?.count || 0;
-  const ghosts = summary.segments.Ghost?.count || 0;
+    .reduce((s, [, v]) => s + (v?.pct ?? 0), 0);
+  const champions = summary.segments?.Champion?.count || 0;
+  const ghosts = summary.segments?.Ghost?.count || 0;
 
   const emailColumns = [
     { title: 'Name', dataIndex: 'name', key: 'name', ellipsis: true },
@@ -67,7 +80,7 @@ export function HubSpotDashboard() {
 
       <Row gutter={[16, 16]}>
         <Col xs={12} sm={6}><Card><Statistic title="Total Contacts" value={fmtNum(summary.total_contacts)} valueStyle={{ color: NAVY }} /></Card></Col>
-        <Col xs={12} sm={6}><Card><Statistic title="Engagement Rate" value={`${engagementRate.toFixed(1)}%`} valueStyle={{ color: SUCCESS }} /></Card></Col>
+        <Col xs={12} sm={6}><Card><Statistic title="Engagement Rate" value={safePercent(engagementRate, { decimals: 1 })} valueStyle={{ color: SUCCESS }} /></Card></Col>
         <Col xs={12} sm={6}><Card><Statistic title={<DefinitionTooltip term="Champion" dashboardKey="hubspot">Champions</DefinitionTooltip>} value={champions} valueStyle={{ color: GOLD }} /></Card></Col>
         <Col xs={12} sm={6}><Card><Statistic title={<DefinitionTooltip term="Ghost" dashboardKey="hubspot">Ghosts</DefinitionTooltip>} value={fmtNum(ghosts)} valueStyle={{ color: MUTED }} /></Card></Col>
       </Row>
@@ -77,9 +90,9 @@ export function HubSpotDashboard() {
           <div key={name} style={{ marginBottom: 12 }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 4 }}>
               <span style={{ fontWeight: 500 }}>{name}</span>
-              <span style={{ color: MUTED }}>{fmtNum(seg.count)} ({seg.pct}%)</span>
+              <span style={{ color: MUTED }}>{fmtNum(seg?.count ?? 0)} ({safePercent(seg?.pct, { decimals: 1 })})</span>
             </div>
-            <Progress percent={seg.pct} showInfo={false} strokeColor={SEGMENT_COLORS[name] || NAVY}
+            <Progress percent={seg?.pct ?? 0} showInfo={false} strokeColor={SEGMENT_COLORS[name] || NAVY}
               size={['100%', 16]} />
           </div>
         ))}

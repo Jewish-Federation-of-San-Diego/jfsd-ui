@@ -2,6 +2,7 @@ import { useState, useRef, useCallback, useEffect } from 'react';
 import { AutoComplete, Input } from 'antd';
 import { SearchOutlined } from '@ant-design/icons';
 import { NAVY, MUTED } from '../theme/jfsdTheme';
+import { safeCurrency } from '../utils/formatters';
 
 interface GlobalSearchProps {
   onNavigate: (dashboardKey: string) => void;
@@ -29,8 +30,7 @@ const dashboardNames: Record<string, string> = {
 };
 
 const fmt = (n: number | undefined) => {
-  if (n == null) return '$0';
-  return '$' + Math.round(n).toLocaleString('en-US');
+  return safeCurrency(n, { maximumFractionDigits: 0 });
 };
 
 async function fetchJson(file: string) {

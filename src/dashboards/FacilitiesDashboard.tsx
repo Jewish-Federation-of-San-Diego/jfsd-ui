@@ -359,7 +359,9 @@ export function FacilitiesDashboard() {
   if (error) return <Alert type="error" message="Failed to load facilities data" description={error} />;
   if (!data) return null;
 
-  const { kpis, buildings, alerts } = data;
+  const kpis = data.kpis ?? { totalThermostats: 0, online: 0, offline: 0, avgTemp: 0, alertCount: 0, serverRoomTemp: 0, coolingHours24h: 0, heatingHours24h: 0 };
+  const buildings = data.buildings ?? [];
+  const alerts = data.alerts ?? [];
   const serverThermostats = buildings.flatMap(b => b.thermostats).filter(t => t.isServerRoom);
 
   return (
@@ -370,7 +372,7 @@ export function FacilitiesDashboard() {
         <Text type="secondary" style={{ fontSize: 12 }}>
           {kpis.totalThermostats} thermostats
         </Text>
-        <DataFreshness asOfDate={data.asOfDate} onRefresh={refresh} refreshing={refreshing} />
+        <DataFreshness asOfDate={data.asOfDate ?? ''} onRefresh={refresh} refreshing={refreshing} />
       </div>
 
       {/* KPI Row */}
@@ -455,7 +457,7 @@ export function FacilitiesDashboard() {
               <Text strong>{a.thermostat}</Text>
               <Text style={{ marginLeft: 8 }}>{a.message}</Text>
               <Text type="secondary" style={{ marginLeft: 8, fontSize: 11 }}>
-                {new Date(a.timestamp).toLocaleString()} ({timeAgo(a.timestamp)})
+                {new Intl.DateTimeFormat('en-US', { dateStyle: 'short', timeStyle: 'short' }).format(new Date(a.timestamp))} ({timeAgo(a.timestamp)})
               </Text>
             </div>
           ))}
