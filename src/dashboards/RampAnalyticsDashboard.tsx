@@ -223,6 +223,13 @@ export function RampAnalyticsDashboard() {
     { title: 'Txns', dataIndex: 'txnCount', key: 'txnCount' },
   ];
 
+  // Dynamic titles
+  const currentMonth = monthlyTrend[monthlyTrend.length - 1];
+  const monthTitle = currentMonth ? `Monthly Trend: ${fmt(currentMonth.amount)} this month` : "Monthly Spend Trend";
+  const deptTitle = `Department Spend: ${kpis.topDepartment} leads at ${fmt(kpis.topDepartmentAmount)}`;
+  const topMerchantTitle = topMerchants[0] ? `Top Merchants: ${topMerchants[0].merchant} leads at ${fmt(topMerchants[0].amount)}` : "Top Merchants";
+  const topSpenderTitle = topSpenders[0] ? `Top Spenders: ${topSpenders[0].name} leads at ${fmt(topSpenders[0].amount)}` : "Top Spenders";
+
   return (
     <div style={{ padding: '16px 24px', maxWidth: 1400, margin: '0 auto' }}>
       {/* Header */}
@@ -272,12 +279,12 @@ export function RampAnalyticsDashboard() {
       {/* Charts Row 1 */}
       <Row gutter={[16, 16]} style={{ marginBottom: 16 }}>
         <Col xs={24} lg={14}>
-          <Card title="Monthly Spend Trend" size="small" styles={{ header: { color: NAVY, borderBottom: `2px solid ${GOLD}` } }}>
+          <Card title={monthTitle} size="small" styles={{ header: { color: NAVY, borderBottom: `2px solid ${GOLD}` } }}>
             <MonthlyBarChart data={monthlyTrend} />
           </Card>
         </Col>
         <Col xs={24} lg={10}>
-          <Card title="Department Spend vs Budget" size="small" styles={{ header: { color: NAVY, borderBottom: `2px solid ${GOLD}` } }}>
+          <Card title={deptTitle} size="small" styles={{ header: { color: NAVY, borderBottom: `2px solid ${GOLD}` } }}>
             <DeptBarChart data={departmentSpend} />
           </Card>
         </Col>
@@ -300,7 +307,7 @@ export function RampAnalyticsDashboard() {
       {/* Tables Row */}
       <Row gutter={[16, 16]}>
         <Col xs={24} lg={12}>
-          <Card title="Top Merchants" size="small" styles={{ header: { color: NAVY, borderBottom: `2px solid ${GOLD}` } }}
+          <Card title={topMerchantTitle} size="small" styles={{ header: { color: NAVY, borderBottom: `2px solid ${GOLD}` } }}
             extra={<CsvExport data={topMerchants} columns={[
               { title: 'Merchant', dataIndex: 'merchant' },
               { title: 'Spend', dataIndex: 'amount' },
@@ -310,7 +317,7 @@ export function RampAnalyticsDashboard() {
           </Card>
         </Col>
         <Col xs={24} lg={12}>
-          <Card title="Top Spenders" size="small" styles={{ header: { color: NAVY, borderBottom: `2px solid ${GOLD}` } }}
+          <Card title={topSpenderTitle} size="small" styles={{ header: { color: NAVY, borderBottom: `2px solid ${GOLD}` } }}
             extra={<CsvExport data={topSpenders} columns={[
               { title: 'Name', dataIndex: 'name' },
               { title: 'Dept', dataIndex: 'dept' },

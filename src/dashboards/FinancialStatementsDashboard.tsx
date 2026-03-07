@@ -290,6 +290,17 @@ export function FinancialStatementsDashboard() {
   // Program ratio
   const programRatio = fe.totals.total ? (fe.totals.programServices / fe.totals.total * 100) : 0;
 
+  // Dynamic titles
+  const currentMonth = monthlyTrend[monthlyTrend.length - 1];
+  const monthlyTitle = currentMonth ? 
+    `Revenue vs Expenses: ${fmtAcct(currentMonth.revenue)} revenue, ${fmtAcct(currentMonth.expenses)} expenses this month` : 
+    "Monthly Revenue vs Expenses";
+  
+  const totalVariance = Math.abs(bva.totalExpenses.variance);
+  const varianceTitle = bva.expenses.length > 0 ? 
+    `Budget Variance: ${fmtAcct(totalVariance)} ${bva.totalExpenses.variance >= 0 ? 'over' : 'under'} budget` : 
+    "Budget Variance — Expenses";
+
   const tabItems = [
     // ── TAB 1: OVERVIEW ──
     { key: '1', label: '📊 Overview', children: (
@@ -318,12 +329,12 @@ export function FinancialStatementsDashboard() {
 
         <Row gutter={[16, 16]} style={{ marginTop: 20 }}>
           <Col xs={24} lg={14}>
-            <Card title="Monthly Revenue vs Expenses" size="small" styles={{ header: { background: LIGHT_BG } }}>
+            <Card title={monthlyTitle} size="small" styles={{ header: { background: LIGHT_BG } }}>
               <MonthlyBarChart data={monthlyTrend} />
             </Card>
           </Col>
           <Col xs={24} lg={10}>
-            <Card title="Budget Variance — Expenses" size="small" styles={{ header: { background: LIGHT_BG } }}>
+            <Card title={varianceTitle} size="small" styles={{ header: { background: LIGHT_BG } }}>
               {bva.expenses.filter((e: BVALine) => e.budget > 0).map((e: BVALine, i: number) => (
                 <BudgetVarianceBar key={i} name={e.name} actual={e.actual} budget={e.budget} />
               ))}

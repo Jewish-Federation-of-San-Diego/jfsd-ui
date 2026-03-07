@@ -139,7 +139,7 @@ function DRMDetail({ drm, onBack }: { drm: DRM; onBack: () => void }) {
       <Row gutter={[16, 16]}>
         {/* LYBUNT Table */}
         <Col xs={24} lg={12}>
-          <Card title={<><WarningOutlined style={{ color: WARNING, marginRight: 8 }} /><DefinitionTooltip term="LYBUNT" dashboardKey="drm">LYBUNT Donors</DefinitionTooltip> ({drm.lybuntCount})</>} size="small"
+          <Card title={<><WarningOutlined style={{ color: WARNING, marginRight: 8 }} /><DefinitionTooltip term="LYBUNT" dashboardKey="drm">LYBUNT Risk</DefinitionTooltip>: {drm.lybuntCount} donors need attention</>} size="small"
             extra={<CsvExport data={drm.lybuntList} columns={[
               { title: 'Name', dataIndex: 'name' },
               { title: 'FY25', dataIndex: 'fy25Amount' },
@@ -163,7 +163,7 @@ function DRMDetail({ drm, onBack }: { drm: DRM; onBack: () => void }) {
 
         {/* Top Donors Table */}
         <Col xs={24} lg={12}>
-          <Card title={<><DollarOutlined style={{ color: GOLD, marginRight: 8 }} />Top Donors ({drm.topDonors.length})</>} size="small"
+          <Card title={<><DollarOutlined style={{ color: GOLD, marginRight: 8 }} />Top {drm.topDonors.length} Donors — portfolio's highest givers</>} size="small"
             extra={<CsvExport data={drm.topDonors} columns={[
               { title: 'Name', dataIndex: 'name' },
               { title: 'FY26', dataIndex: 'fy26' },
@@ -187,7 +187,7 @@ function DRMDetail({ drm, onBack }: { drm: DRM; onBack: () => void }) {
 
         {/* Recent Activity */}
         <Col xs={24}>
-          <Card title={<><ClockCircleOutlined style={{ color: SUCCESS, marginRight: 8 }} />Recent Activity ({drm.recentActivity.length})</>} size="small"
+          <Card title={<><ClockCircleOutlined style={{ color: SUCCESS, marginRight: 8 }} />Recent Activity: {drm.recentActivity.length} transactions — {fmtUSD(drm.recentActivity.reduce((sum, a) => sum + a.amount, 0))} total</>} size="small"
             extra={<CsvExport data={drm.recentActivity} columns={[
               { title: 'Donor', dataIndex: 'donorName' },
               { title: 'Amount', dataIndex: 'amount' },
