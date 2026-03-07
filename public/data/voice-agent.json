@@ -1,0 +1,31 @@
+{
+  "asOfDate": "",
+  "agents": [
+    {
+      "name": "Dalia",
+      "phone": "",
+      "purpose": "Donor follow-up"
+    },
+    {
+      "name": "Mira",
+      "phone": "",
+      "purpose": "Stewardship check-ins"
+    },
+    {
+      "name": "Hala",
+      "phone": "",
+      "purpose": "Prospect qualification"
+    },
+    {
+      "name": "Scout",
+      "phone": "",
+      "purpose": "Event reminders"
+    },
+    {
+      "name": "H2",
+      "phone": "",
+      "purpose": "Payment outreach"
+    }
+  ],
+  "calls": []
+}

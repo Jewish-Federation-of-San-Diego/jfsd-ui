@@ -24,6 +24,7 @@ type D = Record<string, any>;
 const DATA_FILES = [
   'campaign-tracker', 'sharon-donor-health', 'stripe', 'givecloud',
   'ramp-analytics', 'james-ap-expense', 'facilities', 'board-reporting', 'drm-portfolio',
+  'unasked', 'donor_data', 'network-data', 'voice-agent', 'travel/trips', 'pipeline-data', 'holdings',
 ] as const;
 
 type DataKey = typeof DATA_FILES[number];
@@ -39,6 +40,16 @@ const QUICK_LINKS: { key: DataKey; navKey: string; label: string; metric: (d: D)
   { key: 'facilities', navKey: 'facilities', label: 'Facilities', metric: d => `${d?.kpis?.alertCount ?? 0} alerts`, color: '#2D5F2D' },
   { key: 'board-reporting', navKey: 'board', label: 'Board', metric: d => `${fmtPct(d?.kpis?.overallBoardParticipation)} participation`, color: '#9B4DCA' },
   { key: 'drm-portfolio', navKey: 'drm', label: 'DRM Portfolio', metric: d => `${d?.kpis?.totalPortfolioDonors ?? '—'} donors`, color: '#8B6914' },
+  { key: 'unasked', navKey: 'share-of-wallet', label: 'Share of Wallet', metric: d => `${safeCount(d?.donors?.length ?? 0)} modeled`, color: '#1c88ed' },
+  { key: 'pipeline-data', navKey: 'major-gifts', label: 'Major Gifts', metric: d => `${safeCount(d?.records?.length ?? 0)} opps`, color: '#236B4A' },
+  { key: 'unasked', navKey: 'the-unasked', label: 'The Unasked', metric: d => `${safeCount(d?.donors?.length ?? 0)} unasked`, color: '#C4314B' },
+  { key: 'donor_data', navKey: 'donor-lifecycle', label: 'Donor Lifecycle', metric: d => `${safeCount(d?.records?.length ?? 0)} donors`, color: '#5B8DB8' },
+  { key: 'network-data', navKey: 'community-network', label: 'Community Network', metric: d => `${safeCount(d?.nodes?.length ?? 0)} nodes`, color: '#7C9EB8' },
+  { key: 'donor_data', navKey: 'cohort-analysis', label: 'Cohort Analysis', metric: d => `${safeCount(d?.records?.length ?? 0)} records`, color: '#9B4DCA' },
+  { key: 'donor_data', navKey: 'retention-flow', label: 'Retention Flow', metric: d => `${safeCount(d?.records?.length ?? 0)} FY-series`, color: '#8B6914' },
+  { key: 'voice-agent', navKey: 'voice-agent', label: 'Voice Agent', metric: d => `${safeCount(d?.agents?.length ?? 0)} agents`, color: '#236B4A' },
+  { key: 'travel/trips', navKey: 'immersive-travel', label: 'Immersive Travel', metric: d => `${safeCount(d?.trips?.length ?? 0)} trips`, color: '#C5A258' },
+  { key: 'holdings', navKey: 'holdings', label: 'Holdings', metric: d => `${fmtK(d?.metrics?.assets ?? 0)} assets`, color: '#1B365D' },
 ];
 
 // ── Component ───────────────────────────────────────────────────────────
