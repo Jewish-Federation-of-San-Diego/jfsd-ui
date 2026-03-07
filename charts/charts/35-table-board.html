@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Federation Board Giving FY26</title>
+    <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+    <style>
+        body { font-family: 'Helvetica Neue', Arial, sans-serif; margin: 20px; background: #f5f5f5; }
+        .container { max-width: 1000px; margin: 0 auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        h1 { color: #1e3eaf; margin-bottom: 5px; }
+        .subtitle { color: #666; margin-bottom: 20px; }
+        .stats { display: flex; gap: 20px; margin-bottom: 20px; }
+        .stat-box { background: #d2e9ff; padding: 15px 20px; border-radius: 8px; text-align: center; }
+        .stat-value { font-size: 24px; font-weight: bold; color: #1e3eaf; }
+        .stat-label { font-size: 12px; color: #666; }
+        .source { font-size: 11px; color: #999; margin-top: 15px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Federation Board Giving FY26</h1>
+        <p class="subtitle">34 Board Members | Data from Salesforce</p>
+        
+        <div class="stats">
+            <div class="stat-box">
+                <div class="stat-value">$161,130</div>
+                <div class="stat-label">Total Recognition</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-value">71%</div>
+                <div class="stat-label">Participation (24/34)</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-value">$6,714</div>
+                <div class="stat-label">Avg Gift (givers)</div>
+            </div>
+        </div>
+        
+        <div id="chart"></div>
+        
+        <p class="source">Source: Salesforce Federation Board FY26 | Generated Feb 5, 2026</p>
+    </div>
+
+    <script>
+        // Real data from Salesforce query - Federation Board FY26
+        const boardData = [
+            {name: "Sonia Ancoli Israel", role: "Vice Co-Chair Campaign", recognition: 36000, status: "✓"},
+            {name: "Allie Beth Hauser Erickson", role: "Director at Large", recognition: 18000, status: "✓"},
+            {name: "Jeff M. Schindler", role: "Board Chair", recognition: 12000, status: "✓"},
+            {name: "Silvana Anna Christy", role: "Director at Large", recognition: 11000, status: "✓"},
+            {name: "Jack Maizel", role: "Director at Large", recognition: 10250, status: "✓"},
+            {name: "Kira Elizabeth Finkenberg", role: "Director at Large", recognition: 10000, status: "✓"},
+            {name: "Debbie Ann Deverett", role: "WP Board Chair", recognition: 10000, status: "✓"},
+            {name: "Lisa Beth Pearl", role: "Director at Large", recognition: 9000, status: "✓"},
+            {name: "Ingram Losner", role: "Vice Co-Chair Campaign", recognition: 6000, status: "✓"},
+            {name: "Ronit Droker", role: "Director at Large", recognition: 5000, status: "✓"},
+            {name: "Larry Michael Katz", role: "Treasurer", recognition: 5000, status: "✓"},
+            {name: "Seth Krosner", role: "Director at Large", recognition: 5000, status: "✓"},
+            {name: "Robert A. Rubenstein", role: "Director at Large", recognition: 5000, status: "✓"},
+            {name: "Sarah Margaret Shekhter", role: "Director at Large", recognition: 5000, status: "✓"},
+            {name: "Julie Datnow", role: "Director at Large", recognition: 5000, status: "✓"},
+            {name: "David Bark", role: "Immediate Past Chair", recognition: 5000, status: "✓"},
+            {name: "Heather Keith", role: "WP Campaign Co-Chair", recognition: 4500, status: "✓"},
+            {name: "Meryl Maneker", role: "Secretary", recognition: 3600, status: "✓"},
+            {name: "Victor Shlionsky", role: "Director at Large", recognition: 1800, status: "✓"},
+            {name: "Debbie Kornberg", role: "Director at Large", recognition: 1800, status: "✓"},
+            {name: "Heidi Gantwerk", role: "President & CEO", recognition: 1500, status: "✓"},
+            {name: "Guri A Stark", role: "Director at Large", recognition: 1000, status: "✓"},
+            {name: "David Abraham", role: "Director at Large", recognition: 500, status: "✓"},
+            {name: "Uri Feldman", role: "Director at Large", recognition: 180, status: "✓"},
+            {name: "Sara Michelle Kabakoff", role: "WP Campaign Co-Chair", recognition: 0, status: "—"},
+            {name: "Howard Bruce Somers", role: "Director at Large", recognition: 0, status: "—"},
+            {name: "Elizabeth Siegler", role: "Director at Large", recognition: 0, status: "—"},
+            {name: "Jeremy King Pearl", role: "JCF CEO (Guest)", recognition: 0, status: "—"},
+            {name: "Tina Beranbaum", role: "JCF Board Chair", recognition: 0, status: "—"},
+            {name: "Lisa Dawn Kornfeld", role: "Director at Large", recognition: 0, status: "—"},
+            {name: "Elliot A Scott", role: "Director at Large", recognition: 0, status: "—"},
+            {name: "Simone Abelsohn", role: "Director at Large", recognition: 0, status: "—"},
+            {name: "Shari Friedman Schenk", role: "Director at Large", recognition: 0, status: "—"},
+            {name: "David Bramzon", role: "Director at Large", recognition: 0, status: "—"}
+        ];
+
+        // Prepare table data
+        const names = boardData.map(d => d.name);
+        const roles = boardData.map(d => d.role);
+        const recognitions = boardData.map(d => d.recognition > 0 ? '$' + d.recognition.toLocaleString() : '—');
+        const statuses = boardData.map(d => d.status);
+        
+        // Color cells based on status
+        const statusColors = boardData.map(d => d.recognition > 0 ? '#1f7d2b' : '#eb6136');
+        const rowColors = boardData.map((d, i) => i % 2 === 0 ? '#f5f5f5' : 'white');
+
+        const trace = {
+            type: 'table',
+            header: {
+                values: [['<b>Member</b>'], ['<b>Role</b>'], ['<b>FY26 Recognition</b>'], ['<b>Status</b>']],
+                align: ['left', 'left', 'right', 'center'],
+                fill: {color: '#1e3eaf'},
+                font: {color: 'white', size: 13, family: 'Arial'},
+                height: 35
+            },
+            cells: {
+                values: [names, roles, recognitions, statuses],
+                align: ['left', 'left', 'right', 'center'],
+                fill: {color: [rowColors, rowColors, rowColors, rowColors]},
+                font: {
+                    color: ['#2a2a2a', '#666', '#2a2a2a', statusColors],
+                    size: 12,
+                    family: 'Arial'
+                },
+                height: 28
+            },
+            columnwidth: [180, 150, 100, 60]
+        };
+
+        const layout = {
+            title: {
+                text: '',
+                font: {size: 18, color: '#1e3eaf'}
+            },
+            margin: {l: 10, r: 10, t: 10, b: 10},
+            height: 1050,
+            paper_bgcolor: 'white'
+        };
+
+        Plotly.newPlot('chart', [trace], layout, {responsive: true});
+    </script>
+</body>
+</html>

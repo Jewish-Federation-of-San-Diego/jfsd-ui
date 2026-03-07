@@ -1,1113 +1,1565 @@
 {
-  "asOfDate": "2026-02-24T23:10:30.364994",
   "dateRange": {
-    "start": "2026-01-28",
-    "end": "2026-02-24"
+    "start": "2026-02-06T00:00:00",
+    "end": "2026-03-06"
   },
   "buildingDaily": [
     {
-      "date": "2026-01-28",
-      "avgTemp": 68.6,
-      "minTemp": 62.3,
-      "maxTemp": 77.0,
-      "zonesActive": 31,
-      "totalHeatingMin": 0,
-      "totalCoolingMin": 15
-    },
-    {
-      "date": "2026-01-29",
-      "avgTemp": 69.1,
-      "minTemp": 59.0,
-      "maxTemp": 79.6,
-      "zonesActive": 32,
-      "totalHeatingMin": 570,
-      "totalCoolingMin": 245
-    },
-    {
-      "date": "2026-01-30",
-      "avgTemp": 69.5,
-      "minTemp": 60.1,
-      "maxTemp": 77.2,
-      "zonesActive": 31,
-      "totalHeatingMin": 375,
-      "totalCoolingMin": 260
-    },
-    {
-      "date": "2026-01-31",
-      "avgTemp": 69.2,
-      "minTemp": 60.7,
-      "maxTemp": 83.1,
-      "zonesActive": 31,
-      "totalHeatingMin": 0,
-      "totalCoolingMin": 125
-    },
-    {
-      "date": "2026-02-01",
-      "avgTemp": 68.8,
-      "minTemp": 59.9,
-      "maxTemp": 81.8,
-      "zonesActive": 32,
-      "totalHeatingMin": 5,
-      "totalCoolingMin": 115
-    },
-    {
-      "date": "2026-02-02",
-      "avgTemp": 69.7,
-      "minTemp": 59.3,
-      "maxTemp": 80.8,
-      "zonesActive": 33,
-      "totalHeatingMin": 460,
-      "totalCoolingMin": 255
-    },
-    {
-      "date": "2026-02-03",
-      "avgTemp": 69.7,
-      "minTemp": 60.3,
-      "maxTemp": 77.0,
-      "zonesActive": 35,
-      "totalHeatingMin": 260,
-      "totalCoolingMin": 405
-    },
-    {
-      "date": "2026-02-04",
-      "avgTemp": 70.6,
-      "minTemp": 60.5,
-      "maxTemp": 79.3,
-      "zonesActive": 31,
-      "totalHeatingMin": 285,
-      "totalCoolingMin": 555
-    },
-    {
-      "date": "2026-02-05",
-      "avgTemp": 70.9,
-      "minTemp": 63.5,
-      "maxTemp": 75.7,
-      "zonesActive": 31,
-      "totalHeatingMin": 195,
-      "totalCoolingMin": 435
-    },
-    {
+      "building": "ADL",
       "date": "2026-02-06",
-      "avgTemp": 71.4,
-      "minTemp": 65.2,
-      "maxTemp": 79.4,
-      "zonesActive": 31,
-      "totalHeatingMin": 130,
-      "totalCoolingMin": 390
+      "avg_temp": 7.2775,
+      "avg_humidity": 43.143229166666664,
+      "readings": 384
     },
     {
+      "building": "Common",
+      "date": "2026-02-06",
+      "avg_temp": 7.1912890625,
+      "avg_humidity": 47.33203125,
+      "readings": 768
+    },
+    {
+      "building": "Federation",
+      "date": "2026-02-06",
+      "avg_temp": 7.106679687500001,
+      "avg_humidity": 49.520833333333336,
+      "readings": 768
+    },
+    {
+      "building": "JCF",
+      "date": "2026-02-06",
+      "avg_temp": 7.134635416666666,
+      "avg_humidity": 47.013020833333336,
+      "readings": 768
+    },
+    {
+      "building": "Other",
+      "date": "2026-02-06",
+      "avg_temp": 6.890972222222222,
+      "avg_humidity": 50.90972222222222,
+      "readings": 288
+    },
+    {
+      "building": "ADL",
       "date": "2026-02-07",
-      "avgTemp": 70.2,
-      "minTemp": 62.7,
-      "maxTemp": 82.5,
-      "zonesActive": 31,
-      "totalHeatingMin": 0,
-      "totalCoolingMin": 100
+      "avg_temp": 7.26203125,
+      "avg_humidity": 44.369791666666664,
+      "readings": 384
     },
     {
+      "building": "Common",
+      "date": "2026-02-07",
+      "avg_temp": 7.077083333333333,
+      "avg_humidity": 48.182291666666664,
+      "readings": 768
+    },
+    {
+      "building": "Federation",
+      "date": "2026-02-07",
+      "avg_temp": 6.9016796875,
+      "avg_humidity": 51.515625,
+      "readings": 768
+    },
+    {
+      "building": "JCF",
+      "date": "2026-02-07",
+      "avg_temp": 7.091432291666667,
+      "avg_humidity": 47.997395833333336,
+      "readings": 768
+    },
+    {
+      "building": "Other",
+      "date": "2026-02-07",
+      "avg_temp": 6.689444444444444,
+      "avg_humidity": 51.670138888888886,
+      "readings": 288
+    },
+    {
+      "building": "ADL",
       "date": "2026-02-08",
-      "avgTemp": 70.0,
-      "minTemp": 60.1,
-      "maxTemp": 83.6,
-      "zonesActive": 31,
-      "totalHeatingMin": 0,
-      "totalCoolingMin": 140
+      "avg_temp": 7.319896907216495,
+      "avg_humidity": 43.80927835051546,
+      "readings": 388
     },
     {
+      "building": "Common",
+      "date": "2026-02-08",
+      "avg_temp": 7.050631443298969,
+      "avg_humidity": 47.20876288659794,
+      "readings": 776
+    },
+    {
+      "building": "Federation",
+      "date": "2026-02-08",
+      "avg_temp": 6.837603092783506,
+      "avg_humidity": 50.11469072164948,
+      "readings": 776
+    },
+    {
+      "building": "JCF",
+      "date": "2026-02-08",
+      "avg_temp": 7.1102061855670105,
+      "avg_humidity": 46.19845360824742,
+      "readings": 776
+    },
+    {
+      "building": "Other",
+      "date": "2026-02-08",
+      "avg_temp": 6.604089347079038,
+      "avg_humidity": 52.553264604811,
+      "readings": 291
+    },
+    {
+      "building": "ADL",
       "date": "2026-02-09",
-      "avgTemp": 70.4,
-      "minTemp": 60.9,
-      "maxTemp": 76.7,
-      "zonesActive": 31,
-      "totalHeatingMin": 225,
-      "totalCoolingMin": 495
+      "avg_temp": 7.2351213592233,
+      "avg_humidity": 42.10436893203884,
+      "readings": 412
     },
     {
+      "building": "Common",
+      "date": "2026-02-09",
+      "avg_temp": 7.104817961165049,
+      "avg_humidity": 45.228155339805824,
+      "readings": 824
+    },
+    {
+      "building": "Federation",
+      "date": "2026-02-09",
+      "avg_temp": 6.9606674757281555,
+      "avg_humidity": 47.24514563106796,
+      "readings": 824
+    },
+    {
+      "building": "JCF",
+      "date": "2026-02-09",
+      "avg_temp": 7.043665048543689,
+      "avg_humidity": 45.30339805825243,
+      "readings": 824
+    },
+    {
+      "building": "Other",
+      "date": "2026-02-09",
+      "avg_temp": 6.780485436893204,
+      "avg_humidity": 51.284789644012946,
+      "readings": 309
+    },
+    {
+      "building": "ADL",
       "date": "2026-02-10",
-      "avgTemp": 70.8,
-      "minTemp": 64.3,
-      "maxTemp": 75.6,
-      "zonesActive": 31,
-      "totalHeatingMin": 135,
-      "totalCoolingMin": 245
+      "avg_temp": 7.222051724137931,
+      "avg_humidity": 44.32241379310345,
+      "readings": 580
     },
     {
+      "building": "Common",
+      "date": "2026-02-10",
+      "avg_temp": 7.147517241379311,
+      "avg_humidity": 48.79396551724138,
+      "readings": 1160
+    },
+    {
+      "building": "Federation",
+      "date": "2026-02-10",
+      "avg_temp": 7.035008620689655,
+      "avg_humidity": 51.72844827586207,
+      "readings": 1160
+    },
+    {
+      "building": "JCF",
+      "date": "2026-02-10",
+      "avg_temp": 7.081051724137931,
+      "avg_humidity": 49.54913793103448,
+      "readings": 1160
+    },
+    {
+      "building": "Other",
+      "date": "2026-02-10",
+      "avg_temp": 6.850827586206897,
+      "avg_humidity": 53.07586206896552,
+      "readings": 435
+    },
+    {
+      "building": "ADL",
       "date": "2026-02-11",
-      "avgTemp": 70.1,
-      "minTemp": 63.9,
-      "maxTemp": 75.3,
-      "zonesActive": 32,
-      "totalHeatingMin": 230,
-      "totalCoolingMin": 210
+      "avg_temp": 7.022879310344828,
+      "avg_humidity": 46.35689655172414,
+      "readings": 580
     },
     {
+      "building": "Common",
+      "date": "2026-02-11",
+      "avg_temp": 7.077775862068965,
+      "avg_humidity": 51.38103448275862,
+      "readings": 1160
+    },
+    {
+      "building": "Federation",
+      "date": "2026-02-11",
+      "avg_temp": 7.004879310344827,
+      "avg_humidity": 54.25689655172414,
+      "readings": 1160
+    },
+    {
+      "building": "JCF",
+      "date": "2026-02-11",
+      "avg_temp": 7.016172413793104,
+      "avg_humidity": 52.70862068965517,
+      "readings": 1160
+    },
+    {
+      "building": "Other",
+      "date": "2026-02-11",
+      "avg_temp": 6.74471264367816,
+      "avg_humidity": 53.42528735632184,
+      "readings": 435
+    },
+    {
+      "building": "ADL",
       "date": "2026-02-12",
-      "avgTemp": 69.4,
-      "minTemp": 60.4,
-      "maxTemp": 76.3,
-      "zonesActive": 31,
-      "totalHeatingMin": 610,
-      "totalCoolingMin": 570
+      "avg_temp": 6.936678082191781,
+      "avg_humidity": 47.09417808219178,
+      "readings": 584
     },
     {
+      "building": "Common",
+      "date": "2026-02-12",
+      "avg_temp": 7.023082191780821,
+      "avg_humidity": 50.596746575342465,
+      "readings": 1168
+    },
+    {
+      "building": "Federation",
+      "date": "2026-02-12",
+      "avg_temp": 6.942628424657534,
+      "avg_humidity": 53.147260273972606,
+      "readings": 1168
+    },
+    {
+      "building": "JCF",
+      "date": "2026-02-12",
+      "avg_temp": 6.987739726027398,
+      "avg_humidity": 50.94606164383562,
+      "readings": 1168
+    },
+    {
+      "building": "Other",
+      "date": "2026-02-12",
+      "avg_temp": 6.64527397260274,
+      "avg_humidity": 53.0,
+      "readings": 438
+    },
+    {
+      "building": "ADL",
       "date": "2026-02-13",
-      "avgTemp": 69.8,
-      "minTemp": 61.8,
-      "maxTemp": 76.2,
-      "zonesActive": 31,
-      "totalHeatingMin": 410,
-      "totalCoolingMin": 260
+      "avg_temp": 7.0641493055555555,
+      "avg_humidity": 48.609375,
+      "readings": 576
     },
     {
+      "building": "Common",
+      "date": "2026-02-13",
+      "avg_temp": 7.055815972222223,
+      "avg_humidity": 50.57899305555556,
+      "readings": 1152
+    },
+    {
+      "building": "Federation",
+      "date": "2026-02-13",
+      "avg_temp": 6.938281249999999,
+      "avg_humidity": 53.27690972222222,
+      "readings": 1152
+    },
+    {
+      "building": "JCF",
+      "date": "2026-02-13",
+      "avg_temp": 7.005364583333334,
+      "avg_humidity": 51.220486111111114,
+      "readings": 1152
+    },
+    {
+      "building": "Other",
+      "date": "2026-02-13",
+      "avg_temp": 6.714189814814815,
+      "avg_humidity": 55.074074074074076,
+      "readings": 432
+    },
+    {
+      "building": "ADL",
       "date": "2026-02-14",
-      "avgTemp": 68.7,
-      "minTemp": 60.0,
-      "maxTemp": 78.7,
-      "zonesActive": 31,
-      "totalHeatingMin": 0,
-      "totalCoolingMin": 165
+      "avg_temp": 7.030651408450704,
+      "avg_humidity": 48.142605633802816,
+      "readings": 568
     },
     {
+      "building": "Common",
+      "date": "2026-02-14",
+      "avg_temp": 6.958001760563381,
+      "avg_humidity": 49.53257042253521,
+      "readings": 1136
+    },
+    {
+      "building": "Federation",
+      "date": "2026-02-14",
+      "avg_temp": 6.737139084507042,
+      "avg_humidity": 53.085387323943664,
+      "readings": 1136
+    },
+    {
+      "building": "JCF",
+      "date": "2026-02-14",
+      "avg_temp": 6.976672535211268,
+      "avg_humidity": 49.66197183098591,
+      "readings": 1136
+    },
+    {
+      "building": "Other",
+      "date": "2026-02-14",
+      "avg_temp": 6.476823529411765,
+      "avg_humidity": 55.743529411764705,
+      "readings": 425
+    },
+    {
+      "building": "ADL",
       "date": "2026-02-15",
-      "avgTemp": 68.0,
-      "minTemp": 59.9,
-      "maxTemp": 77.0,
-      "zonesActive": 31,
-      "totalHeatingMin": 0,
-      "totalCoolingMin": 220
+      "avg_temp": 6.960551724137931,
+      "avg_humidity": 47.67068965517242,
+      "readings": 580
     },
     {
+      "building": "Common",
+      "date": "2026-02-15",
+      "avg_temp": 6.897801724137931,
+      "avg_humidity": 49.58793103448276,
+      "readings": 1160
+    },
+    {
+      "building": "Federation",
+      "date": "2026-02-15",
+      "avg_temp": 6.666948275862069,
+      "avg_humidity": 53.359482758620686,
+      "readings": 1160
+    },
+    {
+      "building": "JCF",
+      "date": "2026-02-15",
+      "avg_temp": 6.902370689655172,
+      "avg_humidity": 49.599137931034484,
+      "readings": 1160
+    },
+    {
+      "building": "Other",
+      "date": "2026-02-15",
+      "avg_temp": 6.371655172413793,
+      "avg_humidity": 56.49885057471264,
+      "readings": 435
+    },
+    {
+      "building": "ADL",
       "date": "2026-02-16",
-      "avgTemp": 67.4,
-      "minTemp": 59.0,
-      "maxTemp": 73.1,
-      "zonesActive": 31,
-      "totalHeatingMin": 1190,
-      "totalCoolingMin": 135
+      "avg_temp": 6.802062937062938,
+      "avg_humidity": 46.80769230769231,
+      "readings": 572
     },
     {
+      "building": "Common",
+      "date": "2026-02-16",
+      "avg_temp": 6.831791958041958,
+      "avg_humidity": 49.47552447552447,
+      "readings": 1144
+    },
+    {
+      "building": "Federation",
+      "date": "2026-02-16",
+      "avg_temp": 6.71562062937063,
+      "avg_humidity": 51.8513986013986,
+      "readings": 1144
+    },
+    {
+      "building": "JCF",
+      "date": "2026-02-16",
+      "avg_temp": 6.713723776223776,
+      "avg_humidity": 51.07080419580419,
+      "readings": 1144
+    },
+    {
+      "building": "Other",
+      "date": "2026-02-16",
+      "avg_temp": 6.505104895104895,
+      "avg_humidity": 53.65034965034965,
+      "readings": 429
+    },
+    {
+      "building": "ADL",
       "date": "2026-02-17",
-      "avgTemp": 68.2,
-      "minTemp": 59.1,
-      "maxTemp": 77.4,
-      "zonesActive": 31,
-      "totalHeatingMin": 900,
-      "totalCoolingMin": 195
+      "avg_temp": 6.807621527777778,
+      "avg_humidity": 48.296875,
+      "readings": 576
     },
     {
+      "building": "Common",
+      "date": "2026-02-17",
+      "avg_temp": 6.903454861111111,
+      "avg_humidity": 51.040798611111114,
+      "readings": 1152
+    },
+    {
+      "building": "Federation",
+      "date": "2026-02-17",
+      "avg_temp": 6.804539930555555,
+      "avg_humidity": 53.140625,
+      "readings": 1152
+    },
+    {
+      "building": "JCF",
+      "date": "2026-02-17",
+      "avg_temp": 6.87203125,
+      "avg_humidity": 51.662326388888886,
+      "readings": 1152
+    },
+    {
+      "building": "Other",
+      "date": "2026-02-17",
+      "avg_temp": 6.5319212962962965,
+      "avg_humidity": 54.22453703703704,
+      "readings": 432
+    },
+    {
+      "building": "ADL",
       "date": "2026-02-18",
-      "avgTemp": 68.6,
-      "minTemp": 60.8,
-      "maxTemp": 75.1,
-      "zonesActive": 33,
-      "totalHeatingMin": 755,
-      "totalCoolingMin": 250
+      "avg_temp": 6.852086956521739,
+      "avg_humidity": 48.641739130434786,
+      "readings": 575
     },
     {
+      "building": "Common",
+      "date": "2026-02-18",
+      "avg_temp": 6.939088541666667,
+      "avg_humidity": 50.29253472222222,
+      "readings": 1152
+    },
+    {
+      "building": "Federation",
+      "date": "2026-02-18",
+      "avg_temp": 6.839513466550825,
+      "avg_humidity": 52.07211120764553,
+      "readings": 1151
+    },
+    {
+      "building": "JCF",
+      "date": "2026-02-18",
+      "avg_temp": 6.878064236111111,
+      "avg_humidity": 51.20399305555556,
+      "readings": 1152
+    },
+    {
+      "building": "Other",
+      "date": "2026-02-18",
+      "avg_temp": 6.58,
+      "avg_humidity": 55.324074074074076,
+      "readings": 432
+    },
+    {
+      "building": "ADL",
       "date": "2026-02-19",
-      "avgTemp": 67.9,
-      "minTemp": 59.0,
-      "maxTemp": 76.1,
-      "zonesActive": 37,
-      "totalHeatingMin": 1545,
-      "totalCoolingMin": 200
+      "avg_temp": 6.743379310344827,
+      "avg_humidity": 46.98620689655172,
+      "readings": 580
     },
     {
+      "building": "Common",
+      "date": "2026-02-19",
+      "avg_temp": 6.853577586206896,
+      "avg_humidity": 48.17844827586207,
+      "readings": 1160
+    },
+    {
+      "building": "Federation",
+      "date": "2026-02-19",
+      "avg_temp": 6.75672131147541,
+      "avg_humidity": 49.46678170836928,
+      "readings": 1159
+    },
+    {
+      "building": "JCF",
+      "date": "2026-02-19",
+      "avg_temp": 6.816816220880069,
+      "avg_humidity": 49.43485763589301,
+      "readings": 1159
+    },
+    {
+      "building": "Other",
+      "date": "2026-02-19",
+      "avg_temp": 6.500436781609196,
+      "avg_humidity": 52.305747126436785,
+      "readings": 435
+    },
+    {
+      "building": "ADL",
       "date": "2026-02-20",
-      "avgTemp": 67.5,
-      "minTemp": 59.0,
-      "maxTemp": 75.0,
-      "zonesActive": 31,
-      "totalHeatingMin": 1360,
-      "totalCoolingMin": 130
+      "avg_temp": 6.751086206896552,
+      "avg_humidity": 46.436206896551724,
+      "readings": 580
     },
     {
+      "building": "Common",
+      "date": "2026-02-20",
+      "avg_temp": 6.842456896551724,
+      "avg_humidity": 47.65258620689655,
+      "readings": 1160
+    },
+    {
+      "building": "Federation",
+      "date": "2026-02-20",
+      "avg_temp": 6.753594827586207,
+      "avg_humidity": 48.827586206896555,
+      "readings": 1160
+    },
+    {
+      "building": "JCF",
+      "date": "2026-02-20",
+      "avg_temp": 6.7347068965517245,
+      "avg_humidity": 48.84051724137931,
+      "readings": 1160
+    },
+    {
+      "building": "Other",
+      "date": "2026-02-20",
+      "avg_temp": 6.508137931034483,
+      "avg_humidity": 51.248275862068965,
+      "readings": 435
+    },
+    {
+      "building": "ADL",
       "date": "2026-02-21",
-      "avgTemp": 65.8,
-      "minTemp": 58.8,
-      "maxTemp": 80.0,
-      "zonesActive": 32,
-      "totalHeatingMin": 330,
-      "totalCoolingMin": 150
+      "avg_temp": 6.62314236111111,
+      "avg_humidity": 45.857638888888886,
+      "readings": 576
     },
     {
+      "building": "Common",
+      "date": "2026-02-21",
+      "avg_temp": 6.71640625,
+      "avg_humidity": 44.70746527777778,
+      "readings": 1152
+    },
+    {
+      "building": "Federation",
+      "date": "2026-02-21",
+      "avg_temp": 6.474860869565218,
+      "avg_humidity": 46.990434782608695,
+      "readings": 1150
+    },
+    {
+      "building": "JCF",
+      "date": "2026-02-21",
+      "avg_temp": 6.685951346655083,
+      "avg_humidity": 45.16072980017376,
+      "readings": 1151
+    },
+    {
+      "building": "Other",
+      "date": "2026-02-21",
+      "avg_temp": 6.247222222222223,
+      "avg_humidity": 51.504629629629626,
+      "readings": 432
+    },
+    {
+      "building": "ADL",
       "date": "2026-02-22",
-      "avgTemp": 66.7,
-      "minTemp": 58.9,
-      "maxTemp": 75.8,
-      "zonesActive": 31,
-      "totalHeatingMin": 135,
-      "totalCoolingMin": 260
+      "avg_temp": 6.8053275862068965,
+      "avg_humidity": 46.570689655172416,
+      "readings": 580
     },
     {
+      "building": "Common",
+      "date": "2026-02-22",
+      "avg_temp": 6.805836206896552,
+      "avg_humidity": 45.522413793103446,
+      "readings": 1160
+    },
+    {
+      "building": "Federation",
+      "date": "2026-02-22",
+      "avg_temp": 6.52823275862069,
+      "avg_humidity": 48.46293103448276,
+      "readings": 1160
+    },
+    {
+      "building": "JCF",
+      "date": "2026-02-22",
+      "avg_temp": 6.744120689655173,
+      "avg_humidity": 45.18448275862069,
+      "readings": 1160
+    },
+    {
+      "building": "Other",
+      "date": "2026-02-22",
+      "avg_temp": 6.28671264367816,
+      "avg_humidity": 54.13793103448276,
+      "readings": 435
+    },
+    {
+      "building": "ADL",
       "date": "2026-02-23",
-      "avgTemp": 69.2,
-      "minTemp": 58.9,
-      "maxTemp": 82.0,
-      "zonesActive": 32,
-      "totalHeatingMin": 780,
-      "totalCoolingMin": 515
+      "avg_temp": 6.985452898550724,
+      "avg_humidity": 45.572463768115945,
+      "readings": 552
     },
     {
+      "building": "Common",
+      "date": "2026-02-23",
+      "avg_temp": 7.0077787851314595,
+      "avg_humidity": 46.65276518585675,
+      "readings": 1103
+    },
+    {
+      "building": "Federation",
+      "date": "2026-02-23",
+      "avg_temp": 6.875887681159421,
+      "avg_humidity": 48.79347826086956,
+      "readings": 1104
+    },
+    {
+      "building": "JCF",
+      "date": "2026-02-23",
+      "avg_temp": 6.9397914777878515,
+      "avg_humidity": 46.7388939256573,
+      "readings": 1103
+    },
+    {
+      "building": "Other",
+      "date": "2026-02-23",
+      "avg_temp": 6.606739130434783,
+      "avg_humidity": 53.729468599033815,
+      "readings": 414
+    },
+    {
+      "building": "ADL",
       "date": "2026-02-24",
-      "avgTemp": 71.8,
-      "minTemp": 62.9,
-      "maxTemp": 78.1,
-      "zonesActive": 34,
-      "totalHeatingMin": 25,
-      "totalCoolingMin": 560
+      "avg_temp": 7.258125,
+      "avg_humidity": 46.375,
+      "readings": 400
+    },
+    {
+      "building": "Common",
+      "date": "2026-02-24",
+      "avg_temp": 7.229025,
+      "avg_humidity": 47.04625,
+      "readings": 800
+    },
+    {
+      "building": "Federation",
+      "date": "2026-02-24",
+      "avg_temp": 7.1241625,
+      "avg_humidity": 48.9575,
+      "readings": 800
+    },
+    {
+      "building": "JCF",
+      "date": "2026-02-24",
+      "avg_temp": 7.174812500000001,
+      "avg_humidity": 46.89875,
+      "readings": 800
+    },
+    {
+      "building": "Other",
+      "date": "2026-02-24",
+      "avg_temp": 6.947826086956522,
+      "avg_humidity": 54.67224080267559,
+      "readings": 299
+    },
+    {
+      "building": "ADL",
+      "date": "2026-02-25",
+      "avg_temp": 7.34711956521739,
+      "avg_humidity": 47.266304347826086,
+      "readings": 368
+    },
+    {
+      "building": "Common",
+      "date": "2026-02-25",
+      "avg_temp": 7.268614130434782,
+      "avg_humidity": 48.06929347826087,
+      "readings": 736
+    },
+    {
+      "building": "Federation",
+      "date": "2026-02-25",
+      "avg_temp": 7.18452445652174,
+      "avg_humidity": 50.08423913043478,
+      "readings": 736
+    },
+    {
+      "building": "JCF",
+      "date": "2026-02-25",
+      "avg_temp": 7.153885869565218,
+      "avg_humidity": 48.02309782608695,
+      "readings": 736
+    },
+    {
+      "building": "Other",
+      "date": "2026-02-25",
+      "avg_temp": 7.024710144927536,
+      "avg_humidity": 54.3731884057971,
+      "readings": 276
+    },
+    {
+      "building": "ADL",
+      "date": "2026-02-26",
+      "avg_temp": 7.207060041407868,
+      "avg_humidity": 47.22360248447205,
+      "readings": 483
+    },
+    {
+      "building": "Common",
+      "date": "2026-02-26",
+      "avg_temp": 7.208932642487047,
+      "avg_humidity": 48.4559585492228,
+      "readings": 965
+    },
+    {
+      "building": "Federation",
+      "date": "2026-02-26",
+      "avg_temp": 7.112637021716649,
+      "avg_humidity": 50.87797311271975,
+      "readings": 967
+    },
+    {
+      "building": "JCF",
+      "date": "2026-02-26",
+      "avg_temp": 7.073654244306418,
+      "avg_humidity": 48.989648033126294,
+      "readings": 966
+    },
+    {
+      "building": "Other",
+      "date": "2026-02-26",
+      "avg_temp": 6.918370165745856,
+      "avg_humidity": 53.033149171270715,
+      "readings": 362
+    },
+    {
+      "building": "ADL",
+      "date": "2026-02-27",
+      "avg_temp": 7.502796052631578,
+      "avg_humidity": 48.723684210526315,
+      "readings": 304
+    },
+    {
+      "building": "Common",
+      "date": "2026-02-27",
+      "avg_temp": 7.399457236842105,
+      "avg_humidity": 48.67927631578947,
+      "readings": 608
+    },
+    {
+      "building": "Federation",
+      "date": "2026-02-27",
+      "avg_temp": 7.303618421052632,
+      "avg_humidity": 51.483552631578945,
+      "readings": 608
+    },
+    {
+      "building": "JCF",
+      "date": "2026-02-27",
+      "avg_temp": 7.346408566721582,
+      "avg_humidity": 48.44316309719934,
+      "readings": 607
+    },
+    {
+      "building": "Other",
+      "date": "2026-02-27",
+      "avg_temp": 7.311271929824562,
+      "avg_humidity": 52.916666666666664,
+      "readings": 228
+    },
+    {
+      "building": "ADL",
+      "date": "2026-02-28",
+      "avg_temp": 7.685862068965518,
+      "avg_humidity": 46.755172413793105,
+      "readings": 580
+    },
+    {
+      "building": "Common",
+      "date": "2026-02-28",
+      "avg_temp": 7.43125,
+      "avg_humidity": 49.811206896551724,
+      "readings": 1160
+    },
+    {
+      "building": "Federation",
+      "date": "2026-02-28",
+      "avg_temp": 7.27626724137931,
+      "avg_humidity": 52.741379310344826,
+      "readings": 1160
+    },
+    {
+      "building": "JCF",
+      "date": "2026-02-28",
+      "avg_temp": 7.37223275862069,
+      "avg_humidity": 49.40689655172414,
+      "readings": 1160
+    },
+    {
+      "building": "Other",
+      "date": "2026-02-28",
+      "avg_temp": 7.253379310344827,
+      "avg_humidity": 54.39770114942529,
+      "readings": 435
+    },
+    {
+      "building": "ADL",
+      "date": "2026-03-01",
+      "avg_temp": 7.750137931034483,
+      "avg_humidity": 45.860344827586204,
+      "readings": 580
+    },
+    {
+      "building": "Common",
+      "date": "2026-03-01",
+      "avg_temp": 7.422543103448276,
+      "avg_humidity": 48.623275862068965,
+      "readings": 1160
+    },
+    {
+      "building": "Federation",
+      "date": "2026-03-01",
+      "avg_temp": 7.227155172413793,
+      "avg_humidity": 51.64655172413793,
+      "readings": 1160
+    },
+    {
+      "building": "JCF",
+      "date": "2026-03-01",
+      "avg_temp": 7.370939655172415,
+      "avg_humidity": 48.17327586206896,
+      "readings": 1160
+    },
+    {
+      "building": "Other",
+      "date": "2026-03-01",
+      "avg_temp": 7.222528735632184,
+      "avg_humidity": 54.65977011494253,
+      "readings": 435
+    },
+    {
+      "building": "ADL",
+      "date": "2026-03-02",
+      "avg_temp": 7.426810344827587,
+      "avg_humidity": 45.64655172413793,
+      "readings": 580
+    },
+    {
+      "building": "Common",
+      "date": "2026-03-02",
+      "avg_temp": 7.274288179465056,
+      "avg_humidity": 49.12942191544435,
+      "readings": 1159
+    },
+    {
+      "building": "Federation",
+      "date": "2026-03-02",
+      "avg_temp": 7.144836206896552,
+      "avg_humidity": 52.325,
+      "readings": 1160
+    },
+    {
+      "building": "JCF",
+      "date": "2026-03-02",
+      "avg_temp": 7.152146551724138,
+      "avg_humidity": 49.95,
+      "readings": 1160
+    },
+    {
+      "building": "Other",
+      "date": "2026-03-02",
+      "avg_temp": 7.0439770114942535,
+      "avg_humidity": 53.73103448275862,
+      "readings": 435
+    },
+    {
+      "building": "ADL",
+      "date": "2026-03-03",
+      "avg_temp": 7.2054687500000005,
+      "avg_humidity": 45.838541666666664,
+      "readings": 576
+    },
+    {
+      "building": "Common",
+      "date": "2026-03-03",
+      "avg_temp": 7.162519548218939,
+      "avg_humidity": 48.6750651607298,
+      "readings": 1151
+    },
+    {
+      "building": "Federation",
+      "date": "2026-03-03",
+      "avg_temp": 7.056408695652173,
+      "avg_humidity": 51.17739130434783,
+      "readings": 1150
+    },
+    {
+      "building": "JCF",
+      "date": "2026-03-03",
+      "avg_temp": 7.0735069444444445,
+      "avg_humidity": 49.236111111111114,
+      "readings": 1152
+    },
+    {
+      "building": "Other",
+      "date": "2026-03-03",
+      "avg_temp": 6.86363425925926,
+      "avg_humidity": 52.0625,
+      "readings": 432
+    },
+    {
+      "building": "ADL",
+      "date": "2026-03-04",
+      "avg_temp": 7.1785971223021585,
+      "avg_humidity": 46.805755395683455,
+      "readings": 556
+    },
+    {
+      "building": "Common",
+      "date": "2026-03-04",
+      "avg_temp": 7.148057553956835,
+      "avg_humidity": 49.68794964028777,
+      "readings": 1112
+    },
+    {
+      "building": "Federation",
+      "date": "2026-03-04",
+      "avg_temp": 7.044509450945094,
+      "avg_humidity": 52.05310531053105,
+      "readings": 1111
+    },
+    {
+      "building": "JCF",
+      "date": "2026-03-04",
+      "avg_temp": 7.080593525179856,
+      "avg_humidity": 50.37679856115108,
+      "readings": 1112
+    },
+    {
+      "building": "Other",
+      "date": "2026-03-04",
+      "avg_temp": 6.8270503597122305,
+      "avg_humidity": 53.15107913669065,
+      "readings": 417
+    },
+    {
+      "building": "ADL",
+      "date": "2026-03-05",
+      "avg_temp": 7.244166666666667,
+      "avg_humidity": 47.44308943089431,
+      "readings": 492
+    },
+    {
+      "building": "Common",
+      "date": "2026-03-05",
+      "avg_temp": 7.215676500508647,
+      "avg_humidity": 49.324516785350966,
+      "readings": 983
+    },
+    {
+      "building": "Federation",
+      "date": "2026-03-05",
+      "avg_temp": 7.1066463414634145,
+      "avg_humidity": 51.78556910569106,
+      "readings": 984
+    },
+    {
+      "building": "JCF",
+      "date": "2026-03-05",
+      "avg_temp": 7.104004065040651,
+      "avg_humidity": 49.391260162601625,
+      "readings": 984
+    },
+    {
+      "building": "Other",
+      "date": "2026-03-05",
+      "avg_temp": 6.898994565217391,
+      "avg_humidity": 53.994565217391305,
+      "readings": 368
+    },
+    {
+      "building": "ADL",
+      "date": "2026-03-06",
+      "avg_temp": 6.932896825396825,
+      "avg_humidity": 44.492063492063494,
+      "readings": 252
+    },
+    {
+      "building": "Common",
+      "date": "2026-03-06",
+      "avg_temp": 6.956448412698413,
+      "avg_humidity": 46.77777777777778,
+      "readings": 504
+    },
+    {
+      "building": "Federation",
+      "date": "2026-03-06",
+      "avg_temp": 6.811984126984126,
+      "avg_humidity": 48.541666666666664,
+      "readings": 504
+    },
+    {
+      "building": "JCF",
+      "date": "2026-03-06",
+      "avg_temp": 6.790634920634921,
+      "avg_humidity": 48.95634920634921,
+      "readings": 504
+    },
+    {
+      "building": "Other",
+      "date": "2026-03-06",
+      "avg_temp": 6.58137566137566,
+      "avg_humidity": 50.370370370370374,
+      "readings": 189
     }
   ],
   "serverRooms": [
     {
+      "name": "ADL-Server",
       "date": "2026-01-28",
-      "zone": "ADL-Server",
-      "avgTemp": 70.3,
-      "maxTemp": 70.9
-    },
-    {
-      "date": "2026-01-28",
-      "zone": "Common-Data Room (HP6)",
-      "avgTemp": 72.4,
-      "maxTemp": 72.9
-    },
-    {
-      "date": "2026-01-28",
-      "zone": "Common-Server Room",
-      "avgTemp": 76.1,
-      "maxTemp": 77.0
-    },
-    {
-      "date": "2026-01-29",
-      "zone": "ADL-Server",
-      "avgTemp": 70.0,
-      "maxTemp": 73.6
-    },
-    {
-      "date": "2026-01-29",
-      "zone": "Common-Data Room (HP6)",
-      "avgTemp": 72.0,
-      "maxTemp": 74.4
-    },
-    {
-      "date": "2026-01-29",
-      "zone": "Common-Server Room",
-      "avgTemp": 76.0,
-      "maxTemp": 77.1
-    },
-    {
-      "date": "2026-01-30",
-      "zone": "ADL-Server",
-      "avgTemp": 70.9,
-      "maxTemp": 73.9
-    },
-    {
-      "date": "2026-01-30",
-      "zone": "Common-Data Room (HP6)",
-      "avgTemp": 72.7,
-      "maxTemp": 74.8
-    },
-    {
-      "date": "2026-01-30",
-      "zone": "Common-Server Room",
-      "avgTemp": 75.6,
-      "maxTemp": 77.2
-    },
-    {
-      "date": "2026-01-31",
-      "zone": "ADL-Server",
-      "avgTemp": 71.7,
-      "maxTemp": 75.3
-    },
-    {
-      "date": "2026-01-31",
-      "zone": "Common-Data Room (HP6)",
-      "avgTemp": 72.3,
-      "maxTemp": 74.0
-    },
-    {
-      "date": "2026-01-31",
-      "zone": "Common-Server Room",
-      "avgTemp": 72.1,
-      "maxTemp": 73.4
-    },
-    {
-      "date": "2026-02-01",
-      "zone": "ADL-Server",
-      "avgTemp": 71.8,
-      "maxTemp": 74.6
-    },
-    {
-      "date": "2026-02-01",
-      "zone": "Common-Data Room (HP6)",
-      "avgTemp": 71.7,
-      "maxTemp": 73.5
-    },
-    {
-      "date": "2026-02-01",
-      "zone": "Common-Server Room",
-      "avgTemp": 72.0,
-      "maxTemp": 73.1
-    },
-    {
-      "date": "2026-02-02",
-      "zone": "ADL-Server",
-      "avgTemp": 71.3,
-      "maxTemp": 73.4
-    },
-    {
-      "date": "2026-02-02",
-      "zone": "Common-Data Room (HP6)",
-      "avgTemp": 72.2,
-      "maxTemp": 74.3
-    },
-    {
-      "date": "2026-02-02",
-      "zone": "Common-Server Room",
-      "avgTemp": 72.0,
-      "maxTemp": 73.2
-    },
-    {
-      "date": "2026-02-03",
-      "zone": "ADL-Server",
-      "avgTemp": 71.8,
-      "maxTemp": 74.9
-    },
-    {
-      "date": "2026-02-03",
-      "zone": "Common-Data Room (HP6)",
-      "avgTemp": 73.1,
-      "maxTemp": 75.0
-    },
-    {
-      "date": "2026-02-03",
-      "zone": "Common-Server Room",
-      "avgTemp": 71.9,
-      "maxTemp": 73.2
-    },
-    {
-      "date": "2026-02-04",
-      "zone": "ADL-Server",
-      "avgTemp": 72.4,
-      "maxTemp": 75.8
-    },
-    {
-      "date": "2026-02-04",
-      "zone": "Common-Data Room (HP6)",
-      "avgTemp": 73.3,
-      "maxTemp": 75.5
-    },
-    {
-      "date": "2026-02-04",
-      "zone": "Common-Server Room",
-      "avgTemp": 72.1,
-      "maxTemp": 73.2
-    },
-    {
-      "date": "2026-02-05",
-      "zone": "ADL-Server",
-      "avgTemp": 73.0,
-      "maxTemp": 74.8
-    },
-    {
-      "date": "2026-02-05",
-      "zone": "Common-Data Room (HP6)",
-      "avgTemp": 74.0,
-      "maxTemp": 75.7
-    },
-    {
-      "date": "2026-02-05",
-      "zone": "Common-Server Room",
-      "avgTemp": 72.1,
-      "maxTemp": 73.2
-    },
-    {
-      "date": "2026-02-06",
-      "zone": "ADL-Server",
-      "avgTemp": 73.3,
-      "maxTemp": 74.7
-    },
-    {
-      "date": "2026-02-06",
-      "zone": "Common-Data Room (HP6)",
-      "avgTemp": 74.3,
-      "maxTemp": 75.3
-    },
-    {
-      "date": "2026-02-06",
-      "zone": "Common-Server Room",
-      "avgTemp": 72.1,
-      "maxTemp": 73.2
-    },
-    {
-      "date": "2026-02-07",
-      "zone": "ADL-Server",
-      "avgTemp": 72.6,
-      "maxTemp": 74.7
-    },
-    {
-      "date": "2026-02-07",
-      "zone": "Common-Data Room (HP6)",
-      "avgTemp": 73.7,
-      "maxTemp": 74.7
-    },
-    {
-      "date": "2026-02-07",
-      "zone": "Common-Server Room",
-      "avgTemp": 72.0,
-      "maxTemp": 73.0
-    },
-    {
-      "date": "2026-02-08",
-      "zone": "ADL-Server",
-      "avgTemp": 72.6,
-      "maxTemp": 76.0
-    },
-    {
-      "date": "2026-02-08",
-      "zone": "Common-Data Room (HP6)",
-      "avgTemp": 72.9,
-      "maxTemp": 74.6
-    },
-    {
-      "date": "2026-02-08",
-      "zone": "Common-Server Room",
-      "avgTemp": 72.1,
-      "maxTemp": 73.2
-    },
-    {
-      "date": "2026-02-09",
-      "zone": "ADL-Server",
-      "avgTemp": 72.9,
-      "maxTemp": 74.8
-    },
-    {
-      "date": "2026-02-09",
-      "zone": "Common-Data Room (HP6)",
-      "avgTemp": 73.4,
-      "maxTemp": 75.5
-    },
-    {
-      "date": "2026-02-09",
-      "zone": "Common-Server Room",
-      "avgTemp": 72.1,
-      "maxTemp": 73.3
-    },
-    {
-      "date": "2026-02-10",
-      "zone": "ADL-Server",
-      "avgTemp": 72.9,
-      "maxTemp": 74.2
-    },
-    {
-      "date": "2026-02-10",
-      "zone": "Common-Data Room (HP6)",
-      "avgTemp": 74.5,
-      "maxTemp": 75.6
-    },
-    {
-      "date": "2026-02-10",
-      "zone": "Common-Server Room",
-      "avgTemp": 72.1,
-      "maxTemp": 73.3
-    },
-    {
-      "date": "2026-02-11",
-      "zone": "ADL-Server",
-      "avgTemp": 71.0,
-      "maxTemp": 72.3
-    },
-    {
-      "date": "2026-02-11",
-      "zone": "Common-Data Room (HP6)",
-      "avgTemp": 74.6,
-      "maxTemp": 75.3
-    },
-    {
-      "date": "2026-02-11",
-      "zone": "Common-Server Room",
-      "avgTemp": 72.1,
-      "maxTemp": 73.1
-    },
-    {
-      "date": "2026-02-12",
-      "zone": "ADL-Server",
-      "avgTemp": 69.6,
-      "maxTemp": 71.4
-    },
-    {
-      "date": "2026-02-12",
-      "zone": "Common-Data Room (HP6)",
-      "avgTemp": 73.5,
-      "maxTemp": 75.6
-    },
-    {
-      "date": "2026-02-12",
-      "zone": "Common-Server Room",
-      "avgTemp": 72.0,
-      "maxTemp": 73.2
-    },
-    {
-      "date": "2026-02-13",
-      "zone": "ADL-Server",
-      "avgTemp": 70.8,
-      "maxTemp": 73.0
-    },
-    {
-      "date": "2026-02-13",
-      "zone": "Common-Data Room (HP6)",
-      "avgTemp": 73.8,
-      "maxTemp": 75.5
-    },
-    {
-      "date": "2026-02-13",
-      "zone": "Common-Server Room",
-      "avgTemp": 72.0,
-      "maxTemp": 73.2
-    },
-    {
-      "date": "2026-02-14",
-      "zone": "ADL-Server",
-      "avgTemp": 70.4,
-      "maxTemp": 72.6
-    },
-    {
-      "date": "2026-02-14",
-      "zone": "Common-Data Room (HP6)",
-      "avgTemp": 72.4,
-      "maxTemp": 74.1
-    },
-    {
-      "date": "2026-02-14",
-      "zone": "Common-Server Room",
-      "avgTemp": 72.1,
-      "maxTemp": 73.3
-    },
-    {
-      "date": "2026-02-15",
-      "zone": "ADL-Server",
-      "avgTemp": 70.1,
-      "maxTemp": 71.4
-    },
-    {
-      "date": "2026-02-15",
-      "zone": "Common-Data Room (HP6)",
-      "avgTemp": 71.5,
-      "maxTemp": 72.7
-    },
-    {
-      "date": "2026-02-15",
-      "zone": "Common-Server Room",
-      "avgTemp": 72.2,
-      "maxTemp": 73.1
-    },
-    {
-      "date": "2026-02-16",
-      "zone": "ADL-Server",
-      "avgTemp": 68.4,
-      "maxTemp": 69.7
-    },
-    {
-      "date": "2026-02-16",
-      "zone": "Common-Data Room (HP6)",
-      "avgTemp": 70.6,
-      "maxTemp": 71.4
-    },
-    {
-      "date": "2026-02-16",
-      "zone": "Common-Server Room",
-      "avgTemp": 72.1,
-      "maxTemp": 73.1
-    },
-    {
-      "date": "2026-02-17",
-      "zone": "ADL-Server",
-      "avgTemp": 68.0,
-      "maxTemp": 70.2
-    },
-    {
-      "date": "2026-02-17",
-      "zone": "Common-Data Room (HP6)",
-      "avgTemp": 71.3,
-      "maxTemp": 73.2
-    },
-    {
-      "date": "2026-02-17",
-      "zone": "Common-Server Room",
-      "avgTemp": 72.1,
-      "maxTemp": 73.2
-    },
-    {
-      "date": "2026-02-18",
-      "zone": "ADL-Server",
-      "avgTemp": 68.8,
-      "maxTemp": 70.5
-    },
-    {
-      "date": "2026-02-18",
-      "zone": "Common-Data Room (HP6)",
-      "avgTemp": 72.5,
-      "maxTemp": 74.0
-    },
-    {
-      "date": "2026-02-18",
-      "zone": "Common-Server Room",
-      "avgTemp": 72.1,
-      "maxTemp": 73.2
-    },
-    {
-      "date": "2026-02-19",
-      "zone": "ADL-Server",
-      "avgTemp": 67.7,
-      "maxTemp": 69.2
-    },
-    {
-      "date": "2026-02-19",
-      "zone": "Common-Data Room (HP6)",
-      "avgTemp": 71.6,
-      "maxTemp": 72.9
-    },
-    {
-      "date": "2026-02-19",
-      "zone": "Common-Server Room",
-      "avgTemp": 72.1,
-      "maxTemp": 73.3
-    },
-    {
-      "date": "2026-02-20",
-      "zone": "ADL-Server",
-      "avgTemp": 67.5,
-      "maxTemp": 69.9
-    },
-    {
-      "date": "2026-02-20",
-      "zone": "Common-Data Room (HP6)",
-      "avgTemp": 71.3,
-      "maxTemp": 72.7
-    },
-    {
-      "date": "2026-02-20",
-      "zone": "Common-Server Room",
-      "avgTemp": 72.0,
-      "maxTemp": 73.2
-    },
-    {
-      "date": "2026-02-21",
-      "zone": "ADL-Server",
-      "avgTemp": 66.4,
-      "maxTemp": 69.8
-    },
-    {
-      "date": "2026-02-21",
-      "zone": "Common-Data Room (HP6)",
-      "avgTemp": 69.8,
-      "maxTemp": 71.1
-    },
-    {
-      "date": "2026-02-21",
-      "zone": "Common-Server Room",
-      "avgTemp": 72.1,
-      "maxTemp": 73.3
-    },
-    {
-      "date": "2026-02-22",
-      "zone": "ADL-Server",
-      "avgTemp": 68.1,
-      "maxTemp": 71.7
-    },
-    {
-      "date": "2026-02-22",
-      "zone": "Common-Data Room (HP6)",
-      "avgTemp": 70.0,
-      "maxTemp": 71.7
-    },
-    {
-      "date": "2026-02-22",
-      "zone": "Common-Server Room",
-      "avgTemp": 72.1,
-      "maxTemp": 73.1
-    },
-    {
-      "date": "2026-02-23",
-      "zone": "ADL-Server",
-      "avgTemp": 70.0,
-      "maxTemp": 73.7
-    },
-    {
-      "date": "2026-02-23",
-      "zone": "Common-Data Room (HP6)",
-      "avgTemp": 72.1,
-      "maxTemp": 75.4
-    },
-    {
-      "date": "2026-02-23",
-      "zone": "Common-Server Room",
-      "avgTemp": 72.0,
-      "maxTemp": 73.1
-    },
-    {
-      "date": "2026-02-24",
-      "zone": "ADL-Server",
-      "avgTemp": 72.7,
-      "maxTemp": 74.7
-    },
-    {
-      "date": "2026-02-24",
-      "zone": "Common-Data Room (HP6)",
-      "avgTemp": 74.9,
-      "maxTemp": 76.1
-    },
-    {
-      "date": "2026-02-24",
-      "zone": "Common-Server Room",
-      "avgTemp": 72.0,
-      "maxTemp": 73.2
-    }
-  ],
-  "zones": [
-    {
-      "name": "Thermostat 417361797001",
-      "group": "JCF",
-      "avgTemp7d": 72.6,
-      "readings7d": 1,
-      "lastReading": "2026-02-24T12:15:02.060288",
-      "avgHumidity7d": 47.0
-    },
-    {
-      "name": "Thermostat 417311299522",
-      "group": "Common",
-      "avgTemp7d": 72.5,
-      "readings7d": 1,
-      "lastReading": "2026-02-24T15:15:01.261506",
-      "avgHumidity7d": 48.0
+      "avg_temp": 7.033703703703703,
+      "max_temp": 7.090000000000001,
+      "min_temp": 6.93
     },
     {
       "name": "Common-Server Room",
-      "group": "Common",
-      "avgTemp7d": 72.1,
-      "readings7d": 957,
-      "lastReading": "2026-02-24T23:00:12.025339",
-      "avgHumidity7d": 41.9
-    },
-    {
-      "name": "Thermostat 417370063816",
-      "group": "JCF",
-      "avgTemp7d": 71.6,
-      "readings7d": 1,
-      "lastReading": "2026-02-18T13:30:01.360439",
-      "avgHumidity7d": 51.0
-    },
-    {
-      "name": "Common-Data Room (HP6)",
-      "group": "Common",
-      "avgTemp7d": 71.6,
-      "readings7d": 957,
-      "lastReading": "2026-02-24T23:00:12.025339",
-      "avgHumidity7d": 44.1
-    },
-    {
-      "name": "Thermostat 417325331773",
-      "group": "ADL",
-      "avgTemp7d": 71.6,
-      "readings7d": 2,
-      "lastReading": "2026-02-24T16:00:05.601596",
-      "avgHumidity7d": 45.0
-    },
-    {
-      "name": "Thermostat 417385554923",
-      "group": "Federation",
-      "avgTemp7d": 71.4,
-      "readings7d": 1,
-      "lastReading": "2026-02-19T13:00:05.373979",
-      "avgHumidity7d": 47.0
-    },
-    {
-      "name": "Thermostat 417326324194",
-      "group": "ADL",
-      "avgTemp7d": 70.5,
-      "readings7d": 1,
-      "lastReading": "2026-02-23T12:45:01.585725",
-      "avgHumidity7d": 46.0
-    },
-    {
-      "name": "Federation-Cubicle Area (HP5)",
-      "group": "Federation",
-      "avgTemp7d": 69.9,
-      "readings7d": 955,
-      "lastReading": "2026-02-24T23:00:12.025339",
-      "avgHumidity7d": 46.2
-    },
-    {
-      "name": "Federation-Programs Conference (HP7)",
-      "group": "Federation",
-      "avgTemp7d": 69.4,
-      "readings7d": 956,
-      "lastReading": "2026-02-24T23:00:12.025339",
-      "avgHumidity7d": 47.0
-    },
-    {
-      "name": "JCF-Common Receptionist N (CU17)",
-      "group": "JCF",
-      "avgTemp7d": 69.1,
-      "readings7d": 956,
-      "lastReading": "2026-02-24T23:00:12.025339",
-      "avgHumidity7d": 46.3
-    },
-    {
-      "name": "Thermostat 417316798190",
-      "group": "JCF",
-      "avgTemp7d": 68.9,
-      "readings7d": 2,
-      "lastReading": "2026-02-19T13:00:02.151302",
-      "avgHumidity7d": 50.5
-    },
-    {
-      "name": "ADL-Conference (HP11)",
-      "group": "ADL",
-      "avgTemp7d": 68.9,
-      "readings7d": 955,
-      "lastReading": "2026-02-24T23:00:12.025339",
-      "avgHumidity7d": 46.3
-    },
-    {
-      "name": "JCF-Estella W (CU16)",
-      "group": "JCF",
-      "avgTemp7d": 68.9,
-      "readings7d": 954,
-      "lastReading": "2026-02-24T23:00:12.025339",
-      "avgHumidity7d": 47.7
-    },
-    {
-      "name": "Common Lobby (CU7) 1st",
-      "group": "Common",
-      "avgTemp7d": 68.7,
-      "readings7d": 957,
-      "lastReading": "2026-02-24T23:00:12.025339",
-      "avgHumidity7d": 47.3
+      "date": "2026-01-28",
+      "avg_temp": 7.611851851851852,
+      "max_temp": 7.7,
+      "min_temp": 7.4799999999999995
     },
     {
       "name": "ADL-Server",
-      "group": "ADL",
-      "avgTemp7d": 68.5,
-      "readings7d": 956,
-      "lastReading": "2026-02-24T23:00:12.025339",
-      "avgHumidity7d": 46.1
+      "date": "2026-01-29",
+      "avg_temp": 7.000729166666667,
+      "max_temp": 7.359999999999999,
+      "min_temp": 6.640000000000001
     },
     {
-      "name": "JCF-South Common (CU13)",
-      "group": "JCF",
-      "avgTemp7d": 68.5,
-      "readings7d": 956,
-      "lastReading": "2026-02-24T23:00:12.025339",
-      "avgHumidity7d": 47.2
+      "name": "Common-Server Room",
+      "date": "2026-01-29",
+      "avg_temp": 7.6042708333333335,
+      "max_temp": 7.709999999999999,
+      "min_temp": 7.4799999999999995
     },
     {
-      "name": "Federation-East Program Offices (HP9)",
-      "group": "Federation",
-      "avgTemp7d": 68.4,
-      "readings7d": 957,
-      "lastReading": "2026-02-24T23:00:12.025339",
-      "avgHumidity7d": 48.2
+      "name": "ADL-Server",
+      "date": "2026-01-30",
+      "avg_temp": 7.0890625,
+      "max_temp": 7.390000000000001,
+      "min_temp": 6.76
     },
     {
-      "name": "Conference-Galinson (CU8)",
-      "group": "Common",
-      "avgTemp7d": 68.4,
-      "readings7d": 957,
-      "lastReading": "2026-02-24T23:00:12.025339",
-      "avgHumidity7d": 48.2
+      "name": "Common-Server Room",
+      "date": "2026-01-30",
+      "avg_temp": 7.5605208333333325,
+      "max_temp": 7.720000000000001,
+      "min_temp": 7.12
     },
     {
-      "name": "JCF-Conference SE (CU14)",
-      "group": "JCF",
-      "avgTemp7d": 68.4,
-      "readings7d": 957,
-      "lastReading": "2026-02-24T23:00:12.025339",
-      "avgHumidity7d": 46.5
+      "name": "ADL-Server",
+      "date": "2026-01-31",
+      "avg_temp": 7.168020833333333,
+      "max_temp": 7.529999999999999,
+      "min_temp": 6.840000000000001
     },
     {
-      "name": "JCF-Room 101 (CU15)",
-      "group": "JCF",
-      "avgTemp7d": 68.4,
-      "readings7d": 956,
-      "lastReading": "2026-02-24T23:00:12.025339",
-      "avgHumidity7d": 47.6
+      "name": "Common-Server Room",
+      "date": "2026-01-31",
+      "avg_temp": 7.208541666666666,
+      "max_temp": 7.340000000000001,
+      "min_temp": 7.040000000000001
     },
     {
-      "name": "JCF-Josie (CU 11 or 12)",
-      "group": "JCF",
-      "avgTemp7d": 68.3,
-      "readings7d": 956,
-      "lastReading": "2026-02-24T23:00:12.025339",
-      "avgHumidity7d": 48.1
+      "name": "ADL-Server",
+      "date": "2026-02-01",
+      "avg_temp": 7.177812499999999,
+      "max_temp": 7.459999999999999,
+      "min_temp": 6.85
     },
     {
-      "name": "Thermostat 417371789739",
-      "group": "JCF",
-      "avgTemp7d": 68.1,
-      "readings7d": 2,
-      "lastReading": "2026-02-19T08:30:06.830473",
-      "avgHumidity7d": 51.0
+      "name": "Common-Server Room",
+      "date": "2026-02-01",
+      "avg_temp": 7.196041666666667,
+      "max_temp": 7.31,
+      "min_temp": 7.05
     },
     {
-      "name": "ADL-South Office (HP10)",
-      "group": "ADL",
-      "avgTemp7d": 68.1,
-      "readings7d": 957,
-      "lastReading": "2026-02-24T23:00:12.025339",
-      "avgHumidity7d": 46.8
+      "name": "ADL-Server",
+      "date": "2026-02-02",
+      "avg_temp": 7.129157894736842,
+      "max_temp": 7.340000000000001,
+      "min_temp": 6.87
     },
     {
-      "name": "ADL-West Office (HP12)",
-      "group": "ADL",
-      "avgTemp7d": 68.1,
-      "readings7d": 956,
-      "lastReading": "2026-02-24T23:00:12.025339",
-      "avgHumidity7d": 47.4
+      "name": "Common-Server Room",
+      "date": "2026-02-02",
+      "avg_temp": 7.196842105263158,
+      "max_temp": 7.32,
+      "min_temp": 7.05
     },
     {
-      "name": "Common-Conference Room A (HP4)",
-      "group": "Common",
-      "avgTemp7d": 68.1,
-      "readings7d": 957,
-      "lastReading": "2026-02-24T23:00:12.025339",
-      "avgHumidity7d": 48.9
+      "name": "ADL-Server",
+      "date": "2026-02-03",
+      "avg_temp": 7.1846875,
+      "max_temp": 7.49,
+      "min_temp": 6.85
     },
     {
-      "name": "Common-ADL Hall (HP13)",
-      "group": "Common",
-      "avgTemp7d": 68.0,
-      "readings7d": 957,
-      "lastReading": "2026-02-24T23:00:12.025339",
-      "avgHumidity7d": 47.4
+      "name": "Common-Server Room",
+      "date": "2026-02-03",
+      "avg_temp": 7.1915625,
+      "max_temp": 7.32,
+      "min_temp": 7.040000000000001
     },
     {
-      "name": "Federation-East Offices (CU6)",
-      "group": "Federation",
-      "avgTemp7d": 67.9,
-      "readings7d": 957,
-      "lastReading": "2026-02-24T23:00:12.025339",
-      "avgHumidity7d": 48.4
+      "name": "ADL-Server",
+      "date": "2026-02-04",
+      "avg_temp": 7.241649484536083,
+      "max_temp": 7.58,
+      "min_temp": 6.88
     },
     {
-      "name": "Conference-Foster N (CU9)",
-      "group": "JCF",
-      "avgTemp7d": 67.8,
-      "readings7d": 956,
-      "lastReading": "2026-02-24T23:00:12.025339",
-      "avgHumidity7d": 49.7
+      "name": "Common-Server Room",
+      "date": "2026-02-04",
+      "avg_temp": 7.20659793814433,
+      "max_temp": 7.32,
+      "min_temp": 7.040000000000001
     },
     {
-      "name": "JCF-Conf North (CU18) First Floor",
-      "group": "JCF",
-      "avgTemp7d": 67.8,
-      "readings7d": 955,
-      "lastReading": "2026-02-24T23:00:12.025339",
-      "avgHumidity7d": 48.1
+      "name": "ADL-Server",
+      "date": "2026-02-05",
+      "avg_temp": 7.29778947368421,
+      "max_temp": 7.4799999999999995,
+      "min_temp": 7.07
     },
     {
-      "name": "Conference-Foster S (CU10)",
-      "group": "Common",
-      "avgTemp7d": 67.7,
-      "readings7d": 956,
-      "lastReading": "2026-02-24T23:00:12.025339",
-      "avgHumidity7d": 50.0
+      "name": "Common-Server Room",
+      "date": "2026-02-05",
+      "avg_temp": 7.212736842105263,
+      "max_temp": 7.32,
+      "min_temp": 7.090000000000001
     },
     {
-      "name": "Thermostat 417386543807",
-      "group": "Other",
-      "avgTemp7d": 67.5,
-      "readings7d": 1,
-      "lastReading": "2026-02-19T08:30:01.467012",
-      "avgHumidity7d": 51.0
+      "name": "ADL-Server",
+      "date": "2026-02-06",
+      "avg_temp": 7.332291666666666,
+      "max_temp": 7.470000000000001,
+      "min_temp": 7.159999999999999
     },
     {
-      "name": "Thermostat 417330910873",
-      "group": "Other",
-      "avgTemp7d": 67.5,
-      "readings7d": 1,
-      "lastReading": "2026-02-19T08:30:06.830473",
-      "avgHumidity7d": 47.0
+      "name": "Common-Server Room",
+      "date": "2026-02-06",
+      "avg_temp": 7.2134375,
+      "max_temp": 7.32,
+      "min_temp": 7.1
     },
     {
-      "name": "Federation-West Offices (CU4)",
-      "group": "Federation",
-      "avgTemp7d": 67.4,
-      "readings7d": 956,
-      "lastReading": "2026-02-24T23:00:12.025339",
-      "avgHumidity7d": 47.6
+      "name": "ADL-Server",
+      "date": "2026-02-07",
+      "avg_temp": 7.2586458333333335,
+      "max_temp": 7.470000000000001,
+      "min_temp": 7.01
     },
     {
-      "name": "Federation-Cubicle Area (CU3)",
-      "group": "Federation",
-      "avgTemp7d": 67.2,
-      "readings7d": 957,
-      "lastReading": "2026-02-24T23:00:12.025339",
-      "avgHumidity7d": 49.5
+      "name": "Common-Server Room",
+      "date": "2026-02-07",
+      "avg_temp": 7.2034375,
+      "max_temp": 7.3,
+      "min_temp": 7.1
     },
     {
-      "name": "Common-Lobby (HP8)",
-      "group": "Common",
-      "avgTemp7d": 67.2,
-      "readings7d": 956,
-      "lastReading": "2026-02-24T23:00:12.025339",
-      "avgHumidity7d": 49.4
+      "name": "ADL-Server",
+      "date": "2026-02-08",
+      "avg_temp": 7.2621649484536075,
+      "max_temp": 7.6,
+      "min_temp": 6.9
     },
     {
-      "name": "FIDF-Storage Room (HP3)",
-      "group": "Other",
-      "avgTemp7d": 66.9,
-      "readings7d": 956,
-      "lastReading": "2026-02-24T23:00:12.025339",
-      "avgHumidity7d": 48.8
+      "name": "Common-Server Room",
+      "date": "2026-02-08",
+      "avg_temp": 7.211237113402062,
+      "max_temp": 7.32,
+      "min_temp": 7.07
     },
     {
-      "name": "Federation-Heidi (CU2)",
-      "group": "Federation",
-      "avgTemp7d": 65.0,
-      "readings7d": 957,
-      "lastReading": "2026-02-24T23:00:12.025339",
-      "avgHumidity7d": 53.3
+      "name": "ADL-Server",
+      "date": "2026-02-09",
+      "avg_temp": 7.2873786407767,
+      "max_temp": 7.4799999999999995,
+      "min_temp": 6.99
     },
     {
-      "name": "Federation Room 124 (CU1)",
-      "group": "Federation",
-      "avgTemp7d": 64.4,
-      "readings7d": 956,
-      "lastReading": "2026-02-24T23:00:12.025339",
-      "avgHumidity7d": 52.6
+      "name": "Common-Server Room",
+      "date": "2026-02-09",
+      "avg_temp": 7.207961165048543,
+      "max_temp": 7.33,
+      "min_temp": 7.090000000000001
     },
     {
-      "name": "AJC-Sarah (HP2)",
-      "group": "Other",
-      "avgTemp7d": 64.3,
-      "readings7d": 955,
-      "lastReading": "2026-02-24T23:00:12.025339",
-      "avgHumidity7d": 55.8
+      "name": "ADL-Server",
+      "date": "2026-02-10",
+      "avg_temp": 7.2906206896551735,
+      "max_temp": 7.42,
+      "min_temp": 7.159999999999999
     },
     {
-      "name": "SWU-Oz (HP1)",
-      "group": "Other",
-      "avgTemp7d": 63.9,
-      "readings7d": 957,
-      "lastReading": "2026-02-24T23:00:12.025339",
-      "avgHumidity7d": 55.0
+      "name": "Common-Server Room",
+      "date": "2026-02-10",
+      "avg_temp": 7.213103448275863,
+      "max_temp": 7.33,
+      "min_temp": 7.090000000000001
     },
     {
-      "name": "Thermostat 417357922286",
-      "group": "JCF",
-      "avgTemp7d": 62.7,
-      "readings7d": 1,
-      "lastReading": "2026-02-21T03:00:01.765561",
-      "avgHumidity7d": 51.0
+      "name": "ADL-Server",
+      "date": "2026-02-11",
+      "avg_temp": 7.097931034482759,
+      "max_temp": 7.2299999999999995,
+      "min_temp": 6.970000000000001
+    },
+    {
+      "name": "Common-Server Room",
+      "date": "2026-02-11",
+      "avg_temp": 7.207862068965516,
+      "max_temp": 7.31,
+      "min_temp": 7.090000000000001
+    },
+    {
+      "name": "ADL-Server",
+      "date": "2026-02-12",
+      "avg_temp": 6.962328767123288,
+      "max_temp": 7.140000000000001,
+      "min_temp": 6.7
+    },
+    {
+      "name": "Common-Server Room",
+      "date": "2026-02-12",
+      "avg_temp": 7.203493150684932,
+      "max_temp": 7.32,
+      "min_temp": 7.090000000000001
+    },
+    {
+      "name": "ADL-Server",
+      "date": "2026-02-13",
+      "avg_temp": 7.084375,
+      "max_temp": 7.3,
+      "min_temp": 6.87
+    },
+    {
+      "name": "Common-Server Room",
+      "date": "2026-02-13",
+      "avg_temp": 7.19861111111111,
+      "max_temp": 7.32,
+      "min_temp": 7.08
+    },
+    {
+      "name": "ADL-Server",
+      "date": "2026-02-14",
+      "avg_temp": 7.04169014084507,
+      "max_temp": 7.26,
+      "min_temp": 6.790000000000001
+    },
+    {
+      "name": "Common-Server Room",
+      "date": "2026-02-14",
+      "avg_temp": 7.212464788732395,
+      "max_temp": 7.33,
+      "min_temp": 7.090000000000001
+    },
+    {
+      "name": "ADL-Server",
+      "date": "2026-02-15",
+      "avg_temp": 7.007310344827586,
+      "max_temp": 7.140000000000001,
+      "min_temp": 6.83
+    },
+    {
+      "name": "Common-Server Room",
+      "date": "2026-02-15",
+      "avg_temp": 7.215379310344828,
+      "max_temp": 7.31,
+      "min_temp": 7.1
+    },
+    {
+      "name": "ADL-Server",
+      "date": "2026-02-16",
+      "avg_temp": 6.84,
+      "max_temp": 6.970000000000001,
+      "min_temp": 6.709999999999999
+    },
+    {
+      "name": "Common-Server Room",
+      "date": "2026-02-16",
+      "avg_temp": 7.212307692307691,
+      "max_temp": 7.31,
+      "min_temp": 7.08
+    },
+    {
+      "name": "ADL-Server",
+      "date": "2026-02-17",
+      "avg_temp": 6.802152777777778,
+      "max_temp": 7.0200000000000005,
+      "min_temp": 6.49
+    },
+    {
+      "name": "Common-Server Room",
+      "date": "2026-02-17",
+      "avg_temp": 7.205555555555555,
+      "max_temp": 7.32,
+      "min_temp": 7.08
+    },
+    {
+      "name": "ADL-Server",
+      "date": "2026-02-18",
+      "avg_temp": 6.876250000000001,
+      "max_temp": 7.05,
+      "min_temp": 6.7
+    },
+    {
+      "name": "Common-Server Room",
+      "date": "2026-02-18",
+      "avg_temp": 7.211597222222222,
+      "max_temp": 7.32,
+      "min_temp": 7.090000000000001
+    },
+    {
+      "name": "ADL-Server",
+      "date": "2026-02-19",
+      "avg_temp": 6.768620689655172,
+      "max_temp": 6.92,
+      "min_temp": 6.5
+    },
+    {
+      "name": "Common-Server Room",
+      "date": "2026-02-19",
+      "avg_temp": 7.21048275862069,
+      "max_temp": 7.33,
+      "min_temp": 7.1
+    },
+    {
+      "name": "ADL-Server",
+      "date": "2026-02-20",
+      "avg_temp": 6.751310344827586,
+      "max_temp": 6.99,
+      "min_temp": 6.43
+    },
+    {
+      "name": "Common-Server Room",
+      "date": "2026-02-20",
+      "avg_temp": 7.202827586206897,
+      "max_temp": 7.32,
+      "min_temp": 7.090000000000001
+    },
+    {
+      "name": "ADL-Server",
+      "date": "2026-02-21",
+      "avg_temp": 6.635486111111111,
+      "max_temp": 6.9799999999999995,
+      "min_temp": 6.3
+    },
+    {
+      "name": "Common-Server Room",
+      "date": "2026-02-21",
+      "avg_temp": 7.210972222222223,
+      "max_temp": 7.33,
+      "min_temp": 7.08
+    },
+    {
+      "name": "ADL-Server",
+      "date": "2026-02-22",
+      "avg_temp": 6.811379310344828,
+      "max_temp": 7.17,
+      "min_temp": 6.45
+    },
+    {
+      "name": "Common-Server Room",
+      "date": "2026-02-22",
+      "avg_temp": 7.206275862068966,
+      "max_temp": 7.31,
+      "min_temp": 7.090000000000001
+    },
+    {
+      "name": "ADL-Server",
+      "date": "2026-02-23",
+      "avg_temp": 6.9987591240875915,
+      "max_temp": 7.37,
+      "min_temp": 6.63
+    },
+    {
+      "name": "Common-Server Room",
+      "date": "2026-02-23",
+      "avg_temp": 7.202826086956522,
+      "max_temp": 7.31,
+      "min_temp": 7.07
+    },
+    {
+      "name": "ADL-Server",
+      "date": "2026-02-24",
+      "avg_temp": 7.271599999999999,
+      "max_temp": 7.470000000000001,
+      "min_temp": 6.890000000000001
+    },
+    {
+      "name": "Common-Server Room",
+      "date": "2026-02-24",
+      "avg_temp": 7.1969,
+      "max_temp": 7.32,
+      "min_temp": 7.08
+    },
+    {
+      "name": "ADL-Server",
+      "date": "2026-02-25",
+      "avg_temp": 7.390108695652174,
+      "max_temp": 7.5200000000000005,
+      "min_temp": 7.08
+    },
+    {
+      "name": "Common-Server Room",
+      "date": "2026-02-25",
+      "avg_temp": 7.210108695652174,
+      "max_temp": 7.31,
+      "min_temp": 7.07
+    },
+    {
+      "name": "ADL-Server",
+      "date": "2026-02-26",
+      "avg_temp": 7.290247933884298,
+      "max_temp": 7.529999999999999,
+      "min_temp": 7.06
+    },
+    {
+      "name": "Common-Server Room",
+      "date": "2026-02-26",
+      "avg_temp": 7.213636363636364,
+      "max_temp": 7.32,
+      "min_temp": 7.090000000000001
+    },
+    {
+      "name": "ADL-Server",
+      "date": "2026-02-27",
+      "avg_temp": 7.584473684210526,
+      "max_temp": 7.7,
+      "min_temp": 7.37
+    },
+    {
+      "name": "Common-Server Room",
+      "date": "2026-02-27",
+      "avg_temp": 7.207105263157895,
+      "max_temp": 7.32,
+      "min_temp": 7.07
+    },
+    {
+      "name": "ADL-Server",
+      "date": "2026-02-28",
+      "avg_temp": 7.639724137931035,
+      "max_temp": 7.9,
+      "min_temp": 7.359999999999999
+    },
+    {
+      "name": "Common-Server Room",
+      "date": "2026-02-28",
+      "avg_temp": 7.20648275862069,
+      "max_temp": 7.340000000000001,
+      "min_temp": 7.07
+    },
+    {
+      "name": "ADL-Server",
+      "date": "2026-03-01",
+      "avg_temp": 7.684965517241379,
+      "max_temp": 7.9,
+      "min_temp": 7.37
+    },
+    {
+      "name": "Common-Server Room",
+      "date": "2026-03-01",
+      "avg_temp": 7.216758620689656,
+      "max_temp": 7.340000000000001,
+      "min_temp": 7.08
+    },
+    {
+      "name": "ADL-Server",
+      "date": "2026-03-02",
+      "avg_temp": 7.504896551724138,
+      "max_temp": 7.83,
+      "min_temp": 7.340000000000001
+    },
+    {
+      "name": "Common-Server Room",
+      "date": "2026-03-02",
+      "avg_temp": 7.208413793103449,
+      "max_temp": 7.31,
+      "min_temp": 7.07
+    },
+    {
+      "name": "ADL-Server",
+      "date": "2026-03-03",
+      "avg_temp": 7.246874999999999,
+      "max_temp": 7.459999999999999,
+      "min_temp": 6.9799999999999995
+    },
+    {
+      "name": "Common-Server Room",
+      "date": "2026-03-03",
+      "avg_temp": 7.212152777777778,
+      "max_temp": 7.31,
+      "min_temp": 7.07
+    },
+    {
+      "name": "ADL-Server",
+      "date": "2026-03-04",
+      "avg_temp": 7.204892086330935,
+      "max_temp": 7.390000000000001,
+      "min_temp": 6.99
+    },
+    {
+      "name": "Common-Server Room",
+      "date": "2026-03-04",
+      "avg_temp": 7.20273381294964,
+      "max_temp": 7.32,
+      "min_temp": 7.06
+    },
+    {
+      "name": "ADL-Server",
+      "date": "2026-03-05",
+      "avg_temp": 7.271463414634146,
+      "max_temp": 7.43,
+      "min_temp": 7.090000000000001
+    },
+    {
+      "name": "Common-Server Room",
+      "date": "2026-03-05",
+      "avg_temp": 7.204715447154471,
+      "max_temp": 7.31,
+      "min_temp": 7.06
+    },
+    {
+      "name": "ADL-Server",
+      "date": "2026-03-06",
+      "avg_temp": 6.9858730158730165,
+      "max_temp": 7.25,
+      "min_temp": 6.81
+    },
+    {
+      "name": "Common-Server Room",
+      "date": "2026-03-06",
+      "avg_temp": 7.230952380952381,
+      "max_temp": 7.31,
+      "min_temp": 7.029999999999999
     }
   ],
-  "totalReadings": 890,
+  "zones": [],
+  "totalReadings": 114673,
   "kpis": {
-    "totalZones": 42,
-    "daysOfData": 28,
-    "avgBuildingTemp": 69.2,
-    "totalHeatingHours": 182.0,
-    "totalCoolingHours": 127.0
-  }
+    "daysTracked": 28,
+    "buildings": 5,
+    "totalReadings": 114673
+  },
+  "asOfDate": "2026-03-06T10:20:00"
 }

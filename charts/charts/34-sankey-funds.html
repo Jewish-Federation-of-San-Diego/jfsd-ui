@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fund Allocation: From Donor to Impact</title>
+    <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+    <style>
+        body {
+            font-family: 'Outfit', 'Helvetica Neue', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .chart-container {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h1 {
+            color: #1e3eaf;
+            text-align: center;
+            margin-bottom: 5px;
+        }
+        .subtitle {
+            color: #666;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="chart-container">
+        <h1>Fund Allocation: From Donor to Impact</h1>
+        <p class="subtitle">FY26 Annual Campaign Flow • Jewish Federation of San Diego</p>
+        <div id="sankey-chart"></div>
+    </div>
+
+    <script>
+        // JFSD Brand Colors
+        const colors = {
+            primaryBlue: '#1e3eaf',
+            mediumBlue: '#1c88ed',
+            teal: '#009191',
+            orange: '#eb6136',
+            purple: '#942494',
+            lightBlue: '#d2e9ff',
+            grey: '#2a2a2a'
+        };
+
+        // Node labels (indices 0-16)
+        // 0: Annual Campaign (source)
+        // 1-4: Four Pillars
+        // 5-16: Programs under each pillar
+        const labels = [
+            // Source (0)
+            "Annual Campaign",
+            // Pillars (1-4)
+            "Vibrant Jewish Life",
+            "Caring Community", 
+            "Resilient Israel & Overseas",
+            "Connected Future",
+            // Vibrant Programs (5-8)
+            "Jewish Education",
+            "Teen Engagement",
+            "Young Adult Programs",
+            "Cultural Arts",
+            // Caring Programs (9-11)
+            "Food Security",
+            "Mental Health Services",
+            "Senior Services",
+            // Resilient Programs (12-14)
+            "Israel Partnership",
+            "Ukraine Relief",
+            "Global Rescue",
+            // Connected Programs (15-16)
+            "Leadership Development",
+            "Community Grants"
+        ];
+
+        // Node colors
+        const nodeColors = [
+            colors.primaryBlue,  // Annual Campaign
+            colors.mediumBlue,   // Vibrant
+            colors.teal,         // Caring
+            colors.orange,       // Resilient
+            colors.purple,       // Connected
+            // Vibrant programs (lighter blue)
+            '#5b8fd9', '#5b8fd9', '#5b8fd9', '#5b8fd9',
+            // Caring programs (lighter teal)
+            '#4db8b8', '#4db8b8', '#4db8b8',
+            // Resilient programs (lighter orange)
+            '#f59572', '#f59572', '#f59572',
+            // Connected programs (lighter purple)
+            '#b86eb8', '#b86eb8'
+        ];
+
+        // Links: source index, target index, value (in thousands)
+        // Annual Campaign → Pillars
+        const sources = [
+            0, 0, 0, 0,           // Campaign → 4 Pillars
+            1, 1, 1, 1,           // Vibrant → 4 programs
+            2, 2, 2,              // Caring → 3 programs
+            3, 3, 3,              // Resilient → 3 programs
+            4, 4                  // Connected → 2 programs
+        ];
+        
+        const targets = [
+            1, 2, 3, 4,           // Campaign → Pillars
+            5, 6, 7, 8,           // Vibrant programs
+            9, 10, 11,            // Caring programs
+            12, 13, 14,           // Resilient programs
+            15, 16                // Connected programs
+        ];
+        
+        // Values in thousands ($)
+        const values = [
+            850, 720, 580, 350,   // Campaign → Pillars ($2.5M total)
+            280, 220, 200, 150,   // Vibrant breakdown ($850K)
+            320, 250, 150,        // Caring breakdown ($720K)
+            280, 180, 120,        // Resilient breakdown ($580K)
+            200, 150              // Connected breakdown ($350K)
+        ];
+
+        // Link colors (semi-transparent pillar colors)
+        const linkColors = [
+            'rgba(28, 136, 237, 0.4)',   // → Vibrant
+            'rgba(0, 145, 145, 0.4)',    // → Caring
+            'rgba(235, 97, 54, 0.4)',    // → Resilient
+            'rgba(148, 36, 148, 0.4)',   // → Connected
+            // Vibrant links
+            'rgba(28, 136, 237, 0.3)', 'rgba(28, 136, 237, 0.3)', 
+            'rgba(28, 136, 237, 0.3)', 'rgba(28, 136, 237, 0.3)',
+            // Caring links
+            'rgba(0, 145, 145, 0.3)', 'rgba(0, 145, 145, 0.3)', 
+            'rgba(0, 145, 145, 0.3)',
+            // Resilient links
+            'rgba(235, 97, 54, 0.3)', 'rgba(235, 97, 54, 0.3)', 
+            'rgba(235, 97, 54, 0.3)',
+            // Connected links
+            'rgba(148, 36, 148, 0.3)', 'rgba(148, 36, 148, 0.3)'
+        ];
+
+        // Create Sankey diagram
+        const data = [{
+            type: "sankey",
+            orientation: "h",
+            node: {
+                pad: 20,
+                thickness: 30,
+                line: {
+                    color: "white",
+                    width: 2
+                },
+                label: labels,
+                color: nodeColors,
+                hovertemplate: '%{label}<br>$%{value}K<extra></extra>'
+            },
+            link: {
+                source: sources,
+                target: targets,
+                value: values,
+                color: linkColors,
+                hovertemplate: '%{source.label} → %{target.label}<br>$%{value}K<extra></extra>'
+            }
+        }];
+
+        const layout = {
+            font: {
+                family: 'Outfit, Helvetica Neue, sans-serif',
+                size: 13,
+                color: colors.grey
+            },
+            margin: { l: 20, r: 20, t: 20, b: 20 },
+            height: 600,
+            paper_bgcolor: 'white',
+            plot_bgcolor: 'white'
+        };
+
+        const config = {
+            responsive: true,
+            displayModeBar: true,
+            modeBarButtonsToRemove: ['lasso2d', 'select2d'],
+            displaylogo: false
+        };
+
+        Plotly.newPlot('sankey-chart', data, layout, config);
+    </script>
+</body>
+</html>

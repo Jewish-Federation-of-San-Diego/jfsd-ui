@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Global Jewish Community Connections</title>
+    <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+    <style>
+        body { font-family: 'Outfit', Arial, sans-serif; margin: 0; padding: 20px; background: #f5f5f5; }
+        .container { max-width: 1200px; margin: 0 auto; background: white; border-radius: 8px; padding: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        h1 { color: #1e3eaf; text-align: center; margin-bottom: 5px; }
+        .subtitle { text-align: center; color: #666; margin-bottom: 20px; }
+        #chart { width: 100%; height: 600px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Global Jewish Community Connections</h1>
+        <p class="subtitle">Jewish Federation of San Diego Partnership Network</p>
+        <div id="chart"></div>
+    </div>
+
+    <script>
+        // JFSD Brand Colors
+        const JFSD_BLUE = '#1e3eaf';
+        const JFSD_MEDIUM_BLUE = '#1c88ed';
+        const JFSD_LIGHT_BLUE = '#d2e9ff';
+
+        // San Diego (hub)
+        const sanDiego = { lat: 32.7157, lon: -117.1611, name: 'San Diego' };
+
+        // Partner locations
+        const partners = [
+            { lat: 32.0853, lon: 34.7818, name: 'Tel Aviv, Israel', type: 'Partnership2Gether' },
+            { lat: 31.7683, lon: 35.2137, name: 'Jerusalem, Israel', type: 'Israel Programs' },
+            { lat: 32.7940, lon: 34.9896, name: 'Haifa, Israel', type: 'Partnership2Gether' },
+            { lat: 31.2516, lon: 34.7915, name: 'Be\'er Sheva, Israel', type: 'Partnership2Gether' },
+            { lat: 40.7128, lon: -74.0060, name: 'New York, NY', type: 'JFNA Network' },
+            { lat: 34.0522, lon: -118.2437, name: 'Los Angeles, CA', type: 'Regional Partner' },
+            { lat: 33.4484, lon: -112.0740, name: 'Phoenix, AZ', type: 'Regional Partner' },
+            { lat: 25.7617, lon: -80.1918, name: 'Miami, FL', type: 'JFNA Network' },
+            { lat: 41.8781, lon: -87.6298, name: 'Chicago, IL', type: 'JFNA Network' },
+            { lat: 51.5074, lon: -0.1278, name: 'London, UK', type: 'World Jewry' },
+            { lat: 48.8566, lon: 2.3522, name: 'Paris, France', type: 'World Jewry' },
+        ];
+
+        // Create connection lines data
+        const lats = [];
+        const lons = [];
+        
+        partners.forEach(partner => {
+            lats.push(sanDiego.lat, partner.lat, null);
+            lons.push(sanDiego.lon, partner.lon, null);
+        });
+
+        // Connection lines trace
+        const lines = {
+            type: 'scattergeo',
+            mode: 'lines',
+            lat: lats,
+            lon: lons,
+            line: {
+                width: 2,
+                color: JFSD_BLUE,
+            },
+            opacity: 0.6,
+            hoverinfo: 'skip',
+            showlegend: false
+        };
+
+        // San Diego hub marker
+        const hubMarker = {
+            type: 'scattergeo',
+            mode: 'markers+text',
+            lat: [sanDiego.lat],
+            lon: [sanDiego.lon],
+            marker: {
+                size: 18,
+                color: JFSD_BLUE,
+                symbol: 'star',
+                line: { width: 2, color: 'white' }
+            },
+            text: ['San Diego<br>(JFSD Hub)'],
+            textposition: 'bottom center',
+            textfont: { color: JFSD_BLUE, size: 12, family: 'Arial Black' },
+            name: 'JFSD Hub',
+            hovertemplate: '<b>San Diego</b><br>Jewish Federation of San Diego<br>Hub Location<extra></extra>'
+        };
+
+        // Partner markers - Israel
+        const israelPartners = partners.filter(p => p.name.includes('Israel'));
+        const israelMarkers = {
+            type: 'scattergeo',
+            mode: 'markers',
+            lat: israelPartners.map(p => p.lat),
+            lon: israelPartners.map(p => p.lon),
+            marker: {
+                size: 12,
+                color: '#eb6136',
+                symbol: 'circle',
+                line: { width: 1, color: 'white' }
+            },
+            text: israelPartners.map(p => p.name),
+            name: 'Israel Partners',
+            hovertemplate: '<b>%{text}</b><br>%{customdata}<extra></extra>',
+            customdata: israelPartners.map(p => p.type)
+        };
+
+        // Partner markers - US Federations
+        const usPartners = partners.filter(p => p.name.includes('NY') || p.name.includes('CA') || p.name.includes('AZ') || p.name.includes('FL') || p.name.includes('IL'));
+        const usMarkers = {
+            type: 'scattergeo',
+            mode: 'markers',
+            lat: usPartners.map(p => p.lat),
+            lon: usPartners.map(p => p.lon),
+            marker: {
+                size: 10,
+                color: JFSD_MEDIUM_BLUE,
+                symbol: 'circle',
+                line: { width: 1, color: 'white' }
+            },
+            text: usPartners.map(p => p.name),
+            name: 'US Federations',
+            hovertemplate: '<b>%{text}</b><br>%{customdata}<extra></extra>',
+            customdata: usPartners.map(p => p.type)
+        };
+
+        // Partner markers - World Jewry
+        const worldPartners = partners.filter(p => p.name.includes('UK') || p.name.includes('France'));
+        const worldMarkers = {
+            type: 'scattergeo',
+            mode: 'markers',
+            lat: worldPartners.map(p => p.lat),
+            lon: worldPartners.map(p => p.lon),
+            marker: {
+                size: 10,
+                color: '#942494',
+                symbol: 'diamond',
+                line: { width: 1, color: 'white' }
+            },
+            text: worldPartners.map(p => p.name),
+            name: 'World Jewry',
+            hovertemplate: '<b>%{text}</b><br>%{customdata}<extra></extra>',
+            customdata: worldPartners.map(p => p.type)
+        };
+
+        const layout = {
+            geo: {
+                scope: 'world',
+                projection: { type: 'natural earth' },
+                showland: true,
+                landcolor: JFSD_LIGHT_BLUE,
+                showocean: true,
+                oceancolor: '#e8f4fc',
+                showcoastlines: true,
+                coastlinecolor: '#999',
+                showlakes: true,
+                lakecolor: '#e8f4fc',
+                showcountries: true,
+                countrycolor: '#ccc',
+                resolution: 50,
+                center: { lat: 30, lon: -20 },
+            },
+            margin: { t: 10, b: 10, l: 10, r: 10 },
+            legend: {
+                x: 0.02,
+                y: 0.98,
+                bgcolor: 'rgba(255,255,255,0.8)',
+                bordercolor: '#ccc',
+                borderwidth: 1
+            },
+            annotations: [{
+                x: 0.5,
+                y: -0.02,
+                xref: 'paper',
+                yref: 'paper',
+                text: 'Connecting Jewish communities worldwide through partnership, philanthropy, and shared purpose',
+                showarrow: false,
+                font: { size: 11, color: '#666' }
+            }]
+        };
+
+        const config = {
+            responsive: true,
+            displayModeBar: true,
+            modeBarButtonsToRemove: ['lasso2d', 'select2d'],
+            displaylogo: false
+        };
+
+        Plotly.newPlot('chart', [lines, hubMarker, israelMarkers, usMarkers, worldMarkers], layout, config);
+    </script>
+</body>
+</html>
