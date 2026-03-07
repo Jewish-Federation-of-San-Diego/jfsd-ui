@@ -6,7 +6,9 @@
     "pctOfGoal": 66.2,
     "donorCount": 1044,
     "avgGift": 5707.0,
-    "priorYearSamePoint": 8812417.17
+    "priorYearSamePoint": 8812417.17,
+    "priorYearFinalTotal": 8812417.17,
+    "priorYearDonorCount": 1200
   },
   "momentum": {
     "thisWeek": {

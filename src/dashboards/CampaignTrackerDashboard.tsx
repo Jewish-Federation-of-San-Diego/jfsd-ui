@@ -30,6 +30,7 @@ interface CampaignData {
   annualCampaign: {
     name: string; goal: number; raised: number; pctOfGoal: number;
     donorCount: number; avgGift: number; priorYearSamePoint: number;
+    priorYearFinalTotal?: number; priorYearDonorCount?: number;
   };
   momentum: {
     giftsThisWeek: number; amountThisWeek: number;
@@ -190,6 +191,125 @@ function CampaignThermometer({ data }: { data: CampaignData }) {
       <Row justify="space-between" style={{ marginTop: 20 }}>
         <Text type="secondary">$0</Text>
         <Text type="secondary">{fmtUSD(ac.goal)}</Text>
+      </Row>
+    </Card>
+  );
+}
+
+// ── Year-over-Year Comparison ────────────────────────────────────────────
+function YoYComparison({ data }: { data: CampaignData }) {
+  const { annualCampaign: ac } = data;
+  const pySamePoint = ac.priorYearSamePoint ?? 0;
+  const pyFinal = ac.priorYearFinalTotal ?? pySamePoint; // fallback if final not provided
+  const raised = ac.raised ?? 0;
+
+  // Skip if no prior year data
+  if (pySamePoint <= 0) return null;
+
+  // YoY same-point comparison
+  const yoyDelta = raised - pySamePoint;
+  const yoyPct = pySamePoint > 0 ? (yoyDelta / pySamePoint) * 100 : 0;
+  const isAhead = yoyDelta >= 0;
+
+  // Gap to match prior year final
+  const gapToMatchPY = pyFinal - raised;
+  const pctOfPYFinal = pyFinal > 0 ? (raised / pyFinal) * 100 : 0;
+
+  // Progress bar: FY26 vs FY25 same point
+  const maxVal = Math.max(raised, pySamePoint, pyFinal);
+
+  return (
+    <Card size="small" title={
+      <span style={{ color: NAVY }}>
+        📊 Year-over-Year: {isAhead
+          ? <Tag color="success">+{fmtUSD(Math.abs(yoyDelta))} ahead of FY25 pace</Tag>
+          : <Tag color="error">{fmtUSD(Math.abs(yoyDelta))} behind FY25 pace</Tag>
+        }
+      </span>
+    }>
+      {/* Comparison bars */}
+      <div style={{ marginBottom: 16 }}>
+        <div style={{ marginBottom: 12 }}>
+          <Row justify="space-between" style={{ marginBottom: 4 }}>
+            <Text strong style={{ fontSize: 13 }}>FY26 (current)</Text>
+            <Text strong style={{ fontSize: 13, color: NAVY }}>{fmtUSD(raised)}</Text>
+          </Row>
+          <div style={{ height: 20, background: '#E8E8ED', borderRadius: 10, overflow: 'hidden' }}>
+            <div style={{
+              height: '100%', width: `${(raised / maxVal) * 100}%`,
+              background: `linear-gradient(90deg, ${NAVY}, ${GOLD})`,
+              borderRadius: 10, transition: 'width 0.6s ease',
+            }} />
+          </div>
+        </div>
+        <div style={{ marginBottom: 12 }}>
+          <Row justify="space-between" style={{ marginBottom: 4 }}>
+            <Text style={{ fontSize: 13, color: MUTED }}>FY25 at same point</Text>
+            <Text style={{ fontSize: 13, color: MUTED }}>{fmtUSD(pySamePoint)}</Text>
+          </Row>
+          <div style={{ height: 20, background: '#E8E8ED', borderRadius: 10, overflow: 'hidden' }}>
+            <div style={{
+              height: '100%', width: `${(pySamePoint / maxVal) * 100}%`,
+              background: MUTED, opacity: 0.5,
+              borderRadius: 10,
+            }} />
+          </div>
+        </div>
+        {pyFinal > pySamePoint && (
+          <div>
+            <Row justify="space-between" style={{ marginBottom: 4 }}>
+              <Text style={{ fontSize: 13, color: MUTED }}>FY25 final total</Text>
+              <Text style={{ fontSize: 13, color: MUTED }}>{fmtUSD(pyFinal)}</Text>
+            </Row>
+            <div style={{ height: 20, background: '#E8E8ED', borderRadius: 10, overflow: 'hidden' }}>
+              <div style={{
+                height: '100%', width: `${(pyFinal / maxVal) * 100}%`,
+                background: MUTED, opacity: 0.3,
+                borderRadius: 10,
+              }} />
+            </div>
+          </div>
+        )}
+      </div>
+
+      {/* Key metrics */}
+      <Row gutter={[12, 8]}>
+        <Col xs={12} sm={6}>
+          <div style={{ textAlign: 'center', padding: '0.5rem 0' }}>
+            <Text strong style={{ fontSize: 20, color: isAhead ? SUCCESS : ERROR }}>
+              {isAhead ? '+' : ''}{safePercent(yoyPct, { decimals: 1 })}
+            </Text>
+            <br />
+            <Text style={{ fontSize: 11, color: MUTED }}>vs FY25 same point</Text>
+          </div>
+        </Col>
+        <Col xs={12} sm={6}>
+          <div style={{ textAlign: 'center', padding: '0.5rem 0' }}>
+            <Text strong style={{ fontSize: 20, color: isAhead ? SUCCESS : ERROR }}>
+              {isAhead ? '+' : ''}{fmtUSD(yoyDelta)}
+            </Text>
+            <br />
+            <Text style={{ fontSize: 11, color: MUTED }}>YoY dollar gap</Text>
+          </div>
+        </Col>
+        <Col xs={12} sm={6}>
+          <div style={{ textAlign: 'center', padding: '0.5rem 0' }}>
+            <Text strong style={{ fontSize: 20, color: NAVY }}>
+              {safePercent(pctOfPYFinal, { decimals: 1 })}
+            </Text>
+            <br />
+            <Text style={{ fontSize: 11, color: MUTED }}>of FY25 final total</Text>
+          </div>
+        </Col>
+        <Col xs={12} sm={6}>
+          <div style={{ textAlign: 'center', padding: '0.5rem 0' }}>
+            <Text strong style={{ fontSize: 20, color: gapToMatchPY > 0 ? GOLD : SUCCESS }}>
+              {gapToMatchPY > 0 ? fmtUSD(gapToMatchPY) : '✓ Matched'}
+            </Text>
+            <br />
+            <Text style={{ fontSize: 11, color: MUTED }}>needed to match FY25</Text>
+          </div>
+        </Col>
       </Row>
     </Card>
   );
@@ -473,6 +593,7 @@ export function CampaignTrackerDashboard() {
 
         <KPIRow data={safeData} filteredMomentum={filtered.momentum} />
         <CampaignThermometer data={safeData} />
+        <YoYComparison data={safeData} />
 
         <Row gutter={[16, 16]}>
           <Col xs={24} lg={14}>
