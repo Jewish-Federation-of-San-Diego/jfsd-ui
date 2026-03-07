@@ -48,7 +48,14 @@ interface CampaignData {
 
 const fmtUSD  = (v: number) => safeCurrency(v, { maximumFractionDigits: 0 });
 const fmtPct  = (v: number) => safePercent(v, { decimals: 1, showSign: true });
-const fmtDate = (d: string) => { try { return new Date(d + 'T00:00:00').toLocaleDateString('en-US', { month: 'short', day: 'numeric' }); } catch { return d; } };
+const fmtDate = (d: string) => {
+  if (!d || d === 'undefined' || d === 'null') return '—';
+  try {
+    const dt = new Date(d + 'T00:00:00');
+    if (isNaN(dt.getTime())) return '—';
+    return dt.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+  } catch { return '—'; }
+};
 
 // ── Hook: measure width ─────────────────────────────────────────────────
 function useWidth() {
@@ -68,27 +75,7 @@ function useWidth() {
   return { ref, width };
 }
 
-// ── Progress Ring ───────────────────────────────────────────────────────
-function ProgressRing({ pct, size = 120, stroke = 10 }: { pct: number; size?: number; stroke?: number }) {
-  const r = (size - stroke) / 2;
-  const circ = 2 * Math.PI * r;
-  const capped = Math.min(pct, 100);
-  return (
-    <svg width={size} height={size} style={{ display: 'block' }}>
-      <circle cx={size / 2} cy={size / 2} r={r} fill="none" stroke="#E8E8ED" strokeWidth={stroke} />
-      <circle cx={size / 2} cy={size / 2} r={r} fill="none" stroke={GOLD} strokeWidth={stroke}
-        strokeDasharray={circ} strokeDashoffset={circ * (1 - capped / 100)}
-        strokeLinecap="round" transform={`rotate(-90 ${size / 2} ${size / 2})`}
-        style={{ transition: 'stroke-dashoffset 0.8s ease' }} />
-      <text x={size / 2} y={size / 2 - 6} textAnchor="middle" fill={NAVY} fontSize={20} fontWeight={700}>
-        {safePercent(capped, { decimals: 1 })}
-      </text>
-      <text x={size / 2} y={size / 2 + 14} textAnchor="middle" fill={MUTED} fontSize={11}>
-        of goal
-      </text>
-    </svg>
-  );
-}
+// ── Progress Ring REMOVED — replaced with big number per viz standards ──
 
 // ── KPI Row ─────────────────────────────────────────────────────────────
 function KPIRow({ data, filteredMomentum }: { data: CampaignData; filteredMomentum?: { amountThisWeek: number; amountLastWeek: number; weekOverWeekPct: number } }) {
@@ -100,11 +87,19 @@ function KPIRow({ data, filteredMomentum }: { data: CampaignData; filteredMoment
     <Row gutter={[12, 12]}>
       <Col xs={24} sm={12} md={6}>
         <Card size="small" style={{ textAlign: 'center' }}>
-          <ProgressRing pct={ac.pctOfGoal} />
-          <div style={{ marginTop: 8 }}>
-            <Text strong style={{ fontSize: 20, color: NAVY }}>{fmtUSD(ac.raised)}</Text>
+          <Statistic
+            title="Campaign Progress"
+            value={ac.pctOfGoal}
+            precision={1}
+            suffix="%"
+            valueStyle={{ color: ac.pctOfGoal >= 60 ? SUCCESS : ac.pctOfGoal >= 40 ? GOLD : ERROR, fontSize: 32, fontWeight: 700 }}
+          />
+          <Progress percent={Math.min(ac.pctOfGoal, 100)} size="small" showInfo={false}
+            strokeColor={ac.pctOfGoal >= 60 ? SUCCESS : ac.pctOfGoal >= 40 ? GOLD : NAVY} />
+          <div style={{ marginTop: 4 }}>
+            <Text strong style={{ fontSize: 16, color: NAVY }}>{fmtUSD(ac.raised)}</Text>
             <br />
-            <Text type="secondary">of {fmtUSD(ac.goal)} goal</Text>
+            <Text type="secondary" style={{ fontSize: 12 }}>of {fmtUSD(ac.goal)} goal</Text>
           </div>
         </Card>
       </Col>
@@ -141,8 +136,18 @@ function CampaignThermometer({ data }: { data: CampaignData }) {
   const { annualCampaign: ac } = data;
   const pct = Math.min(ac.pctOfGoal, 100);
   const priorPct = ac.goal > 0 ? Math.min(ac.priorYearSamePoint / ac.goal * 100, 100) : 0;
+
+  // Expected pace: linear from Jul 1 to Jun 30
+  const now = new Date();
+  const fyStart = new Date(now.getMonth() >= 6 ? now.getFullYear() : now.getFullYear() - 1, 6, 1);
+  const fyEnd = new Date(fyStart.getFullYear() + 1, 5, 30);
+  const elapsed = (now.getTime() - fyStart.getTime()) / (fyEnd.getTime() - fyStart.getTime());
+  const expectedPct = Math.min(Math.max(elapsed * 100, 0), 100);
+  const aheadOfPace = pct >= expectedPct;
+  const paceLabel = aheadOfPace ? 'Ahead of pace' : 'Behind pace';
+
   return (
-    <Card title={<span style={{ color: NAVY }}><TrophyOutlined /> Campaign: {safePercent(ac.pctOfGoal)} to goal — {fmtUSD(ac.raised)} from {ac.donorCount} donors</span>} size="small">
+    <Card title={<span style={{ color: NAVY }}><TrophyOutlined /> Campaign: {safePercent(ac.pctOfGoal)} to goal — {fmtUSD(ac.raised)} from {safeCount(ac.donorCount)} donors {!aheadOfPace && ac.goal > 0 ? <Tag color="warning" style={{ marginLeft: 8 }}>Behind pace</Tag> : ac.goal > 0 ? <Tag color="success" style={{ marginLeft: 8 }}>Ahead of pace</Tag> : null}</span>} size="small">
       <div style={{ position: 'relative', height: 40, background: '#E8E8ED', borderRadius: 20, overflow: 'hidden' }}>
         <div style={{
           height: '100%', width: `${pct}%`, background: `linear-gradient(90deg, ${NAVY}, ${GOLD})`,
@@ -151,19 +156,38 @@ function CampaignThermometer({ data }: { data: CampaignData }) {
         }}>
           {pct > 15 && <Text style={{ color: '#fff', fontWeight: 600, fontSize: 13 }}>{fmtUSD(ac.raised)}</Text>}
         </div>
+        {/* Expected pace marker */}
+        {ac.goal > 0 && (
+          <>
+            <div style={{
+              position: 'absolute', left: `${expectedPct}%`, top: 0, height: '100%',
+              borderLeft: `2px dashed ${aheadOfPace ? SUCCESS : ERROR}`, opacity: 0.6,
+            }} />
+            <div style={{
+              position: 'absolute', left: `${expectedPct}%`, bottom: -18,
+              transform: 'translateX(-50%)', fontSize: 10, color: aheadOfPace ? SUCCESS : ERROR, whiteSpace: 'nowrap',
+            }}>
+              {paceLabel} ({safePercent(expectedPct, { decimals: 0 })} expected)
+            </div>
+          </>
+        )}
         {/* Prior year marker */}
-        <div style={{
-          position: 'absolute', left: `${priorPct}%`, top: 0, height: '100%',
-          borderLeft: `2px dashed ${ERROR}`, opacity: 0.7,
-        }} />
-        <div style={{
-          position: 'absolute', left: `${priorPct}%`, top: -18,
-          transform: 'translateX(-50%)', fontSize: 10, color: ERROR, whiteSpace: 'nowrap',
-        }}>
-          PY: {fmtUSD(ac.priorYearSamePoint)}
-        </div>
+        {priorPct > 0 && (
+          <>
+            <div style={{
+              position: 'absolute', left: `${priorPct}%`, top: 0, height: '100%',
+              borderLeft: `2px dashed ${MUTED}`, opacity: 0.5,
+            }} />
+            <div style={{
+              position: 'absolute', left: `${priorPct}%`, top: -18,
+              transform: 'translateX(-50%)', fontSize: 10, color: MUTED, whiteSpace: 'nowrap',
+            }}>
+              PY: {fmtUSD(ac.priorYearSamePoint)}
+            </div>
+          </>
+        )}
       </div>
-      <Row justify="space-between" style={{ marginTop: 8 }}>
+      <Row justify="space-between" style={{ marginTop: 20 }}>
         <Text type="secondary">$0</Text>
         <Text type="secondary">{fmtUSD(ac.goal)}</Text>
       </Row>
@@ -174,7 +198,11 @@ function CampaignThermometer({ data }: { data: CampaignData }) {
 // ── Momentum Chart (SVG bars) ───────────────────────────────────────────
 function MomentumChart({ weeks }: { weeks: WeeklyMomentum[] }) {
   const { ref, width } = useWidth();
-  if (!weeks || weeks.length === 0) return null;
+  if (!weeks || weeks.length === 0) return (
+    <Card title={<span style={{ color: NAVY }}><FieldTimeOutlined /> Weekly Giving Momentum</span>} size="small">
+      <div style={{ textAlign: 'center', padding: '2rem 0', color: MUTED }}>No weekly data loaded</div>
+    </Card>
+  );
   const maxAmt = Math.max(...weeks.map(w => w.amount), 1);
   const h = 160;
   const barGap = 6;
@@ -257,14 +285,17 @@ function DonorDonut({ data }: { data: CampaignData['donorBreakdown'] }) {
 
 // ── Giving Levels (horizontal bars) ─────────────────────────────────────
 function GivingLevels({ levels }: { levels: GivingLevel[] }) {
+  const hasData = levels.some(l => l.donors > 0 || l.amount > 0);
   const maxAmt = Math.max(...levels.map(l => l.amount), 1);
   return (
-    <Card size="small" title={<span style={{ color: NAVY }}><DollarOutlined /> Giving Levels</span>}>
-      {levels.map(l => (
+    <Card size="small" title={<span style={{ color: NAVY }}><DollarOutlined /> {hasData ? `Giving Levels — ${safeCount(levels.reduce((s, l) => s + l.donors, 0))} donors across ${levels.length} tiers` : 'Giving Levels'}</span>}>
+      {!hasData ? (
+        <div style={{ textAlign: 'center', padding: '1rem 0', color: MUTED }}>No giving level data loaded</div>
+      ) : levels.map(l => (
         <div key={l.level} style={{ marginBottom: 8 }}>
           <Row justify="space-between">
             <Text style={{ fontSize: 12 }}>{l.level}</Text>
-            <Text style={{ fontSize: 12 }}>{l.donors} donors · {fmtUSD(l.amount)}</Text>
+            <Text style={{ fontSize: 12 }}>{safeCount(l.donors)} donors · {fmtUSD(l.amount)}</Text>
           </Row>
           <div style={{ height: 14, background: '#E8E8ED', borderRadius: 7, overflow: 'hidden' }}>
             <div style={{
@@ -320,22 +351,24 @@ function PipelineCard({ pipeline }: { pipeline: CampaignData['pipeline'] }) {
 
 // ── Sub-Campaigns ───────────────────────────────────────────────────────
 function SubCampaigns({ campaigns }: { campaigns: CampaignItem[] }) {
-  if (!campaigns.length) return null;
+  const validCampaigns = campaigns.filter(c => c.name && c.name !== 'undefined');
+  if (!validCampaigns.length) return null;
+  const activeCt = validCampaigns.filter(c => c.raised > 0).length;
   return (
-    <Card size="small" title={<span style={{ color: NAVY }}>📊 Active Campaigns</span>}>
+    <Card size="small" title={<span style={{ color: NAVY }}>📊 {activeCt > 0 ? `${activeCt} active campaigns of ${validCampaigns.length} total` : `${validCampaigns.length} campaigns`}</span>}>
       <Row gutter={[12, 12]}>
-        {campaigns.slice(0, 12).map((c, i) => (
+        {validCampaigns.slice(0, 12).map((c, i) => (
           <Col xs={24} sm={12} md={8} key={i}>
             <Card size="small" style={{ borderLeft: `3px solid ${GOLD}` }}>
               <Text strong style={{ fontSize: 13 }}>{c.name}</Text>
-              <Progress percent={Math.min(c.pctOfGoal, 100)} size="small"
-                strokeColor={c.pctOfGoal >= 75 ? SUCCESS : c.pctOfGoal >= 50 ? GOLD : NAVY}
-                format={() => `${c.pctOfGoal}%`} />
+              <Progress percent={Math.min(c.pctOfGoal ?? 0, 100)} size="small"
+                strokeColor={(c.pctOfGoal ?? 0) >= 75 ? SUCCESS : (c.pctOfGoal ?? 0) >= 50 ? GOLD : NAVY}
+                format={() => `${safePercent(c.pctOfGoal ?? 0, { decimals: 0 })}`} />
               <Row justify="space-between">
-                <Text type="secondary" style={{ fontSize: 11 }}>{fmtUSD(c.raised)} raised</Text>
-                <Text type="secondary" style={{ fontSize: 11 }}>{c.donors} donors</Text>
+                <Text type="secondary" style={{ fontSize: 11 }}>{fmtUSD(c.raised ?? 0)} raised</Text>
+                <Text type="secondary" style={{ fontSize: 11 }}>{safeCount(c.donors ?? 0)} donors</Text>
               </Row>
-              {c.goal > 0 && <Text type="secondary" style={{ fontSize: 10 }}>Goal: {fmtUSD(c.goal)}</Text>}
+              {(c.goal ?? 0) > 0 && <Text type="secondary" style={{ fontSize: 10 }}>Goal: {fmtUSD(c.goal)}</Text>}
             </Card>
           </Col>
         ))}

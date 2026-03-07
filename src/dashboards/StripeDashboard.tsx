@@ -325,14 +325,20 @@ function BarChart({ data, width: w }: { data: MonthlyRow[]; width: number }) {
 
 function MonthlyRevenueChart({ data }: { data: MonthlyRow[] }) {
   const { ref, width } = useWidth();
-  if (!data || data.length === 0) return null;
-  // Find the peak month for the title
+  if (!data || data.length === 0) return (
+    <Card title="Monthly Revenue" size="small">
+      <div style={{ textAlign: 'center', padding: '3rem 0', color: MUTED }}>No monthly data loaded — connect Stripe API for live volume</div>
+    </Card>
+  );
   const peak = data.reduce((a, b) => a.amount > b.amount ? a : b);
   const total = data.reduce((s, d) => s + d.amount, 0);
   const peakPct = total > 0 ? Math.round(peak.amount / total * 100) : 0;
+  const title = peak.amount > 0
+    ? `${peak.month} year-end giving drove ${fmtUSD(peak.amount)} — ${peakPct}% of FY26 volume`
+    : 'Monthly Revenue';
 
   return (
-    <Card title={`${peak.month} year-end giving drove $${Math.round(peak.amount / 1000)}K — ${peakPct}% of FY26 volume`} size="small">
+    <Card title={title} size="small">
       <div ref={ref} style={{ width: '100%', minHeight: 220 }}>
         {width > 0 && <BarChart data={data} width={width} />}
       </div>
@@ -389,12 +395,18 @@ function LineChart({ data, width: w }: { data: MonthlyRow[]; width: number }) {
 
 function FeeRateChart({ data }: { data: MonthlyRow[] }) {
   const { ref, width } = useWidth();
-  if (!data || data.length === 0) return null;
-  // Find month with highest fee rate for title
+  if (!data || data.length === 0) return (
+    <Card title="Fee Rate Trend" size="small">
+      <div style={{ textAlign: 'center', padding: '3rem 0', color: MUTED }}>No fee data loaded — connect Stripe API for rate analysis</div>
+    </Card>
+  );
   const peak = data.reduce((a, b) => a.feeRate > b.feeRate ? a : b);
+  const title = peak.feeRate > 0
+    ? `${peak.month} fee rate spiked to ${safePercent(peak.feeRate, { decimals: 2 })} — driven by small-dollar charges`
+    : 'Fee Rate Trend';
 
   return (
-    <Card title={`${peak.month} fee rate spiked to ${safePercent(peak.feeRate, { decimals: 2 })} — driven by small-dollar charges`} size="small">
+    <Card title={title} size="small">
       <div ref={ref} style={{ width: '100%', minHeight: 220 }}>
         {width > 0 && <LineChart data={data} width={width} />}
       </div>
@@ -405,14 +417,18 @@ function FeeRateChart({ data }: { data: MonthlyRow[] }) {
 
 // ── Card Brand Breakdown (horizontal bars) ──────────────────────────────
 function CardBrandBreakdown({ data }: { data: CardBrandRow[] }) {
-  if (!data || data.length === 0) return null;
+  if (!data || data.length === 0) return (
+    <Card title="Card Brand Breakdown" size="small">
+      <div style={{ textAlign: 'center', padding: '1rem 0', color: MUTED }}>No card data loaded</div>
+    </Card>
+  );
   const total = Math.max(data.reduce((a, d) => a + d.amount, 0), 1);
-  // Find top brand for title
   const top = data[0];
   const topPct = Math.round((top.amount / total) * 100);
+  const title = top.amount > 0 ? `${top.brand} dominates at ${topPct}% of volume` : 'Card Brand Breakdown';
 
   return (
-    <Card title={`${top.brand} dominates at ${topPct}% of volume`} size="small">
+    <Card title={title} size="small">
       <Space direction="vertical" style={{ width: '100%' }} size={14}>
         {data.map((d) => {
           const pct = (d.amount / total) * 100;
@@ -439,7 +455,7 @@ function MonthlyTable({ data }: { data: MonthlyRow[] }) {
     { title: 'Charges', dataIndex: 'charges', key: 'charges', align: 'right' as const, width: 70, sorter: (a: MonthlyRow, b: MonthlyRow) => a.charges - b.charges },
     { title: 'Gross', dataIndex: 'amount', key: 'amount', align: 'right' as const, width: 100, render: (v: number) => fmtUSD(v), sorter: (a: MonthlyRow, b: MonthlyRow) => a.amount - b.amount },
     { title: 'Fees', dataIndex: 'fees', key: 'fees', align: 'right' as const, width: 80, render: (v: number) => fmtUSD(v) },
-    { title: 'Rate', dataIndex: 'feeRate', key: 'feeRate', align: 'right' as const, width: 80, render: (v: number) => <Tag color={feeTag(v)}>{safePercent(v, { decimals: 2 })}</Tag>, sorter: (a: MonthlyRow, b: MonthlyRow) => a.feeRate - b.feeRate },
+    { title: 'Rate', dataIndex: 'feeRate', key: 'feeRate', align: 'right' as const, width: 80, render: (v: number) => v > 0 ? <Tag color={feeTag(v)}>{safePercent(v, { decimals: 2 })}</Tag> : <Text type="secondary">—</Text>, sorter: (a: MonthlyRow, b: MonthlyRow) => a.feeRate - b.feeRate },
   ];
 
   return (
@@ -477,10 +493,15 @@ function MonthlyTable({ data }: { data: MonthlyRow[] }) {
 
 // ── Source Breakdown ────────────────────────────────────────────────────
 function SourceBreakdown({ data }: { data: SourceRow[] }) {
-  if (!data || data.length === 0) return null;
+  if (!data || data.length === 0) return (
+    <Card title="Payment Source Breakdown" size="small">
+      <div style={{ textAlign: 'center', padding: '1rem 0', color: MUTED }}>No source data loaded</div>
+    </Card>
+  );
   const top = data[0];
+  const title = top.amount > 0 ? `${top.pct}% of volume routes through ${top.source}` : 'Payment Source Breakdown';
   return (
-    <Card title={`${top.pct}% of volume routes through ${top.source}`} size="small">
+    <Card title={title} size="small">
       <Space direction="vertical" style={{ width: '100%' }} size={12}>
         {data.map((s) => (
           <div key={s.source}>
