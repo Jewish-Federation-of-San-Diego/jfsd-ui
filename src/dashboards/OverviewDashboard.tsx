@@ -2,17 +2,20 @@
 import { Card, Col, Row, Statistic, Typography, Progress, Space, Tag } from 'antd';
 import { DashboardSkeleton } from '../components/DashboardSkeleton';
 import { useEffect, useState, useCallback } from 'react';
+import { DashboardErrorState } from '../components/DashboardErrorState';
 
 const { Title, Text } = Typography;
 import { DataFreshness } from '../components/DataFreshness';
 import { DefinitionTooltip } from "../components/DefinitionTooltip";
 import { NAVY, GOLD, SUCCESS, ERROR, WARNING, MUTED } from '../theme/jfsdTheme';
+import { fetchJson } from '../utils/dataFetch';
+import { safeCount, safeCurrency, safePercent } from '../utils/formatters';
 
 // ── Brand tokens ────────────────────────────────────────────────────────
 // ── Helpers ─────────────────────────────────────────────────────────────
-const fmtUSD = (v?: number) => v != null ? `$${v.toLocaleString()}` : '—';
-const fmtK = (v?: number) => v == null ? '—' : v >= 1_000_000 ? `$${(v / 1_000_000).toFixed(1)}M` : v >= 1_000 ? `$${(v / 1_000).toFixed(0)}K` : `$${v}`;
-const fmtPct = (v?: number) => v != null ? `${v.toFixed(1)}%` : '—';
+const fmtUSD = (v?: number) => safeCurrency(v, { maximumFractionDigits: 0 });
+const fmtK = (v?: number) => safeCurrency(v, { notation: 'compact', maximumFractionDigits: 1 });
+const fmtPct = (v?: number) => safePercent(v, { decimals: 1 });
 const safe = <T,>(fn: () => T, fallback: T): T => { try { return fn(); } catch { return fallback; } };
 
 // ── Types (loose, since we aggregate many sources) ──────────────────────
@@ -43,19 +46,23 @@ export function OverviewDashboard({ onNavigate }: { onNavigate?: (key: string) =
   const [data, setData] = useState<Record<DataKey, D | null>>({} as any);
   const [loading, setLoading] = useState(true);
   const [refreshing, setRefreshing] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     const base = `${import.meta.env.BASE_URL}data/`;
     Promise.allSettled(
       DATA_FILES.map(k =>
-        fetch(`${base}${k}.json`).then(r => r.ok ? r.json() : null).then(d => [k, d] as const)
+        fetchJson(`${base}${k}.json`).then(d => [k, d] as const)
       )
     ).then(results => {
       const m: any = {};
+      let rejected = 0;
       for (const r of results) {
         if (r.status === 'fulfilled' && r.value) m[r.value[0]] = r.value[1];
+        if (r.status === 'rejected') rejected += 1;
       }
       setData(m);
+      if (rejected > 0) setError(`Failed to load ${rejected} data source(s)`);
       setLoading(false);
     });
   }, []);
@@ -65,19 +72,23 @@ export function OverviewDashboard({ onNavigate }: { onNavigate?: (key: string) =
     const base = `${import.meta.env.BASE_URL}data/`;
     Promise.allSettled(
       DATA_FILES.map(k =>
-        fetch(`${base}${k}.json`).then(r => r.ok ? r.json() : null).then(d => [k, d] as const)
+        fetchJson(`${base}${k}.json`).then(d => [k, d] as const)
       )
     ).then(results => {
       const m: any = {};
+      let rejected = 0;
       for (const r of results) {
         if (r.status === 'fulfilled' && r.value) m[r.value[0]] = r.value[1];
+        if (r.status === 'rejected') rejected += 1;
       }
       setData(m);
+      setError(rejected > 0 ? `Failed to refresh ${rejected} data source(s)` : null);
       setRefreshing(false);
     });
   }, []);
 
   if (loading) return <DashboardSkeleton kpiCount={6} />;
+  if (error && Object.keys(data).length === 0) return <DashboardErrorState message="Failed to load overview data" description={error} />;
 
   const campaign = data['campaign-tracker'];
   const donors = data['sharon-donor-health'];
@@ -173,7 +184,7 @@ export function OverviewDashboard({ onNavigate }: { onNavigate?: (key: string) =
             percent={pctGoal ?? 0}
             strokeColor={{ '0%': NAVY, '100%': GOLD }}
             trailColor="#E8E8ED"
-            format={p => `${p?.toFixed(1)}%`}
+            format={p => safePercent(p, { decimals: 1 })}
             strokeWidth={20}
             style={{ marginBottom: 0 }}
           />
@@ -190,7 +201,7 @@ export function OverviewDashboard({ onNavigate }: { onNavigate?: (key: string) =
           {miniCard('New Donors', newDonors, SUCCESS)}
           {miniCard('Failed Recurring', failedAmt != null ? fmtUSD(failedAmt) : null, ERROR)}
           {miniCard('Missing Receipts', missingReceipts, WARNING)}
-          {miniCard('Stripe WoW Δ', stripeWoW != null ? `${stripeWoW > 0 ? '+' : ''}${stripeWoW.toFixed(1)}%` : null, stripeWoW != null && stripeWoW >= 0 ? SUCCESS : ERROR)}
+          {miniCard('Stripe WoW Δ', stripeWoW != null ? safePercent(stripeWoW, { decimals: 1, showSign: true }) : null, stripeWoW != null && stripeWoW >= 0 ? SUCCESS : ERROR)}
           {miniCard('Top Gift', topGift ? `${topGift.name} · ${fmtUSD(topGift.amount)}` : null, GOLD)}
           {miniCard('Thermostat Alerts', thermoAlerts, thermoAlerts > 0 ? ERROR : SUCCESS)}
         </Row>
@@ -212,7 +223,7 @@ export function OverviewDashboard({ onNavigate }: { onNavigate?: (key: string) =
                   percent={dataQuality ?? 0}
                   size={80}
                   strokeColor={dataQuality != null && dataQuality >= 80 ? SUCCESS : dataQuality != null && dataQuality >= 60 ? WARNING : ERROR}
-                  format={p => <span style={{ fontSize: 18, fontWeight: 700 }}>{p ?? '—'}</span>}
+                  format={p => <span style={{ fontSize: 18, fontWeight: 700 }}>{safeCount(p)}</span>}
                 />
               </div>
             </div>
@@ -226,7 +237,7 @@ export function OverviewDashboard({ onNavigate }: { onNavigate?: (key: string) =
                   percent={receiptComp ?? 0}
                   size={80}
                   strokeColor={receiptComp != null && receiptComp >= 90 ? SUCCESS : receiptComp != null && receiptComp >= 75 ? WARNING : ERROR}
-                  format={p => <span style={{ fontSize: 18, fontWeight: 700 }}>{p != null ? `${p}%` : '—'}</span>}
+                  format={p => <span style={{ fontSize: 18, fontWeight: 700 }}>{safePercent(p, { decimals: 0 })}</span>}
                 />
               </div>
             </div>

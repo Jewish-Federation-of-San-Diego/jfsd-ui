@@ -16,6 +16,8 @@ import { useEffect, useState, useCallback } from 'react';
 import { DataFreshness } from '../components/DataFreshness';
 import { DefinitionTooltip } from '../components/DefinitionTooltip';
 import { NAVY, SUCCESS, ERROR, WARNING, MUTED } from '../theme/jfsdTheme';
+import { fetchJson } from '../utils/dataFetch';
+import { safeCurrency } from '../utils/formatters';
 
 const { Text } = Typography;
 const { Panel } = Collapse;
@@ -67,7 +69,7 @@ interface DataQualityData {
 }
 
 // ── Helpers ─────────────────────────────────────────────────────────────
-const fmtUSD = (v: number) => `$${v.toLocaleString(undefined, { minimumFractionDigits: 0, maximumFractionDigits: 0 })}`;
+const fmtUSD = (v: number) => safeCurrency(v, { maximumFractionDigits: 0 });
 
 const severityColor: Record<string, string> = {
   critical: CRITICAL,
@@ -318,11 +320,7 @@ export function DataQualityDashboard() {
   const [refreshing, setRefreshing] = useState(false);
 
   useEffect(() => {
-    fetch(`${import.meta.env.BASE_URL}data/data-quality.json`)
-      .then(r => {
-        if (!r.ok) throw new Error(`HTTP ${r.status}`);
-        return r.json();
-      })
+    fetchJson<DataQualityData>(`${import.meta.env.BASE_URL}data/data-quality.json`)
       .then(setData)
       .catch(e => setError(e.message))
       .finally(() => setLoading(false));
@@ -341,29 +339,32 @@ export function DataQualityDashboard() {
   if (error) return <Alert type="error" message="Failed to load data quality data" description={error} showIcon />;
   if (!data) return <Alert type="warning" message="No data available" showIcon />;
 
+  const kpis = data.kpis ?? { overallScore: 0, criticalIssues: 0, highIssues: 0, mediumIssues: 0, lowIssues: 0, totalRecordsAffected: 0, totalMajorDonors: 0 };
+  const categories = data.categories ?? [];
+
   return (
     <div style={{ padding: '16px 0' }}>
       {/* Header */}
       <Row gutter={[16, 16]} align="middle" style={{ marginBottom: 16 }}>
         <Col xs={24} md={8}>
-          <ScoreGauge score={data.overallScore} size={180} />
+          <ScoreGauge score={data.overallScore ?? 0} size={180} />
           <div style={{ textAlign: 'center', marginTop: 4 }}>
             <Text type="secondary" style={{ fontSize: 12 }}>Overall Data Quality Score</Text>
             <br />
-            <DataFreshness asOfDate={data.asOfDate} onRefresh={refresh} refreshing={refreshing} />
+            <DataFreshness asOfDate={data.asOfDate ?? ''} onRefresh={refresh} refreshing={refreshing} />
           </div>
         </Col>
         <Col xs={24} md={16}>
-          <KPIRow kpis={data.kpis} />
+          <KPIRow kpis={kpis} />
           <div style={{ marginTop: 12 }}>
-            <SeveritySummary kpis={data.kpis} />
+            <SeveritySummary kpis={kpis} />
           </div>
         </Col>
       </Row>
 
       {/* Category Cards */}
       <Row gutter={[16, 16]}>
-        {data.categories.map(cat => (
+        {categories.map(cat => (
           <Col xs={24} lg={12} key={cat.name}>
             <CategoryCard category={cat} />
           </Col>

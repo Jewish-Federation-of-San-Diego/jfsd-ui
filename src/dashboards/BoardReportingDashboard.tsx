@@ -15,6 +15,8 @@ import {
 import { useEffect, useState, useRef, useCallback } from 'react';
 import { PdfExport } from '../components/PdfExport';
 import { DataFreshness } from '../components/DataFreshness';
+import { fetchJson } from '../utils/dataFetch';
+import { safeCount, safeCurrency, safePercent } from '../utils/formatters';
 
 const { Text, Title } = Typography;
 import { DefinitionTooltip } from "../components/DefinitionTooltip";
@@ -75,8 +77,7 @@ interface BoardData {
   };
 }
 
-const fmtUSD = (v: number) =>
-  `$${v.toLocaleString(undefined, { minimumFractionDigits: 0, maximumFractionDigits: 0 })}`;
+const fmtUSD = (v: number) => safeCurrency(v, { maximumFractionDigits: 0 });
 
 // ── Status Badge ────────────────────────────────────────────────────────
 function StatusBadge({ status }: { status: string }) {
@@ -141,7 +142,7 @@ function CampaignThermometer({ raised, goal }: { raised: number; goal: number })
         </text>
       </svg>
       <Text type="secondary" style={{ fontSize: 13, marginTop: 4, display: 'block' }}>
-        {pct.toFixed(1)}% of goal
+        {safePercent(pct, { decimals: 1 })} of goal
       </Text>
     </div>
   );
@@ -287,10 +288,10 @@ export function BoardReportingDashboard() {
   const [refreshing, setRefreshing] = useState(false);
 
   useEffect(() => {
-    fetch(`${import.meta.env.BASE_URL}data/board-reporting.json`)
-      .then(r => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json(); })
-      .then(d => { setData(d); setLoading(false); })
-      .catch(e => { setError(e.message); setLoading(false); });
+    fetchJson<BoardData>(`${import.meta.env.BASE_URL}data/board-reporting.json`)
+      .then(setData)
+      .catch(e => setError(e.message))
+      .finally(() => setLoading(false));
   }, []);
 
   const refresh = useCallback(() => {
@@ -309,7 +310,11 @@ export function BoardReportingDashboard() {
       style={{ margin: 24 }} />
   );
 
-  const { kpis, campaignSummary, boards, givingLevels, highlights } = data;
+  const kpis = data.kpis ?? { overallBoardParticipation: 0, campaignPctOfGoal: 0, totalBoardGiving: 0, yoyChange: 0 };
+  const campaignSummary = data.campaignSummary ?? { goal: 0, raised: 0, pctOfGoal: 0, donorCount: 0, priorYearComparison: 0 };
+  const boards = data.boards ?? [];
+  const givingLevels = data.givingLevels ?? [];
+  const highlights = data.highlights ?? [];
 
   return (
     <div ref={contentRef} style={{ padding: '24px 32px', maxWidth: 1400, margin: '0 auto', background: BG_LIGHT, minHeight: '100vh' }}>
@@ -320,7 +325,7 @@ export function BoardReportingDashboard() {
         </div>
         <PdfExport filename="board-reporting" targetRef={contentRef} />
       </div>
-      <DataFreshness asOfDate={data.asOfDate} onRefresh={refresh} refreshing={refreshing} />
+      <DataFreshness asOfDate={data.asOfDate ?? ''} onRefresh={refresh} refreshing={refreshing} />
 
       {/* KPI Row */}
       <Row gutter={[16, 16]} style={{ marginBottom: 32 }}>
@@ -328,8 +333,7 @@ export function BoardReportingDashboard() {
           <Card style={{ borderRadius: 12, borderTop: `3px solid ${GOLD}` }}>
             <Statistic
               title={<Text type="secondary"><TrophyOutlined /> Campaign Progress</Text>}
-              value={campaignSummary.pctOfGoal}
-              suffix="%"
+              value={safePercent(campaignSummary.pctOfGoal, { decimals: 0 })}
               valueStyle={{ color: NAVY, fontWeight: 700 }}
             />
             <Text type="secondary" style={{ fontSize: 12 }}>
@@ -341,8 +345,7 @@ export function BoardReportingDashboard() {
           <Card style={{ borderRadius: 12, borderTop: `3px solid ${NAVY}` }}>
             <Statistic
               title={<Text type="secondary"><TeamOutlined /> <DefinitionTooltip term="Board Participation" dashboardKey="board">Board Participation</DefinitionTooltip></Text>}
-              value={kpis.overallBoardParticipation}
-              suffix="%"
+              value={safePercent(kpis.overallBoardParticipation, { decimals: 0 })}
               valueStyle={{ color: kpis.overallBoardParticipation >= 50 ? SUCCESS : WARNING, fontWeight: 700 }}
             />
           </Card>
@@ -362,9 +365,7 @@ export function BoardReportingDashboard() {
           <Card style={{ borderRadius: 12, borderTop: `3px solid ${kpis.yoyChange >= 0 ? SUCCESS : ERROR}` }}>
             <Statistic
               title={<Text type="secondary">{kpis.yoyChange >= 0 ? <RiseOutlined /> : <FallOutlined />} YoY Change</Text>}
-              value={kpis.yoyChange}
-              suffix="%"
-              prefix={kpis.yoyChange >= 0 ? '+' : ''}
+              value={safePercent(kpis.yoyChange, { decimals: 0, showSign: true })}
               valueStyle={{ color: kpis.yoyChange >= 0 ? SUCCESS : ERROR, fontWeight: 700 }}
             />
           </Card>
@@ -376,8 +377,8 @@ export function BoardReportingDashboard() {
         style={{ borderRadius: 12, marginBottom: 32 }}>
         <CampaignThermometer raised={campaignSummary.raised} goal={campaignSummary.goal} />
         <Row gutter={24} justify="center" style={{ marginTop: 8 }}>
-          <Col><Statistic title="Donors" value={campaignSummary.donorCount} valueStyle={{ fontSize: 16 }} /></Col>
-          <Col><Statistic title="vs Prior Year" value={campaignSummary.priorYearComparison} suffix="%" prefix={campaignSummary.priorYearComparison >= 0 ? '+' : ''} valueStyle={{ fontSize: 16, color: campaignSummary.priorYearComparison >= 0 ? SUCCESS : ERROR }} /></Col>
+          <Col><Statistic title="Donors" value={safeCount(campaignSummary.donorCount)} valueStyle={{ fontSize: 16 }} /></Col>
+          <Col><Statistic title="vs Prior Year" value={safePercent(campaignSummary.priorYearComparison, { decimals: 0, showSign: true })} valueStyle={{ fontSize: 16, color: campaignSummary.priorYearComparison >= 0 ? SUCCESS : ERROR }} /></Col>
         </Row>
       </Card>
 

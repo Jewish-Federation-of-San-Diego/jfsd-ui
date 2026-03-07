@@ -16,6 +16,8 @@ const { Text, Title } = Typography;
 import { DataFreshness } from '../components/DataFreshness';
 import { DefinitionTooltip } from "../components/DefinitionTooltip";
 import { NAVY, GOLD, SUCCESS, ERROR, WARNING } from '../theme/jfsdTheme';
+import { fetchJson } from '../utils/dataFetch';
+import { safeCount, safeCurrency, safePercent } from '../utils/formatters';
 
 // ── Brand tokens ────────────────────────────────────────────────────────
 // ── Types ───────────────────────────────────────────────────────────────
@@ -35,7 +37,7 @@ interface PledgeData {
   kpis: { totalOutstanding: number; fulfillmentRate: number; writeOffRiskAmount: number; writeOffRiskCount: number; avgDaysToPayment: number; pledgesThisMonth: number; };
 }
 
-const fmtUSD = (v: number) => `$${v.toLocaleString(undefined, { minimumFractionDigits: 0, maximumFractionDigits: 0 })}`;
+const fmtUSD = (v: number) => safeCurrency(v, { maximumFractionDigits: 0 });
 const fmtShortDate = (d: string) => { try { return new Date(d + 'T00:00:00').toLocaleDateString('en-US', { month: 'short', day: 'numeric' }); } catch { return d; } };
 
 const AGING_COLORS: Record<string, string> = {
@@ -74,8 +76,7 @@ export function PledgeManagementDashboard() {
   const [refreshing, setRefreshing] = useState(false);
 
   useEffect(() => {
-    fetch(`${import.meta.env.BASE_URL}data/pledge-management.json`)
-      .then(r => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json(); })
+    fetchJson<PledgeData>(`${import.meta.env.BASE_URL}data/pledge-management.json`)
       .then(setData)
       .catch(e => setError(e.message))
       .finally(() => setLoading(false));
@@ -94,7 +95,13 @@ export function PledgeManagementDashboard() {
   if (error) return <Alert type="error" message="Failed to load pledge data" description={error} showIcon style={{ margin: 24 }} />;
   if (!data) return null;
 
-  const { summary, kpis, agingBuckets, writeOffRisk, topOpenPledges, byCampaign, recentPayments } = data;
+  const summary = data.summary ?? { totalOpenPledges: 0, totalPledgedAmount: 0, totalPaidAmount: 0, totalOutstanding: 0, fulfillmentRate: 0, avgPledgeSize: 0 };
+  const kpis = data.kpis ?? { totalOutstanding: 0, fulfillmentRate: 0, writeOffRiskAmount: 0, writeOffRiskCount: 0, avgDaysToPayment: 0, pledgesThisMonth: 0 };
+  const agingBuckets = data.agingBuckets ?? [];
+  const writeOffRisk = data.writeOffRisk ?? [];
+  const topOpenPledges = data.topOpenPledges ?? [];
+  const byCampaign = data.byCampaign ?? [];
+  const recentPayments = data.recentPayments ?? [];
   const totalAging = agingBuckets.reduce((s, b) => s + b.amount, 0) || 1;
 
   // Compute past-due stats from topOpenPledges (pledges with non-empty endDate in the past)
@@ -111,8 +118,8 @@ export function PledgeManagementDashboard() {
   return (
     <div style={{ padding: '24px 24px 48px' }}>
       <Title level={3} style={{ color: NAVY, marginBottom: 4 }}>Pledge Management</Title>
-      <Text type="secondary">{summary.totalOpenPledges} open pledges</Text>
-      <DataFreshness asOfDate={data.asOfDate} onRefresh={refresh} refreshing={refreshing} />
+      <Text type="secondary">{safeCount(summary.totalOpenPledges)} open pledges</Text>
+      <DataFreshness asOfDate={data.asOfDate ?? ''} onRefresh={refresh} refreshing={refreshing} />
 
       {/* ── Low fulfillment context alert ─────────────────────── */}
       {kpis.fulfillmentRate < 10 && (
@@ -129,10 +136,10 @@ export function PledgeManagementDashboard() {
       <Row gutter={[16, 16]} style={{ marginTop: 20 }}>
         {[
           { title: 'Total Outstanding', value: fmtUSD(kpis.totalOutstanding), icon: <DollarOutlined />, color: NAVY, contextNote: undefined as string | undefined },
-          { title: <DefinitionTooltip term="Fulfillment Rate" dashboardKey="pledge">Fulfillment Rate</DefinitionTooltip>, value: `${kpis.fulfillmentRate}%`, icon: <CheckCircleOutlined />, color: kpis.fulfillmentRate >= 50 ? SUCCESS : WARNING, contextNote: 'Includes new & open-ended pledges not yet due' },
+          { title: <DefinitionTooltip term="Fulfillment Rate" dashboardKey="pledge">Fulfillment Rate</DefinitionTooltip>, value: safePercent(kpis.fulfillmentRate, { decimals: 0 }), icon: <CheckCircleOutlined />, color: kpis.fulfillmentRate >= 50 ? SUCCESS : WARNING, contextNote: 'Includes new & open-ended pledges not yet due' },
           { title: 'Past Due', value: fmtUSD(pastDueAmount), icon: <ExclamationCircleOutlined />, color: ERROR, contextNote: `${pastDueCount} pledges past end date` },
-          { title: <DefinitionTooltip term="Write-off Risk" dashboardKey="pledge">Write-off Risk</DefinitionTooltip>, value: fmtUSD(kpis.writeOffRiskAmount), icon: <WarningOutlined />, color: ERROR, suffix: `${kpis.writeOffRiskCount} pledges`, contextNote: undefined as string | undefined },
-          { title: 'Pledges This Month', value: kpis.pledgesThisMonth, icon: <CalendarOutlined />, color: GOLD, contextNote: undefined as string | undefined },
+          { title: <DefinitionTooltip term="Write-off Risk" dashboardKey="pledge">Write-off Risk</DefinitionTooltip>, value: fmtUSD(kpis.writeOffRiskAmount), icon: <WarningOutlined />, color: ERROR, suffix: `${safeCount(kpis.writeOffRiskCount)} pledges`, contextNote: undefined as string | undefined },
+          { title: 'Pledges This Month', value: safeCount(kpis.pledgesThisMonth), icon: <CalendarOutlined />, color: GOLD, contextNote: undefined as string | undefined },
           { title: 'Avg Pledge Size', value: fmtUSD(summary.avgPledgeSize), icon: <FileTextOutlined />, color: NAVY, contextNote: undefined as string | undefined },
         ].map((kpi, i) => (
           <Col xs={24} sm={12} md={8} lg={4} xl={4} key={i}>
@@ -255,7 +262,7 @@ export function PledgeManagementDashboard() {
                     <Space size={4}>
                       <Progress type="circle" percent={r.fulfillmentRate} size={28} strokeColor={r.fulfillmentRate >= 70 ? SUCCESS : r.fulfillmentRate >= 40 ? GOLD : ERROR} strokeWidth={8}
                         format={() => ''} />
-                      <Text style={{ fontSize: 12 }}>{r.fulfillmentRate}%</Text>
+                      <Text style={{ fontSize: 12 }}>{safePercent(r.fulfillmentRate, { decimals: 0 })}</Text>
                     </Space>
                   ),
                   sorter: (a: CampaignItem, b: CampaignItem) => a.fulfillmentRate - b.fulfillmentRate,

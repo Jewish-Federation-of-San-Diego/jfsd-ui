@@ -7,6 +7,8 @@ const { Text } = Typography;
 import { DataFreshness } from '../components/DataFreshness';
 import { DefinitionTooltip } from "../components/DefinitionTooltip";
 import { NAVY, SUCCESS, ERROR, WARNING, MUTED } from '../theme/jfsdTheme';
+import { fetchJson } from '../utils/dataFetch';
+import { safeCurrency, safePercent } from '../utils/formatters';
 
 // ── Brand tokens ────────────────────────────────────────────────────────
 const GRID = '#E8E8ED';
@@ -92,8 +94,8 @@ interface APExpenseData {
 }
 
 // ── Helpers ─────────────────────────────────────────────────────────────
-const fmtUSD = (v: number) => `$${v.toLocaleString(undefined, { minimumFractionDigits: 0, maximumFractionDigits: 0 })}`;
-const fmtK = (v: number) => v >= 1_000_000 ? `$${(v / 1_000_000).toFixed(1)}M` : v >= 1000 ? `$${(v / 1000).toFixed(0)}K` : `$${v.toFixed(0)}`;
+const fmtUSD = (v: number) => safeCurrency(v, { maximumFractionDigits: 0 });
+const fmtK = (v: number) => safeCurrency(v, { notation: 'compact', maximumFractionDigits: 1 });
 
 const typeTag = (type: string): { color: string; label: string } => {
   switch (type) {
@@ -200,7 +202,7 @@ function ActionItemsTable({ items }: { items: ActionItem[] }) {
       width: 110,
       sorter: (a: ActionItem, b: ActionItem) => a.amount - b.amount,
       defaultSortOrder: 'descend' as const,
-      render: (v: number) => <Text strong>${v.toLocaleString(undefined, { minimumFractionDigits: 2 })}</Text>,
+      render: (v: number) => <Text strong>{safeCurrency(v, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</Text>,
     },
     {
       title: 'Cardholder',
@@ -318,7 +320,7 @@ function BudgetPace({ data }: { data: BudgetRow[] }) {
             <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 2 }}>
               <Text strong style={{ fontSize: 13 }}>{d.department}</Text>
               <Text style={{ fontSize: 12, color: paceColor(d.pctUsed) }}>
-                {d.pctUsed.toFixed(0)}% — {fmtK(d.actualYTD)} / {fmtK(d.budgetYTD)}
+                {safePercent(d.pctUsed, { decimals: 0 })} — {fmtK(d.actualYTD)} / {fmtK(d.budgetYTD)}
               </Text>
             </div>
             <Progress
@@ -363,7 +365,7 @@ function CardManagement({ data }: { data: APExpenseData['cardManagement'] }) {
       dataIndex: 'pctUsed',
       key: 'pctUsed',
       width: 90,
-      render: (v: number) => <Tag color={v > 90 ? ERROR : WARNING}>{v.toFixed(0)}%</Tag>,
+      render: (v: number) => <Tag color={v > 90 ? ERROR : WARNING}>{safePercent(v, { decimals: 0 })}</Tag>,
     },
   ];
 
@@ -429,57 +431,59 @@ export default function APExpenseDashboard() {
   const [refreshing, setRefreshing] = useState(false);
 
   useEffect(() => {
-    fetch(`${import.meta.env.BASE_URL}data/james-ap-expense.json`)
-      .then((r) => {
-        if (!r.ok) throw new Error(`HTTP ${r.status}`);
-        return r.json();
-      })
+    fetchJson<APExpenseData>(`${import.meta.env.BASE_URL}data/james-ap-expense.json`)
       .then(setData)
       .catch((e) => setError(e.message));
   }, []);
 
   const refresh = useCallback(() => {
     setRefreshing(true);
-    fetch(`${import.meta.env.BASE_URL}data/james-ap-expense.json`)
-      .then(r => r.ok ? r.json() : null)
+    fetchJson<APExpenseData>(`${import.meta.env.BASE_URL}data/james-ap-expense.json`)
       .then(setData)
-      .catch(() => {})
+      .catch((e) => setError((e as Error).message))
       .finally(() => setRefreshing(false));
   }, []);
 
   if (error) return <Alert type="error" message="Failed to load AP & Expense data" description={error} showIcon style={{ margin: 24 }} />;
   if (!data) return <DashboardSkeleton />;
 
+  const kpis = data.kpis ?? { totalSpendThisWeek: 0, missingReceipts: 0, receiptComplianceRate: 0, apOutstanding: 0, overBudgetDepts: 0, dormantCards: 0 };
+  const actionItems = data.actionItems ?? [];
+  const expenseSummary = data.expenseSummary ?? { totalSpend7d: 0, totalSpend30d: 0, byDepartment: [], topMerchants: [], receiptComplianceRate: 0 };
+  const budgetPace = data.budgetPace ?? [];
+  const glHealth = data.glHealth ?? { manualEntries7d: 0, unclearedItems30d: 0, apAgingBuckets: [] };
+  const cardManagement = data.cardManagement ?? { activeCards: 0, dormantCards: [], highUtilization: [] };
+
   return (
     <Space direction="vertical" size={16} style={{ width: '100%' }}>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>
         <Text strong style={{ fontSize: 20, color: NAVY }}>AP &amp; Expense Dashboard</Text>
       </div>
-      <DataFreshness asOfDate={data.asOfDate} onRefresh={refresh} refreshing={refreshing} />
+      <DataFreshness asOfDate={data.asOfDate ?? ''} onRefresh={refresh} refreshing={refreshing} />
 
-      <KPICards kpis={data.kpis} />
+      <KPICards kpis={kpis} />
 
-      <ActionItemsTable items={data.actionItems} />
+      <ActionItemsTable items={actionItems} />
 
       <Row gutter={[16, 16]}>
         <Col xs={24} lg={14}>
-          <DeptSpendChart data={data.expenseSummary.byDepartment} />
+          <DeptSpendChart data={expenseSummary.byDepartment} />
         </Col>
         <Col xs={24} lg={10}>
-          <TopMerchants data={data.expenseSummary.topMerchants} />
+          <TopMerchants data={expenseSummary.topMerchants} />
         </Col>
       </Row>
 
       <Row gutter={[16, 16]}>
         <Col xs={24} lg={12}>
-          <BudgetPace data={data.budgetPace} />
+          <BudgetPace data={budgetPace} />
         </Col>
         <Col xs={24} lg={12}>
-          <GLHealth data={data.glHealth} />
+          <GLHealth data={glHealth} />
         </Col>
       </Row>
 
-      <CardManagement data={data.cardManagement} />
+      <CardManagement data={cardManagement} />
 
       <Text type="secondary" style={{ fontSize: 11, textAlign: 'center', display: 'block' }}>
         Data: Ramp API (transactions, cards) · Sage Intacct GL (budget, AP aging) · FY26 Jul 2025–Jun 2026

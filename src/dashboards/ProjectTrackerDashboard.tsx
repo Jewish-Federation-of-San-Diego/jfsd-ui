@@ -11,6 +11,9 @@ import { DataFreshness } from '../components/DataFreshness';
 import { DashboardSkeleton } from '../components/DashboardSkeleton';
 import { CsvExport } from '../components/CsvExport';
 import { DefinitionTooltip } from '../components/DefinitionTooltip';
+import { DashboardErrorState } from '../components/DashboardErrorState';
+import { fetchJson } from '../utils/dataFetch';
+import { safeCount } from '../utils/formatters';
 
 const { Text } = Typography;
 const { useBreakpoint } = Grid;
@@ -124,6 +127,7 @@ function ItemCard({ item, columnKey }: { item: TrackerItem; columnKey: string })
 export function ProjectTrackerDashboard() {
   const [data, setData] = useState<TrackerData | null>(null);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
   const [search, setSearch] = useState('');
   const [laneFilter, setLaneFilter] = useState<string | undefined>(undefined);
   const [ownerFilter, setOwnerFilter] = useState<string | undefined>(undefined);
@@ -131,15 +135,23 @@ export function ProjectTrackerDashboard() {
   const screens = useBreakpoint();
 
   useEffect(() => {
-    fetch(`${import.meta.env.BASE_URL}data/project-tracker.json`)
-      .then(r => r.json())
-      .then((d: TrackerData) => { setData(d); setLoading(false); })
-      .catch(() => setLoading(false));
+    const load = async () => {
+      try {
+        const json = await fetchJson<TrackerData>(`${import.meta.env.BASE_URL}data/project-tracker.json`);
+        setData(json);
+      } catch (err) {
+        setError((err as Error).message);
+      } finally {
+        setLoading(false);
+      }
+    };
+    void load();
   }, []);
 
   const filtered = useMemo(() => {
     if (!data) return [];
-    return data.items.filter(item => {
+    const items = data.items ?? [];
+    return items.filter(item => {
       if (search && !item.title.toLowerCase().includes(search.toLowerCase())) return false;
       if (laneFilter && item.swimLane !== laneFilter) return false;
       if (ownerFilter && item.owner !== ownerFilter) return false;
@@ -150,18 +162,22 @@ export function ProjectTrackerDashboard() {
 
   const owners = useMemo(() => {
     if (!data) return [];
-    return [...new Set(data.items.map(i => i.owner))].sort();
+    return [...new Set((data.items ?? []).map(i => i.owner))].sort();
   }, [data]);
 
   if (loading) return <DashboardSkeleton kpiCount={4} hasChart={false} hasTable />;
-  if (!data) return <Text>Failed to load project tracker data.</Text>;
+  if (error) return <DashboardErrorState message="Failed to load project tracker data" description={error} />;
+  if (!data) return <DashboardErrorState message="Missing project tracker data" />;
 
-  const kpis = data.kpis;
+  const kpis = data.kpis ?? { totalItems: 0, thisWeek: 0, blocked: 0, completedThisMonth: 0 };
+  const columns = data.columns ?? [];
+  const columnLabels = data.columnLabels ?? {};
+  const swimLanes = data.swimLanes ?? [];
   const isMobile = !screens.md;
 
-  const columnGroups = data.columns.map(col => ({
+  const columnGroups = columns.map(col => ({
     key: col,
-    label: data.columnLabels[col],
+    label: columnLabels[col] ?? col,
     items: filtered.filter(i => i.column === col),
   }));
 
@@ -174,8 +190,8 @@ export function ProjectTrackerDashboard() {
     },
     {
       title: 'Column', dataIndex: 'column', key: 'column', width: 120,
-      sorter: (a: TrackerItem, b: TrackerItem) => data.columns.indexOf(a.column) - data.columns.indexOf(b.column),
-      render: (c: string) => data.columnLabels[c] || c,
+      sorter: (a: TrackerItem, b: TrackerItem) => columns.indexOf(a.column) - columns.indexOf(b.column),
+      render: (c: string) => columnLabels[c] || c,
     },
     {
       title: 'Swim Lane', dataIndex: 'swimLane', key: 'swimLane', width: 160,
@@ -196,7 +212,7 @@ export function ProjectTrackerDashboard() {
 
   return (
     <div style={{ maxWidth: 1400, margin: '0 auto' }}>
-      <DataFreshness asOfDate={data.asOfDate} />
+      <DataFreshness asOfDate={data.asOfDate ?? ''} />
 
       {/* KPI Row */}
       <Row gutter={[12, 12]} style={{ marginBottom: 16 }}>
@@ -204,24 +220,24 @@ export function ProjectTrackerDashboard() {
           <Card size="small" style={{ borderTop: `3px solid ${NAVY}` }}>
             <Statistic
               title={<DefinitionTooltip term="Swim Lane" dashboardKey="projects">Total Items</DefinitionTooltip>}
-              value={kpis.totalItems}
+              value={safeCount(kpis.totalItems)}
               prefix={<ProjectOutlined />}
             />
           </Card>
         </Col>
         <Col xs={12} sm={6}>
           <Card size="small" style={{ borderTop: `3px solid ${WARNING}` }}>
-            <Statistic title="This Week" value={kpis.thisWeek} prefix={<FireOutlined />} valueStyle={{ color: WARNING }} />
+            <Statistic title="This Week" value={safeCount(kpis.thisWeek)} prefix={<FireOutlined />} valueStyle={{ color: WARNING }} />
           </Card>
         </Col>
         <Col xs={12} sm={6}>
           <Card size="small" style={{ borderTop: `3px solid ${ERROR}` }}>
-            <Statistic title="Blocked" value={kpis.blocked} prefix={<PauseCircleOutlined />} valueStyle={{ color: ERROR }} />
+            <Statistic title="Blocked" value={safeCount(kpis.blocked)} prefix={<PauseCircleOutlined />} valueStyle={{ color: ERROR }} />
           </Card>
         </Col>
         <Col xs={12} sm={6}>
           <Card size="small" style={{ borderTop: `3px solid ${SUCCESS}` }}>
-            <Statistic title="Done This Month" value={kpis.completedThisMonth} prefix={<CheckCircleOutlined />} valueStyle={{ color: SUCCESS }} />
+            <Statistic title="Done This Month" value={safeCount(kpis.completedThisMonth)} prefix={<CheckCircleOutlined />} valueStyle={{ color: SUCCESS }} />
           </Card>
         </Col>
       </Row>
@@ -242,7 +258,7 @@ export function ProjectTrackerDashboard() {
             style={{ width: 180 }}
             value={laneFilter}
             onChange={setLaneFilter}
-            options={data.swimLanes.map(s => ({ label: s, value: s }))}
+            options={swimLanes.map(s => ({ label: s, value: s }))}
           />
           <Select
             placeholder="Owner"

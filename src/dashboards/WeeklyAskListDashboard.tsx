@@ -18,6 +18,8 @@ import type { ColumnsType } from 'antd/es/table';
 import { DataFreshness } from '../components/DataFreshness';
 import { DefinitionTooltip } from '../components/DefinitionTooltip';
 import { NAVY, GOLD, SUCCESS, ERROR, WARNING, MUTED } from '../theme/jfsdTheme';
+import { fetchJson } from '../utils/dataFetch';
+import { safeCount, safeCurrency, safePercent } from '../utils/formatters';
 
 const { Text, Title } = Typography;
 
@@ -78,8 +80,7 @@ interface SilenceData {
   byTier: TierSummary[]; donors: RiskDonor[]; kpis: RiskKPIs;
 }
 
-const fmtUSD = (v: number) =>
-  `$${v.toLocaleString(undefined, { minimumFractionDigits: 0, maximumFractionDigits: 0 })}`;
+const fmtUSD = (v: number) => safeCurrency(v, { maximumFractionDigits: 0 });
 
 const CATEGORY_COLORS: Record<string, string> = {
   LYBUNT: WARNING,
@@ -356,7 +357,7 @@ function RiskDistributionBar({ tiers, total }: { tiers: TierSummary[]; total: nu
           {tiers.filter(t => t.count > 0).map(t => {
             const pct = (t.revenueAtRisk / total) * 100;
             return (
-              <AntTooltip key={t.tier} title={`${t.tier}: ${t.count} donors — ${fmtUSD(t.revenueAtRisk)} (${pct.toFixed(1)}%)`}>
+              <AntTooltip key={t.tier} title={`${t.tier}: ${safeCount(t.count)} donors — ${fmtUSD(t.revenueAtRisk)} (${safePercent(pct, { decimals: 1 })})`}>
                 <div style={{ width: `${pct}%`, background: t.color, display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#fff', fontSize: 12, fontWeight: 600 }}>
                   {pct > 8 && `${t.tier}`}
                 </div>
@@ -384,8 +385,7 @@ function RiskAlertsContent() {
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    fetch(`${import.meta.env.BASE_URL}data/silence-alerts.json`)
-      .then(r => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json(); })
+    fetchJson<SilenceData>(`${import.meta.env.BASE_URL}data/silence-alerts.json`)
       .then(setData)
       .catch(e => setError(e.message))
       .finally(() => setLoading(false));
@@ -524,16 +524,17 @@ export function WeeklyAskListDashboard() {
         return r.json();
       })
       .then((d: AskListData) => {
+        const donors = d?.donors ?? [];
         const isDeceased = (name: string) => /Z["'\u201c\u201d\u2018\u2019]L/i.test(name);
-        const filtered = d.donors.filter((donor) => !isDeceased(donor.name));
-        const removedCount = d.donors.length - filtered.length;
+        const filtered = donors.filter((donor) => !isDeceased(donor?.name ?? ''));
+        const removedCount = donors.length - filtered.length;
         filtered.forEach((donor, i) => { donor.rank = i + 1; });
         setData({
           ...d,
           donors: filtered,
           totalProspects: filtered.length,
           _deceasedFiltered: removedCount,
-          kpis: { ...d.kpis, totalPotential: filtered.reduce((s, x) => s + x.suggestedAsk, 0) },
+          kpis: { ...(d?.kpis ?? { totalPotential: 0, top10Potential: 0, lybuntCount: 0, upgradeCount: 0, lapsedCount: 0 }), totalPotential: filtered.reduce((s, x) => s + (x?.suggestedAsk ?? 0), 0) },
         } as AskListData);
       })
       .catch((e) => setError(e.message))
@@ -550,10 +551,9 @@ export function WeeklyAskListDashboard() {
 
   const refresh = useCallback(() => {
     setRefreshing(true);
-    fetch(`${import.meta.env.BASE_URL}data/weekly-ask-list.json`)
-      .then(r => r.ok ? r.json() : null)
+    fetchJson<AskListData>(`${import.meta.env.BASE_URL}data/weekly-ask-list.json`)
       .then(setData)
-      .catch(() => {})
+      .catch((e) => setError((e as Error).message))
       .finally(() => setRefreshing(false));
   }, []);
 

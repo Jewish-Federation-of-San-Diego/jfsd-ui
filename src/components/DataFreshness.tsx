@@ -16,6 +16,12 @@ function timeAgo(dateStr: string, now: number): string {
   return `${days}d ago`;
 }
 
+function formatDateTime(dateStr: string): string {
+  const date = new Date(dateStr);
+  if (Number.isNaN(date.getTime())) return 'Unknown date';
+  return new Intl.DateTimeFormat('en-US', { dateStyle: 'short', timeStyle: 'short' }).format(date);
+}
+
 interface DataFreshnessProps {
   asOfDate: string;
   onRefresh?: () => void;
@@ -34,7 +40,7 @@ export function DataFreshness({ asOfDate, onRefresh, refreshing }: DataFreshness
       <Text type="secondary" style={{ fontSize: 12, color: isStale ? WARNING : MUTED }}>
         Updated {timeAgo(asOfDate, now)}
         {' · '}
-        {new Date(asOfDate).toLocaleString()}
+        {formatDateTime(asOfDate)}
       </Text>
       {onRefresh && (
         <Tooltip title="Refresh data">
