@@ -1,0 +1,83 @@
+{
+  "registrations": [
+    {
+      "id": "reg-001",
+      "trip_id": "trip-001",
+      "name": "Sarah Goldman",
+      "email": "sarah.goldman@example.com",
+      "phone": "619-555-0101",
+      "registration_date": "2025-01-05",
+      "payment_status": "paid_in_full",
+      "amount_paid": 4500,
+      "amount_due": 0
+    },
+    {
+      "id": "reg-002",
+      "trip_id": "trip-001",
+      "name": "David Levy",
+      "email": "david.levy@example.com",
+      "phone": "619-555-0102",
+      "registration_date": "2025-01-08",
+      "payment_status": "partial",
+      "amount_paid": 2500,
+      "amount_due": 2000
+    },
+    {
+      "id": "reg-003",
+      "trip_id": "trip-001",
+      "name": "Rachel Cohen",
+      "email": "rachel.cohen@example.com",
+      "phone": "619-555-0103",
+      "registration_date": "2025-01-10",
+      "payment_status": "deposit_only",
+      "amount_paid": 500,
+      "amount_due": 4000
+    },
+    {
+      "id": "reg-004",
+      "trip_id": "trip-001",
+      "name": "Michael Stern",
+      "email": "michael.stern@example.com",
+      "phone": "619-555-0104",
+      "registration_date": "2025-01-12",
+      "payment_status": "paid_in_full",
+      "amount_paid": 4500,
+      "amount_due": 0
+    },
+    {
+      "id": "reg-005",
+      "trip_id": "trip-001",
+      "name": "Hannah Weiss",
+      "email": "hannah.weiss@example.com",
+      "phone": "619-555-0105",
+      "registration_date": "2025-01-15",
+      "payment_status": "overdue",
+      "amount_paid": 500,
+      "amount_due": 4000,
+      "payment_due_date": "2025-01-25"
+    },
+    {
+      "id": "reg-006",
+      "trip_id": "trip-002",
+      "name": "Benjamin Ross",
+      "email": "benjamin.ross@example.com",
+      "phone": "619-555-0201",
+      "registration_date": "2025-01-20",
+      "payment_status": "deposit_only",
+      "amount_paid": 400,
+      "amount_due": 3400
+    },
+    {
+      "id": "reg-007",
+      "trip_id": "trip-002",
+      "name": "Emma Shapiro",
+      "email": "emma.shapiro@example.com",
+      "phone": "619-555-0202",
+      "registration_date": "2025-01-22",
+      "payment_status": "partial",
+      "amount_paid": 1900,
+      "amount_due": 1900
+    }
+  ],
+  "last_updated": "2025-02-03T10:00:00Z"
+}

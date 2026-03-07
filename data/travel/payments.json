@@ -1,0 +1,85 @@
+{
+  "payments": [
+    {
+      "id": "pay-001",
+      "registration_id": "reg-001",
+      "amount": 500,
+      "date": "2025-01-05",
+      "type": "deposit",
+      "method": "credit_card"
+    },
+    {
+      "id": "pay-002",
+      "registration_id": "reg-001",
+      "amount": 4000,
+      "date": "2025-01-20",
+      "type": "final",
+      "method": "credit_card"
+    },
+    {
+      "id": "pay-003",
+      "registration_id": "reg-002",
+      "amount": 500,
+      "date": "2025-01-08",
+      "type": "deposit",
+      "method": "credit_card"
+    },
+    {
+      "id": "pay-004",
+      "registration_id": "reg-002",
+      "amount": 2000,
+      "date": "2025-01-25",
+      "type": "installment",
+      "method": "bank_transfer"
+    },
+    {
+      "id": "pay-005",
+      "registration_id": "reg-003",
+      "amount": 500,
+      "date": "2025-01-10",
+      "type": "deposit",
+      "method": "credit_card"
+    },
+    {
+      "id": "pay-006",
+      "registration_id": "reg-004",
+      "amount": 4500,
+      "date": "2025-01-12",
+      "type": "full",
+      "method": "credit_card"
+    },
+    {
+      "id": "pay-007",
+      "registration_id": "reg-005",
+      "amount": 500,
+      "date": "2025-01-15",
+      "type": "deposit",
+      "method": "credit_card"
+    },
+    {
+      "id": "pay-008",
+      "registration_id": "reg-006",
+      "amount": 400,
+      "date": "2025-01-20",
+      "type": "deposit",
+      "method": "credit_card"
+    },
+    {
+      "id": "pay-009",
+      "registration_id": "reg-007",
+      "amount": 400,
+      "date": "2025-01-22",
+      "type": "deposit",
+      "method": "credit_card"
+    },
+    {
+      "id": "pay-010",
+      "registration_id": "reg-007",
+      "amount": 1500,
+      "date": "2025-01-30",
+      "type": "installment",
+      "method": "credit_card"
+    }
+  ],
+  "last_updated": "2025-02-03T10:00:00Z"
+}

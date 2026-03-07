@@ -1,0 +1,6826 @@
+{
+  "nodes": [
+    {
+      "id": "jfsd",
+      "name": "Jewish Federation of San Diego",
+      "type": "org",
+      "group": "central",
+      "size": 60
+    },
+    {
+      "id": "jcf",
+      "name": "Jewish Community Foundation",
+      "type": "org",
+      "group": "central",
+      "size": 50
+    },
+    {
+      "id": "jcc",
+      "name": "Lawrence Family JCC",
+      "type": "org",
+      "group": "community",
+      "size": 45
+    },
+    {
+      "id": "ajc",
+      "name": "AJC San Diego",
+      "type": "org",
+      "group": "advocacy",
+      "size": 32
+    },
+    {
+      "id": "sdja",
+      "name": "SD Jewish Academy",
+      "type": "org",
+      "group": "education",
+      "size": 26
+    },
+    {
+      "id": "hillel",
+      "name": "Hillel of San Diego",
+      "type": "org",
+      "group": "education",
+      "size": 20
+    },
+    {
+      "id": "aipac",
+      "name": "AIPAC",
+      "type": "org",
+      "group": "advocacy",
+      "size": 22
+    },
+    {
+      "id": "camp_chai",
+      "name": "Camp Mountain Chai",
+      "type": "org",
+      "group": "education",
+      "size": 18
+    },
+    {
+      "id": "house_israel",
+      "name": "House of Israel Balboa Park",
+      "type": "org",
+      "group": "community",
+      "size": 15
+    },
+    {
+      "id": "fidf",
+      "name": "Friends of IDF",
+      "type": "org",
+      "group": "advocacy",
+      "size": 18
+    },
+    {
+      "id": "adl",
+      "name": "ADL San Diego",
+      "type": "org",
+      "group": "advocacy",
+      "size": 20
+    },
+    {
+      "id": "jfs",
+      "name": "Jewish Family Service",
+      "type": "org",
+      "group": "community",
+      "size": 28
+    },
+    {
+      "id": "lion_judah",
+      "name": "Lion of Judah",
+      "type": "society",
+      "group": "society",
+      "size": 22,
+      "desc": "$5,000+ Women's Philanthropy"
+    },
+    {
+      "id": "pomegranate",
+      "name": "Pomegranate Society",
+      "type": "society",
+      "group": "society",
+      "size": 18,
+      "desc": "$1,800+ Women's Philanthropy"
+    },
+    {
+      "id": "major_donor_soc",
+      "name": "Major Donor Circle",
+      "type": "society",
+      "group": "society",
+      "size": 24,
+      "desc": "$10,000+ Annual"
+    },
+    {
+      "id": "ben_gurion",
+      "name": "Ben Gurion Society",
+      "type": "society",
+      "group": "society",
+      "size": 16,
+      "desc": "Legacy Giving"
+    },
+    {
+      "id": "legacy_light",
+      "name": "Legacy of Light Campaign",
+      "type": "campaign",
+      "group": "campaign",
+      "size": 20,
+      "desc": "Capital Campaign"
+    },
+    {
+      "id": "emergency_fund",
+      "name": "Israel Emergency Fund",
+      "type": "campaign",
+      "group": "campaign",
+      "size": 18,
+      "desc": "Oct 2023 Response"
+    },
+    {
+      "id": "exec_comm",
+      "name": "Executive Committee",
+      "type": "committee",
+      "group": "committee",
+      "size": 18
+    },
+    {
+      "id": "finance_comm",
+      "name": "Finance & Investment",
+      "type": "committee",
+      "group": "committee",
+      "size": 16
+    },
+    {
+      "id": "wp_board",
+      "name": "Women's Philanthropy",
+      "type": "committee",
+      "group": "committee",
+      "size": 20
+    },
+    {
+      "id": "israel_comm",
+      "name": "Israel & Overseas Committee",
+      "type": "committee",
+      "group": "committee",
+      "size": 14
+    },
+    {
+      "id": "nextgen",
+      "name": "Federation NextGen Board",
+      "type": "committee",
+      "group": "committee",
+      "size": 16
+    },
+    {
+      "id": "legacy_council",
+      "name": "Legacy Council",
+      "type": "committee",
+      "group": "committee",
+      "size": 14
+    },
+    {
+      "id": "campaign_cabinet",
+      "name": "Campaign Cabinet",
+      "type": "committee",
+      "group": "committee",
+      "size": 16
+    },
+    {
+      "id": "allocations",
+      "name": "Allocations Committee",
+      "type": "committee",
+      "group": "committee",
+      "size": 14
+    },
+    {
+      "id": "beth_israel",
+      "name": "Congregation Beth Israel",
+      "type": "synagogue",
+      "group": "synagogue",
+      "members": 2250,
+      "movement": "Conservative",
+      "size": 40
+    },
+    {
+      "id": "beth_am",
+      "name": "Beth Am",
+      "type": "synagogue",
+      "group": "synagogue",
+      "members": 1238,
+      "movement": "Conservative",
+      "size": 34
+    },
+    {
+      "id": "beth_el",
+      "name": "Congregation Beth El",
+      "type": "synagogue",
+      "group": "synagogue",
+      "members": 1151,
+      "movement": "Reform",
+      "size": 32
+    },
+    {
+      "id": "tifereth",
+      "name": "Tifereth Israel",
+      "type": "synagogue",
+      "group": "synagogue",
+      "members": 1108,
+      "movement": "Conservative",
+      "size": 30
+    },
+    {
+      "id": "adat_shalom",
+      "name": "Temple Adat Shalom",
+      "type": "synagogue",
+      "group": "synagogue",
+      "members": 927,
+      "movement": "Reform",
+      "size": 28
+    },
+    {
+      "id": "emanu_el",
+      "name": "Temple Emanu-El",
+      "type": "synagogue",
+      "group": "synagogue",
+      "members": 842,
+      "movement": "Reform",
+      "size": 26
+    },
+    {
+      "id": "ohr_shalom",
+      "name": "Ohr Shalom",
+      "type": "synagogue",
+      "group": "synagogue",
+      "members": 634,
+      "movement": "Orthodox",
+      "size": 22
+    },
+    {
+      "id": "adat_yeshurun",
+      "name": "Adat Yeshurun",
+      "type": "synagogue",
+      "group": "synagogue",
+      "members": 505,
+      "movement": "Orthodox",
+      "size": 20
+    },
+    {
+      "id": "chabad_uc",
+      "name": "Chabad University City",
+      "type": "synagogue",
+      "group": "synagogue",
+      "members": 280,
+      "movement": "Orthodox",
+      "size": 16
+    },
+    {
+      "id": "chabad_sr",
+      "name": "Chabad Scripps Ranch",
+      "type": "synagogue",
+      "group": "synagogue",
+      "members": 168,
+      "movement": "Orthodox",
+      "size": 14
+    },
+    {
+      "id": "temple_solel",
+      "name": "Temple Solel",
+      "type": "synagogue",
+      "group": "synagogue",
+      "members": 650,
+      "movement": "Reform",
+      "size": 21
+    },
+    {
+      "id": "ner_tamid",
+      "name": "Congregation Ner Tamid",
+      "type": "synagogue",
+      "group": "synagogue",
+      "members": 350,
+      "movement": "Conservative",
+      "size": 17
+    },
+    {
+      "id": "heidi_gantwerk",
+      "name": "Heidi Gantwerk",
+      "type": "person",
+      "group": "leadership",
+      "size": 35,
+      "title": "President & CEO, JFSD",
+      "synagogue": "Beth Israel"
+    },
+    {
+      "id": "jeff_schindler",
+      "name": "Jeff Schindler",
+      "type": "person",
+      "group": "leadership",
+      "size": 35,
+      "title": "Board Chair, JFSD",
+      "synagogue": "Temple Emanu-El"
+    },
+    {
+      "id": "jeremy_pearl",
+      "name": "Jeremy Pearl",
+      "type": "person",
+      "group": "leadership",
+      "size": 30,
+      "title": "CEO, JCF",
+      "synagogue": "Beth Am"
+    },
+    {
+      "id": "lisa_pearl",
+      "name": "Lisa Pearl",
+      "type": "person",
+      "group": "leadership",
+      "size": 24,
+      "title": "Past WP Chair",
+      "synagogue": "Chabad Scripps Ranch",
+      "society": "Lion of Judah"
+    },
+    {
+      "id": "david_bark",
+      "name": "David Bark",
+      "type": "person",
+      "group": "board",
+      "size": 24,
+      "title": "Immediate Past Chair",
+      "synagogue": "Beth Israel",
+      "lifetime_total": 67942.19,
+      "years": 27
+    },
+    {
+      "id": "larry_katz",
+      "name": "Larry Katz",
+      "type": "person",
+      "group": "board",
+      "size": 22,
+      "title": "Treasurer, JFSD"
+    },
+    {
+      "id": "meryl_maneker",
+      "name": "Meryl Maneker",
+      "type": "person",
+      "group": "board",
+      "size": 22,
+      "title": "Secretary, JFSD"
+    },
+    {
+      "id": "sonia_israel",
+      "name": "Sonia Israel",
+      "type": "person",
+      "group": "board",
+      "size": 20,
+      "title": "Vice Co-Chair, Campaign",
+      "synagogue": "Beth El"
+    },
+    {
+      "id": "ingram_losner",
+      "name": "Ingram Losner",
+      "type": "person",
+      "group": "board",
+      "size": 22,
+      "title": "Vice Co-Chair, Campaign"
+    },
+    {
+      "id": "debbie_deverett",
+      "name": "Debbie Deverett",
+      "type": "person",
+      "group": "board",
+      "size": 20,
+      "title": "WP Board Chair",
+      "synagogue": "Beth Am",
+      "society": "Lion of Judah"
+    },
+    {
+      "id": "simone_abelsohn",
+      "name": "Simone Abelsohn",
+      "type": "person",
+      "group": "board",
+      "size": 18,
+      "title": "NextGen Chair"
+    },
+    {
+      "id": "kira_finkenberg",
+      "name": "Kira Finkenberg",
+      "type": "person",
+      "group": "leadership",
+      "size": 24,
+      "title": "Director-at-Large"
+    },
+    {
+      "id": "david_bramzon",
+      "name": "David Bramzon",
+      "type": "person",
+      "group": "board",
+      "size": 14
+    },
+    {
+      "id": "jack_maizel",
+      "name": "Jack Maizel",
+      "type": "person",
+      "group": "board",
+      "size": 14
+    },
+    {
+      "id": "robert_rubenstein",
+      "name": "Robert Rubenstein",
+      "type": "person",
+      "group": "board",
+      "size": 16
+    },
+    {
+      "id": "elliot_scott",
+      "name": "Elliot Scott",
+      "type": "person",
+      "group": "board",
+      "size": 14
+    },
+    {
+      "id": "david_abraham",
+      "name": "David Abraham",
+      "type": "person",
+      "group": "board",
+      "size": 14
+    },
+    {
+      "id": "uri_feldman",
+      "name": "Uri Feldman",
+      "type": "person",
+      "group": "board",
+      "size": 14
+    },
+    {
+      "id": "julie_datnow",
+      "name": "Julie Datnow",
+      "type": "person",
+      "group": "board",
+      "size": 14
+    },
+    {
+      "id": "ronit_droker",
+      "name": "Ronit Droker",
+      "type": "person",
+      "group": "board",
+      "size": 14
+    },
+    {
+      "id": "allie_hauser_erickson",
+      "name": "Allie Hauser Erickson",
+      "type": "person",
+      "group": "board",
+      "size": 14
+    },
+    {
+      "id": "sara_kabakoff",
+      "name": "Sara Kabakoff",
+      "type": "person",
+      "group": "board",
+      "size": 14
+    },
+    {
+      "id": "heather_keith",
+      "name": "Heather Keith",
+      "type": "person",
+      "group": "board",
+      "size": 14
+    },
+    {
+      "id": "debbie_kornberg",
+      "name": "Debbie Kornberg",
+      "type": "person",
+      "group": "board",
+      "size": 14
+    },
+    {
+      "id": "seth_krosner",
+      "name": "Seth Krosner",
+      "type": "person",
+      "group": "board",
+      "size": 14
+    },
+    {
+      "id": "shari_schenk",
+      "name": "Shari Schenk",
+      "type": "person",
+      "group": "board",
+      "size": 14
+    },
+    {
+      "id": "sarah_shekhter",
+      "name": "Sarah Shekhter",
+      "type": "person",
+      "group": "board",
+      "size": 14
+    },
+    {
+      "id": "victor_shlionsky",
+      "name": "Victor Shlionsky",
+      "type": "person",
+      "group": "board",
+      "size": 16,
+      "title": "Board Treasurer"
+    },
+    {
+      "id": "elizabeth_siegler",
+      "name": "Elizabeth Siegler",
+      "type": "person",
+      "group": "board",
+      "size": 14
+    },
+    {
+      "id": "howard_somers",
+      "name": "Howard Somers",
+      "type": "person",
+      "group": "board",
+      "size": 14
+    },
+    {
+      "id": "guri_stark",
+      "name": "Guri Stark",
+      "type": "person",
+      "group": "board",
+      "size": 14
+    },
+    {
+      "id": "silvana_christy",
+      "name": "Silvana Christy",
+      "type": "person",
+      "group": "board",
+      "size": 14
+    },
+    {
+      "id": "tina_beranbaum",
+      "name": "Tina Beranbaum",
+      "type": "person",
+      "group": "leadership",
+      "size": 24,
+      "title": "Board Chair",
+      "org": "Centauric",
+      "fy26_recognition": 0
+    },
+    {
+      "id": "michael_s_levinson",
+      "name": "Michael S. Levinson",
+      "type": "person",
+      "group": "leadership",
+      "size": 24,
+      "title": "Chair-Elect, Vice Chair",
+      "org": "Jewish Community Foundation",
+      "fy26_recognition": 0,
+      "lifetime_total": 274325,
+      "fy26_total": 3600
+    },
+    {
+      "id": "ronald_a_friedman",
+      "name": "Ronald A. Friedman",
+      "type": "person",
+      "group": "leadership",
+      "size": 24,
+      "title": "Vice Chair",
+      "org": "PKF, LLP",
+      "fy26_recognition": 0
+    },
+    {
+      "id": "andy_ratner",
+      "name": "Andy Ratner",
+      "type": "person",
+      "group": "board",
+      "size": 16,
+      "title": "Treasurer",
+      "org": "RKG Wealth Management",
+      "fy26_recognition": 0
+    },
+    {
+      "id": "theresa_dupuis",
+      "name": "Theresa Dupuis",
+      "type": "person",
+      "group": "board",
+      "size": 16,
+      "title": "Secretary",
+      "org": "Jewish Community Foundation",
+      "fy26_recognition": 0
+    },
+    {
+      "id": "ben_arnold",
+      "name": "Ben Arnold",
+      "type": "person",
+      "group": "board",
+      "size": 16,
+      "title": null,
+      "org": "Arnold Family Corporation",
+      "fy26_recognition": 0
+    },
+    {
+      "id": "paul_datnow",
+      "name": "Paul Datnow",
+      "type": "person",
+      "group": "board",
+      "size": 16,
+      "title": null,
+      "org": "Qualcomm",
+      "fy26_recognition": 3084
+    },
+    {
+      "id": "leo_eisenberg",
+      "name": "Leo Eisenberg",
+      "type": "person",
+      "group": "board",
+      "size": 16,
+      "title": null,
+      "org": null,
+      "fy26_recognition": 0
+    },
+    {
+      "id": "emily_einhorn",
+      "name": "Emily Einhorn",
+      "type": "person",
+      "group": "board",
+      "size": 16,
+      "title": null,
+      "org": "Summit Properties",
+      "fy26_recognition": 0
+    },
+    {
+      "id": "jane_fantel",
+      "name": "Jane Fantel",
+      "type": "person",
+      "group": "leadership",
+      "size": 24,
+      "title": "JWF Chair",
+      "org": "Jewish Community Foundation",
+      "fy26_recognition": 0
+    },
+    {
+      "id": "judi_gottschalk",
+      "name": "Judi Gottschalk",
+      "type": "person",
+      "group": "board",
+      "size": 16,
+      "title": null,
+      "org": "Mentor for School Principals",
+      "fy26_recognition": 20000
+    },
+    {
+      "id": "elena_high",
+      "name": "Elena High",
+      "type": "person",
+      "group": "board",
+      "size": 16,
+      "title": null,
+      "org": "KPMG",
+      "fy26_recognition": 0
+    },
+    {
+      "id": "taylor_lucas",
+      "name": "Taylor Lucas",
+      "type": "person",
+      "group": "board",
+      "size": 16,
+      "title": null,
+      "org": "Passport",
+      "fy26_recognition": 0
+    },
+    {
+      "id": "craig_misrach",
+      "name": "Craig Misrach",
+      "type": "person",
+      "group": "board",
+      "size": 16,
+      "title": null,
+      "org": "Ampla Holdings & Poppy Capital",
+      "fy26_recognition": 0
+    },
+    {
+      "id": "jeff_platt",
+      "name": "Jeff Platt",
+      "type": "person",
+      "group": "board",
+      "size": 16,
+      "title": null,
+      "org": "Platt Wealth Management",
+      "fy26_recognition": 0
+    },
+    {
+      "id": "lawrence_sherman",
+      "name": "Lawrence Sherman",
+      "type": "person",
+      "group": "board",
+      "size": 16,
+      "title": "General Counsel",
+      "org": "Solomon Ward Seidenwurm & Smith",
+      "fy26_recognition": 0
+    },
+    {
+      "id": "leo_spiegel",
+      "name": "Leo Spiegel",
+      "type": "person",
+      "group": "board",
+      "size": 16,
+      "title": null,
+      "org": "Spiegel Capital Management",
+      "fy26_recognition": 0
+    },
+    {
+      "id": "david_wax",
+      "name": "David Wax",
+      "type": "person",
+      "group": "board",
+      "size": 24,
+      "title": null,
+      "org": null,
+      "fy26_recognition": 0,
+      "lifetime_total": 1193498.01
+    },
+    {
+      "id": "liz_nederlander_coden",
+      "name": "Liz Nederlander Coden",
+      "type": "person",
+      "group": "leadership",
+      "size": 24,
+      "title": "Board Chair"
+    },
+    {
+      "id": "laurie_greenberg",
+      "name": "Laurie Greenberg",
+      "type": "person",
+      "group": "leadership",
+      "size": 24,
+      "title": "Immediate Past Board Chair"
+    },
+    {
+      "id": "hannah_cohen",
+      "name": "Hannah Cohen",
+      "type": "person",
+      "group": "leadership",
+      "size": 24,
+      "title": "Vice Chair"
+    },
+    {
+      "id": "adam_jacobs",
+      "name": "Adam Jacobs",
+      "type": "person",
+      "group": "leadership",
+      "size": 24,
+      "title": "Vice Chair"
+    },
+    {
+      "id": "doron_malka",
+      "name": "Doron Malka",
+      "type": "person",
+      "group": "board",
+      "size": 16,
+      "title": "Board Secretary"
+    },
+    {
+      "id": "david_abrams",
+      "name": "David Abrams",
+      "type": "person",
+      "group": "board",
+      "size": 16,
+      "title": null
+    },
+    {
+      "id": "kim_chesbrough",
+      "name": "Kim Chesbrough",
+      "type": "person",
+      "group": "board",
+      "size": 16,
+      "title": null
+    },
+    {
+      "id": "shoshannah_hart",
+      "name": "Shoshannah Hart",
+      "type": "person",
+      "group": "board",
+      "size": 16,
+      "title": null
+    },
+    {
+      "id": "taylor_israel",
+      "name": "Taylor Israel",
+      "type": "person",
+      "group": "board",
+      "size": 16,
+      "title": null
+    },
+    {
+      "id": "brett_meltzer",
+      "name": "Brett Meltzer",
+      "type": "person",
+      "group": "board",
+      "size": 16,
+      "title": null
+    },
+    {
+      "id": "musy_new",
+      "name": "Musy New",
+      "type": "person",
+      "group": "board",
+      "size": 16,
+      "title": null
+    },
+    {
+      "id": "julie_potiker",
+      "name": "Julie Potiker",
+      "type": "person",
+      "group": "board",
+      "size": 16,
+      "title": null
+    },
+    {
+      "id": "danny_recht",
+      "name": "Danny Recht",
+      "type": "person",
+      "group": "board",
+      "size": 16,
+      "title": null
+    },
+    {
+      "id": "david_rodman",
+      "name": "David Rodman",
+      "type": "person",
+      "group": "board",
+      "size": 16,
+      "title": null
+    },
+    {
+      "id": "jack_rubin",
+      "name": "Jack Rubin",
+      "type": "person",
+      "group": "board",
+      "size": 16,
+      "title": null
+    },
+    {
+      "id": "benjamin_schenk",
+      "name": "Benjamin Schenk",
+      "type": "person",
+      "group": "board",
+      "size": 16,
+      "title": null
+    },
+    {
+      "id": "sheava_wax",
+      "name": "Sheava Wax",
+      "type": "person",
+      "group": "board",
+      "size": 16,
+      "title": null
+    },
+    {
+      "id": "alan_viterbi",
+      "name": "Alan Viterbi",
+      "type": "person",
+      "group": "leadership",
+      "size": 24,
+      "title": "Board President",
+      "lifetime_total": 1491407.37,
+      "fy26_total": 475000,
+      "society": "Major Donor"
+    },
+    {
+      "id": "mitch_siegler",
+      "name": "Mitch Siegler",
+      "type": "person",
+      "group": "leadership",
+      "size": 24,
+      "title": "Immediate Past Board President"
+    },
+    {
+      "id": "eileen_glasser_wesley",
+      "name": "Eileen Glasser Wesley",
+      "type": "person",
+      "group": "board",
+      "size": 16,
+      "title": null
+    },
+    {
+      "id": "naomi_harris",
+      "name": "Naomi Harris",
+      "type": "person",
+      "group": "board",
+      "size": 16,
+      "title": null
+    },
+    {
+      "id": "wayne_harris",
+      "name": "Wayne Harris",
+      "type": "person",
+      "group": "board",
+      "size": 16,
+      "title": null
+    },
+    {
+      "id": "joanna_herman",
+      "name": "Joanna Herman",
+      "type": "person",
+      "group": "board",
+      "size": 16,
+      "title": null
+    },
+    {
+      "id": "rabbi_david_kornberg",
+      "name": "Rabbi David Kornberg",
+      "type": "person",
+      "group": "board",
+      "size": 16,
+      "title": null
+    },
+    {
+      "id": "raquel_kramer",
+      "name": "Raquel Kramer",
+      "type": "person",
+      "group": "board",
+      "size": 16,
+      "title": null
+    },
+    {
+      "id": "robin_layton",
+      "name": "Robin Layton",
+      "type": "person",
+      "group": "board",
+      "size": 16,
+      "title": null
+    },
+    {
+      "id": "david_michan",
+      "name": "David Michan",
+      "type": "person",
+      "group": "board",
+      "size": 16,
+      "title": null
+    },
+    {
+      "id": "tad_parzen",
+      "name": "Tad Parzen",
+      "type": "person",
+      "group": "board",
+      "size": 16,
+      "title": null
+    },
+    {
+      "id": "marie_raftery",
+      "name": "Marie Raftery",
+      "type": "person",
+      "group": "board",
+      "size": 16,
+      "title": null
+    },
+    {
+      "id": "sharon_rosen_lieb",
+      "name": "Sharon Rosen Lieb",
+      "type": "person",
+      "group": "board",
+      "size": 16,
+      "title": null
+    },
+    {
+      "id": "stacy_rosenberg",
+      "name": "Stacy Rosenberg",
+      "type": "person",
+      "group": "board",
+      "size": 16,
+      "title": null
+    },
+    {
+      "id": "jerry_turk",
+      "name": "Jerry Turk",
+      "type": "person",
+      "group": "board",
+      "size": 16,
+      "title": null
+    },
+    {
+      "id": "andrew_james_viterbi",
+      "name": "Andrew James Viterbi",
+      "type": "person",
+      "group": "major_donor",
+      "size": 30,
+      "lifetime_total": 12272534,
+      "fy26_total": 750000,
+      "drm": "Heidi Gantwerk",
+      "society": "Major Donor"
+    },
+    {
+      "id": "gary_evan_jacobs",
+      "name": "Gary Evan Jacobs",
+      "type": "person",
+      "group": "major_donor",
+      "size": 30,
+      "lifetime_total": 9518269,
+      "fy26_total": 80000,
+      "drm": "Heidi Gantwerk",
+      "society": "Major Donor"
+    },
+    {
+      "id": "herbert_j_solomon",
+      "name": "Herbert J. Solomon",
+      "type": "person",
+      "group": "major_donor",
+      "size": 30,
+      "lifetime_total": 6949770.72,
+      "fy26_total": 165000,
+      "drm": "Heidi Gantwerk",
+      "society": "Major Donor"
+    },
+    {
+      "id": "irwin_m_jacobs",
+      "name": "Irwin M. Jacobs",
+      "type": "person",
+      "group": "major_donor",
+      "size": 30,
+      "lifetime_total": 6416100,
+      "fy26_total": 0,
+      "drm": "Heidi Gantwerk",
+      "society": null
+    },
+    {
+      "id": "ernest_s_rady",
+      "name": "Ernest S. Rady",
+      "type": "person",
+      "group": "major_donor",
+      "size": 24,
+      "lifetime_total": 3361975.95,
+      "fy26_total": 0,
+      "drm": "Heidi Gantwerk",
+      "society": null
+    },
+    {
+      "id": "rodney_f_stone",
+      "name": "Rodney F. Stone",
+      "type": "person",
+      "group": "major_donor",
+      "size": 24,
+      "lifetime_total": 2856933,
+      "fy26_total": 0,
+      "drm": "Heidi Gantwerk",
+      "society": null
+    },
+    {
+      "id": "gary_shekhter",
+      "name": "Gary Shekhter",
+      "type": "person",
+      "group": "major_donor",
+      "size": 24,
+      "lifetime_total": 2184220,
+      "fy26_total": 333333.33,
+      "drm": "Heidi Gantwerk",
+      "society": "Major Donor"
+    },
+    {
+      "id": "lee_goldberg",
+      "name": "Lee Goldberg",
+      "type": "person",
+      "group": "major_donor",
+      "size": 24,
+      "lifetime_total": 1551230,
+      "fy26_total": 0,
+      "drm": "Heidi Gantwerk",
+      "society": null
+    },
+    {
+      "id": "dana_zeff",
+      "name": "Dana Zeff",
+      "type": "person",
+      "group": "major_donor",
+      "size": 24,
+      "lifetime_total": 1546350,
+      "fy26_total": 750000,
+      "drm": "Heidi Gantwerk",
+      "society": "Major Donor"
+    },
+    {
+      "id": "jack_m_schuster",
+      "name": "Jack M. Schuster",
+      "type": "person",
+      "group": "major_donor",
+      "size": 24,
+      "lifetime_total": 1389952.29,
+      "fy26_total": 50000,
+      "drm": "Michael Rabkin",
+      "society": "Major Donor"
+    },
+    {
+      "id": "marjorie_kalmanson",
+      "name": "Marjorie Kalmanson",
+      "type": "person",
+      "group": "major_donor",
+      "size": 24,
+      "lifetime_total": 1358048,
+      "fy26_total": 10000,
+      "drm": "Deena S. Libman",
+      "society": "Major Donor"
+    },
+    {
+      "id": "jerome_h_turk",
+      "name": "Jerome H. Turk",
+      "type": "person",
+      "group": "major_donor",
+      "size": 24,
+      "lifetime_total": 1240515.72,
+      "fy26_total": 0,
+      "drm": "Heidi Gantwerk",
+      "society": null
+    },
+    {
+      "id": "robert_j_shillman",
+      "name": "Robert J. Shillman",
+      "type": "person",
+      "group": "major_donor",
+      "size": 24,
+      "lifetime_total": 1117000,
+      "fy26_total": 0,
+      "drm": "Michael Rabkin",
+      "society": null
+    },
+    {
+      "id": "daniel_j_epstein",
+      "name": "Daniel J. Epstein",
+      "type": "person",
+      "group": "major_donor",
+      "size": 24,
+      "lifetime_total": 1099250,
+      "fy26_total": 0,
+      "drm": "Heidi Gantwerk",
+      "society": null
+    },
+    {
+      "id": "gloria_e_stone",
+      "name": "Gloria E. Stone",
+      "type": "person",
+      "group": "major_donor",
+      "size": 24,
+      "lifetime_total": 1086463.5,
+      "fy26_total": 0,
+      "drm": "Heidi Gantwerk",
+      "society": null
+    },
+    {
+      "id": "robert_a_rubenstein",
+      "name": "Robert A. Rubenstein",
+      "type": "person",
+      "group": "major_donor",
+      "size": 24,
+      "lifetime_total": 1043910.38,
+      "fy26_total": 0,
+      "drm": "Michael Rabkin",
+      "society": null
+    },
+    {
+      "id": "esther_fischer",
+      "name": "Esther Fischer",
+      "type": "person",
+      "group": "major_donor",
+      "size": 24,
+      "lifetime_total": 1040241.47,
+      "fy26_total": 35000,
+      "drm": "Heidi Gantwerk",
+      "society": "Major Donor"
+    },
+    {
+      "id": "elaine_galinson",
+      "name": "Elaine Galinson",
+      "type": "person",
+      "group": "major_donor",
+      "size": 24,
+      "lifetime_total": 1024397.57,
+      "fy26_total": 500000,
+      "drm": "Heidi Gantwerk",
+      "society": "Major Donor"
+    },
+    {
+      "id": "jeremy_berg",
+      "name": "Jeremy Berg",
+      "type": "person",
+      "group": "major_donor",
+      "size": 20,
+      "lifetime_total": 952067,
+      "fy26_total": 10000,
+      "drm": "Ronnie Diamond",
+      "society": "Major Donor"
+    },
+    {
+      "id": "laurence_h_bloch",
+      "name": "Laurence H. Bloch",
+      "type": "person",
+      "group": "major_donor",
+      "size": 20,
+      "lifetime_total": 906478.29,
+      "fy26_total": 0,
+      "drm": "Heidi Gantwerk",
+      "society": null
+    },
+    {
+      "id": "william_a_shenk",
+      "name": "William A. Shenk",
+      "type": "person",
+      "group": "major_donor",
+      "size": 20,
+      "lifetime_total": 887016.69,
+      "fy26_total": 0,
+      "drm": "Michael Rabkin",
+      "society": null
+    },
+    {
+      "id": "elliot_feuerstein",
+      "name": "Elliot Feuerstein",
+      "type": "person",
+      "group": "major_donor",
+      "size": 20,
+      "lifetime_total": 885835,
+      "fy26_total": 25000,
+      "drm": "Dustin Biton",
+      "society": "Major Donor"
+    },
+    {
+      "id": "warren_o_kessler",
+      "name": "Warren O. Kessler",
+      "type": "person",
+      "group": "major_donor",
+      "size": 20,
+      "lifetime_total": 852625,
+      "fy26_total": 0,
+      "drm": "Heidi Gantwerk",
+      "society": null
+    },
+    {
+      "id": "brian_tauber",
+      "name": "Brian Tauber",
+      "type": "person",
+      "group": "major_donor",
+      "size": 20,
+      "lifetime_total": 791441,
+      "fy26_total": 0,
+      "drm": "Heidi Gantwerk",
+      "society": null
+    },
+    {
+      "id": "david_shlomo_kabakoff",
+      "name": "David Shlomo Kabakoff",
+      "type": "person",
+      "group": "major_donor",
+      "size": 20,
+      "lifetime_total": 790959.71,
+      "fy26_total": 36000,
+      "drm": "Dustin Biton",
+      "society": "Major Donor"
+    },
+    {
+      "id": "donald_m_slate",
+      "name": "Donald M. Slate",
+      "type": "person",
+      "group": "major_donor",
+      "size": 20,
+      "lifetime_total": 779600,
+      "fy26_total": 0,
+      "drm": "Ronnie Diamond",
+      "society": null
+    },
+    {
+      "id": "hannah_step",
+      "name": "Hannah Step",
+      "type": "person",
+      "group": "major_donor",
+      "size": 20,
+      "lifetime_total": 751115.39,
+      "fy26_total": 0,
+      "drm": "Heidi Gantwerk",
+      "society": null
+    },
+    {
+      "id": "diane_feuerstein",
+      "name": "Diane Feuerstein",
+      "type": "person",
+      "group": "major_donor",
+      "size": 20,
+      "lifetime_total": 706016,
+      "fy26_total": 50000,
+      "drm": "Dustin Biton",
+      "society": "Major Donor"
+    },
+    {
+      "id": "steven_mizel",
+      "name": "Steven Mizel",
+      "type": "person",
+      "group": "major_donor",
+      "size": 20,
+      "lifetime_total": 699026,
+      "fy26_total": 0,
+      "drm": "Dustin Biton",
+      "society": null
+    },
+    {
+      "id": "claire_ellman",
+      "name": "Claire Ellman",
+      "type": "person",
+      "group": "major_donor",
+      "size": 20,
+      "lifetime_total": 654843.43,
+      "fy26_total": 0,
+      "drm": "Heidi Gantwerk",
+      "society": null
+    },
+    {
+      "id": "edgar_f_berner",
+      "name": "Edgar F. Berner",
+      "type": "person",
+      "group": "major_donor",
+      "size": 20,
+      "lifetime_total": 559284.33,
+      "fy26_total": 7229.11,
+      "drm": "Michael Rabkin",
+      "society": "Lion/BGS"
+    },
+    {
+      "id": "george_m_hecht",
+      "name": "George M. Hecht",
+      "type": "person",
+      "group": "major_donor",
+      "size": 20,
+      "lifetime_total": 547570,
+      "fy26_total": 0,
+      "drm": "Michael Rabkin",
+      "society": null
+    },
+    {
+      "id": "michael_s_rosen",
+      "name": "Michael S. Rosen",
+      "type": "person",
+      "group": "major_donor",
+      "size": 20,
+      "lifetime_total": 542500,
+      "fy26_total": 0,
+      "drm": "Dustin Biton",
+      "society": null
+    },
+    {
+      "id": "morris_silverman",
+      "name": "Morris Silverman",
+      "type": "person",
+      "group": "major_donor",
+      "size": 20,
+      "lifetime_total": 540000,
+      "fy26_total": 0,
+      "drm": "Michael Rabkin",
+      "society": null
+    },
+    {
+      "id": "stephen_schutz",
+      "name": "Stephen Schutz",
+      "type": "person",
+      "group": "major_donor",
+      "size": 20,
+      "lifetime_total": 524500,
+      "fy26_total": 0,
+      "drm": "Michael Rabkin",
+      "society": null
+    },
+    {
+      "id": "gary_scott_kornfeld",
+      "name": "Gary Scott Kornfeld",
+      "type": "person",
+      "group": "donor",
+      "size": 16,
+      "lifetime_total": 492480,
+      "fy26_total": 0,
+      "drm": "Heidi Gantwerk",
+      "society": null
+    },
+    {
+      "id": "charles_wax",
+      "name": "Charles Wax",
+      "type": "person",
+      "group": "donor",
+      "size": 16,
+      "lifetime_total": 478500,
+      "fy26_total": 0,
+      "drm": "Heidi Gantwerk",
+      "society": null
+    },
+    {
+      "id": "price_family",
+      "name": "Price Family",
+      "type": "person",
+      "group": "donor",
+      "size": 16,
+      "lifetime_total": 463000,
+      "fy26_total": 0,
+      "drm": "Michael Rabkin",
+      "society": null
+    },
+    {
+      "id": "toni_bloomberg",
+      "name": "Toni Bloomberg",
+      "type": "person",
+      "group": "donor",
+      "size": 16,
+      "lifetime_total": 462803,
+      "fy26_total": 0,
+      "drm": "Michael Rabkin",
+      "society": null
+    },
+    {
+      "id": "aaron_feldman",
+      "name": "Aaron Feldman",
+      "type": "person",
+      "group": "donor",
+      "size": 16,
+      "lifetime_total": 447500,
+      "fy26_total": 0,
+      "drm": "Ronnie Diamond",
+      "society": null
+    },
+    {
+      "id": "mark_gleiberman",
+      "name": "Mark Gleiberman",
+      "type": "person",
+      "group": "donor",
+      "size": 16,
+      "lifetime_total": 433135,
+      "fy26_total": 0,
+      "drm": "Heidi Gantwerk",
+      "society": null
+    },
+    {
+      "id": "richard_b_jaffe",
+      "name": "Richard B. Jaffe",
+      "type": "person",
+      "group": "donor",
+      "size": 16,
+      "lifetime_total": 392576.81,
+      "fy26_total": 0,
+      "drm": "Dustin Biton",
+      "society": null
+    },
+    {
+      "id": "anton_woolf",
+      "name": "Anton Woolf",
+      "type": "person",
+      "group": "donor",
+      "size": 16,
+      "lifetime_total": 385973,
+      "fy26_total": 0,
+      "drm": "Dustin Biton",
+      "society": null
+    },
+    {
+      "id": "sherron_c_schuster",
+      "name": "Sherron C. Schuster",
+      "type": "person",
+      "group": "donor",
+      "size": 16,
+      "lifetime_total": 380057.71,
+      "fy26_total": 50000,
+      "drm": "Michael Rabkin",
+      "society": "Major Donor"
+    },
+    {
+      "id": "richard_kornfeld",
+      "name": "Richard Kornfeld",
+      "type": "person",
+      "group": "donor",
+      "size": 16,
+      "lifetime_total": 376274.12,
+      "fy26_total": 0,
+      "drm": "Heidi Gantwerk",
+      "society": null
+    },
+    {
+      "id": "howard_s_robin",
+      "name": "Howard S. Robin",
+      "type": "person",
+      "group": "donor",
+      "size": 16,
+      "lifetime_total": 372650,
+      "fy26_total": 0,
+      "drm": "Ronnie Diamond",
+      "society": null
+    },
+    {
+      "id": "richard_bloch",
+      "name": "Richard Bloch",
+      "type": "person",
+      "group": "donor",
+      "size": 16,
+      "lifetime_total": 370000,
+      "fy26_total": 0,
+      "drm": "Michael Rabkin",
+      "society": null
+    },
+    {
+      "id": "jerriann_j_jacobs",
+      "name": "Jerri-Ann J Jacobs",
+      "type": "person",
+      "group": "donor",
+      "size": 16,
+      "lifetime_total": 367343,
+      "fy26_total": 0,
+      "drm": "Heidi Gantwerk",
+      "society": null
+    },
+    {
+      "id": "richard_a_katz",
+      "name": "Richard A. Katz",
+      "type": "person",
+      "group": "donor",
+      "size": 16,
+      "lifetime_total": 366859,
+      "fy26_total": 0,
+      "drm": "Dustin Biton",
+      "society": null
+    },
+    {
+      "id": "robert_singer",
+      "name": "Robert Singer",
+      "type": "person",
+      "group": "donor",
+      "size": 16,
+      "lifetime_total": 365000,
+      "fy26_total": 5000,
+      "drm": "Dustin Biton",
+      "society": "Lion/BGS"
+    },
+    {
+      "id": "benedict_j_adelson",
+      "name": "Benedict J. Adelson",
+      "type": "person",
+      "group": "donor",
+      "size": 16,
+      "lifetime_total": 354378.84,
+      "fy26_total": 0,
+      "drm": "Dustin Biton",
+      "society": null
+    },
+    {
+      "id": "selwyn_isakow",
+      "name": "Selwyn Isakow",
+      "type": "person",
+      "group": "donor",
+      "size": 16,
+      "lifetime_total": 354146.96,
+      "fy26_total": 0,
+      "drm": "Heidi Gantwerk",
+      "society": null
+    },
+    {
+      "id": "sandra_levinson",
+      "name": "Sandra Levinson",
+      "type": "person",
+      "group": "donor",
+      "size": 16,
+      "lifetime_total": 353590,
+      "fy26_total": 0,
+      "drm": "Dustin Biton",
+      "society": null
+    },
+    {
+      "id": "jeffrey_h_silberman",
+      "name": "Jeffrey H. Silberman",
+      "type": "person",
+      "group": "donor",
+      "size": 16,
+      "lifetime_total": 352243,
+      "fy26_total": 30116.5,
+      "drm": "Heidi Gantwerk",
+      "society": "Major Donor"
+    },
+    {
+      "id": "susanna_karney_flaster",
+      "name": "Susanna Karney Flaster",
+      "type": "person",
+      "group": "donor",
+      "size": 16,
+      "lifetime_total": 329696,
+      "fy26_total": 18000,
+      "drm": "Dustin Biton",
+      "society": "Major Donor"
+    },
+    {
+      "id": "evelyn_rady",
+      "name": "Evelyn Rady",
+      "type": "person",
+      "group": "donor",
+      "size": 16,
+      "lifetime_total": 327094.97,
+      "fy26_total": 0,
+      "drm": "Heidi Gantwerk",
+      "society": null
+    },
+    {
+      "id": "sonia_ancoli_israel",
+      "name": "Sonia Ancoli Israel",
+      "type": "person",
+      "group": "donor",
+      "size": 16,
+      "lifetime_total": 325286,
+      "fy26_total": 36000,
+      "drm": "Heidi Gantwerk",
+      "society": "Major Donor"
+    },
+    {
+      "id": "jeanette_rubin_burnett",
+      "name": "Jeanette Rubin Burnett",
+      "type": "person",
+      "group": "donor",
+      "size": 16,
+      "lifetime_total": 323180,
+      "fy26_total": 0,
+      "drm": "Michael Rabkin",
+      "society": null
+    },
+    {
+      "id": "howard_i_cohen",
+      "name": "Howard I. Cohen",
+      "type": "person",
+      "group": "donor",
+      "size": 16,
+      "lifetime_total": 322200.98,
+      "fy26_total": 0,
+      "drm": "Deena S. Libman",
+      "society": null
+    },
+    {
+      "id": "andrea_oster",
+      "name": "Andrea Oster",
+      "type": "person",
+      "group": "donor",
+      "size": 16,
+      "lifetime_total": 318442.55,
+      "fy26_total": 0,
+      "drm": "Heidi Gantwerk",
+      "society": null
+    },
+    {
+      "id": "karen_foster_silberman",
+      "name": "Karen Foster Silberman",
+      "type": "person",
+      "group": "donor",
+      "size": 16,
+      "lifetime_total": 317556,
+      "fy26_total": 30116.5,
+      "drm": "Heidi Gantwerk",
+      "society": "Major Donor"
+    },
+    {
+      "id": "david_shteremberg",
+      "name": "David Shteremberg",
+      "type": "person",
+      "group": "donor",
+      "size": 16,
+      "lifetime_total": 303651.5,
+      "fy26_total": 0,
+      "drm": "Heidi Gantwerk",
+      "society": null
+    },
+    {
+      "id": "robert_sarver",
+      "name": "Robert Sarver",
+      "type": "person",
+      "group": "donor",
+      "size": 16,
+      "lifetime_total": 302000.95,
+      "fy26_total": 0,
+      "drm": "Michael Rabkin",
+      "society": null
+    },
+    {
+      "id": "robert_aaron_fink",
+      "name": "Robert Aaron Fink",
+      "type": "person",
+      "group": "donor",
+      "size": 16,
+      "lifetime_total": 292779.86,
+      "fy26_total": 0,
+      "drm": "Ronnie Diamond",
+      "society": null
+    },
+    {
+      "id": "lara_woolf_grusd",
+      "name": "Lara Woolf Grusd",
+      "type": "person",
+      "group": "donor",
+      "size": 16,
+      "lifetime_total": 291734,
+      "fy26_total": 0,
+      "drm": "Michael Rabkin",
+      "society": null
+    },
+    {
+      "id": "carlos_david_michan",
+      "name": "Carlos David Michan",
+      "type": "person",
+      "group": "donor",
+      "size": 16,
+      "lifetime_total": 290601,
+      "fy26_total": 0,
+      "drm": "Heidi Gantwerk",
+      "society": null
+    },
+    {
+      "id": "paul_i_meyer",
+      "name": "Paul I. Meyer",
+      "type": "person",
+      "group": "donor",
+      "size": 16,
+      "lifetime_total": 282818,
+      "fy26_total": 5000,
+      "drm": "Dustin Biton",
+      "society": "Lion/BGS"
+    },
+    {
+      "id": "lowell_a_potiker",
+      "name": "Lowell A. Potiker",
+      "type": "person",
+      "group": "donor",
+      "size": 16,
+      "lifetime_total": 282700,
+      "fy26_total": 0,
+      "drm": "Michael Rabkin",
+      "society": null
+    },
+    {
+      "id": "valerie_marie_viterbi",
+      "name": "Valerie Marie Viterbi",
+      "type": "person",
+      "group": "donor",
+      "size": 16,
+      "lifetime_total": 274446,
+      "fy26_total": 75000,
+      "drm": "Heidi Gantwerk",
+      "society": "Major Donor"
+    },
+    {
+      "id": "mary_ann_scher",
+      "name": "Mary Ann Scher",
+      "type": "person",
+      "group": "donor",
+      "size": 16,
+      "lifetime_total": 267216,
+      "fy26_total": 0,
+      "drm": "Michael Rabkin",
+      "society": null
+    },
+    {
+      "id": "richard_joseph_effress",
+      "name": "Richard Joseph Effress",
+      "type": "person",
+      "group": "donor",
+      "size": 16,
+      "lifetime_total": 266934.96,
+      "fy26_total": 0,
+      "drm": "Dustin Biton",
+      "society": null
+    },
+    {
+      "id": "iris_strauss",
+      "name": "Iris Strauss",
+      "type": "person",
+      "group": "donor",
+      "size": 16,
+      "lifetime_total": 266000,
+      "fy26_total": 0,
+      "drm": "Dustin Biton",
+      "society": null
+    },
+    {
+      "id": "rae_samiljan",
+      "name": "Rae Samiljan",
+      "type": "person",
+      "group": "donor",
+      "size": 16,
+      "lifetime_total": 265695,
+      "fy26_total": 0,
+      "drm": "Michael Rabkin",
+      "society": null
+    },
+    {
+      "id": "susan_rachelle_chortek_weisman",
+      "name": "Susan Rachelle Chortek Weisman",
+      "type": "person",
+      "group": "donor",
+      "size": 16,
+      "lifetime_total": 263460,
+      "fy26_total": 100000,
+      "drm": "Heidi Gantwerk",
+      "society": "Major Donor"
+    },
+    {
+      "id": "richard_m_fink",
+      "name": "Richard M. Fink",
+      "type": "person",
+      "group": "donor",
+      "size": 16,
+      "lifetime_total": 260000,
+      "fy26_total": 0,
+      "drm": "Michael Rabkin",
+      "society": null
+    },
+    {
+      "id": "cecile_b_jordan",
+      "name": "Cecile B. Jordan",
+      "type": "person",
+      "group": "donor",
+      "size": 16,
+      "lifetime_total": 259922.54,
+      "fy26_total": 360,
+      "drm": "Heidi Gantwerk",
+      "society": null
+    },
+    {
+      "id": "toby_k_cohen",
+      "name": "Toby K. Cohen",
+      "type": "person",
+      "group": "donor",
+      "size": 16,
+      "lifetime_total": 254603.99,
+      "fy26_total": 0,
+      "drm": "Deena S. Libman",
+      "society": null
+    },
+    {
+      "id": "enrique_g_moscona",
+      "name": "Enrique G. Moscona",
+      "type": "person",
+      "group": "donor",
+      "size": 16,
+      "lifetime_total": 252900,
+      "fy26_total": 0,
+      "drm": "Michael Rabkin",
+      "society": null
+    },
+    {
+      "id": "shana_lew",
+      "name": "Shana Lew",
+      "type": "person",
+      "group": "donor",
+      "size": 16,
+      "lifetime_total": 250025,
+      "fy26_total": 0,
+      "drm": "Deena S. Libman",
+      "society": null
+    },
+    {
+      "id": "mark_schlossberg",
+      "name": "Mark Schlossberg",
+      "type": "person",
+      "group": "donor",
+      "size": 12,
+      "lifetime_total": 250000,
+      "fy26_total": 0,
+      "drm": "Heidi Gantwerk",
+      "society": null
+    },
+    {
+      "id": "phyllis_f_epstein",
+      "name": "Phyllis F. Epstein",
+      "type": "person",
+      "group": "donor",
+      "size": 12,
+      "lifetime_total": 242896,
+      "fy26_total": 0,
+      "drm": "Heidi Gantwerk",
+      "society": null
+    },
+    {
+      "id": "elyse_k_sollender",
+      "name": "Elyse K. Sollender",
+      "type": "person",
+      "group": "donor",
+      "size": 12,
+      "lifetime_total": 240615.59,
+      "fy26_total": 0,
+      "drm": "Michael Rabkin",
+      "society": null
+    },
+    {
+      "id": "gary_m_leeds",
+      "name": "Gary M. Leeds",
+      "type": "person",
+      "group": "donor",
+      "size": 12,
+      "lifetime_total": 234500,
+      "fy26_total": 0,
+      "drm": "Michael Rabkin",
+      "society": null
+    },
+    {
+      "id": "kevin_a_wechter",
+      "name": "Kevin A. Wechter",
+      "type": "person",
+      "group": "donor",
+      "size": 12,
+      "lifetime_total": 229012.82,
+      "fy26_total": 0,
+      "drm": "Dustin Biton",
+      "society": null
+    },
+    {
+      "id": "david_ellman",
+      "name": "David Ellman",
+      "type": "person",
+      "group": "donor",
+      "size": 12,
+      "lifetime_total": 228513.55,
+      "fy26_total": 0,
+      "drm": "Heidi Gantwerk",
+      "society": null
+    },
+    {
+      "id": "edward_r_pollak",
+      "name": "Edward R. Pollak",
+      "type": "person",
+      "group": "donor",
+      "size": 12,
+      "lifetime_total": 226420,
+      "fy26_total": 0,
+      "drm": "Ronnie Diamond",
+      "society": null
+    },
+    {
+      "id": "allison_price",
+      "name": "Allison Price",
+      "type": "person",
+      "group": "donor",
+      "size": 12,
+      "lifetime_total": 225820,
+      "fy26_total": 12500,
+      "drm": "Deena S. Libman",
+      "society": "Major Donor"
+    },
+    {
+      "id": "carole_turk",
+      "name": "Carole Turk",
+      "type": "person",
+      "group": "donor",
+      "size": 12,
+      "lifetime_total": 225375,
+      "fy26_total": 0,
+      "drm": "Heidi Gantwerk",
+      "society": null
+    },
+    {
+      "id": "gary_a_weissberg",
+      "name": "Gary A. Weissberg",
+      "type": "person",
+      "group": "donor",
+      "size": 12,
+      "lifetime_total": 223000,
+      "fy26_total": 0,
+      "drm": "Michael Rabkin",
+      "society": null
+    },
+    {
+      "id": "gary_levine",
+      "name": "Gary Levine",
+      "type": "person",
+      "group": "donor",
+      "size": 12,
+      "lifetime_total": 222155,
+      "fy26_total": 16500,
+      "drm": "Ronnie Diamond",
+      "society": "Major Donor"
+    },
+    {
+      "id": "marlene_s_sasson_recht",
+      "name": "Marlene S. Sasson Recht",
+      "type": "person",
+      "group": "donor",
+      "size": 12,
+      "lifetime_total": 221603.11,
+      "fy26_total": 2500,
+      "drm": "Deena S. Libman",
+      "society": null
+    },
+    {
+      "id": "simon_vainer",
+      "name": "Simon Vainer",
+      "type": "person",
+      "group": "donor",
+      "size": 12,
+      "lifetime_total": 221501.76,
+      "fy26_total": 0,
+      "drm": "Heidi Gantwerk",
+      "society": null
+    },
+    {
+      "id": "ira_shalom_feinswog",
+      "name": "Ira Shalom Feinswog",
+      "type": "person",
+      "group": "donor",
+      "size": 12,
+      "lifetime_total": 218666.15,
+      "fy26_total": 0,
+      "drm": "Michael Rabkin",
+      "society": null
+    },
+    {
+      "id": "daniel_einhorn",
+      "name": "Daniel Einhorn",
+      "type": "person",
+      "group": "donor",
+      "size": 12,
+      "lifetime_total": 218230,
+      "fy26_total": 13000,
+      "drm": "Ronnie Diamond",
+      "society": "Major Donor"
+    },
+    {
+      "id": "barbara_sherman",
+      "name": "Barbara Sherman",
+      "type": "person",
+      "group": "donor",
+      "size": 12,
+      "lifetime_total": 218198,
+      "fy26_total": 15625,
+      "drm": "Heidi Gantwerk",
+      "society": "Major Donor"
+    },
+    {
+      "id": "steven_d_solomon",
+      "name": "Steven D. Solomon",
+      "type": "person",
+      "group": "donor",
+      "size": 12,
+      "lifetime_total": 213121.91,
+      "fy26_total": 0,
+      "drm": "Ronnie Diamond",
+      "society": null
+    },
+    {
+      "id": "robert_caplan",
+      "name": "Robert Caplan",
+      "type": "person",
+      "group": "donor",
+      "size": 12,
+      "lifetime_total": 213000,
+      "fy26_total": 0,
+      "drm": "Michael Rabkin",
+      "society": null
+    },
+    {
+      "id": "linda_platt",
+      "name": "Linda Platt",
+      "type": "person",
+      "group": "donor",
+      "size": 12,
+      "lifetime_total": 209160.83,
+      "fy26_total": 10000.31,
+      "drm": "Heidi Gantwerk",
+      "society": "Major Donor"
+    },
+    {
+      "id": "susana_cohen_corrigan",
+      "name": "Susana Cohen Corrigan",
+      "type": "person",
+      "group": "donor",
+      "size": 12,
+      "lifetime_total": 206280,
+      "fy26_total": 10000,
+      "drm": "Dustin Biton",
+      "society": "Major Donor"
+    },
+    {
+      "id": "kenneth_d_polin",
+      "name": "Kenneth D. Polin",
+      "type": "person",
+      "group": "donor",
+      "size": 12,
+      "lifetime_total": 204053,
+      "fy26_total": 0,
+      "drm": "Michael Rabkin",
+      "society": null
+    },
+    {
+      "id": "audrey_viterbi_smargon",
+      "name": "Audrey Viterbi Smargon",
+      "type": "person",
+      "group": "donor",
+      "size": 12,
+      "lifetime_total": 203542,
+      "fy26_total": 0,
+      "drm": "Michael Rabkin",
+      "society": null
+    },
+    {
+      "id": "richard_gordon",
+      "name": "Richard Gordon",
+      "type": "person",
+      "group": "donor",
+      "size": 12,
+      "lifetime_total": 197106,
+      "fy26_total": 0,
+      "drm": "Ronnie Diamond",
+      "society": null
+    },
+    {
+      "id": "susan_shmalo",
+      "name": "Susan Shmalo",
+      "type": "person",
+      "group": "donor",
+      "size": 12,
+      "lifetime_total": 196319.62,
+      "fy26_total": 0,
+      "drm": "Maya Steinberg",
+      "society": null
+    },
+    {
+      "id": "stanley_westreich",
+      "name": "Stanley Westreich",
+      "type": "person",
+      "group": "donor",
+      "size": 12,
+      "lifetime_total": 195000,
+      "fy26_total": 0,
+      "drm": "Michael Rabkin",
+      "society": null
+    },
+    {
+      "id": "sylvia_liwerant",
+      "name": "Sylvia Liwerant",
+      "type": "person",
+      "group": "donor",
+      "size": 12,
+      "lifetime_total": 194630,
+      "fy26_total": 0,
+      "drm": "Maya Steinberg",
+      "society": null
+    },
+    {
+      "id": "jean_shekhter",
+      "name": "Jean Shekhter",
+      "type": "person",
+      "group": "donor",
+      "size": 12,
+      "lifetime_total": 193100,
+      "fy26_total": 0,
+      "drm": "Heidi Gantwerk",
+      "society": null
+    },
+    {
+      "id": "mitchell_dubick",
+      "name": "Mitchell Dubick",
+      "type": "person",
+      "group": "donor",
+      "size": 12,
+      "lifetime_total": 190143,
+      "fy26_total": 0,
+      "drm": "Michael Rabkin",
+      "society": null
+    },
+    {
+      "id": "lisa_dawn_kornfeld",
+      "name": "Lisa Dawn Kornfeld",
+      "type": "person",
+      "group": "donor",
+      "size": 12,
+      "lifetime_total": 189237.49,
+      "fy26_total": 0,
+      "drm": "Michael Rabkin",
+      "society": null
+    },
+    {
+      "id": "robert_j_silverman",
+      "name": "Robert J. Silverman",
+      "type": "person",
+      "group": "donor",
+      "size": 12,
+      "lifetime_total": 189050,
+      "fy26_total": 3600,
+      "drm": "Dustin Biton",
+      "society": null
+    },
+    {
+      "id": "jeffrey_rush",
+      "name": "Jeffrey Rush",
+      "type": "person",
+      "group": "donor",
+      "size": 12,
+      "lifetime_total": 187200,
+      "fy26_total": 0,
+      "drm": "Michael Rabkin",
+      "society": null
+    },
+    {
+      "id": "terri_bignell",
+      "name": "Terri Bignell",
+      "type": "person",
+      "group": "donor",
+      "size": 12,
+      "lifetime_total": 183806.66,
+      "fy26_total": 6000,
+      "drm": "Deena S. Libman",
+      "society": "Lion/BGS"
+    },
+    {
+      "id": "marcia_hazan",
+      "name": "Marcia Hazan",
+      "type": "person",
+      "group": "donor",
+      "size": 12,
+      "lifetime_total": 183665.66,
+      "fy26_total": 60233,
+      "drm": "Michael Rabkin",
+      "society": "Major Donor"
+    },
+    {
+      "id": "gayle_breitbard_klusky",
+      "name": "Gayle Breitbard Klusky",
+      "type": "person",
+      "group": "donor",
+      "size": 12,
+      "lifetime_total": 183607.64,
+      "fy26_total": 0,
+      "drm": "Deena S. Libman",
+      "society": null
+    },
+    {
+      "id": "ronald_j_cohn",
+      "name": "Ronald J. Cohn",
+      "type": "person",
+      "group": "donor",
+      "size": 12,
+      "lifetime_total": 183500,
+      "fy26_total": 45000,
+      "drm": "Michael Rabkin",
+      "society": "Major Donor"
+    },
+    {
+      "id": "esther_w_belinsky",
+      "name": "Esther W. Belinsky",
+      "type": "person",
+      "group": "donor",
+      "size": 12,
+      "lifetime_total": 181200,
+      "fy26_total": 0,
+      "drm": "Deena S. Libman",
+      "society": null
+    },
+    {
+      "id": "harriet_fremland",
+      "name": "Harriet Fremland",
+      "type": "person",
+      "group": "donor",
+      "size": 12,
+      "lifetime_total": 180545,
+      "fy26_total": 1500,
+      "drm": "Maya Steinberg",
+      "society": null
+    },
+    {
+      "id": "leigh_johnson",
+      "name": "Leigh Johnson",
+      "type": "person",
+      "group": "donor",
+      "size": 12,
+      "lifetime_total": 179945,
+      "fy26_total": 0,
+      "drm": "Maya Steinberg",
+      "society": null
+    },
+    {
+      "id": "iris_goodman",
+      "name": "Iris Goodman",
+      "type": "person",
+      "group": "donor",
+      "size": 12,
+      "lifetime_total": 174775,
+      "fy26_total": 0,
+      "drm": "Michael Rabkin",
+      "society": null
+    },
+    {
+      "id": "andrew_kaplan",
+      "name": "Andrew Kaplan",
+      "type": "person",
+      "group": "donor",
+      "size": 12,
+      "lifetime_total": 172162.86,
+      "fy26_total": 0,
+      "drm": "Dustin Biton",
+      "society": null
+    },
+    {
+      "id": "perri_l_wittgrove",
+      "name": "Perri L. Wittgrove",
+      "type": "person",
+      "group": "donor",
+      "size": 12,
+      "lifetime_total": 171908.51,
+      "fy26_total": 0,
+      "drm": "Deena S. Libman",
+      "society": null
+    },
+    {
+      "id": "lisa_foster",
+      "name": "Lisa Foster",
+      "type": "person",
+      "group": "donor",
+      "size": 12,
+      "lifetime_total": 171200,
+      "fy26_total": 0,
+      "drm": "Heidi Gantwerk",
+      "society": null
+    },
+    {
+      "id": "marjory_kaplan",
+      "name": "Marjory Kaplan",
+      "type": "person",
+      "group": "donor",
+      "size": 12,
+      "lifetime_total": 170823.38,
+      "fy26_total": 0,
+      "drm": "Michael Rabkin",
+      "society": null
+    },
+    {
+      "id": "marsha_berkson",
+      "name": "Marsha Berkson",
+      "type": "person",
+      "group": "donor",
+      "size": 12,
+      "lifetime_total": 170619.5,
+      "fy26_total": 10000,
+      "drm": "Dustin Biton",
+      "society": "Major Donor"
+    },
+    {
+      "id": "marshall_a_lewis",
+      "name": "Marshall A Lewis",
+      "type": "person",
+      "group": "donor",
+      "size": 12,
+      "lifetime_total": 170380.17,
+      "fy26_total": 7000,
+      "drm": "Dustin Biton",
+      "society": "Lion/BGS"
+    },
+    {
+      "id": "elliot_a_scott",
+      "name": "Elliot A Scott",
+      "type": "person",
+      "group": "donor",
+      "size": 12,
+      "lifetime_total": 168459.6,
+      "fy26_total": 0,
+      "drm": "Michael Rabkin",
+      "society": null
+    },
+    {
+      "id": "berdele_m_katz",
+      "name": "Berdele M. Katz",
+      "type": "person",
+      "group": "donor",
+      "size": 12,
+      "lifetime_total": 168130,
+      "fy26_total": 0,
+      "drm": "Dustin Biton",
+      "society": null
+    },
+    {
+      "id": "laura_galinson",
+      "name": "Laura Galinson",
+      "type": "person",
+      "group": "donor",
+      "size": 12,
+      "lifetime_total": 166410,
+      "fy26_total": 10000,
+      "drm": "Heidi Gantwerk",
+      "society": "Major Donor"
+    },
+    {
+      "id": "eugene_h_siegel",
+      "name": "Eugene H. Siegel",
+      "type": "person",
+      "group": "donor",
+      "size": 12,
+      "lifetime_total": 165925,
+      "fy26_total": 0,
+      "drm": "Michael Rabkin",
+      "society": null
+    },
+    {
+      "id": "andrew_m_ratner",
+      "name": "Andrew M. Ratner",
+      "type": "person",
+      "group": "donor",
+      "size": 12,
+      "lifetime_total": 163830,
+      "fy26_total": 0,
+      "drm": "Dustin Biton",
+      "society": null
+    },
+    {
+      "id": "monica_handlerpenner",
+      "name": "Monica Handler-Penner",
+      "type": "person",
+      "group": "donor",
+      "size": 12,
+      "lifetime_total": 163648.95,
+      "fy26_total": 0,
+      "drm": "Dustin Biton",
+      "society": null
+    },
+    {
+      "id": "jerry_simms",
+      "name": "Jerry Simms",
+      "type": "person",
+      "group": "donor",
+      "size": 12,
+      "lifetime_total": 163466,
+      "fy26_total": 0,
+      "drm": "Michael Rabkin",
+      "society": null
+    },
+    {
+      "id": "marvin_j_zaguli",
+      "name": "Marvin J. Zaguli",
+      "type": "person",
+      "group": "donor",
+      "size": 12,
+      "lifetime_total": 160988,
+      "fy26_total": 10000,
+      "drm": "Dustin Biton",
+      "society": "Major Donor"
+    },
+    {
+      "id": "gary_h_levitt",
+      "name": "Gary H Levitt",
+      "type": "person",
+      "group": "donor",
+      "size": 12,
+      "lifetime_total": 160631,
+      "fy26_total": 0,
+      "drm": "Michael Rabkin",
+      "society": null
+    },
+    {
+      "id": "lawrence_belinsky",
+      "name": "Lawrence Belinsky",
+      "type": "person",
+      "group": "donor",
+      "size": 12,
+      "lifetime_total": 160150,
+      "fy26_total": 0,
+      "drm": "Deena S. Libman",
+      "society": null
+    },
+    {
+      "id": "stuart_posnock",
+      "name": "Stuart Posnock",
+      "type": "person",
+      "group": "donor",
+      "size": 12,
+      "lifetime_total": 160000,
+      "fy26_total": 0,
+      "drm": "Heidi Gantwerk",
+      "society": null
+    },
+    {
+      "id": "marcia_malkus",
+      "name": "Marcia Malkus",
+      "type": "person",
+      "group": "donor",
+      "size": 12,
+      "lifetime_total": 159830,
+      "fy26_total": 0,
+      "drm": "Ronnie Diamond",
+      "society": null
+    },
+    {
+      "id": "cindy_bloch",
+      "name": "Cindy Bloch",
+      "type": "person",
+      "group": "donor",
+      "size": 12,
+      "lifetime_total": 159534.39,
+      "fy26_total": 0,
+      "drm": "Heidi Gantwerk",
+      "society": null
+    },
+    {
+      "id": "ann_l_jaffe",
+      "name": "Ann L. Jaffe",
+      "type": "person",
+      "group": "donor",
+      "size": 12,
+      "lifetime_total": 159127.19,
+      "fy26_total": 1000,
+      "drm": "Dustin Biton",
+      "society": null
+    },
+    {
+      "id": "naomi_r_eisman",
+      "name": "Naomi R. Eisman",
+      "type": "person",
+      "group": "donor",
+      "size": 12,
+      "lifetime_total": 158445,
+      "fy26_total": 0,
+      "drm": "Michael Rabkin",
+      "society": null
+    },
+    {
+      "id": "eli_o_meltzer",
+      "name": "Eli O. Meltzer",
+      "type": "person",
+      "group": "donor",
+      "size": 12,
+      "lifetime_total": 157230,
+      "fy26_total": 2500,
+      "drm": "Maya Steinberg",
+      "society": null
+    },
+    {
+      "id": "steve_macbaisey",
+      "name": "Steve MacBaisey",
+      "type": "person",
+      "group": "donor",
+      "size": 12,
+      "lifetime_total": 157100,
+      "fy26_total": 0,
+      "drm": "Michael Rabkin",
+      "society": null
+    },
+    {
+      "id": "jane_scher",
+      "name": "Jane Scher",
+      "type": "person",
+      "group": "donor",
+      "size": 12,
+      "lifetime_total": 155765,
+      "fy26_total": 5000,
+      "drm": "Michael Rabkin",
+      "society": "Lion/BGS"
+    },
+    {
+      "id": "melissa_bartell",
+      "name": "Melissa Bartell",
+      "type": "person",
+      "group": "donor",
+      "size": 12,
+      "lifetime_total": 154628,
+      "fy26_total": 10000,
+      "drm": "Dustin Biton",
+      "society": "Major Donor"
+    },
+    {
+      "id": "wayne_millard_harris",
+      "name": "Wayne Millard Harris",
+      "type": "person",
+      "group": "donor",
+      "size": 12,
+      "lifetime_total": 151675.38,
+      "fy26_total": 30000,
+      "drm": "Heidi Gantwerk",
+      "society": "Major Donor"
+    },
+    {
+      "id": "lee_posnock",
+      "name": "Lee Posnock",
+      "type": "person",
+      "group": "donor",
+      "size": 12,
+      "lifetime_total": 150760,
+      "fy26_total": 0,
+      "drm": "Heidi Gantwerk",
+      "society": null
+    },
+    {
+      "id": "mitch_leibovitz",
+      "name": "Mitch Leibovitz",
+      "type": "person",
+      "group": "donor",
+      "size": 12,
+      "lifetime_total": 150000,
+      "fy26_total": 0,
+      "drm": "Michael Rabkin",
+      "society": null
+    },
+    {
+      "id": "sharon_braverman",
+      "name": "Sharon Braverman",
+      "type": "person",
+      "group": "donor",
+      "size": 12,
+      "lifetime_total": 148979.65,
+      "fy26_total": 5000,
+      "drm": "Dustin Biton",
+      "society": "Lion/BGS"
+    },
+    {
+      "id": "jori_potiker",
+      "name": "Jori Potiker",
+      "type": "person",
+      "group": "donor",
+      "size": 12,
+      "lifetime_total": 148800,
+      "fy26_total": 2000,
+      "drm": "Lorraine Fisher",
+      "society": null
+    },
+    {
+      "id": "werner_cahn",
+      "name": "Werner Cahn",
+      "type": "person",
+      "group": "donor",
+      "size": 12,
+      "lifetime_total": 146100,
+      "fy26_total": 0,
+      "drm": "Michael Rabkin",
+      "society": null
+    },
+    {
+      "id": "ira_cohen",
+      "name": "Ira Cohen",
+      "type": "person",
+      "group": "donor",
+      "size": 12,
+      "lifetime_total": 145000,
+      "fy26_total": 20000,
+      "drm": "Michael Rabkin",
+      "society": "Major Donor"
+    },
+    {
+      "id": "george_s_scher",
+      "name": "George S. Scher",
+      "type": "person",
+      "group": "donor",
+      "size": 12,
+      "lifetime_total": 144820,
+      "fy26_total": 0,
+      "drm": "Michael Rabkin",
+      "society": null
+    },
+    {
+      "id": "jerome_p_stein",
+      "name": "Jerome P Stein",
+      "type": "person",
+      "group": "donor",
+      "size": 12,
+      "lifetime_total": 144030,
+      "fy26_total": 6250,
+      "drm": "Dustin Biton",
+      "society": "Lion/BGS"
+    },
+    {
+      "id": "rusti_bartellweiss",
+      "name": "Rusti Bartell-Weiss",
+      "type": "person",
+      "group": "donor",
+      "size": 12,
+      "lifetime_total": 143860,
+      "fy26_total": 0,
+      "drm": "Deena S. Libman",
+      "society": null
+    },
+    {
+      "id": "allan_ziman",
+      "name": "Allan Ziman",
+      "type": "person",
+      "group": "donor",
+      "size": 12,
+      "lifetime_total": 143350,
+      "fy26_total": 0,
+      "drm": "Dustin Biton",
+      "society": null
+    },
+    {
+      "id": "luis_maizel",
+      "name": "Luis Maizel",
+      "type": "person",
+      "group": "donor",
+      "size": 12,
+      "lifetime_total": 142431,
+      "fy26_total": 10000,
+      "drm": "Heidi Gantwerk",
+      "society": "Major Donor"
+    },
+    {
+      "id": "susan_odenheimer_kabakoff",
+      "name": "Susan Odenheimer Kabakoff",
+      "type": "person",
+      "group": "donor",
+      "size": 12,
+      "lifetime_total": 142289.39,
+      "fy26_total": 10000,
+      "drm": "Dustin Biton",
+      "society": "Major Donor"
+    },
+    {
+      "id": "michael_gelfand",
+      "name": "Michael Gelfand",
+      "type": "person",
+      "group": "donor",
+      "size": 12,
+      "lifetime_total": 142265,
+      "fy26_total": 0,
+      "drm": "Dustin Biton",
+      "society": null
+    },
+    {
+      "id": "reina_shteremberg",
+      "name": "Reina Shteremberg",
+      "type": "person",
+      "group": "donor",
+      "size": 12,
+      "lifetime_total": 142176,
+      "fy26_total": 0,
+      "drm": "Heidi Gantwerk",
+      "society": null
+    },
+    {
+      "id": "mens_gifts_designated",
+      "name": "Men�s Gifts Designated",
+      "type": "person",
+      "group": "donor",
+      "size": 12,
+      "lifetime_total": 142125.5,
+      "fy26_total": 0,
+      "drm": "Michael Rabkin",
+      "society": null
+    },
+    {
+      "id": "sharon_l_stein",
+      "name": "Sharon L. Stein",
+      "type": "person",
+      "group": "donor",
+      "size": 12,
+      "lifetime_total": 140950.4,
+      "fy26_total": 6250,
+      "drm": "Jessica McGregor",
+      "society": "Lion/BGS"
+    },
+    {
+      "id": "michael_l_silverman",
+      "name": "Michael L. Silverman",
+      "type": "person",
+      "group": "donor",
+      "size": 12,
+      "lifetime_total": 140367,
+      "fy26_total": 0,
+      "drm": "Michael Rabkin",
+      "society": null
+    },
+    {
+      "id": "lawrence_m_sherman",
+      "name": "Lawrence M. Sherman",
+      "type": "person",
+      "group": "donor",
+      "size": 12,
+      "lifetime_total": 138982.5,
+      "fy26_total": 15625,
+      "drm": "Heidi Gantwerk",
+      "society": "Major Donor"
+    },
+    {
+      "id": "june_b_chocheles",
+      "name": "June B Chocheles",
+      "type": "person",
+      "group": "donor",
+      "size": 12,
+      "lifetime_total": 138970.64,
+      "fy26_total": 0,
+      "drm": "Deena S. Libman",
+      "society": null
+    },
+    {
+      "id": "roselyn_pappelbaum",
+      "name": "Roselyn Pappelbaum",
+      "type": "person",
+      "group": "donor",
+      "size": 12,
+      "lifetime_total": 138360,
+      "fy26_total": 0,
+      "drm": "Michael Rabkin",
+      "society": null
+    },
+    {
+      "id": "naomi_singer_harris",
+      "name": "Naomi Singer Harris",
+      "type": "person",
+      "group": "donor",
+      "size": 12,
+      "lifetime_total": 137841,
+      "fy26_total": 0,
+      "drm": "Heidi Gantwerk",
+      "society": null
+    },
+    {
+      "id": "stephen_m_abramson",
+      "name": "Stephen M Abramson",
+      "type": "person",
+      "group": "donor",
+      "size": 12,
+      "lifetime_total": 137677.72,
+      "fy26_total": 0,
+      "drm": "Ronnie Diamond",
+      "society": null
+    },
+    {
+      "id": "theresa_marie_dupuis",
+      "name": "Theresa Marie Dupuis",
+      "type": "person",
+      "group": "donor",
+      "size": 12,
+      "lifetime_total": 136691,
+      "fy26_total": 0,
+      "drm": "Heidi Gantwerk",
+      "society": null
+    },
+    {
+      "id": "edward_m_spector",
+      "name": "Edward M. Spector",
+      "type": "person",
+      "group": "donor",
+      "size": 12,
+      "lifetime_total": 135300,
+      "fy26_total": 0,
+      "drm": "Michael Rabkin",
+      "society": null
+    },
+    {
+      "id": "suzanne_t_schwartzman",
+      "name": "Suzanne T. Schwartzman",
+      "type": "person",
+      "group": "donor",
+      "size": 12,
+      "lifetime_total": 135050,
+      "fy26_total": 0,
+      "drm": "Michael Rabkin",
+      "society": null
+    },
+    {
+      "id": "bernard_gottlieb",
+      "name": "Bernard Gottlieb",
+      "type": "person",
+      "group": "donor",
+      "size": 12,
+      "lifetime_total": 135000,
+      "fy26_total": 0,
+      "drm": "Michael Rabkin",
+      "society": null
+    },
+    {
+      "id": "richard_greenfield",
+      "name": "Richard Greenfield",
+      "type": "person",
+      "group": "donor",
+      "size": 12,
+      "lifetime_total": 134800,
+      "fy26_total": 0,
+      "drm": "Lorraine Fisher",
+      "society": null
+    },
+    {
+      "id": "hanna_gleiberman",
+      "name": "Hanna Gleiberman",
+      "type": "person",
+      "group": "donor",
+      "size": 12,
+      "lifetime_total": 134693.06,
+      "fy26_total": 0,
+      "drm": "Heidi Gantwerk",
+      "society": null
+    },
+    {
+      "id": "sheryl_j_kaufman",
+      "name": "Sheryl J. Kaufman",
+      "type": "person",
+      "group": "donor",
+      "size": 12,
+      "lifetime_total": 134386,
+      "fy26_total": 25000,
+      "drm": "Dustin Biton",
+      "society": "Major Donor"
+    },
+    {
+      "id": "richard_gabriel",
+      "name": "Richard Gabriel",
+      "type": "person",
+      "group": "donor",
+      "size": 12,
+      "lifetime_total": 133080,
+      "fy26_total": 50000,
+      "drm": "Heidi Gantwerk",
+      "society": "Major Donor"
+    },
+    {
+      "id": "ira_d_levine",
+      "name": "Ira D Levine",
+      "type": "person",
+      "group": "loyal_donor",
+      "size": 12,
+      "years": 43,
+      "lifetime_total": 74636,
+      "fy25_total": 2000
+    },
+    {
+      "id": "jill_r_stone",
+      "name": "Jill R. Stone",
+      "type": "person",
+      "group": "loyal_donor",
+      "size": 12,
+      "years": 42,
+      "lifetime_total": 69795.39,
+      "fy25_total": 5000
+    },
+    {
+      "id": "martin_lawson",
+      "name": "Martin Lawson",
+      "type": "person",
+      "group": "loyal_donor",
+      "size": 12,
+      "years": 41,
+      "lifetime_total": 59933.45,
+      "fy25_total": 3600
+    },
+    {
+      "id": "alberto_b_michan",
+      "name": "Alberto B. Michan",
+      "type": "person",
+      "group": "loyal_donor",
+      "size": 12,
+      "years": 41,
+      "lifetime_total": 70598.15,
+      "fy25_total": 5000
+    },
+    {
+      "id": "nadja_kauder",
+      "name": "Nadja Kauder",
+      "type": "person",
+      "group": "loyal_donor",
+      "size": 12,
+      "years": 40,
+      "lifetime_total": 85568,
+      "fy25_total": 500
+    },
+    {
+      "id": "steven_brozinsky",
+      "name": "Steven Brozinsky",
+      "type": "person",
+      "group": "loyal_donor",
+      "size": 12,
+      "years": 40,
+      "lifetime_total": 73636,
+      "fy25_total": 0
+    },
+    {
+      "id": "barbara_browne",
+      "name": "Barbara Browne",
+      "type": "person",
+      "group": "loyal_donor",
+      "size": 12,
+      "years": 39,
+      "lifetime_total": 80593.67,
+      "fy25_total": 3600
+    },
+    {
+      "id": "barbara_arenson",
+      "name": "Barbara Arenson",
+      "type": "person",
+      "group": "loyal_donor",
+      "size": 12,
+      "years": 39,
+      "lifetime_total": 39315.8,
+      "fy25_total": 0
+    },
+    {
+      "id": "ronnie_diamond",
+      "name": "Ronnie Diamond",
+      "type": "person",
+      "group": "loyal_donor",
+      "size": 12,
+      "years": 39,
+      "lifetime_total": 39177.28,
+      "fy25_total": 1900
+    },
+    {
+      "id": "susie_b_meltzer",
+      "name": "Susie B. Meltzer",
+      "type": "person",
+      "group": "loyal_donor",
+      "size": 12,
+      "years": 39,
+      "lifetime_total": 56746.23,
+      "fy25_total": 1500
+    },
+    {
+      "id": "robert_kucinski",
+      "name": "Robert Kucinski",
+      "type": "person",
+      "group": "loyal_donor",
+      "size": 12,
+      "years": 38,
+      "lifetime_total": 38940,
+      "fy25_total": 2000
+    },
+    {
+      "id": "jose_zyman",
+      "name": "Jose Zyman",
+      "type": "person",
+      "group": "loyal_donor",
+      "size": 12,
+      "years": 38,
+      "lifetime_total": 77398,
+      "fy25_total": 3000
+    },
+    {
+      "id": "colin_seid",
+      "name": "Colin Seid",
+      "type": "person",
+      "group": "loyal_donor",
+      "size": 12,
+      "years": 38,
+      "lifetime_total": 83498,
+      "fy25_total": 2500
+    },
+    {
+      "id": "avrille_copans",
+      "name": "Avrille Copans",
+      "type": "person",
+      "group": "loyal_donor",
+      "size": 12,
+      "years": 37,
+      "lifetime_total": 67793.18,
+      "fy25_total": 4600
+    },
+    {
+      "id": "judy_pressman",
+      "name": "Judy Pressman",
+      "type": "person",
+      "group": "loyal_donor",
+      "size": 12,
+      "years": 37,
+      "lifetime_total": 39293,
+      "fy25_total": 1000
+    },
+    {
+      "id": "raymond_a_sachs",
+      "name": "Raymond A. Sachs",
+      "type": "person",
+      "group": "loyal_donor",
+      "size": 12,
+      "years": 37,
+      "lifetime_total": 49570,
+      "fy25_total": 2000
+    },
+    {
+      "id": "barry_scher",
+      "name": "Barry Scher",
+      "type": "person",
+      "group": "loyal_donor",
+      "size": 12,
+      "years": 37,
+      "lifetime_total": 37762,
+      "fy25_total": 2000
+    },
+    {
+      "id": "ivan_mendelsohn",
+      "name": "Ivan Mendelsohn",
+      "type": "person",
+      "group": "loyal_donor",
+      "size": 12,
+      "years": 37,
+      "lifetime_total": 39762.38,
+      "fy25_total": 500
+    },
+    {
+      "id": "jorge_saad",
+      "name": "Jorge Saad",
+      "type": "person",
+      "group": "loyal_donor",
+      "size": 12,
+      "years": 37,
+      "lifetime_total": 39239.8,
+      "fy25_total": 1296.8
+    },
+    {
+      "id": "arlene_rosen",
+      "name": "Arlene Rosen",
+      "type": "person",
+      "group": "loyal_donor",
+      "size": 12,
+      "years": 37,
+      "lifetime_total": 77245.9,
+      "fy25_total": 11500
+    },
+    {
+      "id": "shari_friedman_schenk",
+      "name": "Shari Friedman Schenk",
+      "type": "person",
+      "group": "loyal_donor",
+      "size": 12,
+      "years": 37,
+      "lifetime_total": 50495.83,
+      "fy25_total": 5000
+    },
+    {
+      "id": "eugene_r_berkenstadt",
+      "name": "Eugene R. Berkenstadt",
+      "type": "person",
+      "group": "loyal_donor",
+      "size": 12,
+      "years": 40,
+      "lifetime_total": 36430,
+      "fy25_total": 0
+    },
+    {
+      "id": "mr_gordon_l_l_gerson",
+      "name": "Mr Gordon L L. Gerson",
+      "type": "person",
+      "group": "loyal_donor",
+      "size": 12,
+      "years": 36,
+      "lifetime_total": 52369,
+      "fy25_total": 1000
+    },
+    {
+      "id": "nat_koren",
+      "name": "Nat Koren",
+      "type": "person",
+      "group": "loyal_donor",
+      "size": 12,
+      "years": 36,
+      "lifetime_total": 61910,
+      "fy25_total": 4000
+    },
+    {
+      "id": "charles_r_kossman",
+      "name": "Charles R. Kossman",
+      "type": "person",
+      "group": "loyal_donor",
+      "size": 12,
+      "years": 36,
+      "lifetime_total": 54575,
+      "fy25_total": 1200
+    },
+    {
+      "id": "edith_koppel",
+      "name": "Edith Koppel",
+      "type": "person",
+      "group": "loyal_donor",
+      "size": 12,
+      "years": 36,
+      "lifetime_total": 74179,
+      "fy25_total": 3000
+    },
+    {
+      "id": "michael_l_lipman",
+      "name": "Michael L. Lipman",
+      "type": "person",
+      "group": "loyal_donor",
+      "size": 12,
+      "years": 36,
+      "lifetime_total": 89550,
+      "fy25_total": 3600
+    },
+    {
+      "id": "judith_scheinberg",
+      "name": "Judith Scheinberg",
+      "type": "person",
+      "group": "loyal_donor",
+      "size": 12,
+      "years": 35,
+      "lifetime_total": 73907.95,
+      "fy25_total": 0
+    },
+    {
+      "id": "sylvia_geffen",
+      "name": "Sylvia Geffen",
+      "type": "person",
+      "group": "loyal_donor",
+      "size": 12,
+      "years": 35,
+      "lifetime_total": 39135.4,
+      "fy25_total": 5000
+    },
+    {
+      "id": "jeffrey_s_essakow",
+      "name": "Jeffrey S Essakow",
+      "type": "person",
+      "group": "loyal_donor",
+      "size": 12,
+      "years": 35,
+      "lifetime_total": 39276,
+      "fy25_total": 2000
+    },
+    {
+      "id": "donald_sandweiss",
+      "name": "Donald Sandweiss",
+      "type": "person",
+      "group": "loyal_donor",
+      "size": 12,
+      "years": 35,
+      "lifetime_total": 48935,
+      "fy25_total": 500
+    },
+    {
+      "id": "pam_ferris",
+      "name": "Pam Ferris",
+      "type": "person",
+      "group": "loyal_donor",
+      "size": 12,
+      "years": 35,
+      "lifetime_total": 39923.71,
+      "fy25_total": 0
+    },
+    {
+      "id": "charlotte_siegel",
+      "name": "Charlotte Siegel",
+      "type": "person",
+      "group": "loyal_donor",
+      "size": 12,
+      "years": 34,
+      "lifetime_total": 40249.11,
+      "fy25_total": 1000
+    },
+    {
+      "id": "ellen_epsten_benkle",
+      "name": "Ellen Epsten Benkle",
+      "type": "person",
+      "group": "loyal_donor",
+      "size": 12,
+      "years": 34,
+      "lifetime_total": 40003,
+      "fy25_total": 5000
+    },
+    {
+      "id": "beverly_s_turchin",
+      "name": "Beverly S. Turchin",
+      "type": "person",
+      "group": "loyal_donor",
+      "size": 12,
+      "years": 34,
+      "lifetime_total": 37475.82,
+      "fy25_total": 360
+    },
+    {
+      "id": "martin_m_ehrlich",
+      "name": "Martin M. Ehrlich",
+      "type": "person",
+      "group": "loyal_donor",
+      "size": 12,
+      "years": 33,
+      "lifetime_total": 67536,
+      "fy25_total": 1000
+    },
+    {
+      "id": "edward_goldberg",
+      "name": "Edward Goldberg",
+      "type": "person",
+      "group": "loyal_donor",
+      "size": 12,
+      "years": 33,
+      "lifetime_total": 45500,
+      "fy25_total": 3500
+    },
+    {
+      "id": "jerri_pittluck_lasser",
+      "name": "Jerri Pittluck Lasser",
+      "type": "person",
+      "group": "loyal_donor",
+      "size": 12,
+      "years": 33,
+      "lifetime_total": 43001,
+      "fy25_total": 3000
+    },
+    {
+      "id": "hannah_jarson",
+      "name": "Hannah Jarson",
+      "type": "person",
+      "group": "loyal_donor",
+      "size": 12,
+      "years": 33,
+      "lifetime_total": 61040,
+      "fy25_total": 0
+    },
+    {
+      "id": "wayne_meyer",
+      "name": "Wayne Meyer",
+      "type": "person",
+      "group": "loyal_donor",
+      "size": 12,
+      "years": 33,
+      "lifetime_total": 37696,
+      "fy25_total": 0
+    },
+    {
+      "id": "suzi_feldman",
+      "name": "Suzi Feldman",
+      "type": "person",
+      "group": "loyal_donor",
+      "size": 12,
+      "years": 34,
+      "lifetime_total": 32258,
+      "fy25_total": 6000
+    },
+    {
+      "id": "steven_m_steinberg",
+      "name": "Steven M. Steinberg",
+      "type": "person",
+      "group": "loyal_donor",
+      "size": 12,
+      "years": 32,
+      "lifetime_total": 62316,
+      "fy25_total": 1000
+    },
+    {
+      "id": "alex_b_scheingross",
+      "name": "Alex B. Scheingross",
+      "type": "person",
+      "group": "loyal_donor",
+      "size": 12,
+      "years": 32,
+      "lifetime_total": 36754,
+      "fy25_total": 1800
+    },
+    {
+      "id": "sylvia_l_sneider",
+      "name": "Sylvia L. Sneider",
+      "type": "person",
+      "group": "loyal_donor",
+      "size": 12,
+      "years": 32,
+      "lifetime_total": 41735,
+      "fy25_total": 1000
+    },
+    {
+      "id": "louis_k_rosen",
+      "name": "Louis K Rosen",
+      "type": "person",
+      "group": "loyal_donor",
+      "size": 12,
+      "years": 32,
+      "lifetime_total": 38829.83,
+      "fy25_total": 0
+    },
+    {
+      "id": "abraham_gleiberman",
+      "name": "Abraham Gleiberman",
+      "type": "person",
+      "group": "loyal_donor",
+      "size": 12,
+      "years": 34,
+      "lifetime_total": 67970,
+      "fy25_total": 6000
+    },
+    {
+      "id": "brian_mervis",
+      "name": "Brian Mervis",
+      "type": "person",
+      "group": "loyal_donor",
+      "size": 12,
+      "years": 40,
+      "lifetime_total": 31550,
+      "fy25_total": 0
+    },
+    {
+      "id": "isaac_lagando",
+      "name": "Isaac Lagando",
+      "type": "person",
+      "group": "loyal_donor",
+      "size": 12,
+      "years": 40,
+      "lifetime_total": 31425,
+      "fy25_total": 1080
+    },
+    {
+      "id": "larry_fritz",
+      "name": "Larry Fritz",
+      "type": "person",
+      "group": "loyal_donor",
+      "size": 12,
+      "years": 31,
+      "lifetime_total": 56815,
+      "fy25_total": 3500
+    },
+    {
+      "id": "paul_treger",
+      "name": "Paul Treger",
+      "type": "person",
+      "group": "loyal_donor",
+      "size": 12,
+      "years": 38,
+      "lifetime_total": 46344,
+      "fy25_total": 1200
+    },
+    {
+      "id": "phillip_s_alpert",
+      "name": "Phillip S. Alpert",
+      "type": "person",
+      "group": "loyal_donor",
+      "size": 12,
+      "years": 36,
+      "lifetime_total": 37523,
+      "fy25_total": 180
+    },
+    {
+      "id": "bobbie_gilbert",
+      "name": "Bobbie Gilbert",
+      "type": "person",
+      "group": "loyal_donor",
+      "size": 12,
+      "years": 30,
+      "lifetime_total": 62355,
+      "fy25_total": 2500
+    },
+    {
+      "id": "howard_bear",
+      "name": "Howard Bear",
+      "type": "person",
+      "group": "loyal_donor",
+      "size": 12,
+      "years": 30,
+      "lifetime_total": 92200.42,
+      "fy25_total": 1000
+    },
+    {
+      "id": "brigitte_salomon",
+      "name": "Brigitte Salomon",
+      "type": "person",
+      "group": "loyal_donor",
+      "size": 12,
+      "years": 38,
+      "lifetime_total": 29158,
+      "fy25_total": 3600
+    },
+    {
+      "id": "larry_michael_katz",
+      "name": "Larry Michael Katz",
+      "type": "person",
+      "group": "loyal_donor",
+      "size": 12,
+      "years": 29,
+      "lifetime_total": 58542.74,
+      "fy25_total": 5000
+    },
+    {
+      "id": "jerry_j_gumpel",
+      "name": "Jerry J. Gumpel",
+      "type": "person",
+      "group": "loyal_donor",
+      "size": 8,
+      "years": 29,
+      "lifetime_total": 29860,
+      "fy25_total": 0
+    },
+    {
+      "id": "mark_s_kramer",
+      "name": "Mark S. Kramer",
+      "type": "person",
+      "group": "loyal_donor",
+      "size": 12,
+      "years": 38,
+      "lifetime_total": 28986.1,
+      "fy25_total": 1200
+    },
+    {
+      "id": "stacie_ann_breslerreinstein",
+      "name": "Stacie Ann Bresler-Reinstein",
+      "type": "person",
+      "group": "loyal_donor",
+      "size": 8,
+      "years": 28,
+      "lifetime_total": 38285.82,
+      "fy25_total": 2000
+    },
+    {
+      "id": "amy_corton",
+      "name": "Amy Corton",
+      "type": "person",
+      "group": "loyal_donor",
+      "size": 12,
+      "years": 28,
+      "lifetime_total": 51071.7,
+      "fy25_total": 1800
+    },
+    {
+      "id": "debbie_gerber",
+      "name": "Debbie Gerber",
+      "type": "person",
+      "group": "loyal_donor",
+      "size": 8,
+      "years": 28,
+      "lifetime_total": 32911.38,
+      "fy25_total": 1800
+    },
+    {
+      "id": "andrew_mopper",
+      "name": "Andrew Mopper",
+      "type": "person",
+      "group": "loyal_donor",
+      "size": 12,
+      "years": 33,
+      "lifetime_total": 27988.1,
+      "fy25_total": 2000
+    },
+    {
+      "id": "michael_l_rubin",
+      "name": "Michael L. Rubin",
+      "type": "person",
+      "group": "loyal_donor",
+      "size": 12,
+      "years": 37,
+      "lifetime_total": 44786.8,
+      "fy25_total": 0
+    },
+    {
+      "id": "steven_demeter",
+      "name": "STEVEN DEMETER",
+      "type": "person",
+      "group": "loyal_donor",
+      "size": 12,
+      "years": 27,
+      "lifetime_total": 51150,
+      "fy25_total": 5000
+    },
+    {
+      "id": "heidi_farkash",
+      "name": "Heidi Farkash",
+      "type": "person",
+      "group": "loyal_donor",
+      "size": 8,
+      "years": 27,
+      "lifetime_total": 26597.6,
+      "fy25_total": 0
+    },
+    {
+      "id": "rhona_h_fink",
+      "name": "Rhona H. Fink",
+      "type": "person",
+      "group": "loyal_donor",
+      "size": 12,
+      "years": 35,
+      "lifetime_total": 26488.95,
+      "fy25_total": 0
+    },
+    {
+      "id": "paul_c_liederman",
+      "name": "Paul C. Liederman",
+      "type": "person",
+      "group": "loyal_donor",
+      "size": 8,
+      "years": 26,
+      "lifetime_total": 35255,
+      "fy25_total": 0
+    },
+    {
+      "id": "barbara_rozansky",
+      "name": "Barbara Rozansky",
+      "type": "person",
+      "group": "loyal_donor",
+      "size": 8,
+      "years": 26,
+      "lifetime_total": 42205,
+      "fy25_total": 150
+    },
+    {
+      "id": "laurie_hoshaw",
+      "name": "Laurie Hoshaw",
+      "type": "person",
+      "group": "loyal_donor",
+      "size": 8,
+      "years": 26,
+      "lifetime_total": 30534.66,
+      "fy25_total": 6480.5
+    },
+    {
+      "id": "wendy_burk_frysh",
+      "name": "Wendy Burk Frysh",
+      "type": "person",
+      "group": "loyal_donor",
+      "size": 8,
+      "years": 26,
+      "lifetime_total": 30205.6,
+      "fy25_total": 0
+    },
+    {
+      "id": "robyn_f_goldberg",
+      "name": "Robyn F. Goldberg",
+      "type": "person",
+      "group": "loyal_donor",
+      "size": 8,
+      "years": 26,
+      "lifetime_total": 38845,
+      "fy25_total": 0
+    },
+    {
+      "id": "enrique_zagursky",
+      "name": "Enrique Zagursky",
+      "type": "person",
+      "group": "loyal_donor",
+      "size": 12,
+      "years": 33,
+      "lifetime_total": 25403.49,
+      "fy25_total": 1400
+    },
+    {
+      "id": "marshall_jesse_littman",
+      "name": "Marshall Jesse Littman",
+      "type": "person",
+      "group": "loyal_donor",
+      "size": 12,
+      "years": 40,
+      "lifetime_total": 25398,
+      "fy25_total": 1000
+    },
+    {
+      "id": "jack_s_resnick",
+      "name": "Jack S. Resnick",
+      "type": "person",
+      "group": "loyal_donor",
+      "size": 12,
+      "years": 31,
+      "lifetime_total": 25233.4,
+      "fy25_total": 1200
+    },
+    {
+      "id": "frederick_schenk",
+      "name": "Frederick Schenk",
+      "type": "person",
+      "group": "loyal_donor",
+      "size": 12,
+      "years": 36,
+      "lifetime_total": 31337,
+      "fy25_total": 5000
+    },
+    {
+      "id": "norman_lizt",
+      "name": "Norman Lizt",
+      "type": "person",
+      "group": "loyal_donor",
+      "size": 8,
+      "years": 25,
+      "lifetime_total": 48570,
+      "fy25_total": 2500
+    },
+    {
+      "id": "elena_kucinski",
+      "name": "Elena Kucinski",
+      "type": "person",
+      "group": "loyal_donor",
+      "size": 12,
+      "years": 39,
+      "lifetime_total": 24409,
+      "fy25_total": 1000
+    },
+    {
+      "id": "ana_kozlowski",
+      "name": "Ana Kozlowski",
+      "type": "person",
+      "group": "loyal_donor",
+      "size": 8,
+      "years": 26,
+      "lifetime_total": 24398.49,
+      "fy25_total": 1360
+    },
+    {
+      "id": "meg_goldstein",
+      "name": "Meg Goldstein",
+      "type": "person",
+      "group": "loyal_donor",
+      "size": 8,
+      "years": 24,
+      "lifetime_total": 30545.75,
+      "fy25_total": 360
+    },
+    {
+      "id": "elizabeth_ann_nederlander_coden",
+      "name": "Elizabeth Ann Nederlander Coden",
+      "type": "person",
+      "group": "loyal_donor",
+      "size": 8,
+      "years": 24,
+      "lifetime_total": 42659.85,
+      "fy25_total": 5000
+    },
+    {
+      "id": "dustin_biton",
+      "name": "Dustin Biton",
+      "type": "person",
+      "group": "staff",
+      "size": 16,
+      "title": "Director of Development"
+    },
+    {
+      "id": "maya_steinberg",
+      "name": "Maya Steinberg",
+      "type": "person",
+      "group": "staff",
+      "size": 16,
+      "title": "Development Officer"
+    },
+    {
+      "id": "deena_s_libman",
+      "name": "Deena S. Libman",
+      "type": "person",
+      "group": "staff",
+      "size": 16,
+      "title": "Development Officer"
+    },
+    {
+      "id": "jessica_mcgregor",
+      "name": "Jessica McGregor",
+      "type": "person",
+      "group": "staff",
+      "size": 16,
+      "title": "Development Associate"
+    },
+    {
+      "id": "matthew_goldberg",
+      "name": "Matthew Goldberg",
+      "type": "person",
+      "group": "staff",
+      "size": 16,
+      "title": "Development Associate"
+    },
+    {
+      "id": "michael_rabkin",
+      "name": "Michael Rabkin",
+      "type": "person",
+      "group": "staff",
+      "size": 16,
+      "title": "Database Administrator"
+    },
+    {
+      "id": "michael_sonduck",
+      "name": "Michael Sonduck",
+      "type": "person",
+      "group": "staff",
+      "size": 16,
+      "title": "CFO"
+    }
+  ],
+  "links": [
+    {
+      "source": "jfsd",
+      "target": "jcf",
+      "type": "partnership",
+      "label": "Partnership",
+      "weight": 5
+    },
+    {
+      "source": "jfsd",
+      "target": "exec_comm",
+      "type": "contains",
+      "weight": 2
+    },
+    {
+      "source": "jfsd",
+      "target": "finance_comm",
+      "type": "contains",
+      "weight": 2
+    },
+    {
+      "source": "jfsd",
+      "target": "wp_board",
+      "type": "contains",
+      "weight": 2
+    },
+    {
+      "source": "jfsd",
+      "target": "israel_comm",
+      "type": "contains",
+      "weight": 2
+    },
+    {
+      "source": "jfsd",
+      "target": "nextgen",
+      "type": "contains",
+      "weight": 2
+    },
+    {
+      "source": "jfsd",
+      "target": "legacy_council",
+      "type": "contains",
+      "weight": 2
+    },
+    {
+      "source": "jfsd",
+      "target": "campaign_cabinet",
+      "type": "contains",
+      "weight": 2
+    },
+    {
+      "source": "jfsd",
+      "target": "allocations",
+      "type": "contains",
+      "weight": 2
+    },
+    {
+      "source": "jfsd",
+      "target": "jcc",
+      "type": "funding",
+      "weight": 3
+    },
+    {
+      "source": "jfsd",
+      "target": "sdja",
+      "type": "funding",
+      "weight": 3
+    },
+    {
+      "source": "jfsd",
+      "target": "hillel",
+      "type": "funding",
+      "weight": 3
+    },
+    {
+      "source": "jfsd",
+      "target": "camp_chai",
+      "type": "funding",
+      "weight": 3
+    },
+    {
+      "source": "jfsd",
+      "target": "jfs",
+      "type": "funding",
+      "weight": 3
+    },
+    {
+      "source": "wp_board",
+      "target": "lion_judah",
+      "type": "contains",
+      "weight": 3
+    },
+    {
+      "source": "wp_board",
+      "target": "pomegranate",
+      "type": "contains",
+      "weight": 3
+    },
+    {
+      "source": "jfsd",
+      "target": "legacy_light",
+      "type": "contains",
+      "weight": 3
+    },
+    {
+      "source": "jfsd",
+      "target": "emergency_fund",
+      "type": "contains",
+      "weight": 3
+    },
+    {
+      "source": "heidi_gantwerk",
+      "target": "jfsd",
+      "type": "employment",
+      "weight": 5,
+      "label": "CEO"
+    },
+    {
+      "source": "heidi_gantwerk",
+      "target": "beth_israel",
+      "type": "membership",
+      "weight": 1
+    },
+    {
+      "source": "heidi_gantwerk",
+      "target": "exec_comm",
+      "type": "board",
+      "weight": 3
+    },
+    {
+      "source": "jeff_schindler",
+      "target": "jfsd",
+      "type": "board",
+      "weight": 5,
+      "label": "Chair"
+    },
+    {
+      "source": "jeff_schindler",
+      "target": "emanu_el",
+      "type": "membership",
+      "weight": 1
+    },
+    {
+      "source": "jeff_schindler",
+      "target": "exec_comm",
+      "type": "board",
+      "weight": 4,
+      "label": "Chair"
+    },
+    {
+      "source": "jeremy_pearl",
+      "target": "jcf",
+      "type": "employment",
+      "weight": 5,
+      "label": "CEO"
+    },
+    {
+      "source": "jeremy_pearl",
+      "target": "jfsd",
+      "type": "board",
+      "weight": 2,
+      "label": "Permanent Guest"
+    },
+    {
+      "source": "jeremy_pearl",
+      "target": "beth_am",
+      "type": "membership",
+      "weight": 1
+    },
+    {
+      "source": "lisa_pearl",
+      "target": "jfsd",
+      "type": "board",
+      "weight": 2
+    },
+    {
+      "source": "lisa_pearl",
+      "target": "wp_board",
+      "type": "board",
+      "weight": 4,
+      "label": "Past Chair"
+    },
+    {
+      "source": "lisa_pearl",
+      "target": "chabad_sr",
+      "type": "membership",
+      "weight": 1
+    },
+    {
+      "source": "lisa_pearl",
+      "target": "lion_judah",
+      "type": "member",
+      "weight": 2
+    },
+    {
+      "source": "jeremy_pearl",
+      "target": "lisa_pearl",
+      "type": "family",
+      "weight": 4,
+      "label": "Spouse"
+    },
+    {
+      "source": "david_bark",
+      "target": "jfsd",
+      "type": "board",
+      "weight": 4,
+      "label": "Past Chair"
+    },
+    {
+      "source": "david_bark",
+      "target": "beth_israel",
+      "type": "membership",
+      "weight": 1
+    },
+    {
+      "source": "david_bark",
+      "target": "exec_comm",
+      "type": "board",
+      "weight": 3
+    },
+    {
+      "source": "david_bark",
+      "target": "aipac",
+      "type": "board",
+      "weight": 4,
+      "label": "Chair"
+    },
+    {
+      "source": "david_bark",
+      "target": "camp_chai",
+      "type": "board",
+      "weight": 4,
+      "label": "Chair"
+    },
+    {
+      "source": "larry_katz",
+      "target": "jfsd",
+      "type": "board",
+      "weight": 4,
+      "label": "Treasurer"
+    },
+    {
+      "source": "larry_katz",
+      "target": "exec_comm",
+      "type": "board",
+      "weight": 3
+    },
+    {
+      "source": "larry_katz",
+      "target": "finance_comm",
+      "type": "board",
+      "weight": 3
+    },
+    {
+      "source": "meryl_maneker",
+      "target": "jfsd",
+      "type": "board",
+      "weight": 4,
+      "label": "Secretary"
+    },
+    {
+      "source": "meryl_maneker",
+      "target": "exec_comm",
+      "type": "board",
+      "weight": 3
+    },
+    {
+      "source": "sonia_israel",
+      "target": "jfsd",
+      "type": "board",
+      "weight": 3
+    },
+    {
+      "source": "sonia_israel",
+      "target": "exec_comm",
+      "type": "board",
+      "weight": 3
+    },
+    {
+      "source": "sonia_israel",
+      "target": "beth_el",
+      "type": "membership",
+      "weight": 4,
+      "label": "President"
+    },
+    {
+      "source": "sonia_israel",
+      "target": "campaign_cabinet",
+      "type": "board",
+      "weight": 4,
+      "label": "Co-Chair"
+    },
+    {
+      "source": "ingram_losner",
+      "target": "jfsd",
+      "type": "board",
+      "weight": 3
+    },
+    {
+      "source": "ingram_losner",
+      "target": "exec_comm",
+      "type": "board",
+      "weight": 3
+    },
+    {
+      "source": "ingram_losner",
+      "target": "sdja",
+      "type": "board",
+      "weight": 4,
+      "label": "Past President"
+    },
+    {
+      "source": "ingram_losner",
+      "target": "aipac",
+      "type": "board",
+      "weight": 4,
+      "label": "Chair"
+    },
+    {
+      "source": "ingram_losner",
+      "target": "campaign_cabinet",
+      "type": "board",
+      "weight": 4,
+      "label": "Co-Chair"
+    },
+    {
+      "source": "debbie_deverett",
+      "target": "jfsd",
+      "type": "board",
+      "weight": 2
+    },
+    {
+      "source": "debbie_deverett",
+      "target": "wp_board",
+      "type": "board",
+      "weight": 4,
+      "label": "Chair"
+    },
+    {
+      "source": "debbie_deverett",
+      "target": "beth_am",
+      "type": "membership",
+      "weight": 1
+    },
+    {
+      "source": "debbie_deverett",
+      "target": "lion_judah",
+      "type": "member",
+      "weight": 2
+    },
+    {
+      "source": "simone_abelsohn",
+      "target": "jfsd",
+      "type": "board",
+      "weight": 2
+    },
+    {
+      "source": "simone_abelsohn",
+      "target": "nextgen",
+      "type": "board",
+      "weight": 4,
+      "label": "Chair"
+    },
+    {
+      "source": "kira_finkenberg",
+      "target": "jfsd",
+      "type": "board",
+      "weight": 2
+    },
+    {
+      "source": "kira_finkenberg",
+      "target": "nextgen",
+      "type": "board",
+      "weight": 3,
+      "label": "Cabinet"
+    },
+    {
+      "source": "david_bramzon",
+      "target": "jfsd",
+      "type": "board",
+      "weight": 2
+    },
+    {
+      "source": "jack_maizel",
+      "target": "jfsd",
+      "type": "board",
+      "weight": 2
+    },
+    {
+      "source": "robert_rubenstein",
+      "target": "jfsd",
+      "type": "board",
+      "weight": 2
+    },
+    {
+      "source": "elliot_scott",
+      "target": "jfsd",
+      "type": "board",
+      "weight": 2
+    },
+    {
+      "source": "david_abraham",
+      "target": "jfsd",
+      "type": "board",
+      "weight": 2
+    },
+    {
+      "source": "uri_feldman",
+      "target": "jfsd",
+      "type": "board",
+      "weight": 2
+    },
+    {
+      "source": "julie_datnow",
+      "target": "jfsd",
+      "type": "board",
+      "weight": 2
+    },
+    {
+      "source": "ronit_droker",
+      "target": "jfsd",
+      "type": "board",
+      "weight": 2
+    },
+    {
+      "source": "allie_hauser_erickson",
+      "target": "jfsd",
+      "type": "board",
+      "weight": 2
+    },
+    {
+      "source": "sara_kabakoff",
+      "target": "jfsd",
+      "type": "board",
+      "weight": 2
+    },
+    {
+      "source": "heather_keith",
+      "target": "jfsd",
+      "type": "board",
+      "weight": 2
+    },
+    {
+      "source": "debbie_kornberg",
+      "target": "jfsd",
+      "type": "board",
+      "weight": 2
+    },
+    {
+      "source": "seth_krosner",
+      "target": "jfsd",
+      "type": "board",
+      "weight": 2
+    },
+    {
+      "source": "shari_schenk",
+      "target": "jfsd",
+      "type": "board",
+      "weight": 2
+    },
+    {
+      "source": "sarah_shekhter",
+      "target": "jfsd",
+      "type": "board",
+      "weight": 2
+    },
+    {
+      "source": "victor_shlionsky",
+      "target": "jfsd",
+      "type": "board",
+      "weight": 2
+    },
+    {
+      "source": "elizabeth_siegler",
+      "target": "jfsd",
+      "type": "board",
+      "weight": 2
+    },
+    {
+      "source": "howard_somers",
+      "target": "jfsd",
+      "type": "board",
+      "weight": 2
+    },
+    {
+      "source": "guri_stark",
+      "target": "jfsd",
+      "type": "board",
+      "weight": 2
+    },
+    {
+      "source": "silvana_christy",
+      "target": "jfsd",
+      "type": "board",
+      "weight": 2
+    },
+    {
+      "source": "tina_beranbaum",
+      "target": "jcf",
+      "type": "board",
+      "weight": 4,
+      "label": "Board Chair"
+    },
+    {
+      "source": "michael_s_levinson",
+      "target": "jcf",
+      "type": "board",
+      "weight": 4,
+      "label": "Chair-Elect, Vice Chair"
+    },
+    {
+      "source": "ronald_a_friedman",
+      "target": "jcf",
+      "type": "board",
+      "weight": 4,
+      "label": "Vice Chair"
+    },
+    {
+      "source": "andy_ratner",
+      "target": "jcf",
+      "type": "board",
+      "weight": 2,
+      "label": "Treasurer"
+    },
+    {
+      "source": "theresa_dupuis",
+      "target": "jcf",
+      "type": "board",
+      "weight": 2,
+      "label": "Secretary"
+    },
+    {
+      "source": "ben_arnold",
+      "target": "jcf",
+      "type": "board",
+      "weight": 2
+    },
+    {
+      "source": "paul_datnow",
+      "target": "jcf",
+      "type": "board",
+      "weight": 2
+    },
+    {
+      "source": "leo_eisenberg",
+      "target": "jcf",
+      "type": "board",
+      "weight": 2
+    },
+    {
+      "source": "emily_einhorn",
+      "target": "jcf",
+      "type": "board",
+      "weight": 2
+    },
+    {
+      "source": "jane_fantel",
+      "target": "jcf",
+      "type": "board",
+      "weight": 4,
+      "label": "JWF Chair"
+    },
+    {
+      "source": "judi_gottschalk",
+      "target": "jcf",
+      "type": "board",
+      "weight": 2
+    },
+    {
+      "source": "elena_high",
+      "target": "jcf",
+      "type": "board",
+      "weight": 2
+    },
+    {
+      "source": "larry_katz",
+      "target": "jcf",
+      "type": "board",
+      "weight": 2
+    },
+    {
+      "source": "taylor_lucas",
+      "target": "jcf",
+      "type": "board",
+      "weight": 2
+    },
+    {
+      "source": "craig_misrach",
+      "target": "jcf",
+      "type": "board",
+      "weight": 2
+    },
+    {
+      "source": "jeff_platt",
+      "target": "jcf",
+      "type": "board",
+      "weight": 2
+    },
+    {
+      "source": "jeff_schindler",
+      "target": "jcf",
+      "type": "board",
+      "weight": 4,
+      "label": "Federation Board Chair"
+    },
+    {
+      "source": "lawrence_sherman",
+      "target": "jcf",
+      "type": "board",
+      "weight": 2,
+      "label": "General Counsel"
+    },
+    {
+      "source": "leo_spiegel",
+      "target": "jcf",
+      "type": "board",
+      "weight": 2
+    },
+    {
+      "source": "david_wax",
+      "target": "jcf",
+      "type": "board",
+      "weight": 2
+    },
+    {
+      "source": "liz_nederlander_coden",
+      "target": "jcc",
+      "type": "board",
+      "weight": 4,
+      "label": "Board Chair"
+    },
+    {
+      "source": "laurie_greenberg",
+      "target": "jcc",
+      "type": "board",
+      "weight": 4,
+      "label": "Immediate Past Board Chair"
+    },
+    {
+      "source": "hannah_cohen",
+      "target": "jcc",
+      "type": "board",
+      "weight": 4,
+      "label": "Vice Chair"
+    },
+    {
+      "source": "kira_finkenberg",
+      "target": "jcc",
+      "type": "board",
+      "weight": 4,
+      "label": "Vice Chair"
+    },
+    {
+      "source": "adam_jacobs",
+      "target": "jcc",
+      "type": "board",
+      "weight": 4,
+      "label": "Vice Chair"
+    },
+    {
+      "source": "victor_shlionsky",
+      "target": "jcc",
+      "type": "board",
+      "weight": 2,
+      "label": "Board Treasurer"
+    },
+    {
+      "source": "doron_malka",
+      "target": "jcc",
+      "type": "board",
+      "weight": 2,
+      "label": "Board Secretary"
+    },
+    {
+      "source": "david_abrams",
+      "target": "jcc",
+      "type": "board",
+      "weight": 2
+    },
+    {
+      "source": "kim_chesbrough",
+      "target": "jcc",
+      "type": "board",
+      "weight": 2
+    },
+    {
+      "source": "shoshannah_hart",
+      "target": "jcc",
+      "type": "board",
+      "weight": 2
+    },
+    {
+      "source": "taylor_israel",
+      "target": "jcc",
+      "type": "board",
+      "weight": 2
+    },
+    {
+      "source": "larry_katz",
+      "target": "jcc",
+      "type": "board",
+      "weight": 2
+    },
+    {
+      "source": "brett_meltzer",
+      "target": "jcc",
+      "type": "board",
+      "weight": 2
+    },
+    {
+      "source": "musy_new",
+      "target": "jcc",
+      "type": "board",
+      "weight": 2
+    },
+    {
+      "source": "julie_potiker",
+      "target": "jcc",
+      "type": "board",
+      "weight": 2
+    },
+    {
+      "source": "danny_recht",
+      "target": "jcc",
+      "type": "board",
+      "weight": 2
+    },
+    {
+      "source": "david_rodman",
+      "target": "jcc",
+      "type": "board",
+      "weight": 2
+    },
+    {
+      "source": "robert_rubenstein",
+      "target": "jcc",
+      "type": "board",
+      "weight": 2
+    },
+    {
+      "source": "jack_rubin",
+      "target": "jcc",
+      "type": "board",
+      "weight": 2
+    },
+    {
+      "source": "benjamin_schenk",
+      "target": "jcc",
+      "type": "board",
+      "weight": 2
+    },
+    {
+      "source": "sheava_wax",
+      "target": "jcc",
+      "type": "board",
+      "weight": 2
+    },
+    {
+      "source": "alan_viterbi",
+      "target": "ajc",
+      "type": "board",
+      "weight": 4,
+      "label": "Board President"
+    },
+    {
+      "source": "mitch_siegler",
+      "target": "ajc",
+      "type": "board",
+      "weight": 4,
+      "label": "Immediate Past Board President"
+    },
+    {
+      "source": "david_bark",
+      "target": "ajc",
+      "type": "board",
+      "weight": 2
+    },
+    {
+      "source": "kira_finkenberg",
+      "target": "ajc",
+      "type": "board",
+      "weight": 2
+    },
+    {
+      "source": "eileen_glasser_wesley",
+      "target": "ajc",
+      "type": "board",
+      "weight": 2
+    },
+    {
+      "source": "naomi_harris",
+      "target": "ajc",
+      "type": "board",
+      "weight": 2
+    },
+    {
+      "source": "wayne_harris",
+      "target": "ajc",
+      "type": "board",
+      "weight": 2
+    },
+    {
+      "source": "joanna_herman",
+      "target": "ajc",
+      "type": "board",
+      "weight": 2
+    },
+    {
+      "source": "rabbi_david_kornberg",
+      "target": "ajc",
+      "type": "board",
+      "weight": 2
+    },
+    {
+      "source": "raquel_kramer",
+      "target": "ajc",
+      "type": "board",
+      "weight": 2
+    },
+    {
+      "source": "robin_layton",
+      "target": "ajc",
+      "type": "board",
+      "weight": 2
+    },
+    {
+      "source": "david_michan",
+      "target": "ajc",
+      "type": "board",
+      "weight": 2
+    },
+    {
+      "source": "tad_parzen",
+      "target": "ajc",
+      "type": "board",
+      "weight": 2
+    },
+    {
+      "source": "marie_raftery",
+      "target": "ajc",
+      "type": "board",
+      "weight": 2
+    },
+    {
+      "source": "sharon_rosen_lieb",
+      "target": "ajc",
+      "type": "board",
+      "weight": 2
+    },
+    {
+      "source": "stacy_rosenberg",
+      "target": "ajc",
+      "type": "board",
+      "weight": 2
+    },
+    {
+      "source": "jeff_schindler",
+      "target": "ajc",
+      "type": "board",
+      "weight": 2
+    },
+    {
+      "source": "jerry_turk",
+      "target": "ajc",
+      "type": "board",
+      "weight": 2
+    },
+    {
+      "source": "andrew_james_viterbi",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 4
+    },
+    {
+      "source": "andrew_james_viterbi",
+      "target": "major_donor_soc",
+      "type": "member",
+      "weight": 2
+    },
+    {
+      "source": "gary_evan_jacobs",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 4
+    },
+    {
+      "source": "gary_evan_jacobs",
+      "target": "major_donor_soc",
+      "type": "member",
+      "weight": 2
+    },
+    {
+      "source": "herbert_j_solomon",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 4
+    },
+    {
+      "source": "herbert_j_solomon",
+      "target": "major_donor_soc",
+      "type": "member",
+      "weight": 2
+    },
+    {
+      "source": "irwin_m_jacobs",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 4
+    },
+    {
+      "source": "ernest_s_rady",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 4
+    },
+    {
+      "source": "rodney_f_stone",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 4
+    },
+    {
+      "source": "gary_shekhter",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 4
+    },
+    {
+      "source": "gary_shekhter",
+      "target": "major_donor_soc",
+      "type": "member",
+      "weight": 2
+    },
+    {
+      "source": "lee_goldberg",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 4
+    },
+    {
+      "source": "dana_zeff",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 4
+    },
+    {
+      "source": "dana_zeff",
+      "target": "major_donor_soc",
+      "type": "member",
+      "weight": 2
+    },
+    {
+      "source": "alan_viterbi",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 4
+    },
+    {
+      "source": "alan_viterbi",
+      "target": "major_donor_soc",
+      "type": "member",
+      "weight": 2
+    },
+    {
+      "source": "jack_m_schuster",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 4
+    },
+    {
+      "source": "jack_m_schuster",
+      "target": "major_donor_soc",
+      "type": "member",
+      "weight": 2
+    },
+    {
+      "source": "marjorie_kalmanson",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 4
+    },
+    {
+      "source": "marjorie_kalmanson",
+      "target": "major_donor_soc",
+      "type": "member",
+      "weight": 2
+    },
+    {
+      "source": "jerome_h_turk",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 4
+    },
+    {
+      "source": "david_wax",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 4
+    },
+    {
+      "source": "robert_j_shillman",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 4
+    },
+    {
+      "source": "daniel_j_epstein",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 4
+    },
+    {
+      "source": "gloria_e_stone",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 4
+    },
+    {
+      "source": "robert_a_rubenstein",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 4
+    },
+    {
+      "source": "esther_fischer",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 4
+    },
+    {
+      "source": "esther_fischer",
+      "target": "major_donor_soc",
+      "type": "member",
+      "weight": 2
+    },
+    {
+      "source": "elaine_galinson",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 4
+    },
+    {
+      "source": "elaine_galinson",
+      "target": "major_donor_soc",
+      "type": "member",
+      "weight": 2
+    },
+    {
+      "source": "jeremy_berg",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "jeremy_berg",
+      "target": "major_donor_soc",
+      "type": "member",
+      "weight": 2
+    },
+    {
+      "source": "laurence_h_bloch",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "william_a_shenk",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "elliot_feuerstein",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "elliot_feuerstein",
+      "target": "major_donor_soc",
+      "type": "member",
+      "weight": 2
+    },
+    {
+      "source": "warren_o_kessler",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "brian_tauber",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "david_shlomo_kabakoff",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "david_shlomo_kabakoff",
+      "target": "major_donor_soc",
+      "type": "member",
+      "weight": 2
+    },
+    {
+      "source": "donald_m_slate",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "hannah_step",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "diane_feuerstein",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "diane_feuerstein",
+      "target": "major_donor_soc",
+      "type": "member",
+      "weight": 2
+    },
+    {
+      "source": "steven_mizel",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "claire_ellman",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "edgar_f_berner",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "george_m_hecht",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "michael_s_rosen",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "morris_silverman",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "stephen_schutz",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "gary_scott_kornfeld",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "charles_wax",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "price_family",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "toni_bloomberg",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "aaron_feldman",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "mark_gleiberman",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "richard_b_jaffe",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "anton_woolf",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "sherron_c_schuster",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "sherron_c_schuster",
+      "target": "major_donor_soc",
+      "type": "member",
+      "weight": 2
+    },
+    {
+      "source": "richard_kornfeld",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "howard_s_robin",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "richard_bloch",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "jerriann_j_jacobs",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "richard_a_katz",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "robert_singer",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "benedict_j_adelson",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "selwyn_isakow",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "sandra_levinson",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "jeffrey_h_silberman",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "jeffrey_h_silberman",
+      "target": "major_donor_soc",
+      "type": "member",
+      "weight": 2
+    },
+    {
+      "source": "susanna_karney_flaster",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "susanna_karney_flaster",
+      "target": "major_donor_soc",
+      "type": "member",
+      "weight": 2
+    },
+    {
+      "source": "evelyn_rady",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "sonia_ancoli_israel",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "sonia_ancoli_israel",
+      "target": "major_donor_soc",
+      "type": "member",
+      "weight": 2
+    },
+    {
+      "source": "jeanette_rubin_burnett",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "howard_i_cohen",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "andrea_oster",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "karen_foster_silberman",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "karen_foster_silberman",
+      "target": "major_donor_soc",
+      "type": "member",
+      "weight": 2
+    },
+    {
+      "source": "david_shteremberg",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "robert_sarver",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "robert_aaron_fink",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "lara_woolf_grusd",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "carlos_david_michan",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "paul_i_meyer",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "lowell_a_potiker",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "valerie_marie_viterbi",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 3
+    },
+    {
+      "source": "valerie_marie_viterbi",
+      "target": "major_donor_soc",
+      "type": "member",
+      "weight": 2
+    },
+    {
+      "source": "michael_s_levinson",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "mary_ann_scher",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "richard_joseph_effress",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "iris_strauss",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "rae_samiljan",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "susan_rachelle_chortek_weisman",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 3
+    },
+    {
+      "source": "susan_rachelle_chortek_weisman",
+      "target": "major_donor_soc",
+      "type": "member",
+      "weight": 2
+    },
+    {
+      "source": "richard_m_fink",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "cecile_b_jordan",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "toby_k_cohen",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "enrique_g_moscona",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "shana_lew",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "mark_schlossberg",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "phyllis_f_epstein",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "elyse_k_sollender",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "gary_m_leeds",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "kevin_a_wechter",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "david_ellman",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "edward_r_pollak",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "allison_price",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "allison_price",
+      "target": "major_donor_soc",
+      "type": "member",
+      "weight": 2
+    },
+    {
+      "source": "carole_turk",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "gary_a_weissberg",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "gary_levine",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "gary_levine",
+      "target": "major_donor_soc",
+      "type": "member",
+      "weight": 2
+    },
+    {
+      "source": "marlene_s_sasson_recht",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "simon_vainer",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "ira_shalom_feinswog",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "daniel_einhorn",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "daniel_einhorn",
+      "target": "major_donor_soc",
+      "type": "member",
+      "weight": 2
+    },
+    {
+      "source": "barbara_sherman",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "barbara_sherman",
+      "target": "major_donor_soc",
+      "type": "member",
+      "weight": 2
+    },
+    {
+      "source": "steven_d_solomon",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "robert_caplan",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "linda_platt",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "linda_platt",
+      "target": "major_donor_soc",
+      "type": "member",
+      "weight": 2
+    },
+    {
+      "source": "susana_cohen_corrigan",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "susana_cohen_corrigan",
+      "target": "major_donor_soc",
+      "type": "member",
+      "weight": 2
+    },
+    {
+      "source": "kenneth_d_polin",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "audrey_viterbi_smargon",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "richard_gordon",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "susan_shmalo",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "stanley_westreich",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "sylvia_liwerant",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "jean_shekhter",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "mitchell_dubick",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "lisa_dawn_kornfeld",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "robert_j_silverman",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "jeffrey_rush",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "terri_bignell",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "marcia_hazan",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 3
+    },
+    {
+      "source": "marcia_hazan",
+      "target": "major_donor_soc",
+      "type": "member",
+      "weight": 2
+    },
+    {
+      "source": "gayle_breitbard_klusky",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "ronald_j_cohn",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "ronald_j_cohn",
+      "target": "major_donor_soc",
+      "type": "member",
+      "weight": 2
+    },
+    {
+      "source": "esther_w_belinsky",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "harriet_fremland",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "leigh_johnson",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "iris_goodman",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "andrew_kaplan",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "perri_l_wittgrove",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "lisa_foster",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "marjory_kaplan",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "marsha_berkson",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "marsha_berkson",
+      "target": "major_donor_soc",
+      "type": "member",
+      "weight": 2
+    },
+    {
+      "source": "marshall_a_lewis",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "elliot_a_scott",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "berdele_m_katz",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "laura_galinson",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "laura_galinson",
+      "target": "major_donor_soc",
+      "type": "member",
+      "weight": 2
+    },
+    {
+      "source": "eugene_h_siegel",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "andrew_m_ratner",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "monica_handlerpenner",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "jerry_simms",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "marvin_j_zaguli",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "marvin_j_zaguli",
+      "target": "major_donor_soc",
+      "type": "member",
+      "weight": 2
+    },
+    {
+      "source": "gary_h_levitt",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "lawrence_belinsky",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "stuart_posnock",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "marcia_malkus",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "cindy_bloch",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "ann_l_jaffe",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "naomi_r_eisman",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "eli_o_meltzer",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "steve_macbaisey",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "jane_scher",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "melissa_bartell",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "melissa_bartell",
+      "target": "major_donor_soc",
+      "type": "member",
+      "weight": 2
+    },
+    {
+      "source": "wayne_millard_harris",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "wayne_millard_harris",
+      "target": "major_donor_soc",
+      "type": "member",
+      "weight": 2
+    },
+    {
+      "source": "lee_posnock",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "mitch_leibovitz",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "sharon_braverman",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "jori_potiker",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "werner_cahn",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "ira_cohen",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "ira_cohen",
+      "target": "major_donor_soc",
+      "type": "member",
+      "weight": 2
+    },
+    {
+      "source": "george_s_scher",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "jerome_p_stein",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "rusti_bartellweiss",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "allan_ziman",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "luis_maizel",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "luis_maizel",
+      "target": "major_donor_soc",
+      "type": "member",
+      "weight": 2
+    },
+    {
+      "source": "susan_odenheimer_kabakoff",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "susan_odenheimer_kabakoff",
+      "target": "major_donor_soc",
+      "type": "member",
+      "weight": 2
+    },
+    {
+      "source": "michael_gelfand",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "reina_shteremberg",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "mens_gifts_designated",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "sharon_l_stein",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "michael_l_silverman",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "lawrence_m_sherman",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "lawrence_m_sherman",
+      "target": "major_donor_soc",
+      "type": "member",
+      "weight": 2
+    },
+    {
+      "source": "june_b_chocheles",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "roselyn_pappelbaum",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "naomi_singer_harris",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "stephen_m_abramson",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "theresa_marie_dupuis",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "edward_m_spector",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "suzanne_t_schwartzman",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "bernard_gottlieb",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "richard_greenfield",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "hanna_gleiberman",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "sheryl_j_kaufman",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "sheryl_j_kaufman",
+      "target": "major_donor_soc",
+      "type": "member",
+      "weight": 2
+    },
+    {
+      "source": "richard_gabriel",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2
+    },
+    {
+      "source": "richard_gabriel",
+      "target": "major_donor_soc",
+      "type": "member",
+      "weight": 2
+    },
+    {
+      "source": "ira_d_levine",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2,
+      "label": "43y"
+    },
+    {
+      "source": "jill_r_stone",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2,
+      "label": "42y"
+    },
+    {
+      "source": "martin_lawson",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2,
+      "label": "41y"
+    },
+    {
+      "source": "alberto_b_michan",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2,
+      "label": "41y"
+    },
+    {
+      "source": "nadja_kauder",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2,
+      "label": "40y"
+    },
+    {
+      "source": "steven_brozinsky",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2,
+      "label": "40y"
+    },
+    {
+      "source": "barbara_browne",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2,
+      "label": "39y"
+    },
+    {
+      "source": "barbara_arenson",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2,
+      "label": "39y"
+    },
+    {
+      "source": "ronnie_diamond",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2,
+      "label": "39y"
+    },
+    {
+      "source": "susie_b_meltzer",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2,
+      "label": "39y"
+    },
+    {
+      "source": "robert_kucinski",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2,
+      "label": "38y"
+    },
+    {
+      "source": "jose_zyman",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2,
+      "label": "38y"
+    },
+    {
+      "source": "colin_seid",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2,
+      "label": "38y"
+    },
+    {
+      "source": "avrille_copans",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2,
+      "label": "37y"
+    },
+    {
+      "source": "judy_pressman",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2,
+      "label": "37y"
+    },
+    {
+      "source": "raymond_a_sachs",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2,
+      "label": "37y"
+    },
+    {
+      "source": "barry_scher",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2,
+      "label": "37y"
+    },
+    {
+      "source": "ivan_mendelsohn",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2,
+      "label": "37y"
+    },
+    {
+      "source": "jorge_saad",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2,
+      "label": "37y"
+    },
+    {
+      "source": "arlene_rosen",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2,
+      "label": "37y"
+    },
+    {
+      "source": "shari_friedman_schenk",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2,
+      "label": "37y"
+    },
+    {
+      "source": "eugene_r_berkenstadt",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2,
+      "label": "40y"
+    },
+    {
+      "source": "mr_gordon_l_l_gerson",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2,
+      "label": "36y"
+    },
+    {
+      "source": "nat_koren",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2,
+      "label": "36y"
+    },
+    {
+      "source": "charles_r_kossman",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2,
+      "label": "36y"
+    },
+    {
+      "source": "edith_koppel",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2,
+      "label": "36y"
+    },
+    {
+      "source": "michael_l_lipman",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2,
+      "label": "36y"
+    },
+    {
+      "source": "judith_scheinberg",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2,
+      "label": "35y"
+    },
+    {
+      "source": "sylvia_geffen",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2,
+      "label": "35y"
+    },
+    {
+      "source": "jeffrey_s_essakow",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2,
+      "label": "35y"
+    },
+    {
+      "source": "donald_sandweiss",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2,
+      "label": "35y"
+    },
+    {
+      "source": "pam_ferris",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2,
+      "label": "35y"
+    },
+    {
+      "source": "charlotte_siegel",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2,
+      "label": "34y"
+    },
+    {
+      "source": "ellen_epsten_benkle",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2,
+      "label": "34y"
+    },
+    {
+      "source": "beverly_s_turchin",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2,
+      "label": "34y"
+    },
+    {
+      "source": "martin_m_ehrlich",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2,
+      "label": "33y"
+    },
+    {
+      "source": "edward_goldberg",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2,
+      "label": "33y"
+    },
+    {
+      "source": "jerri_pittluck_lasser",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2,
+      "label": "33y"
+    },
+    {
+      "source": "hannah_jarson",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2,
+      "label": "33y"
+    },
+    {
+      "source": "wayne_meyer",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2,
+      "label": "33y"
+    },
+    {
+      "source": "suzi_feldman",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2,
+      "label": "34y"
+    },
+    {
+      "source": "steven_m_steinberg",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2,
+      "label": "32y"
+    },
+    {
+      "source": "alex_b_scheingross",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2,
+      "label": "32y"
+    },
+    {
+      "source": "sylvia_l_sneider",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2,
+      "label": "32y"
+    },
+    {
+      "source": "louis_k_rosen",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2,
+      "label": "32y"
+    },
+    {
+      "source": "abraham_gleiberman",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2,
+      "label": "34y"
+    },
+    {
+      "source": "brian_mervis",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2,
+      "label": "40y"
+    },
+    {
+      "source": "isaac_lagando",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2,
+      "label": "40y"
+    },
+    {
+      "source": "larry_fritz",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2,
+      "label": "31y"
+    },
+    {
+      "source": "paul_treger",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2,
+      "label": "38y"
+    },
+    {
+      "source": "phillip_s_alpert",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2,
+      "label": "36y"
+    },
+    {
+      "source": "bobbie_gilbert",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2,
+      "label": "30y"
+    },
+    {
+      "source": "howard_bear",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2,
+      "label": "30y"
+    },
+    {
+      "source": "brigitte_salomon",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2,
+      "label": "38y"
+    },
+    {
+      "source": "larry_michael_katz",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2,
+      "label": "29y"
+    },
+    {
+      "source": "jerry_j_gumpel",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2,
+      "label": "29y"
+    },
+    {
+      "source": "mark_s_kramer",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2,
+      "label": "38y"
+    },
+    {
+      "source": "stacie_ann_breslerreinstein",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2,
+      "label": "28y"
+    },
+    {
+      "source": "amy_corton",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2,
+      "label": "28y"
+    },
+    {
+      "source": "debbie_gerber",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2,
+      "label": "28y"
+    },
+    {
+      "source": "andrew_mopper",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2,
+      "label": "33y"
+    },
+    {
+      "source": "michael_l_rubin",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2,
+      "label": "37y"
+    },
+    {
+      "source": "steven_demeter",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2,
+      "label": "27y"
+    },
+    {
+      "source": "heidi_farkash",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2,
+      "label": "27y"
+    },
+    {
+      "source": "rhona_h_fink",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2,
+      "label": "35y"
+    },
+    {
+      "source": "paul_c_liederman",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2,
+      "label": "26y"
+    },
+    {
+      "source": "barbara_rozansky",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2,
+      "label": "26y"
+    },
+    {
+      "source": "laurie_hoshaw",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2,
+      "label": "26y"
+    },
+    {
+      "source": "wendy_burk_frysh",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2,
+      "label": "26y"
+    },
+    {
+      "source": "robyn_f_goldberg",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2,
+      "label": "26y"
+    },
+    {
+      "source": "enrique_zagursky",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2,
+      "label": "33y"
+    },
+    {
+      "source": "marshall_jesse_littman",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2,
+      "label": "40y"
+    },
+    {
+      "source": "jack_s_resnick",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2,
+      "label": "31y"
+    },
+    {
+      "source": "frederick_schenk",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2,
+      "label": "36y"
+    },
+    {
+      "source": "norman_lizt",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2,
+      "label": "25y"
+    },
+    {
+      "source": "elena_kucinski",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2,
+      "label": "39y"
+    },
+    {
+      "source": "ana_kozlowski",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2,
+      "label": "26y"
+    },
+    {
+      "source": "meg_goldstein",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2,
+      "label": "24y"
+    },
+    {
+      "source": "elizabeth_ann_nederlander_coden",
+      "target": "jfsd",
+      "type": "donor",
+      "weight": 2,
+      "label": "24y"
+    },
+    {
+      "source": "lee_goldberg",
+      "target": "legacy_light",
+      "type": "donor",
+      "weight": 4,
+      "label": "Major"
+    },
+    {
+      "source": "dana_zeff",
+      "target": "legacy_light",
+      "type": "donor",
+      "weight": 4,
+      "label": "Major"
+    },
+    {
+      "source": "elaine_galinson",
+      "target": "legacy_light",
+      "type": "donor",
+      "weight": 4,
+      "label": "Major"
+    },
+    {
+      "source": "andrew_james_viterbi",
+      "target": "emergency_fund",
+      "type": "donor",
+      "weight": 3
+    },
+    {
+      "source": "gary_evan_jacobs",
+      "target": "emergency_fund",
+      "type": "donor",
+      "weight": 3
+    },
+    {
+      "source": "ernest_s_rady",
+      "target": "emergency_fund",
+      "type": "donor",
+      "weight": 3
+    },
+    {
+      "source": "alan_viterbi",
+      "target": "emergency_fund",
+      "type": "donor",
+      "weight": 3
+    },
+    {
+      "source": "dustin_biton",
+      "target": "jfsd",
+      "type": "employment",
+      "weight": 3,
+      "label": "Director of Development"
+    },
+    {
+      "source": "maya_steinberg",
+      "target": "jfsd",
+      "type": "employment",
+      "weight": 3,
+      "label": "Development Officer"
+    },
+    {
+      "source": "deena_s_libman",
+      "target": "jfsd",
+      "type": "employment",
+      "weight": 3,
+      "label": "Development Officer"
+    },
+    {
+      "source": "jessica_mcgregor",
+      "target": "jfsd",
+      "type": "employment",
+      "weight": 3,
+      "label": "Development Associate"
+    },
+    {
+      "source": "matthew_goldberg",
+      "target": "jfsd",
+      "type": "employment",
+      "weight": 3,
+      "label": "Development Associate"
+    },
+    {
+      "source": "michael_rabkin",
+      "target": "jfsd",
+      "type": "employment",
+      "weight": 3,
+      "label": "Database Administrator"
+    },
+    {
+      "source": "michael_sonduck",
+      "target": "jfsd",
+      "type": "employment",
+      "weight": 3,
+      "label": "CFO"
+    },
+    {
+      "source": "andrew_james_viterbi",
+      "target": "alan_viterbi",
+      "type": "family",
+      "weight": 3,
+      "label": "Family"
+    },
+    {
+      "source": "andrew_james_viterbi",
+      "target": "valerie_marie_viterbi",
+      "type": "family",
+      "weight": 3,
+      "label": "Family"
+    },
+    {
+      "source": "andrew_james_viterbi",
+      "target": "audrey_viterbi_smargon",
+      "type": "family",
+      "weight": 3,
+      "label": "Family"
+    },
+    {
+      "source": "alan_viterbi",
+      "target": "valerie_marie_viterbi",
+      "type": "family",
+      "weight": 3,
+      "label": "Family"
+    },
+    {
+      "source": "alan_viterbi",
+      "target": "audrey_viterbi_smargon",
+      "type": "family",
+      "weight": 3,
+      "label": "Family"
+    },
+    {
+      "source": "valerie_marie_viterbi",
+      "target": "audrey_viterbi_smargon",
+      "type": "family",
+      "weight": 3,
+      "label": "Family"
+    },
+    {
+      "source": "gary_evan_jacobs",
+      "target": "irwin_m_jacobs",
+      "type": "family",
+      "weight": 3,
+      "label": "Family"
+    },
+    {
+      "source": "gary_evan_jacobs",
+      "target": "adam_jacobs",
+      "type": "family",
+      "weight": 3,
+      "label": "Family"
+    },
+    {
+      "source": "irwin_m_jacobs",
+      "target": "adam_jacobs",
+      "type": "family",
+      "weight": 3,
+      "label": "Family"
+    },
+    {
+      "source": "elliot_feuerstein",
+      "target": "diane_feuerstein",
+      "type": "family",
+      "weight": 3,
+      "label": "Family"
+    },
+    {
+      "source": "gloria_e_stone",
+      "target": "rodney_f_stone",
+      "type": "family",
+      "weight": 3,
+      "label": "Family"
+    },
+    {
+      "source": "gloria_e_stone",
+      "target": "jill_r_stone",
+      "type": "family",
+      "weight": 3,
+      "label": "Family"
+    },
+    {
+      "source": "rodney_f_stone",
+      "target": "jill_r_stone",
+      "type": "family",
+      "weight": 3,
+      "label": "Family"
+    },
+    {
+      "source": "david_wax",
+      "target": "sheava_wax",
+      "type": "family",
+      "weight": 3,
+      "label": "Family"
+    },
+    {
+      "source": "wayne_harris",
+      "target": "naomi_harris",
+      "type": "family",
+      "weight": 3,
+      "label": "Family"
+    },
+    {
+      "source": "wayne_harris",
+      "target": "wayne_millard_harris",
+      "type": "family",
+      "weight": 3,
+      "label": "Family"
+    },
+    {
+      "source": "naomi_harris",
+      "target": "wayne_millard_harris",
+      "type": "family",
+      "weight": 3,
+      "label": "Family"
+    },
+    {
+      "source": "jack_m_schuster",
+      "target": "sherron_c_schuster",
+      "type": "family",
+      "weight": 3,
+      "label": "Family"
+    },
+    {
+      "source": "jeffrey_h_silberman",
+      "target": "karen_foster_silberman",
+      "type": "family",
+      "weight": 3,
+      "label": "Family"
+    },
+    {
+      "source": "lawrence_sherman",
+      "target": "barbara_sherman",
+      "type": "family",
+      "weight": 3,
+      "label": "Family"
+    },
+    {
+      "source": "lawrence_sherman",
+      "target": "lawrence_m_sherman",
+      "type": "family",
+      "weight": 3,
+      "label": "Family"
+    },
+    {
+      "source": "barbara_sherman",
+      "target": "lawrence_m_sherman",
+      "type": "family",
+      "weight": 3,
+      "label": "Family"
+    },
+    {
+      "source": "sonia_israel",
+      "target": "taylor_israel",
+      "type": "family",
+      "weight": 3,
+      "label": "Family"
+    },
+    {
+      "source": "sonia_israel",
+      "target": "sonia_ancoli_israel",
+      "type": "family",
+      "weight": 3,
+      "label": "Family"
+    },
+    {
+      "source": "taylor_israel",
+      "target": "sonia_ancoli_israel",
+      "type": "family",
+      "weight": 3,
+      "label": "Family"
+    },
+    {
+      "source": "benjamin_schenk",
+      "target": "shari_schenk",
+      "type": "family",
+      "weight": 3,
+      "label": "Family"
+    },
+    {
+      "source": "jerome_h_turk",
+      "target": "jerry_turk",
+      "type": "family",
+      "weight": 3,
+      "label": "Family"
+    },
+    {
+      "source": "jerome_h_turk",
+      "target": "carole_turk",
+      "type": "family",
+      "weight": 3,
+      "label": "Family"
+    },
+    {
+      "source": "jerry_turk",
+      "target": "carole_turk",
+      "type": "family",
+      "weight": 3,
+      "label": "Family"
+    },
+    {
+      "source": "julie_datnow",
+      "target": "paul_datnow",
+      "type": "family",
+      "weight": 3,
+      "label": "Family"
+    },
+    {
+      "source": "daniel_einhorn",
+      "target": "emily_einhorn",
+      "type": "family",
+      "weight": 3,
+      "label": "Family"
+    },
+    {
+      "source": "david_ellman",
+      "target": "claire_ellman",
+      "type": "family",
+      "weight": 3,
+      "label": "Family"
+    },
+    {
+      "source": "heather_keith",
+      "target": "sara_kabakoff",
+      "type": "family",
+      "weight": 3,
+      "label": "Family"
+    },
+    {
+      "source": "robert_rubenstein",
+      "target": "robert_a_rubenstein",
+      "type": "family",
+      "weight": 3,
+      "label": "Family"
+    },
+    {
+      "source": "gary_shekhter",
+      "target": "jean_shekhter",
+      "type": "family",
+      "weight": 3,
+      "label": "Family"
+    },
+    {
+      "source": "gary_shekhter",
+      "target": "sarah_shekhter",
+      "type": "family",
+      "weight": 3,
+      "label": "Family"
+    },
+    {
+      "source": "jean_shekhter",
+      "target": "sarah_shekhter",
+      "type": "family",
+      "weight": 3,
+      "label": "Family"
+    }
+  ]
+}
