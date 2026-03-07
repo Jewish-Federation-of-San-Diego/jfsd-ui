@@ -17,7 +17,7 @@ const { Text, Title } = Typography;
 import { DefinitionTooltip } from "../components/DefinitionTooltip";
 import { NAVY, GOLD, SUCCESS, ERROR, WARNING, MUTED } from '../theme/jfsdTheme';
 import { fetchJson } from '../utils/dataFetch';
-import { safeCurrency } from '../utils/formatters';
+import { safeCurrency, safeCount, safePercent } from '../utils/formatters';
 
 // ── Brand tokens ────────────────────────────────────────────────────────
 const GRID = '#E8E8ED';
@@ -77,13 +77,19 @@ function useWidth() {
 
 // ── KPI Cards ───────────────────────────────────────────────────────────
 function KPICards({ kpis, newDonors }: { kpis: KPIs; newDonors: number }) {
+  const safeNewDonors = safeCount(newDonors || kpis.totalDonorsThisWeek);
+  const safeFailedAmount = safeCurrency(kpis.failedChargesAmount, { maximumFractionDigits: 0 });
+  const safeRecurringRevenue = safeCurrency(kpis.recurringRevenue, { maximumFractionDigits: 0 });
+  const safeQualityScore = safeCount(kpis.dataQualityScore);
+  const safeRetentionRate = safePercent(kpis.retentionRate);
+
   return (
     <Row gutter={[12, 12]}>
       <Col xs={12} lg={6}>
         <Card className="kpi-card" size="small">
           <Statistic
             title="NEW DONORS THIS WEEK"
-            value={newDonors || kpis.totalDonorsThisWeek}
+            value={safeNewDonors}
             valueStyle={{ color: SUCCESS }}
             prefix={<UserAddOutlined />}
           />
@@ -93,21 +99,17 @@ function KPICards({ kpis, newDonors }: { kpis: KPIs; newDonors: number }) {
         <Card className="kpi-card" size="small">
           <Statistic
             title={<DefinitionTooltip term="Failed Charges" dashboardKey="donor-health">FAILED CHARGES</DefinitionTooltip>}
-            value={kpis.failedChargesAmount}
-            precision={0}
-            prefix="$"
-            valueStyle={{ color: kpis.failedChargesCount > 0 ? ERROR : SUCCESS }}
+            value={safeFailedAmount}
+            valueStyle={{ color: (kpis.failedChargesCount || 0) > 0 ? ERROR : SUCCESS }}
           />
-          <Text type="secondary" style={{ fontSize: 11 }}>{kpis.failedChargesCount} failed</Text>
+          <Text type="secondary" style={{ fontSize: 11 }}>{safeCount(kpis.failedChargesCount)} failed</Text>
         </Card>
       </Col>
       <Col xs={12} lg={6}>
         <Card className="kpi-card" size="small">
           <Statistic
             title={<DefinitionTooltip term="Monthly Recurring" dashboardKey="donor-health">MONTHLY RECURRING</DefinitionTooltip>}
-            value={kpis.recurringRevenue}
-            precision={0}
-            prefix="$"
+            value={safeRecurringRevenue}
             valueStyle={{ color: NAVY }}
             suffix={<SyncOutlined style={{ fontSize: 14 }} />}
           />
@@ -117,12 +119,12 @@ function KPICards({ kpis, newDonors }: { kpis: KPIs; newDonors: number }) {
         <Card className="kpi-card" size="small">
           <Statistic
             title={<DefinitionTooltip term="Data Quality Score" dashboardKey="donor-health">DATA QUALITY</DefinitionTooltip>}
-            value={kpis.dataQualityScore}
+            value={safeQualityScore}
             suffix="/100"
-            valueStyle={{ color: kpis.dataQualityScore >= 80 ? SUCCESS : kpis.dataQualityScore >= 60 ? WARNING : ERROR }}
+            valueStyle={{ color: (kpis.dataQualityScore || 0) >= 80 ? SUCCESS : (kpis.dataQualityScore || 0) >= 60 ? WARNING : ERROR }}
             prefix={<SafetyCertificateOutlined />}
           />
-          <Text type="secondary" style={{ fontSize: 11 }}>Retention: {kpis.retentionRate}%</Text>
+          <Text type="secondary" style={{ fontSize: 11 }}>Retention: {safeRetentionRate}</Text>
         </Card>
       </Col>
     </Row>
@@ -209,7 +211,7 @@ function SourceBarChart({ data, width: w }: { data: DonorSource[]; width: number
   const PAD = { top: 10, right: 10, bottom: 50, left: 60 };
   const cw = w - PAD.left - PAD.right;
   const ch = H - PAD.top - PAD.bottom;
-  const maxVal = Math.max(...data.map(d => d.totalAmount));
+  const maxVal = Math.max(...data.map(d => d.totalAmount || 0), 1);
   const barW = Math.min(Math.max((cw / data.length) * 0.6, 20), 60);
   const gap = cw / data.length;
 
@@ -218,21 +220,25 @@ function SourceBarChart({ data, width: w }: { data: DonorSource[]; width: number
       {[0, 0.25, 0.5, 0.75, 1].map(f => {
         const val = maxVal * f;
         const y = PAD.top + ch - f * ch;
+        const labelVal = val / 1000;
         return (
           <g key={f}>
             <line x1={PAD.left} y1={y} x2={w - PAD.right} y2={y} stroke={GRID} />
-            <text x={PAD.left - 6} y={y + 4} textAnchor="end" fontSize={10} fill={MUTED}>${Math.round(val / 1000)}K</text>
+            <text x={PAD.left - 6} y={y + 4} textAnchor="end" fontSize={10} fill={MUTED}>
+              {isNaN(labelVal) || labelVal == null ? '—' : `$${Math.round(labelVal)}K`}
+            </text>
           </g>
         );
       })}
       {data.map((d, i) => {
-        const barH = maxVal > 0 ? (d.totalAmount / maxVal) * ch : 0;
+        const amount = d.totalAmount || 0;
+        const barH = maxVal > 0 ? (amount / maxVal) * ch : 0;
         const x = PAD.left + i * gap + (gap - barW) / 2;
         const y = PAD.top + ch - barH;
-        const label = d.source.length > 12 ? d.source.substring(0, 12) + '…' : d.source;
+        const label = d.source && d.source.length > 12 ? d.source.substring(0, 12) + '…' : (d.source || 'Unknown');
         return (
-          <g key={d.source}>
-            <AntTooltip title={`${d.source}: ${fmtUSD(d.totalAmount)} (${d.count} donors)`}>
+          <g key={d.source || i}>
+            <AntTooltip title={`${d.source || 'Unknown'}: ${safeCurrency(amount, { maximumFractionDigits: 0 })} (${safeCount(d.count)} donors)`}>
               <rect x={x} y={y} width={barW} height={barH} fill={GOLD} rx={3} style={{ cursor: 'pointer' }} />
             </AntTooltip>
             <text x={x + barW / 2} y={H - 8} textAnchor="middle" fontSize={10} fill={MUTED}
@@ -246,17 +252,27 @@ function SourceBarChart({ data, width: w }: { data: DonorSource[]; width: number
 
 function NewDonorsBySource({ data }: { data: DonorSource[] }) {
   const { ref, width } = useWidth();
-  const totalDonors = data.reduce((sum, d) => sum + d.count, 0);
-  const totalAmount = data.reduce((sum, d) => sum + d.totalAmount, 0);
-  const topSource = data.length > 0 ? data.reduce((max, d) => d.count > max.count ? d : max, { source: 'None', count: 0 }) : { source: 'None', count: 0 };
+  const totalDonors = data.reduce((sum, d) => sum + (d.count || 0), 0);
+  const totalAmount = data.reduce((sum, d) => sum + (d.totalAmount || 0), 0);
+  const topSource = data.length > 0 ? data.reduce((max, d) => (d.count || 0) > (max.count || 0) ? d : max, { source: 'None', count: 0 }) : { source: 'None', count: 0 };
+  
+  // Check if all data is empty/NaN
+  const hasValidData = data.length > 0 && totalDonors > 0 && totalAmount > 0;
+  
+  const cardTitle = hasValidData 
+    ? `${safeCount(totalDonors)} new donors, ${safeCurrency(totalAmount, { maximumFractionDigits: 0 })} — ${topSource.source} leads with ${safeCount(topSource.count)}`
+    : "New Donor Acquisition";
   
   return (
-    <Card title={data.length > 0 
-      ? `${totalDonors} new donors, ${fmtUSD(totalAmount)} — ${topSource.source} leads with ${topSource.count}`
-      : "New Donors by Source"
-    } size="small">
+    <Card title={cardTitle} size="small">
       <div ref={ref} style={{ width: '100%', minHeight: 200 }}>
-        {width > 0 && <SourceBarChart data={data} width={width} />}
+        {!hasValidData ? (
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: 200, color: MUTED }}>
+            <Text type="secondary">No lifecycle data loaded</Text>
+          </div>
+        ) : (
+          width > 0 && <SourceBarChart data={data} width={width} />
+        )}
       </div>
     </Card>
   );
@@ -286,17 +302,28 @@ function ConversionsCard({ data }: { data: Conversion[] }) {
 
 // ── Lapsed Reactivated ──────────────────────────────────────────────────
 function LapsedCard({ data }: { data: LapsedItem[] }) {
-  if (data.length === 0) return null;
-  const totalFy26 = data.reduce((sum, d) => sum + d.fy26Amount, 0);
+  const totalFy26 = data.reduce((sum, d) => sum + (d.fy26Amount || 0), 0);
+  const hasValidData = data.length > 0 && totalFy26 > 0;
+  
+  if (!hasValidData) {
+    return (
+      <Card title="Reactivated Donors" size="small">
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: 100, color: MUTED }}>
+          <Text type="secondary">No reactivation data this period</Text>
+        </div>
+      </Card>
+    );
+  }
+
   return (
-    <Card title={`${data.length} lapsed donors reactivated — ${fmtUSD(totalFy26)} recovered in FY26`} size="small">
+    <Card title={`${safeCount(data.length)} lapsed donors reactivated — ${safeCurrency(totalFy26, { maximumFractionDigits: 0 })} recovered in FY26`} size="small">
       <Space direction="vertical" style={{ width: '100%' }} size={6}>
         {data.slice(0, 10).map((d, i) => (
           <div key={i} style={{ display: 'flex', justifyContent: 'space-between', padding: '6px 0', borderBottom: `1px solid ${GRID}` }}>
-            <Text strong style={{ fontSize: 13 }}>{d.name}</Text>
+            <Text strong style={{ fontSize: 13 }}>{d.name || 'Unknown Donor'}</Text>
             <Space size={4}>
-              <Tag color="default">FY25: {fmtUSD(d.fy25Amount)}</Tag>
-              <Tag color="success">FY26: {fmtUSD(d.fy26Amount)}</Tag>
+              <Tag color="default">FY25: {safeCurrency(d.fy25Amount, { maximumFractionDigits: 0 })}</Tag>
+              <Tag color="success">FY26: {safeCurrency(d.fy26Amount, { maximumFractionDigits: 0 })}</Tag>
             </Space>
           </div>
         ))}
@@ -307,20 +334,44 @@ function LapsedCard({ data }: { data: LapsedItem[] }) {
 
 // ── Milestone Approaching ───────────────────────────────────────────────
 function MilestoneCard({ data }: { data: MilestoneItem[] }) {
-  if (data.length === 0) return null;
-  const avgProgress = data.length > 0 ? Math.round(data.reduce((sum, d) => sum + (d.currentTotal / d.nextMilestone), 0) / data.length * 100) : 0;
+  const hasValidData = data.length > 0 && data.some(d => (d.currentTotal || 0) > 0 && (d.nextMilestone || 0) > 0);
+  
+  if (!hasValidData) {
+    return (
+      <Card title="Milestone Progress" size="small">
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: 100, color: MUTED }}>
+          <Text type="secondary">No milestone data loaded</Text>
+        </div>
+      </Card>
+    );
+  }
+
+  const avgProgress = data.reduce((sum, d) => {
+    const current = d.currentTotal || 0;
+    const next = d.nextMilestone || 1; // Avoid division by zero
+    return sum + (current / next);
+  }, 0) / data.length * 100;
+
+  const safeAvgProgress = isNaN(avgProgress) ? 0 : Math.round(avgProgress);
+
   return (
-    <Card title={`${data.length} donors approaching milestones — ${avgProgress}% average progress`} size="small">
+    <Card title={`${safeCount(data.length)} donors approaching milestones — ${safePercent(safeAvgProgress)} average progress`} size="small">
       <Space direction="vertical" style={{ width: '100%' }} size={6}>
         {data.slice(0, 10).map((d, i) => {
-          const pct = Math.round((d.currentTotal / d.nextMilestone) * 100);
+          const current = d.currentTotal || 0;
+          const next = d.nextMilestone || 1;
+          const pct = Math.round((current / next) * 100);
+          const safePct = isNaN(pct) ? 0 : Math.min(pct, 100);
+          
           return (
             <div key={i}>
               <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 4 }}>
-                <Text strong style={{ fontSize: 13 }}>{d.name}</Text>
-                <Text style={{ fontSize: 12 }}>{fmtUSD(d.currentTotal)} → {fmtUSD(d.nextMilestone)}</Text>
+                <Text strong style={{ fontSize: 13 }}>{d.name || 'Unknown Donor'}</Text>
+                <Text style={{ fontSize: 12 }}>
+                  {safeCurrency(current, { maximumFractionDigits: 0 })} → {safeCurrency(next, { maximumFractionDigits: 0 })}
+                </Text>
               </div>
-              <Progress percent={pct} strokeColor={GOLD} size="small" />
+              <Progress percent={safePct} strokeColor={GOLD} size="small" />
             </div>
           );
         })}
@@ -331,19 +382,32 @@ function MilestoneCard({ data }: { data: MilestoneItem[] }) {
 
 // ── Recurring Health ────────────────────────────────────────────────────
 function RecurringHealth({ newRecurring, cancelled }: { newRecurring: RecurringItem[]; cancelled: RecurringItem[] }) {
+  const hasNewData = newRecurring.length > 0 && newRecurring.some(d => (d.amount || 0) > 0);
+  const hasCancelledData = cancelled.length > 0 && cancelled.some(d => (d.amount || 0) > 0);
+  
+  if (!hasNewData && !hasCancelledData) {
+    return (
+      <Card title={<><SyncOutlined style={{ marginRight: 8 }} />Recurring Health</>} size="small">
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: 100, color: MUTED }}>
+          <Text type="secondary">No recurring data loaded</Text>
+        </div>
+      </Card>
+    );
+  }
+
   return (
     <Card title={<><SyncOutlined style={{ marginRight: 8 }} />Recurring Health</>} size="small">
       <Row gutter={[16, 16]}>
         <Col xs={24} md={12}>
           <Title level={5} style={{ color: SUCCESS, fontSize: 14 }}>
-            <Badge color={SUCCESS} /> New Recurring ({newRecurring.length})
+            <Badge color={SUCCESS} /> New Recurring ({safeCount(newRecurring.length)})
           </Title>
-          {newRecurring.length === 0 ? <Text type="secondary">None this week</Text> : (
+          {!hasNewData ? <Text type="secondary">None this week</Text> : (
             <Space direction="vertical" style={{ width: '100%' }} size={4}>
               {newRecurring.slice(0, 8).map((d, i) => (
                 <div key={i} style={{ display: 'flex', justifyContent: 'space-between', fontSize: 13 }}>
-                  <Text>{d.name}</Text>
-                  <Text strong>{fmtUSD(d.amount)}/{d.frequency || 'mo'}</Text>
+                  <Text>{d.name || 'Unknown Donor'}</Text>
+                  <Text strong>{safeCurrency(d.amount, { maximumFractionDigits: 0 })}/{d.frequency || 'mo'}</Text>
                 </div>
               ))}
             </Space>
@@ -351,14 +415,14 @@ function RecurringHealth({ newRecurring, cancelled }: { newRecurring: RecurringI
         </Col>
         <Col xs={24} md={12}>
           <Title level={5} style={{ color: ERROR, fontSize: 14 }}>
-            <Badge color={ERROR} /> Cancelled ({cancelled.length})
+            <Badge color={ERROR} /> Cancelled ({safeCount(cancelled.length)})
           </Title>
-          {cancelled.length === 0 ? <Text type="secondary">None this week</Text> : (
+          {!hasCancelledData ? <Text type="secondary">None this week</Text> : (
             <Space direction="vertical" style={{ width: '100%' }} size={4}>
               {cancelled.slice(0, 8).map((d, i) => (
                 <div key={i} style={{ display: 'flex', justifyContent: 'space-between', fontSize: 13 }}>
-                  <Text>{d.name}</Text>
-                  <Text type="danger">{fmtUSD(d.amount)}</Text>
+                  <Text>{d.name || 'Unknown Donor'}</Text>
+                  <Text type="danger">{safeCurrency(d.amount, { maximumFractionDigits: 0 })}</Text>
                 </div>
               ))}
             </Space>
@@ -372,32 +436,29 @@ function RecurringHealth({ newRecurring, cancelled }: { newRecurring: RecurringI
 // ── Data Quality Section ────────────────────────────────────────────────
 function DataQualitySection({ dq, score }: { dq: DataQuality; score: number }) {
   const issues = [
-    { label: 'Missing Campaign', count: dq.missingCampaign, icon: <WarningOutlined /> },
-    { label: 'Missing Amount', count: dq.missingAmountOpps, icon: <WarningOutlined /> },
-    { label: 'Overdue Opps', count: dq.overdueOpps, icon: <ExclamationCircleOutlined /> },
-    { label: 'Large Gifts No Campaign', count: dq.largGiftsNoCampaign, icon: <DollarOutlined /> },
-    { label: 'Duplicate Records', count: dq.duplicateRecords, icon: <WarningOutlined /> },
-    { label: 'Major Donors Missing Info', count: dq.majorDonorsMissingInfo, icon: <WarningOutlined /> },
-    { label: '$0 Recognition w/ Gifts', count: dq.zeroRecognitionWithGifts, icon: <ExclamationCircleOutlined /> },
+    { label: 'Missing Campaign', count: dq.missingCampaign || 0, icon: <WarningOutlined /> },
+    { label: 'Missing Amount', count: dq.missingAmountOpps || 0, icon: <WarningOutlined /> },
+    { label: 'Overdue Opps', count: dq.overdueOpps || 0, icon: <ExclamationCircleOutlined /> },
+    { label: 'Large Gifts No Campaign', count: dq.largGiftsNoCampaign || 0, icon: <DollarOutlined /> },
+    { label: 'Duplicate Records', count: dq.duplicateRecords || 0, icon: <WarningOutlined /> },
+    { label: 'Major Donors Missing Info', count: dq.majorDonorsMissingInfo || 0, icon: <WarningOutlined /> },
+    { label: '$0 Recognition w/ Gifts', count: dq.zeroRecognitionWithGifts || 0, icon: <ExclamationCircleOutlined /> },
   ];
 
-  const scoreColor = score >= 80 ? SUCCESS : score >= 60 ? WARNING : ERROR;
+  const safeScore = score || 0;
+  const scoreColor = safeScore >= 70 ? SUCCESS : safeScore >= 40 ? GOLD : ERROR;
 
   return (
     <Card title={<><SafetyCertificateOutlined style={{ marginRight: 8 }} />Data Quality</>} size="small">
       <Row gutter={[16, 16]}>
         <Col xs={24} md={8}>
           <div style={{ textAlign: 'center', padding: '16px 0' }}>
-            <Progress
-              type="dashboard"
-              percent={score}
-              strokeColor={scoreColor}
-              format={(pct) => <span style={{ color: scoreColor, fontSize: 24, fontWeight: 700 }}>{pct}</span>}
-              size={140}
+            <Statistic 
+              title="Data Quality Score" 
+              value={safeScore} 
+              suffix="/100" 
+              valueStyle={{ color: scoreColor, fontSize: 28, fontWeight: 700 }} 
             />
-            <div style={{ marginTop: 8 }}>
-              <Text strong>Quality Score</Text>
-            </div>
           </div>
         </Col>
         <Col xs={24} md={16}>
@@ -408,7 +469,7 @@ function DataQualitySection({ dq, score }: { dq: DataQuality; score: number }) {
                   <span style={{ color: item.count > 0 ? WARNING : SUCCESS }}>{item.icon}</span>
                   <Text style={{ fontSize: 13 }}>{item.label}</Text>
                 </Space>
-                <Tag color={item.count === 0 ? 'success' : item.count > 10 ? 'error' : 'warning'}>{item.count}</Tag>
+                <Tag color={item.count === 0 ? 'success' : item.count > 10 ? 'error' : 'warning'}>{safeCount(item.count)}</Tag>
               </div>
             ))}
           </Space>

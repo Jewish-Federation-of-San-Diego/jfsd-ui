@@ -1,10 +1,9 @@
-import { Card, Col, Row, Statistic, Table, Tag, Typography, Progress, Alert, Tooltip } from 'antd';
+import { Card, Col, Row, Statistic, Table, Tag, Typography, Alert, Tooltip } from 'antd';
 import { DashboardSkeleton } from '../components/DashboardSkeleton';
 import { CsvExport } from '../components/CsvExport';
 import { useEffect, useState, useCallback } from 'react';
 
 import { DataFreshness } from '../components/DataFreshness';
-import { DefinitionTooltip } from '../components/DefinitionTooltip';
 import { NAVY, GOLD, SUCCESS, ERROR, WARNING, MUTED } from '../theme/jfsdTheme';
 import { safeCount, safeCurrency, safePercent } from '../utils/formatters';
 
@@ -22,6 +21,7 @@ interface WoW { thisWeek: number; lastWeek: number; changePct: number; }
 interface KPIs {
   totalSpendFY26: number; monthlyAvg: number; activeCards: number;
   topDepartment: string; topDepartmentAmount: number; weekOverWeekChange: number;
+  receiptCompliance?: number; // Optional field for receipt attachment rate
 }
 interface RampData {
   asOfDate: string; monthlyTrend: MonthlyTrend[]; departmentSpend: DeptSpend[];
@@ -144,32 +144,30 @@ function CategoryGrid({ data }: { data: CategoryRow[] }) {
   );
 }
 
-// ── Card Utilization Gauge ──────────────────────────────────────────────
-function UtilGauge({ util }: { util: CardUtil }) {
-  const used = util.active - util.dormant30d;
-  const pctActive = util.active > 0 ? Math.round((used / util.active) * 100) : 0;
+// ── Card Utilization Statistics (replaced gauge) ────────────────────────
+function CardUtilization({ util }: { util: CardUtil }) {
+  const activeCards = util.active || 0;
+  const dormantCards = util.dormant30d || 0;
 
   return (
-    <div style={{ textAlign: 'center' }}>
-      <Progress
-        type="dashboard"
-        percent={pctActive}
-        strokeColor={pctActive > 70 ? SUCCESS : pctActive > 40 ? WARNING : ERROR}
-        format={() => <span style={{ fontSize: 20, fontWeight: 700, color: NAVY }}>{pctActive}%</span>}
-        size={140}
-      />
-      <div style={{ marginTop: 8 }}>
-        <Text style={{ fontSize: 12, color: MUTED }}>Active cards in use (30d)</Text>
-      </div>
-      <Row gutter={16} style={{ marginTop: 12 }}>
+    <Card title="Card Utilization" size="small">
+      <Row gutter={16}>
         <Col span={12}>
-          <Statistic title="Active" value={util.active} valueStyle={{ fontSize: 18, color: SUCCESS }} />
+          <Statistic 
+            title="Active (30d)" 
+            value={safeCount(activeCards)} 
+            valueStyle={{ color: activeCards > 0 ? SUCCESS : MUTED, fontSize: 28 }} 
+          />
         </Col>
         <Col span={12}>
-          <Statistic title={<DefinitionTooltip term="Dormant Card" dashboardKey="ramp">Dormant</DefinitionTooltip>} value={util.dormant30d} valueStyle={{ fontSize: 18, color: WARNING }} />
+          <Statistic 
+            title="Dormant" 
+            value={safeCount(dormantCards)} 
+            valueStyle={{ color: dormantCards > 0 ? GOLD : MUTED, fontSize: 28 }} 
+          />
         </Col>
       </Row>
-    </div>
+    </Card>
   );
 }
 
@@ -210,6 +208,10 @@ export function RampAnalyticsDashboard() {
   const cardUtilization = data.cardUtilization ?? { active: 0, dormant30d: 0, totalLimit: 0, totalSpent: 0, utilizationPct: 0 };
   const weekOverWeek = data.weekOverWeek ?? { thisWeek: 0, lastWeek: 0, changePct: 0 };
 
+  // Fix KPI disconnect - if totalSpendFY26 is 0 but we have category data, sum the categories
+  const categoryTotal = categoryBreakdown.reduce((sum, cat) => sum + (cat.amount || 0), 0);
+  const displayTotalSpend = (kpis.totalSpendFY26 || 0) > 0 ? kpis.totalSpendFY26 : categoryTotal;
+
   const merchantCols = [
     { title: 'Merchant', dataIndex: 'merchant', key: 'merchant', sorter: (a: MerchantRow, b: MerchantRow) => a.merchant.localeCompare(b.merchant) },
     { title: 'Spend', dataIndex: 'amount', key: 'amount', render: (v: number) => fmt(v), sorter: (a: MerchantRow, b: MerchantRow) => a.amount - b.amount, defaultSortOrder: 'descend' as const },
@@ -226,7 +228,9 @@ export function RampAnalyticsDashboard() {
   // Dynamic titles
   const currentMonth = monthlyTrend[monthlyTrend.length - 1];
   const monthTitle = currentMonth ? `Monthly Trend: ${fmt(currentMonth.amount)} this month` : "Monthly Spend Trend";
-  const deptTitle = `Department Spend: ${kpis.topDepartment} leads at ${fmt(kpis.topDepartmentAmount)}`;
+  const deptTitle = kpis.topDepartment && kpis.topDepartment !== '—' 
+    ? `Department Spend: ${kpis.topDepartment} leads at ${fmt(kpis.topDepartmentAmount)}` 
+    : 'Department Spend';
   const topMerchantTitle = topMerchants[0] ? `Top Merchants: ${topMerchants[0].merchant} leads at ${fmt(topMerchants[0].amount)}` : "Top Merchants";
   const topSpenderTitle = topSpenders[0] ? `Top Spenders: ${topSpenders[0].name} leads at ${fmt(topSpenders[0].amount)}` : "Top Spenders";
 
@@ -242,7 +246,7 @@ export function RampAnalyticsDashboard() {
       <Row gutter={[16, 16]} style={{ marginBottom: 20 }}>
         <Col xs={12} sm={8} lg={5}>
           <Card size="small" bordered={false} style={{ background: NAVY, borderRadius: 8 }}>
-            <Statistic title={<span style={{ color: 'rgba(255,255,255,0.7)' }}>Total FY26 Spend</span>} value={kpis.totalSpendFY26} prefix="$" precision={0} valueStyle={{ color: '#fff', fontSize: 22 }} />
+            <Statistic title={<span style={{ color: 'rgba(255,255,255,0.7)' }}>Total FY26 Spend</span>} value={displayTotalSpend} prefix="$" precision={0} valueStyle={{ color: '#fff', fontSize: 22 }} />
           </Card>
         </Col>
         <Col xs={12} sm={8} lg={5}>
@@ -276,6 +280,28 @@ export function RampAnalyticsDashboard() {
         </Col>
       </Row>
 
+      {/* Receipt Compliance Row */}
+      <Row gutter={[16, 16]} style={{ marginBottom: 20 }}>
+        <Col xs={12} sm={8} lg={6}>
+          <Card size="small" bordered={false} style={{ borderRadius: 8 }}>
+            {kpis.receiptCompliance != null ? (
+              <Statistic
+                title="Receipt Compliance"
+                value={kpis.receiptCompliance}
+                suffix="%"
+                precision={1}
+                valueStyle={{ color: (kpis.receiptCompliance || 0) >= 80 ? SUCCESS : (kpis.receiptCompliance || 0) >= 60 ? WARNING : ERROR, fontSize: 20 }}
+              />
+            ) : (
+              <div>
+                <div style={{ fontSize: 13, color: MUTED, marginBottom: 4 }}>Receipt Compliance</div>
+                <div style={{ color: WARNING, fontSize: 16, fontWeight: 600 }}>Connect Ramp API</div>
+              </div>
+            )}
+          </Card>
+        </Col>
+      </Row>
+
       {/* Charts Row 1 */}
       <Row gutter={[16, 16]} style={{ marginBottom: 16 }}>
         <Col xs={24} lg={14}>
@@ -298,9 +324,7 @@ export function RampAnalyticsDashboard() {
           </Card>
         </Col>
         <Col xs={24} lg={8}>
-          <Card title="Card Utilization" size="small" styles={{ header: { color: NAVY, borderBottom: `2px solid ${GOLD}` } }}>
-            <UtilGauge util={cardUtilization} />
-          </Card>
+          <CardUtilization util={cardUtilization} />
         </Col>
       </Row>
 
