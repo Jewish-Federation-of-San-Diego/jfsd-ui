@@ -1094,13 +1094,26 @@
       "Recognition_Amount_FY26__c": 900
     }
   ],
-  "dataQuality": {},
+  "dataQuality": {
+    "overdueOpps": 0,
+    "score": 0,
+    "missingEmails": 0,
+    "missingPhones": 0,
+    "missingAddresses": 0,
+    "duplicateSuspects": 0,
+    "issues": []
+  },
   "kpis": {
     "newDonorsThisWeek": 20,
     "failedRecurring": 0,
     "cancelledRecurring": 0,
     "newRecurring": 50,
-    "reactivated": 20
+    "reactivated": 20,
+    "failedChargesAmount": 0,
+    "failedChargesCount": 0,
+    "recurringRevenue": 0,
+    "dataQualityScore": 0,
+    "retentionRate": 0
   },
   "asOfDate": "2026-03-06T10:20:00"
 }
