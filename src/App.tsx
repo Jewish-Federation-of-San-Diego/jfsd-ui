@@ -54,6 +54,7 @@ import { EcobeeTrendsDashboard } from './dashboards/EcobeeTrendsDashboard';
 import { MondayDashboard } from './dashboards/MondayDashboard';
 import { ChartGalleryDashboard } from './dashboards/ChartGalleryDashboard';
 import { DashboardAuditDashboard } from './dashboards/DashboardAuditDashboard';
+import { GuideDashboard } from './dashboards/GuideDashboard';
 import { ShareOfWalletDashboard } from './dashboards/ShareOfWalletDashboard';
 import { DonorLifecycleDashboard } from './dashboards/DonorLifecycleDashboard';
 import { CommunityNetworkDashboard } from './dashboards/CommunityNetworkDashboard';
@@ -75,6 +76,7 @@ const { Title } = Typography;
 const groupLabelStyle = { fontSize: 11, letterSpacing: '0.5px', color: 'rgba(255,255,255,0.4)', padding: '12px 16px 4px' };
 
 const menuItems = [
+  { key: 'guide', icon: <InfoCircleOutlined />, label: 'Guide & Directory' },
   { key: 'overview', icon: <PieChartOutlined />, label: 'Overview' },
   {
     type: 'group' as const,
@@ -212,6 +214,7 @@ function App() {
 
   const renderDashboard = () => {
     switch (selectedKey) {
+      case 'guide': return <GuideDashboard onNavigate={(key: string) => setSelectedKey(key)} />;
       case 'overview': return <OverviewDashboard onNavigate={(key: string) => setSelectedKey(key)} />;
       case 'campaign': return <CampaignTrackerDashboard />;
       case 'donor-health': return <DonorHealthDashboard />;
