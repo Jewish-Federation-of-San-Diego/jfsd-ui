@@ -1,38 +1,106 @@
 {
-  "overallScore": 87,
+  "asOfDate": "2026-03-07 15:46",
+  "overallScore": 100,
   "categories": [
     {
-      "name": "Email",
-      "score": 90,
-      "icon": "\ud83d\udce7"
+      "name": "Contact Completeness",
+      "score": 100,
+      "issues": [
+        {
+          "metric": "Major donors missing email",
+          "count": 0,
+          "severity": "high",
+          "details": []
+        },
+        {
+          "metric": "Major donors missing address",
+          "count": 0,
+          "severity": "medium",
+          "details": []
+        },
+        {
+          "metric": "Major donors missing phone",
+          "count": 0,
+          "severity": "low",
+          "details": []
+        }
+      ]
     },
     {
-      "name": "Phone",
-      "score": 94,
-      "icon": "\ud83d\udcf1"
+      "name": "Duplicate Records",
+      "score": 100,
+      "issues": [
+        {
+          "metric": "Duplicate person accounts",
+          "count": 0,
+          "severity": "high",
+          "details": [],
+          "totalAffectedRecords": 0
+        }
+      ]
     },
     {
-      "name": "Address",
-      "score": 98,
-      "icon": "\ud83d\udccd"
+      "name": "Campaign Health",
+      "score": 100,
+      "issues": [
+        {
+          "metric": "Orphaned campaigns",
+          "count": 0,
+          "severity": "medium",
+          "details": []
+        },
+        {
+          "metric": "Gifts without campaign",
+          "count": 0,
+          "severity": "high",
+          "dollarAmount": 0
+        }
+      ]
     },
     {
-      "name": "Birthday",
-      "score": 65,
-      "icon": "\ud83c\udf82"
+      "name": "Pipeline Hygiene",
+      "score": 100,
+      "issues": [
+        {
+          "metric": "Overdue open opportunities",
+          "count": 0,
+          "severity": "high",
+          "details": []
+        },
+        {
+          "metric": "Opportunities missing amount",
+          "count": 0,
+          "severity": "medium"
+        }
+      ]
     },
     {
-      "name": "Overall",
-      "score": 87,
-      "icon": "\ud83d\udcca"
+      "name": "Recognition Integrity",
+      "score": 100,
+      "issues": [
+        {
+          "metric": "Zero recognition with gifts",
+          "count": 0,
+          "severity": "high",
+          "details": []
+        },
+        {
+          "metric": "Deceased with active recurring",
+          "count": 0,
+          "severity": "critical",
+          "details": []
+        }
+      ]
     }
   ],
   "trends": [],
   "kpis": {
-    "overallScore": 87,
-    "emailPct": 90,
-    "phonePct": 94,
-    "addressPct": 98
-  },
-  "asOfDate": "2026-03-06T10:20:00"
+    "overallScore": 100,
+    "criticalIssues": 0,
+    "highIssues": 0,
+    "mediumIssues": 0,
+    "lowIssues": 0,
+    "totalRecordsAffected": 0,
+    "totalMajorDonors": 1
+  }
 }
