@@ -169,7 +169,7 @@ export function VoiceAgentDashboard() {
       </Row>
 
       <Title level={5} style={{ margin: 0, color: NAVY }}>
-        Calls Over Time
+        {safeCount(kpis?.totalCalls ?? 0)} total calls — {safePercent(kpis?.completionRate ?? 0, { decimals: 1 })} completion rate, {safeNumber(kpis?.avgDuration ?? 0, { maximumFractionDigits: 0 })}s avg
       </Title>
       <Card bordered={false} style={DASHBOARD_CARD_STYLE}>
         <Tabs
@@ -228,7 +228,7 @@ export function VoiceAgentDashboard() {
       </Card>
 
       <Title level={5} style={{ margin: 0, color: NAVY }}>
-        Agent Details
+        {safeCount(agents.length)} voice agents — call distribution and last active
       </Title>
       <Card bordered={false} style={DASHBOARD_CARD_STYLE}>
         <Table

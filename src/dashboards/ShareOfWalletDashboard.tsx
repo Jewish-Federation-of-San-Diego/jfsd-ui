@@ -150,7 +150,7 @@ export function ShareOfWalletDashboard() {
       </Row>
 
       <Title level={5} style={{ margin: 0, color: NAVY }}>
-        Distribution & Capacity Positioning
+        Median SOW {safePercent(kpis?.medianSow ?? 0, { decimals: 1 })} — {safeCurrency(kpis?.totalGap ?? 0, { maximumFractionDigits: 0 })} capacity gap across {safeCount(kpis?.donorCount ?? 0)} donors
       </Title>
       <Row gutter={[12, 12]}>
         <Col xs={24} lg={12}>
@@ -201,6 +201,38 @@ export function ShareOfWalletDashboard() {
                 height: 320,
                 xaxis: { title: "Annual Capacity" },
                 yaxis: { title: "FY26 Recognition" },
+                shapes: [
+                  {
+                    type: "line",
+                    x0: 0,
+                    y0: 0,
+                    x1: Math.max(...opportunities.map(r => r?.annualCapacity ?? 0)),
+                    y1: Math.max(...opportunities.map(r => r?.annualCapacity ?? 0)) * 0.05,
+                    line: { color: ERROR, width: 1, dash: "dash" },
+                  },
+                  {
+                    type: "line",
+                    x0: 0,
+                    y0: 0,
+                    x1: Math.max(...opportunities.map(r => r?.annualCapacity ?? 0)),
+                    y1: Math.max(...opportunities.map(r => r?.annualCapacity ?? 0)) * 0.15,
+                    line: { color: WARNING, width: 1, dash: "dash" },
+                  },
+                  {
+                    type: "line",
+                    x0: 0,
+                    y0: 0,
+                    x1: Math.max(...opportunities.map(r => r?.annualCapacity ?? 0)),
+                    y1: Math.max(...opportunities.map(r => r?.annualCapacity ?? 0)) * 0.40,
+                    line: { color: SUCCESS, width: 1, dash: "dash" },
+                  },
+                ],
+                annotations: [
+                  { x: Math.max(...opportunities.map(r => r?.annualCapacity ?? 0)) * 0.3, y: Math.max(...opportunities.map(r => r?.annualCapacity ?? 0)) * 0.3 * 0.02, text: "Big Upside (<5%)", showarrow: false, font: { size: 10, color: ERROR } },
+                  { x: Math.max(...opportunities.map(r => r?.annualCapacity ?? 0)) * 0.5, y: Math.max(...opportunities.map(r => r?.annualCapacity ?? 0)) * 0.5 * 0.10, text: "Upgrade (5-15%)", showarrow: false, font: { size: 10, color: WARNING } },
+                  { x: Math.max(...opportunities.map(r => r?.annualCapacity ?? 0)) * 0.5, y: Math.max(...opportunities.map(r => r?.annualCapacity ?? 0)) * 0.5 * 0.27, text: "Engaged (15-40%)", showarrow: false, font: { size: 10, color: NAVY } },
+                  { x: Math.max(...opportunities.map(r => r?.annualCapacity ?? 0)) * 0.5, y: Math.max(...opportunities.map(r => r?.annualCapacity ?? 0)) * 0.5 * 0.50, text: "Champion (>40%)", showarrow: false, font: { size: 10, color: SUCCESS } },
+                ],
               }}
               style={{ width: "100%" }}
               config={{ displayModeBar: false }}
@@ -210,7 +242,7 @@ export function ShareOfWalletDashboard() {
       </Row>
 
       <Title level={5} style={{ margin: 0, color: NAVY }}>
-        Top Upgrade Opportunities
+        Top {safeCount(topUpgradeRows.length)} upgrade opportunities — Big Upside & Upgrade segments
       </Title>
       <Card bordered={false} style={DASHBOARD_CARD_STYLE}>
         <Table<OpportunityRow>

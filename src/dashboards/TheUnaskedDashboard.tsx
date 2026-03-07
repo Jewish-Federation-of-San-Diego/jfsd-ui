@@ -179,7 +179,7 @@ export function TheUnaskedDashboard() {
       </Card>
 
       <Title level={5} style={{ margin: 0, color: NAVY }}>
-        Capacity Distribution
+        {safeCount(kpis?.count ?? 0)} unasked donors — {safeCurrency(kpis?.totalCapacity ?? 0, { maximumFractionDigits: 0 })} estimated capacity, {safeCurrency(kpis?.medianCapacity ?? 0, { maximumFractionDigits: 0 })} median
       </Title>
       <Row gutter={[12, 12]}>
         <Col xs={24} lg={11}>

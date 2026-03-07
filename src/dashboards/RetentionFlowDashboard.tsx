@@ -135,7 +135,7 @@ export function RetentionFlowDashboard() {
       </Row>
 
       <Title level={5} style={{ margin: 0, color: NAVY }}>
-        Sankey Flow
+        {safePercent(flow?.retentionRate ?? 0, { decimals: 1 })} retention from {safeCount(flow.baseCount)} FY25 donors — {safeCurrency(flow?.lapsedDollars ?? 0, { maximumFractionDigits: 0 })} at risk
       </Title>
       <Card bordered={false} style={DASHBOARD_CARD_STYLE}>
         <Tabs

@@ -94,7 +94,7 @@ export function HoldingsDashboard() {
       </Row>
 
       <Title level={5} style={{ margin: 0, color: NAVY }}>
-        Holdings Metrics
+        {safeCurrency(metrics?.assets ?? 0, { maximumFractionDigits: 0 })} assets — {safePercent(leverageRatio, { decimals: 1 })} leverage ratio
       </Title>
       <Card bordered={false} style={DASHBOARD_CARD_STYLE}>
         <Table<HoldingsMetricRow>
@@ -110,7 +110,7 @@ export function HoldingsDashboard() {
       </Card>
 
       <Title level={5} style={{ margin: 0, color: NAVY }}>
-        Embedded Holdings Dashboard
+        Embedded holdings dashboard — detailed breakdown
       </Title>
       <Card bordered={false} style={DASHBOARD_CARD_STYLE}>
         <iframe

@@ -7,7 +7,7 @@ import { DashboardErrorState } from "../components/DashboardErrorState";
 import { fetchJson } from "../utils/dataFetch";
 import { safeCurrency, safePercent, safeCount } from "../utils/formatters";
 import { NAVY, GOLD, SUCCESS, WARNING, MUTED, DEVELOPMENT } from "../theme/jfsdTheme";
-import { DASHBOARD_CARD_STYLE, PLOTLY_BASE_LAYOUT, PLOTLY_COLORS } from "../utils/dashboardStyles";
+import { DASHBOARD_CARD_STYLE, PLOTLY_BASE_LAYOUT } from "../utils/dashboardStyles";
 
 const { Title, Text } = Typography;
 
@@ -139,7 +139,7 @@ export function MajorGiftsDashboard() {
       </Row>
 
       <Title level={5} style={{ margin: 0, color: NAVY }}>
-        Pipeline Visuals
+        Pipeline at {safeCurrency(kpis?.pipelineValue ?? 0, { maximumFractionDigits: 0 })} — {safePercent(kpis?.closeRate ?? 0, { decimals: 0 })} close rate across {safeCount(stageStats.Cultivation.count + stageStats.Solicitation.count + stageStats.Pending.count)} active opportunities
       </Title>
       <Row gutter={[12, 12]}>
         <Col xs={24} lg={12}>
@@ -156,7 +156,7 @@ export function MajorGiftsDashboard() {
                     stageStats?.Closed?.value ?? 0,
                   ],
                   textinfo: "value+percent",
-                  marker: { color: [PLOTLY_COLORS[0], PLOTLY_COLORS[1], PLOTLY_COLORS[2], PLOTLY_COLORS[6]] },
+                  marker: { color: [WARNING, GOLD, NAVY, SUCCESS] },
                 },
               ]}
               layout={{
@@ -173,16 +173,23 @@ export function MajorGiftsDashboard() {
             <Plot
               data={[
                 {
-                  type: "pie",
-                  labels: ["Cultivation", "Solicitation", "Pending", "Closed"],
-                  values: [
-                    stageStats?.Cultivation?.count ?? 0,
-                    stageStats?.Solicitation?.count ?? 0,
-                    stageStats?.Pending?.count ?? 0,
+                  type: "bar",
+                  orientation: "h",
+                  y: ["Closed", "Pending", "Solicitation", "Cultivation"],
+                  x: [
                     stageStats?.Closed?.count ?? 0,
+                    stageStats?.Pending?.count ?? 0,
+                    stageStats?.Solicitation?.count ?? 0,
+                    stageStats?.Cultivation?.count ?? 0,
                   ],
-                  marker: { colors: [PLOTLY_COLORS[0], PLOTLY_COLORS[1], PLOTLY_COLORS[2], PLOTLY_COLORS[6]] },
-                  textinfo: "label+percent",
+                  marker: { color: [SUCCESS, NAVY, GOLD, WARNING] },
+                  text: [
+                    stageStats?.Closed?.count ?? 0,
+                    stageStats?.Pending?.count ?? 0,
+                    stageStats?.Solicitation?.count ?? 0,
+                    stageStats?.Cultivation?.count ?? 0,
+                  ],
+                  textposition: "auto",
                 },
               ]}
               layout={{
@@ -198,7 +205,7 @@ export function MajorGiftsDashboard() {
       </Row>
 
       <Title level={5} style={{ margin: 0, color: NAVY }}>
-        Top Prospects
+        Top {safeCount(topProspects.length)} prospects — avg {safeCurrency(kpis?.avgGiftSize ?? 0, { maximumFractionDigits: 0 })} gift size
       </Title>
       <Card bordered={false} style={DASHBOARD_CARD_STYLE}>
         <Table

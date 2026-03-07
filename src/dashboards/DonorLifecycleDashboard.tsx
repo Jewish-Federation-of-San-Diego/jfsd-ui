@@ -6,7 +6,7 @@ import { DataFreshness } from "../components/DataFreshness";
 import { DashboardErrorState } from "../components/DashboardErrorState";
 import { fetchJson } from "../utils/dataFetch";
 import { safePercent, safeCount } from "../utils/formatters";
-import { NAVY, GOLD, SUCCESS, MUTED, DEVELOPMENT } from "../theme/jfsdTheme";
+import { NAVY, GOLD, SUCCESS, ERROR, MUTED, DEVELOPMENT } from "../theme/jfsdTheme";
 import { DASHBOARD_CARD_STYLE, PLOTLY_BASE_LAYOUT, PLOTLY_COLORS } from "../utils/dashboardStyles";
 import { classifyLifecycleSegment, parseDonorRecords } from "../utils/donorAnalytics";
 import type { DonorDataResponse, LifecycleSegment } from "../utils/donorAnalytics";
@@ -136,13 +136,24 @@ export function DonorLifecycleDashboard() {
       </Row>
 
       <Title level={5} style={{ margin: 0, color: NAVY }}>
-        Lifecycle Mix and Migration
+        {safePercent(retentionRate, { decimals: 1 })} retention — {safePercent(upgradeRate, { decimals: 1 })} upgraded FY25→FY26
       </Title>
       <Row gutter={[12, 12]}>
         <Col xs={24} lg={12}>
           <Card bordered={false} style={DASHBOARD_CARD_STYLE}>
             <Plot
-              data={[{ type: "bar", x: SEGMENT_ORDER, y: SEGMENT_ORDER.map((segment) => segmentCounts[segment] ?? 0), marker: { color: PLOTLY_COLORS[0] } }]}
+              data={[{
+                type: "bar",
+                x: SEGMENT_ORDER,
+                y: SEGMENT_ORDER.map((segment) => segmentCounts[segment] ?? 0),
+                marker: {
+                  color: SEGMENT_ORDER.map(seg =>
+                    seg === "New" || seg === "Retained" || seg === "Upgraded" || seg === "Reactivated" ? SUCCESS :
+                    seg === "Lapsed" ? ERROR :
+                    GOLD
+                  )
+                }
+              }]}
               layout={{ ...PLOTLY_BASE_LAYOUT, height: 320 }}
               style={{ width: "100%" }}
               config={{ displayModeBar: false }}

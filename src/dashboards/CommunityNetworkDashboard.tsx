@@ -294,14 +294,14 @@ export function CommunityNetworkDashboard() {
       </Card>
 
       <Title level={5} style={{ margin: 0, color: NAVY }}>
-        Network Visualization
+        {safeCount(filtered?.nodes?.length ?? 0)} nodes, {safeCount(filtered?.links?.length ?? 0)} edges — avg degree {safeNumber(avgDegree, { maximumFractionDigits: 1 })}
       </Title>
       <Card bordered={false} style={DASHBOARD_CARD_STYLE}>
         <svg ref={svgRef} viewBox="0 0 1100 620" style={{ width: "100%", height: 620, border: `1px solid ${MUTED}` }} />
       </Card>
 
       <Title level={5} style={{ margin: 0, color: NAVY }}>
-        Most Connected Nodes
+        Top {safeCount(summaryRows.length)} most connected nodes
       </Title>
       <Card bordered={false} style={DASHBOARD_CARD_STYLE}>
         <Table

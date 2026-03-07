@@ -210,7 +210,7 @@ export function ImmersiveTravelDashboard() {
       </Row>
 
       <Title level={5} style={{ margin: 0, color: NAVY }}>
-        Trip Cards
+        {safeCount(kpis?.totalTrips ?? 0)} trips — {safeCount(kpis?.totalRegistrants ?? 0)} registrants, {safeCurrency(kpis?.totalRevenue ?? 0, { maximumFractionDigits: 0 })} revenue
       </Title>
       <Row gutter={[12, 12]}>
         {tripRows.map((trip) => {
@@ -239,7 +239,7 @@ export function ImmersiveTravelDashboard() {
       </Row>
 
       <Title level={5} style={{ margin: 0, color: NAVY }}>
-        Timeline & Revenue
+        Registration timeline — avg trip revenue {safeCurrency(kpis?.avgTripRevenue ?? 0, { maximumFractionDigits: 0 })}
       </Title>
       <Row gutter={[12, 12]}>
         <Col xs={24} lg={12}>

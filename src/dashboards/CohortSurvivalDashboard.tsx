@@ -140,7 +140,7 @@ export function CohortSurvivalDashboard() {
       </Row>
 
       <Title level={5} style={{ margin: 0, color: NAVY }}>
-        Survival Curves and Retention Heatmap
+        {safeCount(cohorts.length)} cohorts tracked — avg {safePercent(avgRetention, { decimals: 1 })} FY25→FY26 retention
       </Title>
       <Card bordered={false} style={DASHBOARD_CARD_STYLE}>
         <Tabs
@@ -152,13 +152,13 @@ export function CohortSurvivalDashboard() {
                 <Row gutter={[12, 12]}>
                   <Col xs={24} lg={12}>
                     <Plot
-                      data={cohorts.map((cohort) => ({
+                      data={cohorts.map((cohort, index) => ({
                         type: "scatter",
                         mode: "lines+markers",
                         name: `${cohort?.cohort} (${safeCount(cohort?.size ?? 0)})`,
                         x: ["FY24", "FY25", "FY26"],
                         y: cohort?.survival ?? [0, 0, 0],
-                        line: { width: 2, color: PLOTLY_COLORS[0] },
+                        line: { width: 2, color: PLOTLY_COLORS[index % PLOTLY_COLORS.length] },
                       }))}
                       layout={{
                         ...PLOTLY_BASE_LAYOUT,
@@ -231,7 +231,7 @@ export function CohortSurvivalDashboard() {
       </Card>
 
       <Title level={5} style={{ margin: 0, color: NAVY }}>
-        Mortality Model
+        Mortality model — predictive view across {safeCount(donors.length)} donors
       </Title>
       <Card bordered={false} style={DASHBOARD_CARD_STYLE}>
         <iframe
