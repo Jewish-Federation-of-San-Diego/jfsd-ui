@@ -1,11 +1,11 @@
 {
-  "asOfDate": "2026-02-24",
+  "asOfDate": "2026-02-26",
   "notes": null,
   "onlineGiving": {
-    "totalFY26": 318047.53,
-    "totalContributions": 664,
-    "avgGift": 478.99,
-    "medianGift": 40.47
+    "totalFY26": 323445.49,
+    "totalContributions": 731,
+    "avgGift": 442.47,
+    "medianGift": 36.0
   },
   "monthlyTrend": [
     {
@@ -52,15 +52,15 @@
     },
     {
       "month": "Feb",
-      "amount": 30686.13,
+      "amount": 36084.09,
       "recurringAmount": 0.0,
-      "contributions": 128
+      "contributions": 195
     }
   ],
   "recurring": {
     "activeProfiles": 0,
     "monthlyRecurringRevenue": 0.0,
-    "newThisMonth": 96,
+    "newThisMonth": 21,
     "cancelledThisMonth": 0,
     "churnRate": 0,
     "avgRecurringAmount": 0
@@ -68,8 +68,8 @@
   "topProducts": [
     {
       "name": "Annual Campaign Page - All in - FY26 - Today Only",
-      "amount": 248731.88,
-      "count": 267
+      "amount": 253731.88,
+      "count": 268
     },
     {
       "name": "FED360 FY26 - Today Only",
@@ -120,159 +120,163 @@
   "conversionBySource": [
     {
       "source": "Web",
-      "contributions": 664,
-      "amount": 318047.53
+      "contributions": 731,
+      "amount": 323445.49
     }
   ],
   "recentContributions": [
     {
-      "name": "Riley Martinez",
+      "name": "Mark Stra",
       "amount": 0.0,
-      "product": "Individual Ticket - Yom HaShoah - Inidividual Ticket",
-      "date": "2026-02-24",
+      "product": "Individual Ticket - Yom HaZikaron - Inidividual Ticket",
+      "date": "2026-02-26",
       "recurring": false
     },
     {
-      "name": "Jason Bercovitch",
+      "name": "Jack Forman",
       "amount": 0.0,
-      "product": "Individual Ticket - Yom HaShoah - Inidividual Ticket",
-      "date": "2026-02-24",
+      "product": "Individual Ticket - Yom HaZikaron - Inidividual Ticket",
+      "date": "2026-02-25",
       "recurring": false
     },
     {
-      "name": "Karen Frischwasser",
+      "name": "Judy Hante",
       "amount": 0.0,
-      "product": "Individual Ticket - Yom HaShoah - Inidividual Ticket",
-      "date": "2026-02-23",
+      "product": "Individual Ticket - Yom HaZikaron - Inidividual Ticket",
+      "date": "2026-02-25",
       "recurring": false
     },
     {
-      "name": "Daniel Eyal",
+      "name": "Mathew Kostrinsky",
       "amount": 0.0,
-      "product": "Individual Ticket - Yom HaShoah - Inidividual Ticket",
-      "date": "2026-02-23",
+      "product": "Individual Ticket - Yom HaZikaron - Inidividual Ticket",
+      "date": "2026-02-25",
       "recurring": false
     },
     {
-      "name": "stephanie wells",
+      "name": "Allison Lazerus",
       "amount": 0.0,
-      "product": "Individual Ticket - Yom HaShoah - Inidividual Ticket",
-      "date": "2026-02-23",
+      "product": "Individual Ticket - Yom HaZikaron - Inidividual Ticket",
+      "date": "2026-02-25",
       "recurring": false
     },
     {
-      "name": "Sarah Gimbel",
+      "name": "Mollie Levy",
       "amount": 0.0,
-      "product": "Individual Ticket - Yom HaShoah - Inidividual Ticket",
-      "date": "2026-02-23",
-      "recurring": false
-    },
-    {
-      "name": "Scott Schindler",
-      "amount": 208.7,
-      "product": "Annual Campaign Page - All in - FY26 - Today Only",
-      "date": "2026-02-23",
-      "recurring": false
-    },
-    {
-      "name": "Charlene Seidle",
-      "amount": 0.0,
-      "product": "Individual Ticket - Yom HaShoah - Inidividual Ticket",
-      "date": "2026-02-23",
-      "recurring": false
-    },
-    {
-      "name": "Julie Gordon",
-      "amount": 0.0,
-      "product": "Individual Ticket - Padres Jewish Heritage Night 2026 - Western Metal Rooftop Ticket",
-      "date": "2026-02-23",
-      "recurring": false
-    },
-    {
-      "name": "Ali Tilzer",
-      "amount": 0.0,
-      "product": "Individual Ticket - Yom HaShoah - Inidividual Ticket",
-      "date": "2026-02-22",
-      "recurring": false
-    },
-    {
-      "name": "Freddi Pakier",
-      "amount": 0.0,
-      "product": "Individual Ticket - Yom HaShoah - Inidividual Ticket",
-      "date": "2026-02-22",
-      "recurring": false
-    },
-    {
-      "name": "RUTH MCCALLAN",
-      "amount": 0.0,
-      "product": "Individual Ticket - Yom HaShoah - Inidividual Ticket",
-      "date": "2026-02-22",
+      "product": "Individual Ticket - Yom HaZikaron - Inidividual Ticket",
+      "date": "2026-02-25",
       "recurring": false
     },
     {
       "name": "Naomi Jensen",
       "amount": 0.0,
-      "product": "Individual Ticket - Yom HaShoah - Inidividual Ticket",
-      "date": "2026-02-21",
+      "product": "Individual Ticket - Yom HaZikaron - Inidividual Ticket",
+      "date": "2026-02-25",
       "recurring": false
     },
     {
-      "name": "Kathryn Ames",
+      "name": "Nadine Spertus",
+      "amount": 0.0,
+      "product": "Individual Ticket - Yom HaZikaron - Inidividual Ticket",
+      "date": "2026-02-25",
+      "recurring": false
+    },
+    {
+      "name": "Yacob Cohen-Arazi",
+      "amount": 0.0,
+      "product": "Individual Ticket - Yom HaZikaron - Inidividual Ticket",
+      "date": "2026-02-25",
+      "recurring": false
+    },
+    {
+      "name": "Mitchell Simon",
       "amount": 0.0,
       "product": "Individual Ticket - Yom HaShoah - Inidividual Ticket",
-      "date": "2026-02-21",
+      "date": "2026-02-25",
       "recurring": false
     },
     {
-      "name": "Neal Jacobs",
-      "amount": 18.0,
-      "product": "Individual Ticket - Yom HaShoah - Inidividual Ticket",
-      "date": "2026-02-21",
+      "name": "Polina Ofer",
+      "amount": 0.0,
+      "product": "Individual Ticket - Yom HaZikaron - Inidividual Ticket",
+      "date": "2026-02-25",
       "recurring": false
     },
     {
-      "name": "Dan Vassilovski",
+      "name": "Joshua D Feder",
+      "amount": 0.0,
+      "product": "Individual Ticket - Yom HaZikaron - Inidividual Ticket",
+      "date": "2026-02-25",
+      "recurring": false
+    },
+    {
+      "name": "Joshua D Feder",
       "amount": 0.0,
       "product": "Individual Ticket - Yom HaShoah - Inidividual Ticket",
-      "date": "2026-02-21",
+      "date": "2026-02-25",
       "recurring": false
     },
     {
-      "name": "Sandra Abbott",
+      "name": "Joshua D Feder",
       "amount": 0.0,
-      "product": "Individual Ticket - Yom HaShoah - Inidividual Ticket",
-      "date": "2026-02-21",
+      "product": "Individual Ticket - Celebrate Israel: Now and Forever 2026 - Inidividual Ticket",
+      "date": "2026-02-25",
       "recurring": false
     },
     {
-      "name": "Guri  Stark",
+      "name": "Beverly Larner",
       "amount": 0.0,
-      "product": "Individual Ticket - Yom HaShoah - Inidividual Ticket",
-      "date": "2026-02-21",
+      "product": "Individual Ticket - Yom HaZikaron - Inidividual Ticket",
+      "date": "2026-02-25",
       "recurring": false
     },
     {
-      "name": "Cindy Nelson",
+      "name": "Efrat Ling",
       "amount": 0.0,
-      "product": "Individual Ticket - Yom HaShoah - Inidividual Ticket",
-      "date": "2026-02-21",
+      "product": "Individual Ticket - Yom HaZikaron - Inidividual Ticket",
+      "date": "2026-02-25",
       "recurring": false
     },
     {
-      "name": "Ruth Gilboa",
+      "name": "Jack Forman",
       "amount": 0.0,
       "product": "Individual Ticket - Yom HaShoah - Inidividual Ticket",
-      "date": "2026-02-21",
+      "date": "2026-02-25",
+      "recurring": false
+    },
+    {
+      "name": "Howard Somers",
+      "amount": 0.0,
+      "product": "Individual Ticket - Yom HaZikaron - Inidividual Ticket",
+      "date": "2026-02-25",
+      "recurring": false
+    },
+    {
+      "name": "Phil Raimi",
+      "amount": 0.0,
+      "product": "Individual Ticket - Yom HaZikaron - Inidividual Ticket",
+      "date": "2026-02-25",
+      "recurring": false
+    },
+    {
+      "name": "OMER LESSER-SAZIR",
+      "amount": 0.0,
+      "product": "Individual Ticket - Yom HaZikaron - Inidividual Ticket",
+      "date": "2026-02-25",
       "recurring": false
     }
   ],
   "failedPayments": [],
   "kpis": {
-    "totalOnlineRevenue": 318047.53,
+    "totalOnlineRevenue": 323445.49,
     "recurringRevenue": 0,
     "activeRecurring": 0,
-    "newDonorsOnline": 96,
+    "newDonorsOnline": 21,
     "conversionRate": 0,
-    "churnRate": 0
+    "churnRate": 0,
+    "totalContributions": 0,
+    "totalSupporters": 0,
+    "avgContribution": 0,
+    "recurringCount": 0
   }
 }

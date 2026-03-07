@@ -1,521 +1,384 @@
 {
-  "asOfDate": "2026-02-24",
   "boards": [
     {
-      "name": "Jewish Community Foundation of San Diego",
-      "shortName": "JCF",
-      "totalMembers": 20,
-      "matchedInSF": 15,
-      "gaveFY26": 5,
-      "participationRate": 25.0,
-      "totalGiven": 44084.0,
-      "totalFY25": 8150.0,
+      "name": "Board of Directors",
       "members": [
         {
-          "name": "Paul Datnow",
-          "role": "",
-          "status": "gave",
-          "fy26Amount": 3084.0,
-          "fy25Amount": 7200.0
+          "attributes": {
+            "type": "Account",
+            "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkK6OIAV"
+          },
+          "Name": "Sonia Ancoli Israel",
+          "Recognition_Amount_FY26__c": 36000,
+          "Recognition_Amount_FY25__c": 36000,
+          "JFSD_Board_Active__c": true
         },
         {
-          "name": "Judi Gottschalk",
-          "role": "",
-          "status": "gave",
-          "fy26Amount": 20000.0,
-          "fy25Amount": 5000.0
+          "attributes": {
+            "type": "Account",
+            "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkH3CIAV"
+          },
+          "Name": "Allie Hauser-Erickson",
+          "Recognition_Amount_FY26__c": 18000,
+          "Recognition_Amount_FY25__c": 16582,
+          "JFSD_Board_Active__c": true
         },
         {
-          "name": "Jeff Schindler",
-          "role": "Federation Board Chair",
-          "status": "gave",
-          "fy26Amount": 12000.0,
-          "fy25Amount": 0
+          "attributes": {
+            "type": "Account",
+            "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkCZyIAN"
+          },
+          "Name": "Silvana Anna Christy",
+          "Recognition_Amount_FY26__c": 12800,
+          "Recognition_Amount_FY25__c": 11036,
+          "JFSD_Board_Active__c": true
         },
         {
-          "name": "Tina Beranbaum",
-          "role": "Board Chair",
-          "status": "gave",
-          "fy26Amount": 6000.0,
-          "fy25Amount": 6780.0
+          "attributes": {
+            "type": "Account",
+            "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkN0YIAV"
+          },
+          "Name": "Jeff M. Schindler",
+          "Recognition_Amount_FY26__c": 12000,
+          "Recognition_Amount_FY25__c": 12000,
+          "JFSD_Board_Active__c": true
         },
         {
-          "name": "Craig Misrach",
-          "role": "",
-          "status": "lybunt",
-          "fy26Amount": 0.0,
-          "fy25Amount": 550.0
+          "attributes": {
+            "type": "Account",
+            "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkI6dIAF"
+          },
+          "Name": "Jack Maizel",
+          "Recognition_Amount_FY26__c": 10250,
+          "Recognition_Amount_FY25__c": 10000,
+          "JFSD_Board_Active__c": true
         },
         {
-          "name": "Jeff Platt",
-          "role": "",
-          "status": "gave",
-          "fy26Amount": 3000.0,
-          "fy25Amount": 1000.0
+          "attributes": {
+            "type": "Account",
+            "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkTr8IAF"
+          },
+          "Name": "Kira Elizabeth Finkenberg",
+          "Recognition_Amount_FY26__c": 10000,
+          "Recognition_Amount_FY25__c": 10400,
+          "JFSD_Board_Active__c": true
         },
         {
-          "name": "Ben Arnold",
-          "role": "",
-          "status": "no-record",
-          "fy26Amount": 0.0,
-          "fy25Amount": 0.0
+          "attributes": {
+            "type": "Account",
+            "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkJ1KIAV"
+          },
+          "Name": "Debbie Ann Deverett",
+          "Recognition_Amount_FY26__c": 10000,
+          "Recognition_Amount_FY25__c": 10000,
+          "JFSD_Board_Active__c": true
         },
         {
-          "name": "Leo Eisenberg",
-          "role": "",
-          "status": "no-record",
-          "fy26Amount": 0.0,
-          "fy25Amount": 0.0
+          "attributes": {
+            "type": "Account",
+            "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkEv4IAF"
+          },
+          "Name": "Lisa Beth Pearl",
+          "Recognition_Amount_FY26__c": 10000,
+          "Recognition_Amount_FY25__c": 6000,
+          "JFSD_Board_Active__c": true
         },
         {
-          "name": "Emily Einhorn",
-          "role": "",
-          "status": "no-record",
-          "fy26Amount": 0.0,
-          "fy25Amount": 0.0
+          "attributes": {
+            "type": "Account",
+            "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkBPQIA3"
+          },
+          "Name": "Ingram Losner",
+          "Recognition_Amount_FY26__c": 6000,
+          "Recognition_Amount_FY25__c": 5000,
+          "JFSD_Board_Active__c": true
         },
         {
-          "name": "Elena High",
-          "role": "",
-          "status": "no-record",
-          "fy26Amount": 0.0,
-          "fy25Amount": 0.0
+          "attributes": {
+            "type": "Account",
+            "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkRMlIAN"
+          },
+          "Name": "Tina Beranbaum",
+          "Recognition_Amount_FY26__c": 6000,
+          "Recognition_Amount_FY25__c": 6780,
+          "JFSD_Board_Active__c": true
         },
         {
-          "name": "Larry Katz",
-          "role": "",
-          "status": "no-record",
-          "fy26Amount": 0.0,
-          "fy25Amount": 0.0
+          "attributes": {
+            "type": "Account",
+            "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkEteIAF"
+          },
+          "Name": "Debbie Kornberg",
+          "Recognition_Amount_FY26__c": 5400,
+          "Recognition_Amount_FY25__c": 1836,
+          "JFSD_Board_Active__c": true
         },
         {
-          "name": "Taylor Lucas",
-          "role": "",
-          "status": "no-record",
-          "fy26Amount": 0.0,
-          "fy25Amount": 0.0
+          "attributes": {
+            "type": "Account",
+            "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkQPpIAN"
+          },
+          "Name": "David Bark",
+          "Recognition_Amount_FY26__c": 5000,
+          "Recognition_Amount_FY25__c": 5000,
+          "JFSD_Board_Active__c": true
         },
         {
-          "name": "Lawrence Sherman",
-          "role": "General Counsel",
-          "status": "no-record",
-          "fy26Amount": 0.0,
-          "fy25Amount": 0.0
+          "attributes": {
+            "type": "Account",
+            "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkFvDIAV"
+          },
+          "Name": "Robert A. Rubenstein",
+          "Recognition_Amount_FY26__c": 5000,
+          "Recognition_Amount_FY25__c": 50000,
+          "JFSD_Board_Active__c": true
         },
         {
-          "name": "Leo Spiegel",
-          "role": "",
-          "status": "no-record",
-          "fy26Amount": 0.0,
-          "fy25Amount": 0.0
+          "attributes": {
+            "type": "Account",
+            "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkJngIAF"
+          },
+          "Name": "Larry Michael Katz",
+          "Recognition_Amount_FY26__c": 5000,
+          "Recognition_Amount_FY25__c": 5000,
+          "JFSD_Board_Active__c": true
         },
         {
-          "name": "David Wax",
-          "role": "",
-          "status": "no-record",
-          "fy26Amount": 0.0,
-          "fy25Amount": 0.0
+          "attributes": {
+            "type": "Account",
+            "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkMLpIAN"
+          },
+          "Name": "Seth Krosner",
+          "Recognition_Amount_FY26__c": 5000,
+          "Recognition_Amount_FY25__c": 0,
+          "JFSD_Board_Active__c": true
         },
         {
-          "name": "Michael S. Levinson",
-          "role": "Chair-Elect, Vice Chair",
-          "status": "not-matched",
-          "fy26Amount": 0,
-          "fy25Amount": 0
+          "attributes": {
+            "type": "Account",
+            "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkOOPIA3"
+          },
+          "Name": "Sarah Margaret Shekhter",
+          "Recognition_Amount_FY26__c": 5000,
+          "Recognition_Amount_FY25__c": 5000,
+          "JFSD_Board_Active__c": true
         },
         {
-          "name": "Ronald A. Friedman",
-          "role": "Vice Chair",
-          "status": "not-matched",
-          "fy26Amount": 0,
-          "fy25Amount": 0
+          "attributes": {
+            "type": "Account",
+            "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkOvGIAV"
+          },
+          "Name": "Julie Datnow",
+          "Recognition_Amount_FY26__c": 5000,
+          "Recognition_Amount_FY25__c": 0,
+          "JFSD_Board_Active__c": true
         },
         {
-          "name": "Andy Ratner",
-          "role": "Treasurer",
-          "status": "not-matched",
-          "fy26Amount": 0,
-          "fy25Amount": 0
+          "attributes": {
+            "type": "Account",
+            "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkGZ5IAN"
+          },
+          "Name": "Heather Keith",
+          "Recognition_Amount_FY26__c": 4500,
+          "Recognition_Amount_FY25__c": 4136,
+          "JFSD_Board_Active__c": true
         },
         {
-          "name": "Theresa Dupuis",
-          "role": "Secretary",
-          "status": "not-matched",
-          "fy26Amount": 0,
-          "fy25Amount": 0
+          "attributes": {
+            "type": "Account",
+            "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkEd3IAF"
+          },
+          "Name": "Meryl Maneker",
+          "Recognition_Amount_FY26__c": 3600,
+          "Recognition_Amount_FY25__c": 3200,
+          "JFSD_Board_Active__c": true
         },
         {
-          "name": "Jane Fantel",
-          "role": "JWF Chair",
-          "status": "not-matched",
-          "fy26Amount": 0,
-          "fy25Amount": 0
+          "attributes": {
+            "type": "Account",
+            "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkQSqIAN"
+          },
+          "Name": "Jeremy King Pearl",
+          "Recognition_Amount_FY26__c": 3600,
+          "Recognition_Amount_FY25__c": 3780,
+          "JFSD_Board_Active__c": true
+        },
+        {
+          "attributes": {
+            "type": "Account",
+            "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkEDBIA3"
+          },
+          "Name": "Uri Feldman",
+          "Recognition_Amount_FY26__c": 1980,
+          "Recognition_Amount_FY25__c": 0,
+          "JFSD_Board_Active__c": true
+        },
+        {
+          "attributes": {
+            "type": "Account",
+            "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkIfcIAF"
+          },
+          "Name": "Victor Shlionsky",
+          "Recognition_Amount_FY26__c": 1800,
+          "Recognition_Amount_FY25__c": 500,
+          "JFSD_Board_Active__c": true
+        },
+        {
+          "attributes": {
+            "type": "Account",
+            "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkPXDIA3"
+          },
+          "Name": "David Bramzon",
+          "Recognition_Amount_FY26__c": 1800,
+          "Recognition_Amount_FY25__c": 3600,
+          "JFSD_Board_Active__c": true
+        },
+        {
+          "attributes": {
+            "type": "Account",
+            "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkM83IAF"
+          },
+          "Name": "Guri A Stark",
+          "Recognition_Amount_FY26__c": 1000,
+          "Recognition_Amount_FY25__c": 800,
+          "JFSD_Board_Active__c": true
+        },
+        {
+          "attributes": {
+            "type": "Account",
+            "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkBx1IAF"
+          },
+          "Name": "David Abraham",
+          "Recognition_Amount_FY26__c": 500,
+          "Recognition_Amount_FY25__c": 500,
+          "JFSD_Board_Active__c": true
+        },
+        {
+          "attributes": {
+            "type": "Account",
+            "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkMsAIAV"
+          },
+          "Name": "Lisa Dawn Kornfeld",
+          "Recognition_Amount_FY26__c": 0,
+          "Recognition_Amount_FY25__c": 0,
+          "JFSD_Board_Active__c": true
+        },
+        {
+          "attributes": {
+            "type": "Account",
+            "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkHeSIAV"
+          },
+          "Name": "Howard Bruce Somers",
+          "Recognition_Amount_FY26__c": 0,
+          "Recognition_Amount_FY25__c": 10000,
+          "JFSD_Board_Active__c": true
+        },
+        {
+          "attributes": {
+            "type": "Account",
+            "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkJZZIA3"
+          },
+          "Name": "Elizabeth Siegler",
+          "Recognition_Amount_FY26__c": 0,
+          "Recognition_Amount_FY25__c": 0,
+          "JFSD_Board_Active__c": true
+        },
+        {
+          "attributes": {
+            "type": "Account",
+            "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkMMgIAN"
+          },
+          "Name": "Ronit Droker",
+          "Recognition_Amount_FY26__c": 0,
+          "Recognition_Amount_FY25__c": 5500,
+          "JFSD_Board_Active__c": true
+        },
+        {
+          "attributes": {
+            "type": "Account",
+            "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkHcsIAF"
+          },
+          "Name": "Sara Michelle Kabakoff",
+          "Recognition_Amount_FY26__c": 0,
+          "Recognition_Amount_FY25__c": 5500,
+          "JFSD_Board_Active__c": true
+        },
+        {
+          "attributes": {
+            "type": "Account",
+            "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkOvPIAV"
+          },
+          "Name": "Shari Friedman Schenk",
+          "Recognition_Amount_FY26__c": 0,
+          "Recognition_Amount_FY25__c": 5000,
+          "JFSD_Board_Active__c": true
+        },
+        {
+          "attributes": {
+            "type": "Account",
+            "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkRvhIAF"
+          },
+          "Name": "Elliot A Scott",
+          "Recognition_Amount_FY26__c": 0,
+          "Recognition_Amount_FY25__c": 32000,
+          "JFSD_Board_Active__c": true
+        },
+        {
+          "attributes": {
+            "type": "Account",
+            "url": "/services/data/v59.0/sobjects/Account/001Uf00000WkSAsIAN"
+          },
+          "Name": "Simone Abelsohn",
+          "Recognition_Amount_FY26__c": 0,
+          "Recognition_Amount_FY25__c": 0,
+          "JFSD_Board_Active__c": true
         }
       ]
     },
     {
-      "name": "Lawrence Family Jewish Community Center",
-      "shortName": "JCC",
-      "totalMembers": 21,
-      "matchedInSF": 13,
-      "gaveFY26": 6,
-      "participationRate": 28.6,
-      "totalGiven": 18020.0,
-      "totalFY25": 0.0,
-      "members": [
-        {
-          "name": "Adam Jacobs",
-          "role": "Vice Chair",
-          "status": "gave",
-          "fy26Amount": 10000.0,
-          "fy25Amount": 10000.0
-        },
-        {
-          "name": "Victor Shlionsky",
-          "role": "Board Treasurer",
-          "status": "gave",
-          "fy26Amount": 1800.0,
-          "fy25Amount": 500.0
-        },
-        {
-          "name": "Shoshannah Hart",
-          "role": "",
-          "status": "gave",
-          "fy26Amount": 680.0,
-          "fy25Amount": 0.0
-        },
-        {
-          "name": "Julie Potiker",
-          "role": "",
-          "status": "gave",
-          "fy26Amount": 5000.0,
-          "fy25Amount": 5000.0
-        },
-        {
-          "name": "Doron Malka",
-          "role": "Board Secretary",
-          "status": "no-record",
-          "fy26Amount": 0.0,
-          "fy25Amount": 0.0
-        },
-        {
-          "name": "David Abrams",
-          "role": "",
-          "status": "no-record",
-          "fy26Amount": 0.0,
-          "fy25Amount": 0.0
-        },
-        {
-          "name": "Taylor Israel",
-          "role": "",
-          "status": "gave",
-          "fy26Amount": 180.0,
-          "fy25Amount": 0.0
-        },
-        {
-          "name": "Larry Katz",
-          "role": "",
-          "status": "no-record",
-          "fy26Amount": 0.0,
-          "fy25Amount": 0.0
-        },
-        {
-          "name": "Brett Meltzer",
-          "role": "",
-          "status": "no-record",
-          "fy26Amount": 0.0,
-          "fy25Amount": 0.0
-        },
-        {
-          "name": "Musy New",
-          "role": "",
-          "status": "no-record",
-          "fy26Amount": 0.0,
-          "fy25Amount": 0.0
-        },
-        {
-          "name": "Danny Recht",
-          "role": "",
-          "status": "no-record",
-          "fy26Amount": 0.0,
-          "fy25Amount": 0.0
-        },
-        {
-          "name": "David Rodman",
-          "role": "",
-          "status": "no-record",
-          "fy26Amount": 0.0,
-          "fy25Amount": 0.0
-        },
-        {
-          "name": "Jack Rubin",
-          "role": "",
-          "status": "gave",
-          "fy26Amount": 360.0,
-          "fy25Amount": 0.0
-        },
-        {
-          "name": "Liz Nederlander Coden",
-          "role": "Board Chair",
-          "status": "not-matched",
-          "fy26Amount": 0,
-          "fy25Amount": 0
-        },
-        {
-          "name": "Laurie Greenberg",
-          "role": "Immediate Past Board Chair",
-          "status": "not-matched",
-          "fy26Amount": 0,
-          "fy25Amount": 0
-        },
-        {
-          "name": "Hannah Cohen",
-          "role": "Vice Chair",
-          "status": "not-matched",
-          "fy26Amount": 0,
-          "fy25Amount": 0
-        },
-        {
-          "name": "Kira Finkenberg",
-          "role": "Vice Chair",
-          "status": "not-matched",
-          "fy26Amount": 0,
-          "fy25Amount": 0
-        },
-        {
-          "name": "Kim Chesbrough",
-          "role": "",
-          "status": "not-matched",
-          "fy26Amount": 0,
-          "fy25Amount": 0
-        },
-        {
-          "name": "Robert Rubenstein",
-          "role": "",
-          "status": "not-matched",
-          "fy26Amount": 0,
-          "fy25Amount": 0
-        },
-        {
-          "name": "Benjamin Schenk",
-          "role": "",
-          "status": "not-matched",
-          "fy26Amount": 0,
-          "fy25Amount": 0
-        },
-        {
-          "name": "Sheava Wax",
-          "role": "",
-          "status": "not-matched",
-          "fy26Amount": 0,
-          "fy25Amount": 0
-        }
-      ]
+      "name": "Foundation Board",
+      "members": []
     },
     {
-      "name": "AJC San Diego",
-      "shortName": "AJC",
-      "totalMembers": 18,
-      "matchedInSF": 11,
-      "gaveFY26": 3,
-      "participationRate": 16.7,
-      "totalGiven": 492000.0,
-      "totalFY25": 7500.0,
-      "members": [
-        {
-          "name": "Alan Viterbi",
-          "role": "Board President",
-          "status": "gave",
-          "fy26Amount": 475000.0,
-          "fy25Amount": 25000.0
-        },
-        {
-          "name": "David Bark",
-          "role": "",
-          "status": "gave",
-          "fy26Amount": 5000.0,
-          "fy25Amount": 5000.0
-        },
-        {
-          "name": "Stacy Rosenberg",
-          "role": "",
-          "status": "no-record",
-          "fy26Amount": 0.0,
-          "fy25Amount": 0.0
-        },
-        {
-          "name": "Jeff Schindler",
-          "role": "",
-          "status": "gave",
-          "fy26Amount": 12000.0,
-          "fy25Amount": 0
-        },
-        {
-          "name": "Eileen Glasser Wesley",
-          "role": "",
-          "status": "lybunt",
-          "fy26Amount": 0.0,
-          "fy25Amount": 2500.0
-        },
-        {
-          "name": "Marie Raftery",
-          "role": "",
-          "status": "lybunt",
-          "fy26Amount": 0.0,
-          "fy25Amount": 5000.0
-        },
-        {
-          "name": "Wayne Harris",
-          "role": "",
-          "status": "no-record",
-          "fy26Amount": 0.0,
-          "fy25Amount": 0.0
-        },
-        {
-          "name": "Joanna Herman",
-          "role": "",
-          "status": "no-record",
-          "fy26Amount": 0.0,
-          "fy25Amount": 0.0
-        },
-        {
-          "name": "Raquel Kramer",
-          "role": "",
-          "status": "no-record",
-          "fy26Amount": 0.0,
-          "fy25Amount": 0.0
-        },
-        {
-          "name": "David Michan",
-          "role": "",
-          "status": "no-record",
-          "fy26Amount": 0.0,
-          "fy25Amount": 0.0
-        },
-        {
-          "name": "Tad Parzen",
-          "role": "",
-          "status": "no-record",
-          "fy26Amount": 0.0,
-          "fy25Amount": 0.0
-        },
-        {
-          "name": "Mitch Siegler",
-          "role": "Immediate Past Board President",
-          "status": "not-matched",
-          "fy26Amount": 0,
-          "fy25Amount": 0
-        },
-        {
-          "name": "Kira Finkenberg",
-          "role": "",
-          "status": "not-matched",
-          "fy26Amount": 0,
-          "fy25Amount": 0
-        },
-        {
-          "name": "Naomi Harris",
-          "role": "",
-          "status": "not-matched",
-          "fy26Amount": 0,
-          "fy25Amount": 0
-        },
-        {
-          "name": "Rabbi David Kornberg",
-          "role": "",
-          "status": "not-matched",
-          "fy26Amount": 0,
-          "fy25Amount": 0
-        },
-        {
-          "name": "Robin Layton",
-          "role": "",
-          "status": "not-matched",
-          "fy26Amount": 0,
-          "fy25Amount": 0
-        },
-        {
-          "name": "Sharon Rosen Lieb",
-          "role": "",
-          "status": "not-matched",
-          "fy26Amount": 0,
-          "fy25Amount": 0
-        },
-        {
-          "name": "Jerry Turk",
-          "role": "",
-          "status": "not-matched",
-          "fy26Amount": 0,
-          "fy25Amount": 0
-        }
-      ]
+      "name": "Young Adult Division",
+      "members": []
     }
   ],
   "campaignSummary": {
-    "goal": 9000000,
-    "raised": 4400.0,
-    "pctOfGoal": 0.0,
-    "donorCount": 0,
-    "priorYearComparison": 4300.0
+    "raised": 185230.0,
+    "participationRate": 75.8,
+    "totalMembers": 33,
+    "donors": 25
   },
   "givingLevels": [
     {
-      "level": "$100K+",
-      "donors": 1,
-      "amount": 475000.0
+      "level": "$25K-$99K",
+      "count": 1
     },
     {
-      "level": "$25K\u2013$99K",
-      "donors": 0,
-      "amount": 0
+      "level": "$10K-$24K",
+      "count": 7
     },
     {
-      "level": "$10K\u2013$24K",
-      "donors": 4,
-      "amount": 54000.0
+      "level": "$5K-$9K",
+      "count": 9
     },
     {
-      "level": "$5K\u2013$9K",
-      "donors": 3,
-      "amount": 16000.0
-    },
-    {
-      "level": "$1K\u2013$4K",
-      "donors": 3,
-      "amount": 7884.0
+      "level": "$1K-$4K",
+      "count": 7
     },
     {
       "level": "Under $1K",
-      "donors": 3,
-      "amount": 1220.0
+      "count": 9
     }
   ],
-  "highlights": [
-    {
-      "metric": "Board Participation",
-      "value": "23.7%",
-      "trend": "down"
-    },
-    {
-      "metric": "Campaign Progress",
-      "value": "0.0%",
-      "trend": "flat"
-    },
-    {
-      "metric": "Board Giving Total",
-      "value": "$554,104",
-      "trend": "up"
-    },
-    {
-      "metric": "YoY Change",
-      "value": "+3440.6%",
-      "trend": "up"
-    }
-  ],
+  "highlights": [],
   "kpis": {
-    "overallBoardParticipation": 23.7,
-    "campaignPctOfGoal": 0.0,
-    "totalBoardGiving": 554104.0,
-    "yoyChange": 3440.6
-  }
+    "boardMembers": 33,
+    "participationRate": 75.8,
+    "totalGiving": 185230.0,
+    "overallBoardParticipation": 0,
+    "totalBoardMembers": 0
+  },
+  "asOfDate": "2026-03-06T10:20:00"
 }
