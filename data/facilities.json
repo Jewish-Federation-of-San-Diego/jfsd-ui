@@ -1,320 +1,2707 @@
 {
+  "asOfDate": "2026-02-24T09:30:01.457702",
   "buildings": [
     {
       "name": "ADL",
-      "zones": [
+      "thermostats": [
         {
-          "building": "ADL",
+          "id": "417325331773",
           "name": "ADL-Conference (HP11)",
-          "temp_f": 7.24,
-          "humidity": 45,
-          "hvac_mode": "cool",
-          "fan_running": 0,
-          "timestamp": "2026-03-06T00:00:01.338458"
+          "temperature": 69.3,
+          "humidity": 43,
+          "hvacMode": "cool",
+          "desiredCool": 73.0,
+          "desiredHeat": 70.0,
+          "isConnected": true,
+          "isCooling": false,
+          "isHeating": false,
+          "isServerRoom": false,
+          "lastReading": "2026-02-24T09:30:01.457702",
+          "trend24h": [
+            {
+              "hour": "2026-02-23T09:00",
+              "avgTemp": 69.2
+            },
+            {
+              "hour": "2026-02-23T10:00",
+              "avgTemp": 69.5
+            },
+            {
+              "hour": "2026-02-23T11:00",
+              "avgTemp": 69.8
+            },
+            {
+              "hour": "2026-02-23T12:00",
+              "avgTemp": 70.5
+            },
+            {
+              "hour": "2026-02-23T13:00",
+              "avgTemp": 71.3
+            },
+            {
+              "hour": "2026-02-23T14:00",
+              "avgTemp": 72.2
+            },
+            {
+              "hour": "2026-02-23T15:00",
+              "avgTemp": 72.8
+            },
+            {
+              "hour": "2026-02-23T16:00",
+              "avgTemp": 73.3
+            },
+            {
+              "hour": "2026-02-23T17:00",
+              "avgTemp": 73.3
+            },
+            {
+              "hour": "2026-02-23T18:00",
+              "avgTemp": 70.3
+            },
+            {
+              "hour": "2026-02-23T19:00",
+              "avgTemp": 70.5
+            },
+            {
+              "hour": "2026-02-23T20:00",
+              "avgTemp": 70.3
+            },
+            {
+              "hour": "2026-02-23T21:00",
+              "avgTemp": 70.0
+            },
+            {
+              "hour": "2026-02-23T22:00",
+              "avgTemp": 70.2
+            },
+            {
+              "hour": "2026-02-23T23:00",
+              "avgTemp": 70.2
+            },
+            {
+              "hour": "2026-02-24T00:00",
+              "avgTemp": 70.6
+            },
+            {
+              "hour": "2026-02-24T01:00",
+              "avgTemp": 70.3
+            }
+          ],
+          "coolingHours24h": 2.6,
+          "heatingHours24h": 0.0
         },
         {
-          "building": "ADL",
+          "id": "417326324194",
           "name": "ADL-Server",
-          "temp_f": 7.25,
-          "humidity": 45,
-          "hvac_mode": "auto",
-          "fan_running": 0,
-          "timestamp": "2026-03-06T00:00:01.338458"
+          "temperature": 69.2,
+          "humidity": 43,
+          "hvacMode": "auto",
+          "desiredCool": 77.0,
+          "desiredHeat": 64.0,
+          "isConnected": true,
+          "isCooling": false,
+          "isHeating": false,
+          "isServerRoom": true,
+          "lastReading": "2026-02-24T09:30:01.457702",
+          "trend24h": [
+            {
+              "hour": "2026-02-23T09:00",
+              "avgTemp": 68.9
+            },
+            {
+              "hour": "2026-02-23T10:00",
+              "avgTemp": 68.7
+            },
+            {
+              "hour": "2026-02-23T11:00",
+              "avgTemp": 69.3
+            },
+            {
+              "hour": "2026-02-23T12:00",
+              "avgTemp": 70.1
+            },
+            {
+              "hour": "2026-02-23T13:00",
+              "avgTemp": 70.8
+            },
+            {
+              "hour": "2026-02-23T14:00",
+              "avgTemp": 71.8
+            },
+            {
+              "hour": "2026-02-23T15:00",
+              "avgTemp": 72.8
+            },
+            {
+              "hour": "2026-02-23T16:00",
+              "avgTemp": 73.3
+            },
+            {
+              "hour": "2026-02-23T17:00",
+              "avgTemp": 73.5
+            },
+            {
+              "hour": "2026-02-23T18:00",
+              "avgTemp": 72.8
+            },
+            {
+              "hour": "2026-02-23T19:00",
+              "avgTemp": 72.7
+            },
+            {
+              "hour": "2026-02-23T20:00",
+              "avgTemp": 72.4
+            },
+            {
+              "hour": "2026-02-23T21:00",
+              "avgTemp": 72.1
+            },
+            {
+              "hour": "2026-02-23T22:00",
+              "avgTemp": 72.0
+            },
+            {
+              "hour": "2026-02-23T23:00",
+              "avgTemp": 71.6
+            },
+            {
+              "hour": "2026-02-24T00:00",
+              "avgTemp": 71.3
+            },
+            {
+              "hour": "2026-02-24T01:00",
+              "avgTemp": 71.0
+            }
+          ],
+          "coolingHours24h": 0.0,
+          "heatingHours24h": 0.0
         },
         {
-          "building": "ADL",
+          "id": "417372040422",
           "name": "ADL-South Office (HP10)",
-          "temp_f": 7.01,
-          "humidity": 48,
-          "hvac_mode": "auto",
-          "fan_running": 0,
-          "timestamp": "2026-03-06T00:00:01.338458"
+          "temperature": 73.8,
+          "humidity": 40,
+          "hvacMode": "auto",
+          "desiredCool": 73.0,
+          "desiredHeat": 70.0,
+          "isConnected": true,
+          "isCooling": false,
+          "isHeating": false,
+          "isServerRoom": false,
+          "lastReading": "2026-02-24T09:30:01.457702",
+          "trend24h": [
+            {
+              "hour": "2026-02-23T09:00",
+              "avgTemp": 73.7
+            },
+            {
+              "hour": "2026-02-23T10:00",
+              "avgTemp": 73.1
+            },
+            {
+              "hour": "2026-02-23T11:00",
+              "avgTemp": 73.4
+            },
+            {
+              "hour": "2026-02-23T12:00",
+              "avgTemp": 72.9
+            },
+            {
+              "hour": "2026-02-23T13:00",
+              "avgTemp": 72.9
+            },
+            {
+              "hour": "2026-02-23T14:00",
+              "avgTemp": 73.0
+            },
+            {
+              "hour": "2026-02-23T15:00",
+              "avgTemp": 73.1
+            },
+            {
+              "hour": "2026-02-23T16:00",
+              "avgTemp": 73.1
+            },
+            {
+              "hour": "2026-02-23T17:00",
+              "avgTemp": 74.4
+            },
+            {
+              "hour": "2026-02-23T18:00",
+              "avgTemp": 73.8
+            },
+            {
+              "hour": "2026-02-23T19:00",
+              "avgTemp": 72.9
+            },
+            {
+              "hour": "2026-02-23T20:00",
+              "avgTemp": 72.2
+            },
+            {
+              "hour": "2026-02-23T21:00",
+              "avgTemp": 71.6
+            },
+            {
+              "hour": "2026-02-23T22:00",
+              "avgTemp": 70.8
+            },
+            {
+              "hour": "2026-02-23T23:00",
+              "avgTemp": 70.1
+            },
+            {
+              "hour": "2026-02-24T00:00",
+              "avgTemp": 69.4
+            },
+            {
+              "hour": "2026-02-24T01:00",
+              "avgTemp": 68.7
+            }
+          ],
+          "coolingHours24h": 0.8,
+          "heatingHours24h": 0.0
         },
         {
-          "building": "ADL",
+          "id": "417350269676",
           "name": "ADL-West Office (HP12)",
-          "temp_f": 7.15,
-          "humidity": 47,
-          "hvac_mode": "cool",
-          "fan_running": 0,
-          "timestamp": "2026-03-06T00:00:01.338458"
+          "temperature": 68.0,
+          "humidity": 45,
+          "hvacMode": "cool",
+          "desiredCool": 73.0,
+          "desiredHeat": 70.0,
+          "isConnected": true,
+          "isCooling": false,
+          "isHeating": false,
+          "isServerRoom": false,
+          "lastReading": "2026-02-24T09:30:01.457702",
+          "trend24h": [
+            {
+              "hour": "2026-02-23T09:00",
+              "avgTemp": 68.4
+            },
+            {
+              "hour": "2026-02-23T10:00",
+              "avgTemp": 69.6
+            },
+            {
+              "hour": "2026-02-23T11:00",
+              "avgTemp": 69.9
+            },
+            {
+              "hour": "2026-02-23T12:00",
+              "avgTemp": 70.6
+            },
+            {
+              "hour": "2026-02-23T13:00",
+              "avgTemp": 71.3
+            },
+            {
+              "hour": "2026-02-23T14:00",
+              "avgTemp": 72.5
+            },
+            {
+              "hour": "2026-02-23T15:00",
+              "avgTemp": 73.3
+            },
+            {
+              "hour": "2026-02-23T16:00",
+              "avgTemp": 72.9
+            },
+            {
+              "hour": "2026-02-23T17:00",
+              "avgTemp": 72.9
+            },
+            {
+              "hour": "2026-02-23T18:00",
+              "avgTemp": 72.4
+            },
+            {
+              "hour": "2026-02-23T19:00",
+              "avgTemp": 72.2
+            },
+            {
+              "hour": "2026-02-23T20:00",
+              "avgTemp": 71.9
+            },
+            {
+              "hour": "2026-02-23T21:00",
+              "avgTemp": 71.4
+            },
+            {
+              "hour": "2026-02-23T22:00",
+              "avgTemp": 70.9
+            },
+            {
+              "hour": "2026-02-23T23:00",
+              "avgTemp": 70.3
+            },
+            {
+              "hour": "2026-02-24T00:00",
+              "avgTemp": 70.0
+            },
+            {
+              "hour": "2026-02-24T01:00",
+              "avgTemp": 69.5
+            }
+          ],
+          "coolingHours24h": 0.8,
+          "heatingHours24h": 0.0
         }
-      ],
-      "alerts": []
+      ]
     },
     {
       "name": "Common",
-      "zones": [
+      "thermostats": [
         {
-          "building": "Common",
+          "id": "417311107362",
           "name": "Common Lobby (CU7) 1st",
-          "temp_f": 7.040000000000001,
-          "humidity": 50,
-          "hvac_mode": "heat",
-          "fan_running": 0,
-          "timestamp": "2026-03-06T00:00:01.338458"
-        },
-        {
-          "building": "Common",
-          "name": "Common-ADL Hall (HP13)",
-          "temp_f": 7.140000000000001,
+          "temperature": 71.1,
           "humidity": 47,
-          "hvac_mode": "auto",
-          "fan_running": 0,
-          "timestamp": "2026-03-06T00:00:01.338458"
+          "hvacMode": "auto",
+          "desiredCool": 74.0,
+          "desiredHeat": 68.0,
+          "isConnected": true,
+          "isCooling": false,
+          "isHeating": false,
+          "isServerRoom": false,
+          "lastReading": "2026-02-24T09:30:01.457702",
+          "trend24h": [
+            {
+              "hour": "2026-02-23T09:00",
+              "avgTemp": 70.8
+            },
+            {
+              "hour": "2026-02-23T10:00",
+              "avgTemp": 70.8
+            },
+            {
+              "hour": "2026-02-23T11:00",
+              "avgTemp": 71.4
+            },
+            {
+              "hour": "2026-02-23T12:00",
+              "avgTemp": 72.0
+            },
+            {
+              "hour": "2026-02-23T13:00",
+              "avgTemp": 72.3
+            },
+            {
+              "hour": "2026-02-23T14:00",
+              "avgTemp": 72.4
+            },
+            {
+              "hour": "2026-02-23T15:00",
+              "avgTemp": 72.5
+            },
+            {
+              "hour": "2026-02-23T16:00",
+              "avgTemp": 72.5
+            },
+            {
+              "hour": "2026-02-23T17:00",
+              "avgTemp": 72.4
+            },
+            {
+              "hour": "2026-02-23T18:00",
+              "avgTemp": 72.0
+            },
+            {
+              "hour": "2026-02-23T19:00",
+              "avgTemp": 71.5
+            },
+            {
+              "hour": "2026-02-23T20:00",
+              "avgTemp": 71.0
+            },
+            {
+              "hour": "2026-02-23T21:00",
+              "avgTemp": 70.5
+            },
+            {
+              "hour": "2026-02-23T22:00",
+              "avgTemp": 69.8
+            },
+            {
+              "hour": "2026-02-23T23:00",
+              "avgTemp": 69.6
+            },
+            {
+              "hour": "2026-02-24T00:00",
+              "avgTemp": 69.5
+            },
+            {
+              "hour": "2026-02-24T01:00",
+              "avgTemp": 69.0
+            }
+          ],
+          "coolingHours24h": 0.0,
+          "heatingHours24h": 0.0
         },
         {
-          "building": "Common",
-          "name": "Common-Conference Room A (HP4)",
-          "temp_f": 7.040000000000001,
-          "humidity": 49,
-          "hvac_mode": "cool",
-          "fan_running": 1,
-          "timestamp": "2026-03-06T00:00:01.338458"
-        },
-        {
-          "building": "Common",
-          "name": "Common-Data Room (HP6)",
-          "temp_f": 7.51,
-          "humidity": 44,
-          "hvac_mode": "heat",
-          "fan_running": 0,
-          "timestamp": "2026-03-06T00:00:01.338458"
-        },
-        {
-          "building": "Common",
-          "name": "Common-Lobby (HP8)",
-          "temp_f": 6.95,
-          "humidity": 48,
-          "hvac_mode": "cool",
-          "fan_running": 0,
-          "timestamp": "2026-03-06T00:00:01.338458"
-        },
-        {
-          "building": "Common",
-          "name": "Common-Server Room",
-          "temp_f": 7.290000000000001,
+          "id": "417311564626",
+          "name": "Common-ADL Hall (HP13)",
+          "temperature": 68.8,
           "humidity": 45,
-          "hvac_mode": "auto",
-          "fan_running": 1,
-          "timestamp": "2026-03-06T00:00:01.338458"
+          "hvacMode": "auto",
+          "desiredCool": 74.0,
+          "desiredHeat": 68.0,
+          "isConnected": true,
+          "isCooling": false,
+          "isHeating": false,
+          "isServerRoom": false,
+          "lastReading": "2026-02-24T09:30:01.457702",
+          "trend24h": [
+            {
+              "hour": "2026-02-23T09:00",
+              "avgTemp": 68.8
+            },
+            {
+              "hour": "2026-02-23T10:00",
+              "avgTemp": 69.1
+            },
+            {
+              "hour": "2026-02-23T11:00",
+              "avgTemp": 69.5
+            },
+            {
+              "hour": "2026-02-23T12:00",
+              "avgTemp": 70.1
+            },
+            {
+              "hour": "2026-02-23T13:00",
+              "avgTemp": 70.8
+            },
+            {
+              "hour": "2026-02-23T14:00",
+              "avgTemp": 71.6
+            },
+            {
+              "hour": "2026-02-23T15:00",
+              "avgTemp": 72.5
+            },
+            {
+              "hour": "2026-02-23T16:00",
+              "avgTemp": 72.7
+            },
+            {
+              "hour": "2026-02-23T17:00",
+              "avgTemp": 72.8
+            },
+            {
+              "hour": "2026-02-23T18:00",
+              "avgTemp": 72.2
+            },
+            {
+              "hour": "2026-02-23T19:00",
+              "avgTemp": 71.9
+            },
+            {
+              "hour": "2026-02-23T20:00",
+              "avgTemp": 71.6
+            },
+            {
+              "hour": "2026-02-23T21:00",
+              "avgTemp": 71.2
+            },
+            {
+              "hour": "2026-02-23T22:00",
+              "avgTemp": 70.9
+            },
+            {
+              "hour": "2026-02-23T23:00",
+              "avgTemp": 70.4
+            },
+            {
+              "hour": "2026-02-24T00:00",
+              "avgTemp": 70.1
+            },
+            {
+              "hour": "2026-02-24T01:00",
+              "avgTemp": 69.7
+            }
+          ],
+          "coolingHours24h": 0.0,
+          "heatingHours24h": 0.0
         },
         {
-          "building": "Common",
+          "id": "417326509973",
+          "name": "Common-Conference Room A (HP4)",
+          "temperature": 72.1,
+          "humidity": 44,
+          "hvacMode": "auto",
+          "desiredCool": 74.0,
+          "desiredHeat": 68.0,
+          "isConnected": true,
+          "isCooling": false,
+          "isHeating": false,
+          "isServerRoom": false,
+          "lastReading": "2026-02-24T09:30:01.457702",
+          "trend24h": [
+            {
+              "hour": "2026-02-23T09:00",
+              "avgTemp": 71.9
+            },
+            {
+              "hour": "2026-02-23T10:00",
+              "avgTemp": 71.5
+            },
+            {
+              "hour": "2026-02-23T11:00",
+              "avgTemp": 72.1
+            },
+            {
+              "hour": "2026-02-23T12:00",
+              "avgTemp": 73.3
+            },
+            {
+              "hour": "2026-02-23T13:00",
+              "avgTemp": 73.3
+            },
+            {
+              "hour": "2026-02-23T14:00",
+              "avgTemp": 73.5
+            },
+            {
+              "hour": "2026-02-23T15:00",
+              "avgTemp": 73.9
+            },
+            {
+              "hour": "2026-02-23T16:00",
+              "avgTemp": 73.7
+            },
+            {
+              "hour": "2026-02-23T17:00",
+              "avgTemp": 73.6
+            },
+            {
+              "hour": "2026-02-23T18:00",
+              "avgTemp": 73.4
+            },
+            {
+              "hour": "2026-02-23T19:00",
+              "avgTemp": 72.9
+            },
+            {
+              "hour": "2026-02-23T20:00",
+              "avgTemp": 72.5
+            },
+            {
+              "hour": "2026-02-23T21:00",
+              "avgTemp": 71.9
+            },
+            {
+              "hour": "2026-02-23T22:00",
+              "avgTemp": 71.3
+            },
+            {
+              "hour": "2026-02-23T23:00",
+              "avgTemp": 70.7
+            },
+            {
+              "hour": "2026-02-24T00:00",
+              "avgTemp": 70.1
+            },
+            {
+              "hour": "2026-02-24T01:00",
+              "avgTemp": 69.4
+            }
+          ],
+          "coolingHours24h": 0.0,
+          "heatingHours24h": 0.0
+        },
+        {
+          "id": "417391495904",
+          "name": "Common-Data Room (HP6)",
+          "temperature": 72.8,
+          "humidity": 43,
+          "hvacMode": "heat",
+          "desiredCool": 74.0,
+          "desiredHeat": 68.0,
+          "isConnected": true,
+          "isCooling": false,
+          "isHeating": false,
+          "isServerRoom": true,
+          "lastReading": "2026-02-24T09:30:01.457702",
+          "trend24h": [
+            {
+              "hour": "2026-02-23T09:00",
+              "avgTemp": 72.1
+            },
+            {
+              "hour": "2026-02-23T10:00",
+              "avgTemp": 71.0
+            },
+            {
+              "hour": "2026-02-23T11:00",
+              "avgTemp": 71.3
+            },
+            {
+              "hour": "2026-02-23T12:00",
+              "avgTemp": 71.7
+            },
+            {
+              "hour": "2026-02-23T13:00",
+              "avgTemp": 72.4
+            },
+            {
+              "hour": "2026-02-23T14:00",
+              "avgTemp": 73.4
+            },
+            {
+              "hour": "2026-02-23T15:00",
+              "avgTemp": 74.0
+            },
+            {
+              "hour": "2026-02-23T16:00",
+              "avgTemp": 74.7
+            },
+            {
+              "hour": "2026-02-23T17:00",
+              "avgTemp": 74.9
+            },
+            {
+              "hour": "2026-02-23T18:00",
+              "avgTemp": 75.2
+            },
+            {
+              "hour": "2026-02-23T19:00",
+              "avgTemp": 75.2
+            },
+            {
+              "hour": "2026-02-23T20:00",
+              "avgTemp": 75.2
+            },
+            {
+              "hour": "2026-02-23T21:00",
+              "avgTemp": 74.9
+            },
+            {
+              "hour": "2026-02-23T22:00",
+              "avgTemp": 74.7
+            },
+            {
+              "hour": "2026-02-23T23:00",
+              "avgTemp": 74.5
+            },
+            {
+              "hour": "2026-02-24T00:00",
+              "avgTemp": 74.2
+            },
+            {
+              "hour": "2026-02-24T01:00",
+              "avgTemp": 74.0
+            }
+          ],
+          "coolingHours24h": 0.0,
+          "heatingHours24h": 0.0
+        },
+        {
+          "id": "417305803645",
+          "name": "Common-Lobby (HP8)",
+          "temperature": 68.9,
+          "humidity": 47,
+          "hvacMode": "heat",
+          "desiredCool": 74.0,
+          "desiredHeat": 68.0,
+          "isConnected": true,
+          "isCooling": false,
+          "isHeating": false,
+          "isServerRoom": false,
+          "lastReading": "2026-02-24T09:30:01.457702",
+          "trend24h": [
+            {
+              "hour": "2026-02-23T09:00",
+              "avgTemp": 68.4
+            },
+            {
+              "hour": "2026-02-23T10:00",
+              "avgTemp": 67.8
+            },
+            {
+              "hour": "2026-02-23T11:00",
+              "avgTemp": 69.0
+            },
+            {
+              "hour": "2026-02-23T12:00",
+              "avgTemp": 70.4
+            },
+            {
+              "hour": "2026-02-23T13:00",
+              "avgTemp": 72.1
+            },
+            {
+              "hour": "2026-02-23T14:00",
+              "avgTemp": 75.0
+            },
+            {
+              "hour": "2026-02-23T15:00",
+              "avgTemp": 78.2
+            },
+            {
+              "hour": "2026-02-23T16:00",
+              "avgTemp": 77.7
+            },
+            {
+              "hour": "2026-02-23T17:00",
+              "avgTemp": 75.6
+            },
+            {
+              "hour": "2026-02-23T18:00",
+              "avgTemp": 74.7
+            },
+            {
+              "hour": "2026-02-23T19:00",
+              "avgTemp": 73.9
+            },
+            {
+              "hour": "2026-02-23T20:00",
+              "avgTemp": 73.2
+            },
+            {
+              "hour": "2026-02-23T21:00",
+              "avgTemp": 72.5
+            },
+            {
+              "hour": "2026-02-23T22:00",
+              "avgTemp": 71.8
+            },
+            {
+              "hour": "2026-02-23T23:00",
+              "avgTemp": 71.0
+            },
+            {
+              "hour": "2026-02-24T00:00",
+              "avgTemp": 70.3
+            },
+            {
+              "hour": "2026-02-24T01:00",
+              "avgTemp": 69.7
+            }
+          ],
+          "coolingHours24h": 0.0,
+          "heatingHours24h": 0.0
+        },
+        {
+          "id": "417330199847",
+          "name": "Common-Server Room",
+          "temperature": 72.9,
+          "humidity": 44,
+          "hvacMode": "auto",
+          "desiredCool": 72.0,
+          "desiredHeat": 67.0,
+          "isConnected": true,
+          "isCooling": true,
+          "isHeating": false,
+          "isServerRoom": true,
+          "lastReading": "2026-02-24T09:30:01.457702",
+          "trend24h": [
+            {
+              "hour": "2026-02-23T09:00",
+              "avgTemp": 72.0
+            },
+            {
+              "hour": "2026-02-23T10:00",
+              "avgTemp": 71.8
+            },
+            {
+              "hour": "2026-02-23T11:00",
+              "avgTemp": 72.3
+            },
+            {
+              "hour": "2026-02-23T12:00",
+              "avgTemp": 71.7
+            },
+            {
+              "hour": "2026-02-23T13:00",
+              "avgTemp": 72.3
+            },
+            {
+              "hour": "2026-02-23T14:00",
+              "avgTemp": 72.4
+            },
+            {
+              "hour": "2026-02-23T15:00",
+              "avgTemp": 72.3
+            },
+            {
+              "hour": "2026-02-23T16:00",
+              "avgTemp": 72.1
+            },
+            {
+              "hour": "2026-02-23T17:00",
+              "avgTemp": 72.5
+            },
+            {
+              "hour": "2026-02-23T18:00",
+              "avgTemp": 71.6
+            },
+            {
+              "hour": "2026-02-23T19:00",
+              "avgTemp": 72.5
+            },
+            {
+              "hour": "2026-02-23T20:00",
+              "avgTemp": 71.8
+            },
+            {
+              "hour": "2026-02-23T21:00",
+              "avgTemp": 72.4
+            },
+            {
+              "hour": "2026-02-23T22:00",
+              "avgTemp": 71.6
+            },
+            {
+              "hour": "2026-02-23T23:00",
+              "avgTemp": 71.9
+            },
+            {
+              "hour": "2026-02-24T00:00",
+              "avgTemp": 71.9
+            },
+            {
+              "hour": "2026-02-24T01:00",
+              "avgTemp": 72.0
+            }
+          ],
+          "coolingHours24h": 4.6,
+          "heatingHours24h": 0.0
+        },
+        {
+          "id": "417311299522",
           "name": "Conference-Foster S (CU10)",
-          "temp_f": 6.7700000000000005,
-          "humidity": 54,
-          "hvac_mode": "auto",
-          "fan_running": 0,
-          "timestamp": "2026-03-06T00:00:01.338458"
+          "temperature": 71.4,
+          "humidity": 47,
+          "hvacMode": "auto",
+          "desiredCool": 73.0,
+          "desiredHeat": 68.0,
+          "isConnected": true,
+          "isCooling": false,
+          "isHeating": false,
+          "isServerRoom": false,
+          "lastReading": "2026-02-24T09:30:01.457702",
+          "trend24h": [
+            {
+              "hour": "2026-02-23T09:00",
+              "avgTemp": 71.4
+            },
+            {
+              "hour": "2026-02-23T10:00",
+              "avgTemp": 72.4
+            },
+            {
+              "hour": "2026-02-23T11:00",
+              "avgTemp": 72.8
+            },
+            {
+              "hour": "2026-02-23T12:00",
+              "avgTemp": 72.4
+            },
+            {
+              "hour": "2026-02-23T13:00",
+              "avgTemp": 72.1
+            },
+            {
+              "hour": "2026-02-23T14:00",
+              "avgTemp": 71.8
+            },
+            {
+              "hour": "2026-02-23T15:00",
+              "avgTemp": 71.9
+            },
+            {
+              "hour": "2026-02-23T16:00",
+              "avgTemp": 71.8
+            },
+            {
+              "hour": "2026-02-23T17:00",
+              "avgTemp": 71.5
+            },
+            {
+              "hour": "2026-02-23T18:00",
+              "avgTemp": 71.0
+            },
+            {
+              "hour": "2026-02-23T19:00",
+              "avgTemp": 70.2
+            },
+            {
+              "hour": "2026-02-23T20:00",
+              "avgTemp": 69.6
+            },
+            {
+              "hour": "2026-02-23T21:00",
+              "avgTemp": 69.0
+            },
+            {
+              "hour": "2026-02-23T22:00",
+              "avgTemp": 68.6
+            },
+            {
+              "hour": "2026-02-23T23:00",
+              "avgTemp": 68.3
+            },
+            {
+              "hour": "2026-02-24T00:00",
+              "avgTemp": 67.7
+            },
+            {
+              "hour": "2026-02-24T01:00",
+              "avgTemp": 67.3
+            }
+          ],
+          "coolingHours24h": 0.3,
+          "heatingHours24h": 0.0
         },
         {
-          "building": "Common",
+          "id": "417325423500",
           "name": "Conference-Galinson (CU8)",
-          "temp_f": 6.9799999999999995,
-          "humidity": 52,
-          "hvac_mode": "auto",
-          "fan_running": 0,
-          "timestamp": "2026-03-06T00:00:01.338458"
+          "temperature": 72.6,
+          "humidity": 45,
+          "hvacMode": "auto",
+          "desiredCool": 74.0,
+          "desiredHeat": 68.0,
+          "isConnected": true,
+          "isCooling": false,
+          "isHeating": false,
+          "isServerRoom": false,
+          "lastReading": "2026-02-24T09:30:01.457702",
+          "trend24h": [
+            {
+              "hour": "2026-02-23T09:00",
+              "avgTemp": 72.2
+            },
+            {
+              "hour": "2026-02-23T10:00",
+              "avgTemp": 71.6
+            },
+            {
+              "hour": "2026-02-23T11:00",
+              "avgTemp": 71.9
+            },
+            {
+              "hour": "2026-02-23T12:00",
+              "avgTemp": 72.2
+            },
+            {
+              "hour": "2026-02-23T13:00",
+              "avgTemp": 73.5
+            },
+            {
+              "hour": "2026-02-23T14:00",
+              "avgTemp": 72.8
+            },
+            {
+              "hour": "2026-02-23T15:00",
+              "avgTemp": 72.4
+            },
+            {
+              "hour": "2026-02-23T16:00",
+              "avgTemp": 72.6
+            },
+            {
+              "hour": "2026-02-23T17:00",
+              "avgTemp": 72.4
+            },
+            {
+              "hour": "2026-02-23T18:00",
+              "avgTemp": 71.5
+            },
+            {
+              "hour": "2026-02-23T19:00",
+              "avgTemp": 70.9
+            },
+            {
+              "hour": "2026-02-23T20:00",
+              "avgTemp": 70.3
+            },
+            {
+              "hour": "2026-02-23T21:00",
+              "avgTemp": 69.8
+            },
+            {
+              "hour": "2026-02-23T22:00",
+              "avgTemp": 69.4
+            },
+            {
+              "hour": "2026-02-23T23:00",
+              "avgTemp": 69.3
+            },
+            {
+              "hour": "2026-02-24T00:00",
+              "avgTemp": 68.9
+            },
+            {
+              "hour": "2026-02-24T01:00",
+              "avgTemp": 68.6
+            }
+          ],
+          "coolingHours24h": 0.0,
+          "heatingHours24h": 0.0
         }
-      ],
-      "alerts": []
+      ]
     },
     {
       "name": "Federation",
-      "zones": [
+      "thermostats": [
         {
-          "building": "Federation",
+          "id": "417390401467",
           "name": "Federation Room 124 (CU1)",
-          "temp_f": 6.44,
-          "humidity": 56,
-          "hvac_mode": "auto",
-          "fan_running": 0,
-          "timestamp": "2026-03-06T00:00:01.338458"
+          "temperature": 68.9,
+          "humidity": 50,
+          "hvacMode": "auto",
+          "desiredCool": 74.0,
+          "desiredHeat": 69.0,
+          "isConnected": true,
+          "isCooling": false,
+          "isHeating": false,
+          "isServerRoom": false,
+          "lastReading": "2026-02-24T09:30:01.457702",
+          "trend24h": [
+            {
+              "hour": "2026-02-23T09:00",
+              "avgTemp": 69.0
+            },
+            {
+              "hour": "2026-02-23T10:00",
+              "avgTemp": 68.6
+            },
+            {
+              "hour": "2026-02-23T11:00",
+              "avgTemp": 68.9
+            },
+            {
+              "hour": "2026-02-23T12:00",
+              "avgTemp": 69.3
+            },
+            {
+              "hour": "2026-02-23T13:00",
+              "avgTemp": 69.4
+            },
+            {
+              "hour": "2026-02-23T14:00",
+              "avgTemp": 71.9
+            },
+            {
+              "hour": "2026-02-23T15:00",
+              "avgTemp": 72.6
+            },
+            {
+              "hour": "2026-02-23T16:00",
+              "avgTemp": 70.6
+            },
+            {
+              "hour": "2026-02-23T17:00",
+              "avgTemp": 69.2
+            },
+            {
+              "hour": "2026-02-23T18:00",
+              "avgTemp": 68.0
+            },
+            {
+              "hour": "2026-02-23T19:00",
+              "avgTemp": 67.2
+            },
+            {
+              "hour": "2026-02-23T20:00",
+              "avgTemp": 66.3
+            },
+            {
+              "hour": "2026-02-23T21:00",
+              "avgTemp": 65.6
+            },
+            {
+              "hour": "2026-02-23T22:00",
+              "avgTemp": 65.0
+            },
+            {
+              "hour": "2026-02-23T23:00",
+              "avgTemp": 64.2
+            },
+            {
+              "hour": "2026-02-24T00:00",
+              "avgTemp": 63.5
+            },
+            {
+              "hour": "2026-02-24T01:00",
+              "avgTemp": 63.1
+            }
+          ],
+          "coolingHours24h": 0.0,
+          "heatingHours24h": 0.5
         },
         {
-          "building": "Federation",
+          "id": "417313368811",
           "name": "Federation-Cubicle Area (CU3)",
-          "temp_f": 6.840000000000001,
-          "humidity": 52,
-          "hvac_mode": "heat",
-          "fan_running": 0,
-          "timestamp": "2026-03-06T00:00:01.338458"
+          "temperature": 70.4,
+          "humidity": 49,
+          "hvacMode": "heat",
+          "desiredCool": 74.0,
+          "desiredHeat": 68.0,
+          "isConnected": true,
+          "isCooling": false,
+          "isHeating": false,
+          "isServerRoom": false,
+          "lastReading": "2026-02-24T09:30:01.457702",
+          "trend24h": [
+            {
+              "hour": "2026-02-23T09:00",
+              "avgTemp": 70.2
+            },
+            {
+              "hour": "2026-02-23T10:00",
+              "avgTemp": 70.1
+            },
+            {
+              "hour": "2026-02-23T11:00",
+              "avgTemp": 71.0
+            },
+            {
+              "hour": "2026-02-23T12:00",
+              "avgTemp": 71.6
+            },
+            {
+              "hour": "2026-02-23T13:00",
+              "avgTemp": 71.5
+            },
+            {
+              "hour": "2026-02-23T14:00",
+              "avgTemp": 71.8
+            },
+            {
+              "hour": "2026-02-23T15:00",
+              "avgTemp": 71.8
+            },
+            {
+              "hour": "2026-02-23T16:00",
+              "avgTemp": 71.4
+            },
+            {
+              "hour": "2026-02-23T17:00",
+              "avgTemp": 71.0
+            },
+            {
+              "hour": "2026-02-23T18:00",
+              "avgTemp": 70.3
+            },
+            {
+              "hour": "2026-02-23T19:00",
+              "avgTemp": 69.6
+            },
+            {
+              "hour": "2026-02-23T20:00",
+              "avgTemp": 69.0
+            },
+            {
+              "hour": "2026-02-23T21:00",
+              "avgTemp": 68.4
+            },
+            {
+              "hour": "2026-02-23T22:00",
+              "avgTemp": 67.9
+            },
+            {
+              "hour": "2026-02-23T23:00",
+              "avgTemp": 67.5
+            },
+            {
+              "hour": "2026-02-24T00:00",
+              "avgTemp": 67.1
+            },
+            {
+              "hour": "2026-02-24T01:00",
+              "avgTemp": 66.9
+            }
+          ],
+          "coolingHours24h": 0.0,
+          "heatingHours24h": 0.3
         },
         {
-          "building": "Federation",
+          "id": "417385554923",
           "name": "Federation-Cubicle Area (HP5)",
-          "temp_f": 7.31,
+          "temperature": 71.8,
           "humidity": 45,
-          "hvac_mode": "auto",
-          "fan_running": 0,
-          "timestamp": "2026-03-06T00:00:01.338458"
+          "hvacMode": "auto",
+          "desiredCool": 74.0,
+          "desiredHeat": 68.0,
+          "isConnected": true,
+          "isCooling": false,
+          "isHeating": false,
+          "isServerRoom": false,
+          "lastReading": "2026-02-24T09:30:01.457702",
+          "trend24h": [
+            {
+              "hour": "2026-02-23T09:00",
+              "avgTemp": 71.3
+            },
+            {
+              "hour": "2026-02-23T10:00",
+              "avgTemp": 70.4
+            },
+            {
+              "hour": "2026-02-23T11:00",
+              "avgTemp": 71.1
+            },
+            {
+              "hour": "2026-02-23T12:00",
+              "avgTemp": 72.5
+            },
+            {
+              "hour": "2026-02-23T13:00",
+              "avgTemp": 73.6
+            },
+            {
+              "hour": "2026-02-23T14:00",
+              "avgTemp": 74.3
+            },
+            {
+              "hour": "2026-02-23T15:00",
+              "avgTemp": 74.4
+            },
+            {
+              "hour": "2026-02-23T16:00",
+              "avgTemp": 74.1
+            },
+            {
+              "hour": "2026-02-23T17:00",
+              "avgTemp": 74.4
+            },
+            {
+              "hour": "2026-02-23T18:00",
+              "avgTemp": 75.0
+            },
+            {
+              "hour": "2026-02-23T19:00",
+              "avgTemp": 75.0
+            },
+            {
+              "hour": "2026-02-23T20:00",
+              "avgTemp": 74.8
+            },
+            {
+              "hour": "2026-02-23T21:00",
+              "avgTemp": 74.4
+            },
+            {
+              "hour": "2026-02-23T22:00",
+              "avgTemp": 74.0
+            },
+            {
+              "hour": "2026-02-23T23:00",
+              "avgTemp": 73.5
+            },
+            {
+              "hour": "2026-02-24T00:00",
+              "avgTemp": 73.1
+            },
+            {
+              "hour": "2026-02-24T01:00",
+              "avgTemp": 72.5
+            }
+          ],
+          "coolingHours24h": 2.6,
+          "heatingHours24h": 0.0
         },
         {
-          "building": "Federation",
+          "id": "417373945850",
           "name": "Federation-East Offices (CU6)",
-          "temp_f": 6.82,
-          "humidity": 52,
-          "hvac_mode": "auto",
-          "fan_running": 0,
-          "timestamp": "2026-03-06T00:00:01.338458"
-        },
-        {
-          "building": "Federation",
-          "name": "Federation-East Program Offices (HP9)",
-          "temp_f": 7.07,
+          "temperature": 71.5,
           "humidity": 47,
-          "hvac_mode": "auto",
-          "fan_running": 0,
-          "timestamp": "2026-03-06T00:00:01.338458"
+          "hvacMode": "heat",
+          "desiredCool": 72.0,
+          "desiredHeat": 72.0,
+          "isConnected": true,
+          "isCooling": false,
+          "isHeating": true,
+          "isServerRoom": false,
+          "lastReading": "2026-02-24T09:30:01.457702",
+          "trend24h": [
+            {
+              "hour": "2026-02-23T09:00",
+              "avgTemp": 71.1
+            },
+            {
+              "hour": "2026-02-23T10:00",
+              "avgTemp": 71.7
+            },
+            {
+              "hour": "2026-02-23T11:00",
+              "avgTemp": 72.7
+            },
+            {
+              "hour": "2026-02-23T12:00",
+              "avgTemp": 73.9
+            },
+            {
+              "hour": "2026-02-23T13:00",
+              "avgTemp": 74.0
+            },
+            {
+              "hour": "2026-02-23T14:00",
+              "avgTemp": 74.1
+            },
+            {
+              "hour": "2026-02-23T15:00",
+              "avgTemp": 74.4
+            },
+            {
+              "hour": "2026-02-23T16:00",
+              "avgTemp": 74.5
+            },
+            {
+              "hour": "2026-02-23T17:00",
+              "avgTemp": 73.2
+            },
+            {
+              "hour": "2026-02-23T18:00",
+              "avgTemp": 72.2
+            },
+            {
+              "hour": "2026-02-23T19:00",
+              "avgTemp": 70.8
+            },
+            {
+              "hour": "2026-02-23T20:00",
+              "avgTemp": 69.7
+            },
+            {
+              "hour": "2026-02-23T21:00",
+              "avgTemp": 68.9
+            },
+            {
+              "hour": "2026-02-23T22:00",
+              "avgTemp": 68.3
+            },
+            {
+              "hour": "2026-02-23T23:00",
+              "avgTemp": 67.8
+            },
+            {
+              "hour": "2026-02-24T00:00",
+              "avgTemp": 67.4
+            },
+            {
+              "hour": "2026-02-24T01:00",
+              "avgTemp": 67.0
+            }
+          ],
+          "coolingHours24h": 0.0,
+          "heatingHours24h": 0.3
         },
         {
-          "building": "Federation",
+          "id": "417397253447",
+          "name": "Federation-East Program Offices (HP9)",
+          "temperature": 71.9,
+          "humidity": 44,
+          "hvacMode": "auto",
+          "desiredCool": 74.0,
+          "desiredHeat": 69.0,
+          "isConnected": true,
+          "isCooling": false,
+          "isHeating": false,
+          "isServerRoom": false,
+          "lastReading": "2026-02-24T09:30:01.457702",
+          "trend24h": [
+            {
+              "hour": "2026-02-23T09:00",
+              "avgTemp": 71.6
+            },
+            {
+              "hour": "2026-02-23T10:00",
+              "avgTemp": 71.0
+            },
+            {
+              "hour": "2026-02-23T11:00",
+              "avgTemp": 71.2
+            },
+            {
+              "hour": "2026-02-23T12:00",
+              "avgTemp": 72.4
+            },
+            {
+              "hour": "2026-02-23T13:00",
+              "avgTemp": 73.1
+            },
+            {
+              "hour": "2026-02-23T14:00",
+              "avgTemp": 73.8
+            },
+            {
+              "hour": "2026-02-23T15:00",
+              "avgTemp": 74.5
+            },
+            {
+              "hour": "2026-02-23T16:00",
+              "avgTemp": 74.5
+            },
+            {
+              "hour": "2026-02-23T17:00",
+              "avgTemp": 73.9
+            },
+            {
+              "hour": "2026-02-23T18:00",
+              "avgTemp": 73.6
+            },
+            {
+              "hour": "2026-02-23T19:00",
+              "avgTemp": 73.2
+            },
+            {
+              "hour": "2026-02-23T20:00",
+              "avgTemp": 72.8
+            },
+            {
+              "hour": "2026-02-23T21:00",
+              "avgTemp": 72.4
+            },
+            {
+              "hour": "2026-02-23T22:00",
+              "avgTemp": 71.8
+            },
+            {
+              "hour": "2026-02-23T23:00",
+              "avgTemp": 71.2
+            },
+            {
+              "hour": "2026-02-24T00:00",
+              "avgTemp": 70.5
+            },
+            {
+              "hour": "2026-02-24T01:00",
+              "avgTemp": 69.8
+            }
+          ],
+          "coolingHours24h": 0.0,
+          "heatingHours24h": 0.0
+        },
+        {
+          "id": "417344692907",
           "name": "Federation-Heidi (CU2)",
-          "temp_f": 6.56,
-          "humidity": 58,
-          "hvac_mode": "auto",
-          "fan_running": 0,
-          "timestamp": "2026-03-06T00:00:01.338458"
+          "temperature": 69.8,
+          "humidity": 49,
+          "hvacMode": "auto",
+          "desiredCool": 72.0,
+          "desiredHeat": 70.0,
+          "isConnected": true,
+          "isCooling": false,
+          "isHeating": false,
+          "isServerRoom": false,
+          "lastReading": "2026-02-24T09:30:01.457702",
+          "trend24h": [
+            {
+              "hour": "2026-02-23T09:00",
+              "avgTemp": 69.7
+            },
+            {
+              "hour": "2026-02-23T10:00",
+              "avgTemp": 69.7
+            },
+            {
+              "hour": "2026-02-23T11:00",
+              "avgTemp": 69.8
+            },
+            {
+              "hour": "2026-02-23T12:00",
+              "avgTemp": 69.6
+            },
+            {
+              "hour": "2026-02-23T13:00",
+              "avgTemp": 69.6
+            },
+            {
+              "hour": "2026-02-23T14:00",
+              "avgTemp": 69.8
+            },
+            {
+              "hour": "2026-02-23T15:00",
+              "avgTemp": 69.4
+            },
+            {
+              "hour": "2026-02-23T16:00",
+              "avgTemp": 69.6
+            },
+            {
+              "hour": "2026-02-23T17:00",
+              "avgTemp": 69.1
+            },
+            {
+              "hour": "2026-02-23T18:00",
+              "avgTemp": 67.8
+            },
+            {
+              "hour": "2026-02-23T19:00",
+              "avgTemp": 67.1
+            },
+            {
+              "hour": "2026-02-23T20:00",
+              "avgTemp": 66.4
+            },
+            {
+              "hour": "2026-02-23T21:00",
+              "avgTemp": 65.9
+            },
+            {
+              "hour": "2026-02-23T22:00",
+              "avgTemp": 65.4
+            },
+            {
+              "hour": "2026-02-23T23:00",
+              "avgTemp": 65.0
+            },
+            {
+              "hour": "2026-02-24T00:00",
+              "avgTemp": 64.6
+            },
+            {
+              "hour": "2026-02-24T01:00",
+              "avgTemp": 64.2
+            }
+          ],
+          "coolingHours24h": 0.0,
+          "heatingHours24h": 1.3
         },
         {
-          "building": "Federation",
+          "id": "417383486129",
           "name": "Federation-Programs Conference (HP7)",
-          "temp_f": 7.340000000000001,
+          "temperature": 71.5,
           "humidity": 45,
-          "hvac_mode": "auto",
-          "fan_running": 0,
-          "timestamp": "2026-03-06T00:00:01.338458"
+          "hvacMode": "auto",
+          "desiredCool": 74.0,
+          "desiredHeat": 68.0,
+          "isConnected": true,
+          "isCooling": false,
+          "isHeating": false,
+          "isServerRoom": false,
+          "lastReading": "2026-02-24T09:30:01.457702",
+          "trend24h": [
+            {
+              "hour": "2026-02-23T09:00",
+              "avgTemp": 71.0
+            },
+            {
+              "hour": "2026-02-23T10:00",
+              "avgTemp": 69.9
+            },
+            {
+              "hour": "2026-02-23T11:00",
+              "avgTemp": 70.5
+            },
+            {
+              "hour": "2026-02-23T12:00",
+              "avgTemp": 71.9
+            },
+            {
+              "hour": "2026-02-23T13:00",
+              "avgTemp": 72.6
+            },
+            {
+              "hour": "2026-02-23T14:00",
+              "avgTemp": 73.2
+            },
+            {
+              "hour": "2026-02-23T15:00",
+              "avgTemp": 73.7
+            },
+            {
+              "hour": "2026-02-23T16:00",
+              "avgTemp": 74.2
+            },
+            {
+              "hour": "2026-02-23T17:00",
+              "avgTemp": 74.4
+            },
+            {
+              "hour": "2026-02-23T18:00",
+              "avgTemp": 74.2
+            },
+            {
+              "hour": "2026-02-23T19:00",
+              "avgTemp": 74.0
+            },
+            {
+              "hour": "2026-02-23T20:00",
+              "avgTemp": 73.8
+            },
+            {
+              "hour": "2026-02-23T21:00",
+              "avgTemp": 73.4
+            },
+            {
+              "hour": "2026-02-23T22:00",
+              "avgTemp": 73.0
+            },
+            {
+              "hour": "2026-02-23T23:00",
+              "avgTemp": 72.6
+            },
+            {
+              "hour": "2026-02-24T00:00",
+              "avgTemp": 72.3
+            },
+            {
+              "hour": "2026-02-24T01:00",
+              "avgTemp": 71.8
+            }
+          ],
+          "coolingHours24h": 0.0,
+          "heatingHours24h": 0.0
         },
         {
-          "building": "Federation",
+          "id": "417395277128",
           "name": "Federation-West Offices (CU4)",
-          "temp_f": 6.859999999999999,
-          "humidity": 51,
-          "hvac_mode": "auto",
-          "fan_running": 0,
-          "timestamp": "2026-03-06T00:00:01.338458"
+          "temperature": 72.0,
+          "humidity": 45,
+          "hvacMode": "auto",
+          "desiredCool": 77.0,
+          "desiredHeat": 72.0,
+          "isConnected": true,
+          "isCooling": false,
+          "isHeating": false,
+          "isServerRoom": false,
+          "lastReading": "2026-02-24T09:30:01.457702",
+          "trend24h": [
+            {
+              "hour": "2026-02-23T09:00",
+              "avgTemp": 71.1
+            },
+            {
+              "hour": "2026-02-23T10:00",
+              "avgTemp": 71.7
+            },
+            {
+              "hour": "2026-02-23T11:00",
+              "avgTemp": 72.8
+            },
+            {
+              "hour": "2026-02-23T12:00",
+              "avgTemp": 73.2
+            },
+            {
+              "hour": "2026-02-23T13:00",
+              "avgTemp": 74.2
+            },
+            {
+              "hour": "2026-02-23T14:00",
+              "avgTemp": 73.6
+            },
+            {
+              "hour": "2026-02-23T15:00",
+              "avgTemp": 73.7
+            },
+            {
+              "hour": "2026-02-23T16:00",
+              "avgTemp": 73.1
+            },
+            {
+              "hour": "2026-02-23T17:00",
+              "avgTemp": 72.5
+            },
+            {
+              "hour": "2026-02-23T18:00",
+              "avgTemp": 71.3
+            },
+            {
+              "hour": "2026-02-23T19:00",
+              "avgTemp": 70.3
+            },
+            {
+              "hour": "2026-02-23T20:00",
+              "avgTemp": 69.6
+            },
+            {
+              "hour": "2026-02-23T21:00",
+              "avgTemp": 68.9
+            },
+            {
+              "hour": "2026-02-23T22:00",
+              "avgTemp": 68.3
+            },
+            {
+              "hour": "2026-02-23T23:00",
+              "avgTemp": 67.8
+            },
+            {
+              "hour": "2026-02-24T00:00",
+              "avgTemp": 67.4
+            },
+            {
+              "hour": "2026-02-24T01:00",
+              "avgTemp": 67.0
+            }
+          ],
+          "coolingHours24h": 0.0,
+          "heatingHours24h": 2.3
         }
-      ],
-      "alerts": []
+      ]
     },
     {
       "name": "JCF",
-      "zones": [
+      "thermostats": [
         {
-          "building": "JCF",
+          "id": "417396087614",
           "name": "Conference-Foster N (CU9)",
-          "temp_f": 6.8,
-          "humidity": 54,
-          "hvac_mode": "auto",
-          "fan_running": 0,
-          "timestamp": "2026-03-06T00:00:01.338458"
+          "temperature": 71.1,
+          "humidity": 47,
+          "hvacMode": "auto",
+          "desiredCool": 73.0,
+          "desiredHeat": 68.0,
+          "isConnected": true,
+          "isCooling": false,
+          "isHeating": false,
+          "isServerRoom": false,
+          "lastReading": "2026-02-24T09:30:01.457702",
+          "trend24h": [
+            {
+              "hour": "2026-02-23T09:00",
+              "avgTemp": 71.1
+            },
+            {
+              "hour": "2026-02-23T10:00",
+              "avgTemp": 71.8
+            },
+            {
+              "hour": "2026-02-23T11:00",
+              "avgTemp": 72.5
+            },
+            {
+              "hour": "2026-02-23T12:00",
+              "avgTemp": 72.4
+            },
+            {
+              "hour": "2026-02-23T13:00",
+              "avgTemp": 72.0
+            },
+            {
+              "hour": "2026-02-23T14:00",
+              "avgTemp": 71.9
+            },
+            {
+              "hour": "2026-02-23T15:00",
+              "avgTemp": 72.0
+            },
+            {
+              "hour": "2026-02-23T16:00",
+              "avgTemp": 71.8
+            },
+            {
+              "hour": "2026-02-23T17:00",
+              "avgTemp": 71.3
+            },
+            {
+              "hour": "2026-02-23T18:00",
+              "avgTemp": 70.7
+            },
+            {
+              "hour": "2026-02-23T19:00",
+              "avgTemp": 70.2
+            },
+            {
+              "hour": "2026-02-23T20:00",
+              "avgTemp": 69.5
+            },
+            {
+              "hour": "2026-02-23T21:00",
+              "avgTemp": 68.9
+            },
+            {
+              "hour": "2026-02-23T22:00",
+              "avgTemp": 68.4
+            },
+            {
+              "hour": "2026-02-23T23:00",
+              "avgTemp": 68.0
+            },
+            {
+              "hour": "2026-02-24T00:00",
+              "avgTemp": 67.6
+            },
+            {
+              "hour": "2026-02-24T01:00",
+              "avgTemp": 67.2
+            }
+          ],
+          "coolingHours24h": 0.8,
+          "heatingHours24h": 0.0
         },
         {
-          "building": "JCF",
+          "id": "417361797001",
           "name": "JCF-Common Receptionist N (CU17)",
-          "temp_f": 7.0,
-          "humidity": 49,
-          "hvac_mode": "auto",
-          "fan_running": 0,
-          "timestamp": "2026-03-06T00:00:01.338458"
+          "temperature": 70.9,
+          "humidity": 47,
+          "hvacMode": "auto",
+          "desiredCool": 75.0,
+          "desiredHeat": 70.0,
+          "isConnected": true,
+          "isCooling": false,
+          "isHeating": false,
+          "isServerRoom": false,
+          "lastReading": "2026-02-24T09:30:01.457702",
+          "trend24h": [
+            {
+              "hour": "2026-02-23T09:00",
+              "avgTemp": 70.8
+            },
+            {
+              "hour": "2026-02-23T10:00",
+              "avgTemp": 71.7
+            },
+            {
+              "hour": "2026-02-23T11:00",
+              "avgTemp": 72.0
+            },
+            {
+              "hour": "2026-02-23T12:00",
+              "avgTemp": 72.6
+            },
+            {
+              "hour": "2026-02-23T13:00",
+              "avgTemp": 73.4
+            },
+            {
+              "hour": "2026-02-23T14:00",
+              "avgTemp": 73.3
+            },
+            {
+              "hour": "2026-02-23T15:00",
+              "avgTemp": 72.9
+            },
+            {
+              "hour": "2026-02-23T16:00",
+              "avgTemp": 72.4
+            },
+            {
+              "hour": "2026-02-23T17:00",
+              "avgTemp": 72.3
+            },
+            {
+              "hour": "2026-02-23T18:00",
+              "avgTemp": 72.1
+            },
+            {
+              "hour": "2026-02-23T19:00",
+              "avgTemp": 71.6
+            },
+            {
+              "hour": "2026-02-23T20:00",
+              "avgTemp": 70.9
+            },
+            {
+              "hour": "2026-02-23T21:00",
+              "avgTemp": 70.4
+            },
+            {
+              "hour": "2026-02-23T22:00",
+              "avgTemp": 69.7
+            },
+            {
+              "hour": "2026-02-23T23:00",
+              "avgTemp": 69.4
+            },
+            {
+              "hour": "2026-02-24T00:00",
+              "avgTemp": 69.0
+            },
+            {
+              "hour": "2026-02-24T01:00",
+              "avgTemp": 68.7
+            }
+          ],
+          "coolingHours24h": 0.0,
+          "heatingHours24h": 0.0
         },
         {
-          "building": "JCF",
+          "id": "417316798190",
           "name": "JCF-Conf North (CU18) First Floor",
-          "temp_f": 6.81,
-          "humidity": 51,
-          "hvac_mode": "auto",
-          "fan_running": 0,
-          "timestamp": "2026-03-06T00:00:01.338458"
+          "temperature": 69.4,
+          "humidity": 48,
+          "hvacMode": "auto",
+          "desiredCool": 74.0,
+          "desiredHeat": 68.0,
+          "isConnected": true,
+          "isCooling": false,
+          "isHeating": false,
+          "isServerRoom": false,
+          "lastReading": "2026-02-24T09:30:01.457702",
+          "trend24h": [
+            {
+              "hour": "2026-02-23T09:00",
+              "avgTemp": 69.3
+            },
+            {
+              "hour": "2026-02-23T10:00",
+              "avgTemp": 69.7
+            },
+            {
+              "hour": "2026-02-23T11:00",
+              "avgTemp": 70.8
+            },
+            {
+              "hour": "2026-02-23T12:00",
+              "avgTemp": 72.0
+            },
+            {
+              "hour": "2026-02-23T13:00",
+              "avgTemp": 74.2
+            },
+            {
+              "hour": "2026-02-23T14:00",
+              "avgTemp": 74.6
+            },
+            {
+              "hour": "2026-02-23T15:00",
+              "avgTemp": 74.4
+            },
+            {
+              "hour": "2026-02-23T16:00",
+              "avgTemp": 73.6
+            },
+            {
+              "hour": "2026-02-23T17:00",
+              "avgTemp": 72.9
+            },
+            {
+              "hour": "2026-02-23T18:00",
+              "avgTemp": 71.9
+            },
+            {
+              "hour": "2026-02-23T19:00",
+              "avgTemp": 71.0
+            },
+            {
+              "hour": "2026-02-23T20:00",
+              "avgTemp": 70.1
+            },
+            {
+              "hour": "2026-02-23T21:00",
+              "avgTemp": 69.2
+            },
+            {
+              "hour": "2026-02-23T22:00",
+              "avgTemp": 68.6
+            },
+            {
+              "hour": "2026-02-23T23:00",
+              "avgTemp": 68.0
+            },
+            {
+              "hour": "2026-02-24T00:00",
+              "avgTemp": 67.4
+            },
+            {
+              "hour": "2026-02-24T01:00",
+              "avgTemp": 66.9
+            }
+          ],
+          "coolingHours24h": 1.8,
+          "heatingHours24h": 0.0
         },
         {
-          "building": "JCF",
+          "id": "417318223050",
           "name": "JCF-Conference SE (CU14)",
-          "temp_f": 6.659999999999999,
-          "humidity": 50,
-          "hvac_mode": "auto",
-          "fan_running": 0,
-          "timestamp": "2026-03-06T00:00:01.338458"
+          "temperature": 74.8,
+          "humidity": 43,
+          "hvacMode": "auto",
+          "desiredCool": 74.0,
+          "desiredHeat": 68.0,
+          "isConnected": true,
+          "isCooling": false,
+          "isHeating": false,
+          "isServerRoom": false,
+          "lastReading": "2026-02-24T09:30:01.457702",
+          "trend24h": [
+            {
+              "hour": "2026-02-23T09:00",
+              "avgTemp": 75.2
+            },
+            {
+              "hour": "2026-02-23T10:00",
+              "avgTemp": 75.0
+            },
+            {
+              "hour": "2026-02-23T11:00",
+              "avgTemp": 73.7
+            },
+            {
+              "hour": "2026-02-23T12:00",
+              "avgTemp": 78.6
+            },
+            {
+              "hour": "2026-02-23T13:00",
+              "avgTemp": 81.4
+            },
+            {
+              "hour": "2026-02-23T14:00",
+              "avgTemp": 76.8
+            },
+            {
+              "hour": "2026-02-23T15:00",
+              "avgTemp": 74.3
+            },
+            {
+              "hour": "2026-02-23T16:00",
+              "avgTemp": 74.2
+            },
+            {
+              "hour": "2026-02-23T17:00",
+              "avgTemp": 73.7
+            },
+            {
+              "hour": "2026-02-23T18:00",
+              "avgTemp": 72.4
+            },
+            {
+              "hour": "2026-02-23T19:00",
+              "avgTemp": 71.1
+            },
+            {
+              "hour": "2026-02-23T20:00",
+              "avgTemp": 70.0
+            },
+            {
+              "hour": "2026-02-23T21:00",
+              "avgTemp": 68.9
+            },
+            {
+              "hour": "2026-02-23T22:00",
+              "avgTemp": 68.0
+            },
+            {
+              "hour": "2026-02-23T23:00",
+              "avgTemp": 67.2
+            },
+            {
+              "hour": "2026-02-24T00:00",
+              "avgTemp": 66.5
+            },
+            {
+              "hour": "2026-02-24T01:00",
+              "avgTemp": 66.0
+            }
+          ],
+          "coolingHours24h": 4.1,
+          "heatingHours24h": 0.0
         },
         {
-          "building": "JCF",
+          "id": "417371789739",
           "name": "JCF-Estella W (CU16)",
-          "temp_f": 6.890000000000001,
-          "humidity": 50,
-          "hvac_mode": "auto",
-          "fan_running": 0,
-          "timestamp": "2026-03-06T00:00:01.338458"
+          "temperature": 69.9,
+          "humidity": 48,
+          "hvacMode": "auto",
+          "desiredCool": 74.0,
+          "desiredHeat": 68.0,
+          "isConnected": true,
+          "isCooling": false,
+          "isHeating": false,
+          "isServerRoom": false,
+          "lastReading": "2026-02-24T09:30:01.457702",
+          "trend24h": [
+            {
+              "hour": "2026-02-23T09:00",
+              "avgTemp": 70.0
+            },
+            {
+              "hour": "2026-02-23T10:00",
+              "avgTemp": 71.5
+            },
+            {
+              "hour": "2026-02-23T11:00",
+              "avgTemp": 72.1
+            },
+            {
+              "hour": "2026-02-23T12:00",
+              "avgTemp": 73.0
+            },
+            {
+              "hour": "2026-02-23T13:00",
+              "avgTemp": 74.5
+            },
+            {
+              "hour": "2026-02-23T14:00",
+              "avgTemp": 74.5
+            },
+            {
+              "hour": "2026-02-23T15:00",
+              "avgTemp": 73.7
+            },
+            {
+              "hour": "2026-02-23T16:00",
+              "avgTemp": 71.5
+            },
+            {
+              "hour": "2026-02-23T17:00",
+              "avgTemp": 71.5
+            },
+            {
+              "hour": "2026-02-23T18:00",
+              "avgTemp": 71.8
+            },
+            {
+              "hour": "2026-02-23T19:00",
+              "avgTemp": 71.4
+            },
+            {
+              "hour": "2026-02-23T20:00",
+              "avgTemp": 70.7
+            },
+            {
+              "hour": "2026-02-23T21:00",
+              "avgTemp": 70.2
+            },
+            {
+              "hour": "2026-02-23T22:00",
+              "avgTemp": 69.5
+            },
+            {
+              "hour": "2026-02-23T23:00",
+              "avgTemp": 69.0
+            },
+            {
+              "hour": "2026-02-24T00:00",
+              "avgTemp": 68.5
+            },
+            {
+              "hour": "2026-02-24T01:00",
+              "avgTemp": 68.0
+            }
+          ],
+          "coolingHours24h": 2.8,
+          "heatingHours24h": 0.0
         },
         {
-          "building": "JCF",
+          "id": "417357922286",
           "name": "JCF-Josie (CU 11 or 12)",
-          "temp_f": 6.82,
-          "humidity": 52,
-          "hvac_mode": "auto",
-          "fan_running": 0,
-          "timestamp": "2026-03-06T00:00:01.338458"
+          "temperature": 74.5,
+          "humidity": 39,
+          "hvacMode": "auto",
+          "desiredCool": 74.0,
+          "desiredHeat": 68.0,
+          "isConnected": true,
+          "isCooling": true,
+          "isHeating": false,
+          "isServerRoom": false,
+          "lastReading": "2026-02-24T09:30:01.457702",
+          "trend24h": [
+            {
+              "hour": "2026-02-23T09:00",
+              "avgTemp": 74.0
+            },
+            {
+              "hour": "2026-02-23T10:00",
+              "avgTemp": 74.2
+            },
+            {
+              "hour": "2026-02-23T11:00",
+              "avgTemp": 73.9
+            },
+            {
+              "hour": "2026-02-23T12:00",
+              "avgTemp": 73.9
+            },
+            {
+              "hour": "2026-02-23T13:00",
+              "avgTemp": 74.1
+            },
+            {
+              "hour": "2026-02-23T14:00",
+              "avgTemp": 74.2
+            },
+            {
+              "hour": "2026-02-23T15:00",
+              "avgTemp": 74.0
+            },
+            {
+              "hour": "2026-02-23T16:00",
+              "avgTemp": 74.2
+            },
+            {
+              "hour": "2026-02-23T17:00",
+              "avgTemp": 73.2
+            },
+            {
+              "hour": "2026-02-23T18:00",
+              "avgTemp": 72.4
+            },
+            {
+              "hour": "2026-02-23T19:00",
+              "avgTemp": 71.2
+            },
+            {
+              "hour": "2026-02-23T20:00",
+              "avgTemp": 70.2
+            },
+            {
+              "hour": "2026-02-23T21:00",
+              "avgTemp": 69.3
+            },
+            {
+              "hour": "2026-02-23T22:00",
+              "avgTemp": 68.5
+            },
+            {
+              "hour": "2026-02-23T23:00",
+              "avgTemp": 67.8
+            },
+            {
+              "hour": "2026-02-24T00:00",
+              "avgTemp": 67.2
+            },
+            {
+              "hour": "2026-02-24T01:00",
+              "avgTemp": 66.7
+            }
+          ],
+          "coolingHours24h": 0.3,
+          "heatingHours24h": 0.0
         },
         {
-          "building": "JCF",
+          "id": "417357472367",
           "name": "JCF-Room 101 (CU15)",
-          "temp_f": 6.92,
+          "temperature": 69.6,
           "humidity": 48,
-          "hvac_mode": "cool",
-          "fan_running": 0,
-          "timestamp": "2026-03-06T00:00:01.338458"
+          "hvacMode": "auto",
+          "desiredCool": 74.0,
+          "desiredHeat": 68.0,
+          "isConnected": true,
+          "isCooling": false,
+          "isHeating": false,
+          "isServerRoom": false,
+          "lastReading": "2026-02-24T09:30:01.457702",
+          "trend24h": [
+            {
+              "hour": "2026-02-23T09:00",
+              "avgTemp": 70.1
+            },
+            {
+              "hour": "2026-02-23T10:00",
+              "avgTemp": 72.3
+            },
+            {
+              "hour": "2026-02-23T11:00",
+              "avgTemp": 72.6
+            },
+            {
+              "hour": "2026-02-23T12:00",
+              "avgTemp": 73.4
+            },
+            {
+              "hour": "2026-02-23T13:00",
+              "avgTemp": 74.2
+            },
+            {
+              "hour": "2026-02-23T14:00",
+              "avgTemp": 73.8
+            },
+            {
+              "hour": "2026-02-23T15:00",
+              "avgTemp": 73.0
+            },
+            {
+              "hour": "2026-02-23T16:00",
+              "avgTemp": 72.3
+            },
+            {
+              "hour": "2026-02-23T17:00",
+              "avgTemp": 72.6
+            },
+            {
+              "hour": "2026-02-23T18:00",
+              "avgTemp": 72.6
+            },
+            {
+              "hour": "2026-02-23T19:00",
+              "avgTemp": 72.0
+            },
+            {
+              "hour": "2026-02-23T20:00",
+              "avgTemp": 71.4
+            },
+            {
+              "hour": "2026-02-23T21:00",
+              "avgTemp": 70.6
+            },
+            {
+              "hour": "2026-02-23T22:00",
+              "avgTemp": 69.8
+            },
+            {
+              "hour": "2026-02-23T23:00",
+              "avgTemp": 69.2
+            },
+            {
+              "hour": "2026-02-24T00:00",
+              "avgTemp": 68.7
+            },
+            {
+              "hour": "2026-02-24T01:00",
+              "avgTemp": 68.2
+            }
+          ],
+          "coolingHours24h": 2.3,
+          "heatingHours24h": 0.0
         },
         {
-          "building": "JCF",
+          "id": "417370063816",
           "name": "JCF-South Common (CU13)",
-          "temp_f": 6.99,
-          "humidity": 48,
-          "hvac_mode": "auto",
-          "fan_running": 0,
-          "timestamp": "2026-03-06T00:00:01.338458"
+          "temperature": 70.1,
+          "humidity": 47,
+          "hvacMode": "auto",
+          "desiredCool": 74.0,
+          "desiredHeat": 68.0,
+          "isConnected": true,
+          "isCooling": false,
+          "isHeating": false,
+          "isServerRoom": false,
+          "lastReading": "2026-02-24T09:30:01.457702",
+          "trend24h": [
+            {
+              "hour": "2026-02-23T09:00",
+              "avgTemp": 70.0
+            },
+            {
+              "hour": "2026-02-23T10:00",
+              "avgTemp": 70.7
+            },
+            {
+              "hour": "2026-02-23T11:00",
+              "avgTemp": 71.1
+            },
+            {
+              "hour": "2026-02-23T12:00",
+              "avgTemp": 71.6
+            },
+            {
+              "hour": "2026-02-23T13:00",
+              "avgTemp": 72.3
+            },
+            {
+              "hour": "2026-02-23T14:00",
+              "avgTemp": 72.5
+            },
+            {
+              "hour": "2026-02-23T15:00",
+              "avgTemp": 72.4
+            },
+            {
+              "hour": "2026-02-23T16:00",
+              "avgTemp": 71.9
+            },
+            {
+              "hour": "2026-02-23T17:00",
+              "avgTemp": 71.9
+            },
+            {
+              "hour": "2026-02-23T18:00",
+              "avgTemp": 71.6
+            },
+            {
+              "hour": "2026-02-23T19:00",
+              "avgTemp": 71.1
+            },
+            {
+              "hour": "2026-02-23T20:00",
+              "avgTemp": 70.7
+            },
+            {
+              "hour": "2026-02-23T21:00",
+              "avgTemp": 70.1
+            },
+            {
+              "hour": "2026-02-23T22:00",
+              "avgTemp": 69.8
+            },
+            {
+              "hour": "2026-02-23T23:00",
+              "avgTemp": 69.4
+            },
+            {
+              "hour": "2026-02-24T00:00",
+              "avgTemp": 68.9
+            },
+            {
+              "hour": "2026-02-24T01:00",
+              "avgTemp": 68.5
+            }
+          ],
+          "coolingHours24h": 0.0,
+          "heatingHours24h": 0.0
         }
-      ],
-      "alerts": []
+      ]
     },
     {
       "name": "Other",
-      "zones": [
+      "thermostats": [
         {
-          "building": "Other",
+          "id": "417386543807",
           "name": "AJC-Sarah (HP2)",
-          "temp_f": 6.62,
-          "humidity": 56,
-          "hvac_mode": "auto",
-          "fan_running": 0,
-          "timestamp": "2026-03-06T00:00:01.338458"
+          "temperature": 67.9,
+          "humidity": 51,
+          "hvacMode": "auto",
+          "desiredCool": 74.0,
+          "desiredHeat": 68.0,
+          "isConnected": true,
+          "isCooling": false,
+          "isHeating": false,
+          "isServerRoom": false,
+          "lastReading": "2026-02-24T09:30:01.457702",
+          "trend24h": [
+            {
+              "hour": "2026-02-23T09:00",
+              "avgTemp": 68.0
+            },
+            {
+              "hour": "2026-02-23T10:00",
+              "avgTemp": 67.5
+            },
+            {
+              "hour": "2026-02-23T11:00",
+              "avgTemp": 67.5
+            },
+            {
+              "hour": "2026-02-23T12:00",
+              "avgTemp": 67.7
+            },
+            {
+              "hour": "2026-02-23T13:00",
+              "avgTemp": 68.5
+            },
+            {
+              "hour": "2026-02-23T14:00",
+              "avgTemp": 70.5
+            },
+            {
+              "hour": "2026-02-23T15:00",
+              "avgTemp": 72.3
+            },
+            {
+              "hour": "2026-02-23T16:00",
+              "avgTemp": 71.5
+            },
+            {
+              "hour": "2026-02-23T17:00",
+              "avgTemp": 70.4
+            },
+            {
+              "hour": "2026-02-23T18:00",
+              "avgTemp": 69.5
+            },
+            {
+              "hour": "2026-02-23T19:00",
+              "avgTemp": 68.8
+            },
+            {
+              "hour": "2026-02-23T20:00",
+              "avgTemp": 68.0
+            },
+            {
+              "hour": "2026-02-23T21:00",
+              "avgTemp": 67.4
+            },
+            {
+              "hour": "2026-02-23T22:00",
+              "avgTemp": 66.6
+            },
+            {
+              "hour": "2026-02-23T23:00",
+              "avgTemp": 66.0
+            },
+            {
+              "hour": "2026-02-24T00:00",
+              "avgTemp": 65.3
+            },
+            {
+              "hour": "2026-02-24T01:00",
+              "avgTemp": 64.5
+            }
+          ],
+          "coolingHours24h": 0.0,
+          "heatingHours24h": 0.3
         },
         {
-          "building": "Other",
+          "id": "417330910873",
           "name": "FIDF-Storage Room (HP3)",
-          "temp_f": 7.040000000000001,
+          "temperature": 67.7,
           "humidity": 49,
-          "hvac_mode": "auto",
-          "fan_running": 0,
-          "timestamp": "2026-03-06T00:00:01.338458"
+          "hvacMode": "auto",
+          "desiredCool": 74.0,
+          "desiredHeat": 68.0,
+          "isConnected": true,
+          "isCooling": false,
+          "isHeating": false,
+          "isServerRoom": false,
+          "lastReading": "2026-02-24T09:30:01.457702",
+          "trend24h": [
+            {
+              "hour": "2026-02-23T09:00",
+              "avgTemp": 67.5
+            },
+            {
+              "hour": "2026-02-23T10:00",
+              "avgTemp": 67.3
+            },
+            {
+              "hour": "2026-02-23T11:00",
+              "avgTemp": 67.4
+            },
+            {
+              "hour": "2026-02-23T12:00",
+              "avgTemp": 67.7
+            },
+            {
+              "hour": "2026-02-23T13:00",
+              "avgTemp": 68.1
+            },
+            {
+              "hour": "2026-02-23T14:00",
+              "avgTemp": 68.7
+            },
+            {
+              "hour": "2026-02-23T15:00",
+              "avgTemp": 69.2
+            },
+            {
+              "hour": "2026-02-23T16:00",
+              "avgTemp": 69.8
+            },
+            {
+              "hour": "2026-02-23T17:00",
+              "avgTemp": 69.9
+            },
+            {
+              "hour": "2026-02-23T18:00",
+              "avgTemp": 70.0
+            },
+            {
+              "hour": "2026-02-23T19:00",
+              "avgTemp": 70.1
+            },
+            {
+              "hour": "2026-02-23T20:00",
+              "avgTemp": 70.1
+            },
+            {
+              "hour": "2026-02-23T21:00",
+              "avgTemp": 70.0
+            },
+            {
+              "hour": "2026-02-23T22:00",
+              "avgTemp": 69.9
+            },
+            {
+              "hour": "2026-02-23T23:00",
+              "avgTemp": 69.6
+            },
+            {
+              "hour": "2026-02-24T00:00",
+              "avgTemp": 69.3
+            },
+            {
+              "hour": "2026-02-24T01:00",
+              "avgTemp": 69.1
+            }
+          ],
+          "coolingHours24h": 0.0,
+          "heatingHours24h": 0.0
         },
         {
-          "building": "Other",
+          "id": "417322188118",
           "name": "SWU-Oz (HP1)",
-          "temp_f": 6.529999999999999,
-          "humidity": 56,
-          "hvac_mode": "auto",
-          "fan_running": 0,
-          "timestamp": "2026-03-06T00:00:01.338458"
+          "temperature": 67.9,
+          "humidity": 51,
+          "hvacMode": "auto",
+          "desiredCool": 74.0,
+          "desiredHeat": 68.0,
+          "isConnected": true,
+          "isCooling": false,
+          "isHeating": false,
+          "isServerRoom": false,
+          "lastReading": "2026-02-24T09:30:01.457702",
+          "trend24h": [
+            {
+              "hour": "2026-02-23T09:00",
+              "avgTemp": 67.7
+            },
+            {
+              "hour": "2026-02-23T10:00",
+              "avgTemp": 67.9
+            },
+            {
+              "hour": "2026-02-23T11:00",
+              "avgTemp": 67.9
+            },
+            {
+              "hour": "2026-02-23T12:00",
+              "avgTemp": 68.0
+            },
+            {
+              "hour": "2026-02-23T13:00",
+              "avgTemp": 68.4
+            },
+            {
+              "hour": "2026-02-23T14:00",
+              "avgTemp": 68.9
+            },
+            {
+              "hour": "2026-02-23T15:00",
+              "avgTemp": 69.4
+            },
+            {
+              "hour": "2026-02-23T16:00",
+              "avgTemp": 69.7
+            },
+            {
+              "hour": "2026-02-23T17:00",
+              "avgTemp": 69.1
+            },
+            {
+              "hour": "2026-02-23T18:00",
+              "avgTemp": 68.6
+            },
+            {
+              "hour": "2026-02-23T19:00",
+              "avgTemp": 68.0
+            },
+            {
+              "hour": "2026-02-23T20:00",
+              "avgTemp": 67.3
+            },
+            {
+              "hour": "2026-02-23T21:00",
+              "avgTemp": 66.7
+            },
+            {
+              "hour": "2026-02-23T22:00",
+              "avgTemp": 66.1
+            },
+            {
+              "hour": "2026-02-23T23:00",
+              "avgTemp": 65.5
+            },
+            {
+              "hour": "2026-02-24T00:00",
+              "avgTemp": 64.8
+            },
+            {
+              "hour": "2026-02-24T01:00",
+              "avgTemp": 64.2
+            }
+          ],
+          "coolingHours24h": 0.0,
+          "heatingHours24h": 0.0
         }
-      ],
-      "alerts": []
+      ]
     }
   ],
   "alerts": [],
   "kpis": {
-    "buildings": 5,
-    "zones": 31,
-    "alerts": 0
-  },
-  "asOfDate": "2026-03-06T10:20:00"
+    "totalThermostats": 31,
+    "online": 31,
+    "offline": 0,
+    "avgTemp": 70.7,
+    "alertCount": 0,
+    "serverRoomTemp": 72.9,
+    "coolingHours24h": 23.8,
+    "heatingHours24h": 5.0
+  }
 }
