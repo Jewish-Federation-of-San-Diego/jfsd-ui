@@ -6,9 +6,10 @@
   "scripts": {
     "dev": "vite",
     "validate": "tsx scripts/validate-data.ts",
-    "build": "npm run validate && tsc -b && vite build",
+    "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "build:strict": "npm run validate && tsc -b && vite build"
   },
   "dependencies": {
     "@ant-design/icons": "^6.1.0",
