@@ -10,10 +10,14 @@ from pathlib import Path
 
 OUTPUT = Path(__file__).parent.parent / "public" / "data" / "campaign-simulation.json"
 
-# ── Recognition totals (ALL accounts: Person + Organization) ─────────────
-FY24_FINAL = 16_306_995.40
-FY25_FINAL = 11_554_307.74
-FY26_YTD   =  7_814_307.14  # As of Mar 7, 2026
+# ── Recognition totals (PERSON ACCOUNTS ONLY) ───────────────────────────
+# Organization accounts are ~95% DAF pass-throughs (JCF $1.43M, Fidelity,
+# Vanguard, etc.) where the recommending donor already has soft credit.
+# Using Person only avoids double-counting. ~$20-30K in genuine corporate
+# gifts (Qualcomm matching, Proven Recruiting) are excluded but immaterial.
+FY24_FINAL = 15_332_362.05
+FY25_FINAL =  8_812_417.17
+FY26_YTD   =  5_959_220.17  # As of Mar 7, 2026 (Person Accounts only)
 
 FY26_GOAL = 9_000_000
 FY27_GOAL = 9_500_000  # Placeholder
