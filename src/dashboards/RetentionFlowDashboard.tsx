@@ -1,4 +1,4 @@
-import { Card, Col, Row, Statistic, Table, Typography, Space, Tag, Tabs } from "antd";
+import { Card, Col, Row, Statistic, Table, Typography, Space, Tag } from "antd";
 import { useEffect, useMemo, useState } from "react";
 import Plot from "react-plotly.js";
 import { DashboardSkeleton } from "../components/DashboardSkeleton";
@@ -134,61 +134,49 @@ export function RetentionFlowDashboard() {
         </Col>
       </Row>
 
-      <Title level={5} style={{ margin: 0, color: NAVY }}>
-        {safePercent(flow?.retentionRate ?? 0, { decimals: 1 })} retention from {safeCount(flow.baseCount)} FY25 donors — {safeCurrency(flow?.lapsedDollars ?? 0, { maximumFractionDigits: 0 })} at risk
-      </Title>
+      {(() => {
+        const rate = flow?.retentionRate ?? 0;
+        const afpBenchmark = 45; // AFP Fundraising Effectiveness Project avg
+        const vsAfp = rate > afpBenchmark
+          ? `${safePercent(rate - afpBenchmark, { decimals: 0 })} above AFP avg (${afpBenchmark}%)`
+          : `${safePercent(afpBenchmark - rate, { decimals: 0 })} below AFP avg (${afpBenchmark}%)`;
+        return (
+          <Title level={5} style={{ margin: 0, color: NAVY }}>
+            {safePercent(rate, { decimals: 1 })} retention from {safeCount(flow.baseCount)} FY25 donors — {vsAfp} · {safeCurrency(flow?.lapsedDollars ?? 0, { maximumFractionDigits: 0 })} at risk
+          </Title>
+        );
+      })()}
       <Card bordered={false} style={DASHBOARD_CARD_STYLE}>
-        <Tabs
-          items={[
+        <Plot
+          data={[
             {
-              key: "sankey",
-              label: "Native Sankey",
-              children: (
-                <Plot
-                  data={[
-                    {
-                      type: "sankey",
-                      arrangement: "snap",
-                      node: {
-                        label: ["FY25 Donors", "Retained", "Upgraded", "Downgraded", "Lapsed"],
-                        color: [PLOTLY_COLORS[6], PLOTLY_COLORS[1], PLOTLY_COLORS[0], PLOTLY_COLORS[2], PLOTLY_COLORS[3]],
-                        pad: 18,
-                        thickness: 20,
-                      },
-                      link: {
-                        source: [0, 0, 0, 0],
-                        target: [1, 2, 3, 4],
-                        value: [
-                          flow?.statusCounts?.Retained ?? 0,
-                          flow?.statusCounts?.Upgraded ?? 0,
-                          flow?.statusCounts?.Downgraded ?? 0,
-                          flow?.statusCounts?.Lapsed ?? 0,
-                        ],
-                        color: [SUCCESS, NAVY, GOLD, ERROR],
-                      },
-                    },
-                  ]}
-                  layout={{
-                    ...PLOTLY_BASE_LAYOUT,
-                    height: 430,
-                  }}
-                  style={{ width: "100%" }}
-                  config={{ displayModeBar: false }}
-                />
-              ),
-            },
-            {
-              key: "embedded",
-              label: "Embedded Fallback",
-              children: (
-                <iframe
-                  src={`${import.meta.env.BASE_URL}embedded/retention-sankey.html`}
-                  title="Retention Sankey Embedded"
-                  style={{ width: "100%", height: 460, border: `1px solid ${MUTED}` }}
-                />
-              ),
+              type: "sankey",
+              arrangement: "snap",
+              node: {
+                label: ["FY25 Donors", "Retained", "Upgraded", "Downgraded", "Lapsed"],
+                color: [PLOTLY_COLORS[6], PLOTLY_COLORS[1], PLOTLY_COLORS[0], PLOTLY_COLORS[2], PLOTLY_COLORS[3]],
+                pad: 18,
+                thickness: 20,
+              },
+              link: {
+                source: [0, 0, 0, 0],
+                target: [1, 2, 3, 4],
+                value: [
+                  flow?.statusCounts?.Retained ?? 0,
+                  flow?.statusCounts?.Upgraded ?? 0,
+                  flow?.statusCounts?.Downgraded ?? 0,
+                  flow?.statusCounts?.Lapsed ?? 0,
+                ],
+                color: [SUCCESS, NAVY, GOLD, ERROR],
+              },
             },
           ]}
+          layout={{
+            ...PLOTLY_BASE_LAYOUT,
+            height: 430,
+          }}
+          style={{ width: "100%" }}
+          config={{ displayModeBar: false }}
         />
       </Card>
 

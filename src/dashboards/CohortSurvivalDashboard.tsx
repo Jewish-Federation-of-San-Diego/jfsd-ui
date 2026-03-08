@@ -1,4 +1,4 @@
-import { Card, Col, Row, Statistic, Table, Typography, Space, Tag, Tabs } from "antd";
+import { Card, Col, Row, Statistic, Table, Typography, Space, Tag } from "antd";
 import { useEffect, useMemo, useState } from "react";
 import Plot from "react-plotly.js";
 import { DashboardSkeleton } from "../components/DashboardSkeleton";
@@ -139,75 +139,64 @@ export function CohortSurvivalDashboard() {
         </Col>
       </Row>
 
-      <Title level={5} style={{ margin: 0, color: NAVY }}>
-        {safeCount(cohorts.length)} cohorts tracked — avg {safePercent(avgRetention, { decimals: 1 })} FY25→FY26 retention
-      </Title>
+      {(() => {
+        const legacyCohort = cohorts.find(c => c?.cohort === '≤2005');
+        const legacyPct = legacyCohort ? (legacyCohort.survival?.[2] ?? legacyCohort.survival?.[legacyCohort.survival.length - 1] ?? 0) : 0;
+        const legacySize = legacyCohort?.size ?? 0;
+        const legacyNote = legacySize > 100 && legacyPct < 20
+          ? ` · Legacy donors (pre-2005): ${safePercent(legacyPct, { decimals: 0 })} active — biggest retention risk`
+          : '';
+        return (
+          <Title level={5} style={{ margin: 0, color: NAVY }}>
+            {safeCount(cohorts.length)} cohorts tracked — avg {safePercent(avgRetention, { decimals: 1 })} FY25→FY26 retention{legacyNote}
+          </Title>
+        );
+      })()}
       <Card bordered={false} style={DASHBOARD_CARD_STYLE}>
-        <Tabs
-          items={[
-            {
-              key: "native",
-              label: "Native Plotly",
-              children: (
-                <Row gutter={[12, 12]}>
-                  <Col xs={24} lg={12}>
-                    <Plot
-                      data={cohorts.map((cohort, index) => ({
-                        type: "scatter",
-                        mode: "lines+markers",
-                        name: `${cohort?.cohort} (${safeCount(cohort?.size ?? 0)})`,
-                        x: ["FY24", "FY25", "FY26"],
-                        y: cohort?.survival ?? [0, 0, 0],
-                        line: { width: 2, color: PLOTLY_COLORS[index % PLOTLY_COLORS.length] },
-                      }))}
-                      layout={{
-                        ...PLOTLY_BASE_LAYOUT,
-                        height: 340,
-                        yaxis: { title: "Active Donors (%)", range: [0, 100] },
-                      }}
-                      style={{ width: "100%" }}
-                      config={{ displayModeBar: false }}
-                    />
-                  </Col>
-                  <Col xs={24} lg={12}>
-                    <Plot
-                      data={[
-                        {
-                          type: "heatmap",
-                          x: ["FY24→FY25", "FY25→FY26"],
-                          y: cohorts.map((cohort) => cohort?.cohort),
-                          z: cohorts.map((cohort) => cohort?.retention ?? [0, 0]),
-                          colorscale: [[0, PLOTLY_COLORS[6]], [1, PLOTLY_COLORS[0]]],
-                          zmin: 0,
-                          zmax: 100,
-                          hovertemplate: "Cohort %{y}<br>%{x}: %{z:.1f}%<extra></extra>",
-                        },
-                      ]}
-                      layout={{
-                        ...PLOTLY_BASE_LAYOUT,
-                        height: 340,
-                        margin: { l: 95, r: 20, t: 40, b: 40 },
-                      }}
-                      style={{ width: "100%" }}
-                      config={{ displayModeBar: false }}
-                    />
-                  </Col>
-                </Row>
-              ),
-            },
-            {
-              key: "embedded",
-              label: "Embedded Fallback",
-              children: (
-                <iframe
-                  src={`${import.meta.env.BASE_URL}embedded/cohort-survival.html`}
-                  title="Cohort Survival Embedded"
-                  style={{ width: "100%", height: 520, border: `1px solid ${MUTED}` }}
-                />
-              ),
-            },
-          ]}
-        />
+        <Row gutter={[12, 12]}>
+          <Col xs={24} lg={12}>
+            <Plot
+              data={cohorts.map((cohort, index) => ({
+                type: "scatter",
+                mode: "lines+markers",
+                name: `${cohort?.cohort} (${safeCount(cohort?.size ?? 0)})`,
+                x: ["FY24", "FY25", "FY26"],
+                y: cohort?.survival ?? [0, 0, 0],
+                line: { width: 2, color: PLOTLY_COLORS[index % PLOTLY_COLORS.length] },
+              }))}
+              layout={{
+                ...PLOTLY_BASE_LAYOUT,
+                height: 340,
+                yaxis: { title: "Active Donors (%)", range: [0, 100] },
+              }}
+              style={{ width: "100%" }}
+              config={{ displayModeBar: false }}
+            />
+          </Col>
+          <Col xs={24} lg={12}>
+            <Plot
+              data={[
+                {
+                  type: "heatmap",
+                  x: ["FY24→FY25", "FY25→FY26"],
+                  y: cohorts.map((cohort) => cohort?.cohort),
+                  z: cohorts.map((cohort) => cohort?.retention ?? [0, 0]),
+                  colorscale: [[0, PLOTLY_COLORS[6]], [1, PLOTLY_COLORS[0]]],
+                  zmin: 0,
+                  zmax: 100,
+                  hovertemplate: "Cohort %{y}<br>%{x}: %{z:.1f}%<extra></extra>",
+                },
+              ]}
+              layout={{
+                ...PLOTLY_BASE_LAYOUT,
+                height: 340,
+                margin: { l: 95, r: 20, t: 40, b: 40 },
+              }}
+              style={{ width: "100%" }}
+              config={{ displayModeBar: false }}
+            />
+          </Col>
+        </Row>
       </Card>
 
       <Card bordered={false} style={DASHBOARD_CARD_STYLE}>
