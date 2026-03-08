@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-07T20:51:25.092624",
+  "generatedAt": "2026-03-07T21:06:09.172930",
   "asOfDate": "2026-03-07",
   "recognition": {
     "FY24": 15332362.05,
@@ -13,42 +13,43 @@
     "scenarios": {
       "low": {
         "label": "Conservative",
-        "projected": 5756681,
+        "projected": 6756681,
         "description": "Minimal new commitments (+10% H2). Rady -$1M.",
-        "vsGoal": -3243319,
-        "vsGoalPct": -36.0,
-        "vsFY25": -3055736,
-        "vsFY25Pct": -34.7,
+        "vsGoal": -2243319,
+        "vsGoalPct": -24.9,
+        "vsFY25": -2055736,
+        "vsFY25Pct": -23.3,
         "h2Growth": "10%"
       },
       "medium": {
         "label": "Base Case",
-        "projected": 6186651,
+        "projected": 7186651,
         "description": "Historical avg H2 pattern (+17%). Rady -$1M.",
-        "vsGoal": -2813349,
-        "vsGoalPct": -31.3,
-        "vsFY25": -2625766,
-        "vsFY25Pct": -29.8,
+        "vsGoal": -1813349,
+        "vsGoalPct": -20.1,
+        "vsFY25": -1625766,
+        "vsFY25Pct": -18.4,
         "h2Growth": "17%"
       },
       "high": {
         "label": "Optimistic",
-        "projected": 6678046,
+        "projected": 7678046,
         "description": "Strong spring push + major gift closes (+25%). Rady -$1M.",
-        "vsGoal": -2321954,
-        "vsGoalPct": -25.8,
-        "vsFY25": -2134371,
-        "vsFY25Pct": -24.2,
+        "vsGoal": -1321954,
+        "vsGoalPct": -14.7,
+        "vsFY25": -1134371,
+        "vsFY25Pct": -12.9,
         "h2Growth": "25%"
       }
     },
     "knownAdjustments": [
       {
         "donor": "Ernest Rady",
-        "description": "Declined annual fund gift for FY26. Redirecting to Israel campaign.",
+        "description": "Declined annual fund gift for FY26. Redirecting to Israel campaign. Already reflected in YTD \u2014 no additional subtraction.",
         "fy25_amount": 1000000,
         "fy26_expected": 0,
-        "impact": -1000000
+        "impact": 0,
+        "note": "Impact is vs FY25, not vs FY26 YTD. His absence is already in the $6.14M."
       }
     ],
     "chart": {
@@ -163,37 +164,37 @@
   },
   "fy27": {
     "goal": 9500000,
-    "baseline": 6186651,
+    "baseline": 7186651,
     "baselineNote": "FY26 base case projection used as FY27 starting point",
     "scenarios": {
       "low": {
         "label": "Pessimistic",
-        "projected": 4073054,
+        "projected": 4893054,
         "description": "Soft retention (82% revenue carry) + continued Rady absence.",
-        "vsGoal": -5426946,
-        "vsGoalPct": -57.1,
-        "vsFY26Med": -2113597,
-        "vsFY26Pct": -34.2,
+        "vsGoal": -4606946,
+        "vsGoalPct": -48.5,
+        "vsFY26Med": -2293597,
+        "vsFY26Pct": -31.9,
         "revenueRetention": "82%"
       },
       "medium": {
         "label": "Base Case",
-        "projected": 4567986,
+        "projected": 5467986,
         "description": "Normal retention (90% revenue carry) + moderate acquisition.",
-        "vsGoal": -4932014,
-        "vsGoalPct": -51.9,
-        "vsFY26Med": -1618665,
-        "vsFY26Pct": -26.2,
+        "vsGoal": -4032014,
+        "vsGoalPct": -42.4,
+        "vsFY26Med": -1718665,
+        "vsFY26Pct": -23.9,
         "revenueRetention": "90%"
       },
       "high": {
         "label": "Growth",
-        "projected": 5186651,
+        "projected": 6186651,
         "description": "Full revenue carry + strong pipeline + upgrades. Rady still out.",
-        "vsGoal": -4313349,
-        "vsGoalPct": -45.4,
+        "vsGoal": -3313349,
+        "vsGoalPct": -34.9,
         "vsFY26Med": -1000000,
-        "vsFY26Pct": -16.2,
+        "vsFY26Pct": -13.9,
         "revenueRetention": "100%"
       }
     },
@@ -250,46 +251,46 @@
         11208458
       ],
       "fy27LowCumulative": [
-        78184,
-        165910,
-        505252,
-        649306,
-        882809,
-        1834655,
-        2403494,
-        2688553,
-        2992053,
-        3196874,
-        3911548,
-        4073054
+        93924,
+        199312,
+        606971,
+        780026,
+        1060539,
+        2204013,
+        2887373,
+        3229820,
+        3594423,
+        3840479,
+        4699033,
+        4893054
       ],
       "fy27MedCumulative": [
-        87685,
-        186071,
-        566648,
-        728205,
-        990083,
-        2057591,
-        2695552,
-        3015249,
-        3355629,
-        3585338,
-        4386855,
-        4567986
+        104960,
+        222731,
+        678290,
+        871679,
+        1185152,
+        2462984,
+        3226638,
+        3609323,
+        4016766,
+        4291734,
+        5251167,
+        5467986
       ],
       "fy27HighCumulative": [
-        99560,
-        211271,
-        643391,
-        826830,
-        1124175,
-        2336261,
-        3060624,
-        3423619,
-        3810098,
-        4070919,
-        4980988,
-        5186651
+        118756,
+        252005,
+        767439,
+        986245,
+        1340919,
+        2786698,
+        3650720,
+        4083702,
+        4544695,
+        4855803,
+        5941336,
+        6186651
       ],
       "goalLine": 9500000
     }
