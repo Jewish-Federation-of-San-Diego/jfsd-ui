@@ -17,6 +17,7 @@ import { PdfExport } from '../components/PdfExport';
 import { DataFreshness } from '../components/DataFreshness';
 import { fetchJson } from '../utils/dataFetch';
 import { safeCount, safeCurrency, safePercent } from '../utils/formatters';
+import Plot from 'react-plotly.js';
 
 const { Text, Title } = Typography;
 import { DefinitionTooltip } from "../components/DefinitionTooltip";
@@ -91,57 +92,127 @@ function StatusBadge({ status }: { status: string }) {
   return <Tag color={c.color} icon={c.icon}>{c.label}</Tag>;
 }
 
-// ── Participation Donut ─────────────────────────────────────────────────
-function ParticipationDonut({ pct, size = 100, stroke = 10 }: { pct: number; size?: number; stroke?: number }) {
-  const r = (size - stroke) / 2;
-  const circ = 2 * Math.PI * r;
-  const capped = Math.min(Math.max(pct, 0), 100);
-  const color = pct >= 50 ? SUCCESS : pct >= 25 ? WARNING : ERROR;
+// ── Participation Bar ──────────────────────────────────────────────────
+function ParticipationBar({ pct, size = 100 }: { pct: number; size?: number }) {
+  const safePct = isNaN(pct) ? 0 : Math.min(Math.max(pct, 0), 100);
+  const remaining = 100 - safePct;
+  const color = safePct >= 50 ? SUCCESS : safePct >= 25 ? WARNING : ERROR;
+  
+  const plotData = [{
+    type: 'bar' as const,
+    orientation: 'h' as const,
+    x: [safePct, remaining],
+    y: ['Participation'],
+    marker: {
+      color: [color, '#E8E8ED'],
+    },
+    text: [safePct > 10 ? `${Math.round(safePct)}%` : '', remaining > 10 ? `${Math.round(remaining)}%` : ''],
+    textposition: 'inside' as const,
+    textfont: { color: 'white', size: 12, family: 'system-ui' },
+    hovertemplate: '<b>%{text}</b><extra></extra>',
+    showlegend: false,
+  }];
+
+  const layout = {
+    margin: { l: 0, r: 0, t: 0, b: 0 },
+    plot_bgcolor: 'transparent',
+    paper_bgcolor: 'transparent',
+    showlegend: false,
+    xaxis: {
+      showgrid: false,
+      showline: false,
+      showticklabels: false,
+      zeroline: false,
+      range: [0, 100],
+    },
+    yaxis: {
+      showgrid: false,
+      showline: false,
+      showticklabels: false,
+    },
+    height: size,
+    barmode: 'stack' as const,
+  };
+
   return (
-    <svg width={size} height={size} style={{ display: 'block', margin: '0 auto' }}>
-      <circle cx={size/2} cy={size/2} r={r} fill="none" stroke="#E8E8ED" strokeWidth={stroke} />
-      <circle cx={size/2} cy={size/2} r={r} fill="none" stroke={color} strokeWidth={stroke}
-        strokeDasharray={circ} strokeDashoffset={circ * (1 - capped / 100)}
-        strokeLinecap="round" transform={`rotate(-90 ${size/2} ${size/2})`}
-        style={{ transition: 'stroke-dashoffset 0.8s ease' }}
+    <div style={{ width: size, height: size }}>
+      <Plot
+        data={plotData}
+        layout={layout}
+        config={{ displayModeBar: false, responsive: true }}
+        style={{ width: '100%', height: '100%' }}
       />
-      <text x={size/2} y={size/2} textAnchor="middle" dominantBaseline="central"
-        style={{ fontSize: 18, fontWeight: 700, fill: NAVY }}>
-        {Math.round(pct)}%
-      </text>
-    </svg>
+      <div style={{ textAlign: 'center', marginTop: '-20px', fontSize: '14px', fontWeight: 700, color: NAVY }}>
+        {Math.round(safePct)}%
+      </div>
+    </div>
   );
 }
 
-// ── Campaign Thermometer ────────────────────────────────────────────────
-function CampaignThermometer({ raised, goal }: { raised: number; goal: number }) {
-  const pct = goal > 0 ? Math.min((raised / goal) * 100, 100) : 0;
-  const w = 600;
-  const h = 60;
-  const barH = 32;
-  const barY = (h - barH) / 2;
-  const radius = barH / 2;
+// ── Campaign Progress Bar ──────────────────────────────────────────────
+function CampaignProgressBar({ raised, goal }: { raised: number; goal: number }) {
+  const safeRaised = isNaN(raised) ? 0 : raised;
+  const safeGoal = isNaN(goal) ? 0 : goal;
+  const pct = safeGoal > 0 ? Math.min((safeRaised / safeGoal) * 100, 100) : 0;
+  const remaining = Math.max(safeGoal - safeRaised, 0);
+
+  const plotData = [{
+    type: 'bar' as const,
+    orientation: 'h' as const,
+    x: [safeRaised, remaining],
+    y: ['Campaign Goal'],
+    marker: {
+      color: [GOLD, '#E8E8ED'],
+    },
+    text: [pct > 15 ? fmtUSD(safeRaised) : '', ''],
+    textposition: 'inside' as const,
+    textfont: { color: 'white', size: 13, family: 'system-ui' },
+    hovertemplate: '<b>Raised:</b> %{x:$,.0f}<extra></extra>',
+    showlegend: false,
+  }];
+
+  const layout = {
+    margin: { l: 80, r: 80, t: 10, b: 30 },
+    plot_bgcolor: 'transparent',
+    paper_bgcolor: 'transparent',
+    showlegend: false,
+    xaxis: {
+      showgrid: false,
+      showline: false,
+      showticklabels: false,
+      zeroline: false,
+      range: [0, safeGoal],
+    },
+    yaxis: {
+      showgrid: false,
+      showline: false,
+      showticklabels: false,
+    },
+    height: 80,
+    barmode: 'stack' as const,
+    annotations: [
+      {
+        x: safeGoal,
+        y: 'Campaign Goal',
+        text: `Goal: ${fmtUSD(safeGoal)}`,
+        showarrow: false,
+        xanchor: 'left' as const,
+        yanchor: 'middle' as const,
+        font: { size: 11, color: MUTED },
+        xshift: 10,
+      },
+    ],
+  };
 
   return (
     <div style={{ textAlign: 'center', padding: '16px 0' }}>
-      <svg width="100%" viewBox={`0 0 ${w} ${h}`} style={{ maxWidth: w }}>
-        {/* Background */}
-        <rect x={0} y={barY} width={w} height={barH} rx={radius} fill="#E8E8ED" />
-        {/* Fill */}
-        <rect x={0} y={barY} width={w * pct / 100} height={barH} rx={radius} fill={GOLD}
-          style={{ transition: 'width 1s ease' }}
-        />
-        {/* Goal marker */}
-        <line x1={w} y1={barY - 4} x2={w} y2={barY + barH + 4} stroke={NAVY} strokeWidth={2} />
-        {/* Labels */}
-        <text x={8} y={h / 2} dominantBaseline="central" style={{ fontSize: 13, fontWeight: 600, fill: pct > 15 ? '#fff' : NAVY }}>
-          {fmtUSD(raised)}
-        </text>
-        <text x={w - 4} y={barY - 8} textAnchor="end" style={{ fontSize: 11, fill: MUTED }}>
-          Goal: {fmtUSD(goal)}
-        </text>
-      </svg>
-      <Text type="secondary" style={{ fontSize: 13, marginTop: 4, display: 'block' }}>
+      <Plot
+        data={plotData}
+        layout={layout}
+        config={{ displayModeBar: false, responsive: true }}
+        style={{ width: '100%', height: '100%' }}
+      />
+      <Text type="secondary" style={{ fontSize: 13, marginTop: '-10px', display: 'block' }}>
         {safePercent(pct, { decimals: 1 })} of goal
       </Text>
     </div>
@@ -226,7 +297,7 @@ function BoardCard({ board }: { board: Board }) {
       <div style={{ padding: '20px 24px', borderBottom: '1px solid #f0f0f0' }}>
         <Row gutter={24} align="middle">
           <Col>
-            <ParticipationDonut pct={board.participationRate} size={80} stroke={8} />
+            <ParticipationBar pct={board.participationRate} size={80} />
           </Col>
           <Col flex="auto">
             <Title level={5} style={{ margin: 0, color: NAVY }}>{board.name}</Title>
@@ -377,7 +448,7 @@ export function BoardReportingDashboard() {
         Annual Campaign: {safePercent(campaignSummary.pctOfGoal)} to goal — {fmtUSD(campaignSummary.raised)} raised
       </Text>}
         style={{ borderRadius: 12, marginBottom: 32 }}>
-        <CampaignThermometer raised={campaignSummary.raised} goal={campaignSummary.goal} />
+        <CampaignProgressBar raised={campaignSummary.raised} goal={campaignSummary.goal} />
         <Row gutter={24} justify="center" style={{ marginTop: 8 }}>
           <Col><Statistic title="Donors" value={safeCount(campaignSummary.donorCount)} valueStyle={{ fontSize: 16 }} /></Col>
           <Col><Statistic title="vs Prior Year" value={safePercent(campaignSummary.priorYearComparison, { decimals: 0, showSign: true })} valueStyle={{ fontSize: 16, color: campaignSummary.priorYearComparison >= 0 ? SUCCESS : ERROR }} /></Col>

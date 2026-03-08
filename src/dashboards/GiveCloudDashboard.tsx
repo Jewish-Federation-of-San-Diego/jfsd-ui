@@ -2,6 +2,7 @@ import { Card, Col, Row, Statistic, Table, Tag, Typography, Alert, Space, Progre
 import { DashboardSkeleton } from '../components/DashboardSkeleton';
 import { CsvExport } from '../components/CsvExport';
 import { useEffect, useState, useCallback } from 'react';
+import Plot from 'react-plotly.js';
 
 const { Text, Title } = Typography;
 import { DataFreshness } from '../components/DataFreshness';
@@ -11,7 +12,6 @@ import { fetchJson } from '../utils/dataFetch';
 import { safeCurrency, safePercent } from '../utils/formatters';
 
 // ── Brand tokens ────────────────────────────────────────────────────────
-const GRID    = '#E8E8ED';
 // ── Types ───────────────────────────────────────────────────────────────
 interface MonthlyRow { month: string; amount: number; recurringAmount: number; contributions: number; }
 interface ProductRow { name: string; amount: number; count: number; }
@@ -36,65 +36,78 @@ interface GiveCloudData {
 const fmt = (v: number) => safeCurrency(v, { maximumFractionDigits: 0 });
 const fmtFull = (v: number) => safeCurrency(v, { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 
-// ── SVG Bar Chart ───────────────────────────────────────────────────────
+// ── Monthly Chart (Plotly) ──────────────────────────────────────────────
 function MonthlyChart({ data }: { data: MonthlyRow[] }) {
   if (!data.length) return <Text type="secondary">No monthly data</Text>;
-  const maxAmt = Math.max(...data.map(d => d.amount), 1);
-  const W = 600, H = 260, PAD = 50, BAR_PAD = 6;
-  const barW = Math.min(48, (W - PAD * 2) / data.length - BAR_PAD);
-  const chartH = H - PAD - 30;
+
+  const monthLabels = data.map(d => d.month || 'Unknown');
+  const recurringData = data.map(d => isNaN(d.recurringAmount) ? 0 : d.recurringAmount);
+  const oneTimeData = data.map(d => {
+    const total = isNaN(d.amount) ? 0 : d.amount;
+    const recurring = isNaN(d.recurringAmount) ? 0 : d.recurringAmount;
+    return Math.max(total - recurring, 0);
+  });
+
+  const plotData = [
+    {
+      name: 'One-time',
+      type: 'bar' as const,
+      x: monthLabels,
+      y: oneTimeData,
+      marker: {
+        color: NAVY,
+        opacity: 0.85,
+      },
+      hovertemplate: '<b>%{x}</b><br>One-time: $%{y:,.0f}<extra></extra>',
+    },
+    {
+      name: 'Recurring',
+      type: 'bar' as const,
+      x: monthLabels,
+      y: recurringData,
+      marker: {
+        color: GOLD,
+        opacity: 0.9,
+      },
+      hovertemplate: '<b>%{x}</b><br>Recurring: $%{y:,.0f}<extra></extra>',
+    },
+  ];
+
+  const layout = {
+    margin: { l: 50, r: 10, t: 30, b: 40 },
+    plot_bgcolor: 'transparent',
+    paper_bgcolor: 'transparent',
+    showlegend: true,
+    legend: {
+      orientation: 'h' as const,
+      x: 0.7,
+      y: 1.02,
+      bgcolor: 'rgba(255,255,255,0)',
+    },
+    xaxis: {
+      showgrid: false,
+      showline: false,
+      tickfont: { size: 11, color: NAVY, family: 'system-ui' },
+    },
+    yaxis: {
+      showgrid: true,
+      gridcolor: '#E8E8ED',
+      gridwidth: 1,
+      showline: false,
+      tickfont: { size: 10, color: MUTED },
+      tickformat: '$,.0s',
+    },
+    height: 260,
+    barmode: 'stack' as const,
+  };
 
   return (
-    <svg viewBox={`0 0 ${W} ${H}`} style={{ width: '100%', maxWidth: W, fontFamily: 'inherit' }}>
-      {/* Y-axis grid */}
-      {[0, 0.25, 0.5, 0.75, 1].map(f => {
-        const y = PAD + chartH * (1 - f);
-        return (
-          <g key={f}>
-            <line x1={PAD} x2={W - 10} y1={y} y2={y} stroke={GRID} strokeWidth={1} />
-            <text x={PAD - 6} y={y + 4} textAnchor="end" fontSize={10} fill={MUTED}>
-              {fmt(maxAmt * f)}
-            </text>
-          </g>
-        );
-      })}
-      {/* Bars */}
-      {data.map((d, i) => {
-        const x = PAD + i * ((W - PAD * 2) / data.length) + BAR_PAD / 2;
-        const h = (d.amount / maxAmt) * chartH;
-        const recH = d.recurringAmount ? (d.recurringAmount / maxAmt) * chartH : 0;
-        const oneTimeH = h - recH;
-        return (
-          <g key={d.month}>
-            {/* One-time portion */}
-            <rect x={x} y={PAD + chartH - h} width={barW} height={oneTimeH} rx={3}
-              fill={NAVY} opacity={0.85}>
-              <title>{d.month}: {fmt(d.amount)} ({d.contributions} gifts)</title>
-            </rect>
-            {/* Recurring portion */}
-            {recH > 0 && (
-              <rect x={x} y={PAD + chartH - recH} width={barW} height={recH} rx={3}
-                fill={GOLD} opacity={0.9}>
-                <title>Recurring: {fmt(d.recurringAmount)}</title>
-              </rect>
-            )}
-            {/* Label */}
-            <text x={x + barW / 2} y={H - 6} textAnchor="middle" fontSize={11} fill={NAVY} fontWeight={500}>
-              {d.month}
-            </text>
-            {/* Value on top */}
-            <text x={x + barW / 2} y={PAD + chartH - h - 4} textAnchor="middle" fontSize={9} fill={MUTED}>
-              {fmt(d.amount)}
-            </text>
-          </g>
-        );
-      })}
-      {/* Legend */}
-      <rect x={W - 150} y={4} width={10} height={10} fill={NAVY} rx={2} />
-      <text x={W - 136} y={13} fontSize={10} fill={NAVY}>One-time</text>
-      <rect x={W - 80} y={4} width={10} height={10} fill={GOLD} rx={2} />
-      <text x={W - 66} y={13} fontSize={10} fill={GOLD}>Recurring</text>
-    </svg>
+    <Plot
+      data={plotData}
+      layout={layout}
+      config={{ displayModeBar: false, responsive: true }}
+      style={{ width: '100%', height: '100%' }}
+    />
   );
 }
 

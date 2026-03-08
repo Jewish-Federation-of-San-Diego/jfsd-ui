@@ -1,7 +1,8 @@
 import { Card, Col, Row, Statistic, Table, Tag, Typography, Space, Progress, Alert } from 'antd';
 import { DashboardSkeleton } from '../components/DashboardSkeleton';
 import { CsvExport } from '../components/CsvExport';
-import { useEffect, useRef, useState, useCallback } from 'react';
+import { useEffect, useState, useCallback } from 'react';
+import Plot from 'react-plotly.js';
 
 const { Text } = Typography;
 import { DataFreshness } from '../components/DataFreshness';
@@ -11,7 +12,6 @@ import { fetchJson } from '../utils/dataFetch';
 import { safeCurrency, safePercent } from '../utils/formatters';
 
 // ── Brand tokens ────────────────────────────────────────────────────────
-const GRID = '#E8E8ED';
 // ── Types ───────────────────────────────────────────────────────────────
 interface ActionItem {
   type: 'missing_receipt' | 'needs_review' | 'policy_exception';
@@ -108,23 +108,7 @@ const typeTag = (type: string): { color: string; label: string } => {
 
 const paceColor = (pct: number) => pct > 100 ? ERROR : pct > 80 ? WARNING : SUCCESS;
 
-// ── Hook: measure width ─────────────────────────────────────────────────
-function useWidth() {
-  const ref = useRef<HTMLDivElement>(null);
-  const [width, setWidth] = useState(0);
-  const measure = useCallback(() => {
-    if (ref.current) {
-      const w = ref.current.getBoundingClientRect().width;
-      if (w > 0) setWidth(Math.floor(w));
-    }
-  }, []);
-  useEffect(() => {
-    requestAnimationFrame(measure);
-    window.addEventListener('resize', measure);
-    return () => window.removeEventListener('resize', measure);
-  }, [measure]);
-  return { ref, width };
-}
+
 
 // ── KPI Cards ───────────────────────────────────────────────────────────
 function KPICards({ kpis }: { kpis: APExpenseData['kpis'] }) {
@@ -252,45 +236,67 @@ function ActionItemsTable({ items }: { items: ActionItem[] }) {
   );
 }
 
-// ── Department Spend Bar Chart (SVG) ────────────────────────────────────
-function DeptBarChart({ data, width: w }: { data: DeptSpend[]; width: number }) {
-  const H = 30 * data.length + 20;
-  const PAD = { left: 120, right: 60 };
-  const cw = w - PAD.left - PAD.right;
-  const maxVal = Math.max(...data.map(d => d.amount), 1);
-  const barH = 22;
-  const gap = 30;
-
-  return (
-    <svg width={w} height={H} style={{ display: 'block' }}>
-      {data.map((d, i) => {
-        const barW = Math.max((d.amount / maxVal) * cw, 2);
-        const y = i * gap + 4;
-        return (
-          <g key={d.dept}>
-            <text x={PAD.left - 8} y={y + barH / 2 + 5} textAnchor="end" fontSize={12} fill={NAVY}>{d.dept}</text>
-            <rect x={PAD.left} y={y} width={barW} height={barH} fill={NAVY} rx={3} opacity={0.85} />
-            <text x={PAD.left + barW + 6} y={y + barH / 2 + 5} fontSize={11} fill={MUTED}>{fmtK(d.amount)}</text>
-          </g>
-        );
-      })}
-    </svg>
-  );
-}
-
+// ── Department Spend Bar Chart (Plotly) ─────────────────────────────────
 function DeptSpendChart({ data }: { data: DeptSpend[] }) {
-  const { ref, width } = useWidth();
   const topDept = data[0];
   const totalSpend = data.reduce((sum, dept) => sum + dept.amount, 0);
   const title = topDept 
     ? `Top spender: ${topDept.dept} at ${fmtK(topDept.amount)} — ${safePercent(topDept.amount / totalSpend)} of ${fmtK(totalSpend)} total`
     : "Department spending (30d)";
   
+  if (!data.length) {
+    return (
+      <Card title={title} size="small">
+        <div style={{ textAlign: 'center', padding: '20px', color: MUTED }}>
+          No department spending data available
+        </div>
+      </Card>
+    );
+  }
+
+  const plotData = [{
+    type: 'bar' as const,
+    orientation: 'h' as const,
+    x: data.map(d => isNaN(d.amount) ? 0 : d.amount),
+    y: data.map(d => d.dept),
+    marker: {
+      color: NAVY,
+      opacity: 0.85,
+    },
+    text: data.map(d => fmtK(isNaN(d.amount) ? 0 : d.amount)),
+    textposition: 'outside' as const,
+    textfont: { size: 11, color: MUTED },
+    hovertemplate: '<b>%{y}</b><br>Amount: %{text}<extra></extra>',
+  }];
+
+  const layout = {
+    margin: { l: 120, r: 60, t: 20, b: 40 },
+    plot_bgcolor: 'transparent',
+    paper_bgcolor: 'transparent',
+    showlegend: false,
+    xaxis: {
+      showgrid: false,
+      showline: false,
+      showticklabels: false,
+      zeroline: false,
+    },
+    yaxis: {
+      showgrid: false,
+      showline: false,
+      tickfont: { size: 12, color: NAVY },
+      categoryorder: 'total ascending' as const,
+    },
+    height: Math.max(data.length * 50 + 80, 200),
+  };
+  
   return (
     <Card title={title} size="small">
-      <div ref={ref} style={{ width: '100%', minHeight: 100 }}>
-        {width > 0 && <DeptBarChart data={data} width={width} />}
-      </div>
+      <Plot
+        data={plotData}
+        layout={layout}
+        config={{ displayModeBar: false, responsive: true }}
+        style={{ width: '100%', height: '100%' }}
+      />
     </Card>
   );
 }

@@ -1,4 +1,4 @@
-import { Card, Col, Row, Statistic, Table, Tag, Typography, Space, Progress, Alert, Badge, Tooltip as AntTooltip } from 'antd';
+import { Card, Col, Row, Statistic, Table, Tag, Typography, Space, Progress, Alert, Badge } from 'antd';
 import { DashboardSkeleton } from '../components/DashboardSkeleton';
 import { CsvExport } from '../components/CsvExport';
 import {
@@ -10,7 +10,8 @@ import {
   SyncOutlined,
   SafetyCertificateOutlined,
 } from '@ant-design/icons';
-import { useEffect, useRef, useState, useCallback } from 'react';
+import { useEffect, useState, useCallback } from 'react';
+import Plot from 'react-plotly.js';
 
 import { DataFreshness } from '../components/DataFreshness';
 const { Text, Title } = Typography;
@@ -20,7 +21,6 @@ import { fetchJson } from '../utils/dataFetch';
 import { safeCurrency, safeCount, safePercent } from '../utils/formatters';
 
 // ── Brand tokens ────────────────────────────────────────────────────────
-const GRID = '#E8E8ED';
 
 // ── Types ───────────────────────────────────────────────────────────────
 interface FailedRecurring { name: string; amount: number; reason: string; date: string; }
@@ -57,23 +57,7 @@ interface DonorHealthData {
 
 const fmtUSD = (v: number) => safeCurrency(v, { maximumFractionDigits: 0 });
 
-// ── Hook: measure width ─────────────────────────────────────────────────
-function useWidth() {
-  const ref = useRef<HTMLDivElement>(null);
-  const [width, setWidth] = useState(0);
-  const measure = useCallback(() => {
-    if (ref.current) {
-      const w = ref.current.getBoundingClientRect().width;
-      if (w > 0) setWidth(Math.floor(w));
-    }
-  }, []);
-  useEffect(() => {
-    requestAnimationFrame(measure);
-    window.addEventListener('resize', measure);
-    return () => window.removeEventListener('resize', measure);
-  }, [measure]);
-  return { ref, width };
-}
+
 
 // ── KPI Cards ───────────────────────────────────────────────────────────
 function KPICards({ kpis, newDonors }: { kpis: KPIs; newDonors: number }) {
@@ -205,55 +189,9 @@ function RefundsTable({ data }: { data: Refund[] }) {
 }
 
 // ── New Donors by Source (Bar Chart) ────────────────────────────────────
-function SourceBarChart({ data, width: w }: { data: DonorSource[]; width: number }) {
-  if (data.length === 0) return <Text type="secondary">No new donors this week</Text>;
-  const H = 200;
-  const PAD = { top: 10, right: 10, bottom: 50, left: 60 };
-  const cw = w - PAD.left - PAD.right;
-  const ch = H - PAD.top - PAD.bottom;
-  const maxVal = Math.max(...data.map(d => d.totalAmount || 0), 1);
-  const barW = Math.min(Math.max((cw / data.length) * 0.6, 20), 60);
-  const gap = cw / data.length;
-
-  return (
-    <svg width={w} height={H} style={{ display: 'block' }}>
-      {[0, 0.25, 0.5, 0.75, 1].map(f => {
-        const val = maxVal * f;
-        const y = PAD.top + ch - f * ch;
-        const labelVal = val / 1000;
-        return (
-          <g key={f}>
-            <line x1={PAD.left} y1={y} x2={w - PAD.right} y2={y} stroke={GRID} />
-            <text x={PAD.left - 6} y={y + 4} textAnchor="end" fontSize={10} fill={MUTED}>
-              {isNaN(labelVal) || labelVal == null ? '—' : `$${Math.round(labelVal)}K`}
-            </text>
-          </g>
-        );
-      })}
-      {data.map((d, i) => {
-        const amount = d.totalAmount || 0;
-        const barH = maxVal > 0 ? (amount / maxVal) * ch : 0;
-        const x = PAD.left + i * gap + (gap - barW) / 2;
-        const y = PAD.top + ch - barH;
-        const label = d.source && d.source.length > 12 ? d.source.substring(0, 12) + '…' : (d.source || 'Unknown');
-        return (
-          <g key={d.source || i}>
-            <AntTooltip title={`${d.source || 'Unknown'}: ${safeCurrency(amount, { maximumFractionDigits: 0 })} (${safeCount(d.count)} donors)`}>
-              <rect x={x} y={y} width={barW} height={barH} fill={GOLD} rx={3} style={{ cursor: 'pointer' }} />
-            </AntTooltip>
-            <text x={x + barW / 2} y={H - 8} textAnchor="middle" fontSize={10} fill={MUTED}
-              transform={`rotate(-30, ${x + barW / 2}, ${H - 8})`}>{label}</text>
-          </g>
-        );
-      })}
-    </svg>
-  );
-}
-
 function NewDonorsBySource({ data }: { data: DonorSource[] }) {
-  const { ref, width } = useWidth();
-  const totalDonors = data.reduce((sum, d) => sum + (d.count || 0), 0);
-  const totalAmount = data.reduce((sum, d) => sum + (d.totalAmount || 0), 0);
+  const totalDonors = data.reduce((sum, d) => sum + (isNaN(d.count) ? 0 : d.count), 0);
+  const totalAmount = data.reduce((sum, d) => sum + (isNaN(d.totalAmount) ? 0 : d.totalAmount), 0);
   const topSource = data.length > 0 ? data.reduce((max, d) => (d.count || 0) > (max.count || 0) ? d : max, { source: 'None', count: 0 }) : { source: 'None', count: 0 };
   
   // Check if all data is empty/NaN
@@ -263,17 +201,61 @@ function NewDonorsBySource({ data }: { data: DonorSource[] }) {
     ? `${safeCount(totalDonors)} new donors, ${safeCurrency(totalAmount, { maximumFractionDigits: 0 })} — ${topSource.source} leads with ${safeCount(topSource.count)}`
     : "New Donor Acquisition";
   
+  if (!hasValidData) {
+    return (
+      <Card title={cardTitle} size="small">
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: 200, color: MUTED }}>
+          <Text type="secondary">No lifecycle data loaded</Text>
+        </div>
+      </Card>
+    );
+  }
+
+  const plotData = [{
+    type: 'bar' as const,
+    x: data.map(d => d.source || 'Unknown'),
+    y: data.map(d => isNaN(d.totalAmount) ? 0 : d.totalAmount),
+    marker: {
+      color: GOLD,
+      opacity: 0.85,
+    },
+    text: data.map(d => `${safeCount(isNaN(d.count) ? 0 : d.count)} donors`),
+    textposition: 'outside' as const,
+    hovertemplate: '<b>%{x}</b><br>' +
+                   'Amount: $%{y:,.0f}<br>' +
+                   'Donors: %{text}<br>' +
+                   '<extra></extra>',
+  }];
+
+  const layout = {
+    margin: { l: 60, r: 10, t: 10, b: 80 },
+    plot_bgcolor: 'transparent',
+    paper_bgcolor: 'transparent',
+    showlegend: false,
+    xaxis: {
+      showgrid: false,
+      showline: false,
+      tickangle: -30,
+      tickfont: { size: 10, color: MUTED },
+    },
+    yaxis: {
+      showgrid: true,
+      gridcolor: '#E8E8ED',
+      showline: false,
+      tickfont: { size: 10, color: MUTED },
+      tickformat: '$,.0s',
+    },
+    height: 200,
+  };
+  
   return (
     <Card title={cardTitle} size="small">
-      <div ref={ref} style={{ width: '100%', minHeight: 200 }}>
-        {!hasValidData ? (
-          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: 200, color: MUTED }}>
-            <Text type="secondary">No lifecycle data loaded</Text>
-          </div>
-        ) : (
-          width > 0 && <SourceBarChart data={data} width={width} />
-        )}
-      </div>
+      <Plot
+        data={plotData}
+        layout={layout}
+        config={{ displayModeBar: false, responsive: true }}
+        style={{ width: '100%', height: '100%' }}
+      />
     </Card>
   );
 }
@@ -289,7 +271,7 @@ function ConversionsCard({ data }: { data: Conversion[] }) {
     <Card title={<><CheckCircleOutlined style={{ color: SUCCESS, marginRight: 8 }} />First → Second Conversions ({data.length})</>} size="small">
       <Space direction="vertical" style={{ width: '100%' }} size={6}>
         {data.slice(0, 10).map((d, i) => (
-          <div key={i} style={{ display: 'flex', justifyContent: 'space-between', padding: '6px 0', borderBottom: `1px solid ${GRID}` }}>
+          <div key={i} style={{ display: 'flex', justifyContent: 'space-between', padding: '6px 0', borderBottom: '1px solid #E8E8ED' }}>
             <Text strong style={{ fontSize: 13 }}>{d.name}</Text>
             <Text style={{ fontSize: 13 }}>{fmtUSD(d.amount)}</Text>
           </div>
@@ -319,7 +301,7 @@ function LapsedCard({ data }: { data: LapsedItem[] }) {
     <Card title={`${safeCount(data.length)} lapsed donors reactivated — ${safeCurrency(totalFy26, { maximumFractionDigits: 0 })} recovered in FY26`} size="small">
       <Space direction="vertical" style={{ width: '100%' }} size={6}>
         {data.slice(0, 10).map((d, i) => (
-          <div key={i} style={{ display: 'flex', justifyContent: 'space-between', padding: '6px 0', borderBottom: `1px solid ${GRID}` }}>
+          <div key={i} style={{ display: 'flex', justifyContent: 'space-between', padding: '6px 0', borderBottom: '1px solid #E8E8ED' }}>
             <Text strong style={{ fontSize: 13 }}>{d.name || 'Unknown Donor'}</Text>
             <Space size={4}>
               <Tag color="default">FY25: {safeCurrency(d.fy25Amount, { maximumFractionDigits: 0 })}</Tag>

@@ -2,6 +2,7 @@ import { Card, Col, Row, Statistic, Table, Tag, Typography, Alert, Tooltip } fro
 import { DashboardSkeleton } from '../components/DashboardSkeleton';
 import { CsvExport } from '../components/CsvExport';
 import { useEffect, useState, useCallback } from 'react';
+import Plot from 'react-plotly.js';
 
 import { DataFreshness } from '../components/DataFreshness';
 import { NAVY, GOLD, SUCCESS, ERROR, WARNING, MUTED } from '../theme/jfsdTheme';
@@ -33,48 +34,79 @@ interface RampData {
 const fmt = (n: number) => safeCurrency(n, { maximumFractionDigits: 0 });
 const fmtK = (n: number) => safeCurrency(n, { notation: 'compact', maximumFractionDigits: 1 });
 
-// ── SVG Bar Chart ───────────────────────────────────────────────────────
+// ── Monthly Bar Chart (Plotly) ──────────────────────────────────────────
 function MonthlyBarChart({ data }: { data: MonthlyTrend[] }) {
   if (!data.length) return null;
-  const W = 600, H = 220, PAD = { t: 20, r: 20, b: 40, l: 60 };
-  const cW = W - PAD.l - PAD.r, cH = H - PAD.t - PAD.b;
-  const max = Math.max(...data.map(d => d.amount), 1);
-  const barW = Math.min(cW / data.length * 0.7, 60);
-  const gap = cW / data.length;
 
-  // Trend line points
-  const pts = data.map((d, i) => `${PAD.l + gap * i + gap / 2},${PAD.t + cH - (d.amount / max) * cH}`).join(' ');
+  const monthLabels = data.map(d => d.month || 'Unknown');
+  const amounts = data.map(d => isNaN(d.amount) ? 0 : d.amount);
+  const txnCounts = data.map(d => isNaN(d.txnCount) ? 0 : d.txnCount);
+
+  const plotData = [
+    {
+      name: 'Monthly Spend',
+      type: 'bar' as const,
+      x: monthLabels,
+      y: amounts,
+      marker: {
+        color: NAVY,
+        opacity: 0.85,
+      },
+      hovertemplate: '<b>%{x}</b><br>Amount: $%{y:,.0f}<br>Transactions: %{customdata}<extra></extra>',
+      customdata: txnCounts,
+    },
+    {
+      name: 'Trend',
+      type: 'scatter' as const,
+      mode: 'lines+markers' as const,
+      x: monthLabels,
+      y: amounts,
+      line: {
+        color: GOLD,
+        width: 2.5,
+        shape: 'spline' as const,
+      },
+      marker: {
+        color: GOLD,
+        size: 7,
+        line: {
+          color: 'white',
+          width: 1.5,
+        },
+      },
+      hovertemplate: '<b>%{x}</b><br>Trend: $%{y:,.0f}<extra></extra>',
+      yaxis: 'y',
+    },
+  ];
+
+  const layout = {
+    margin: { l: 60, r: 20, t: 20, b: 60 },
+    plot_bgcolor: 'transparent',
+    paper_bgcolor: 'transparent',
+    showlegend: false,
+    xaxis: {
+      showgrid: false,
+      showline: false,
+      tickfont: { size: 11, color: NAVY, family: 'system-ui' },
+    },
+    yaxis: {
+      showgrid: true,
+      gridcolor: '#E8E8ED',
+      gridwidth: 1,
+      showline: false,
+      tickfont: { size: 10, color: MUTED },
+      tickformat: '$,.0s',
+    },
+    height: 220,
+  };
 
   return (
-    <svg viewBox={`0 0 ${W} ${H}`} style={{ width: '100%', maxHeight: 220 }}>
-      {/* Grid lines */}
-      {[0, 0.25, 0.5, 0.75, 1].map(f => {
-        const y = PAD.t + cH - f * cH;
-        return (
-          <g key={f}>
-            <line x1={PAD.l} y1={y} x2={W - PAD.r} y2={y} stroke="#E8E8ED" strokeWidth={1} />
-            <text x={PAD.l - 8} y={y + 4} textAnchor="end" fontSize={10} fill={MUTED}>{fmtK(max * f)}</text>
-          </g>
-        );
-      })}
-      {/* Bars */}
-      {data.map((d, i) => {
-        const x = PAD.l + gap * i + (gap - barW) / 2;
-        const h = (d.amount / max) * cH;
-        const y = PAD.t + cH - h;
-        return (
-          <g key={d.month}>
-            <rect x={x} y={y} width={barW} height={h} fill={NAVY} rx={3} opacity={0.85} />
-            <text x={PAD.l + gap * i + gap / 2} y={H - PAD.b + 16} textAnchor="middle" fontSize={11} fill={NAVY} fontWeight={600}>{d.month}</text>
-          </g>
-        );
-      })}
-      {/* Trend line */}
-      <polyline points={pts} fill="none" stroke={GOLD} strokeWidth={2.5} strokeLinejoin="round" />
-      {data.map((d, i) => (
-        <circle key={i} cx={PAD.l + gap * i + gap / 2} cy={PAD.t + cH - (d.amount / max) * cH} r={3.5} fill={GOLD} stroke="#fff" strokeWidth={1.5} />
-      ))}
-    </svg>
+    <Plot
+      data={plotData}
+      layout={layout}
+      config={{ displayModeBar: false, responsive: true }}
+      style={{ width: '100%', height: '100%' }}
+    />
   );
 }
 

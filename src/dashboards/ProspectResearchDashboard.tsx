@@ -10,7 +10,8 @@ import {
   FundOutlined,
   UserSwitchOutlined,
 } from '@ant-design/icons';
-import { useEffect, useRef, useState, useCallback } from 'react';
+import { useEffect, useState, useCallback } from 'react';
+import Plot from 'react-plotly.js';
 
 import { DataFreshness } from '../components/DataFreshness';
 const { Text } = Typography;
@@ -69,68 +70,78 @@ function TierBadge({ tier }: { tier: string }) {
   return <Tag color={color} style={{ fontWeight: 600 }}>{tier}</Tag>;
 }
 
-// ── Simple bar chart (SVG) ──────────────────────────────────────────────
-function useWidth() {
-  const ref = useRef<HTMLDivElement>(null);
-  const [width, setWidth] = useState(0);
-  const measure = useCallback(() => {
-    if (ref.current) {
-      const w = ref.current.getBoundingClientRect().width;
-      if (w > 0) setWidth(Math.floor(w));
-    }
-  }, []);
-  useEffect(() => {
-    requestAnimationFrame(measure);
-    window.addEventListener('resize', measure);
-    return () => window.removeEventListener('resize', measure);
-  }, [measure]);
-  return { ref, width };
-}
-
+// ── Grouped Bar Chart (Plotly) ──────────────────────────────────────────
 function GroupedBarChart({ data }: { data: GivingVsCapacity[] }) {
-  const { ref, width } = useWidth();
-  if (!width || !data.length) return <div ref={ref} style={{ minHeight: 200 }} />;
+  if (!data.length) return <div style={{ minHeight: 200, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+    <Text type="secondary">No capacity data available</Text>
+  </div>;
 
-  const barH = 24;
-  const gap = 6;
-  const groupGap = 16;
-  const labelW = 100;
-  const rightPad = 60;
-  const chartW = width - labelW - rightPad;
-  const maxVal = Math.max(...data.flatMap(d => [d.avgGiving, d.avgCapacity]), 1);
-  const totalH = data.length * (barH * 2 + gap + groupGap);
+  const levels = data.map(d => d.level || 'Unknown');
+  const avgGivingData = data.map(d => isNaN(d.avgGiving) ? 0 : d.avgGiving);
+  const avgCapacityData = data.map(d => isNaN(d.avgCapacity) ? 0 : d.avgCapacity);
+
+  const plotData = [
+    {
+      name: 'Avg Giving',
+      type: 'bar' as const,
+      orientation: 'h' as const,
+      y: levels,
+      x: avgGivingData,
+      marker: {
+        color: NAVY,
+        opacity: 0.85,
+      },
+      hovertemplate: '<b>%{y}</b><br>Avg Giving: $%{x:,.0f}<extra></extra>',
+    },
+    {
+      name: 'Avg Capacity',
+      type: 'bar' as const,
+      orientation: 'h' as const,
+      y: levels,
+      x: avgCapacityData,
+      marker: {
+        color: GOLD,
+        opacity: 0.85,
+      },
+      hovertemplate: '<b>%{y}</b><br>Avg Capacity: $%{x:,.0f}<extra></extra>',
+    },
+  ];
+
+  const layout = {
+    margin: { l: 100, r: 60, t: 10, b: 60 },
+    plot_bgcolor: 'transparent',
+    paper_bgcolor: 'transparent',
+    showlegend: true,
+    legend: {
+      orientation: 'h' as const,
+      x: 0.5,
+      xanchor: 'center' as const,
+      y: -0.2,
+      bgcolor: 'rgba(255,255,255,0)',
+    },
+    xaxis: {
+      showgrid: false,
+      showline: false,
+      tickfont: { size: 11, color: '#555' },
+      tickformat: '$,.0s',
+    },
+    yaxis: {
+      showgrid: false,
+      showline: false,
+      tickfont: { size: 12, color: '#555' },
+      categoryorder: 'total ascending' as const,
+    },
+    height: Math.max(data.length * 80 + 100, 280),
+    barmode: 'group' as const,
+  };
 
   return (
-    <div ref={ref}>
-      <svg width={width} height={totalH + 20}>
-        {data.map((d, i) => {
-          const y = i * (barH * 2 + gap + groupGap);
-          const wGiving = (d.avgGiving / maxVal) * chartW;
-          const wCapacity = (d.avgCapacity / maxVal) * chartW;
-          return (
-            <g key={d.level}>
-              <text x={0} y={y + barH + gap / 2} fontSize={12} fill="#555" dominantBaseline="middle">
-                {d.level}
-              </text>
-              {/* Avg Giving */}
-              <rect x={labelW} y={y} width={Math.max(wGiving, 2)} height={barH} rx={4} fill={NAVY} opacity={0.85} />
-              <text x={labelW + wGiving + 4} y={y + barH / 2} fontSize={11} fill={NAVY} dominantBaseline="middle">
-                {fmtCompact(d.avgGiving)}
-              </text>
-              {/* Avg Capacity */}
-              <rect x={labelW} y={y + barH + gap} width={Math.max(wCapacity, 2)} height={barH} rx={4} fill={GOLD} opacity={0.85} />
-              <text x={labelW + wCapacity + 4} y={y + barH + gap + barH / 2} fontSize={11} fill={GOLD} dominantBaseline="middle">
-                {fmtCompact(d.avgCapacity)}
-              </text>
-            </g>
-          );
-        })}
-      </svg>
-      <div style={{ display: 'flex', gap: 16, justifyContent: 'center', marginTop: 4 }}>
-        <span style={{ fontSize: 12 }}><span style={{ display: 'inline-block', width: 12, height: 12, background: NAVY, borderRadius: 2, marginRight: 4, verticalAlign: 'middle' }} />Avg Giving</span>
-        <span style={{ fontSize: 12 }}><span style={{ display: 'inline-block', width: 12, height: 12, background: GOLD, borderRadius: 2, marginRight: 4, verticalAlign: 'middle' }} />Avg Capacity</span>
-      </div>
-    </div>
+    <Plot
+      data={plotData}
+      layout={layout}
+      config={{ displayModeBar: false, responsive: true }}
+      style={{ width: '100%', height: '100%' }}
+    />
   );
 }
 

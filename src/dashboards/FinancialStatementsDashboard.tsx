@@ -15,6 +15,7 @@ import { DefinitionTooltip } from '../components/DefinitionTooltip';
 import { NAVY, GOLD, SUCCESS, ERROR, WARNING, MUTED } from '../theme/jfsdTheme';
 import { fetchJson } from '../utils/dataFetch';
 import { safeCurrency, safeNumber, safePercent } from '../utils/formatters';
+import Plot from 'react-plotly.js';
 
 const { Text, Title } = Typography;
 const { Panel } = Collapse;
@@ -91,53 +92,74 @@ function KPICard({ title, value, prefix, suffix, color, icon, defKey }: {
   );
 }
 
-// ── SVG Bar Chart ───────────────────────────────────────────────────────
+// ── Monthly Bar Chart (Plotly) ──────────────────────────────────────────
 function MonthlyBarChart({ data }: { data: MonthLine[] }) {
   if (!data.length) return null;
-  const W = 700, H = 280, PAD = { top: 20, right: 20, bottom: 40, left: 70 };
-  const chartW = W - PAD.left - PAD.right;
-  const chartH = H - PAD.top - PAD.bottom;
 
-  const maxVal = Math.max(...data.flatMap(d => [d.revenue, d.expenses])) * 1.15;
-  const barW = chartW / data.length;
-  const bw = barW * 0.3;
+  const revenueData = data.map(d => isNaN(d.revenue) ? 0 : d.revenue);
+  const expenseData = data.map(d => isNaN(d.expenses) ? 0 : d.expenses);
+  const monthLabels = data.map(d => d.month || 'Unknown');
 
-  const yScale = (v: number) => chartH - (v / maxVal) * chartH;
-  const yTicks = Array.from({ length: 5 }, (_, i) => (maxVal / 4) * i);
+  const plotData = [
+    {
+      name: 'Revenue',
+      type: 'bar' as const,
+      x: monthLabels,
+      y: revenueData,
+      marker: {
+        color: NAVY,
+        opacity: 0.9,
+      },
+      hovertemplate: '<b>%{x}</b><br>Revenue: $%{y:,.0f}<extra></extra>',
+    },
+    {
+      name: 'Expenses',
+      type: 'bar' as const,
+      x: monthLabels,
+      y: expenseData,
+      marker: {
+        color: GOLD,
+        opacity: 0.9,
+      },
+      hovertemplate: '<b>%{x}</b><br>Expenses: $%{y:,.0f}<extra></extra>',
+    },
+  ];
+
+  const layout = {
+    margin: { l: 70, r: 20, t: 30, b: 40 },
+    plot_bgcolor: 'transparent',
+    paper_bgcolor: 'transparent',
+    showlegend: true,
+    legend: {
+      orientation: 'h' as const,
+      x: 0.7,
+      y: 1.02,
+      bgcolor: 'rgba(255,255,255,0)',
+    },
+    xaxis: {
+      showgrid: false,
+      showline: false,
+      tickfont: { size: 11, color: MUTED },
+    },
+    yaxis: {
+      showgrid: true,
+      gridcolor: '#e8e8e8',
+      gridwidth: 1,
+      showline: false,
+      tickfont: { size: 10, color: MUTED },
+      tickformat: '$,.0s',
+    },
+    height: 280,
+    barmode: 'group' as const,
+  };
 
   return (
-    <svg viewBox={`0 0 ${W} ${H}`} style={{ width: '100%', maxWidth: 700, fontFamily: 'system-ui' }}>
-      {/* Grid */}
-      {yTicks.map((t, i) => (
-        <g key={i}>
-          <line x1={PAD.left} x2={W - PAD.right} y1={PAD.top + yScale(t)} y2={PAD.top + yScale(t)}
-                stroke="#e8e8e8" strokeDasharray="3,3" />
-          <text x={PAD.left - 8} y={PAD.top + yScale(t) + 4} textAnchor="end" fontSize={10} fill={MUTED}>
-            ${safeNumber(t / 1000, { minimumFractionDigits: 0, maximumFractionDigits: 0 })}K
-          </text>
-        </g>
-      ))}
-      {/* Bars */}
-      {data.map((d, i) => {
-        const x = PAD.left + i * barW + barW * 0.15;
-        return (
-          <g key={i}>
-            <rect x={x} y={PAD.top + yScale(d.revenue)} width={bw} height={chartH - yScale(d.revenue)}
-                  fill={NAVY} rx={2} opacity={0.9} />
-            <rect x={x + bw + 2} y={PAD.top + yScale(d.expenses)} width={bw} height={chartH - yScale(d.expenses)}
-                  fill={GOLD} rx={2} opacity={0.9} />
-            <text x={PAD.left + i * barW + barW / 2} y={H - 10} textAnchor="middle" fontSize={11} fill={MUTED}>
-              {d.month}
-            </text>
-          </g>
-        );
-      })}
-      {/* Legend */}
-      <rect x={W - 180} y={8} width={12} height={12} fill={NAVY} rx={2} />
-      <text x={W - 164} y={18} fontSize={11} fill={NAVY}>Revenue</text>
-      <rect x={W - 100} y={8} width={12} height={12} fill={GOLD} rx={2} />
-      <text x={W - 84} y={18} fontSize={11} fill={GOLD}>Expenses</text>
-    </svg>
+    <Plot
+      data={plotData}
+      layout={layout}
+      config={{ displayModeBar: false, responsive: true }}
+      style={{ width: '100%', height: '100%' }}
+    />
   );
 }
 
@@ -157,71 +179,151 @@ function BudgetVarianceBar({ name, actual, budget }: { name: string; actual: num
   );
 }
 
-// ── Stacked Bar for Functional Expenses ─────────────────────────────────
+// ── Functional Stacked Bar (Plotly) ─────────────────────────────────────
 function FunctionalStackedBar({ rows, totals: _totals }: { rows: FERow[]; totals: any }) {
-  const W = 600, H = rows.length * 36 + 30;
-  const PAD = { left: 150, right: 80, top: 10 };
-  const barH = 22;
-  const chartW = W - PAD.left - PAD.right;
-  const maxVal = Math.max(...rows.map(r => r.total)) || 1;
+  if (!rows.length) return null;
+
+  const categoryNames = rows.map(r => r.name || 'Unknown');
+  const programServices = rows.map(r => isNaN(r.programServices) ? 0 : r.programServices);
+  const managementGeneral = rows.map(r => isNaN(r.managementGeneral) ? 0 : r.managementGeneral);
+  const fundraising = rows.map(r => isNaN(r.fundraising) ? 0 : r.fundraising);
+
+  const plotData = [
+    {
+      name: 'Program Services',
+      type: 'bar' as const,
+      orientation: 'h' as const,
+      y: categoryNames,
+      x: programServices,
+      marker: {
+        color: NAVY,
+      },
+      hovertemplate: '<b>%{y}</b><br>Program Services: $%{x:,.0f}<extra></extra>',
+    },
+    {
+      name: 'M&G',
+      type: 'bar' as const,
+      orientation: 'h' as const,
+      y: categoryNames,
+      x: managementGeneral,
+      marker: {
+        color: GOLD,
+      },
+      hovertemplate: '<b>%{y}</b><br>Management & General: $%{x:,.0f}<extra></extra>',
+    },
+    {
+      name: 'Fundraising',
+      type: 'bar' as const,
+      orientation: 'h' as const,
+      y: categoryNames,
+      x: fundraising,
+      marker: {
+        color: WARNING,
+      },
+      hovertemplate: '<b>%{y}</b><br>Fundraising: $%{x:,.0f}<extra></extra>',
+    },
+  ];
+
+  const layout = {
+    margin: { l: 150, r: 80, t: 10, b: 40 },
+    plot_bgcolor: 'transparent',
+    paper_bgcolor: 'transparent',
+    showlegend: true,
+    legend: {
+      orientation: 'h' as const,
+      x: 0,
+      y: -0.2,
+      bgcolor: 'rgba(255,255,255,0)',
+    },
+    xaxis: {
+      showgrid: false,
+      showline: false,
+      tickfont: { size: 10, color: MUTED },
+      tickformat: '$,.0s',
+    },
+    yaxis: {
+      showgrid: false,
+      showline: false,
+      tickfont: { size: 11, color: '#333' },
+      categoryorder: 'total ascending' as const,
+    },
+    height: Math.max(rows.length * 50 + 80, 200),
+    barmode: 'stack' as const,
+  };
 
   return (
-    <svg viewBox={`0 0 ${W} ${H}`} style={{ width: '100%', maxWidth: 600, fontFamily: 'system-ui' }}>
-      {rows.map((r, i) => {
-        const y = PAD.top + i * 36;
-        const scale = chartW / maxVal;
-        const w1 = r.programServices * scale;
-        const w2 = r.managementGeneral * scale;
-        const w3 = r.fundraising * scale;
-        return (
-          <g key={i}>
-            <text x={PAD.left - 8} y={y + barH / 2 + 4} textAnchor="end" fontSize={11} fill="#333">{r.name}</text>
-            <rect x={PAD.left} y={y} width={w1} height={barH} fill={NAVY} rx={2} />
-            <rect x={PAD.left + w1} y={y} width={w2} height={barH} fill={GOLD} rx={2} />
-            <rect x={PAD.left + w1 + w2} y={y} width={w3} height={barH} fill={WARNING} rx={2} />
-            <text x={PAD.left + w1 + w2 + w3 + 6} y={y + barH / 2 + 4} fontSize={10} fill={MUTED}>
-              {fmtAcct(r.total)}
-            </text>
-          </g>
-        );
-      })}
-      {/* Legend */}
-      <g transform={`translate(${PAD.left}, ${H - 16})`}>
-        <rect width={12} height={12} fill={NAVY} rx={2} />
-        <text x={16} y={10} fontSize={10}>Program Services</text>
-        <rect x={130} width={12} height={12} fill={GOLD} rx={2} />
-        <text x={146} y={10} fontSize={10}>M&G</text>
-        <rect x={210} width={12} height={12} fill={WARNING} rx={2} />
-        <text x={226} y={10} fontSize={10}>Fundraising</text>
-      </g>
-    </svg>
+    <Plot
+      data={plotData}
+      layout={layout}
+      config={{ displayModeBar: false, responsive: true }}
+      style={{ width: '100%', height: '100%' }}
+    />
   );
 }
 
-// ── BVA Summary Bar Chart ───────────────────────────────────────────────
+// ── BVA Summary Chart (Plotly) ──────────────────────────────────────────
 function BVASummaryChart({ items }: { items: BVALine[] }) {
-  const W = 600, H = items.length * 48 + 20;
-  const PAD = { left: 150, right: 80, top: 10 };
-  const barH = 16;
-  const chartW = W - PAD.left - PAD.right;
-  const maxVal = Math.max(...items.flatMap(r => [Math.abs(r.budget), Math.abs(r.actual)])) || 1;
+  if (!items.length) return null;
+
+  const categoryNames = items.map(r => r.name || 'Unknown');
+  const budgetData = items.map(r => isNaN(r.budget) ? 0 : Math.abs(r.budget));
+  const actualData = items.map(r => isNaN(r.actual) ? 0 : Math.abs(r.actual));
+  const favorableColors = items.map(r => (r.variance >= 0 ? SUCCESS : ERROR));
+
+  const plotData = [
+    {
+      name: 'Budget',
+      type: 'bar' as const,
+      orientation: 'h' as const,
+      y: categoryNames,
+      x: budgetData,
+      marker: {
+        color: '#e0e0e0',
+      },
+      hovertemplate: '<b>%{y}</b><br>Budget: $%{x:,.0f}<extra></extra>',
+    },
+    {
+      name: 'Actual',
+      type: 'bar' as const,
+      orientation: 'h' as const,
+      y: categoryNames,
+      x: actualData,
+      marker: {
+        color: favorableColors,
+        opacity: 0.8,
+      },
+      hovertemplate: '<b>%{y}</b><br>Actual: $%{x:,.0f}<extra></extra>',
+    },
+  ];
+
+  const layout = {
+    margin: { l: 150, r: 80, t: 10, b: 60 },
+    plot_bgcolor: 'transparent',
+    paper_bgcolor: 'transparent',
+    showlegend: false,
+    xaxis: {
+      showgrid: false,
+      showline: false,
+      tickfont: { size: 10, color: MUTED },
+      tickformat: '$,.0s',
+    },
+    yaxis: {
+      showgrid: false,
+      showline: false,
+      tickfont: { size: 11, color: '#333' },
+      categoryorder: 'total ascending' as const,
+    },
+    height: Math.max(items.length * 60 + 80, 200),
+    barmode: 'group' as const,
+  };
 
   return (
-    <svg viewBox={`0 0 ${W} ${H}`} style={{ width: '100%', maxWidth: 600, fontFamily: 'system-ui' }}>
-      {items.map((r, i) => {
-        const y = PAD.top + i * 48;
-        const scale = chartW / maxVal;
-        const wb = Math.abs(r.budget) * scale;
-        const wa = Math.abs(r.actual) * scale;
-        return (
-          <g key={i}>
-            <text x={PAD.left - 8} y={y + 14} textAnchor="end" fontSize={11} fill="#333">{r.name}</text>
-            <rect x={PAD.left} y={y} width={wb} height={barH} fill="#e0e0e0" rx={2} />
-            <rect x={PAD.left} y={y + barH + 2} width={wa} height={barH} fill={r.variance >= 0 ? SUCCESS : ERROR} rx={2} opacity={0.8} />
-          </g>
-        );
-      })}
-    </svg>
+    <Plot
+      data={plotData}
+      layout={layout}
+      config={{ displayModeBar: false, responsive: true }}
+      style={{ width: '100%', height: '100%' }}
+    />
   );
 }
 

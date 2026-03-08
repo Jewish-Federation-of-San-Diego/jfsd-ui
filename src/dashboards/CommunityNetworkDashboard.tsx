@@ -149,7 +149,10 @@ export function CommunityNetworkDashboard() {
       .selectAll("line")
       .data(links)
       .join("line")
-      .attr("stroke-width", (d) => Math.max(0.6, d?.weight ?? 1));
+      .attr("stroke-width", (d) => {
+        const weight = isNaN(d?.weight ?? 1) ? 1 : (d?.weight ?? 1);
+        return Math.max(0.6, weight);
+      });
 
     const node = (g
       .append("g")
@@ -158,7 +161,10 @@ export function CommunityNetworkDashboard() {
       .selectAll("circle")
       .data(nodes)
       .join("circle")
-      .attr("r", (d) => Math.min(Math.max((d?.size ?? 8) * 0.35, 4), 20))
+      .attr("r", (d) => {
+        const size = isNaN(d?.size ?? 8) ? 8 : (d?.size ?? 8);
+        return Math.min(Math.max(size * 0.35, 4), 20);
+      })
       .attr("fill", (d) => GROUP_COLORS[d?.group ?? "other"] ?? NAVY)) as d3.Selection<
       SVGCircleElement,
       SimNode,
@@ -205,12 +211,18 @@ export function CommunityNetworkDashboard() {
         d3
           .forceLink<SimNode, SimLink>(links)
           .id((d) => d.id)
-          .distance((d) => Math.max(35, 90 - ((d?.weight ?? 1) * 8)))
+          .distance((d) => {
+            const weight = isNaN(d?.weight ?? 1) ? 1 : (d?.weight ?? 1);
+            return Math.max(35, 90 - (weight * 8));
+          })
           .strength(0.5),
       )
       .force("charge", d3.forceManyBody().strength(-140))
       .force("center", d3.forceCenter(width / 2, height / 2))
-      .force("collision", d3.forceCollide<SimNode>().radius((d) => Math.min(Math.max((d?.size ?? 8) * 0.4, 6), 24)));
+      .force("collision", d3.forceCollide<SimNode>().radius((d) => {
+        const size = isNaN(d?.size ?? 8) ? 8 : (d?.size ?? 8);
+        return Math.min(Math.max(size * 0.4, 6), 24);
+      }));
 
     simulation.on("tick", () => {
       link
