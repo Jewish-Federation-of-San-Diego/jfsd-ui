@@ -1,0 +1,222 @@
+{
+  "asOfDate": "2026-03-07",
+  "kpis": {
+    "totalReceivable": 12300000,
+    "cashReceivedYTD": 11200000,
+    "collectionRate": 47.65957446808511,
+    "avgDaysToPayment": 142
+  },
+  "monthlyInflow": {
+    "labels": [
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec",
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun"
+    ],
+    "fy25Data": [
+      1200000,
+      950000,
+      620000,
+      780000,
+      1150000,
+      2800000,
+      2200000,
+      450000,
+      380000,
+      290000,
+      180000,
+      150000
+    ],
+    "fy26Data": [
+      1400000,
+      1100000,
+      709000,
+      589000,
+      1300000,
+      3100000,
+      2500000,
+      351000,
+      128000,
+      0,
+      0,
+      0
+    ]
+  },
+  "agingReceivables": [
+    {
+      "bucket": "Current (0-30 days)",
+      "amount": 3200000
+    },
+    {
+      "bucket": "30-60 days",
+      "amount": 2100000
+    },
+    {
+      "bucket": "60-90 days",
+      "amount": 1800000
+    },
+    {
+      "bucket": "90-180 days",
+      "amount": 2400000
+    },
+    {
+      "bucket": "180-365 days",
+      "amount": 1900000
+    },
+    {
+      "bucket": "365+ days",
+      "amount": 900000
+    }
+  ],
+  "topPledges": [
+    {
+      "donorName": "Major Foundation",
+      "committedAmount": 500000,
+      "balanceDue": 350000,
+      "startDate": "2025-08-15",
+      "daysOutstanding": 204
+    },
+    {
+      "donorName": "Anonymous Donor",
+      "committedAmount": 300000,
+      "balanceDue": 225000,
+      "startDate": "2025-09-01",
+      "daysOutstanding": 187
+    },
+    {
+      "donorName": "Family Trust",
+      "committedAmount": 250000,
+      "balanceDue": 200000,
+      "startDate": "2025-07-10",
+      "daysOutstanding": 240
+    },
+    {
+      "donorName": "Corporate Partner",
+      "committedAmount": 200000,
+      "balanceDue": 180000,
+      "startDate": "2025-10-01",
+      "daysOutstanding": 157
+    },
+    {
+      "donorName": "Community Leader",
+      "committedAmount": 180000,
+      "balanceDue": 160000,
+      "startDate": "2025-08-20",
+      "daysOutstanding": 199
+    },
+    {
+      "donorName": "Board Member A",
+      "committedAmount": 150000,
+      "balanceDue": 120000,
+      "startDate": "2025-09-15",
+      "daysOutstanding": 173
+    },
+    {
+      "donorName": "Board Member B",
+      "committedAmount": 100000,
+      "balanceDue": 90000,
+      "startDate": "2025-11-01",
+      "daysOutstanding": 126
+    },
+    {
+      "donorName": "Local Business",
+      "committedAmount": 75000,
+      "balanceDue": 60000,
+      "startDate": "2025-12-01",
+      "daysOutstanding": 96
+    },
+    {
+      "donorName": "Professional A",
+      "committedAmount": 60000,
+      "balanceDue": 50000,
+      "startDate": "2025-07-25",
+      "daysOutstanding": 225
+    },
+    {
+      "donorName": "Professional B",
+      "committedAmount": 50000,
+      "balanceDue": 40000,
+      "startDate": "2025-10-15",
+      "daysOutstanding": 143
+    },
+    {
+      "donorName": "Young Professional",
+      "committedAmount": 36000,
+      "balanceDue": 30000,
+      "startDate": "2025-11-15",
+      "daysOutstanding": 112
+    },
+    {
+      "donorName": "Retiree A",
+      "committedAmount": 30000,
+      "balanceDue": 25000,
+      "startDate": "2025-08-30",
+      "daysOutstanding": 189
+    },
+    {
+      "donorName": "Retiree B",
+      "committedAmount": 25000,
+      "balanceDue": 20000,
+      "startDate": "2025-09-30",
+      "daysOutstanding": 158
+    },
+    {
+      "donorName": "Family Foundation",
+      "committedAmount": 20000,
+      "balanceDue": 18000,
+      "startDate": "2025-12-15",
+      "daysOutstanding": 82
+    },
+    {
+      "donorName": "Small Business",
+      "committedAmount": 18000,
+      "balanceDue": 15000,
+      "startDate": "2026-01-01",
+      "daysOutstanding": 65
+    }
+  ],
+  "cashVsRecognition": [
+    {
+      "label": "FY26 Recognition",
+      "value": 7800000
+    },
+    {
+      "label": "Minus Unpaid Pledges",
+      "value": -12300000
+    },
+    {
+      "label": "Plus Prior Year Collections",
+      "value": 3400000
+    },
+    {
+      "label": "Cash Received",
+      "value": 11200000
+    }
+  ],
+  "paymentMethodMix": [
+    {
+      "method": "Credit Card",
+      "amount": 4800000
+    },
+    {
+      "method": "Check",
+      "amount": 3900000
+    },
+    {
+      "method": "ACH",
+      "amount": 1800000
+    },
+    {
+      "method": "Wire Transfer",
+      "amount": 700000
+    }
+  ]
+}

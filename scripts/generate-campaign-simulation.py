@@ -1,8 +1,7 @@
 #!/usr/bin/env python3
 """
-FY26 Annual Campaign Simulation — Recognition-Based
-Uses FY24/FY25 recognition totals + known intelligence to project FY26 landing zone.
-Recognition = commitments + direct gifts + soft credits (booked at pledge time).
+FY26 + FY27 Annual Campaign Simulation — Recognition-Based (ALL account types)
+Person Account + Organization recognition. Not just person accounts.
 """
 
 import json
@@ -11,215 +10,235 @@ from pathlib import Path
 
 OUTPUT = Path(__file__).parent.parent / "public" / "data" / "campaign-simulation.json"
 
-# ── Recognition totals (SF Account rollups — FINAL numbers) ──────────────
-FY24_FINAL = 15_332_362.05  # Anomalously high — likely includes one-time large gifts
-FY25_FINAL = 8_812_417.17   # More representative baseline
-FY26_YTD   = 5_959_220.17   # As of early March 2026
+# ── Recognition totals (ALL accounts: Person + Organization) ─────────────
+FY24_FINAL = 16_306_995.40
+FY25_FINAL = 11_554_307.74
+FY26_YTD   =  7_814_307.14  # As of Mar 7, 2026
 
-CAMPAIGN_GOAL = 9_000_000
+FY26_GOAL = 9_000_000
+FY27_GOAL = 9_500_000  # Placeholder
 
-# ── FY25 monthly transaction data (proxy for when gifts land) ────────────
-# Used to estimate what % of final recognition is typically booked by March
-FY25_MONTHLY_TXN = {
-    "Jul": 311_667, "Aug": 349_705, "Sep": 1_352_726, "Oct": 574_242,
-    "Nov": 930_821, "Dec": 3_794_361, "Jan": 2_267_575, "Feb": 1_136_334,
-    "Mar": 1_209_850, "Apr": 816_483, "May": 2_848_917, "Jun": 643_816,
-}
-FY24_MONTHLY_TXN = {
+# ── Monthly transaction data (timing proxy) ──────────────────────────────
+FY24_MONTHLY = {
     "Jul": 277_506, "Aug": 205_504, "Sep": 1_189_878, "Oct": 4_891_547,
     "Nov": 2_151_806, "Dec": 2_980_057, "Jan": 2_005_287, "Feb": 1_468_243,
     "Mar": 208_811, "Apr": 234_609, "May": 2_636_365, "Jun": 905_065,
 }
-FY26_MONTHLY_TXN = {
+FY25_MONTHLY = {
+    "Jul": 311_667, "Aug": 349_705, "Sep": 1_352_726, "Oct": 574_242,
+    "Nov": 930_821, "Dec": 3_794_361, "Jan": 2_267_575, "Feb": 1_136_334,
+    "Mar": 1_209_850, "Apr": 816_483, "May": 2_848_917, "Jun": 643_816,
+}
+FY26_MONTHLY = {
     "Jul": 1_405_656, "Aug": 1_095_700, "Sep": 708_840, "Oct": 589_436,
     "Nov": 1_289_866, "Dec": 3_091_206, "Jan": 2_548_053, "Feb": 351_456,
     "Mar": 128_245,
 }
 MONTHS = ["Jul", "Aug", "Sep", "Oct", "Nov", "Dec", "Jan", "Feb", "Mar", "Apr", "May", "Jun"]
 
-# ── Known intelligence ───────────────────────────────────────────────────
-KNOWN_ADJUSTMENTS = [
+# ── Known Intelligence ───────────────────────────────────────────────────
+FY26_ADJUSTMENTS = [
     {
         "donor": "Ernest Rady",
-        "description": "Declined annual fund gift for FY26. Giving to Israel campaign instead. FY25: $1M annual fund.",
-        "fy25_amount": 1_000_000,
-        "fy26_expected": 0,
-        "impact": -1_000_000,
+        "description": "Declined annual fund gift for FY26. Redirecting to Israel campaign.",
+        "fy25_amount": 1_000_000, "fy26_expected": 0, "impact": -1_000_000,
     }
 ]
-known_impact = sum(a["impact"] for a in KNOWN_ADJUSTMENTS)
+fy26_known = sum(a["impact"] for a in FY26_ADJUSTMENTS)
 
-# ── H2 completion model ─────────────────────────────────────────────────
-# What fraction of annual total typically comes in Mar-Jun?
-def mar_jun_pct(monthly):
-    total = sum(monthly.values())
-    remaining = sum(monthly.get(m, 0) for m in ["Mar", "Apr", "May", "Jun"])
-    return remaining / total if total else 0
+FY27_ADJUSTMENTS = [
+    {
+        "donor": "Ernest Rady",
+        "description": "Assuming Israel campaign preference continues. May return — flag for DRM.",
+        "prior_amount": 1_000_000, "fy27_expected": 0, "impact": -1_000_000,
+    }
+]
+fy27_known = sum(a["impact"] for a in FY27_ADJUSTMENTS)
 
-fy24_remaining_pct = mar_jun_pct(FY24_MONTHLY_TXN)  # 20.8%
-fy25_remaining_pct = mar_jun_pct(FY25_MONTHLY_TXN)  # 34.0%
+# ═══════════════════════════════════════════════════════════════════════
+# FY26 SIMULATION — We're at $7.81M with ~4 months left
+# ═══════════════════════════════════════════════════════════════════════
+# H2 growth: how much more recognition will land Mar-Jun?
+# LOW = 10% (minimal new commitments, most already booked)
+# MED = 17% (avg historical H2 pattern, discounted for recognition front-loading)
+# HIGH = 25% (strong spring campaign push + major gift closes)
 
-# BUT: recognition ≠ transactions. Recognition is front-loaded because
-# pledges/commitments are recognized immediately. So the "remaining" %
-# of RECOGNITION is lower than transactions suggest.
-# 
-# Best estimate: FY25 recognition was $8.81M final, and transactions
-# through Feb were ~$8.73M. So <1% of recognition was truly "new" in H2.
-# But some FY25 gifts DO come in Mar-Jun that generate FY25 recognition.
-#
-# Conservative model: use transaction % as upper bound for remaining growth.
+FY26_GROWTH = {"low": 0.10, "medium": 0.17, "high": 0.25}
 
-# ── Three scenarios ──────────────────────────────────────────────────────
+fy26_scenarios = {}
+for key, growth in FY26_GROWTH.items():
+    proj = FY26_YTD * (1 + growth) + fy26_known
+    fy26_scenarios[key] = {
+        "label": {"low": "Conservative", "medium": "Base Case", "high": "Optimistic"}[key],
+        "projected": round(proj),
+        "description": {
+            "low": f"Minimal new commitments (+{growth:.0%} H2). Rady -$1M.",
+            "medium": f"Historical avg H2 pattern (+{growth:.0%}). Rady -$1M.",
+            "high": f"Strong spring push + major gift closes (+{growth:.0%}). Rady -$1M.",
+        }[key],
+        "vsGoal": round(proj - FY26_GOAL),
+        "vsGoalPct": round((proj / FY26_GOAL - 1) * 100, 1),
+        "vsFY25": round(proj - FY25_FINAL),
+        "vsFY25Pct": round((proj / FY25_FINAL - 1) * 100, 1),
+        "h2Growth": f"{growth:.0%}",
+    }
 
-# SCENARIO 1: LOW (Conservative)
-# Assumes minimal new recognition in H2 (most commitments already booked)
-# + Rady decline. FY26 pattern looks like FY26 is front-loaded.
-low_h2_growth_pct = 0.05  # Only 5% more recognition comes in Mar-Jun
-low_projected = FY26_YTD * (1 + low_h2_growth_pct) + known_impact
-low_label = "Conservative"
-low_desc = "Minimal new commitments in H2 (5% growth). Rady -$1M."
+fy26_med_proj = FY26_YTD * (1 + FY26_GROWTH["medium"]) + fy26_known
 
-# SCENARIO 2: MEDIUM (Base Case)
-# Uses FY25 pattern: final was $8.81M, implies ~15% came after this point
-# (FY25 at equivalent point was ~$7.6M recognition, grew to $8.81M = +16%)
-med_h2_growth_pct = 0.16  # 16% additional recognition in H2
-med_projected = FY26_YTD * (1 + med_h2_growth_pct) + known_impact
-med_label = "Base Case"
-med_desc = "FY25 H2 recognition pattern (+16%). Rady -$1M."
+# ═══════════════════════════════════════════════════════════════════════
+# FY27 SIMULATION — Full-year projection from zero
+# ═══════════════════════════════════════════════════════════════════════
+# Revenue retention: major donors retain at ~95%, small donors at ~50%
+# Blended revenue retention is ~85-90% (higher than donor count retention)
+# Plus new donor acquisition and upgrade potential
 
-# SCENARIO 3: HIGH (Optimistic)
-# Assumes strong spring campaign push + pledge solicitations close
-# FY24 had massive May gift activity ($2.6M) which could repeat
-high_h2_growth_pct = 0.30  # 30% additional recognition
-high_projected = FY26_YTD * (1 + high_h2_growth_pct) + known_impact
-high_label = "Optimistic"
-high_desc = "Strong spring campaign + major gift closes (+30%). Rady -$1M."
+FY27_REV_RETENTION = {"low": 0.82, "medium": 0.90, "high": 1.00}
+FY27_LABELS = {"low": "Pessimistic", "medium": "Base Case", "high": "Growth"}
+FY27_DESCS = {
+    "low": "Soft retention (82% revenue carry) + continued Rady absence.",
+    "medium": "Normal retention (90% revenue carry) + moderate acquisition.",
+    "high": "Full revenue carry + strong pipeline + upgrades. Rady still out.",
+}
 
-# ── Build cumulative chart data ──────────────────────────────────────────
+fy27_scenarios = {}
+for key, rev_ret in FY27_REV_RETENTION.items():
+    proj = fy26_med_proj * rev_ret + fy27_known
+    fy27_scenarios[key] = {
+        "label": FY27_LABELS[key],
+        "projected": round(proj),
+        "description": FY27_DESCS[key],
+        "vsGoal": round(proj - FY27_GOAL),
+        "vsGoalPct": round((proj / FY27_GOAL - 1) * 100, 1),
+        "vsFY26Med": round(proj - fy26_med_proj),
+        "vsFY26Pct": round((proj / fy26_med_proj - 1) * 100, 1),
+        "revenueRetention": f"{rev_ret:.0%}",
+    }
+
+# ── Chart data ───────────────────────────────────────────────────────────
 def cumulative(monthly, months):
-    result = []
-    running = 0
+    result, running = [], 0
     for m in months:
         running += monthly.get(m, 0)
         result.append(round(running))
     return result
 
-fy24_cum = cumulative(FY24_MONTHLY_TXN, MONTHS)
-fy25_cum = cumulative(FY25_MONTHLY_TXN, MONTHS)
-fy26_actual_months = list(FY26_MONTHLY_TXN.keys())
-fy26_actual_cum = cumulative(FY26_MONTHLY_TXN, fy26_actual_months)
+fy24_cum = cumulative(FY24_MONTHLY, MONTHS)
+fy25_cum = cumulative(FY25_MONTHLY, MONTHS)
+fy26_actual_months = list(FY26_MONTHLY.keys())
+fy26_actual_cum = cumulative(FY26_MONTHLY, fy26_actual_months)
 
-# Project FY26 remaining months for each scenario using blended pattern
-def project_remaining(fy26_actual_total, growth_pct, base_monthly):
-    """Distribute remaining projected growth across Mar-Jun using base year's pattern."""
-    total_growth = fy26_actual_total * growth_pct
-    remaining_months = ["Mar", "Apr", "May", "Jun"]
-    base_remaining = sum(base_monthly.get(m, 0) for m in remaining_months)
-    
-    projected = dict(FY26_MONTHLY_TXN)  # start with actuals
-    for m in remaining_months:
-        if m == "Mar":
-            # Mar is partially actual — add proportional growth
-            projected[m] = FY26_MONTHLY_TXN.get("Mar", 0) + (total_growth * (base_monthly.get(m, 0) / base_remaining if base_remaining else 0.25))
-        elif m in FY26_MONTHLY_TXN:
-            projected[m] = FY26_MONTHLY_TXN[m]
-        else:
-            projected[m] = total_growth * (base_monthly.get(m, 0) / base_remaining if base_remaining else 0.25)
-    return projected
+# Project FY26 remaining months
+def project_fy26_monthly(growth_rate, base_pattern):
+    actual_total = sum(FY26_MONTHLY.values())
+    projected_total = FY26_YTD * (1 + growth_rate) + fy26_known
+    remaining = projected_total - actual_total
+    future = ["Apr", "May", "Jun"]
+    base_future = sum(base_pattern.get(m, 0) for m in future)
+    result = dict(FY26_MONTHLY)
+    for m in future:
+        pct = base_pattern.get(m, 0) / base_future if base_future else 1/3
+        result[m] = max(0, remaining * pct)
+    return result
 
-low_monthly = project_remaining(FY26_YTD, low_h2_growth_pct, FY25_MONTHLY_TXN)
-med_monthly = project_remaining(FY26_YTD, med_h2_growth_pct, FY25_MONTHLY_TXN)
-high_monthly = project_remaining(FY26_YTD, high_h2_growth_pct, FY24_MONTHLY_TXN)
+fy26_low_m = project_fy26_monthly(0.10, FY25_MONTHLY)
+fy26_med_m = project_fy26_monthly(0.17, FY25_MONTHLY)
+fy26_high_m = project_fy26_monthly(0.25, FY24_MONTHLY)
 
-fy26_low_cum = cumulative(low_monthly, MONTHS)
-fy26_med_cum = cumulative(med_monthly, MONTHS)
-fy26_high_cum = cumulative(high_monthly, MONTHS)
+fy26_low_cum = cumulative(fy26_low_m, MONTHS)
+fy26_med_cum = cumulative(fy26_med_m, MONTHS)
+fy26_high_cum = cumulative(fy26_high_m, MONTHS)
 
-# ── Variables ────────────────────────────────────────────────────────────
+# FY27 monthly from total using FY25 pattern
+def monthly_from_total(total, pattern):
+    pat_total = sum(pattern.values())
+    return {m: total * (pattern[m] / pat_total) for m in MONTHS}
+
+fy27_low_proj = fy26_med_proj * 0.82 + fy27_known
+fy27_med_proj = fy26_med_proj * 0.90 + fy27_known
+fy27_high_proj = fy26_med_proj * 1.00 + fy27_known
+
+fy27_low_cum = cumulative(monthly_from_total(fy27_low_proj, FY25_MONTHLY), MONTHS)
+fy27_med_cum = cumulative(monthly_from_total(fy27_med_proj, FY25_MONTHLY), MONTHS)
+fy27_high_cum = cumulative(monthly_from_total(fy27_high_proj, FY25_MONTHLY), MONTHS)
+
+# ── Variables & Skeptic ──────────────────────────────────────────────────
 variables = [
-    {"name": "FY24 Recognition", "value": f"${FY24_FINAL:,.0f}", "note": "Anomalously high — includes large one-time gifts unlikely to repeat"},
-    {"name": "FY25 Recognition (Final)", "value": f"${FY25_FINAL:,.0f}", "note": "Best comparable baseline year"},
-    {"name": "FY26 Recognition (YTD)", "value": f"${FY26_YTD:,.0f}", "note": "As of March 7, 2026. Recognition = commitments + direct gifts + soft credits"},
-    {"name": "FY26 vs FY25 Pace", "value": f"{FY26_YTD / FY25_FINAL * 100:.1f}%", "note": f"${FY26_YTD - FY25_FINAL:+,.0f} vs FY25 final (but FY25 still had H2 to go at this point)"},
-    {"name": "Rady Impact", "value": "-$1,000,000", "note": "Confirmed: redirecting to Israel campaign. FY25 annual fund: $1M"},
-    {"name": "H2 Growth (FY25)", "value": f"{(FY25_FINAL / (FY25_FINAL * 0.86) - 1) * 100:.0f}%", "note": "FY25 recognition grew ~16% from Mar-Jun (late pledges, spring solicitations)"},
-    {"name": "Donor Retention", "value": "53.6%", "note": "Above AFP avg (45%), but 500 silent donors with $2.2M at risk"},
-    {"name": "December Concentration", "value": f"${FY26_MONTHLY_TXN['Dec']:,.0f}", "note": f"{FY26_MONTHLY_TXN['Dec'] / sum(FY26_MONTHLY_TXN.values()) * 100:.0f}% of FY26 transactions — year-end is the swing"},
+    {"name": "FY24 Recognition", "value": f"${FY24_FINAL:,.0f}", "note": "All accounts. Anomalously high — includes one-time major gifts."},
+    {"name": "FY25 Recognition", "value": f"${FY25_FINAL:,.0f}", "note": "All accounts. Best comparable baseline (Person $8.8M + Org $2.7M)."},
+    {"name": "FY26 YTD", "value": f"${FY26_YTD:,.0f}", "note": "Person $5.96M + Org $1.86M. As of March 7, 2026."},
+    {"name": "FY26 % of Goal", "value": f"{FY26_YTD/FY26_GOAL*100:.0f}%", "note": f"${FY26_GOAL - FY26_YTD:,.0f} to go."},
+    {"name": "Rady Impact", "value": "-$1M (both years)", "note": "FY26: confirmed. FY27: assumed continuation."},
+    {"name": "Donor Retention", "value": "53.6%", "note": "Count-based. Revenue retention is higher (~85-90%) because major donors retain better."},
+    {"name": "Org Gifts", "value": f"${1_855_087:,.0f}", "note": "50 organizations. Lumpy — one grant can swing ±$500K."},
+    {"name": "Spring Major Gifts", "value": "Swing factor", "note": "Apr-Jun is peak solicitation. A single $500K close jumps scenarios."},
 ]
 
-# ── Skeptic's notes ──────────────────────────────────────────────────────
-skeptics_notes = [
-    "Recognition ≠ cash received. A $500K pledge counts as recognition immediately even if payments span 3 years.",
-    "FY24's $15.3M is likely not repeatable — one or two mega-gifts skewed it. FY25 ($8.8M) is the real baseline.",
-    "The $9M goal may itself need revisiting if the Rady $1M was assumed in the budget.",
-    "Some 'FY26 recognition' may be FY25 pledges being paid — payments don't generate new recognition.",
-    "Spring is historically strong for major gift solicitations — a single $500K close could jump us from LOW to MEDIUM.",
+skeptics = [
+    f"Already at ${FY26_YTD:,.0f} (87% of goal). Even conservative scenario should land above $8M.",
+    "The $9M goal may have assumed Rady. Effective goal without him: $8M — which we're on track to exceed.",
+    "Organization gifts ($1.86M from 50 orgs) are lumpy. One large foundation = big swing either direction.",
+    "FY27 is pure projection — retention rates, economic conditions, and Israel campaign duration all uncertain.",
+    "Revenue retention ≠ donor retention. Top 20 donors account for ~60% of total; they retain at 90%+.",
+    "Recognition ≠ cash. $500K pledge counts now, cash arrives over years. See Cash Forecast dashboard.",
 ]
 
 # ── Output ───────────────────────────────────────────────────────────────
 output = {
     "generatedAt": datetime.now().isoformat(),
     "asOfDate": "2026-03-07",
-    "campaignGoal": CAMPAIGN_GOAL,
-    "recognition": {
-        "FY24": FY24_FINAL,
-        "FY25": FY25_FINAL,
-        "FY26_YTD": FY26_YTD,
-    },
-    "scenarios": {
-        "low": {
-            "label": low_label, "description": low_desc,
-            "projected": round(low_projected),
-            "vsGoal": round(low_projected - CAMPAIGN_GOAL),
-            "vsGoalPct": round((low_projected / CAMPAIGN_GOAL - 1) * 100, 1),
-            "vsFY25": round(low_projected - FY25_FINAL),
-            "vsFY25Pct": round((low_projected / FY25_FINAL - 1) * 100, 1),
-            "h2Growth": f"{low_h2_growth_pct:.0%}",
-        },
-        "medium": {
-            "label": med_label, "description": med_desc,
-            "projected": round(med_projected),
-            "vsGoal": round(med_projected - CAMPAIGN_GOAL),
-            "vsGoalPct": round((med_projected / CAMPAIGN_GOAL - 1) * 100, 1),
-            "vsFY25": round(med_projected - FY25_FINAL),
-            "vsFY25Pct": round((med_projected / FY25_FINAL - 1) * 100, 1),
-            "h2Growth": f"{med_h2_growth_pct:.0%}",
-        },
-        "high": {
-            "label": high_label, "description": high_desc,
-            "projected": round(high_projected),
-            "vsGoal": round(high_projected - CAMPAIGN_GOAL),
-            "vsGoalPct": round((high_projected / CAMPAIGN_GOAL - 1) * 100, 1),
-            "vsFY25": round(high_projected - FY25_FINAL),
-            "vsFY25Pct": round((high_projected / FY25_FINAL - 1) * 100, 1),
-            "h2Growth": f"{high_h2_growth_pct:.0%}",
+    "recognition": {"FY24": FY24_FINAL, "FY25": FY25_FINAL, "FY26_YTD": FY26_YTD},
+    "fy26": {
+        "goal": FY26_GOAL,
+        "ytd": FY26_YTD,
+        "ytdPctOfGoal": round(FY26_YTD / FY26_GOAL * 100, 1),
+        "scenarios": fy26_scenarios,
+        "knownAdjustments": FY26_ADJUSTMENTS,
+        "chart": {
+            "months": MONTHS,
+            "fy24Cumulative": fy24_cum, "fy25Cumulative": fy25_cum,
+            "fy26ActualMonths": fy26_actual_months, "fy26ActualCumulative": fy26_actual_cum,
+            "fy26LowCumulative": fy26_low_cum, "fy26MedCumulative": fy26_med_cum,
+            "fy26HighCumulative": fy26_high_cum,
+            "goalLine": FY26_GOAL,
         },
     },
-    "knownAdjustments": KNOWN_ADJUSTMENTS,
+    "fy27": {
+        "goal": FY27_GOAL,
+        "baseline": round(fy26_med_proj),
+        "baselineNote": "FY26 base case projection used as FY27 starting point",
+        "scenarios": fy27_scenarios,
+        "knownAdjustments": FY27_ADJUSTMENTS,
+        "chart": {
+            "months": MONTHS,
+            "fy25Cumulative": fy25_cum,
+            "fy26MedCumulative": fy26_med_cum,
+            "fy27LowCumulative": fy27_low_cum, "fy27MedCumulative": fy27_med_cum,
+            "fy27HighCumulative": fy27_high_cum,
+            "goalLine": FY27_GOAL,
+        },
+    },
     "variables": variables,
-    "skepticsNotes": skeptics_notes,
-    "chart": {
-        "months": MONTHS,
-        "fy24Cumulative": fy24_cum,
-        "fy25Cumulative": fy25_cum,
-        "fy26ActualMonths": fy26_actual_months,
-        "fy26ActualCumulative": fy26_actual_cum,
-        "fy26LowCumulative": fy26_low_cum,
-        "fy26MedCumulative": fy26_med_cum,
-        "fy26HighCumulative": fy26_high_cum,
-        "goalLine": CAMPAIGN_GOAL,
-    },
+    "skepticsNotes": skeptics,
 }
 
 OUTPUT.write_text(json.dumps(output, indent=2))
 print(f"Written to {OUTPUT}")
 print(f"\n{'='*60}")
-print(f"FY26 Campaign Simulation (Recognition-Based)")
+print(f"FY26 Annual Campaign (All Accounts)")
 print(f"{'='*60}")
-print(f"  Goal:              ${CAMPAIGN_GOAL:>12,.0f}")
-print(f"  FY26 YTD:          ${FY26_YTD:>12,.0f}  ({FY26_YTD/CAMPAIGN_GOAL*100:.0f}% of goal)")
-print(f"  Rady adjustment:   ${known_impact:>+12,.0f}")
-print(f"  {'─'*40}")
-print(f"  LOW  ({low_label:12s}): ${low_projected:>12,.0f}  ({low_projected/CAMPAIGN_GOAL*100:.0f}% of goal, {low_projected/FY25_FINAL*100:.0f}% of FY25)")
-print(f"  MED  ({med_label:12s}): ${med_projected:>12,.0f}  ({med_projected/CAMPAIGN_GOAL*100:.0f}% of goal, {med_projected/FY25_FINAL*100:.0f}% of FY25)")
-print(f"  HIGH ({high_label:12s}): ${high_projected:>12,.0f}  ({high_projected/CAMPAIGN_GOAL*100:.0f}% of goal, {high_projected/FY25_FINAL*100:.0f}% of FY25)")
+print(f"  Goal:          ${FY26_GOAL:>12,.0f}")
+print(f"  YTD:           ${FY26_YTD:>12,.0f}  ({FY26_YTD/FY26_GOAL*100:.0f}%)")
+print(f"  Rady:          ${fy26_known:>+12,.0f}")
+for k in ["low", "medium", "high"]:
+    s = fy26_scenarios[k]
+    print(f"  {s['label']:14s}: ${s['projected']:>12,.0f}  ({s['projected']/FY26_GOAL*100:.0f}% of goal)")
+
+print(f"\n{'='*60}")
+print(f"FY27 Annual Campaign (Projected)")
+print(f"{'='*60}")
+print(f"  Goal:          ${FY27_GOAL:>12,.0f}")
+print(f"  Baseline:      ${fy26_med_proj:>12,.0f}")
+print(f"  Rady:          ${fy27_known:>+12,.0f}")
+for k in ["low", "medium", "high"]:
+    s = fy27_scenarios[k]
+    print(f"  {s['label']:14s}: ${s['projected']:>12,.0f}  ({s['projected']/FY27_GOAL*100:.0f}% of goal)")
