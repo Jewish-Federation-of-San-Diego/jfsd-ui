@@ -345,7 +345,7 @@ function BudgetPace({ data }: { data: BudgetRow[] }) {
               percent={Math.min(d.pctUsed, 120)}
               showInfo={false}
               strokeColor={paceColor(d.pctUsed)}
-              trailColor={GRID}
+              trailColor={'#E8E8ED'}
               size="small"
             />
             {d.projectedOverUnder > 0 && (

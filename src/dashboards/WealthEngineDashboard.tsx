@@ -16,7 +16,7 @@ interface Prospect {
 }
 interface WEData {
   asOfDate: string;
-  kpis: { totalScreened: number; matched: number; avgAge: number };
+  kpis: { totalScreened: number; matched: number; avgAge: number; highCapacity?: number };
   netWorthDistribution: DistItem[];
   giftCapacityDistribution: DistItem[];
   p2gDistribution: P2GItem[];
@@ -51,13 +51,16 @@ export function WealthEngineDashboard() {
         const json = await fetchJson<WEData>(`${import.meta.env.BASE_URL}data/wealthengine.json`);
         // Normalize snake_case fields from generator to camelCase expected by component
         if (json.topProspects) {
-          json.topProspects = json.topProspects.map((p: Record<string, unknown>) => ({
-            ...p,
-            netWorth: p.netWorth ?? p.net_worth ?? '—',
-            giftCapacity: p.giftCapacity ?? p.gift_capacity ?? '—',
-            p2g: p.p2g ?? p.p2g_score ?? '—',
-            age: p.age ?? null,
-          })) as WEData['topProspects'];
+          json.topProspects = json.topProspects.map((p) => {
+            const raw = p as unknown as Record<string, unknown>;
+            return {
+              ...p,
+              netWorth: p.netWorth || (raw.net_worth as string) || '—',
+              giftCapacity: p.giftCapacity || (raw.gift_capacity as string) || '—',
+              p2g: p.p2g || (raw.p2g_score as string) || '—',
+              age: p.age ?? null,
+            };
+          });
         }
         setData(json);
       } catch (err) {

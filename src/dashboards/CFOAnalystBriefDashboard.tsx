@@ -2,14 +2,13 @@ import { Card, Col, Row, Tag, Typography, Space, Alert, Collapse } from 'antd';
 import { DashboardSkeleton } from '../components/DashboardSkeleton';
 import { useEffect, useState } from 'react';
 import {
-  BulbOutlined, WarningOutlined, CheckCircleOutlined,
+  BulbOutlined, CheckCircleOutlined,
   QuestionCircleOutlined, AimOutlined, ExclamationCircleOutlined,
 } from '@ant-design/icons';
 
 import { DataFreshness } from '../components/DataFreshness';
-import { NAVY, GOLD, SUCCESS, ERROR, WARNING, MUTED } from '../theme/jfsdTheme';
+import { NAVY, GOLD, SUCCESS, ERROR, MUTED } from '../theme/jfsdTheme';
 import { fetchJson } from '../utils/dataFetch';
-import { safeCurrency, safePercent, safeCount } from '../utils/formatters';
 
 const { Title, Text, Paragraph } = Typography;
 
