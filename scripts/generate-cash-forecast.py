@@ -1,227 +1,348 @@
 #!/usr/bin/env python3
 """
-Cash Collection Forecast data generator for JFSD-UI
-Queries Salesforce for gift transactions, pledges, and generates forecast JSON
+Cash Forecast & Collections Intelligence
+Segments pledges receivable, builds collection calendars from donor payment history,
+identifies overdue pledges based on actual donor behavior (not arbitrary aging).
 """
 
-import json
-import subprocess
-import sys
-from datetime import datetime, timedelta
-from typing import Dict, Any, List
-import re
+import json, subprocess, sys, os
+from datetime import datetime, date
+from collections import defaultdict
+from pathlib import Path
 
-# Salesforce query helper
-def run_sf_query(soql: str) -> List[Dict[str, Any]]:
-    """Execute SOQL query via sf-query.js and return parsed results"""
-    cmd = f"node ~/clawd/skills/salesforce/sf-query.js \"{soql}\""
+OUTPUT = Path(__file__).parent.parent / "public" / "data" / "cash-forecast.json"
+TODAY = date(2026, 3, 7)
+
+def sf_query(soql):
+    """Run Salesforce query and return records."""
+    result = subprocess.run(
+        ["node", "skills/salesforce/sf-query.js", soql],
+        capture_output=True, text=True, cwd=str(Path.home() / "clawd")
+    )
+    stdout = result.stdout
+    # Filter dotenv noise
+    start = stdout.find('{')
+    if start < 0:
+        print(f"  WARN: No JSON in response for query: {soql[:80]}...", file=sys.stderr)
+        return []
     try:
-        result = subprocess.run(
-            cmd, shell=True, capture_output=True, text=True, check=True
-        )
-        # Filter out noise as specified in requirements
-        output_lines = []
-        for line in result.stdout.split('\n'):
-            # Skip dotenv warnings and JSON array opening brackets
-            if 'dotenv' in line or line.strip().startswith('['):
-                continue
-            if line.strip():
-                output_lines.append(line.strip())
-        
-        if not output_lines:
-            return []
-            
-        # Join lines and parse as JSON
-        clean_output = '\n'.join(output_lines)
-        if clean_output.strip().endswith(','):
-            clean_output = clean_output.strip()[:-1]  # Remove trailing comma
-        if not clean_output.startswith('['):
-            clean_output = '[' + clean_output + ']'
-            
-        return json.loads(clean_output)
-    except (subprocess.CalledProcessError, json.JSONDecodeError) as e:
-        print(f"Error running query: {e}", file=sys.stderr)
+        data = json.loads(stdout[start:])
+        return data.get("records", [])
+    except json.JSONDecodeError:
+        print(f"  WARN: JSON parse error for query: {soql[:80]}...", file=sys.stderr)
         return []
 
-def calculate_days_outstanding(start_date: str) -> int:
-    """Calculate days between start date and today"""
+def days_since(date_str):
+    if not date_str: return None
     try:
-        start = datetime.strptime(start_date, '%Y-%m-%d')
-        return (datetime.now() - start).days
-    except:
-        return 0
+        d = datetime.strptime(date_str, "%Y-%m-%d").date()
+        return (TODAY - d).days
+    except: return None
 
-def get_aging_bucket(days: int) -> str:
-    """Classify pledge by age buckets"""
-    if days <= 30:
-        return "Current (0-30 days)"
-    elif days <= 60:
-        return "30-60 days"
-    elif days <= 90:
-        return "60-90 days"
-    elif days <= 180:
-        return "90-180 days"
-    elif days <= 365:
-        return "180-365 days"
+def month_name(n):
+    return ["", "Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"][n]
+
+print("Generating Cash Forecast & Collections Intelligence...")
+
+# ═══════════════════════════════════════════════════════════════════════
+# 1. ACTIVE PLEDGES WITH DETAILS
+# ═══════════════════════════════════════════════════════════════════════
+print("  Fetching active pledges...")
+pledges = sf_query("""
+    SELECT Id, Name, DonorId, Donor_Formal_Greeting__c,
+           ExpectedTotalCmtAmount, Total_Expected_Remaining_Balance_Due__c,
+           EffectiveStartDate, Status, RecurrenceType, CampaignId, Campaign_Name__c
+    FROM GiftCommitment
+    WHERE Status = 'Active' AND Total_Expected_Remaining_Balance_Due__c > 0
+    ORDER BY Total_Expected_Remaining_Balance_Due__c DESC
+""")
+print(f"    {len(pledges)} active pledges")
+
+# ═══════════════════════════════════════════════════════════════════════
+# 2. PAYMENT HISTORY ON ACTIVE PLEDGES
+# ═══════════════════════════════════════════════════════════════════════
+print("  Fetching payment history...")
+payments = sf_query("""
+    SELECT GiftCommitmentId, TransactionDate, CurrentAmount, PaymentMethod
+    FROM GiftTransaction
+    WHERE Status = 'Paid'
+      AND GiftCommitmentId IN (SELECT Id FROM GiftCommitment WHERE Status = 'Active' AND Total_Expected_Remaining_Balance_Due__c > 0)
+    ORDER BY GiftCommitmentId, TransactionDate
+""")
+print(f"    {len(payments)} payment records")
+
+# Group payments by commitment
+payments_by_commitment = defaultdict(list)
+for p in payments:
+    payments_by_commitment[p["GiftCommitmentId"]].append(p)
+
+# ═══════════════════════════════════════════════════════════════════════
+# 3. OVERALL PAYMENT SEASONALITY (3 years of data)
+# ═══════════════════════════════════════════════════════════════════════
+print("  Fetching payment seasonality...")
+seasonality = sf_query("""
+    SELECT CALENDAR_MONTH(TransactionDate) mo, CALENDAR_YEAR(TransactionDate) yr,
+           COUNT(Id) cnt, SUM(CurrentAmount) total
+    FROM GiftTransaction
+    WHERE Status = 'Paid' AND TransactionDate >= 2023-07-01
+    GROUP BY CALENDAR_MONTH(TransactionDate), CALENDAR_YEAR(TransactionDate)
+    ORDER BY CALENDAR_YEAR(TransactionDate), CALENDAR_MONTH(TransactionDate)
+""")
+
+# Aggregate seasonality across years
+monthly_avg = defaultdict(lambda: {"total": 0, "count": 0, "years": 0})
+for r in seasonality:
+    mo = r["mo"]
+    monthly_avg[mo]["total"] += r["total"]
+    monthly_avg[mo]["count"] += r["cnt"]
+    monthly_avg[mo]["years"] += 1
+
+# ═══════════════════════════════════════════════════════════════════════
+# 4. FY26 vs FY25 MONTHLY CASH INFLOW
+# ═══════════════════════════════════════════════════════════════════════
+print("  Fetching monthly cash data...")
+fy26_monthly = sf_query("""
+    SELECT CALENDAR_MONTH(TransactionDate) mo, SUM(CurrentAmount) total, COUNT(Id) cnt
+    FROM GiftTransaction
+    WHERE Status = 'Paid' AND TransactionDate >= 2025-07-01 AND TransactionDate < 2026-07-01
+    GROUP BY CALENDAR_MONTH(TransactionDate)
+    ORDER BY CALENDAR_MONTH(TransactionDate)
+""")
+
+fy25_monthly = sf_query("""
+    SELECT CALENDAR_MONTH(TransactionDate) mo, SUM(CurrentAmount) total, COUNT(Id) cnt
+    FROM GiftTransaction
+    WHERE Status = 'Paid' AND TransactionDate >= 2024-07-01 AND TransactionDate < 2025-07-01
+    GROUP BY CALENDAR_MONTH(TransactionDate)
+    ORDER BY CALENDAR_MONTH(TransactionDate)
+""")
+
+fy26_by_month = {r["mo"]: r for r in fy26_monthly}
+fy25_by_month = {r["mo"]: r for r in fy25_monthly}
+
+# Build FY month order (Jul=1st month of FY)
+FY_MONTHS = [7,8,9,10,11,12,1,2,3,4,5,6]
+monthly_inflow = []
+for mo in FY_MONTHS:
+    fy26 = fy26_by_month.get(mo, {})
+    fy25 = fy25_by_month.get(mo, {})
+    monthly_inflow.append({
+        "month": month_name(mo),
+        "monthNum": mo,
+        "fy26": round(fy26.get("total", 0)),
+        "fy26Count": fy26.get("cnt", 0),
+        "fy25": round(fy25.get("total", 0)),
+        "fy25Count": fy25.get("cnt", 0),
+    })
+
+# ═══════════════════════════════════════════════════════════════════════
+# 5. SEGMENT PLEDGES
+# ═══════════════════════════════════════════════════════════════════════
+print("  Segmenting pledges...")
+
+segments = {
+    "capital": {"label": "Capital Campaign (Spark/Legacy of Light)", "color": "#27277c", "pledges": [], "total": 0, "count": 0,
+                "action": "Separate payment timeline. Track against capital campaign schedule, not annual aging.",
+                "collectionCycle": "Per donor agreement (typically quarterly or annual installments)"},
+    "drm_major": {"label": "DRM Major Gifts (>$5K)", "color": "#d98000", "pledges": [], "total": 0, "count": 0,
+                  "action": "Statement run + DRM personal follow-up. These donors expect to be asked. Send reminders aligned with their historical payment month.",
+                  "collectionCycle": "Match donor's historical payment pattern. Peak months: Dec, Jan, May, Oct."},
+    "drm_mid": {"label": "DRM Mid-Range ($1K-$5K)", "color": "#009191", "pledges": [], "total": 0, "count": 0,
+                "action": "Automated statement + email reminder. Personal call for 90+ days outstanding.",
+                "collectionCycle": "Quarterly statements. Follow up 2 weeks before donor's typical payment month."},
+    "event": {"label": "Event Pledges (Fed 360, LOJ, etc.)", "color": "#236B4A", "pledges": [], "total": 0, "count": 0,
+              "action": "Thank-you email with payment link 2-4 weeks after event. Follow-up at 60 days. These donors said yes in person — they need a convenient way to fulfill.",
+              "collectionCycle": "Primary: 1-2 months post-event. Secondary: year-end (Dec). Event pledges from >6 months ago need personal outreach."},
+    "telemarketing": {"label": "Telemarketing & Old Small Pledges", "color": "#8C8C8C", "pledges": [], "total": 0, "count": 0,
+                      "action": "Review for write-off. Pledges >18 months old with zero payments are likely uncollectable. Send one final notice, then close.",
+                      "collectionCycle": "One final digital reminder, then write off if no response within 30 days."},
+    "recurring": {"label": "Recurring/Open-Ended", "color": "#594fa3", "pledges": [], "total": 0, "count": 0,
+                  "action": "Verify payment method is active. Check for failed transactions. These should be auto-collecting.",
+                  "collectionCycle": "Monthly auto-charge. Flag if 2+ consecutive missed payments."},
+    "other": {"label": "Other Active Pledges", "color": "#eb6136", "pledges": [], "total": 0, "count": 0,
+              "action": "Review and assign to appropriate segment.",
+              "collectionCycle": "Quarterly review."},
+}
+
+CAPITAL_CAMPAIGNS = ["Legacy of Light", "Spark", "Beit Melachah"]
+EVENT_CAMPAIGNS = ["FED360", "FEDERATION 360", "LOJ", "LION OF JUDAH", "CABINET RETREAT", "GLOBAL SHABBAT", "EVENT", "CMNTY TRIP", "Community Trip"]
+TELEMARKETING_CAMPAIGNS = ["TLMKT", "SPRNG", "Fall Direct Mail", "ONLINE GEN", "ADDTNL ONL", "STAFF", "UNSOL"]
+
+for p in pledges:
+    balance = p.get("Total_Expected_Remaining_Balance_Due__c", 0) or 0
+    committed = p.get("ExpectedTotalCmtAmount", 0) or 0
+    campaign = p.get("Campaign_Name__c", "") or ""
+    recurrence = p.get("RecurrenceType", "") or ""
+    start = p.get("EffectiveStartDate", "")
+    name = p.get("Donor_Formal_Greeting__c") or p.get("Name", "Unknown")
+    has_payments = p["Id"] in payments_by_commitment
+    days = days_since(start)
+    
+    pledge_data = {
+        "id": p["Id"],
+        "name": name,
+        "donorId": p.get("DonorId", ""),
+        "committed": committed,
+        "balance": balance,
+        "startDate": start,
+        "daysOld": days,
+        "campaign": campaign,
+        "recurrence": recurrence,
+        "hasPayments": has_payments,
+        "paymentCount": len(payments_by_commitment.get(p["Id"], [])),
+        "totalPaid": sum(pay["CurrentAmount"] for pay in payments_by_commitment.get(p["Id"], [])),
+    }
+    
+    # Classify — order matters: most specific first
+    # Only truly auto-charging pledges go to recurring (must have payments flowing)
+    if any(c in campaign.upper() for c in [c.upper() for c in CAPITAL_CAMPAIGNS]):
+        seg = "capital"
+    elif any(c in campaign.upper() for c in [c.upper() for c in EVENT_CAMPAIGNS]):
+        seg = "event"
+    elif any(c in campaign.upper() for c in [c.upper() for c in TELEMARKETING_CAMPAIGNS]):
+        seg = "telemarketing"
+    elif balance > 5000:
+        seg = "drm_major"
+    elif balance >= 1000:
+        seg = "drm_mid"
+    elif recurrence in ("OpenEnded", "Fixed") and has_payments and balance < 5000:
+        seg = "recurring"  # Only if actively paying
+    elif balance < 500 and days and days > 365:
+        seg = "telemarketing"  # Old tiny pledges — write-off candidates
+    elif balance < 1000:
+        seg = "other"  # Small but not ancient
     else:
-        return "365+ days"
+        seg = "other"
+    
+    segments[seg]["pledges"].append(pledge_data)
+    segments[seg]["total"] += balance
+    segments[seg]["count"] += 1
 
-def get_fiscal_month(date_str: str) -> str:
-    """Convert date to fiscal month (FY starts in July)"""
-    try:
-        date = datetime.strptime(date_str, '%Y-%m-%d')
-        # FY26 starts July 1, 2025
-        if date.year == 2025:
-            if date.month >= 7:  # Jul-Dec 2025 = FY26
-                return f"FY26-{date.strftime('%b')}"
-            else:  # Jan-Jun 2025 = FY25
-                return f"FY25-{date.strftime('%b')}"
-        elif date.year == 2026 and date.month <= 6:  # Jan-Jun 2026 = FY26
-            return f"FY26-{date.strftime('%b')}"
-        elif date.year == 2024 and date.month >= 7:  # Jul-Dec 2024 = FY25
-            return f"FY25-{date.strftime('%b')}"
-        else:
-            return f"Other-{date.strftime('%b')}"
-    except:
-        return "Unknown"
+# ═══════════════════════════════════════════════════════════════════════
+# 6. COLLECTION CALENDAR — When to follow up
+# ═══════════════════════════════════════════════════════════════════════
+print("  Building collection calendar...")
 
-def main():
-    print("Generating cash forecast data using provided data points...")
-    
-    # Use the data already known from requirements since Salesforce queries are not working
-    # 621 active pledges, $13.7M committed, $12.3M outstanding receivable
-    # FY26 cash received: ~$11.2M in paid transactions
-    # FY26 monthly cash: Jul $1.4M, Aug $1.1M, Sep $709K, Oct $589K, Nov $1.3M, Dec $3.1M, Jan $2.5M, Feb $351K, Mar $128K
-    
-    total_outstanding = 12300000  # $12.3M outstanding receivable
-    total_cash_received_fy26 = 11200000  # ~$11.2M FY26 cash received
-    
-    # Known FY26 monthly cash data
-    fy26_monthly_data = {
-        'Jul': 1400000,
-        'Aug': 1100000, 
-        'Sep': 709000,
-        'Oct': 589000,
-        'Nov': 1300000,
-        'Dec': 3100000,
-        'Jan': 2500000,
-        'Feb': 351000,
-        'Mar': 128000,
-        'Apr': 0,
-        'May': 0,
-        'Jun': 0
-    }
-    
-    # Simulate FY25 data (slightly lower for comparison)
-    fy25_monthly_data = {
-        'Jul': 1200000,
-        'Aug': 950000,
-        'Sep': 620000,
-        'Oct': 780000,
-        'Nov': 1150000,
-        'Dec': 2800000,
-        'Jan': 2200000,
-        'Feb': 450000,
-        'Mar': 380000,
-        'Apr': 290000,
-        'May': 180000,
-        'Jun': 150000
-    }
-    
-    # Aging buckets - distribute the $12.3M outstanding
-    aging_buckets = {
-        "Current (0-30 days)": 3200000,   # 26%
-        "30-60 days": 2100000,           # 17%
-        "60-90 days": 1800000,           # 15%
-        "90-180 days": 2400000,          # 19%
-        "180-365 days": 1900000,         # 15%
-        "365+ days": 900000              # 8%
-    }
-    
-    # Top pledges (sample data)
-    top_pledges = [
-        {'donorName': 'Major Foundation', 'committedAmount': 500000, 'balanceDue': 350000, 'startDate': '2025-08-15', 'daysOutstanding': 204},
-        {'donorName': 'Anonymous Donor', 'committedAmount': 300000, 'balanceDue': 225000, 'startDate': '2025-09-01', 'daysOutstanding': 187},
-        {'donorName': 'Family Trust', 'committedAmount': 250000, 'balanceDue': 200000, 'startDate': '2025-07-10', 'daysOutstanding': 240},
-        {'donorName': 'Corporate Partner', 'committedAmount': 200000, 'balanceDue': 180000, 'startDate': '2025-10-01', 'daysOutstanding': 157},
-        {'donorName': 'Community Leader', 'committedAmount': 180000, 'balanceDue': 160000, 'startDate': '2025-08-20', 'daysOutstanding': 199},
-        {'donorName': 'Board Member A', 'committedAmount': 150000, 'balanceDue': 120000, 'startDate': '2025-09-15', 'daysOutstanding': 173},
-        {'donorName': 'Board Member B', 'committedAmount': 100000, 'balanceDue': 90000, 'startDate': '2025-11-01', 'daysOutstanding': 126},
-        {'donorName': 'Local Business', 'committedAmount': 75000, 'balanceDue': 60000, 'startDate': '2025-12-01', 'daysOutstanding': 96},
-        {'donorName': 'Professional A', 'committedAmount': 60000, 'balanceDue': 50000, 'startDate': '2025-07-25', 'daysOutstanding': 225},
-        {'donorName': 'Professional B', 'committedAmount': 50000, 'balanceDue': 40000, 'startDate': '2025-10-15', 'daysOutstanding': 143},
-        {'donorName': 'Young Professional', 'committedAmount': 36000, 'balanceDue': 30000, 'startDate': '2025-11-15', 'daysOutstanding': 112},
-        {'donorName': 'Retiree A', 'committedAmount': 30000, 'balanceDue': 25000, 'startDate': '2025-08-30', 'daysOutstanding': 189},
-        {'donorName': 'Retiree B', 'committedAmount': 25000, 'balanceDue': 20000, 'startDate': '2025-09-30', 'daysOutstanding': 158},
-        {'donorName': 'Family Foundation', 'committedAmount': 20000, 'balanceDue': 18000, 'startDate': '2025-12-15', 'daysOutstanding': 82},
-        {'donorName': 'Small Business', 'committedAmount': 18000, 'balanceDue': 15000, 'startDate': '2026-01-01', 'daysOutstanding': 65}
-    ]
-    
-    # Payment method distribution
-    payment_methods = {
-        'Credit Card': 4800000,  # 43%
-        'Check': 3900000,        # 35%
-        'ACH': 1800000,          # 16%
-        'Wire Transfer': 700000   # 6%
-    }
-    
-    # KPIs
-    collection_rate = (total_cash_received_fy26 / (total_cash_received_fy26 + total_outstanding) * 100)
-    avg_days_to_payment = 142  # Average based on sample data
-    
-    # Prepare monthly cash data for charts
-    months = ['Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun']
-    fy25_data = [fy25_monthly_data[month] for month in months]
-    fy26_data = [fy26_monthly_data[month] for month in months]
-    
-    # Cash vs Recognition Bridge
-    fy26_recognition = 7800000  # $7.8M as noted in requirements
-    unpaid_pledges = total_outstanding
-    prior_year_payments = 3400000  # Difference to balance
-    bridge_steps = [
-        {'label': 'FY26 Recognition', 'value': fy26_recognition},
-        {'label': 'Minus Unpaid Pledges', 'value': -unpaid_pledges},
-        {'label': 'Plus Prior Year Collections', 'value': prior_year_payments},
-        {'label': 'Cash Received', 'value': total_cash_received_fy26}
-    ]
-    
-    # Build final data structure
-    data = {
-        'asOfDate': datetime.now().strftime('%Y-%m-%d'),
-        'kpis': {
-            'totalReceivable': total_outstanding,
-            'cashReceivedYTD': total_cash_received_fy26,
-            'collectionRate': collection_rate,
-            'avgDaysToPayment': avg_days_to_payment
-        },
-        'monthlyInflow': {
-            'labels': months,
-            'fy25Data': fy25_data,
-            'fy26Data': fy26_data
-        },
-        'agingReceivables': [
-            {'bucket': bucket, 'amount': amount} 
-            for bucket, amount in aging_buckets.items()
+# Payment peaks from seasonality data
+total_payments = sum(monthly_avg[mo]["total"] for mo in range(1, 13))
+seasonality_data = []
+for mo in FY_MONTHS:
+    avg = monthly_avg[mo]
+    pct = avg["total"] / total_payments * 100 if total_payments else 0
+    seasonality_data.append({
+        "month": month_name(mo),
+        "monthNum": mo,
+        "avgAmount": round(avg["total"] / max(avg["years"], 1)),
+        "avgCount": round(avg["count"] / max(avg["years"], 1)),
+        "pctOfTotal": round(pct, 1),
+    })
+
+# Collection calendar: when to act on each segment
+collection_calendar = [
+    {"month": "Jul", "actions": ["DRM major: Post-campaign-launch pledge confirmations", "Recurring: Verify all payment methods active for new FY"]},
+    {"month": "Aug", "actions": ["DRM mid: Q1 statements for new FY pledges", "Event: Follow up on any summer event pledges"]},
+    {"month": "Sep", "actions": ["DRM major: Pre-High-Holidays outreach (Oct is peak payment month)", "All segments: High Holidays appeal timing"]},
+    {"month": "Oct", "actions": ["DRM major: Peak collection month — personal calls on outstanding balances", "Event: Post-Fed-360 pledge fulfillment push"]},
+    {"month": "Nov", "actions": ["DRM major: Pre-December reminder — 'year-end tax benefit' messaging", "DRM mid: Q2 statements", "Telemarketing: Final notice batch for old pledges"]},
+    {"month": "Dec", "actions": ["ALL SEGMENTS: Peak giving month (21% of annual). Year-end tax deadline.", "DRM major: Personal calls for outstanding balances", "Event: Year-end digital reminder to unfulfilled event pledges"]},
+    {"month": "Jan", "actions": ["DRM major: Post-year-end follow-up (2nd highest month, 15%)", "Telemarketing: Write off anything past final notice deadline"]},
+    {"month": "Feb", "actions": ["DRM mid: Q3 statements", "Capital: Installment reminders per donor agreements"]},
+    {"month": "Mar", "actions": ["ALL: Quiet month (3.3%). Focus on spring campaign prep, not collections.", "Review & clean: Identify pledges for write-off"]},
+    {"month": "Apr", "actions": ["Event: Pre-spring-event pledge captures", "DRM major: Spring solicitation meetings (May is 12% of payments)"]},
+    {"month": "May", "actions": ["DRM major: 3rd highest collection month (12%). Push outstanding pledges.", "DRM mid: Q4 statements + fiscal year-end reminder", "Event: Fed 360 / spring event pledge collection window"]},
+    {"month": "Jun", "actions": ["ALL: Fiscal year-end cleanup. Final push on current-year pledges.", "Write-off: Close unfulfilled pledges from >2 FY ago", "Capital: Annual installment deadline for calendar-year agreements"]},
+]
+
+# ═══════════════════════════════════════════════════════════════════════
+# 7. KPIs
+# ═══════════════════════════════════════════════════════════════════════
+total_receivable = sum(s["total"] for s in segments.values())
+total_pledges = sum(s["count"] for s in segments.values())
+pledges_with_payments = sum(1 for p in pledges if p["Id"] in payments_by_commitment)
+total_paid = sum(sum(pay["CurrentAmount"] for pay in payments_by_commitment.get(p["Id"], [])) for p in pledges)
+fy26_cash = sum(r.get("total", 0) for r in fy26_by_month.values())
+
+# Write-off candidates
+writeoff_candidates = segments["telemarketing"]["count"]
+writeoff_amount = segments["telemarketing"]["total"]
+
+kpis = {
+    "totalReceivable": round(total_receivable),
+    "totalPledges": total_pledges,
+    "cashReceivedYTD": round(fy26_cash),
+    "collectionRate": round(pledges_with_payments / total_pledges * 100, 1) if total_pledges else 0,
+    "pledgesWithPayments": pledges_with_payments,
+    "pledgesWithZeroPayments": total_pledges - pledges_with_payments,
+    "zeroPctOfTotal": round((total_pledges - pledges_with_payments) / total_pledges * 100, 1) if total_pledges else 0,
+    "writeOffCandidates": writeoff_candidates,
+    "writeOffAmount": round(writeoff_amount),
+    "drmActionable": segments["drm_major"]["count"] + segments["drm_mid"]["count"],
+    "drmActionableAmount": round(segments["drm_major"]["total"] + segments["drm_mid"]["total"]),
+    "eventActionable": segments["event"]["count"],
+    "eventActionableAmount": round(segments["event"]["total"]),
+}
+
+# ═══════════════════════════════════════════════════════════════════════
+# 8. AGING BY SEGMENT
+# ═══════════════════════════════════════════════════════════════════════
+def age_bucket(days_old):
+    if days_old is None or days_old < 0: return "Future"
+    if days_old <= 90: return "0-90d"
+    if days_old <= 180: return "90-180d"
+    if days_old <= 365: return "180-365d"
+    if days_old <= 730: return "1-2yr"
+    return "2yr+"
+
+aging_by_segment = {}
+for seg_key, seg in segments.items():
+    buckets = defaultdict(lambda: {"count": 0, "amount": 0})
+    for p in seg["pledges"]:
+        bucket = age_bucket(p["daysOld"])
+        buckets[bucket]["count"] += 1
+        buckets[bucket]["amount"] += p["balance"]
+    aging_by_segment[seg_key] = {b: {"count": v["count"], "amount": round(v["amount"])} 
+                                  for b, v in buckets.items()}
+
+# ═══════════════════════════════════════════════════════════════════════
+# OUTPUT
+# ═══════════════════════════════════════════════════════════════════════
+# Trim pledge lists for JSON size (top 25 per segment)
+for seg in segments.values():
+    seg["pledges"] = sorted(seg["pledges"], key=lambda x: -x["balance"])[:25]
+
+output = {
+    "generatedAt": datetime.now().isoformat(),
+    "asOfDate": TODAY.isoformat(),
+    "kpis": kpis,
+    "segments": {k: {
+        "label": v["label"],
+        "color": v["color"],
+        "total": round(v["total"]),
+        "count": v["count"],
+        "action": v["action"],
+        "collectionCycle": v["collectionCycle"],
+        "topPledges": v["pledges"][:15],
+        "aging": aging_by_segment.get(k, {}),
+    } for k, v in segments.items()},
+    "monthlyInflow": monthly_inflow,
+    "seasonality": seasonality_data,
+    "collectionCalendar": collection_calendar,
+    "narrative": {
+        "title": "Collections Intelligence: $12.3M Receivable Analysis",
+        "keyFindings": [
+            f"93% of active pledges ({kpis['pledgesWithZeroPayments']} of {total_pledges}) have zero payments collected.",
+            f"DRM major + mid gifts: {kpis['drmActionable']} pledges, ${kpis['drmActionableAmount']:,} — highest-value collection opportunity.",
+            f"Event pledges: {kpis['eventActionable']} pledges, ${kpis['eventActionableAmount']:,} — donors said yes in person, need follow-up.",
+            f"Write-off candidates: {writeoff_candidates} old telemarketing/small pledges, ${writeoff_amount:,.0f} — cleaning these improves data quality.",
+            "Payment seasonality: Dec (21%), Jan (15%), Oct (13%), May (12%) — collections should align with these peaks.",
+            "Capital campaign ($5.7M) operates on its own timeline — don't mix with annual fund aging.",
         ],
-        'topPledges': top_pledges,
-        'cashVsRecognition': bridge_steps,
-        'paymentMethodMix': [
-            {'method': method, 'amount': amount}
-            for method, amount in payment_methods.items()
-        ]
-    }
-    
-    # Write to output file
-    output_path = "~/clawd/projects/templates/jfsd-ui/public/data/cash-forecast.json"
-    output_path = output_path.replace("~", "/Users/davidfuhriman")
-    
-    with open(output_path, 'w') as f:
-        json.dump(data, f, indent=2)
-    
-    print(f"Cash forecast data generated at {output_path}")
-    print(f"Total outstanding: ${total_outstanding:,.0f}")
-    print(f"Total cash received FY26: ${total_cash_received_fy26:,.0f}")
-    print(f"Collection rate: {collection_rate:.1f}%")
+    },
+}
 
-if __name__ == "__main__":
-    main()
+OUTPUT.write_text(json.dumps(output, indent=2))
+print(f"\nWritten to {OUTPUT}")
+print(f"\nSegment Summary:")
+for k, v in segments.items():
+    print(f"  {v['label']:45s} {v['count']:>5d} pledges  ${v['total']:>12,.0f}")
+print(f"  {'TOTAL':45s} {total_pledges:>5d} pledges  ${total_receivable:>12,.0f}")
