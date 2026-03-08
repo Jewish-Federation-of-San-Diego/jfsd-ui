@@ -162,6 +162,7 @@ export function MajorGiftsDashboard() {
               layout={{
                 ...PLOTLY_BASE_LAYOUT,
                 height: 320,
+                margin: { l: 100, r: 20, t: 10, b: 10 },
               }}
               style={{ width: "100%" }}
               config={{ displayModeBar: false }}
@@ -195,6 +196,7 @@ export function MajorGiftsDashboard() {
               layout={{
                 ...PLOTLY_BASE_LAYOUT,
                 height: 320,
+                margin: { l: 100, r: 20, t: 10, b: 10 },
                 showlegend: false,
               }}
               style={{ width: "100%" }}
