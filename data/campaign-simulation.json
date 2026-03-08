@@ -1,0 +1,209 @@
+{
+  "generatedAt": "2026-03-07T20:30:48.145703",
+  "asOfDate": "2026-03-07",
+  "campaignGoal": 9000000,
+  "recognition": {
+    "FY24": 15332362.05,
+    "FY25": 8812417.17,
+    "FY26_YTD": 5959220.17
+  },
+  "scenarios": {
+    "low": {
+      "label": "Conservative",
+      "description": "Minimal new commitments in H2 (5% growth). Rady -$1M.",
+      "projected": 5257181,
+      "vsGoal": -3742819,
+      "vsGoalPct": -41.6,
+      "vsFY25": -3555236,
+      "vsFY25Pct": -40.3,
+      "h2Growth": "5%"
+    },
+    "medium": {
+      "label": "Base Case",
+      "description": "FY25 H2 recognition pattern (+16%). Rady -$1M.",
+      "projected": 5912695,
+      "vsGoal": -3087305,
+      "vsGoalPct": -34.3,
+      "vsFY25": -2899722,
+      "vsFY25Pct": -32.9,
+      "h2Growth": "16%"
+    },
+    "high": {
+      "label": "Optimistic",
+      "description": "Strong spring campaign + major gift closes (+30%). Rady -$1M.",
+      "projected": 6746986,
+      "vsGoal": -2253014,
+      "vsGoalPct": -25.0,
+      "vsFY25": -2065431,
+      "vsFY25Pct": -23.4,
+      "h2Growth": "30%"
+    }
+  },
+  "knownAdjustments": [
+    {
+      "donor": "Ernest Rady",
+      "description": "Declined annual fund gift for FY26. Giving to Israel campaign instead. FY25: $1M annual fund.",
+      "fy25_amount": 1000000,
+      "fy26_expected": 0,
+      "impact": -1000000
+    }
+  ],
+  "variables": [
+    {
+      "name": "FY24 Recognition",
+      "value": "$15,332,362",
+      "note": "Anomalously high \u2014 includes large one-time gifts unlikely to repeat"
+    },
+    {
+      "name": "FY25 Recognition (Final)",
+      "value": "$8,812,417",
+      "note": "Best comparable baseline year"
+    },
+    {
+      "name": "FY26 Recognition (YTD)",
+      "value": "$5,959,220",
+      "note": "As of March 7, 2026. Recognition = commitments + direct gifts + soft credits"
+    },
+    {
+      "name": "FY26 vs FY25 Pace",
+      "value": "67.6%",
+      "note": "$-2,853,197 vs FY25 final (but FY25 still had H2 to go at this point)"
+    },
+    {
+      "name": "Rady Impact",
+      "value": "-$1,000,000",
+      "note": "Confirmed: redirecting to Israel campaign. FY25 annual fund: $1M"
+    },
+    {
+      "name": "H2 Growth (FY25)",
+      "value": "16%",
+      "note": "FY25 recognition grew ~16% from Mar-Jun (late pledges, spring solicitations)"
+    },
+    {
+      "name": "Donor Retention",
+      "value": "53.6%",
+      "note": "Above AFP avg (45%), but 500 silent donors with $2.2M at risk"
+    },
+    {
+      "name": "December Concentration",
+      "value": "$3,091,206",
+      "note": "28% of FY26 transactions \u2014 year-end is the swing"
+    }
+  ],
+  "skepticsNotes": [
+    "Recognition \u2260 cash received. A $500K pledge counts as recognition immediately even if payments span 3 years.",
+    "FY24's $15.3M is likely not repeatable \u2014 one or two mega-gifts skewed it. FY25 ($8.8M) is the real baseline.",
+    "The $9M goal may itself need revisiting if the Rady $1M was assumed in the budget.",
+    "Some 'FY26 recognition' may be FY25 pledges being paid \u2014 payments don't generate new recognition.",
+    "Spring is historically strong for major gift solicitations \u2014 a single $500K close could jump us from LOW to MEDIUM."
+  ],
+  "chart": {
+    "months": [
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec",
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun"
+    ],
+    "fy24Cumulative": [
+      277506,
+      483010,
+      1672888,
+      6564435,
+      8716241,
+      11696298,
+      13701585,
+      15169828,
+      15378639,
+      15613248,
+      18249613,
+      19154678
+    ],
+    "fy25Cumulative": [
+      311667,
+      661372,
+      2014098,
+      2588340,
+      3519161,
+      7313522,
+      9581097,
+      10717431,
+      11927281,
+      12743764,
+      15592681,
+      16236497
+    ],
+    "fy26ActualMonths": [
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec",
+      "Jan",
+      "Feb",
+      "Mar"
+    ],
+    "fy26ActualCumulative": [
+      1405656,
+      2501356,
+      3210196,
+      3799632,
+      5089498,
+      8180704,
+      10728757,
+      11080213,
+      11208458
+    ],
+    "fy26LowCumulative": [
+      1405656,
+      2501356,
+      3210196,
+      3799632,
+      5089498,
+      8180704,
+      10728757,
+      11080213,
+      11273775,
+      11317855,
+      11471661,
+      11506419
+    ],
+    "fy26MedCumulative": [
+      1405656,
+      2501356,
+      3210196,
+      3799632,
+      5089498,
+      8180704,
+      10728757,
+      11080213,
+      11417472,
+      11558528,
+      12050707,
+      12161933
+    ],
+    "fy26HighCumulative": [
+      1405656,
+      2501356,
+      3210196,
+      3799632,
+      5089498,
+      8180704,
+      10728757,
+      11080213,
+      11302139,
+      11407394,
+      12590175,
+      12996224
+    ],
+    "goalLine": 9000000
+  }
+}
