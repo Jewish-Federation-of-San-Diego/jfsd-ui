@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-07T21:46:22.941749",
+  "generatedAt": "2026-03-07T21:50:36.726310",
   "asOfDate": "2026-03-07",
   "kpis": {
     "totalReceivable": 12311058,
@@ -9,12 +9,12 @@
     "pledgesWithPayments": 44,
     "pledgesWithZeroPayments": 551,
     "zeroPctOfTotal": 92.6,
-    "writeOffCandidates": 125,
-    "writeOffAmount": 24766,
-    "drmActionable": 188,
-    "drmActionableAmount": 5920354,
-    "eventActionable": 242,
-    "eventActionableAmount": 398108
+    "writeOffCandidates": 179,
+    "writeOffAmount": 137315,
+    "drmActionable": 162,
+    "drmActionableAmount": 5816317,
+    "eventActionable": 210,
+    "eventActionableAmount": 372008
   },
   "segments": {
     "capital": {
@@ -220,8 +220,8 @@
     "drm_major": {
       "label": "DRM Major Gifts (>$5K)",
       "color": "#d98000",
-      "total": 5606807,
-      "count": 96,
+      "total": 5565917,
+      "count": 90,
       "action": "Statement run + DRM personal follow-up. These donors expect to be asked. Send reminders aligned with their historical payment month.",
       "collectionCycle": "Match donor's historical payment pattern. Peak months: Dec, Jan, May, Oct.",
       "topPledges": [
@@ -450,55 +450,27 @@
           "amount": 1162233
         },
         "1-2yr": {
-          "count": 26,
-          "amount": 1110116
+          "count": 23,
+          "amount": 1087616
         },
         "0-90d": {
           "count": 6,
           "amount": 192000
         },
         "2yr+": {
-          "count": 5,
-          "amount": 44958
+          "count": 2,
+          "amount": 26568
         }
       }
     },
     "drm_mid": {
       "label": "DRM Mid-Range ($1K-$5K)",
       "color": "#009191",
-      "total": 313547,
-      "count": 92,
+      "total": 250400,
+      "count": 72,
       "action": "Automated statement + email reminder. Personal call for 90+ days outstanding.",
       "collectionCycle": "Quarterly statements. Follow up 2 weeks before donor's typical payment month.",
       "topPledges": [
-        {
-          "id": "6gcUf00000017fGIAQ",
-          "name": "Mrs. Leigh Johnson",
-          "donorId": "001Uf00000WkMU8IAN",
-          "committed": 5000,
-          "balance": 5000,
-          "startDate": "2023-06-29",
-          "daysOld": 982,
-          "campaign": "AMB EM 2023",
-          "recurrence": "OpenEnded",
-          "hasPayments": false,
-          "paymentCount": 0,
-          "totalPaid": 0
-        },
-        {
-          "id": "6gcUf00000017Z8IAI",
-          "name": "Mrs. Eveie Schwartz",
-          "donorId": "001Uf00000WkOntIAF",
-          "committed": 5000,
-          "balance": 5000,
-          "startDate": "2022-05-23",
-          "daysOld": 1384,
-          "campaign": "DRM EM 2022",
-          "recurrence": "OpenEnded",
-          "hasPayments": false,
-          "paymentCount": 0,
-          "totalPaid": 0
-        },
         {
           "id": "6gcUf00000018PSIAY",
           "name": "Ms. Charlene Steinhauer",
@@ -584,48 +556,6 @@
           "totalPaid": 0
         },
         {
-          "id": "6gcUf00000019OFIAY",
-          "name": "Mrs. Jane Scher",
-          "donorId": "001Uf00000WkDkZIAV",
-          "committed": 5000,
-          "balance": 5000,
-          "startDate": "2023-11-15",
-          "daysOld": 843,
-          "campaign": "DRM - CY28",
-          "recurrence": "OpenEnded",
-          "hasPayments": false,
-          "paymentCount": 0,
-          "totalPaid": 0
-        },
-        {
-          "id": "6gcUf00000019JIIAY",
-          "name": "Mrs. Jane Scher",
-          "donorId": "001Uf00000WkDkZIAV",
-          "committed": 5000,
-          "balance": 5000,
-          "startDate": "2023-11-15",
-          "daysOld": 843,
-          "campaign": "DRM - CY27",
-          "recurrence": "OpenEnded",
-          "hasPayments": false,
-          "paymentCount": 0,
-          "totalPaid": 0
-        },
-        {
-          "id": "6gcUf00000019IrIAI",
-          "name": "Mrs. Jane Scher",
-          "donorId": "001Uf00000WkDkZIAV",
-          "committed": 5000,
-          "balance": 5000,
-          "startDate": "2023-11-15",
-          "daysOld": 843,
-          "campaign": "DRM - CY28",
-          "recurrence": "OpenEnded",
-          "hasPayments": false,
-          "paymentCount": 0,
-          "totalPaid": 0
-        },
-        {
           "id": "6gcUf00000018TJIAY",
           "name": "Mrs. Elizabeth Nederlander Coden",
           "donorId": "001Uf00000WkJitIAF",
@@ -680,40 +610,106 @@
           "hasPayments": false,
           "paymentCount": 0,
           "totalPaid": 0
+        },
+        {
+          "id": "6gcUf00000019lgIAA",
+          "name": "Ms. Judi Gottschalk",
+          "donorId": "001Uf00000WkNyoIAF",
+          "committed": 5000,
+          "balance": 5000,
+          "startDate": "2027-01-01",
+          "daysOld": -300,
+          "campaign": "DRM - CY27",
+          "recurrence": "OpenEnded",
+          "hasPayments": false,
+          "paymentCount": 0,
+          "totalPaid": 0
+        },
+        {
+          "id": "6gcUf0000001Yu5IAE",
+          "name": "Mr. Frederick Schenk",
+          "donorId": "001Uf00000WkGtsIAF",
+          "committed": 5000,
+          "balance": 5000,
+          "startDate": "2025-12-10",
+          "daysOld": 87,
+          "campaign": "DRM - FY26",
+          "recurrence": "OpenEnded",
+          "hasPayments": false,
+          "paymentCount": 0,
+          "totalPaid": 0
+        },
+        {
+          "id": "6gcUf00000018YQIAY",
+          "name": "Mrs. Elizabeth Nederlander Coden",
+          "donorId": "001Uf00000WkJitIAF",
+          "committed": 5000,
+          "balance": 5000,
+          "startDate": "2025-07-01",
+          "daysOld": 249,
+          "campaign": "DRM - FY26",
+          "recurrence": "OpenEnded",
+          "hasPayments": false,
+          "paymentCount": 0,
+          "totalPaid": 0
+        },
+        {
+          "id": "6gcUf0000001dk5IAA",
+          "name": "Mrs. Helene Ziman",
+          "donorId": "001Uf00000WkDjKIAV",
+          "committed": 5000,
+          "balance": 5000,
+          "startDate": "2026-02-07",
+          "daysOld": 28,
+          "campaign": "DRM - FY26",
+          "recurrence": "OpenEnded",
+          "hasPayments": false,
+          "paymentCount": 0,
+          "totalPaid": 0
+        },
+        {
+          "id": "6gcUf00000019wNIAQ",
+          "name": "Mrs. Sylvia Geffen",
+          "donorId": "001Uf00000WkStHIAV",
+          "committed": 5000,
+          "balance": 5000,
+          "startDate": "2025-01-17",
+          "daysOld": 414,
+          "campaign": "Ambassador - FY26",
+          "recurrence": "OpenEnded",
+          "hasPayments": false,
+          "paymentCount": 0,
+          "totalPaid": 0
         }
       ],
       "aging": {
-        "2yr+": {
-          "count": 7,
-          "amount": 31591
-        },
         "180-365d": {
           "count": 24,
           "amount": 82900
         },
         "90-180d": {
-          "count": 9,
-          "amount": 26900
+          "count": 8,
+          "amount": 23900
         },
         "0-90d": {
-          "count": 10,
-          "amount": 33400
+          "count": 9,
+          "amount": 31900
         },
         "Future": {
           "count": 14,
           "amount": 57600
         },
         "1-2yr": {
-          "count": 28,
-          "amount": 81156
+          "count": 17,
+          "amount": 54100
         }
       }
     },
     "event": {
       "label": "Event Pledges (Fed 360, LOJ, etc.)",
       "color": "#236B4A",
-      "total": 398108,
-      "count": 242,
+      "total": 372008,
+      "count": 210,
       "action": "Thank-you email with payment link 2-4 weeks after event. Follow-up at 60 days. These donors said yes in person \u2014 they need a convenient way to fulfill.",
       "collectionCycle": "Primary: 1-2 months post-event. Secondary: year-end (Dec). Event pledges from >6 months ago need personal outreach.",
       "topPledges": [
@@ -844,20 +840,6 @@
           "totalPaid": 0
         },
         {
-          "id": "6gcUf00000016ToIAI",
-          "name": "Mrs. Gina Guertin",
-          "donorId": "001Uf00000WkRstIAF",
-          "committed": 8098,
-          "balance": 8098,
-          "startDate": "2022-10-25",
-          "daysOld": 1229,
-          "campaign": "EVENT LOJ 2023",
-          "recurrence": "OpenEnded",
-          "hasPayments": false,
-          "paymentCount": 0,
-          "totalPaid": 0
-        },
-        {
           "id": "6gcUf0000001eQ1IAI",
           "name": "Rabbi Ron Shulman",
           "donorId": "001Uf00000WkPBQIA3",
@@ -926,6 +908,20 @@
           "hasPayments": false,
           "paymentCount": 0,
           "totalPaid": 0
+        },
+        {
+          "id": "6gcUf0000001dTxIAI",
+          "name": "Ms. Erica Weinberg",
+          "donorId": "001Uf00000WkBQRIA3",
+          "committed": 5000,
+          "balance": 5000,
+          "startDate": "2026-02-07",
+          "daysOld": 28,
+          "campaign": "FED360 - FY26 - Donations - Attended",
+          "recurrence": "OpenEnded",
+          "hasPayments": false,
+          "paymentCount": 0,
+          "totalPaid": 0
         }
       ],
       "aging": {
@@ -938,12 +934,8 @@
           "amount": 15000
         },
         "1-2yr": {
-          "count": 25,
-          "amount": 39998
-        },
-        "2yr+": {
-          "count": 32,
-          "amount": 27043
+          "count": 21,
+          "amount": 39738
         },
         "180-365d": {
           "count": 5,
@@ -952,17 +944,189 @@
         "Future": {
           "count": 2,
           "amount": 1980
+        },
+        "2yr+": {
+          "count": 4,
+          "amount": 1205
         }
       }
     },
-    "telemarketing": {
-      "label": "Telemarketing & Old Small Pledges",
-      "color": "#8C8C8C",
-      "total": 24766,
-      "count": 125,
-      "action": "Review for write-off. Pledges >18 months old with zero payments are likely uncollectable. Send one final notice, then close.",
-      "collectionCycle": "One final digital reminder, then write off if no response within 30 days.",
+    "writeoff": {
+      "label": "\u26a0 Recommended Write-Off",
+      "color": "#eb6136",
+      "total": 130871,
+      "count": 164,
+      "action": "18+ months old, zero payments, <$10K (excl. capital). Nobody is collecting. Send one final notice, then close. For pledges >$10K, make a personal call before writing off.",
+      "collectionCycle": "One final digital reminder \u2192 30-day grace period \u2192 write off. Flag any >$10K for DRM personal review first.",
       "topPledges": [
+        {
+          "id": "6gcUf00000016ToIAI",
+          "name": "Mrs. Gina Guertin",
+          "donorId": "001Uf00000WkRstIAF",
+          "committed": 8098,
+          "balance": 8098,
+          "startDate": "2022-10-25",
+          "daysOld": 1229,
+          "campaign": "EVENT LOJ 2023",
+          "recurrence": "OpenEnded",
+          "hasPayments": false,
+          "paymentCount": 0,
+          "totalPaid": 0
+        },
+        {
+          "id": "6gcUf00000018FbIAI",
+          "name": "Ms. Cheryl Rattner Price",
+          "donorId": "001Uf00000WkSxIIAV",
+          "committed": 7500,
+          "balance": 7500,
+          "startDate": "2024-05-10",
+          "daysOld": 666,
+          "campaign": "AMB EM 2024",
+          "recurrence": "OpenEnded",
+          "hasPayments": false,
+          "paymentCount": 0,
+          "totalPaid": 0
+        },
+        {
+          "id": "6gcUf00000016G4IAI",
+          "name": "Mrs. Gina Guertin",
+          "donorId": "001Uf00000WkRstIAF",
+          "committed": 7500,
+          "balance": 7500,
+          "startDate": "2022-06-24",
+          "daysOld": 1352,
+          "campaign": "DRM CALL 2022",
+          "recurrence": "OpenEnded",
+          "hasPayments": false,
+          "paymentCount": 0,
+          "totalPaid": 0
+        },
+        {
+          "id": "6gcUf00000018DpIAI",
+          "name": "Ms. Cheryl Rattner Price",
+          "donorId": "001Uf00000WkSxIIAV",
+          "committed": 7500,
+          "balance": 7500,
+          "startDate": "2024-05-10",
+          "daysOld": 666,
+          "campaign": "Ambassador - FY26",
+          "recurrence": "OpenEnded",
+          "hasPayments": false,
+          "paymentCount": 0,
+          "totalPaid": 0
+        },
+        {
+          "id": "6gcUf00000018EHIAY",
+          "name": "Ms. Cheryl Rattner Price",
+          "donorId": "001Uf00000WkSxIIAV",
+          "committed": 7500,
+          "balance": 7500,
+          "startDate": "2024-05-10",
+          "daysOld": 666,
+          "campaign": "AMB EM 2025",
+          "recurrence": "OpenEnded",
+          "hasPayments": false,
+          "paymentCount": 0,
+          "totalPaid": 0
+        },
+        {
+          "id": "6gcUf000000181RIAQ",
+          "name": "Dr. Rayna Karoll",
+          "donorId": "001Uf00000WkLTCIA3",
+          "committed": 5454,
+          "balance": 5454,
+          "startDate": "2024-02-04",
+          "daysOld": 762,
+          "campaign": "AMB FACE 2024",
+          "recurrence": "OpenEnded",
+          "hasPayments": false,
+          "paymentCount": 0,
+          "totalPaid": 0
+        },
+        {
+          "id": "6gcUf00000016M7IAI",
+          "name": "Dr. Rayna Karoll",
+          "donorId": "001Uf00000WkLTCIA3",
+          "committed": 5436,
+          "balance": 5436,
+          "startDate": "2022-09-07",
+          "daysOld": 1277,
+          "campaign": "NYLC CAUCUS 2023",
+          "recurrence": "OpenEnded",
+          "hasPayments": false,
+          "paymentCount": 0,
+          "totalPaid": 0
+        },
+        {
+          "id": "6gcUf00000017fGIAQ",
+          "name": "Mrs. Leigh Johnson",
+          "donorId": "001Uf00000WkMU8IAN",
+          "committed": 5000,
+          "balance": 5000,
+          "startDate": "2023-06-29",
+          "daysOld": 982,
+          "campaign": "AMB EM 2023",
+          "recurrence": "OpenEnded",
+          "hasPayments": false,
+          "paymentCount": 0,
+          "totalPaid": 0
+        },
+        {
+          "id": "6gcUf00000017Z8IAI",
+          "name": "Mrs. Eveie Schwartz",
+          "donorId": "001Uf00000WkOntIAF",
+          "committed": 5000,
+          "balance": 5000,
+          "startDate": "2022-05-23",
+          "daysOld": 1384,
+          "campaign": "DRM EM 2022",
+          "recurrence": "OpenEnded",
+          "hasPayments": false,
+          "paymentCount": 0,
+          "totalPaid": 0
+        },
+        {
+          "id": "6gcUf00000019OFIAY",
+          "name": "Mrs. Jane Scher",
+          "donorId": "001Uf00000WkDkZIAV",
+          "committed": 5000,
+          "balance": 5000,
+          "startDate": "2023-11-15",
+          "daysOld": 843,
+          "campaign": "DRM - CY28",
+          "recurrence": "OpenEnded",
+          "hasPayments": false,
+          "paymentCount": 0,
+          "totalPaid": 0
+        },
+        {
+          "id": "6gcUf00000019JIIAY",
+          "name": "Mrs. Jane Scher",
+          "donorId": "001Uf00000WkDkZIAV",
+          "committed": 5000,
+          "balance": 5000,
+          "startDate": "2023-11-15",
+          "daysOld": 843,
+          "campaign": "DRM - CY27",
+          "recurrence": "OpenEnded",
+          "hasPayments": false,
+          "paymentCount": 0,
+          "totalPaid": 0
+        },
+        {
+          "id": "6gcUf00000019IrIAI",
+          "name": "Mrs. Jane Scher",
+          "donorId": "001Uf00000WkDkZIAV",
+          "committed": 5000,
+          "balance": 5000,
+          "startDate": "2023-11-15",
+          "daysOld": 843,
+          "campaign": "DRM - CY28",
+          "recurrence": "OpenEnded",
+          "hasPayments": false,
+          "paymentCount": 0,
+          "totalPaid": 0
+        },
         {
           "id": "6gcUf00000018A8IAI",
           "name": "GC-00244208",
@@ -978,6 +1142,54 @@
           "totalPaid": 0
         },
         {
+          "id": "6gcUf0000001AiwIAE",
+          "name": "Mrs. Julie Potiker",
+          "donorId": "001Uf00000WkKCBIA3",
+          "committed": 5000,
+          "balance": 5000,
+          "startDate": "2024-07-01",
+          "daysOld": 614,
+          "campaign": "DRM FACE 2025",
+          "recurrence": "OpenEnded",
+          "hasPayments": false,
+          "paymentCount": 0,
+          "totalPaid": 0
+        },
+        {
+          "id": "6gcUf0000001BMlIAM",
+          "name": "Ms. Jane Willoughby",
+          "donorId": "001Uf00000WkC4PIAV",
+          "committed": 5000,
+          "balance": 5000,
+          "startDate": "2023-11-06",
+          "daysOld": 852,
+          "campaign": "FEDERATION 360 2024",
+          "recurrence": "OpenEnded",
+          "hasPayments": false,
+          "paymentCount": 0,
+          "totalPaid": 0
+        }
+      ],
+      "aging": {
+        "2yr+": {
+          "count": 148,
+          "amount": 84810
+        },
+        "1-2yr": {
+          "count": 16,
+          "amount": 46061
+        }
+      }
+    },
+    "telemarketing": {
+      "label": "Telemarketing & Old Small Pledges",
+      "color": "#8C8C8C",
+      "total": 6444,
+      "count": 15,
+      "action": "Old phone-solicited or mass-appeal pledges. Most are under $100. Batch write-off unless donor has other active engagement.",
+      "collectionCycle": "Batch close quarterly. No individual follow-up needed for <$100.",
+      "topPledges": [
+        {
           "id": "6gcUf0000001AuKIAU",
           "name": "Mr. Charlie Mann",
           "donorId": "001Uf00000WkMZFIA3",
@@ -986,20 +1198,6 @@
           "startDate": "2025-07-01",
           "daysOld": 249,
           "campaign": "Unsolicited Annual Gifts - FY26",
-          "recurrence": "OpenEnded",
-          "hasPayments": false,
-          "paymentCount": 0,
-          "totalPaid": 0
-        },
-        {
-          "id": "6gcUf00000017n2IAA",
-          "name": "Ms. Lois Richmond Z\"L",
-          "donorId": "001Uf00000WkRCgIAN",
-          "committed": 3000,
-          "balance": 3000,
-          "startDate": "2023-08-25",
-          "daysOld": 925,
-          "campaign": "UNSOL JCF 2024",
           "recurrence": "OpenEnded",
           "hasPayments": false,
           "paymentCount": 0,
@@ -1034,140 +1232,168 @@
           "totalPaid": 379.19
         },
         {
-          "id": "6gcUf00000016XWIAY",
-          "name": "Mr. Gary Berman",
-          "donorId": "001Uf00000WkPy5IAF",
-          "committed": 700,
-          "balance": 700,
-          "startDate": "2022-12-06",
-          "daysOld": 1187,
-          "campaign": "TLMKT DEC 2023",
-          "recurrence": "OpenEnded",
-          "hasPayments": false,
-          "paymentCount": 0,
-          "totalPaid": 0
-        },
-        {
-          "id": "6gcUf00000016ZJIAY",
-          "name": "Mr. Isaac Bremen",
-          "donorId": "001Uf00000WkSuSIAV",
-          "committed": 518,
-          "balance": 518,
-          "startDate": "2022-12-08",
-          "daysOld": 1185,
-          "campaign": "TLMKT DEC 2023",
-          "recurrence": "OpenEnded",
-          "hasPayments": false,
-          "paymentCount": 0,
-          "totalPaid": 0
-        },
-        {
-          "id": "6gcUf00000017SdIAI",
-          "name": "Mr. Jeffrey Sehgal",
-          "donorId": "001Uf00000WkJmRIAV",
-          "committed": 500,
-          "balance": 500,
-          "startDate": "2022-04-26",
-          "daysOld": 1411,
-          "campaign": "TLMKT APR 2022",
-          "recurrence": "OpenEnded",
-          "hasPayments": false,
-          "paymentCount": 0,
-          "totalPaid": 0
-        },
-        {
-          "id": "6gcUf00000015yGIAQ",
-          "name": "Mr. Isaac Bremen",
-          "donorId": "001Uf00000WkSuSIAV",
-          "committed": 500,
-          "balance": 500,
-          "startDate": "2021-12-22",
-          "daysOld": 1536,
+          "id": "6gcUf00000017FoIAI",
+          "name": "Mr. Steven Douek",
+          "donorId": "001Uf00000WkJuGIAV",
+          "committed": 286,
+          "balance": 214,
+          "startDate": "2021-12-07",
+          "daysOld": 1551,
           "campaign": "TLMKT DEC 2022",
           "recurrence": "OpenEnded",
-          "hasPayments": false,
-          "paymentCount": 0,
-          "totalPaid": 0
+          "hasPayments": true,
+          "paymentCount": 1,
+          "totalPaid": 72
         },
         {
-          "id": "6gcUf00000017fDIAQ",
-          "name": "Mr. Mark Edelstein",
-          "donorId": "001Uf00000WkFhkIAF",
-          "committed": 450,
-          "balance": 450,
-          "startDate": "2023-06-28",
-          "daysOld": 983,
-          "campaign": "AMB CALL 2023",
+          "id": "6gcUf0000001g21IAA",
+          "name": "Mrs. Cathy Goldberg",
+          "donorId": "001Uf00000WkJyxIAF",
+          "committed": 180,
+          "balance": 180,
+          "startDate": "2026-02-07",
+          "daysOld": 28,
+          "campaign": "Unsolicited Annual Gifts - FY26",
           "recurrence": "OpenEnded",
           "hasPayments": false,
           "paymentCount": 0,
           "totalPaid": 0
         },
         {
-          "id": "6gcUf00000017UxIAI",
-          "name": "GC-00241655",
-          "donorId": "001Uf00000Wk6KcIAJ",
-          "committed": 450,
-          "balance": 450,
-          "startDate": "2022-05-05",
-          "daysOld": 1402,
-          "campaign": "UNSOL ONL 2022",
+          "id": "6gcUf0000001BmDIAU",
+          "name": "Mr. Elron Agash",
+          "donorId": "001Uf00000WkHk2IAF",
+          "committed": 242.82,
+          "balance": 161.88,
+          "startDate": "2025-07-15",
+          "daysOld": 235,
+          "campaign": "Unsolicited Annual Gifts - FY26",
+          "recurrence": "OpenEnded",
+          "hasPayments": true,
+          "paymentCount": 2,
+          "totalPaid": 80.94
+        },
+        {
+          "id": "6gcUf00000015vDIAQ",
+          "name": "Mr. Deon Schaffer",
+          "donorId": "001Uf00000WkQYRIA3",
+          "committed": 108,
+          "balance": 36,
+          "startDate": "2021-12-14",
+          "daysOld": 1544,
+          "campaign": "TLMKT DEC 2022",
+          "recurrence": "OpenEnded",
+          "hasPayments": true,
+          "paymentCount": 2,
+          "totalPaid": 72
+        },
+        {
+          "id": "6gcUf00000018UAIAY",
+          "name": "Mr. Jake Anapoell",
+          "donorId": "001Uf00000WkSThIAN",
+          "committed": 25,
+          "balance": 25,
+          "startDate": "2025-06-12",
+          "daysOld": 268,
+          "campaign": "SPRNG2025GVNG",
           "recurrence": "OpenEnded",
           "hasPayments": false,
           "paymentCount": 0,
           "totalPaid": 0
         },
         {
-          "id": "6gcUf00000016G0IAI",
-          "name": "Mr. Mark Edelstein",
-          "donorId": "001Uf00000WkFhkIAF",
-          "committed": 450,
-          "balance": 450,
-          "startDate": "2022-06-23",
-          "daysOld": 1353,
-          "campaign": "DRM CALL 2022",
-          "recurrence": "OpenEnded",
-          "hasPayments": false,
-          "paymentCount": 0,
-          "totalPaid": 0
-        },
-        {
-          "id": "6gcUf00000017f0IAA",
-          "name": "Rabbi Scott Meltzer",
-          "donorId": "001Uf00000WkEqyIAF",
-          "committed": 360,
-          "balance": 360,
-          "startDate": "2023-06-27",
-          "daysOld": 984,
-          "campaign": "DRM TEXT 2023",
-          "recurrence": "OpenEnded",
-          "hasPayments": false,
-          "paymentCount": 0,
-          "totalPaid": 0
-        },
-        {
-          "id": "6gcUf00000016ZSIAY",
-          "name": "Mr. David Tarson",
-          "donorId": "001Uf00000WkR6yIAF",
-          "committed": 350,
-          "balance": 350,
-          "startDate": "2022-12-11",
-          "daysOld": 1182,
-          "campaign": "TLMKT DEC 2023",
-          "recurrence": "OpenEnded",
-          "hasPayments": false,
-          "paymentCount": 0,
-          "totalPaid": 0
-        },
-        {
-          "id": "6gcUf00000017V6IAI",
-          "name": "Mrs. Edit Zelkind",
-          "donorId": "001Uf00000WkTsPIAV",
-          "committed": 300,
-          "balance": 300,
-          "startDate": "2022-05-09",
-          "daysOld": 1398,
+          "id": "6gcUf00000017UkIAI",
+          "name": "Mr. Yacob Cohen-Arazi",
+          "donorId": "001Uf00000WkFfHIAV",
+          "committed": 54,
+          "balance": 18,
+          "startDate": "2022-05-04",
+          "daysOld": 1403,
           "campaign": "TLMKT APR 2022",
+          "recurrence": "OpenEnded",
+          "hasPayments": true,
+          "paymentCount": 1,
+          "totalPaid": 36
+        },
+        {
+          "id": "6gcUf0000001WAjIAM",
+          "name": "Mr. Allen Gruber",
+          "donorId": "001Uf00000WkK40IAF",
+          "committed": 18,
+          "balance": 18,
+          "startDate": "2025-09-30",
+          "daysOld": 158,
+          "campaign": "Fall Direct Mail - FY26",
+          "recurrence": "OpenEnded",
+          "hasPayments": false,
+          "paymentCount": 0,
+          "totalPaid": 0
+        },
+        {
+          "id": "6gcUf00000017VOIAY",
+          "name": "Mrs. Daniela Modiano",
+          "donorId": "001Uf00000WkCrXIAV",
+          "committed": 36,
+          "balance": 18,
+          "startDate": "2022-05-10",
+          "daysOld": 1397,
+          "campaign": "TLMKT APR 2022",
+          "recurrence": "OpenEnded",
+          "hasPayments": true,
+          "paymentCount": 1,
+          "totalPaid": 18
+        },
+        {
+          "id": "6gcUf00000015wLIAQ",
+          "name": "Mr. Arnold Schoenberg",
+          "donorId": "001Uf00000WkO73IAF",
+          "committed": 518,
+          "balance": 18,
+          "startDate": "2021-12-20",
+          "daysOld": 1538,
+          "campaign": "TLMKT DEC 2022",
+          "recurrence": "OpenEnded",
+          "hasPayments": true,
+          "paymentCount": 1,
+          "totalPaid": 500
+        },
+        {
+          "id": "6gcUf0000001604IAA",
+          "name": "Mr. Dana Kaplan",
+          "donorId": "001Uf00000WkFFHIA3",
+          "committed": 100,
+          "balance": 16,
+          "startDate": "2021-12-30",
+          "daysOld": 1528,
+          "campaign": "TLMKT DEC 2022",
+          "recurrence": "OpenEnded",
+          "hasPayments": true,
+          "paymentCount": 1,
+          "totalPaid": 84
+        },
+        {
+          "id": "6gcUf00000015wnIAA",
+          "name": "Mrs. Raquel Garber Baker",
+          "donorId": "001Uf00000WkNX2IAN",
+          "committed": 370,
+          "balance": 10,
+          "startDate": "2021-12-09",
+          "daysOld": 1549,
+          "campaign": "TLMKT DEC 2022",
+          "recurrence": "OpenEnded",
+          "hasPayments": true,
+          "paymentCount": 1,
+          "totalPaid": 360
+        },
+        {
+          "id": "6gcUf0000001AslIAE",
+          "name": "Mrs. Naama Koreh",
+          "donorId": "001Uf00000WkSnvIAF",
+          "committed": 10,
+          "balance": 10,
+          "startDate": "2024-09-26",
+          "daysOld": 527,
+          "campaign": "STAFF 2025",
           "recurrence": "OpenEnded",
           "hasPayments": false,
           "paymentCount": 0,
@@ -1175,36 +1401,148 @@
         }
       ],
       "aging": {
-        "1-2yr": {
-          "count": 3,
-          "amount": 5110
-        },
         "180-365d": {
           "count": 4,
           "amount": 5187
-        },
-        "2yr+": {
-          "count": 115,
-          "amount": 13552
         },
         "90-180d": {
           "count": 2,
           "amount": 738
         },
+        "2yr+": {
+          "count": 7,
+          "amount": 330
+        },
         "0-90d": {
           "count": 1,
           "amount": 180
+        },
+        "1-2yr": {
+          "count": 1,
+          "amount": 10
         }
       }
     },
     "recurring": {
       "label": "Recurring/Open-Ended",
       "color": "#594fa3",
-      "total": 3554,
-      "count": 10,
+      "total": 23501,
+      "count": 18,
       "action": "Verify payment method is active. Check for failed transactions. These should be auto-collecting.",
       "collectionCycle": "Monthly auto-charge. Flag if 2+ consecutive missed payments.",
       "topPledges": [
+        {
+          "id": "6gcUf00000019hiIAA",
+          "name": "Mr. Joel Jacks",
+          "donorId": "001Uf00000WkF3DIAV",
+          "committed": 5000,
+          "balance": 4950,
+          "startDate": "2024-11-06",
+          "daysOld": 486,
+          "campaign": "DRM FACE 2025",
+          "recurrence": "OpenEnded",
+          "hasPayments": true,
+          "paymentCount": 1,
+          "totalPaid": 50
+        },
+        {
+          "id": "6gcUf00000017AVIAY",
+          "name": "Dr. Rayna Karoll",
+          "donorId": "001Uf00000WkLTCIA3",
+          "committed": 5436,
+          "balance": 4686,
+          "startDate": "2021-11-12",
+          "daysOld": 1576,
+          "campaign": "AMB FACE 2022",
+          "recurrence": "OpenEnded",
+          "hasPayments": true,
+          "paymentCount": 1,
+          "totalPaid": 750
+        },
+        {
+          "id": "6gcUf0000001UFNIA2",
+          "name": "Mr. Guy Reggev",
+          "donorId": "001Uf00000WkRqnIAF",
+          "committed": 5000,
+          "balance": 3000,
+          "startDate": "2025-09-12",
+          "daysOld": 176,
+          "campaign": "DRM - FY26",
+          "recurrence": "OpenEnded",
+          "hasPayments": true,
+          "paymentCount": 1,
+          "totalPaid": 2000
+        },
+        {
+          "id": "6gcUf00000018mJIAQ",
+          "name": "Dr. Rayna Karoll",
+          "donorId": "001Uf00000WkLTCIA3",
+          "committed": 5436,
+          "balance": 1905,
+          "startDate": "2020-12-02",
+          "daysOld": 1921,
+          "campaign": "AMB CALL 2021",
+          "recurrence": "OpenEnded",
+          "hasPayments": true,
+          "paymentCount": 4,
+          "totalPaid": 3531
+        },
+        {
+          "id": "6gcUf0000001aHZIAY",
+          "name": "Rabbi Susan Freeman",
+          "donorId": "001Uf00000WkNsWIAV",
+          "committed": 5000,
+          "balance": 1500,
+          "startDate": "2025-12-23",
+          "daysOld": 74,
+          "campaign": "DRM - FY26",
+          "recurrence": "OpenEnded",
+          "hasPayments": true,
+          "paymentCount": 1,
+          "totalPaid": 3500
+        },
+        {
+          "id": "6gcUf00000019i3IAA",
+          "name": "Mr. Paul Needelman",
+          "donorId": "001Uf00000WkMXeIAN",
+          "committed": 5000,
+          "balance": 1400,
+          "startDate": "2024-11-06",
+          "daysOld": 486,
+          "campaign": "DRM Call 2025",
+          "recurrence": "OpenEnded",
+          "hasPayments": true,
+          "paymentCount": 1,
+          "totalPaid": 3600
+        },
+        {
+          "id": "6gcUf00000019zPIAQ",
+          "name": "Ms. Elizabeth Jeter",
+          "donorId": "001Uf00000WkPk8IAF",
+          "committed": 3600,
+          "balance": 1350,
+          "startDate": "2025-01-22",
+          "daysOld": 409,
+          "campaign": "DRM FACE 2025",
+          "recurrence": "OpenEnded",
+          "hasPayments": true,
+          "paymentCount": 9,
+          "totalPaid": 2250
+        },
+        {
+          "id": "6gcUf00000019qkIAA",
+          "name": "Mrs. Alexandra Hirschhorn",
+          "donorId": "001Uf00000WkOZgIAN",
+          "committed": 6000,
+          "balance": 1156,
+          "startDate": "2024-12-11",
+          "daysOld": 451,
+          "campaign": "DRM EM 2025",
+          "recurrence": "OpenEnded",
+          "hasPayments": true,
+          "paymentCount": 9,
+          "totalPaid": 4844
+        },
         {
           "id": "6gcUf0000001D85IAE",
           "name": "Dr. Perri Wittgrove",
@@ -1302,91 +1640,39 @@
           "hasPayments": true,
           "paymentCount": 11,
           "totalPaid": 1833.37
-        },
-        {
-          "id": "6gcUf00000017DFIAY",
-          "name": "Ms. Simone Abelsohn",
-          "donorId": "001Uf00000WkSAsIAN",
-          "committed": 5180,
-          "balance": 162,
-          "startDate": "2021-11-12",
-          "daysOld": 1576,
-          "campaign": "AMB FACE 2022",
-          "recurrence": "OpenEnded",
-          "hasPayments": true,
-          "paymentCount": 4,
-          "totalPaid": 5018
-        },
-        {
-          "id": "6gcUf00000017d9IAA",
-          "name": "Mr. Salomon Gorshtein",
-          "donorId": "001Uf00000WkEKMIA3",
-          "committed": 2320,
-          "balance": 3.96,
-          "startDate": "2023-06-15",
-          "daysOld": 996,
-          "campaign": "DRM CALL 2023",
-          "recurrence": "OpenEnded",
-          "hasPayments": true,
-          "paymentCount": 13,
-          "totalPaid": 2316.04
-        },
-        {
-          "id": "6gcUf0000001VjJIAU",
-          "name": "Ms. Julie Datnow",
-          "donorId": "001Uf00000WkOvGIAV",
-          "committed": 5000,
-          "balance": 2,
-          "startDate": "2025-09-19",
-          "daysOld": 169,
-          "campaign": "DRM - FY26",
-          "recurrence": "OpenEnded",
-          "hasPayments": true,
-          "paymentCount": 13,
-          "totalPaid": 4998
         }
       ],
       "aging": {
+        "1-2yr": {
+          "count": 10,
+          "amount": 11326
+        },
+        "2yr+": {
+          "count": 4,
+          "amount": 6757
+        },
+        "90-180d": {
+          "count": 2,
+          "amount": 3002
+        },
+        "0-90d": {
+          "count": 1,
+          "amount": 1500
+        },
         "180-365d": {
           "count": 1,
           "amount": 916
-        },
-        "1-2yr": {
-          "count": 6,
-          "amount": 2470
-        },
-        "2yr+": {
-          "count": 2,
-          "amount": 166
-        },
-        "90-180d": {
-          "count": 1,
-          "amount": 2
         }
       }
     },
     "other": {
       "label": "Other Active Pledges",
       "color": "#eb6136",
-      "total": 6775,
-      "count": 18,
+      "total": 4415,
+      "count": 14,
       "action": "Review and assign to appropriate segment.",
       "collectionCycle": "Quarterly review.",
       "topPledges": [
-        {
-          "id": "6gcUf00000017gWIAQ",
-          "name": "Mrs. Olivia Okovita",
-          "donorId": "001Uf00000WkPT4IAN",
-          "committed": 760,
-          "balance": 760,
-          "startDate": "2023-06-28",
-          "daysOld": 983,
-          "campaign": "AMB CALL 2023",
-          "recurrence": "OpenEnded",
-          "hasPayments": false,
-          "paymentCount": 0,
-          "totalPaid": 0
-        },
         {
           "id": "6gcUf0000001aB7IAI",
           "name": "Mr. Clifford Boro",
@@ -1410,20 +1696,6 @@
           "startDate": "2025-05-23",
           "daysOld": 288,
           "campaign": "DRM Call 2025",
-          "recurrence": "OpenEnded",
-          "hasPayments": false,
-          "paymentCount": 0,
-          "totalPaid": 0
-        },
-        {
-          "id": "6gcUf00000017EtIAI",
-          "name": "Mrs. Olivia Okovita",
-          "donorId": "001Uf00000WkPT4IAN",
-          "committed": 600,
-          "balance": 600,
-          "startDate": "2021-12-01",
-          "daysOld": 1557,
-          "campaign": "DRM EM 2022",
           "recurrence": "OpenEnded",
           "hasPayments": false,
           "paymentCount": 0,
@@ -1472,20 +1744,6 @@
           "totalPaid": 0
         },
         {
-          "id": "6gcUf00000019bmIAA",
-          "name": "Mr. Albert Klein Z\"L",
-          "donorId": "001Uf00000WkKMqIAN",
-          "committed": 500,
-          "balance": 500,
-          "startDate": "2023-12-27",
-          "daysOld": 801,
-          "campaign": "AMB CALL 2024",
-          "recurrence": "OpenEnded",
-          "hasPayments": false,
-          "paymentCount": 0,
-          "totalPaid": 0
-        },
-        {
           "id": "6gcUf00000018SrIAI",
           "name": "Mrs. Patricia Waisburd",
           "donorId": "001Uf00000WkNwFIAV",
@@ -1494,20 +1752,6 @@
           "startDate": "2025-05-28",
           "daysOld": 283,
           "campaign": "AMB CALL 2025",
-          "recurrence": "OpenEnded",
-          "hasPayments": false,
-          "paymentCount": 0,
-          "totalPaid": 0
-        },
-        {
-          "id": "6gcUf000000195IIAQ",
-          "name": "Mr. Enrique Cohen",
-          "donorId": "001Uf00000WkBYlIAN",
-          "committed": 500,
-          "balance": 500,
-          "startDate": "2023-01-19",
-          "daysOld": 1143,
-          "campaign": "DRM CALL 2023",
           "recurrence": "OpenEnded",
           "hasPayments": false,
           "paymentCount": 0,
@@ -1582,13 +1826,51 @@
           "hasPayments": false,
           "paymentCount": 0,
           "totalPaid": 0
+        },
+        {
+          "id": "6gcUf00000018KZIAY",
+          "name": "Ms. Irina Shalomayeva",
+          "donorId": "001Uf00000WkGkhIAF",
+          "committed": 100,
+          "balance": 100,
+          "startDate": "2027-01-01",
+          "daysOld": -300,
+          "campaign": "DRM - CY27",
+          "recurrence": "OpenEnded",
+          "hasPayments": false,
+          "paymentCount": 0,
+          "totalPaid": 0
+        },
+        {
+          "id": "6gcUf00000018KaIAI",
+          "name": "Ms. Emma Paterno",
+          "donorId": "001Uf00000Wk4boIAB",
+          "committed": 3.55,
+          "balance": 3.55,
+          "startDate": "2027-01-01",
+          "daysOld": -300,
+          "campaign": "DRM - CY27",
+          "recurrence": "OpenEnded",
+          "hasPayments": false,
+          "paymentCount": 0,
+          "totalPaid": 0
+        },
+        {
+          "id": "6gcUf00000018L3IAI",
+          "name": "Ms. Emma Paterno",
+          "donorId": "001Uf00000Wk4boIAB",
+          "committed": 3.55,
+          "balance": 3.55,
+          "startDate": "2025-07-01",
+          "daysOld": 249,
+          "campaign": "DRM - FY26",
+          "recurrence": "OpenEnded",
+          "hasPayments": false,
+          "paymentCount": 0,
+          "totalPaid": 0
         }
       ],
       "aging": {
-        "2yr+": {
-          "count": 4,
-          "amount": 2360
-        },
         "0-90d": {
           "count": 1,
           "amount": 750
@@ -1610,182 +1892,182 @@
       "monthNum": 7,
       "fy26": 1405656,
       "fy26Count": 196,
-      "fy25": 0,
-      "fy25Count": 0
+      "fy25": 311667,
+      "fy25Count": 204
     },
     {
       "month": "Aug",
       "monthNum": 8,
       "fy26": 1095700,
       "fy26Count": 162,
-      "fy25": 0,
-      "fy25Count": 0
+      "fy25": 349705,
+      "fy25Count": 207
     },
     {
       "month": "Sep",
       "monthNum": 9,
       "fy26": 708840,
       "fy26Count": 207,
-      "fy25": 0,
-      "fy25Count": 0
+      "fy25": 1352726,
+      "fy25Count": 298
     },
     {
       "month": "Oct",
       "monthNum": 10,
       "fy26": 589436,
       "fy26Count": 192,
-      "fy25": 0,
-      "fy25Count": 0
+      "fy25": 574242,
+      "fy25Count": 730
     },
     {
       "month": "Nov",
       "monthNum": 11,
       "fy26": 1289866,
       "fy26Count": 140,
-      "fy25": 0,
-      "fy25Count": 0
+      "fy25": 930821,
+      "fy25Count": 475
     },
     {
       "month": "Dec",
       "monthNum": 12,
       "fy26": 3091206,
       "fy26Count": 605,
-      "fy25": 0,
-      "fy25Count": 0
+      "fy25": 3794361,
+      "fy25Count": 509
     },
     {
       "month": "Jan",
       "monthNum": 1,
       "fy26": 2548053,
       "fy26Count": 493,
-      "fy25": 0,
-      "fy25Count": 0
+      "fy25": 2267575,
+      "fy25Count": 220
     },
     {
       "month": "Feb",
       "monthNum": 2,
       "fy26": 351456,
       "fy26Count": 513,
-      "fy25": 0,
-      "fy25Count": 0
+      "fy25": 1136334,
+      "fy25Count": 118
     },
     {
       "month": "Mar",
       "monthNum": 3,
       "fy26": 128245,
       "fy26Count": 165,
-      "fy25": 0,
-      "fy25Count": 0
+      "fy25": 1209850,
+      "fy25Count": 199
     },
     {
       "month": "Apr",
       "monthNum": 4,
       "fy26": 0,
       "fy26Count": 0,
-      "fy25": 0,
-      "fy25Count": 0
+      "fy25": 816483,
+      "fy25Count": 239
     },
     {
       "month": "May",
       "monthNum": 5,
       "fy26": 0,
       "fy26Count": 0,
-      "fy25": 0,
-      "fy25Count": 0
+      "fy25": 2848917,
+      "fy25Count": 216
     },
     {
       "month": "Jun",
       "monthNum": 6,
       "fy26": 0,
       "fy26Count": 0,
-      "fy25": 0,
-      "fy25Count": 0
+      "fy25": 643816,
+      "fy25Count": 372
     }
   ],
   "seasonality": [
     {
       "month": "Jul",
       "monthNum": 7,
-      "avgAmount": 0,
-      "avgCount": 0,
-      "pctOfTotal": 0
+      "avgAmount": 664943,
+      "avgCount": 189,
+      "pctOfTotal": 4.3
     },
     {
       "month": "Aug",
       "monthNum": 8,
-      "avgAmount": 0,
-      "avgCount": 0,
-      "pctOfTotal": 0
+      "avgAmount": 550303,
+      "avgCount": 243,
+      "pctOfTotal": 3.5
     },
     {
       "month": "Sep",
       "monthNum": 9,
-      "avgAmount": 0,
-      "avgCount": 0,
-      "pctOfTotal": 0
+      "avgAmount": 1083815,
+      "avgCount": 230,
+      "pctOfTotal": 7.0
     },
     {
       "month": "Oct",
       "monthNum": 10,
-      "avgAmount": 0,
-      "avgCount": 0,
-      "pctOfTotal": 0
+      "avgAmount": 2018408,
+      "avgCount": 1208,
+      "pctOfTotal": 13.0
     },
     {
       "month": "Nov",
       "monthNum": 11,
-      "avgAmount": 0,
-      "avgCount": 0,
-      "pctOfTotal": 0
+      "avgAmount": 1457497,
+      "avgCount": 573,
+      "pctOfTotal": 9.4
     },
     {
       "month": "Dec",
       "monthNum": 12,
-      "avgAmount": 0,
-      "avgCount": 0,
-      "pctOfTotal": 0
+      "avgAmount": 3288541,
+      "avgCount": 685,
+      "pctOfTotal": 21.2
     },
     {
       "month": "Jan",
       "monthNum": 1,
-      "avgAmount": 0,
-      "avgCount": 0,
-      "pctOfTotal": 0
+      "avgAmount": 2273639,
+      "avgCount": 310,
+      "pctOfTotal": 14.6
     },
     {
       "month": "Feb",
       "monthNum": 2,
-      "avgAmount": 0,
-      "avgCount": 0,
-      "pctOfTotal": 0
+      "avgAmount": 985344,
+      "avgCount": 267,
+      "pctOfTotal": 6.3
     },
     {
       "month": "Mar",
       "monthNum": 3,
-      "avgAmount": 0,
-      "avgCount": 0,
-      "pctOfTotal": 0
+      "avgAmount": 515635,
+      "avgCount": 197,
+      "pctOfTotal": 3.3
     },
     {
       "month": "Apr",
       "monthNum": 4,
-      "avgAmount": 0,
-      "avgCount": 0,
-      "pctOfTotal": 0
+      "avgAmount": 525546,
+      "avgCount": 278,
+      "pctOfTotal": 2.3
     },
     {
       "month": "May",
       "monthNum": 5,
-      "avgAmount": 0,
-      "avgCount": 0,
-      "pctOfTotal": 0
+      "avgAmount": 2742641,
+      "avgCount": 338,
+      "pctOfTotal": 11.8
     },
     {
       "month": "Jun",
       "monthNum": 6,
-      "avgAmount": 0,
-      "avgCount": 0,
-      "pctOfTotal": 0
+      "avgAmount": 774440,
+      "avgCount": 284,
+      "pctOfTotal": 3.3
     }
   ],
   "collectionCalendar": [
@@ -1882,9 +2164,9 @@
     "title": "Collections Intelligence: $12.3M Receivable Analysis",
     "keyFindings": [
       "93% of active pledges (551 of 595) have zero payments collected.",
-      "DRM major + mid gifts: 188 pledges, $5,920,354 \u2014 highest-value collection opportunity.",
-      "Event pledges: 242 pledges, $398,108 \u2014 donors said yes in person, need follow-up.",
-      "Write-off candidates: 125 old telemarketing/small pledges, $24,766 \u2014 cleaning these improves data quality.",
+      "DRM major + mid gifts: 162 pledges, $5,816,317 \u2014 highest-value collection opportunity.",
+      "Event pledges: 210 pledges, $372,008 \u2014 donors said yes in person, need follow-up.",
+      "Write-off candidates: 179 old telemarketing/small pledges, $137,315 \u2014 cleaning these improves data quality.",
       "Payment seasonality: Dec (21%), Jan (15%), Oct (13%), May (12%) \u2014 collections should align with these peaks.",
       "Capital campaign ($5.7M) operates on its own timeline \u2014 don't mix with annual fund aging."
     ]
