@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-07T21:50:36.726310",
+  "generatedAt": "2026-03-07T22:03:28.930212",
   "asOfDate": "2026-03-07",
   "kpis": {
     "totalReceivable": 12311058,
@@ -2161,14 +2161,47 @@
     }
   ],
   "narrative": {
-    "title": "Collections Intelligence: $12.3M Receivable Analysis",
+    "title": "The $12.3M Receivable: What's Real, What's Stale, and What to Do About It",
+    "date": "March 7, 2026",
+    "sections": [
+      {
+        "heading": "The Headline Number Is Misleading",
+        "body": "$12,311,058 in outstanding pledges sounds alarming. It's not \u2014 once you understand what's inside. Nearly half ($5,957,500) is Lee Goldberg's Legacy of Light / Spark capital campaign commitment. That operates on a multi-year timeline with its own payment schedule. It's not 'overdue' \u2014 it's a capital pledge being fulfilled over years, as designed. Strip that out and you're looking at $6.4M in annual fund and program receivables.",
+        "dataPoint": "Capital campaign: $5,957,500 (12 pledges). Annual/program: $6,353,558 (583 pledges)."
+      },
+      {
+        "heading": "93% of Pledges Have Zero Payments \u2014 That's a Process Gap",
+        "body": "551 of 595 active pledges have never received a single dollar. This isn't donors refusing to pay \u2014 it's an organization that isn't asking. No statements are being sent. No systematic follow-up exists. Donors make a pledge at an event or to their DRM, and then... nothing. Most donors expect to be invoiced. They're not actively thinking about their pledge because they're waiting for someone to follow up and ask. The good news: this is fixable. A statement run would likely convert a significant portion overnight.",
+        "dataPoint": "Only 44 pledges (7%) have any payment history. The 551 with zero payments represent $12,048,527 in untouched receivables."
+      },
+      {
+        "heading": "The Money Is in DRM Major Gifts",
+        "body": "90 major gift pledges totaling $5,565,917 \u2014 this is where collection effort has the highest ROI. These are donors who made face-to-face commitments to their relationship manager. They said yes. They expect to be asked to fulfill. A personal call from the DRM + a formal statement would likely move millions. The Viterbi family alone has $1.5M outstanding. Shekhter has $333K. Zeff has $750K. These aren't reluctant donors \u2014 they're waiting for the ask.",
+        "dataPoint": "DRM major gifts (>$5K): 90 pledges, $5,565,917. DRM mid ($1K-$5K): 72 pledges, $250,400."
+      },
+      {
+        "heading": "Event Pledges Need a Collection Cycle",
+        "body": "Fed 360, Lion of Judah Luncheon, and other events generated 210 pledges totaling $372,008. These donors said yes in a room, during an emotional moment. The window to collect is 2-4 weeks post-event \u2014 a thank-you email with a payment link. After 60 days without follow-up, conversion rates drop dramatically. For Fed 360 specifically, May is the natural collection month (event is typically Feb/Mar, payments historically peak in May at 12% of annual giving). Build the collection cycle around that.",
+        "dataPoint": "Event pledges: 210 pledges, $372,008. Many are from Fed 360 (Feb event \u2192 May collection window)."
+      },
+      {
+        "heading": "Clean Up the Dead Wood",
+        "body": "164 pledges totaling $130,871 are recommended for write-off. These are 18+ months old with zero payments and under $10K. They include telemarketing pledges from 2022, old event commitments, and pledges from donors who have since passed away (Z\"L). Keeping these active pollutes the receivable number, creates false expectations, and makes the real collection opportunities harder to see. Send one final notice, give 30 days, then close. For the 6 pledges over $10K ($203K), have a DRM make a personal call before writing off \u2014 those are worth one last try.",
+        "dataPoint": "Write-off: 164 pledges, $130,871. Plus 15 old telemarketing pledges, $6,444. Total cleanup: 179 pledges, $137,315."
+      },
+      {
+        "heading": "Collections Should Follow the Payment Calendar",
+        "body": "Donor payment behavior is seasonal, not random. Four months account for 61% of all annual giving: December (21%), January (15%), October (13%), and May (12%). March and April are the quietest months. Collections outreach should be timed to these peaks \u2014 send DRM reminders in November (pre-December rush), September (pre-High-Holidays), and April (pre-May spring push). Don't chase donors in March when nobody's writing checks. Prepare in March, collect in the peaks.",
+        "dataPoint": "Peak payment months: Dec 21%, Jan 15%, Oct 13%, May 12%. Dead months: Mar 3.3%, Apr 2.3%, Jun 3.3%. Right now (March) is prep time, not panic time."
+      }
+    ],
     "keyFindings": [
       "93% of active pledges (551 of 595) have zero payments collected.",
       "DRM major + mid gifts: 162 pledges, $5,816,317 \u2014 highest-value collection opportunity.",
       "Event pledges: 210 pledges, $372,008 \u2014 donors said yes in person, need follow-up.",
-      "Write-off candidates: 179 old telemarketing/small pledges, $137,315 \u2014 cleaning these improves data quality.",
+      "Write-off candidates: 179 pledges, $137,315 \u2014 cleaning these improves data quality.",
       "Payment seasonality: Dec (21%), Jan (15%), Oct (13%), May (12%) \u2014 collections should align with these peaks.",
-      "Capital campaign ($5.7M) operates on its own timeline \u2014 don't mix with annual fund aging."
+      "Capital campaign ($5,957,500) operates on its own timeline \u2014 don't mix with annual fund aging."
     ]
   }
 }
