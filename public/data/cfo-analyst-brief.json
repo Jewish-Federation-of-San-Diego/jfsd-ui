@@ -1,0 +1,141 @@
+{
+  "generatedAt": "2026-03-07T19:20:00-08:00",
+  "weekOf": "March 7, 2026",
+  "summary": "H1 FY26 closed with a $1.8M surplus — strong on paper, but three underlying dynamics need CFO attention: a widening campaign gap vs FY25, $2M+ in lapsed donor revenue at risk, and a budget methodology that masks true departmental performance. The skeptic's analysis below challenges surface-level readings on 7 key metrics.",
+  "insights": [
+    {
+      "id": "fin-surplus",
+      "title": "$1.8M surplus masks a revenue timing risk",
+      "priority": "high",
+      "source": "Financial Statements",
+      "observation": "H1 FY26: $7.1M revenue vs $5.3M expenses = $1.8M surplus (25.8% operating margin). Revenue front-loaded: Jul ($1.67M) and Aug ($1.34M) drove 42% of total. Dec was strong ($934K) but Sep-Nov averaged only $675K.",
+      "surfaceRead": "We're $1.8M ahead — comfortably positioned for H2. Expenses are under control at 74% of revenue.",
+      "skepticsTake": "The surplus is heavily dependent on early-FY campaign commitments (Jul/Aug recognition spikes). H2 historically has lower organic giving. If the FY26 campaign is truly $2.85M behind FY25 pace (per Campaign Tracker), the real question is whether H2 revenue can close that gap — or if we're spending against a surplus that won't sustain. The $1.8M could narrow significantly by Jun 30.",
+      "action": "Model a conservative H2 scenario: what if Feb-Jun revenue matches last year's H2 minus the 32% FY25→FY26 decline rate? If the surplus narrows below $500K, preemptively flag to the board. Don't cut spending — but build the contingency narrative now.",
+      "goalConnection": "FY26 $9M campaign goal. Current trajectory suggests $6-7M landing zone without intervention.",
+      "dataPoints": {
+        "H1 Revenue": "$7.1M",
+        "H1 Expenses": "$5.3M",
+        "H1 Surplus": "$1.8M",
+        "Jul Revenue": "$1.67M",
+        "Dec Revenue": "$934K",
+        "Campaign vs FY25": "-32.4%"
+      }
+    },
+    {
+      "id": "travel-budget",
+      "title": "Travel at 559% of budget — but is it actually a problem?",
+      "priority": "medium",
+      "source": "Budget vs Actual",
+      "observation": "Travel & meetings: $474.7K actual vs $72K budget = 559% overspend. Professional fees also elevated at $520.7K vs $298.6K budget (174%).",
+      "surfaceRead": "Massive budget overrun on travel. CFO should investigate and potentially freeze discretionary travel spending.",
+      "skepticsTake": "This is the NET BUDGET METHODOLOGY issue. Immersive travel programs (Israel Discovery, Jewish Heritage Poland, Morocco) are budgeted at net-zero — neither the revenue nor the expense hits the budget. When the $474K expense comes in but no offsetting budget exists, it looks like 559% overspend. The Immersive Travel dashboard shows $14.8K revenue on just 7 registrants so far — but the actual program revenue (mission revenue line: $489K) likely covers most of this expense. The 'overspend' is a budgeting artifact, not a management failure.",
+      "action": "For FY27 budget: require gross budgeting on all travel programs. In the interim, add a 'Net Budget Items' annotation to the Budget vs Actual view that flags known budget-neutral programs. Run the project P&L for each immersive travel program to confirm net position.",
+      "goalConnection": "Budget accuracy and board confidence. The Finance Committee sees 559% and panics. Proper framing prevents unnecessary restrictions.",
+      "dataPoints": {
+        "Travel Actual": "$474,737",
+        "Travel Budget": "$72,000",
+        "Travel % of Budget": "559%",
+        "Mission Revenue": "$489,229",
+        "Net Position Est": "~$14K surplus",
+        "FY27 Fix": "Gross budgeting"
+      }
+    },
+    {
+      "id": "lapsed-risk",
+      "title": "$2.2M donor revenue at risk from silence + lapse",
+      "priority": "critical",
+      "source": "Silence Alerts + Retention Flow",
+      "observation": "500 donors flagged as silent (avg 639 days since last gift), with $2.19M at risk. 97 are critical tier (previous $1K+ givers) representing $1.86M. Separately, Retention Flow shows 167 lapsed donors (46.4% of FY25 base) with $2.04M at risk. Overall retention: 53.6%.",
+      "surfaceRead": "Nearly half our FY25 donors lapsed and we have $2M+ walking out the door. Launch an aggressive win-back campaign immediately.",
+      "skepticsTake": "53.6% retention is actually 9 points ABOVE the AFP industry average of 45%. Before panicking, check: (1) How many 'silent' donors made their FY25 gift in Q3/Q4? They may not be lapsed — just not yet in their giving cycle. A donor who gave in May 2025 isn't 'silent' in March 2026 — they're on schedule. (2) The 639-day average silence includes donors who haven't given since FY23 — those are likely truly gone. Separate the 'not yet in cycle' from 'genuinely lapsed.' (3) Some 'lapsed' donors may have shifted giving to JCF or through a DAF — check GiveCloud and direct-to-Foundation channels.",
+      "action": "Segment the 500 silent donors into: (a) likely in-cycle (last gift Q3-Q4 FY25 — no action needed), (b) one-year lapsed (last gift Q1-Q2 FY25 — gentle touch), (c) multi-year lapsed (no gift since FY24 — formal win-back). Focus DRM effort on the 97 critical-tier donors first. Run a DAF/JCF cross-reference to find donors who shifted channels rather than truly lapsed.",
+      "goalConnection": "Recovering even 20% of the $1.86M critical-tier revenue = $372K toward the campaign gap.",
+      "dataPoints": {
+        "Silent Donors": 500,
+        "Revenue at Risk": "$2.19M",
+        "Critical Tier": "97 donors",
+        "Critical Revenue": "$1.86M",
+        "Lapsed (FY25→FY26)": "167 donors",
+        "Retention Rate": "53.6%",
+        "AFP Average": "45%"
+      }
+    },
+    {
+      "id": "sow-gap",
+      "title": "$19.5M capacity gap — but trust the data?",
+      "priority": "high",
+      "source": "Share of Wallet",
+      "observation": "338 donors modeled. Median SOW 4.9%, meaning donors give roughly 5% of their estimated annual philanthropic capacity. Top 25 prospects show massive gaps: Rady at 0.2% ($5K given vs $3M capacity), Jacks at 0% ($0 vs $1M), Odenheimer at 1% ($10K vs $1M).",
+      "surfaceRead": "We're leaving $19.5M on the table. These donors have the capacity to give 10-20x more. Prioritize major gift cultivation on the biggest SOW gaps.",
+      "skepticsTake": "WealthEngine ratings are estimates, not bank statements. Three concerns: (1) A 0.2% SOW for Rady could mean untapped potential — or it could mean his $3M 'capacity' is spread across 50 charities and his $5K to Federation is proportional. (2) $0 recognition for Jacks doesn't mean $0 relationship — they may give through a family foundation or DAF that isn't tracked in Salesforce. (3) The Avg SOW shows 91% which is mathematically impossible as a group average when median is 4.9% — suggesting calculation errors or extreme outliers (a few donors with >100% SOW skewing the mean). The SOW model needs calibration against actual giving patterns.",
+      "action": "Don't use raw SOW gaps as ask amounts. Instead: (1) Cross-reference top-25 SOW gaps against prospect research profiles to validate capacity ratings. (2) Check SF soft credits and JCF/DAF records for 'hidden' giving. (3) Fix the avg SOW calculation (likely needs outlier capping at 100%). (4) Use SOW as a conversation starter with DRMs, not a targeting algorithm.",
+      "goalConnection": "Even a modest 2% SOW improvement across 338 donors would generate $390K — meaningful for closing the campaign gap.",
+      "dataPoints": {
+        "Donors Modeled": 338,
+        "Median SOW": "4.9%",
+        "Capacity Gap": "$19.5M",
+        "Avg SOW (suspicious)": "91%",
+        "Top Prospect Gap": "Rady: $2.995M"
+      }
+    },
+    {
+      "id": "ap-aging",
+      "title": "$4.8M AP aging at 90+ days — red flag or normal?",
+      "priority": "high",
+      "source": "AP & Expense",
+      "observation": "$5.2M total AP outstanding. $4.8M (92%) concentrated in 90+ day bucket across 397 items. 0-30 days and 31-60 days show $0.",
+      "surfaceRead": "We have nearly $5M in unpaid bills that are critically overdue. This suggests either a cash flow crisis or a broken AP process.",
+      "skepticsTake": "Before sounding alarms: (1) The $4.8M likely includes grants payable (committed multi-year grants that appear as AP but aren't 'overdue' — they have scheduled disbursement dates). Check how much of the 90+ bucket is grant obligations vs true vendor payables. (2) The $427K in 61-90 days (103 items) is more concerning — these are recent enough to be actual processing delays. (3) The $0 in 0-60 days is actually suspicious — it could mean the AP data pull isn't capturing recent invoices, or it genuinely means everything current is paid promptly and the 90+ bucket is all long-term commitments.",
+      "action": "Ask James to break the 90+ AP into: (a) grants payable with future disbursement dates, (b) accrued liabilities (payroll, benefits), (c) actual vendor payables past due. Only category (c) needs immediate attention. If vendor AP is <$200K, the situation is normal. If it's >$1M, escalate.",
+      "goalConnection": "Board and auditor confidence. EisnerAmper will scrutinize AP aging in the FY26 audit.",
+      "dataPoints": {
+        "Total AP": "$5.23M",
+        "90+ Days": "$4.81M (397 items)",
+        "61-90 Days": "$427K (103 items)",
+        "0-60 Days": "$0",
+        "% in 90+": "92%"
+      }
+    },
+    {
+      "id": "stripe-dec",
+      "title": "December Stripe spike — one-time or repeatable?",
+      "priority": "medium",
+      "source": "Stripe Analytics",
+      "observation": "December Stripe volume: $182K (198 charges) — 48% of FY26 total. January dropped to $25K. February recovered to $55K. Year-end giving drove a 10x spike from the Nov baseline ($16K).",
+      "surfaceRead": "Year-end giving is our biggest online revenue moment. Double down on December campaigns — email blasts, social, matching gifts.",
+      "skepticsTake": "The December spike is normal for nonprofits (industry-wide, ~30% of annual giving happens in December). But our 48% concentration is above average — suggesting either (a) our year-end campaign was particularly effective, or (b) we're under-investing in non-December online giving. January at $25K with 209 charges means average gift dropped from $920 (Dec) to $119 (Jan) — the high-dollar year-end donors didn't convert to recurring. Also: the 2.99% Jan fee rate (highest all year) suggests more small-dollar transactions, which eat into net revenue.",
+      "action": "Two plays: (1) Build a January 'New Year, New Commitment' recurring campaign targeting December one-time donors — convert the spike into sustained MRR. GiveCloud shows $0 MRR currently. (2) Analyze December donors: how many were new vs returning? If mostly new, the retention question matters more than the revenue question.",
+      "goalConnection": "Reducing December concentration from 48% to 35% while growing total online would add ~$50K in non-peak revenue.",
+      "dataPoints": {
+        "Dec Volume": "$182,370",
+        "Dec Charges": 198,
+        "Dec Avg Gift": "$921",
+        "Jan Volume": "$24,836",
+        "Jan Charges": 209,
+        "Jan Avg Gift": "$119",
+        "FY26 Total": "$377,487",
+        "Dec % of Total": "48%"
+      }
+    },
+    {
+      "id": "board-participation",
+      "title": "18.6% board participation — but $502K from one donor",
+      "priority": "medium",
+      "source": "Board Reporting",
+      "observation": "3 boards tracked: JCF (15%, $35K), JCC (19%, $17.5K), AJC (22%, $502K). Total board giving: $554.7K. YoY change: +3,445%.",
+      "surfaceRead": "Board giving is surging — $554K total with dramatic YoY growth. AJC board leads with 22% participation.",
+      "skepticsTake": "The +3,445% YoY is entirely driven by one gift: AJC's $502K represents 90% of all board giving. Remove that single donor and board giving is $52.5K — likely flat or down YoY. The 18.6% overall participation is concerning for a development organization where 100% board participation is the standard expectation. Also: the 'Unassigned' DRM on most board members means nobody is actively managing these relationships. The boards are being tracked but not cultivated.",
+      "action": "Set a 100% participation goal for all three boards by FY26 close (3 months left). Assign each board member to a DRM. The ask isn't about amount — it's about participation. Even $100 counts. Run a 'Board Challenge' with peer accountability. Separately, recognize and steward the AJC $502K donor — that gift should not be taken for granted.",
+      "goalConnection": "100% board participation is a fundraising best practice and a signal to major donors that leadership is invested.",
+      "dataPoints": {
+        "Overall Participation": "18.6%",
+        "Total Board Giving": "$554,753",
+        "AJC Gift": "$502,189",
+        "Excluding AJC Gift": "~$52,500",
+        "Board Members Unassigned": "Most",
+        "Industry Target": "100%"
+      }
+    }
+  ]
+}
