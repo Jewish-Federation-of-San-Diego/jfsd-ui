@@ -56,11 +56,13 @@ fy26_known = 0  # Recognition can only go up from here
 FY27_ADJUSTMENTS = [
     {
         "donor": "Ernest Rady",
-        "description": "Assuming Israel campaign preference continues. May return — flag for DRM.",
-        "prior_amount": 1_000_000, "fy27_expected": 0, "impact": -1_000_000,
+        "description": "Israel campaign preference assumed to continue. Already absent from FY26 base — no additional subtraction. Flag for DRM: potential re-engagement opportunity.",
+        "prior_amount": 1_000_000, "fy27_expected": 0, "impact": 0,
+        "note": "His absence is baked into FY26 projected base. Same monotonic rule.",
     }
 ]
-fy27_known = sum(a["impact"] for a in FY27_ADJUSTMENTS)
+# Rady already absent from FY26 base → no additional subtraction for FY27
+fy27_known = 0
 
 # ═══════════════════════════════════════════════════════════════════════
 # FY26 SIMULATION — We're at $7.81M with ~4 months left
@@ -99,12 +101,16 @@ fy26_med_proj = FY26_YTD * (1 + FY26_GROWTH["medium"]) + fy26_known
 # Blended revenue retention is ~85-90% (higher than donor count retention)
 # Plus new donor acquisition and upgrade potential
 
-FY27_REV_RETENTION = {"low": 0.82, "medium": 0.90, "high": 1.00}
-FY27_LABELS = {"low": "Pessimistic", "medium": "Base Case", "high": "Growth"}
+# FY27 = FY26 base × growth factor. Rady absence already in FY26 base.
+# LOW: 10% erosion (continued donor attrition, soft economy)
+# MED: Flat (hold the line — retention + acquisition balance out)
+# HIGH: 10% growth (strong campaign, pipeline wins, upgrades)
+FY27_REV_RETENTION = {"low": 0.90, "medium": 1.00, "high": 1.10}
+FY27_LABELS = {"low": "Decline", "medium": "Hold Steady", "high": "Growth"}
 FY27_DESCS = {
-    "low": "Soft retention (82% revenue carry) + continued Rady absence.",
-    "medium": "Normal retention (90% revenue carry) + moderate acquisition.",
-    "high": "Full revenue carry + strong pipeline + upgrades. Rady still out.",
+    "low": "10% erosion — continued attrition, soft economy, no major new donors.",
+    "medium": "Flat year — retention + new acquisition offset losses. Hold the line.",
+    "high": "10% growth — strong spring campaign, pipeline wins, donor upgrades.",
 }
 
 fy27_scenarios = {}
