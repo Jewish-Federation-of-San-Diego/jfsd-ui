@@ -10,14 +10,15 @@ from pathlib import Path
 
 OUTPUT = Path(__file__).parent.parent / "public" / "data" / "campaign-simulation.json"
 
-# ── Recognition totals (PERSON ACCOUNTS ONLY) ───────────────────────────
-# Organization accounts are ~95% DAF pass-throughs (JCF $1.43M, Fidelity,
-# Vanguard, etc.) where the recommending donor already has soft credit.
-# Using Person only avoids double-counting. ~$20-30K in genuine corporate
-# gifts (Qualcomm matching, Proven Recruiting) are excluded but immaterial.
-FY24_FINAL = 15_332_362.05
-FY25_FINAL =  8_812_417.17
-FY26_YTD   =  5_959_220.17  # As of Mar 7, 2026 (Person Accounts only)
+# ── Recognition totals ───────────────────────────────────────────────────
+# AUTHORITATIVE SOURCE: Campaign.Parent_Recognition_Amount_All_Time__c
+# This is the deduplicated campaign total (no DAF double-counting).
+# Person Account sum ($5.96M) is close but slightly under; campaign
+# field ($6.14M) is the canonical number.
+# Org accounts ($1.86M) are ~95% DAF pass-throughs — DO NOT ADD to person.
+FY24_FINAL = 15_332_362.05   # TODO: pull from FY24 campaign record
+FY25_FINAL =  8_812_417.17   # FY25 campaign final
+FY26_YTD   =  6_142_437.00   # Campaign Parent_Recognition_Amount_All_Time__c (Mar 7, 2026)
 
 FY26_GOAL = 9_000_000
 FY27_GOAL = 9_500_000  # Placeholder
