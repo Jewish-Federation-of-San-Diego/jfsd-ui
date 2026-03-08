@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-07T21:06:09.172930",
+  "generatedAt": "2026-03-07T21:08:34.809770",
   "asOfDate": "2026-03-07",
   "recognition": {
     "FY24": 15332362.05,
@@ -168,43 +168,44 @@
     "baselineNote": "FY26 base case projection used as FY27 starting point",
     "scenarios": {
       "low": {
-        "label": "Pessimistic",
-        "projected": 4893054,
-        "description": "Soft retention (82% revenue carry) + continued Rady absence.",
-        "vsGoal": -4606946,
-        "vsGoalPct": -48.5,
-        "vsFY26Med": -2293597,
-        "vsFY26Pct": -31.9,
-        "revenueRetention": "82%"
+        "label": "Decline",
+        "projected": 6467986,
+        "description": "10% erosion \u2014 continued attrition, soft economy, no major new donors.",
+        "vsGoal": -3032014,
+        "vsGoalPct": -31.9,
+        "vsFY26Med": -718665,
+        "vsFY26Pct": -10.0,
+        "revenueRetention": "90%"
       },
       "medium": {
-        "label": "Base Case",
-        "projected": 5467986,
-        "description": "Normal retention (90% revenue carry) + moderate acquisition.",
-        "vsGoal": -4032014,
-        "vsGoalPct": -42.4,
-        "vsFY26Med": -1718665,
-        "vsFY26Pct": -23.9,
-        "revenueRetention": "90%"
+        "label": "Hold Steady",
+        "projected": 7186651,
+        "description": "Flat year \u2014 retention + new acquisition offset losses. Hold the line.",
+        "vsGoal": -2313349,
+        "vsGoalPct": -24.4,
+        "vsFY26Med": 0,
+        "vsFY26Pct": 0.0,
+        "revenueRetention": "100%"
       },
       "high": {
         "label": "Growth",
-        "projected": 6186651,
-        "description": "Full revenue carry + strong pipeline + upgrades. Rady still out.",
-        "vsGoal": -3313349,
-        "vsGoalPct": -34.9,
-        "vsFY26Med": -1000000,
-        "vsFY26Pct": -13.9,
-        "revenueRetention": "100%"
+        "projected": 7905316,
+        "description": "10% growth \u2014 strong spring campaign, pipeline wins, donor upgrades.",
+        "vsGoal": -1594684,
+        "vsGoalPct": -16.8,
+        "vsFY26Med": 718665,
+        "vsFY26Pct": 10.0,
+        "revenueRetention": "110%"
       }
     },
     "knownAdjustments": [
       {
         "donor": "Ernest Rady",
-        "description": "Assuming Israel campaign preference continues. May return \u2014 flag for DRM.",
+        "description": "Israel campaign preference assumed to continue. Already absent from FY26 base \u2014 no additional subtraction. Flag for DRM: potential re-engagement opportunity.",
         "prior_amount": 1000000,
         "fy27_expected": 0,
-        "impact": -1000000
+        "impact": 0,
+        "note": "His absence is baked into FY26 projected base. Same monotonic rule."
       }
     ],
     "chart": {
@@ -251,46 +252,46 @@
         11208458
       ],
       "fy27LowCumulative": [
-        93924,
-        199312,
-        606971,
-        780026,
-        1060539,
-        2204013,
-        2887373,
-        3229820,
-        3594423,
-        3840479,
-        4699033,
-        4893054
+        113120,
+        240046,
+        731019,
+        939441,
+        1277283,
+        2654451,
+        3477469,
+        3889903,
+        4329019,
+        4625363,
+        5659380,
+        5893054
       ],
       "fy27MedCumulative": [
-        104960,
-        222731,
-        678290,
-        871679,
-        1185152,
-        2462984,
-        3226638,
-        3609323,
-        4016766,
-        4291734,
-        5251167,
-        5467986
+        124156,
+        263465,
+        802338,
+        1031094,
+        1401896,
+        2913421,
+        3816735,
+        4269406,
+        4751363,
+        5076618,
+        6211515,
+        6467986
       ],
       "fy27HighCumulative": [
-        118756,
-        252005,
-        767439,
-        986245,
-        1340919,
-        2786698,
-        3650720,
-        4083702,
-        4544695,
-        4855803,
-        5941336,
-        6186651
+        137951,
+        292739,
+        891487,
+        1145659,
+        1557663,
+        3237135,
+        4240816,
+        4743784,
+        5279292,
+        5640686,
+        6901683,
+        7186651
       ],
       "goalLine": 9500000
     }
