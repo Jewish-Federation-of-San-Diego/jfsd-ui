@@ -1,267 +1,305 @@
 #!/usr/bin/env python3
 """Generate pledge-management.json from Salesforce (NPC).
+Rebuilt to use validated fields from cash forecast analysis.
+Adds: collection intelligence, payment history, action dates, campaign fulfillment.
 Output: public/data/pledge-management.json
 """
 
-import json, re, subprocess, sys
-from datetime import datetime, date, timedelta
+import json, subprocess, sys
+from datetime import datetime, date
 from pathlib import Path
 from collections import defaultdict
 
-WORKSPACE = Path(__file__).resolve().parents[4]  # /Users/davidfuhriman/clawd
-OUTPUT = Path(__file__).resolve().parent.parent / "public" / "data" / "pledge-management.json"
-SF_QUERY = str(WORKSPACE / "skills" / "salesforce" / "sf-query.js")
+OUTPUT = Path(__file__).parent.parent / "public" / "data" / "pledge-management.json"
+TODAY = date(2026, 3, 7)
 
-
-def sf(soql: str) -> list:
-    """Run SOQL via sf-query.js, return list of records."""
+def sf_query(soql):
+    clean = " ".join(soql.split())
+    result = subprocess.run(
+        ["node", "skills/salesforce/sf-query.js", clean],
+        capture_output=True, text=True, cwd=str(Path.home() / "clawd")
+    )
+    stdout = result.stdout
+    start = stdout.find('{"')
+    if start < 0:
+        start = stdout.find('{\n')
+    if start < 0:
+        print(f"  WARN: No JSON for: {clean[:80]}...", file=sys.stderr)
+        return []
     try:
-        result = subprocess.run(
-            ["node", SF_QUERY, soql],
-            capture_output=True, text=True, timeout=120
-        )
-        stdout = result.stdout
-        m = re.search(r'\{["\s]*"totalSize', stdout)
-        if not m:
-            m = re.search(r'\{["\s]*"records', stdout)
-        if not m:
-            for i in range(len(stdout) - 1, -1, -1):
-                if stdout[i] == '{':
-                    try:
-                        json.loads(stdout[i:])
-                        start = i
-                        m = type('M', (), {'start': lambda self, _s=start: _s})()
-                        break
-                    except Exception:
-                        continue
-        if not m:
-            print(f"SF no JSON: {stdout[:200]}", file=sys.stderr)
-            return []
-        data = json.loads(stdout[m.start():])
-        if isinstance(data, list):
-            return data
-        return data.get("records", [data])
-    except Exception as e:
-        print(f"SF error: {e}", file=sys.stderr)
+        data = json.loads(stdout[start:])
+        return data.get("records", [])
+    except json.JSONDecodeError:
+        print(f"  WARN: Parse error for: {clean[:80]}...", file=sys.stderr)
         return []
 
-
-def n(v):
+def days_since(date_str):
+    if not date_str: return None
     try:
-        return float(v) if v is not None else 0.0
-    except (ValueError, TypeError):
-        return 0.0
+        return (TODAY - datetime.strptime(date_str, "%Y-%m-%d").date()).days
+    except: return None
 
+def month_name(n):
+    return ["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"][n]
 
-def s(v):
-    return str(v) if v else ""
+print("Generating Pledge Management data...", file=sys.stderr)
 
+# ═══════════════════════════════════════════════════════════════════════
+# 1. ALL ACTIVE PLEDGES
+# ═══════════════════════════════════════════════════════════════════════
+print("  Fetching active pledges...", file=sys.stderr)
+pledges = sf_query("""
+    SELECT Id, Name, DonorId, Donor_Formal_Greeting__c,
+           ExpectedTotalCmtAmount, Total_Expected_Remaining_Balance_Due__c,
+           EffectiveStartDate, Status, RecurrenceType, CampaignId, Campaign_Name__c,
+           OwnerId
+    FROM GiftCommitment
+    WHERE Status = 'Active' AND Total_Expected_Remaining_Balance_Due__c > 0
+    ORDER BY Total_Expected_Remaining_Balance_Due__c DESC
+""")
+print(f"    {len(pledges)} active pledges", file=sys.stderr)
 
-def parse_date(d):
-    if not d:
-        return None
-    try:
-        return datetime.strptime(d[:10], "%Y-%m-%d").date()
-    except Exception:
-        return None
+# ═══════════════════════════════════════════════════════════════════════
+# 2. PAYMENT HISTORY ON THESE PLEDGES
+# ═══════════════════════════════════════════════════════════════════════
+print("  Fetching payment history...", file=sys.stderr)
+payments = sf_query("""
+    SELECT GiftCommitmentId, TransactionDate, CurrentAmount, PaymentMethod
+    FROM GiftTransaction
+    WHERE Status = 'Paid'
+      AND GiftCommitmentId IN (SELECT Id FROM GiftCommitment WHERE Status = 'Active' AND Total_Expected_Remaining_Balance_Due__c > 0)
+    ORDER BY GiftCommitmentId, TransactionDate
+""")
+print(f"    {len(payments)} payment records", file=sys.stderr)
 
+payments_by_cmt = defaultdict(list)
+for p in payments:
+    payments_by_cmt[p["GiftCommitmentId"]].append(p)
 
-def donor_name(rec):
-    """Extract donor name from nested Donor relationship."""
-    donor = rec.get("Donor") or {}
-    return donor.get("Name", "Unknown")
+# ═══════════════════════════════════════════════════════════════════════
+# 3. RECENT PAYMENTS (last 90 days, all commitments)
+# ═══════════════════════════════════════════════════════════════════════
+print("  Fetching recent payments...", file=sys.stderr)
+recent = sf_query("""
+    SELECT GiftCommitmentId, GiftCommitment.Donor_Formal_Greeting__c,
+           GiftCommitment.Campaign_Name__c, GiftCommitment.ExpectedTotalCmtAmount,
+           TransactionDate, CurrentAmount, PaymentMethod
+    FROM GiftTransaction
+    WHERE Status = 'Paid' AND TransactionDate >= 2025-12-07
+    AND GiftCommitmentId != null
+    ORDER BY TransactionDate DESC
+    LIMIT 50
+""")
+print(f"    {len(recent)} recent payments", file=sys.stderr)
 
+# ═══════════════════════════════════════════════════════════════════════
+# 4. NEW PLEDGES THIS MONTH
+# ═══════════════════════════════════════════════════════════════════════
+new_this_month = sf_query("""
+    SELECT COUNT(Id) cnt FROM GiftCommitment
+    WHERE Status = 'Active' AND EffectiveStartDate >= 2026-03-01
+""")
+pledges_this_month = new_this_month[0].get("cnt", 0) if new_this_month else 0
 
-def campaign_name(rec):
-    """Extract campaign name from nested Campaign relationship."""
-    camp = rec.get("Campaign") or {}
-    return camp.get("Name", "Unknown")
+# ═══════════════════════════════════════════════════════════════════════
+# 5. PROCESS PLEDGES
+# ═══════════════════════════════════════════════════════════════════════
+print("  Processing...", file=sys.stderr)
 
+# Campaign classification
+CAPITAL = ["Legacy of Light", "Spark", "Beit Melachah"]
+EVENTS = ["FED360", "FEDERATION 360", "LOJ", "LION OF JUDAH", "CABINET", "GLOBAL SHABBAT", "EVENT", "CMNTY TRIP", "Community Trip"]
 
-def main():
-    today = date.today()
-    month_start = today.replace(day=1)
+# Aging buckets
+aging = {"0-90 days": {"count": 0, "amount": 0},
+         "91-180 days": {"count": 0, "amount": 0},
+         "181-365 days": {"count": 0, "amount": 0},
+         "365+ days": {"count": 0, "amount": 0}}
 
-    print("Querying open commitments...", file=sys.stderr)
-    # Query all open/active commitments with key fields
-    commitments = sf(
-        "SELECT Id, DonorId, Donor.Name, ExpectedTotalCmtAmount, "
-        "TotalPaidTransactionAmount, WrittenOffAmount, Status, "
-        "EffectiveStartDate, ExpectedEndDate, CampaignId, Campaign.Name, "
-        "LastPaidTransactionDate, NextTransactionDate, TransactionPaymentCount "
-        "FROM GiftCommitment "
-        "WHERE Status = 'Active' "
-        "ORDER BY ExpectedTotalCmtAmount DESC NULLS LAST"
-    )
-    print(f"  Got {len(commitments)} open commitments", file=sys.stderr)
+# Collection priority
+PRIORITY_RULES = {
+    "critical": "Balance >$50K, 90+ days old, zero payments",
+    "high": "Balance >$5K, 180+ days old, zero payments",
+    "medium": "Balance >$1K, or any pledge with partial payments",
+    "low": "Small balances or recent pledges (< 90 days)",
+}
 
-    # Query recent payments on commitments
-    print("Querying recent payments...", file=sys.stderr)
-    recent_payments = sf(
-        "SELECT Id, CurrentAmount, TransactionDate, "
-        "GiftCommitmentId, Donor.Name, "
-        "GiftCommitment.ExpectedTotalCmtAmount "
-        "FROM GiftTransaction "
-        "WHERE GiftCommitmentId != null "
-        "AND TransactionDate >= LAST_N_DAYS:90 "
-        "AND Status = 'Paid' "
-        "ORDER BY TransactionDate DESC "
-        "LIMIT 50"
-    )
-    print(f"  Got {len(recent_payments)} recent payments", file=sys.stderr)
+write_off_risk = []
+top_open = []
+campaign_map = defaultdict(lambda: {"count": 0, "pledged": 0, "paid": 0, "balances": []})
+priority_buckets = {"critical": [], "high": [], "medium": [], "low": []}
+total_pledged = 0
+total_paid = 0
+total_outstanding = 0
+with_payments = 0
 
-    # Query new pledges this month
-    print("Querying new pledges this month...", file=sys.stderr)
-    new_this_month = sf(
-        f"SELECT COUNT(Id) cnt FROM GiftCommitment "
-        f"WHERE FormalCommitmentType IN ('Written', 'Verbal') "
-        f"AND EffectiveStartDate >= {month_start.isoformat()}"
-    )
+# Seasonality peaks for next action date
+PEAK_MONTHS = {10: "Oct (High Holidays)", 12: "Dec (Year-End)", 1: "Jan (Post-Year-End)", 5: "May (Spring Push)"}
 
-    # Process commitments
-    total_pledged = 0
-    total_paid = 0
-    aging_buckets = {"0-90 days": {"count": 0, "amount": 0},
-                     "91-180 days": {"count": 0, "amount": 0},
-                     "181-365 days": {"count": 0, "amount": 0},
-                     "365+ days": {"count": 0, "amount": 0}}
-    write_off_risk = []
-    top_open = []
-    campaign_map = defaultdict(lambda: {"pledgeCount": 0, "pledgedAmount": 0, "paidAmount": 0})
+def next_collection_window():
+    """Next peak collection month from today."""
+    current_month = TODAY.month
+    for mo in [5, 10, 12, 1]:  # Order by upcoming from March
+        if mo > current_month:
+            return PEAK_MONTHS.get(mo, month_name(mo))
+    return PEAK_MONTHS.get(5, "May")  # Default to next May
 
-    for c in commitments:
-        pledged = n(c.get("ExpectedTotalCmtAmount"))
-        paid = n(c.get("TotalPaidTransactionAmount"))
-        balance = pledged - paid
-        if balance <= 0:
-            continue
+for p in pledges:
+    committed = p.get("ExpectedTotalCmtAmount", 0) or 0
+    balance = p.get("Total_Expected_Remaining_Balance_Due__c", 0) or 0
+    paid_amount = committed - balance
+    name = p.get("Donor_Formal_Greeting__c") or p.get("Name", "Unknown")
+    campaign = p.get("Campaign_Name__c") or "(none)"
+    start = p.get("EffectiveStartDate", "")
+    days = days_since(start)
+    has_pmts = p["Id"] in payments_by_cmt
+    pmt_count = len(payments_by_cmt.get(p["Id"], []))
+    pmt_total = sum(pay["CurrentAmount"] for pay in payments_by_cmt.get(p["Id"], []))
+    is_capital = any(c in campaign.upper() for c in [c.upper() for c in CAPITAL])
+    
+    total_pledged += committed
+    total_paid += paid_amount
+    total_outstanding += balance
+    if has_pmts:
+        with_payments += 1
 
-        total_pledged += pledged
-        total_paid += paid
-        name = donor_name(c)
-        camp = campaign_name(c)
-        start_date = s(c.get("EffectiveStartDate"))
-        end_date = s(c.get("ExpectedEndDate"))
-        end_d = parse_date(end_date)
-        start_d = parse_date(start_date)
+    # Aging
+    if days is not None:
+        if days <= 90: bucket = "0-90 days"
+        elif days <= 180: bucket = "91-180 days"
+        elif days <= 365: bucket = "181-365 days"
+        else: bucket = "365+ days"
+    else:
+        bucket = "0-90 days"
+    aging[bucket]["count"] += 1
+    aging[bucket]["amount"] += balance
 
-        # Aging: days since start date
-        if start_d:
-            age_days = (today - start_d).days
-        else:
-            age_days = 0
-
-        if age_days <= 90:
-            bucket = "0-90 days"
-        elif age_days <= 180:
-            bucket = "91-180 days"
-        elif age_days <= 365:
-            bucket = "181-365 days"
-        else:
-            bucket = "365+ days"
-        aging_buckets[bucket]["count"] += 1
-        aging_buckets[bucket]["amount"] += balance
-
-        # Write-off risk: past end date with balance
-        if end_d and end_d < today and balance > 0:
-            overdue = (today - end_d).days
-            write_off_risk.append({
-                "name": name,
-                "pledgeAmount": pledged,
-                "paidAmount": paid,
-                "balance": balance,
-                "endDate": end_date,
-                "daysOverdue": overdue,
-                "campaign": camp
-            })
-
-        # Top open pledges
-        top_open.append({
-            "name": name,
-            "pledgedAmount": pledged,
-            "paidAmount": paid,
-            "balance": balance,
-            "startDate": start_date,
-            "endDate": end_date,
-            "campaign": camp
+    # Write-off risk: 18+ months, zero payments, not capital, < $10K
+    if days and days > 540 and not has_pmts and not is_capital and balance < 10000:
+        write_off_risk.append({
+            "name": name, "pledgeAmount": committed, "paidAmount": round(paid_amount),
+            "balance": balance, "startDate": start, "daysOld": days,
+            "campaign": campaign, "paymentCount": 0
         })
 
-        # Campaign rollup
-        campaign_map[camp]["pledgeCount"] += 1
-        campaign_map[camp]["pledgedAmount"] += pledged
-        campaign_map[camp]["paidAmount"] += paid
+    # Priority classification
+    if balance > 50000 and days and days > 90 and not has_pmts and not is_capital:
+        priority = "critical"
+    elif balance > 5000 and days and days > 180 and not has_pmts:
+        priority = "high"
+    elif balance > 1000 or has_pmts:
+        priority = "medium"
+    else:
+        priority = "low"
 
-    # Sort and limit
-    write_off_risk.sort(key=lambda x: x["balance"], reverse=True)
-    top_open.sort(key=lambda x: x["balance"], reverse=True)
-    top_open = top_open[:25]
-    write_off_risk = write_off_risk[:25]
+    pledge_data = {
+        "name": name, "donorId": p.get("DonorId", ""),
+        "pledgedAmount": committed, "paidAmount": round(paid_amount),
+        "balance": balance, "startDate": start, "daysOld": days,
+        "campaign": campaign, "paymentCount": pmt_count,
+        "totalPaid": round(pmt_total),
+        "priority": priority,
+        "isCapital": is_capital,
+        "nextAction": next_collection_window() if not is_capital else "Per agreement",
+    }
+    
+    top_open.append(pledge_data)
+    priority_buckets[priority].append(pledge_data)
 
-    total_outstanding = total_pledged - total_paid
-    open_count = sum(b["count"] for b in aging_buckets.values())
-    fulfillment_rate = round((total_paid / total_pledged * 100) if total_pledged > 0 else 0, 1)
-    avg_pledge = round(total_pledged / open_count) if open_count > 0 else 0
+    # Campaign rollup
+    campaign_map[campaign]["count"] += 1
+    campaign_map[campaign]["pledged"] += committed
+    campaign_map[campaign]["paid"] += paid_amount
 
-    # Campaign breakdown
-    by_campaign = []
-    for camp, vals in sorted(campaign_map.items(), key=lambda x: x[1]["pledgedAmount"], reverse=True):
-        fr = round((vals["paidAmount"] / vals["pledgedAmount"] * 100) if vals["pledgedAmount"] > 0 else 0, 1)
-        by_campaign.append({
-            "campaign": camp,
-            "pledgeCount": vals["pledgeCount"],
-            "pledgedAmount": vals["pledgedAmount"],
-            "paidAmount": vals["paidAmount"],
-            "fulfillmentRate": fr
-        })
+# Sort
+write_off_risk.sort(key=lambda x: -x["balance"])
+top_open.sort(key=lambda x: -x["balance"])
 
-    # Recent payments
-    recent_list = []
-    for p in recent_payments[:20]:
-        recent_list.append({
-            "name": donor_name(p),
-            "amount": n(p.get("CurrentAmount")),
-            "date": s(p.get("TransactionDate")),
-            "pledgeTotal": n((p.get("GiftCommitment") or {}).get("ExpectedTotalCmtAmount"))
-        })
+# Campaign breakdown
+by_campaign = []
+for camp, vals in sorted(campaign_map.items(), key=lambda x: -x[1]["pledged"]):
+    fulfillment = round(vals["paid"] / vals["pledged"] * 100, 1) if vals["pledged"] > 0 else 0
+    by_campaign.append({
+        "campaign": camp,
+        "pledgeCount": vals["count"],
+        "pledgedAmount": round(vals["pledged"]),
+        "paidAmount": round(vals["paid"]),
+        "outstanding": round(vals["pledged"] - vals["paid"]),
+        "fulfillmentRate": fulfillment,
+    })
 
-    pledges_this_month = 0
-    if new_this_month:
-        pledges_this_month = int(n(new_this_month[0].get("cnt", 0)))
+# Recent payments list
+recent_list = []
+for r in recent:
+    cmt = r.get("GiftCommitment") or {}
+    recent_list.append({
+        "name": cmt.get("Donor_Formal_Greeting__c", "Unknown"),
+        "amount": r.get("CurrentAmount", 0),
+        "date": r.get("TransactionDate", ""),
+        "pledgeTotal": cmt.get("ExpectedTotalCmtAmount", 0),
+        "campaign": cmt.get("Campaign_Name__c", ""),
+        "method": r.get("PaymentMethod", ""),
+    })
 
-    write_off_total = sum(r["balance"] for r in write_off_risk)
+# ═══════════════════════════════════════════════════════════════════════
+# 6. COLLECTION PRIORITY SUMMARY
+# ═══════════════════════════════════════════════════════════════════════
+open_count = len(pledges)
+fulfillment_rate = round(total_paid / total_pledged * 100, 1) if total_pledged > 0 else 0
 
-    output = {
-        "asOfDate": today.isoformat(),
-        "summary": {
-            "totalOpenPledges": open_count,
-            "totalPledgedAmount": total_pledged,
-            "totalPaidAmount": total_paid,
-            "totalOutstanding": total_outstanding,
-            "fulfillmentRate": fulfillment_rate,
-            "avgPledgeSize": avg_pledge
-        },
-        "agingBuckets": [
-            {"bucket": k, "count": v["count"], "amount": round(v["amount"])}
-            for k, v in aging_buckets.items()
-        ],
-        "writeOffRisk": write_off_risk,
-        "topOpenPledges": top_open,
-        "byCampaign": by_campaign,
-        "recentPayments": recent_list,
-        "kpis": {
-            "totalOutstanding": total_outstanding,
-            "fulfillmentRate": fulfillment_rate,
-            "writeOffRiskAmount": write_off_total,
-            "writeOffRiskCount": len(write_off_risk),
-            "avgDaysToPayment": 0,  # Would need more complex query
-            "pledgesThisMonth": pledges_this_month
-        }
+priority_summary = {}
+for pri, items in priority_buckets.items():
+    priority_summary[pri] = {
+        "count": len(items),
+        "total": round(sum(i["balance"] for i in items)),
+        "description": PRIORITY_RULES[pri],
+        "topItems": sorted(items, key=lambda x: -x["balance"])[:10],
     }
 
-    OUTPUT.parent.mkdir(parents=True, exist_ok=True)
-    OUTPUT.write_text(json.dumps(output, indent=2))
-    print(f"Wrote {OUTPUT} ({open_count} pledges, ${total_outstanding:,.0f} outstanding)", file=sys.stderr)
+# ═══════════════════════════════════════════════════════════════════════
+# OUTPUT
+# ═══════════════════════════════════════════════════════════════════════
+output = {
+    "asOfDate": TODAY.isoformat(),
+    "summary": {
+        "totalOpenPledges": open_count,
+        "totalPledgedAmount": round(total_pledged),
+        "totalPaidAmount": round(total_paid),
+        "totalOutstanding": round(total_outstanding),
+        "fulfillmentRate": fulfillment_rate,
+        "avgPledgeSize": round(total_pledged / open_count) if open_count > 0 else 0,
+        "pledgesWithPayments": with_payments,
+        "pledgesWithZeroPayments": open_count - with_payments,
+        "zeroPaymentPct": round((open_count - with_payments) / open_count * 100, 1) if open_count > 0 else 0,
+    },
+    "agingBuckets": [
+        {"bucket": k, "count": v["count"], "amount": round(v["amount"])}
+        for k, v in aging.items()
+    ],
+    "collectionPriority": priority_summary,
+    "writeOffRisk": write_off_risk[:25],
+    "topOpenPledges": top_open[:30],
+    "byCampaign": by_campaign,
+    "recentPayments": recent_list,
+    "kpis": {
+        "totalOutstanding": round(total_outstanding),
+        "fulfillmentRate": fulfillment_rate,
+        "writeOffRiskAmount": round(sum(w["balance"] for w in write_off_risk)),
+        "writeOffRiskCount": len(write_off_risk),
+        "pledgesThisMonth": pledges_this_month,
+        "criticalCount": len(priority_buckets["critical"]),
+        "criticalAmount": round(sum(i["balance"] for i in priority_buckets["critical"])),
+        "highCount": len(priority_buckets["high"]),
+        "highAmount": round(sum(i["balance"] for i in priority_buckets["high"])),
+        "nextCollectionWindow": next_collection_window(),
+    }
+}
 
-
-if __name__ == "__main__":
-    main()
+OUTPUT.parent.mkdir(parents=True, exist_ok=True)
+OUTPUT.write_text(json.dumps(output, indent=2))
+print(f"\nWrote {OUTPUT}", file=sys.stderr)
+print(f"  {open_count} pledges, ${total_outstanding:,.0f} outstanding", file=sys.stderr)
+print(f"  Fulfillment: {fulfillment_rate}%", file=sys.stderr)
+print(f"  Critical: {len(priority_buckets['critical'])} (${sum(i['balance'] for i in priority_buckets['critical']):,.0f})", file=sys.stderr)
+print(f"  High: {len(priority_buckets['high'])} (${sum(i['balance'] for i in priority_buckets['high']):,.0f})", file=sys.stderr)
+print(f"  Write-off: {len(write_off_risk)} (${sum(w['balance'] for w in write_off_risk):,.0f})", file=sys.stderr)

@@ -1,311 +1,264 @@
-import { Card, Col, Row, Statistic, Table, Typography, Space, Progress, Alert, Tag } from 'antd';
+import { Card, Col, Row, Statistic, Table, Typography, Space, Tag, Alert, Tabs } from 'antd';
 import { DashboardSkeleton } from '../components/DashboardSkeleton';
-import { CsvExport } from '../components/CsvExport';
+import { useEffect, useState } from 'react';
 import {
-  DollarOutlined,
-  WarningOutlined,
-  CheckCircleOutlined,
-  ClockCircleOutlined,
-  CalendarOutlined,
-  FileTextOutlined,
-  ExclamationCircleOutlined,
+  WarningOutlined, ExclamationCircleOutlined, CalendarOutlined,
+  CheckCircleOutlined, ClockCircleOutlined
 } from '@ant-design/icons';
-import { useEffect, useState, useCallback } from 'react';
+import Plot from 'react-plotly.js';
+
+import { DataFreshness } from '../components/DataFreshness';
+import { NAVY, GOLD, SUCCESS, ERROR, WARNING, MUTED } from '../theme/jfsdTheme';
+import { fetchJson } from '../utils/dataFetch';
+import { safeCurrency } from '../utils/formatters';
 
 const { Text, Title } = Typography;
-import { DataFreshness } from '../components/DataFreshness';
-import { DefinitionTooltip } from "../components/DefinitionTooltip";
-import { NAVY, GOLD, SUCCESS, ERROR, WARNING } from '../theme/jfsdTheme';
-import { fetchJson } from '../utils/dataFetch';
-import { safeCount, safeCurrency, safePercent } from '../utils/formatters';
 
-// ── Brand tokens ────────────────────────────────────────────────────────
-// ── Types ───────────────────────────────────────────────────────────────
+interface PriorityItem {
+  name: string; balance: number; pledgedAmount: number; paidAmount: number;
+  startDate: string; daysOld: number | null; campaign: string;
+  paymentCount: number; priority: string; nextAction: string;
+}
+
+interface PriorityBucket {
+  count: number; total: number; description: string;
+  topItems: PriorityItem[];
+}
+
+interface CampaignItem {
+  campaign: string; pledgeCount: number; pledgedAmount: number;
+  paidAmount: number; outstanding: number; fulfillmentRate: number;
+}
+
+interface PaymentItem {
+  name: string; amount: number; date: string; campaign: string; method: string;
+}
+
 interface AgingBucket { bucket: string; count: number; amount: number; }
-interface WriteOffItem { name: string; pledgeAmount: number; paidAmount: number; balance: number; endDate: string; daysOverdue: number; campaign: string; }
-interface PledgeItem { name: string; pledgedAmount: number; paidAmount: number; balance: number; startDate: string; endDate: string; campaign: string; }
-interface CampaignItem { campaign: string; pledgeCount: number; pledgedAmount: number; paidAmount: number; fulfillmentRate: number; }
-interface PaymentItem { name: string; amount: number; date: string; pledgeTotal: number; }
+
 interface PledgeData {
   asOfDate: string;
-  summary: { totalOpenPledges: number; totalPledgedAmount: number; totalPaidAmount: number; totalOutstanding: number; fulfillmentRate: number; avgPledgeSize: number; };
+  summary: {
+    totalOpenPledges: number; totalPledgedAmount: number; totalPaidAmount: number;
+    totalOutstanding: number; fulfillmentRate: number; avgPledgeSize: number;
+    pledgesWithPayments: number; pledgesWithZeroPayments: number; zeroPaymentPct: number;
+  };
   agingBuckets: AgingBucket[];
-  writeOffRisk: WriteOffItem[];
-  topOpenPledges: PledgeItem[];
+  collectionPriority: Record<string, PriorityBucket>;
+  writeOffRisk: PriorityItem[];
+  topOpenPledges: PriorityItem[];
   byCampaign: CampaignItem[];
   recentPayments: PaymentItem[];
-  kpis: { totalOutstanding: number; fulfillmentRate: number; writeOffRiskAmount: number; writeOffRiskCount: number; avgDaysToPayment: number; pledgesThisMonth: number; };
+  kpis: {
+    totalOutstanding: number; fulfillmentRate: number;
+    writeOffRiskAmount: number; writeOffRiskCount: number;
+    pledgesThisMonth: number; criticalCount: number; criticalAmount: number;
+    highCount: number; highAmount: number; nextCollectionWindow: string;
+  };
 }
 
-const fmtUSD = (v: number) => safeCurrency(v, { maximumFractionDigits: 0 });
-const fmtShortDate = (d: string) => { try { return new Date(d + 'T00:00:00').toLocaleDateString('en-US', { month: 'short', day: 'numeric' }); } catch { return d; } };
+const PRIORITY_COLORS: Record<string, string> = {
+  critical: ERROR, high: '#d98000', medium: NAVY, low: MUTED
+};
+const PRIORITY_ICONS: Record<string, React.ReactNode> = {
+  critical: <ExclamationCircleOutlined />, high: <WarningOutlined />,
+  medium: <ClockCircleOutlined />, low: <CheckCircleOutlined />,
+};
 
 const AGING_COLORS: Record<string, string> = {
-  '0-90 days': SUCCESS,
-  '91-180 days': GOLD,
-  '181-365 days': WARNING,
-  '365+ days': ERROR,
+  '0-90 days': SUCCESS, '91-180 days': GOLD, '181-365 days': WARNING, '365+ days': ERROR,
 };
 
-const AGING_LABELS: Record<string, string> = {
-  '0-90 days': 'Current',
-  '91-180 days': 'Approaching',
-  '181-365 days': 'Aging',
-  '365+ days': 'Overdue',
-};
+const pledgeColumns = [
+  { title: 'Donor', dataIndex: 'name', key: 'name', ellipsis: true, width: 180 },
+  { title: 'Balance', dataIndex: 'balance', key: 'balance', width: 110, align: 'right' as const,
+    render: (v: number) => <Text strong style={{ color: NAVY }}>{safeCurrency(v, { maximumFractionDigits: 0 })}</Text>,
+    sorter: (a: PriorityItem, b: PriorityItem) => b.balance - a.balance, defaultSortOrder: 'descend' as const },
+  { title: 'Pledged', dataIndex: 'pledgedAmount', key: 'pledged', width: 100, align: 'right' as const,
+    render: (v: number) => safeCurrency(v, { maximumFractionDigits: 0 }) },
+  { title: 'Campaign', dataIndex: 'campaign', key: 'campaign', ellipsis: true, width: 170 },
+  { title: 'Days', dataIndex: 'daysOld', key: 'days', width: 70, align: 'right' as const,
+    render: (v: number | null) => v === null ? '—' : v < 0 ? <Tag color="blue">Future</Tag> : v > 365 ? <Tag color={ERROR}>{v}d</Tag> : v > 180 ? <Tag color={WARNING}>{v}d</Tag> : `${v}d` },
+  { title: 'Pmts', dataIndex: 'paymentCount', key: 'pmts', width: 60, align: 'center' as const,
+    render: (v: number) => v > 0 ? <Tag color={SUCCESS}>{v}</Tag> : <Tag color={ERROR}>0</Tag> },
+  { title: 'Priority', dataIndex: 'priority', key: 'priority', width: 85,
+    render: (v: string) => <Tag color={PRIORITY_COLORS[v]}>{v.toUpperCase()}</Tag> },
+  { title: 'Next Action', dataIndex: 'nextAction', key: 'action', width: 120,
+    render: (v: string) => <Text type="secondary" style={{ fontSize: 11 }}>{v}</Text> },
+];
 
-/** Determine pledge status based on endDate */
-function getPledgeStatus(endDate: string): { label: string; color: string } {
-  if (!endDate) return { label: 'Open-ended', color: 'blue' };
-  const today = new Date();
-  today.setHours(0, 0, 0, 0);
-  const end = new Date(endDate + 'T00:00:00');
-  // "Far future" = more than 3 years out
-  const farFuture = new Date(today);
-  farFuture.setFullYear(farFuture.getFullYear() + 3);
-  if (end > farFuture) return { label: 'Open-ended', color: 'blue' };
-  if (end < today) return { label: 'Past Due', color: 'red' };
-  return { label: 'Current', color: 'green' };
-}
-
-// ── Component ───────────────────────────────────────────────────────────
 export function PledgeManagementDashboard() {
   const [data, setData] = useState<PledgeData | null>(null);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
-  const [refreshing, setRefreshing] = useState(false);
 
   useEffect(() => {
     fetchJson<PledgeData>(`${import.meta.env.BASE_URL}data/pledge-management.json`)
       .then(setData)
-      .catch(e => setError(e.message))
+      .catch(() => setData(null))
       .finally(() => setLoading(false));
   }, []);
 
-  const refresh = useCallback(() => {
-    setRefreshing(true);
-    fetch(`${import.meta.env.BASE_URL}data/pledge-management.json`)
-      .then(r => r.ok ? r.json() : null)
-      .then(setData)
-      .catch(() => {})
-      .finally(() => setRefreshing(false));
-  }, []);
-
   if (loading) return <DashboardSkeleton />;
-  if (error) return <Alert type="error" message="Failed to load pledge data" description={error} showIcon style={{ margin: 24 }} />;
-  if (!data) return null;
+  if (!data) return <Alert type="info" message="Pledge management data not yet generated" />;
 
-  const summary = data.summary ?? { totalOpenPledges: 0, totalPledgedAmount: 0, totalPaidAmount: 0, totalOutstanding: 0, fulfillmentRate: 0, avgPledgeSize: 0 };
-  const kpis = data.kpis ?? { totalOutstanding: 0, fulfillmentRate: 0, writeOffRiskAmount: 0, writeOffRiskCount: 0, avgDaysToPayment: 0, pledgesThisMonth: 0 };
-  const agingBuckets = data.agingBuckets ?? [];
-  const writeOffRisk = data.writeOffRisk ?? [];
-  const topOpenPledges = data.topOpenPledges ?? [];
-  const byCampaign = data.byCampaign ?? [];
-  const recentPayments = data.recentPayments ?? [];
-  const totalAging = agingBuckets.reduce((s, b) => s + b.amount, 0) || 1;
-
-  // Compute past-due stats from topOpenPledges (pledges with non-empty endDate in the past)
-  const today = new Date();
-  today.setHours(0, 0, 0, 0);
-  const pastDuePledges = topOpenPledges.filter(p => {
-    if (!p.endDate) return false;
-    const end = new Date(p.endDate + 'T00:00:00');
-    return end < today && p.balance > 0;
-  });
-  const pastDueAmount = pastDuePledges.reduce((s, p) => s + p.balance, 0);
-  const pastDueCount = pastDuePledges.length;
+  const { summary, kpis, agingBuckets, collectionPriority, byCampaign, recentPayments } = data;
 
   return (
-    <div style={{ padding: '24px 24px 48px' }}>
-      <Title level={3} style={{ color: NAVY, marginBottom: 4 }}>Pledge Management</Title>
-      <Text type="secondary">{safeCount(summary.totalOpenPledges)} open pledges</Text>
-      <DataFreshness asOfDate={data.asOfDate ?? ''} onRefresh={refresh} refreshing={refreshing} />
+    <Space direction="vertical" size="middle" style={{ width: '100%' }}>
+      <DataFreshness asOfDate={data.asOfDate} />
 
-      {/* ── Low fulfillment context alert ─────────────────────── */}
-      {kpis.fulfillmentRate < 10 && (
-        <Alert
-          message="Low fulfillment rate includes pledges not yet due"
-          description="Many open pledges are recent commitments or multi-year pledges with future payment schedules. Focus on the 365+ day aging bucket for truly overdue pledges."
-          type="info"
-          showIcon
-          style={{ marginTop: 16, marginBottom: 16 }}
+      <div style={{ background: `linear-gradient(135deg, ${NAVY} 0%, #1a1a5c 100%)`, padding: '24px 32px', borderRadius: 8, color: '#fff' }}>
+        <Title level={3} style={{ color: '#fff', margin: 0 }}>Pledge Management</Title>
+        <Text style={{ color: '#ffffffcc' }}>
+          {summary.totalOpenPledges} open pledges · {summary.fulfillmentRate}% fulfillment · Next window: {kpis.nextCollectionWindow}
+        </Text>
+      </div>
+
+      {/* Zero Payment Alert */}
+      {summary.zeroPaymentPct > 80 && (
+        <Alert type="error" showIcon icon={<WarningOutlined />}
+          message={<Text strong>{summary.zeroPaymentPct}% of pledges have zero payments</Text>}
+          description={`${summary.pledgesWithZeroPayments} of ${summary.totalOpenPledges} pledges have never been collected. A statement run is the single highest-ROI action available.`}
         />
       )}
 
-      {/* ── KPI Row ─────────────────────────────────────────────── */}
-      <Row gutter={[16, 16]} style={{ marginTop: 20 }}>
-        {[
-          { title: 'Total Outstanding', value: fmtUSD(kpis.totalOutstanding), icon: <DollarOutlined />, color: NAVY, contextNote: undefined as string | undefined },
-          { title: <DefinitionTooltip term="Fulfillment Rate" dashboardKey="pledge">Fulfillment Rate</DefinitionTooltip>, value: safePercent(kpis.fulfillmentRate, { decimals: 0 }), icon: <CheckCircleOutlined />, color: kpis.fulfillmentRate >= 50 ? SUCCESS : WARNING, contextNote: 'Includes new & open-ended pledges not yet due' },
-          { title: 'Past Due', value: fmtUSD(pastDueAmount), icon: <ExclamationCircleOutlined />, color: ERROR, contextNote: `${pastDueCount} pledges past end date` },
-          { title: <DefinitionTooltip term="Write-off Risk" dashboardKey="pledge">Write-off Risk</DefinitionTooltip>, value: fmtUSD(kpis.writeOffRiskAmount), icon: <WarningOutlined />, color: ERROR, suffix: `${safeCount(kpis.writeOffRiskCount)} pledges`, contextNote: undefined as string | undefined },
-          { title: 'Pledges This Month', value: safeCount(kpis.pledgesThisMonth), icon: <CalendarOutlined />, color: GOLD, contextNote: undefined as string | undefined },
-          { title: 'Avg Pledge Size', value: fmtUSD(summary.avgPledgeSize), icon: <FileTextOutlined />, color: NAVY, contextNote: undefined as string | undefined },
-        ].map((kpi, i) => (
-          <Col xs={24} sm={12} md={8} lg={4} xl={4} key={i}>
-            <Card size="small" style={{ borderTop: `3px solid ${kpi.color}` }}>
-              <Statistic title={kpi.title} value={kpi.value} prefix={kpi.icon} valueStyle={{ color: kpi.color, fontSize: 22 }} />
-              {'suffix' in kpi && kpi.suffix && <Text type="secondary" style={{ fontSize: 12 }}>{kpi.suffix}</Text>}
-              {kpi.contextNote && <Text type="secondary" style={{ fontSize: 11 }}>{kpi.contextNote}</Text>}
-            </Card>
-          </Col>
-        ))}
+      {/* KPIs */}
+      <Row gutter={[16, 16]}>
+        <Col xs={12} md={4}>
+          <Card><Statistic title="Outstanding" value={summary.totalOutstanding} prefix="$" formatter={v => Number(v).toLocaleString()} valueStyle={{ color: NAVY, fontSize: 22 }} /></Card>
+        </Col>
+        <Col xs={12} md={4}>
+          <Card><Statistic title="Fulfillment Rate" value={summary.fulfillmentRate} suffix="%" valueStyle={{ color: summary.fulfillmentRate > 50 ? SUCCESS : ERROR, fontSize: 22 }} /></Card>
+        </Col>
+        <Col xs={12} md={4}>
+          <Card><Statistic title={<span style={{color: ERROR}}>Critical</span>} value={kpis.criticalAmount} prefix="$" formatter={v => Number(v).toLocaleString()} suffix={<Text type="secondary" style={{fontSize:11}}> ({kpis.criticalCount})</Text>} valueStyle={{ color: ERROR, fontSize: 22 }} /></Card>
+        </Col>
+        <Col xs={12} md={4}>
+          <Card><Statistic title={<span style={{color:'#d98000'}}>High Priority</span>} value={kpis.highAmount} prefix="$" formatter={v => Number(v).toLocaleString()} suffix={<Text type="secondary" style={{fontSize:11}}> ({kpis.highCount})</Text>} valueStyle={{ color: '#d98000', fontSize: 22 }} /></Card>
+        </Col>
+        <Col xs={12} md={4}>
+          <Card><Statistic title="Write-Off Risk" value={kpis.writeOffRiskAmount} prefix="$" formatter={v => Number(v).toLocaleString()} suffix={<Text type="secondary" style={{fontSize:11}}> ({kpis.writeOffRiskCount})</Text>} valueStyle={{ color: MUTED, fontSize: 22 }} /></Card>
+        </Col>
+        <Col xs={12} md={4}>
+          <Card><Statistic title="New This Month" value={kpis.pledgesThisMonth} valueStyle={{ color: SUCCESS, fontSize: 22 }} /></Card>
+        </Col>
       </Row>
 
-      {/* ── Aging Buckets ──────────────────────────────────────── */}
-      <Card title={<DefinitionTooltip term="Aging" dashboardKey="pledge">Aging Buckets</DefinitionTooltip>} size="small" style={{ marginTop: 20 }}>
-        <div style={{ display: 'flex', height: 32, borderRadius: 6, overflow: 'hidden', marginBottom: 12 }}>
-          {agingBuckets.map(b => {
-            const pct = (b.amount / totalAging) * 100;
-            if (pct < 1) return null;
-            return (
-              <div key={b.bucket} title={`${AGING_LABELS[b.bucket] || b.bucket}: ${fmtUSD(b.amount)} (${b.count})`}
-                style={{ width: `${pct}%`, background: AGING_COLORS[b.bucket] || '#ccc', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#fff', fontSize: 11, fontWeight: 600 }}>
-                {pct > 8 ? AGING_LABELS[b.bucket] || b.bucket : ''}
-              </div>
-            );
-          })}
-        </div>
-        <Row gutter={16}>
-          {agingBuckets.map(b => (
-            <Col key={b.bucket} xs={12} sm={6}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginBottom: 4 }}>
-                <div style={{ width: 10, height: 10, borderRadius: 2, background: AGING_COLORS[b.bucket] }} />
-                <Text strong style={{ fontSize: 13 }}>{AGING_LABELS[b.bucket] || b.bucket}</Text>
-                <Text type="secondary" style={{ fontSize: 11 }}>({b.bucket})</Text>
-              </div>
-              <Text style={{ fontSize: 13 }}>{fmtUSD(b.amount)} · {b.count} pledges</Text>
-            </Col>
-          ))}
-        </Row>
+      {/* Aging + Priority side by side */}
+      <Row gutter={16}>
+        <Col xs={24} md={12}>
+          <Card title={<span style={{ color: NAVY }}><ClockCircleOutlined /> Aging</span>}>
+            <Plot
+              data={[{
+                type: 'bar', orientation: 'h',
+                y: agingBuckets.map(b => b.bucket),
+                x: agingBuckets.map(b => b.amount),
+                marker: { color: agingBuckets.map(b => AGING_COLORS[b.bucket] || MUTED) },
+                text: agingBuckets.map(b => `$${(b.amount / 1e6).toFixed(1)}M (${b.count})`),
+                textposition: 'auto', textfont: { color: '#fff', size: 11 },
+              }]}
+              layout={{
+                height: 200, margin: { l: 100, r: 20, t: 5, b: 25 },
+                xaxis: { tickprefix: '$', separatethousands: true, tickfont: { size: 10 } },
+                yaxis: { tickfont: { size: 11 }, autorange: 'reversed' },
+                plot_bgcolor: 'transparent', paper_bgcolor: 'transparent',
+              }}
+              config={{ displayModeBar: false, responsive: true }}
+              style={{ width: '100%' }}
+            />
+          </Card>
+        </Col>
+        <Col xs={24} md={12}>
+          <Card title={<span style={{ color: NAVY }}><ExclamationCircleOutlined /> Collection Priority</span>}>
+            <Plot
+              data={[{
+                type: 'bar', orientation: 'h',
+                y: ['Critical', 'High', 'Medium', 'Low'],
+                x: ['critical', 'high', 'medium', 'low'].map(k => collectionPriority[k]?.total || 0),
+                marker: { color: [ERROR, '#d98000', NAVY, MUTED] },
+                text: ['critical', 'high', 'medium', 'low'].map(k => {
+                  const b = collectionPriority[k];
+                  return b ? `$${(b.total / 1e6).toFixed(1)}M (${b.count})` : '$0';
+                }),
+                textposition: 'auto', textfont: { color: '#fff', size: 11 },
+              }]}
+              layout={{
+                height: 200, margin: { l: 80, r: 20, t: 5, b: 25 },
+                xaxis: { tickprefix: '$', separatethousands: true, tickfont: { size: 10 } },
+                yaxis: { tickfont: { size: 11 }, autorange: 'reversed' },
+                plot_bgcolor: 'transparent', paper_bgcolor: 'transparent',
+              }}
+              config={{ displayModeBar: false, responsive: true }}
+              style={{ width: '100%' }}
+            />
+          </Card>
+        </Col>
+      </Row>
+
+      {/* Priority Tabs with Pledge Tables */}
+      <Card title={<span style={{ color: NAVY }}>Pledges by Priority — Who Needs Attention?</span>}>
+        <Tabs items={['critical', 'high', 'medium', 'low'].filter(k => collectionPriority[k]?.count > 0).map(key => {
+          const bucket = collectionPriority[key];
+          return {
+            key,
+            label: <span>{PRIORITY_ICONS[key]} <span style={{ color: PRIORITY_COLORS[key] }}>{key.charAt(0).toUpperCase() + key.slice(1)}</span> <Tag style={{ fontSize: 10 }}>{bucket.count}</Tag></span>,
+            children: (
+              <Space direction="vertical" size="small" style={{ width: '100%' }}>
+                <div style={{ background: '#F5F5F5', padding: '8px 16px', borderRadius: 6, marginBottom: 8 }}>
+                  <Text type="secondary" style={{ fontSize: 12 }}>{bucket.description}</Text>
+                  <Text strong style={{ float: 'right' }}>{safeCurrency(bucket.total, { maximumFractionDigits: 0 })}</Text>
+                </div>
+                <Table
+                  size="small" pagination={{ pageSize: 10, size: 'small' }}
+                  dataSource={bucket.topItems.map((p, i) => ({ ...p, key: i }))}
+                  columns={pledgeColumns}
+                />
+              </Space>
+            ),
+          };
+        })} />
       </Card>
 
-      <Row gutter={[16, 16]} style={{ marginTop: 16 }}>
-        {/* ── Write-off Risk ──────────────────────────────────── */}
-        <Col xs={24} lg={12}>
-          <Card title={<span><WarningOutlined style={{ color: ERROR, marginRight: 6 }} />Write-off Risk</span>} size="small"
-            extra={<Space><CsvExport data={writeOffRisk} columns={[
-              { title: 'Donor', dataIndex: 'name' },
-              { title: 'Balance', dataIndex: 'balance' },
-              { title: 'Days Overdue', dataIndex: 'daysOverdue' },
-              { title: 'Campaign', dataIndex: 'campaign' },
-            ]} filename="writeoff-risk" /><Tag color="error">{writeOffRisk.length} pledges</Tag></Space>}>
-            <Table dataSource={writeOffRisk} rowKey={(_, i) => String(i)} size="small" pagination={{ pageSize: 8 }} scroll={{ x: 600 }}
-              columns={[
-                { title: 'Donor', dataIndex: 'name', width: 140, ellipsis: true },
-                { title: 'Balance', dataIndex: 'balance', width: 100, render: v => <Text strong style={{ color: ERROR }}>{fmtUSD(v)}</Text>, sorter: (a: WriteOffItem, b: WriteOffItem) => a.balance - b.balance, defaultSortOrder: 'descend' as const },
-                { title: 'Overdue', dataIndex: 'daysOverdue', width: 80, render: (v: number) => <Tag color={v > 365 ? 'red' : v > 180 ? 'orange' : 'gold'}>{v}d</Tag> },
-                { title: 'Campaign', dataIndex: 'campaign', width: 150, ellipsis: true },
-              ]}
-            />
-          </Card>
-        </Col>
+      {/* Campaign Fulfillment */}
+      <Card title={<span style={{ color: NAVY }}><CalendarOutlined /> Fulfillment by Campaign</span>}>
+        <Table
+          size="small" pagination={{ pageSize: 15, size: 'small' }}
+          dataSource={byCampaign.filter(c => c.pledgedAmount > 0).map((c, i) => ({ ...c, key: i }))}
+          columns={[
+            { title: 'Campaign', dataIndex: 'campaign', key: 'campaign', ellipsis: true, width: 250 },
+            { title: 'Pledges', dataIndex: 'pledgeCount', key: 'count', width: 70, align: 'right' as const,
+              sorter: (a: CampaignItem, b: CampaignItem) => b.pledgeCount - a.pledgeCount },
+            { title: 'Pledged', dataIndex: 'pledgedAmount', key: 'pledged', width: 120, align: 'right' as const,
+              render: (v: number) => safeCurrency(v, { maximumFractionDigits: 0 }),
+              sorter: (a: CampaignItem, b: CampaignItem) => b.pledgedAmount - a.pledgedAmount, defaultSortOrder: 'descend' as const },
+            { title: 'Outstanding', dataIndex: 'outstanding', key: 'outstanding', width: 120, align: 'right' as const,
+              render: (v: number) => <Text strong>{safeCurrency(v, { maximumFractionDigits: 0 })}</Text> },
+            { title: 'Fulfillment', dataIndex: 'fulfillmentRate', key: 'rate', width: 100, align: 'right' as const,
+              render: (v: number) => <Tag color={v >= 50 ? SUCCESS : v >= 20 ? GOLD : ERROR}>{v}%</Tag>,
+              sorter: (a: CampaignItem, b: CampaignItem) => a.fulfillmentRate - b.fulfillmentRate },
+          ]}
+        />
+      </Card>
 
-        {/* ── Top Open Pledges ────────────────────────────────── */}
-        <Col xs={24} lg={12}>
-          <Card title={
-            topOpenPledges.length > 0 
-              ? `${topOpenPledges.length} open pledges — ${fmtUSD(topOpenPledges.reduce((sum, p) => sum + p.balance, 0))} outstanding`
-              : "Top Open Pledges"
-          } size="small"
-            extra={<CsvExport data={topOpenPledges} columns={[
-              { title: 'Donor', dataIndex: 'name' },
-              { title: 'Pledged', dataIndex: 'pledgedAmount' },
-              { title: 'Paid', dataIndex: 'paidAmount' },
-              { title: 'Campaign', dataIndex: 'campaign' },
-            ]} filename="top-open-pledges" />}>
-            <Table dataSource={topOpenPledges} rowKey={(_, i) => String(i)} size="small" pagination={{ pageSize: 8 }} scroll={{ x: 700 }}
-              columns={[
-                { title: 'Donor', dataIndex: 'name', width: 140, ellipsis: true },
-                { title: 'Pledged', dataIndex: 'pledgedAmount', width: 100, render: fmtUSD, sorter: (a: PledgeItem, b: PledgeItem) => a.pledgedAmount - b.pledgedAmount },
-                { title: 'Progress', key: 'progress', width: 140,
-                  render: (_: unknown, r: PledgeItem) => {
-                    const pct = r.pledgedAmount > 0 ? Math.round(r.paidAmount / r.pledgedAmount * 100) : 0;
-                    return <Space direction="vertical" size={0} style={{ width: '100%' }}>
-                      <Progress percent={pct} size="small" strokeColor={pct >= 75 ? SUCCESS : pct >= 40 ? GOLD : WARNING} showInfo={false} />
-                      <Text style={{ fontSize: 11 }}>{fmtUSD(r.paidAmount)} / {fmtUSD(r.pledgedAmount)}</Text>
-                    </Space>;
-                  }
-                },
-                { title: 'Status', key: 'status', width: 90,
-                  render: (_: unknown, r: PledgeItem) => {
-                    const status = getPledgeStatus(r.endDate);
-                    return <Tag color={status.color}>{status.label}</Tag>;
-                  },
-                  filters: [
-                    { text: 'Open-ended', value: 'Open-ended' },
-                    { text: 'Current', value: 'Current' },
-                    { text: 'Past Due', value: 'Past Due' },
-                  ],
-                  onFilter: (value: unknown, record: PledgeItem) => getPledgeStatus(record.endDate).label === value,
-                },
-                { title: 'Campaign', dataIndex: 'campaign', width: 140, ellipsis: true },
-              ]}
-            />
-          </Card>
-        </Col>
-      </Row>
-
-      <Row gutter={[16, 16]} style={{ marginTop: 16 }}>
-        {/* ── By Campaign ─────────────────────────────────────── */}
-        <Col xs={24} lg={14}>
-          <Card title={
-            byCampaign.length > 0 
-              ? `${byCampaign.length} campaigns — ${fmtUSD(byCampaign.reduce((sum, c) => sum + c.pledgedAmount, 0))} pledged, ${Math.round(byCampaign.reduce((sum, c) => sum + c.fulfillmentRate, 0) / byCampaign.length)}% avg fulfillment`
-              : "Pledges by Campaign"
-          } size="small"
-            extra={<CsvExport data={byCampaign} columns={[
-              { title: 'Campaign', dataIndex: 'campaign' },
-              { title: 'Pledge Count', dataIndex: 'pledgeCount' },
-              { title: 'Pledged Amount', dataIndex: 'pledgedAmount' },
-              { title: 'Fulfillment Rate', dataIndex: 'fulfillmentRate' },
-            ]} filename="pledges-by-campaign" />}>
-            <Table dataSource={byCampaign} rowKey="campaign" size="small" pagination={{ pageSize: 10 }} scroll={{ x: 500 }}
-              columns={[
-                { title: 'Campaign', dataIndex: 'campaign', width: 180, ellipsis: true },
-                { title: '#', dataIndex: 'pledgeCount', width: 50, sorter: (a: CampaignItem, b: CampaignItem) => a.pledgeCount - b.pledgeCount },
-                { title: 'Pledged', dataIndex: 'pledgedAmount', width: 100, render: fmtUSD, sorter: (a: CampaignItem, b: CampaignItem) => a.pledgedAmount - b.pledgedAmount, defaultSortOrder: 'descend' as const },
-                { title: 'Fulfillment', key: 'ful', width: 120,
-                  render: (_: unknown, r: CampaignItem) => (
-                    <Space size={4}>
-                      <Progress type="circle" percent={r.fulfillmentRate} size={28} strokeColor={r.fulfillmentRate >= 70 ? SUCCESS : r.fulfillmentRate >= 40 ? GOLD : ERROR} strokeWidth={8}
-                        format={() => ''} />
-                      <Text style={{ fontSize: 12 }}>{safePercent(r.fulfillmentRate, { decimals: 0 })}</Text>
-                    </Space>
-                  ),
-                  sorter: (a: CampaignItem, b: CampaignItem) => a.fulfillmentRate - b.fulfillmentRate,
-                },
-              ]}
-            />
-          </Card>
-        </Col>
-
-        {/* ── Recent Payments ─────────────────────────────────── */}
-        <Col xs={24} lg={10}>
-          <Card title={
-            recentPayments.length > 0 
-              ? `${recentPayments.length} recent payments — ${fmtUSD(recentPayments.reduce((sum, p) => sum + p.amount, 0))} total`
-              : "Recent Pledge Payments"
-          } size="small">
-            <div style={{ maxHeight: 420, overflowY: 'auto' }}>
-              {recentPayments.length === 0 && <Text type="secondary">No recent payments</Text>}
-              {recentPayments.map((p, i) => (
-                <div key={i} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '8px 0', borderBottom: i < recentPayments.length - 1 ? '1px solid #f0f0f0' : 'none' }}>
-                  <div>
-                    <Text strong style={{ fontSize: 13 }}>{p.name}</Text>
-                    <br />
-                    <Text type="secondary" style={{ fontSize: 11 }}>
-                      <ClockCircleOutlined style={{ marginRight: 4 }} />{fmtShortDate(p.date)}
-                      {p.pledgeTotal > 0 && <> · Pledge: {fmtUSD(p.pledgeTotal)}</>}
-                    </Text>
-                  </div>
-                  <Text strong style={{ color: SUCCESS, fontSize: 14 }}>{fmtUSD(p.amount)}</Text>
-                </div>
-              ))}
-            </div>
-          </Card>
-        </Col>
-      </Row>
-    </div>
+      {/* Recent Payments */}
+      {recentPayments.length > 0 && (
+        <Card title={<span style={{ color: NAVY }}><CheckCircleOutlined /> Recent Payments (Last 90 Days)</span>}>
+          <Table
+            size="small" pagination={{ pageSize: 10, size: 'small' }}
+            dataSource={recentPayments.map((p, i) => ({ ...p, key: i }))}
+            columns={[
+              { title: 'Donor', dataIndex: 'name', key: 'name', ellipsis: true, width: 200 },
+              { title: 'Amount', dataIndex: 'amount', key: 'amount', width: 100, align: 'right' as const,
+                render: (v: number) => <Text strong style={{ color: SUCCESS }}>{safeCurrency(v, { maximumFractionDigits: 0 })}</Text> },
+              { title: 'Date', dataIndex: 'date', key: 'date', width: 100 },
+              { title: 'Campaign', dataIndex: 'campaign', key: 'campaign', ellipsis: true, width: 200 },
+              { title: 'Method', dataIndex: 'method', key: 'method', width: 100 },
+            ]}
+          />
+        </Card>
+      )}
+    </Space>
   );
 }
+
+export default PledgeManagementDashboard;
