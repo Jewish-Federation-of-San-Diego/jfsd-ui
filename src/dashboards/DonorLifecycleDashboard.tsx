@@ -180,7 +180,7 @@ export function DonorLifecycleDashboard() {
               label: "YoY Donor Count",
               children: (
                 <Plot
-                  data={[{ type: "bar", x: ["FY24", "FY25", "FY26"], y: yoy.donorCounts, marker: { color: PLOTLY_COLORS[1] } }]}
+                  data={[{ type: "bar", x: ["FY24", "FY25", "FY26"], y: yoy.donorCounts, marker: { color: [MUTED, NAVY, SUCCESS] } }]}
                   layout={{ ...PLOTLY_BASE_LAYOUT, height: 280 }}
                   style={{ width: "100%" }}
                   config={{ displayModeBar: false }}
@@ -192,7 +192,7 @@ export function DonorLifecycleDashboard() {
               label: "YoY Dollars",
               children: (
                 <Plot
-                  data={[{ type: "bar", x: ["FY24", "FY25", "FY26"], y: yoy.dollars, marker: { color: PLOTLY_COLORS[2] } }]}
+                  data={[{ type: "bar", x: ["FY24", "FY25", "FY26"], y: yoy.dollars, marker: { color: [MUTED, NAVY, GOLD] }, texttemplate: '$%{y:,.0f}', textposition: 'outside' }]}
                   layout={{ ...PLOTLY_BASE_LAYOUT, height: 280, yaxis: { title: "Recognition", tickprefix: "$" } }}
                   style={{ width: "100%" }}
                   config={{ displayModeBar: false }}
