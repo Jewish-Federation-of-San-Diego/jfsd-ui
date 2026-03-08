@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-07T21:08:34.809770",
+  "generatedAt": "2026-03-07T21:12:56.768967",
   "asOfDate": "2026-03-07",
   "recognition": {
     "FY24": 15332362.05,
@@ -345,5 +345,36 @@
     "FY27 is pure projection \u2014 retention rates, economic conditions, and Israel campaign duration all uncertain.",
     "Revenue retention \u2260 donor retention. Top 20 donors account for ~60% of total; they retain at 90%+.",
     "Recognition \u2260 cash. $500K pledge counts now, cash arrives over years. See Cash Forecast dashboard."
-  ]
+  ],
+  "narrative": {
+    "title": "Why $9M Is Likely Out of Reach \u2014 And Why That's Not a Crisis",
+    "date": "March 7, 2026",
+    "sections": [
+      {
+        "heading": "The Rady Effect",
+        "body": "FY24 recognition was $15,332,362 \u2014 an anomalous high driven by one or two mega-gifts that didn't repeat. FY25 normalized to $8.8M. FY26 is tracking to ~$7.2M. This isn't a freefall \u2014 it's a correction from an outlier year. The FY25-to-FY26 decline is ~18%, which is meaningful but not catastrophic.",
+        "dataPoint": "Ernest Rady redirected his $1M annual fund gift to an Israel campaign. When a single donor represents 11% of a $9M goal and redirects, that's a structural shift, not a performance failure."
+      },
+      {
+        "heading": "Retention Is Actually Fine",
+        "body": "53.6% donor retention rate is above the AFP national average of 45%. The Federation is outperforming its peers on retention. The nuance: donor count retention and dollar retention are different. The top 20 donors likely account for 60%+ of total recognition and retain at 90%+. Mid-tier and small donors churn at higher rates \u2014 high count, lower dollar impact.",
+        "dataPoint": "500 silent donors represent $2.2M at risk, but 97 critical-tier donors account for $1.86M of that. The risk is concentrated, not distributed."
+      },
+      {
+        "heading": "The Concentration Problem",
+        "body": "The $9M goal likely assumed Rady's $1M continuing and FY24-level major gifts repeating. Neither happened. When one donor shifting priorities creates an 11% gap, the real issue isn't this year's campaign \u2014 it's portfolio concentration. You can't replace Rady with 200 new $5K donors (you'd need 200 net-new just to cover him). The path forward is cultivating 3-5 donors in the $250K-$500K range.",
+        "dataPoint": "To hit $9M from the current $6,142,437, the campaign would need $2,857,563 more \u2014 a 47% increase in the remaining 4 months. Historical H2 growth is 10-17%. The math doesn't work without a major gift close."
+      },
+      {
+        "heading": "What the Scenarios Tell Us",
+        "body": "Conservative (+10% H2): $6,756,681 \u2014 minimal new commitments, most recognition already booked. Base case (+17% H2): $7,186,651 \u2014 follows FY25 spring pattern. Optimistic (+25% H2): $7,678,046 \u2014 strong spring push with major gift closes. All three scenarios land between 75-85% of the $9M goal. The question isn't 'will we hit $9M' \u2014 it's 'is $9M the right goal?'",
+        "dataPoint": "FY27 projections (based on FY26 base) range from $6.5M to $7.9M. A $9.5M FY27 goal would require 32% growth over the best FY26 scenario. Goal-setting needs to reflect the post-Rady, post-FY24 donor base reality."
+      },
+      {
+        "heading": "The Bottom Line",
+        "body": "The underlying donor program is performing reasonably well. Retention is above industry average. The gap to goal is structural \u2014 driven by major donor concentration and a one-time FY24 anomaly that inflated expectations. A realistic goal based on the current donor base is $7-8M. The board conversation should be: 'How do we grow the $250K+ pipeline?' \u2014 not 'Why are we underperforming?'",
+        "dataPoint": "Recommended realistic FY26 target: $7.0-7.5M. Recommended FY27 goal range: $7.0-8.0M (flat to 10% growth). Stretch goal requiring identified pipeline: $8.5M+."
+      }
+    ]
+  }
 }

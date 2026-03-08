@@ -10,6 +10,7 @@ import { fetchJson } from '../utils/dataFetch';
 import { safeCurrency } from '../utils/formatters';
 
 const { Title, Text, Paragraph } = Typography;
+// Paragraph used in narrative section
 
 interface Scenario {
   label: string; description: string; projected: number;
@@ -28,6 +29,12 @@ interface FYBlock {
   baselineNote?: string;
 }
 
+interface NarrativeSection {
+  heading: string;
+  body: string;
+  dataPoint: string;
+}
+
 interface SimData {
   generatedAt: string;
   recognition: { FY24: number; FY25: number; FY26_YTD: number };
@@ -35,6 +42,11 @@ interface SimData {
   fy27: FYBlock;
   variables: Array<{ name: string; value: string; note: string }>;
   skepticsNotes: string[];
+  narrative?: {
+    title: string;
+    date: string;
+    sections: NarrativeSection[];
+  };
 }
 
 const SCENARIO_COLORS: Record<string, string> = { low: ERROR, medium: GOLD, high: SUCCESS };
@@ -233,6 +245,31 @@ export function CampaignSimulationDashboard() {
       </div>
 
       <Tabs items={tabItems} size="large" />
+
+      {/* Executive Narrative */}
+      {data.narrative && (
+        <Card
+          style={{ borderTop: `4px solid ${NAVY}` }}
+          title={
+            <div>
+              <Title level={4} style={{ color: NAVY, margin: 0 }}>{data.narrative.title}</Title>
+              <Text type="secondary" style={{ fontSize: 12 }}>{data.narrative.date} · Campaign Analysis</Text>
+            </div>
+          }
+        >
+          <Space direction="vertical" size="large" style={{ width: '100%' }}>
+            {data.narrative.sections.map((section, i) => (
+              <div key={i} style={{ borderLeft: `3px solid ${i === data.narrative!.sections.length - 1 ? SUCCESS : NAVY}`, paddingLeft: 20 }}>
+                <Title level={5} style={{ color: NAVY, marginBottom: 8 }}>{section.heading}</Title>
+                <Paragraph style={{ fontSize: 14, lineHeight: 1.7, marginBottom: 8 }}>{section.body}</Paragraph>
+                <div style={{ background: '#F0F5FF', padding: '10px 16px', borderRadius: 6 }}>
+                  <Text style={{ fontSize: 13, color: NAVY }}>📊 {section.dataPoint}</Text>
+                </div>
+              </div>
+            ))}
+          </Space>
+        </Card>
+      )}
 
       {/* Shared: Variables */}
       <Card title={<span style={{ color: NAVY }}><AimOutlined /> Simulation Variables</span>}>
