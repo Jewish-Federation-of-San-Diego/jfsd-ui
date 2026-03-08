@@ -52,7 +52,8 @@ def build_tracker():
     existing_items = {}
     if existing:
         for item in existing.get("items", []):
-            existing_items[item["id"]] = item
+            if "id" in item:
+                existing_items[item["id"]] = item
 
     items = []
 

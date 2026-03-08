@@ -58,10 +58,12 @@ def run_generator(gen: dict, verbose: bool = True) -> dict:
     
     start = time.time()
     try:
+        # Run from workspace root so relative paths in sf-query.js resolve correctly
+        workspace_root = SCRIPT_DIR.parent.parent.parent.parent  # ~/clawd
         result = subprocess.run(
             [sys.executable, str(script_path)],
             capture_output=True, text=True, timeout=300,
-            cwd=str(SCRIPT_DIR.parent)
+            cwd=str(workspace_root)
         )
         elapsed = time.time() - start
         

@@ -1,601 +1,1632 @@
 {
+  "asOfDate": "2026-03-07T16:05:06",
   "kpis": {
-    "total": 198,
-    "done": 10,
-    "inProgress": 188
+    "totalItems": 95,
+    "thisWeek": 9,
+    "blocked": 3,
+    "completedThisMonth": 22
   },
   "columns": [
-    "\ud83d\udfe1 In Progress",
-    "\ud83d\udccb Backlog",
-    "Done",
-    "\u2705 Completed",
-    "Notes"
+    "thisWeek",
+    "upNext",
+    "backlog",
+    "blocked",
+    "done"
   ],
   "columnLabels": {
-    "\ud83d\udfe1 In Progress": "\ud83d\udfe1 In Progress",
-    "\ud83d\udccb Backlog": "\ud83d\udccb Backlog",
-    "Done": "Done",
-    "\u2705 Completed": "\u2705 Completed",
-    "Notes": "Notes"
+    "thisWeek": "\ud83d\udd25 This Week",
+    "upNext": "\ud83d\udfe1 Up Next",
+    "backlog": "\ud83d\udccb Backlog",
+    "blocked": "\u23f8\ufe0f Blocked",
+    "done": "\u2705 Done"
   },
   "swimLanes": [
-    "\ud83d\udfe1 In Progress",
-    "\ud83d\udccb Backlog",
-    "\u2705 Completed",
-    "Notes",
-    "Backlog: CCR Household_ID__c Backfill"
+    "Federation Analytics",
+    "Finance & Accounting",
+    "Facilities & Ops",
+    "Advancement Services",
+    "System Integrations",
+    "Agent Architecture"
   ],
   "items": [
     {
-      "title": "**Status:** \u2705 Sprint 1 Complete \u2014 18 items shipped",
-      "section": "\ud83d\udfe1 In Progress",
-      "done": false,
-      "column": "\ud83d\udfe1 In Progress"
-    },
-    {
-      "title": "**Location:** `projects/master-hub/`",
-      "section": "\ud83d\udfe1 In Progress",
-      "done": false,
-      "column": "\ud83d\udfe1 In Progress"
-    },
-    {
-      "title": "**Roadmap:** `projects/master-hub/ROADMAP.md` \u2014 Full 5-sprint plan",
-      "section": "\ud83d\udfe1 In Progress",
-      "done": false,
-      "column": "\ud83d\udfe1 In Progress"
-    },
-    {
-      "title": "**Sections:**",
-      "section": "\ud83d\udfe1 In Progress",
-      "done": false,
-      "column": "\ud83d\udfe1 In Progress"
-    },
-    {
-      "title": "**Finance** \u2014 Ramp MTD spend (live), Ramp detail dashboard (live), Budget/Cash (pending Sage)",
-      "section": "\ud83d\udfe1 In Progress",
-      "done": false,
-      "column": "\ud83d\udfe1 In Progress"
-    },
-    {
-      "title": "**Development** \u2014 Links to Donor Intelligence suite (live)",
-      "section": "\ud83d\udfe1 In Progress",
-      "done": false,
-      "column": "\ud83d\udfe1 In Progress"
-    },
-    {
-      "title": "**ScalingOps** \u2014 Data quality, advancement services ops (live)",
-      "section": "\ud83d\udfe1 In Progress",
-      "done": false,
-      "column": "\ud83d\udfe1 In Progress"
-    },
-    {
-      "title": "**Marketing** \u2014 Placeholder (pending HubSpot API access)",
-      "section": "\ud83d\udfe1 In Progress",
-      "done": false,
-      "column": "\ud83d\udfe1 In Progress"
-    },
-    {
-      "title": "**Facilities** \u2014 Links to Ecobee dashboard (live), Verkada (pending)",
-      "section": "\ud83d\udfe1 In Progress",
-      "done": false,
-      "column": "\ud83d\udfe1 In Progress"
-    },
-    {
-      "title": "**Features:** Phosphor icons, JFSD brand colors, definitions page, live Ramp data",
-      "section": "\ud83d\udfe1 In Progress",
-      "done": false,
-      "column": "\ud83d\udfe1 In Progress"
-    },
-    {
-      "title": "**Next:** HubSpot integration, Sage integration, auto-refresh scripts",
-      "section": "\ud83d\udfe1 In Progress",
-      "done": false,
-      "column": "\ud83d\udfe1 In Progress"
-    },
-    {
-      "title": "**Status:** \u2705 Dashboards + automated reports live",
-      "section": "\ud83d\udfe1 In Progress",
-      "done": false,
-      "column": "\ud83d\udfe1 In Progress"
-    },
-    {
-      "title": "**Location:** `projects/donor-intelligence/`",
-      "section": "\ud83d\udfe1 In Progress",
-      "done": false,
-      "column": "\ud83d\udfe1 In Progress"
-    },
-    {
-      "title": "**Dashboards:**",
-      "section": "\ud83d\udfe1 In Progress",
-      "done": false,
-      "column": "\ud83d\udfe1 In Progress"
-    },
-    {
-      "title": "**Hub** \u2014 Central landing page, dashboard management, freshness indicators",
-      "section": "\ud83d\udfe1 In Progress",
-      "done": false,
-      "column": "\ud83d\udfe1 In Progress"
-    },
-    {
-      "title": "**Daily Brief** \u2014 Proactive alerts, upcoming actions, priorities",
-      "section": "\ud83d\udfe1 In Progress",
-      "done": false,
-      "column": "\ud83d\udfe1 In Progress"
-    },
-    {
-      "title": "**Analytics** \u2014 Campaign progress, giving societies, retention trends",
-      "section": "\ud83d\udfe1 In Progress",
-      "done": false,
-      "column": "\ud83d\udfe1 In Progress"
-    },
-    {
-      "title": "**The Unasked** \u2014 Hidden gems, consistency champions, silence gap",
-      "section": "\ud83d\udfe1 In Progress",
-      "done": false,
-      "column": "\ud83d\udfe1 In Progress"
-    },
-    {
-      "title": "**Data Quality** \u2014 Health score, duplicates, missing info, audit findings",
-      "section": "\ud83d\udfe1 In Progress",
-      "done": false,
-      "column": "\ud83d\udfe1 In Progress"
-    },
-    {
-      "title": "**Pledge Management** \u2014 Aging, payment tracking, write-off risk",
-      "section": "\ud83d\udfe1 In Progress",
-      "done": false,
-      "column": "\ud83d\udfe1 In Progress"
-    },
-    {
-      "title": "**NEW: Automated Reports:**",
-      "section": "\ud83d\udfe1 In Progress",
-      "done": false,
-      "column": "\ud83d\udfe1 In Progress"
-    },
-    {
-      "title": "**Weekly Ask List** \u2014 Top 10 donors to call with suggested amounts ($49K potential)",
-      "section": "\ud83d\udfe1 In Progress",
-      "done": false,
-      "column": "\ud83d\udfe1 In Progress"
-    },
-    {
-      "title": "**Silence Alerts** \u2014 229 loyal donors gone quiet, $120K at risk",
-      "section": "\ud83d\udfe1 In Progress",
-      "done": false,
-      "column": "\ud83d\udfe1 In Progress"
-    },
-    {
-      "title": "**Cron:** Mondays 8am auto-generates and sends summary",
-      "section": "\ud83d\udfe1 In Progress",
-      "done": false,
-      "column": "\ud83d\udfe1 In Progress"
-    },
-    {
-      "title": "**Templates:** LYBUNT appeal, Pledge reminder, Thank you",
-      "section": "\ud83d\udfe1 In Progress",
-      "done": false,
-      "column": "\ud83d\udfe1 In Progress"
-    },
-    {
-      "title": "**Next:** Live Salesforce data feeds, Emma voice integration",
-      "section": "\ud83d\udfe1 In Progress",
-      "done": false,
-      "column": "\ud83d\udfe1 In Progress"
-    },
-    {
-      "title": "**Status:** Live with analytics",
-      "section": "\ud83d\udfe1 In Progress",
-      "done": false,
-      "column": "\ud83d\udfe1 In Progress"
-    },
-    {
-      "title": "**Location:** `projects/ecobee-dashboard/`",
-      "section": "\ud83d\udfe1 In Progress",
-      "done": false,
-      "column": "\ud83d\udfe1 In Progress"
-    },
-    {
-      "title": "**Features:**",
-      "section": "\ud83d\udfe1 In Progress",
-      "done": false,
-      "column": "\ud83d\udfe1 In Progress"
-    },
-    {
-      "title": "31 thermostats monitored (Federation, JCF, ADL, Common)",
-      "section": "\ud83d\udfe1 In Progress",
-      "done": false,
-      "column": "\ud83d\udfe1 In Progress"
-    },
-    {
-      "title": "Live temp, humidity, mode, status",
-      "section": "\ud83d\udfe1 In Progress",
-      "done": false,
-      "column": "\ud83d\udfe1 In Progress"
-    },
-    {
-      "title": "SQLite database for time series (6,300+ readings)",
-      "section": "\ud83d\udfe1 In Progress",
-      "done": false,
-      "column": "\ud83d\udfe1 In Progress"
-    },
-    {
-      "title": "Cron job every 15 minutes",
-      "section": "\ud83d\udfe1 In Progress",
-      "done": false,
-      "column": "\ud83d\udfe1 In Progress"
-    },
-    {
-      "title": "**NEW: Analytics dashboard** \u2014 comfort scores, anomaly detection, server room watch",
-      "section": "\ud83d\udfe1 In Progress",
-      "done": false,
-      "column": "\ud83d\udfe1 In Progress"
-    },
-    {
-      "title": "**API:** SmartBuildings v2 (client_credentials auth)",
-      "section": "\ud83d\udfe1 In Progress",
-      "done": false,
-      "column": "\ud83d\udfe1 In Progress"
-    },
-    {
-      "title": "**Findings:**",
-      "section": "\ud83d\udfe1 In Progress",
-      "done": false,
-      "column": "\ud83d\udfe1 In Progress"
-    },
-    {
-      "title": "Common-Server Room running HOT (76\u00b0F avg, max 77.2\u00b0F) \u2014 needs attention",
-      "section": "\ud83d\udfe1 In Progress",
-      "done": false,
-      "column": "\ud83d\udfe1 In Progress"
-    },
-    {
-      "title": "SWU-Oz has 18\u00b0F temp swing \u2014 unstable",
-      "section": "\ud83d\udfe1 In Progress",
-      "done": false,
-      "column": "\ud83d\udfe1 In Progress"
-    },
-    {
-      "title": "Building comfort score: 86/100",
-      "section": "\ud83d\udfe1 In Progress",
-      "done": false,
-      "column": "\ud83d\udfe1 In Progress"
-    },
-    {
-      "title": "**Next:** Historical trend analysis, predictive alerts, energy cost estimates",
-      "section": "\ud83d\udfe1 In Progress",
-      "done": false,
-      "column": "\ud83d\udfe1 In Progress"
-    },
-    {
-      "title": "Handbook",
-      "section": "\ud83d\udccb Backlog",
-      "done": false,
-      "column": "\ud83d\udccb Backlog"
-    },
-    {
-      "title": "Recruitment",
-      "section": "\ud83d\udccb Backlog",
-      "done": false,
-      "column": "\ud83d\udccb Backlog"
-    },
-    {
-      "title": "Onboarding",
-      "section": "\ud83d\udccb Backlog",
-      "done": false,
-      "column": "\ud83d\udccb Backlog"
-    },
-    {
-      "title": "Performance reviews",
-      "section": "\ud83d\udccb Backlog",
-      "done": false,
-      "column": "\ud83d\udccb Backlog"
-    },
-    {
-      "title": "Paylocity API exploration",
-      "section": "\ud83d\udccb Backlog",
-      "done": false,
-      "column": "\ud83d\udccb Backlog"
-    },
-    {
-      "title": "Ramp integration/reporting",
-      "section": "\ud83d\udccb Backlog",
-      "done": false,
-      "column": "\ud83d\udccb Backlog"
-    },
-    {
-      "title": "Sage integration",
-      "section": "\ud83d\udccb Backlog",
-      "done": false,
-      "column": "\ud83d\udccb Backlog"
-    },
-    {
-      "title": "Auditor coordination",
-      "section": "\ud83d\udccb Backlog",
-      "done": false,
-      "column": "\ud83d\udccb Backlog"
-    },
-    {
-      "title": "Salesforce MCP",
-      "section": "\ud83d\udccb Backlog",
-      "done": false,
-      "column": "\ud83d\udccb Backlog"
-    },
-    {
-      "title": "Sage MCP",
-      "section": "\ud83d\udccb Backlog",
-      "done": false,
-      "column": "\ud83d\udccb Backlog"
-    },
-    {
-      "title": "Slack Bots (Salesforce query)",
-      "section": "\ud83d\udccb Backlog",
-      "done": false,
-      "column": "\ud83d\udccb Backlog"
-    },
-    {
-      "title": "JCF roundtable prep",
-      "section": "\ud83d\udccb Backlog",
-      "done": false,
-      "column": "\ud83d\udccb Backlog"
-    },
-    {
-      "title": "FED roundtable prep",
-      "section": "\ud83d\udccb Backlog",
-      "done": false,
-      "column": "\ud83d\udccb Backlog"
-    },
-    {
-      "title": "JCF meeting packets",
-      "section": "\ud83d\udccb Backlog",
-      "done": false,
-      "column": "\ud83d\udccb Backlog"
-    },
-    {
-      "title": "Verkada API integration",
-      "section": "\ud83d\udccb Backlog",
-      "done": false,
-      "column": "\ud83d\udccb Backlog"
-    },
-    {
-      "title": "Ecobee API integration",
-      "section": "\ud83d\udccb Backlog",
-      "done": false,
-      "column": "\ud83d\udccb Backlog"
-    },
-    {
-      "title": "Building materials sent to Eli (2026-01-27)",
-      "section": "\ud83d\udccb Backlog",
-      "done": true,
-      "column": "Done"
-    },
-    {
-      "title": "Janitorial list and documentation sent to Miliah (2026-01-27)",
-      "section": "\ud83d\udccb Backlog",
-      "done": true,
-      "column": "Done"
-    },
-    {
-      "title": "Standard maintenance process and reporting",
-      "section": "\ud83d\udccb Backlog",
-      "done": false,
-      "column": "\ud83d\udccb Backlog"
-    },
-    {
-      "title": "Manage the folders",
-      "section": "\ud83d\udccb Backlog",
-      "done": false,
-      "column": "\ud83d\udccb Backlog"
-    },
-    {
-      "title": "Monthly schedule",
-      "section": "\ud83d\udccb Backlog",
-      "done": false,
-      "column": "\ud83d\udccb Backlog"
-    },
-    {
-      "title": "Policy manual and documentation",
-      "section": "\ud83d\udccb Backlog",
-      "done": false,
-      "column": "\ud83d\udccb Backlog"
-    },
-    {
-      "title": "Sage reports",
-      "section": "\ud83d\udccb Backlog",
-      "done": false,
-      "column": "\ud83d\udccb Backlog"
-    },
-    {
-      "title": "Month end close process in Numeric",
-      "section": "\ud83d\udccb Backlog",
-      "done": false,
-      "column": "\ud83d\udccb Backlog"
-    },
-    {
+      "id": "mk1-1.1",
+      "title": "Sidebar group labels",
+      "description": "Added FUNDRAISING/FINANCE/OPERATIONS headers to menu",
+      "column": "done",
+      "swimLane": "Federation Analytics",
+      "priority": "P1",
+      "effort": "done",
+      "owner": "H2",
+      "blocker": null,
+      "lastTouched": "2026-03-07",
+      "source": "McKinsey v1 1.1",
+      "tags": [
+        "jfsd-ui"
+      ]
+    },
+    {
+      "id": "mk1-1.2",
+      "title": "Overview Quick Links navigation",
+      "description": "Wired clickable navigation from Overview cards to dashboards",
+      "column": "done",
+      "swimLane": "Federation Analytics",
+      "priority": "P1",
+      "effort": "done",
+      "owner": "H2",
+      "blocker": null,
+      "lastTouched": "2026-03-07",
+      "source": "McKinsey v1 1.2",
+      "tags": [
+        "jfsd-ui"
+      ]
+    },
+    {
+      "id": "mk1-1.3",
+      "title": "CSV export on all tables",
+      "description": "Added CSV download button to 25+ tables across 13 dashboards",
+      "column": "done",
+      "swimLane": "Federation Analytics",
+      "priority": "P1",
+      "effort": "done",
+      "owner": "H2",
+      "blocker": null,
+      "lastTouched": "2026-03-07",
+      "source": "McKinsey v1 1.3",
+      "tags": [
+        "jfsd-ui"
+      ]
+    },
+    {
+      "id": "mk1-1.4",
+      "title": "Deceased donor filter",
+      "description": "Filter Z\"L donors from Ask List (data pipeline + client-side)",
+      "column": "done",
+      "swimLane": "Federation Analytics",
+      "priority": "P1",
+      "effort": "done",
+      "owner": "H2",
+      "blocker": null,
+      "lastTouched": "2026-03-07",
+      "source": "McKinsey v1 1.4",
+      "tags": [
+        "jfsd-ui"
+      ]
+    },
+    {
+      "id": "mk1-1.5",
+      "title": "Relative timestamps (Facilities)",
+      "description": "Added 'Xh ago' display with stale data warning when >4h old",
+      "column": "done",
+      "swimLane": "Federation Analytics",
+      "priority": "P1",
+      "effort": "done",
+      "owner": "H2",
+      "blocker": null,
+      "lastTouched": "2026-03-07",
+      "source": "McKinsey v1 1.5",
+      "tags": [
+        "jfsd-ui"
+      ]
+    },
+    {
+      "id": "mk1-1.6",
+      "title": "Color constants DRY refactor",
+      "description": "Centralized 88 local color declarations into theme imports",
+      "column": "done",
+      "swimLane": "Federation Analytics",
+      "priority": "P1",
+      "effort": "done",
+      "owner": "H2",
+      "blocker": null,
+      "lastTouched": "2026-03-07",
+      "source": "McKinsey v1 1.6",
+      "tags": [
+        "jfsd-ui"
+      ]
+    },
+    {
+      "id": "mk1-2.2",
+      "title": "Merge Silence Alerts \u2192 Outreach",
+      "description": "Combined Ask List + Risk Alerts into tabbed Outreach dashboard",
+      "column": "done",
+      "swimLane": "Federation Analytics",
+      "priority": "P1",
+      "effort": "done",
+      "owner": "H2",
+      "blocker": null,
+      "lastTouched": "2026-03-07",
+      "source": "McKinsey v1 2.2",
+      "tags": [
+        "jfsd-ui"
+      ]
+    },
+    {
+      "id": "mk1-2.3",
+      "title": "Date range selector (Campaign)",
+      "description": "Added Week/Month/Quarter/YTD filter on Campaign Tracker",
+      "column": "done",
+      "swimLane": "Federation Analytics",
+      "priority": "P1",
+      "effort": "done",
+      "owner": "H2",
+      "blocker": null,
+      "lastTouched": "2026-03-07",
+      "source": "McKinsey v1 2.3",
+      "tags": [
+        "jfsd-ui"
+      ]
+    },
+    {
+      "id": "mk1-2.4",
+      "title": "Print CSS + Print button",
+      "description": "Print stylesheet for Board Reporting + Financial Statements",
+      "column": "done",
+      "swimLane": "Federation Analytics",
+      "priority": "P1",
+      "effort": "done",
+      "owner": "H2",
+      "blocker": null,
+      "lastTouched": "2026-03-07",
+      "source": "McKinsey v1 2.4",
+      "tags": [
+        "jfsd-ui"
+      ]
+    },
+    {
+      "id": "mk1-2.5",
+      "title": "Rabkin 'Unassigned Pool' flag",
+      "description": "Flagged 30K-donor portfolio as unassigned, excluded from averages",
+      "column": "done",
+      "swimLane": "Federation Analytics",
+      "priority": "P1",
+      "effort": "done",
+      "owner": "H2",
+      "blocker": null,
+      "lastTouched": "2026-03-07",
+      "source": "McKinsey v1 2.5",
+      "tags": [
+        "jfsd-ui"
+      ]
+    },
+    {
+      "id": "mk1-2.6",
+      "title": "Skeleton loading states",
+      "description": "Replaced blank spinners with card/chart/table skeletons on all dashboards",
+      "column": "done",
+      "swimLane": "Federation Analytics",
+      "priority": "P1",
+      "effort": "done",
+      "owner": "H2",
+      "blocker": null,
+      "lastTouched": "2026-03-07",
+      "source": "McKinsey v1 2.6",
+      "tags": [
+        "jfsd-ui"
+      ]
+    },
+    {
+      "id": "mk1-2.7",
+      "title": "Pledge aging context",
+      "description": "Distinguished 'not yet due' vs 'past due' with status tags and info alert",
+      "column": "done",
+      "swimLane": "Federation Analytics",
+      "priority": "P1",
+      "effort": "done",
+      "owner": "H2",
+      "blocker": null,
+      "lastTouched": "2026-03-07",
+      "source": "McKinsey v1 2.7",
+      "tags": [
+        "jfsd-ui"
+      ]
+    },
+    {
+      "id": "mk1-3.3",
+      "title": "Cross-dashboard global search",
+      "description": "Search bar in header indexing donors across 11 data files",
+      "column": "done",
+      "swimLane": "Federation Analytics",
+      "priority": "P1",
+      "effort": "done",
+      "owner": "H2",
+      "blocker": null,
+      "lastTouched": "2026-03-07",
+      "source": "McKinsey v1 3.3",
+      "tags": [
+        "jfsd-ui"
+      ]
+    },
+    {
+      "id": "mk1-3.4",
+      "title": "Enhanced Facilities",
+      "description": "Expandable 24h trend charts, server room gauges, building summaries",
+      "column": "done",
+      "swimLane": "Federation Analytics",
+      "priority": "P1",
+      "effort": "done",
+      "owner": "H2",
+      "blocker": null,
+      "lastTouched": "2026-03-07",
+      "source": "McKinsey v1 3.4",
+      "tags": [
+        "jfsd-ui"
+      ]
+    },
+    {
+      "id": "mk1-3.6",
+      "title": "PDF export",
+      "description": "html2canvas + jsPDF export on Board Reporting + Financial Statements",
+      "column": "done",
+      "swimLane": "Federation Analytics",
+      "priority": "P1",
+      "effort": "done",
+      "owner": "H2",
+      "blocker": null,
+      "lastTouched": "2026-03-07",
+      "source": "McKinsey v1 3.6",
+      "tags": [
+        "jfsd-ui"
+      ]
+    },
+    {
+      "id": "mk2-1.1",
+      "title": "Remove dead SilenceAlerts file",
+      "description": "Deleted orphaned SilenceAlertsDashboard.tsx",
+      "column": "done",
+      "swimLane": "Federation Analytics",
+      "priority": "P1",
+      "effort": "done",
+      "owner": "H2",
+      "blocker": null,
+      "lastTouched": "2026-03-07",
+      "source": "McKinsey v2 1.1",
+      "tags": [
+        "jfsd-ui"
+      ]
+    },
+    {
+      "id": "mk2-1.2",
+      "title": "Fix GlobalSearch fetch paths",
+      "description": "Changed /data/ to /jfsd-ui/data/ for correct deployment paths",
+      "column": "done",
+      "swimLane": "Federation Analytics",
+      "priority": "P1",
+      "effort": "done",
+      "owner": "H2",
+      "blocker": null,
+      "lastTouched": "2026-03-07",
+      "source": "McKinsey v2 1.2",
+      "tags": [
+        "jfsd-ui"
+      ]
+    },
+    {
+      "id": "mk2-1.3",
+      "title": "Expand GlobalSearch index",
+      "description": "Extended search from 8 to 11 data files including board, ramp, AP",
+      "column": "done",
+      "swimLane": "Federation Analytics",
+      "priority": "P1",
+      "effort": "done",
+      "owner": "H2",
+      "blocker": null,
+      "lastTouched": "2026-03-07",
+      "source": "McKinsey v2 1.3",
+      "tags": [
+        "jfsd-ui"
+      ]
+    },
+    {
+      "id": "mk2-1.5",
+      "title": "Normalize maxWidth",
+      "description": "Standardized all dashboards to 1400px content width",
+      "column": "done",
+      "swimLane": "Federation Analytics",
+      "priority": "P1",
+      "effort": "done",
+      "owner": "H2",
+      "blocker": null,
+      "lastTouched": "2026-03-07",
+      "source": "McKinsey v2 1.5",
+      "tags": [
+        "jfsd-ui"
+      ]
+    },
+    {
+      "id": "mk2-2.6",
+      "title": "Stripe insights upgrade",
+      "description": "Added rule-based insights, recommendations, and month-over-month arrows",
+      "column": "done",
+      "swimLane": "Federation Analytics",
+      "priority": "P1",
+      "effort": "done",
+      "owner": "H2",
+      "blocker": null,
+      "lastTouched": "2026-03-07",
+      "source": "McKinsey v2 2.6",
+      "tags": [
+        "jfsd-ui"
+      ]
+    },
+    {
+      "id": "mk2-2.7",
+      "title": "Data refresh indicators",
+      "description": "DataFreshness component with relative time, refresh button on all 15 dashboards",
+      "column": "done",
+      "swimLane": "Federation Analytics",
+      "priority": "P1",
+      "effort": "done",
+      "owner": "H2",
+      "blocker": null,
+      "lastTouched": "2026-03-07",
+      "source": "McKinsey v2 2.7",
+      "tags": [
+        "jfsd-ui"
+      ]
+    },
+    {
+      "id": "proj-tracker",
+      "title": "Project Tracker dashboard",
+      "description": "Kanban board tracking all work items across 6 swim lanes",
+      "column": "done",
+      "swimLane": "Federation Analytics",
+      "priority": "P1",
+      "effort": "done",
+      "owner": "H2",
+      "blocker": null,
+      "lastTouched": "2026-03-07",
+      "source": "Custom",
+      "tags": [
+        "jfsd-ui"
+      ]
+    },
+    {
+      "id": "blocked-greeting",
+      "title": "Household Greeting Fix",
+      "description": "Z\"L households not getting correct greetings \u2014 flow logic needs update",
+      "column": "blocked",
+      "swimLane": "Advancement Services",
+      "priority": "P2",
+      "effort": "2-3d",
+      "owner": "Paul",
+      "blocker": "Waiting on Paul for Salesforce flow logic changes",
+      "lastTouched": "2026-03-07",
+      "source": "PROJECTS.md",
+      "tags": [
+        "salesforce"
+      ]
+    },
+    {
+      "id": "blocked-drm-users",
+      "title": "DRM data: missing users",
+      "description": "Ronnie Diamond and Lorraine Fisher not found as active SF users",
+      "column": "blocked",
+      "swimLane": "Federation Analytics",
+      "priority": "P3",
+      "effort": "1h",
+      "owner": "H2+David",
+      "blocker": "May have left org \u2014 need David to confirm",
+      "lastTouched": "2026-03-07",
+      "source": "Data issue",
+      "tags": [
+        "salesforce",
+        "jfsd-ui"
+      ]
+    },
+    {
+      "id": "blocked-givecloud-recurring",
+      "title": "GiveCloud is_recurring always false",
+      "description": "API returns is_recurring=false for all contributions",
+      "column": "blocked",
+      "swimLane": "System Integrations",
+      "priority": "P2",
+      "effort": "2-3h",
+      "owner": "H2",
+      "blocker": "API issue \u2014 recurring data may flow differently",
+      "lastTouched": "2026-03-07",
+      "source": "Data issue",
+      "tags": [
+        "givecloud"
+      ]
+    },
+    {
+      "id": "mk2-1.4",
+      "title": "Search by amount and campaign name",
+      "description": "GlobalSearch only matches donor names \u2014 add amount ranges and campaign indexing",
+      "column": "thisWeek",
+      "swimLane": "Federation Analytics",
+      "priority": "P2",
+      "effort": "2-3h",
+      "owner": "H2",
+      "blocker": null,
+      "lastTouched": "2026-03-07",
+      "source": "McKinsey v2 1.4",
+      "tags": [
+        "jfsd-ui"
+      ]
+    },
+    {
+      "id": "mk2-1.6",
+      "title": "Cache silence-alerts.json fetch",
+      "description": "Outreach fetches silence-alerts.json 3 times \u2014 use shared cache or context",
+      "column": "thisWeek",
+      "swimLane": "Federation Analytics",
+      "priority": "P3",
+      "effort": "1-2h",
+      "owner": "H2",
+      "blocker": null,
+      "lastTouched": "2026-03-07",
+      "source": "McKinsey v2 1.6",
+      "tags": [
+        "jfsd-ui"
+      ]
+    },
+    {
+      "id": "mk2-1.7",
+      "title": "CSV export on Facilities",
+      "description": "Thermostat list should be exportable to CSV",
+      "column": "thisWeek",
+      "swimLane": "Federation Analytics",
+      "priority": "P3",
+      "effort": "1h",
+      "owner": "H2",
+      "blocker": null,
+      "lastTouched": "2026-03-07",
+      "source": "McKinsey v2 1.7",
+      "tags": [
+        "jfsd-ui"
+      ]
+    },
+    {
+      "id": "mk2-2.1",
+      "title": "Authentication (Azure AD OAuth)",
+      "description": "Required for org rollout \u2014 Graph API creds already exist",
+      "column": "upNext",
+      "swimLane": "Federation Analytics",
+      "priority": "P1",
+      "effort": "1-2w",
+      "owner": "H2+David",
+      "blocker": null,
+      "lastTouched": "2026-03-07",
+      "source": "McKinsey v2 2.1",
+      "tags": [
+        "jfsd-ui",
+        "auth"
+      ]
+    },
+    {
+      "id": "mk2-2.2",
+      "title": "Role-based sidebar filtering",
+      "description": "Map roles to visible dashboards after auth is implemented",
+      "column": "upNext",
+      "swimLane": "Federation Analytics",
+      "priority": "P1",
+      "effort": "2-3d",
+      "owner": "H2",
+      "blocker": null,
+      "lastTouched": "2026-03-07",
+      "source": "McKinsey v2 2.2",
+      "tags": [
+        "jfsd-ui",
+        "auth"
+      ]
+    },
+    {
+      "id": "mk2-2.3",
+      "title": "Comprehensive Campaign date filter",
+      "description": "Extend date filter to giving levels, donor breakdown, pipeline, sub-campaigns",
+      "column": "upNext",
+      "swimLane": "Federation Analytics",
+      "priority": "P2",
+      "effort": "3-5d",
+      "owner": "H2",
+      "blocker": null,
+      "lastTouched": "2026-03-07",
+      "source": "McKinsey v2 2.3",
+      "tags": [
+        "jfsd-ui"
+      ]
+    },
+    {
+      "id": "mk2-2.4",
+      "title": "Date range on Donor Health + DRM",
+      "description": "Apply Campaign Tracker date filter pattern to next-highest-value dashboards",
+      "column": "upNext",
+      "swimLane": "Federation Analytics",
+      "priority": "P2",
+      "effort": "3-5d",
+      "owner": "H2",
+      "blocker": null,
+      "lastTouched": "2026-03-07",
+      "source": "McKinsey v2 2.4",
+      "tags": [
+        "jfsd-ui"
+      ]
+    },
+    {
+      "id": "mk2-2.5",
+      "title": "Merge Prospect Research into DRM",
+      "description": "Add Prospects tab to DRM detail view with upgrade opportunities",
+      "column": "upNext",
+      "swimLane": "Federation Analytics",
+      "priority": "P2",
+      "effort": "3-5d",
+      "owner": "H2",
+      "blocker": null,
+      "lastTouched": "2026-03-07",
+      "source": "McKinsey v2 2.5",
+      "tags": [
+        "jfsd-ui"
+      ]
+    },
+    {
+      "id": "mk2-3.1",
+      "title": "Notification system",
+      "description": "Push alerts for failed charges, temp spikes, pledge defaults, major gifts",
+      "column": "backlog",
+      "swimLane": "Federation Analytics",
+      "priority": "P1",
+      "effort": "1-2w",
+      "owner": "H2",
+      "blocker": null,
+      "lastTouched": "2026-03-07",
+      "source": "McKinsey v2 3.1",
+      "tags": [
+        "jfsd-ui",
+        "notifications"
+      ]
+    },
+    {
+      "id": "mk2-3.2",
+      "title": "Embedded Salesforce actions",
+      "description": "Create Task, Log Call, Send Email buttons in Outreach and DRM dashboards",
+      "column": "backlog",
+      "swimLane": "Federation Analytics",
+      "priority": "P1",
+      "effort": "2-3w",
+      "owner": "H2",
+      "blocker": null,
+      "lastTouched": "2026-03-07",
+      "source": "McKinsey v2 3.2",
+      "tags": [
+        "jfsd-ui",
+        "salesforce"
+      ]
+    },
+    {
+      "id": "mk2-3.3",
+      "title": "Live API migration",
+      "description": "Phase 1: Campaign + Donor Health via SOQL. Phase 2: Stripe + GiveCloud. Phase 3: Full",
+      "column": "backlog",
+      "swimLane": "Federation Analytics",
+      "priority": "P2",
+      "effort": "4-6w",
+      "owner": "H2",
+      "blocker": null,
+      "lastTouched": "2026-03-07",
+      "source": "McKinsey v2 3.3",
+      "tags": [
+        "jfsd-ui",
+        "api"
+      ]
+    },
+    {
+      "id": "mk2-3.4",
+      "title": "Donor 360 profile view",
+      "description": "Click any donor name \u2192 slide-out panel with complete cross-dashboard profile",
+      "column": "backlog",
+      "swimLane": "Federation Analytics",
+      "priority": "P2",
+      "effort": "2-3w",
+      "owner": "H2",
+      "blocker": null,
+      "lastTouched": "2026-03-07",
+      "source": "McKinsey v2 3.4",
+      "tags": [
+        "jfsd-ui"
+      ]
+    },
+    {
+      "id": "mk2-3.5",
+      "title": "True PDF rendering",
+      "description": "Replace html2canvas with server-side Puppeteer or @react-pdf/renderer",
+      "column": "backlog",
+      "swimLane": "Federation Analytics",
+      "priority": "P3",
+      "effort": "1-2w",
+      "owner": "H2",
+      "blocker": null,
+      "lastTouched": "2026-03-07",
+      "source": "McKinsey v2 3.5",
+      "tags": [
+        "jfsd-ui"
+      ]
+    },
+    {
+      "id": "mk2-3.6",
+      "title": "Predictive analytics",
+      "description": "ML-based churn prediction, optimal ask modeling, campaign forecasting",
+      "column": "backlog",
+      "swimLane": "Federation Analytics",
+      "priority": "P3",
+      "effort": "3-4w",
+      "owner": "H2",
+      "blocker": null,
+      "lastTouched": "2026-03-07",
+      "source": "McKinsey v2 3.6",
+      "tags": [
+        "jfsd-ui",
+        "ml"
+      ]
+    },
+    {
+      "id": "mk2-3.7",
+      "title": "Mobile-first DRM view",
+      "description": "Simplified 3-dashboard mobile experience for DRMs in the field",
+      "column": "backlog",
+      "swimLane": "Federation Analytics",
+      "priority": "P3",
+      "effort": "3-4w",
+      "owner": "H2",
+      "blocker": null,
+      "lastTouched": "2026-03-07",
+      "source": "McKinsey v2 3.7",
+      "tags": [
+        "jfsd-ui",
+        "mobile"
+      ]
+    },
+    {
+      "id": "proj-gift-entry",
+      "title": "Gift Entry Automation Pipeline",
+      "description": "End-to-end: scan check \u2192 OCR \u2192 donor match \u2192 GiftTransaction \u2192 acknowledgment \u2192 mail/call. All 7 APIs live.",
+      "column": "upNext",
+      "swimLane": "Advancement Services",
+      "priority": "P1",
+      "effort": "3-4w",
+      "owner": "H2+David",
+      "blocker": null,
+      "lastTouched": "2026-03-07",
+      "source": "PROJECTS.md",
+      "tags": [
+        "salesforce",
+        "automation",
+        "lob",
+        "ocr"
+      ]
+    },
+    {
+      "id": "gift-email-watcher",
+      "title": "Gift Entry: Email Watcher Cron",
+      "description": "Poll H2 inbox every 15 min for check image attachments via Graph API",
+      "column": "upNext",
+      "swimLane": "Advancement Services",
+      "priority": "P1",
+      "effort": "3-4h",
+      "owner": "H2",
+      "blocker": null,
+      "lastTouched": "2026-03-07",
+      "source": "Gift Entry Pipeline",
+      "tags": [
+        "graph",
+        "automation"
+      ]
+    },
+    {
+      "id": "gift-ocr-extract",
+      "title": "Gift Entry: OCR Extraction Script",
+      "description": "Claude Vision reads check image \u2192 structured JSON (donor name, amount, check #, date, memo, address)",
+      "column": "upNext",
+      "swimLane": "Advancement Services",
+      "priority": "P1",
+      "effort": "1d",
+      "owner": "H2",
+      "blocker": null,
+      "lastTouched": "2026-03-07",
+      "source": "Gift Entry Pipeline",
+      "tags": [
+        "ocr",
+        "vision"
+      ]
+    },
+    {
+      "id": "gift-fuzzy-match",
+      "title": "Gift Entry: Fuzzy Donor Matching",
+      "description": "SOSL + scoring: name match, address boost (+15), prior gifts (+10), active pledge (+20). Confidence gate: \u226590% auto, 70-89% top 3, <70% manual",
+      "column": "upNext",
+      "swimLane": "Advancement Services",
+      "priority": "P1",
+      "effort": "1-2d",
+      "owner": "H2",
+      "blocker": null,
+      "lastTouched": "2026-03-07",
+      "source": "Gift Entry Pipeline",
+      "tags": [
+        "salesforce",
+        "matching"
+      ]
+    },
+    {
+      "id": "gift-dupe-check",
+      "title": "Gift Entry: Duplicate Detection",
+      "description": "Same donor + amount + date \u00b130 days = flag potential duplicate before creating gift",
+      "column": "upNext",
+      "swimLane": "Advancement Services",
+      "priority": "P1",
+      "effort": "3-4h",
+      "owner": "H2",
+      "blocker": null,
+      "lastTouched": "2026-03-07",
+      "source": "Gift Entry Pipeline",
+      "tags": [
+        "salesforce"
+      ]
+    },
+    {
+      "id": "gift-sf-write",
+      "title": "Gift Entry: Salesforce GiftTransaction Create",
+      "description": "Create GiftTransaction with amount, donor, campaign, check #, payment method. Update recognition totals.",
+      "column": "upNext",
+      "swimLane": "Advancement Services",
+      "priority": "P1",
+      "effort": "1d",
+      "owner": "H2",
+      "blocker": null,
+      "lastTouched": "2026-03-07",
+      "source": "Gift Entry Pipeline",
+      "tags": [
+        "salesforce"
+      ]
+    },
+    {
+      "id": "gift-queue-dashboard",
+      "title": "Gift Entry: Review Queue Dashboard (#17)",
+      "description": "jfsd-ui dashboard showing OCR data + top matches + check image. Approve/reject/override for low-confidence matches",
+      "column": "upNext",
+      "swimLane": "Federation Analytics",
+      "priority": "P1",
+      "effort": "2-3d",
+      "owner": "H2",
+      "blocker": null,
+      "lastTouched": "2026-03-07",
+      "source": "Gift Entry Pipeline",
+      "tags": [
+        "jfsd-ui"
+      ]
+    },
+    {
+      "id": "gift-ack-pdf",
+      "title": "Gift Entry: Acknowledgment Letter PDF",
+      "description": "Puppeteer generates tax receipt + thank-you from JFSD branded template. Tiered: base, $250+, $1K+, $5K+, $25K+",
+      "column": "upNext",
+      "swimLane": "Advancement Services",
+      "priority": "P1",
+      "effort": "1-2d",
+      "owner": "H2",
+      "blocker": null,
+      "lastTouched": "2026-03-07",
+      "source": "Gift Entry Pipeline",
+      "tags": [
+        "puppeteer",
+        "pdf"
+      ]
+    },
+    {
+      "id": "gift-lob-mail",
+      "title": "Gift Entry: Lob Physical Mail",
+      "description": "Send PDF acknowledgment via Lob print+mail API. Address verification before sending. Free tier: 300/mo",
+      "column": "upNext",
+      "swimLane": "Advancement Services",
+      "priority": "P1",
+      "effort": "1d",
+      "owner": "H2",
+      "blocker": null,
+      "lastTouched": "2026-03-07",
+      "source": "Gift Entry Pipeline",
+      "tags": [
+        "lob",
+        "mail"
+      ]
+    },
+    {
+      "id": "gift-lob-verify",
+      "title": "Address Verification via Lob",
+      "description": "Bulk verify donor mailing addresses in Salesforce. Flag bad addresses before mailing. Can run proactively on full database",
+      "column": "upNext",
+      "swimLane": "Advancement Services",
+      "priority": "P2",
+      "effort": "3-4h",
+      "owner": "H2",
+      "blocker": null,
+      "lastTouched": "2026-03-07",
+      "source": "Gift Entry Pipeline",
+      "tags": [
+        "lob",
+        "salesforce"
+      ]
+    },
+    {
+      "id": "gift-voice-call",
+      "title": "Gift Entry: Thank-You Voice Call",
+      "description": "Dalia calls donor for gifts \u2265$1K within 48h. Personalized script from SF data. Already wired via ElevenLabs+Twilio",
+      "column": "upNext",
+      "swimLane": "Advancement Services",
+      "priority": "P1",
+      "effort": "3-4h",
+      "owner": "H2",
+      "blocker": null,
+      "lastTouched": "2026-03-07",
+      "source": "Gift Entry Pipeline",
+      "tags": [
+        "elevenlabs",
+        "twilio",
+        "voice"
+      ]
+    },
+    {
+      "id": "gift-drm-notify",
+      "title": "Gift Entry: DRM Notification",
+      "description": "Telegram/email to portfolio manager: '$X gift from [Donor]' with context. Handwritten note queue for $5K+",
+      "column": "upNext",
+      "swimLane": "Advancement Services",
+      "priority": "P1",
+      "effort": "2-3h",
+      "owner": "H2",
+      "blocker": null,
+      "lastTouched": "2026-03-07",
+      "source": "Gift Entry Pipeline",
+      "tags": [
+        "telegram",
+        "graph"
+      ]
+    },
+    {
+      "id": "gift-campaign-match",
+      "title": "Gift Entry: Campaign/Fund Matching",
+      "description": "Parse memo line for fund designations and campaign codes. Default to Annual Campaign FY26 if no match",
+      "column": "upNext",
+      "swimLane": "Advancement Services",
+      "priority": "P1",
+      "effort": "3-4h",
+      "owner": "H2",
+      "blocker": null,
+      "lastTouched": "2026-03-07",
+      "source": "Gift Entry Pipeline",
+      "tags": [
+        "salesforce"
+      ]
+    },
+    {
+      "id": "proj-sage-api",
+      "title": "Sage Intacct Direct API",
+      "description": "Real-time GL access, cash position, budget variance",
+      "column": "backlog",
+      "swimLane": "Finance & Accounting",
+      "priority": "P2",
+      "effort": "1-2w",
+      "owner": "H2",
+      "blocker": null,
+      "lastTouched": "2026-03-07",
+      "source": "PROJECTS.md",
+      "tags": [
+        "sage",
+        "api"
+      ]
+    },
+    {
+      "id": "proj-verkada",
+      "title": "Verkada API Integration",
+      "description": "Occupancy dashboard, smart HVAC integration, after-hours alerts",
+      "column": "backlog",
+      "swimLane": "Facilities & Ops",
+      "priority": "P2",
+      "effort": "1w",
+      "owner": "H2",
+      "blocker": null,
+      "lastTouched": "2026-03-07",
+      "source": "PROJECTS.md",
+      "tags": [
+        "verkada",
+        "api"
+      ]
+    },
+    {
+      "id": "proj-paylocity",
+      "title": "Paylocity API Exploration",
+      "description": "People analytics, department costs, PTO coverage",
+      "column": "backlog",
+      "swimLane": "Agent Architecture",
+      "priority": "P3",
+      "effort": "1w",
+      "owner": "H2",
+      "blocker": null,
+      "lastTouched": "2026-03-07",
+      "source": "PROJECTS.md",
+      "tags": [
+        "paylocity",
+        "api"
+      ]
+    },
+    {
+      "id": "proj-gc-sf-sync",
+      "title": "GiveCloud \u2194 Salesforce Sync",
+      "description": "Match by email, map fields, build sync tool \u2014 30 accounts ready",
+      "column": "backlog",
+      "swimLane": "System Integrations",
+      "priority": "P2",
+      "effort": "1-2w",
+      "owner": "H2",
+      "blocker": null,
+      "lastTouched": "2026-03-07",
+      "source": "PROJECTS.md",
+      "tags": [
+        "givecloud",
+        "salesforce"
+      ]
+    },
+    {
+      "id": "proj-fec",
+      "title": "FEC Political Giving Integration",
+      "description": "Enrich donor research profiles with political contribution data",
+      "column": "backlog",
+      "swimLane": "Advancement Services",
+      "priority": "P3",
+      "effort": "slow burn",
+      "owner": "H2",
+      "blocker": null,
+      "lastTouched": "2026-03-07",
+      "source": "PROJECTS.md",
+      "tags": [
+        "fec",
+        "research"
+      ]
+    },
+    {
+      "id": "proj-sf-data-quality",
+      "title": "Salesforce Data Quality Cleanup",
+      "description": "Addresses, phone numbers, names, capitalizations, report folders",
+      "column": "backlog",
+      "swimLane": "Advancement Services",
+      "priority": "P2",
+      "effort": "ongoing",
+      "owner": "H2+Sharon",
+      "blocker": null,
+      "lastTouched": "2026-03-07",
+      "source": "PROJECTS.md",
+      "tags": [
+        "salesforce"
+      ]
+    },
+    {
+      "id": "proj-accounting-policy",
       "title": "Updated Accounting Policy",
-      "section": "\ud83d\udccb Backlog",
-      "done": false,
-      "column": "\ud83d\udccb Backlog"
+      "description": "Policy manual, documentation, spend policy updates",
+      "column": "backlog",
+      "swimLane": "Finance & Accounting",
+      "priority": "P2",
+      "effort": "1-2w",
+      "owner": "David",
+      "blocker": null,
+      "lastTouched": "2026-03-07",
+      "source": "PROJECTS.md",
+      "tags": [
+        "accounting"
+      ]
     },
     {
-      "title": "Updated spend policy",
-      "section": "\ud83d\udccb Backlog",
-      "done": false,
-      "column": "\ud83d\udccb Backlog"
+      "id": "proj-board-packets",
+      "title": "Auto Board Packets",
+      "description": "Monthly assembly: Salesforce giving + Sage financials \u2192 formatted packet",
+      "column": "backlog",
+      "swimLane": "Finance & Accounting",
+      "priority": "P2",
+      "effort": "2-3w",
+      "owner": "H2",
+      "blocker": null,
+      "lastTouched": "2026-03-07",
+      "source": "PROJECTS.md",
+      "tags": [
+        "automation"
+      ]
     },
     {
-      "title": "Monthly reporting package and analytics",
-      "section": "\ud83d\udccb Backlog",
-      "done": false,
-      "column": "\ud83d\udccb Backlog"
+      "id": "proj-campaign-roi",
+      "title": "Campaign ROI Dashboard",
+      "description": "Salesforce campaigns + Ramp expenses = true cost per dollar raised",
+      "column": "backlog",
+      "swimLane": "Finance & Accounting",
+      "priority": "P2",
+      "effort": "1-2w",
+      "owner": "H2",
+      "blocker": null,
+      "lastTouched": "2026-03-07",
+      "source": "PROJECTS.md",
+      "tags": [
+        "jfsd-ui",
+        "ramp",
+        "salesforce"
+      ]
     },
     {
-      "title": "**Check Scanner** \u2014 OCR scanned checks \u2192 extract donor, amount, check #, date \u2192 match Account \u2192 crea",
-      "section": "\ud83d\udccb Backlog",
-      "done": false,
-      "column": "\ud83d\udccb Backlog"
+      "id": "proj-numeric",
+      "title": "Month-end Close in Numeric",
+      "description": "Integration with Numeric for month-end close process",
+      "column": "backlog",
+      "swimLane": "Finance & Accounting",
+      "priority": "P3",
+      "effort": "research",
+      "owner": "David",
+      "blocker": null,
+      "lastTouched": "2026-03-07",
+      "source": "PROJECTS.md",
+      "tags": [
+        "numeric",
+        "accounting"
+      ]
     },
     {
-      "title": "**Online Import** \u2014 Parse Excel from online giving systems \u2192 map to Salesforce fields \u2192 book with de",
-      "section": "\ud83d\udccb Backlog",
-      "done": false,
-      "column": "\ud83d\udccb Backlog"
+      "id": "proj-docgen-templates",
+      "title": "Document Generation Templates",
+      "description": "IRS substantiation, year-end statements, more pledge templates",
+      "column": "backlog",
+      "swimLane": "Advancement Services",
+      "priority": "P2",
+      "effort": "1w",
+      "owner": "H2",
+      "blocker": null,
+      "lastTouched": "2026-03-07",
+      "source": "PROJECTS.md",
+      "tags": [
+        "docuseal"
+      ]
     },
     {
-      "title": "**Challenges:** Donor name matching (fuzzy), designation mapping, review workflow",
-      "section": "\ud83d\udccb Backlog",
-      "done": false,
-      "column": "\ud83d\udccb Backlog"
+      "id": "proj-hubspot",
+      "title": "HubSpot Integration",
+      "description": "Marketing dashboard data source for Operations Hub",
+      "column": "backlog",
+      "swimLane": "System Integrations",
+      "priority": "P3",
+      "effort": "1-2w",
+      "owner": "H2",
+      "blocker": null,
+      "lastTouched": "2026-03-07",
+      "source": "PROJECTS.md",
+      "tags": [
+        "hubspot",
+        "api"
+      ]
     },
     {
-      "title": "**Dependencies:** Salesforce write API (confirmed working)",
-      "section": "\ud83d\udccb Backlog",
-      "done": false,
-      "column": "\ud83d\udccb Backlog"
+      "id": "auto-gift-scanner",
+      "title": "Gift Entry: Check Scanner OCR",
+      "description": "OCR scanned checks \u2192 extract donor/amount/check#/date \u2192 fuzzy match Account \u2192 create GiftTransaction",
+      "column": "backlog",
+      "swimLane": "Advancement Services",
+      "priority": "P1",
+      "effort": "2-3w",
+      "owner": "H2",
+      "blocker": null,
+      "lastTouched": "2026-03-07",
+      "source": "Automation L1",
+      "tags": [
+        "salesforce",
+        "ocr",
+        "automation"
+      ]
     },
     {
-      "title": "Policies updated and integrated",
-      "section": "\ud83d\udccb Backlog",
-      "done": false,
-      "column": "\ud83d\udccb Backlog"
+      "id": "auto-gift-import",
+      "title": "Gift Entry: Online Import Parser",
+      "description": "Parse Excel dumps from online giving \u2192 map to SF fields \u2192 book with designation + campaign",
+      "column": "backlog",
+      "swimLane": "Advancement Services",
+      "priority": "P1",
+      "effort": "1-2w",
+      "owner": "H2",
+      "blocker": null,
+      "lastTouched": "2026-03-07",
+      "source": "Automation L1",
+      "tags": [
+        "salesforce",
+        "automation"
+      ]
     },
     {
-      "title": "Gift Agreement template",
-      "section": "\ud83d\udccb Backlog",
-      "done": false,
-      "column": "\ud83d\udccb Backlog"
+      "id": "auto-month-end",
+      "title": "Month-End Close Copilot",
+      "description": "Sage GL pulls \u2192 auto trial balance \u2192 flag unusual entries \u2192 draft journal entries for review",
+      "column": "upNext",
+      "swimLane": "Finance & Accounting",
+      "priority": "P1",
+      "effort": "2-3w",
+      "owner": "H2+James",
+      "blocker": null,
+      "lastTouched": "2026-03-07",
+      "source": "Automation L1",
+      "tags": [
+        "sage",
+        "automation"
+      ]
     },
     {
-      "title": "Acknowledgment templates",
-      "section": "\ud83d\udccb Backlog",
-      "done": false,
-      "column": "\ud83d\udccb Backlog"
+      "id": "auto-three-way-match",
+      "title": "Three-Way Reconciliation",
+      "description": "Auto-reconcile Stripe payouts \u2194 bank deposits \u2194 GiveCloud contributions",
+      "column": "backlog",
+      "swimLane": "Finance & Accounting",
+      "priority": "P1",
+      "effort": "2w",
+      "owner": "H2",
+      "blocker": null,
+      "lastTouched": "2026-03-07",
+      "source": "Automation L1",
+      "tags": [
+        "stripe",
+        "givecloud",
+        "reconciliation"
+      ]
     },
     {
-      "title": "Pledge reminder template",
-      "section": "\ud83d\udccb Backlog",
-      "done": false,
-      "column": "\ud83d\udccb Backlog"
+      "id": "auto-board-packet",
+      "title": "Auto Board Packet Assembly",
+      "description": "Pull campaign + financials + program highlights \u2192 branded PDF \u2192 email to board",
+      "column": "backlog",
+      "swimLane": "Finance & Accounting",
+      "priority": "P1",
+      "effort": "2-3w",
+      "owner": "H2",
+      "blocker": null,
+      "lastTouched": "2026-03-07",
+      "source": "Automation L1",
+      "tags": [
+        "automation",
+        "pdf"
+      ]
     },
     {
-      "title": "**Status:** \ud83d\udfe1 In Progress",
-      "section": "\ud83d\udccb Backlog",
-      "done": false,
-      "column": "\ud83d\udccb Backlog"
+      "id": "auto-pledge-reminders",
+      "title": "Pledge Reminder Automation",
+      "description": "Identify pledges approaching due \u2192 generate personalized letter via DocuSeal \u2192 queue \u2192 send",
+      "column": "backlog",
+      "swimLane": "Advancement Services",
+      "priority": "P1",
+      "effort": "1-2w",
+      "owner": "H2",
+      "blocker": null,
+      "lastTouched": "2026-03-07",
+      "source": "Automation L1",
+      "tags": [
+        "docuseal",
+        "salesforce",
+        "automation"
+      ]
     },
     {
-      "title": "**Location:** `docs/salesforce/household-greeting-system.md`",
-      "section": "\ud83d\udccb Backlog",
-      "done": false,
-      "column": "\ud83d\udccb Backlog"
+      "id": "auto-morning-brief",
+      "title": "Morning CFO Brief",
+      "description": "7 AM daily: overnight Stripe charges, failed payments, Ramp anomalies, calendar, emails, building alerts \u2192 one Telegram message",
+      "column": "thisWeek",
+      "swimLane": "Finance & Accounting",
+      "priority": "P0",
+      "effort": "1d",
+      "owner": "H2",
+      "blocker": null,
+      "lastTouched": "2026-03-07",
+      "source": "Automation L2",
+      "tags": [
+        "cron",
+        "automation",
+        "telegram"
+      ]
     },
     {
-      "title": "**Problem:** Z\"L (deceased) households not getting correct greetings",
-      "section": "\ud83d\udccb Backlog",
-      "done": false,
-      "column": "\ud83d\udccb Backlog"
+      "id": "mon-firewall",
+      "title": "Enable macOS Firewall",
+      "description": "Security audit flagged firewall OFF. Run socketfilterfw --setglobalstate on",
+      "column": "thisWeek",
+      "swimLane": "Facilities & Ops",
+      "priority": "P1",
+      "effort": "5min",
+      "owner": "H2",
+      "blocker": null,
+      "lastTouched": "2026-03-07",
+      "source": "Security Audit Feb 20",
+      "tags": [
+        "security"
+      ]
     },
     {
-      "title": "**Completed:**",
-      "section": "\ud83d\udccb Backlog",
-      "done": false,
-      "column": "\ud83d\udccb Backlog"
+      "id": "mon-timemachine",
+      "title": "Verify Time Machine Backups",
+      "description": "Security audit: no recent backup path returned. Confirm backups completing to target disk",
+      "column": "thisWeek",
+      "swimLane": "Facilities & Ops",
+      "priority": "P1",
+      "effort": "15min",
+      "owner": "David",
+      "blocker": null,
+      "lastTouched": "2026-03-07",
+      "source": "Security Audit Feb 20",
+      "tags": [
+        "security",
+        "backup"
+      ]
     },
     {
-      "title": "Full system documentation",
-      "section": "\ud83d\udccb Backlog",
-      "done": true,
-      "column": "Done"
+      "id": "mon-openclaw-update",
+      "title": "OpenClaw Update (2026.2.19-2)",
+      "description": "Update available via pnpm. Run openclaw update when convenient",
+      "column": "thisWeek",
+      "swimLane": "System Integrations",
+      "priority": "P2",
+      "effort": "10min",
+      "owner": "H2+David",
+      "blocker": null,
+      "lastTouched": "2026-03-07",
+      "source": "Security Audit Feb 20",
+      "tags": [
+        "openclaw"
+      ]
     },
     {
-      "title": "Analyzed 99 Z\"L households",
-      "section": "\ud83d\udccb Backlog",
-      "done": true,
-      "column": "Done"
+      "id": "mon-schedule-audit",
+      "title": "Schedule Periodic Security Audits",
+      "description": "Set up weekly openclaw security audit --deep via cron. Store results, alert on changes",
+      "column": "thisWeek",
+      "swimLane": "System Integrations",
+      "priority": "P2",
+      "effort": "30min",
+      "owner": "H2",
+      "blocker": null,
+      "lastTouched": "2026-03-07",
+      "source": "Security Audit Feb 20",
+      "tags": [
+        "security",
+        "cron"
+      ]
     },
     {
-      "title": "Updated 16 single-survivor greetings via API",
-      "section": "\ud83d\udccb Backlog",
-      "done": true,
-      "column": "Done"
+      "id": "auto-donor-triggers-gift",
+      "title": "Donor Trigger: New Major Gift Thank-You Call",
+      "description": "SF gift detected \u2192 pre-bake donor context markdown \u2192 Dalia calls within 24h \u2192 logs result to SF. Start with gifts >$1K. APIs and numbers already working.",
+      "column": "thisWeek",
+      "swimLane": "Advancement Services",
+      "priority": "P0",
+      "effort": "half day",
+      "owner": "H2",
+      "blocker": null,
+      "lastTouched": "2026-03-07",
+      "source": "Automation L2",
+      "tags": [
+        "salesforce",
+        "elevenlabs",
+        "twilio",
+        "voice",
+        "automation"
+      ]
     },
     {
-      "title": "Flow spec for Contact deceased trigger (`docs/salesforce/flow-spec-contact-deceased-trigger.md`)",
-      "section": "\ud83d\udccb Backlog",
-      "done": true,
-      "column": "Done"
+      "id": "auto-donor-triggers-fail",
+      "title": "Donor Trigger: Recurring Gift Failure",
+      "description": "Watch for recurring gift failure \u2192 auto-retry logic \u2192 escalate to Sharon after 3 fails",
+      "column": "upNext",
+      "swimLane": "Advancement Services",
+      "priority": "P1",
+      "effort": "1w",
+      "owner": "H2",
+      "blocker": null,
+      "lastTouched": "2026-03-07",
+      "source": "Automation L2",
+      "tags": [
+        "stripe",
+        "salesforce",
+        "automation"
+      ]
     },
     {
-      "title": "**Remaining (for Paul):**",
-      "section": "\ud83d\udccb Backlog",
-      "done": false,
-      "column": "\ud83d\udccb Backlog"
+      "id": "auto-donor-triggers-lybunt",
+      "title": "Donor Trigger: LYBUNT 365-Day Alert",
+      "description": "LYBUNT hitting 365 days \u2192 auto-generate outreach script \u2192 assign to DRM portfolio",
+      "column": "backlog",
+      "swimLane": "Advancement Services",
+      "priority": "P2",
+      "effort": "1w",
+      "owner": "H2",
+      "blocker": null,
+      "lastTouched": "2026-03-07",
+      "source": "Automation L2",
+      "tags": [
+        "salesforce",
+        "automation"
+      ]
     },
     {
-      "title": "Fix flow logic \u2014 handle single-survivor case (return \"FirstName LastName\" not null)",
-      "section": "\ud83d\udccb Backlog",
-      "done": false,
-      "column": "\ud83d\udccb Backlog"
+      "id": "auto-anomaly-ramp",
+      "title": "Anomaly Detection: Ramp Spend",
+      "description": "Ramp charge >$5K without PO \u2192 flag James. Unusual vendor or category \u2192 alert",
+      "column": "backlog",
+      "swimLane": "Finance & Accounting",
+      "priority": "P2",
+      "effort": "1w",
+      "owner": "H2",
+      "blocker": null,
+      "lastTouched": "2026-03-07",
+      "source": "Automation L2",
+      "tags": [
+        "ramp",
+        "anomaly",
+        "automation"
+      ]
     },
     {
-      "title": "Add Contact trigger \u2014 when `Deceased__c` \u2192 TRUE, update household greeting",
-      "section": "\ud83d\udccb Backlog",
-      "done": false,
-      "column": "\ud83d\udccb Backlog"
+      "id": "auto-anomaly-gl",
+      "title": "Anomaly Detection: GL Entries",
+      "description": "GL entry posted to wrong department (based on historical patterns) \u2192 flag for review",
+      "column": "backlog",
+      "swimLane": "Finance & Accounting",
+      "priority": "P2",
+      "effort": "1-2w",
+      "owner": "H2",
+      "blocker": null,
+      "lastTouched": "2026-03-07",
+      "source": "Automation L2",
+      "tags": [
+        "sage",
+        "anomaly",
+        "automation"
+      ]
     },
     {
-      "title": "Fix double-space bug in informal greeting",
-      "section": "\ud83d\udccb Backlog",
-      "done": false,
-      "column": "\ud83d\udccb Backlog"
+      "id": "auto-anomaly-building",
+      "title": "Anomaly Detection: Building Temp",
+      "description": "Temp deviation >5\u00b0F from setpoint for >2h \u2192 escalate. Already partial in HEARTBEAT.md",
+      "column": "backlog",
+      "swimLane": "Facilities & Ops",
+      "priority": "P2",
+      "effort": "2-3d",
+      "owner": "H2",
+      "blocker": null,
+      "lastTouched": "2026-03-07",
+      "source": "Automation L2",
+      "tags": [
+        "ecobee",
+        "anomaly",
+        "automation"
+      ]
     },
     {
-      "title": "Data cleanup \u2014 81 Z\"L households missing relationship data",
-      "section": "\ud83d\udccb Backlog",
-      "done": false,
-      "column": "\ud83d\udccb Backlog"
+      "id": "auto-anomaly-stripe",
+      "title": "Anomaly Detection: Stripe Fee Spike",
+      "description": "Stripe fee rate spike on a single day \u2192 investigate and alert",
+      "column": "backlog",
+      "swimLane": "Finance & Accounting",
+      "priority": "P3",
+      "effort": "1d",
+      "owner": "H2",
+      "blocker": null,
+      "lastTouched": "2026-03-07",
+      "source": "Automation L2",
+      "tags": [
+        "stripe",
+        "anomaly",
+        "automation"
+      ]
     },
     {
-      "title": "**Scripts:** `scripts/zl-greeting-analysis.py`, `scripts/zl-greeting-update.js`",
-      "section": "\ud83d\udccb Backlog",
-      "done": false,
-      "column": "\ud83d\udccb Backlog"
+      "id": "auto-weekly-intel",
+      "title": "Weekly Competitive Intelligence",
+      "description": "Scrape other Federation annual reports, major gift announcements, leadership changes \u2192 digest",
+      "column": "backlog",
+      "swimLane": "Advancement Services",
+      "priority": "P3",
+      "effort": "1-2w",
+      "owner": "H2",
+      "blocker": null,
+      "lastTouched": "2026-03-07",
+      "source": "Automation L2",
+      "tags": [
+        "research",
+        "automation"
+      ]
     },
     {
-      "title": "**Problem:** Emoji icons (\ud83d\udcb0\ud83d\udcca\ud83d\udcc8\ud83d\udd04) in `AI_Research_Summary__pc` field render poorly in Excel/PDF export",
-      "section": "\ud83d\udccb Backlog",
-      "done": false,
-      "column": "\ud83d\udccb Backlog"
+      "id": "agent-finance",
+      "title": "Finance Agent",
+      "description": "Overnight: pull GL, reconcile bank, flag discrepancies, draft JEs. Morning: 'Here's what I found, 3 items need approval'",
+      "column": "backlog",
+      "swimLane": "Agent Architecture",
+      "priority": "P1",
+      "effort": "3-4w",
+      "owner": "H2",
+      "blocker": null,
+      "lastTouched": "2026-03-07",
+      "source": "Automation L3",
+      "tags": [
+        "sage",
+        "ramp",
+        "agent"
+      ]
     },
     {
-      "title": "**Scope:** Strip or replace emojis with plain-text labels across all Person Account summaries",
-      "section": "\ud83d\udccb Backlog",
-      "done": false,
-      "column": "\ud83d\udccb Backlog"
+      "id": "agent-advancement",
+      "title": "Advancement Services Agent",
+      "description": "Daily SF monitoring: new gifts, pledge payments, lapsed donors. Auto-generate ack letters, update recognition, prep DRM briefings",
+      "column": "backlog",
+      "swimLane": "Agent Architecture",
+      "priority": "P1",
+      "effort": "3-4w",
+      "owner": "H2",
+      "blocker": null,
+      "lastTouched": "2026-03-07",
+      "source": "Automation L3",
+      "tags": [
+        "salesforce",
+        "agent"
+      ]
     },
     {
-      "title": "**Source:** Prospect research pipeline consolidated summaries",
-      "section": "\ud83d\udccb Backlog",
-      "done": false,
-      "column": "\ud83d\udccb Backlog"
+      "id": "agent-facilities",
+      "title": "Facilities Agent",
+      "description": "Ecobee + Verkada: occupancy-based HVAC optimization, auto-setback when empty, maintenance scheduling",
+      "column": "backlog",
+      "swimLane": "Agent Architecture",
+      "priority": "P2",
+      "effort": "2-3w",
+      "owner": "H2",
+      "blocker": null,
+      "lastTouched": "2026-03-07",
+      "source": "Automation L3",
+      "tags": [
+        "ecobee",
+        "verkada",
+        "agent"
+      ]
     },
     {
-      "title": "**Priority:** Medium \u2014 cosmetic but looks unprofessional in exports",
-      "section": "\ud83d\udccb Backlog",
-      "done": false,
-      "column": "\ud83d\udccb Backlog"
+      "id": "agent-digital-cfo",
+      "title": "Digital CFO Office",
+      "description": "Always-on agent monitoring ALL systems 24/7. Escalation tiers: handle silently \u2192 daily brief \u2192 Telegram \u2192 phone call",
+      "column": "backlog",
+      "swimLane": "Agent Architecture",
+      "priority": "P2",
+      "effort": "6-8w",
+      "owner": "H2",
+      "blocker": null,
+      "lastTouched": "2026-03-07",
+      "source": "Automation L3",
+      "tags": [
+        "agent",
+        "automation"
+      ]
     },
     {
-      "title": "Build cleanup script (emoji \u2192 plain text headers)",
-      "section": "\ud83d\udccb Backlog",
-      "done": false,
-      "column": "\ud83d\udccb Backlog"
+      "id": "wild-voice-network",
+      "title": "Voice Agent Network",
+      "description": "Dalia auto-calls donors for thank-yous. Mira handles inbound DRM questions. H2 takes calls when David's busy",
+      "column": "backlog",
+      "swimLane": "Agent Architecture",
+      "priority": "P2",
+      "effort": "4-6w",
+      "owner": "H2",
+      "blocker": null,
+      "lastTouched": "2026-03-07",
+      "source": "Automation L4",
+      "tags": [
+        "elevenlabs",
+        "twilio",
+        "voice"
+      ]
     },
     {
-      "title": "Run across all populated AI_Research_Summary__pc records",
-      "section": "\ud83d\udccb Backlog",
-      "done": false,
-      "column": "\ud83d\udccb Backlog"
+      "id": "wild-voice-experiments",
+      "title": "ElevenAgents A/B Experiments",
+      "description": "Use ElevenLabs Experiments to A/B test voice agent variants \u2014 different scripts, voices, guardrails. Measure CSAT, containment, conversion on live calls. Start with Dalia thank-you scripts.",
+      "column": "backlog",
+      "swimLane": "Agent Architecture",
+      "priority": "P2",
+      "effort": "1-2w",
+      "owner": "H2",
+      "blocker": null,
+      "lastTouched": "2026-03-07",
+      "source": "ElevenLabs blog Feb 19 2026",
+      "tags": [
+        "elevenlabs",
+        "voice",
+        "experiments"
+      ]
+    },
+    {
+      "id": "wild-voice-latency",
+      "title": "Voice Agent Latency Optimization",
+      "description": "Pre-load markdown knowledge bases, cache donor profiles, optimize prompt chains. Target <500ms first response. Test precomputed context vs live lookup.",
+      "column": "backlog",
+      "swimLane": "Agent Architecture",
+      "priority": "P1",
+      "effort": "1-2w",
+      "owner": "H2",
+      "blocker": null,
+      "lastTouched": "2026-03-07",
+      "source": "Voice optimization",
+      "tags": [
+        "elevenlabs",
+        "voice",
+        "performance"
+      ]
+    },
+    {
+      "id": "auto-sms-outreach",
+      "title": "SMS/Text Outreach Automation",
+      "description": "Twilio SMS for donor touchpoints: pledge reminders, thank-yous, event invites, receipt confirmations. Personalized templates from SF data. Opt-in/opt-out compliance.",
+      "column": "backlog",
+      "swimLane": "Advancement Services",
+      "priority": "P1",
+      "effort": "2-3w",
+      "owner": "H2",
+      "blocker": null,
+      "lastTouched": "2026-03-07",
+      "source": "Automation L2",
+      "tags": [
+        "twilio",
+        "sms",
+        "salesforce",
+        "automation"
+      ]
+    },
+    {
+      "id": "wild-predictive-budget",
+      "title": "Predictive Budgeting",
+      "description": "ML model on 3 years GL data \u2192 predict monthly spend by dept \u2192 flag before overruns. 'Marketing will exceed budget by March 15'",
+      "column": "backlog",
+      "swimLane": "Finance & Accounting",
+      "priority": "P2",
+      "effort": "3-4w",
+      "owner": "H2",
+      "blocker": null,
+      "lastTouched": "2026-03-07",
+      "source": "Automation L4",
+      "tags": [
+        "ml",
+        "sage",
+        "prediction"
+      ]
+    },
+    {
+      "id": "wild-auto-grants",
+      "title": "Auto-Grant Writer",
+      "description": "Pull program data from SF \u2192 match to foundation RFPs \u2192 draft grant applications for review",
+      "column": "backlog",
+      "swimLane": "Advancement Services",
+      "priority": "P3",
+      "effort": "4-6w",
+      "owner": "H2",
+      "blocker": null,
+      "lastTouched": "2026-03-07",
+      "source": "Automation L4",
+      "tags": [
+        "salesforce",
+        "ai",
+        "grants"
+      ]
+    },
+    {
+      "id": "wild-self-healing-dq",
+      "title": "Self-Healing Data Quality",
+      "description": "Agent continuously scans SF for issues \u2192 auto-fix obvious ones \u2192 queue ambiguous for Sharon \u2192 score trends toward 80+",
+      "column": "backlog",
+      "swimLane": "Advancement Services",
+      "priority": "P1",
+      "effort": "2-3w",
+      "owner": "H2",
+      "blocker": null,
+      "lastTouched": "2026-03-07",
+      "source": "Automation L4",
+      "tags": [
+        "salesforce",
+        "data-quality",
+        "agent"
+      ]
     }
-  ],
-  "asOfDate": "2026-03-06T10:20:00"
+  ]
 }

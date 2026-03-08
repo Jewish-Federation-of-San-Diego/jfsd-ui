@@ -325,7 +325,7 @@ def build_card_management(cards: list, txns_30d: list) -> dict:
             for t in txns_30d
             if t.get("card_id") == card_id
         )
-        if limit_amt > 0 and card_spent / limit_amt > 0.8:
+        if limit_amt and limit_amt > 0 and card_spent / limit_amt > 0.8:
             high_util.append({
                 "cardholder": name,
                 "spent": round(card_spent, 2),

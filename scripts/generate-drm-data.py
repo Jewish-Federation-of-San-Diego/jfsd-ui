@@ -25,19 +25,30 @@ def sf(soql: str) -> list:
         result = subprocess.run(
             ["node", SF_QUERY, soql], capture_output=True, text=True, timeout=120
         )
+        # Strip dotenvx noise — find first { that starts valid JSON
         stdout = result.stdout
+        # Try to find JSON in combined stdout+stderr-free output
+        json_start = -1
+        for i, ch in enumerate(stdout):
+            if ch == '{':
+                try:
+                    json.loads(stdout[i:])
+                    json_start = i
+                    break
+                except:
+                    continue
+            elif ch == '[':
+                try:
+                    json.loads(stdout[i:])
+                    json_start = i
+                    break
+                except:
+                    continue
+        if json_start >= 0:
+            stdout = stdout[json_start:]
         m = re.search(r'\{["\s]*"totalSize', stdout)
         if not m:
             m = re.search(r'\{["\s]*"records', stdout)
-        if not m:
-            for i in range(len(stdout) - 1, -1, -1):
-                if stdout[i] == '{':
-                    try:
-                        json.loads(stdout[i:])
-                        m = type('M', (), {'start': lambda s: i})()
-                        break
-                    except:
-                        continue
         if not m:
             print(f"SF no JSON: {stdout[:300]}", file=sys.stderr)
             return []

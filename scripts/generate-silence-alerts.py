@@ -13,10 +13,17 @@ SF_QUERY = str(WORKSPACE / "skills" / "salesforce" / "sf-query.js")
 def sf(soql: str) -> list:
     result = subprocess.run(["node", SF_QUERY, soql], capture_output=True, text=True, timeout=120)
     stdout = result.stdout
-    # Find first { that starts JSON (skip emoji braces in dotenv output)
+    # Find first { that starts valid JSON (skip dotenvx noise)
     import re
-    m = re.search(r'^\s*\{', stdout, re.MULTILINE)
-    brace = m.start() if m else -1
+    brace = -1
+    for i, ch in enumerate(stdout):
+        if ch == '{':
+            try:
+                json.loads(stdout[i:])
+                brace = i
+                break
+            except:
+                continue
     if brace == -1:
         print(f"No JSON in output:\n{stdout[:500]}", file=sys.stderr)
         sys.exit(1)
