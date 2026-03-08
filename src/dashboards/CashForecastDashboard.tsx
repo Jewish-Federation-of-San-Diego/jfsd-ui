@@ -27,6 +27,12 @@ interface MonthlyInflow { month: string; fy26: number; fy25: number; fy26Count: 
 interface SeasonalityItem { month: string; avgAmount: number; pctOfTotal: number; }
 interface CalendarItem { month: string; actions: string[]; }
 
+interface NarrativeSection {
+  heading: string;
+  body: string;
+  dataPoint: string;
+}
+
 interface CashData {
   generatedAt: string;
   kpis: {
@@ -40,7 +46,12 @@ interface CashData {
   monthlyInflow: MonthlyInflow[];
   seasonality: SeasonalityItem[];
   collectionCalendar: CalendarItem[];
-  narrative?: { title: string; keyFindings: string[] };
+  narrative?: {
+    title: string;
+    date?: string;
+    sections?: NarrativeSection[];
+    keyFindings: string[];
+  };
 }
 
 const SEGMENT_ORDER = ['capital', 'drm_major', 'drm_mid', 'event', 'writeoff', 'telemarketing', 'recurring', 'other'];
@@ -257,18 +268,47 @@ export function CashForecastDashboard() {
         />
       </Card>
 
-      {/* Key Findings */}
-      {data.narrative && (
-        <Card title={<span style={{ color: NAVY }}><FileSearchOutlined /> {data.narrative.title}</span>}>
-          <Space direction="vertical" size="small">
-            {data.narrative.keyFindings.map((finding, i) => (
-              <div key={i} style={{ display: 'flex', gap: 8, alignItems: 'flex-start' }}>
-                <Text style={{ color: NAVY, fontWeight: 700, minWidth: 20 }}>{i + 1}.</Text>
-                <Text>{finding}</Text>
+      {/* Executive Narrative */}
+      {data.narrative?.sections && (
+        <Card
+          style={{ borderTop: `4px solid ${NAVY}` }}
+          title={
+            <div>
+              <Title level={4} style={{ color: NAVY, margin: 0 }}><FileSearchOutlined /> {data.narrative.title}</Title>
+              {data.narrative.date && <Text type="secondary" style={{ fontSize: 12 }}>{data.narrative.date} · Collections Analysis</Text>}
+            </div>
+          }
+        >
+          <Space direction="vertical" size="large" style={{ width: '100%' }}>
+            {data.narrative.sections.map((section, i) => (
+              <div key={i} style={{ borderLeft: `3px solid ${i === (data.narrative!.sections!.length - 1) ? SUCCESS : NAVY}`, paddingLeft: 20 }}>
+                <Title level={5} style={{ color: NAVY, marginBottom: 8 }}>{section.heading}</Title>
+                <Paragraph style={{ fontSize: 14, lineHeight: 1.7, marginBottom: 8 }}>{section.body}</Paragraph>
+                <div style={{ background: '#F0F5FF', padding: '10px 16px', borderRadius: 6 }}>
+                  <Text style={{ fontSize: 13, color: NAVY }}>📊 {section.dataPoint}</Text>
+                </div>
               </div>
             ))}
           </Space>
         </Card>
+      )}
+
+      {/* Key Findings Summary */}
+      {data.narrative?.keyFindings && (
+        <Collapse ghost items={[{
+          key: 'findings',
+          label: <Text strong style={{ color: NAVY }}>Key Findings Summary</Text>,
+          children: (
+            <Space direction="vertical" size="small">
+              {data.narrative.keyFindings.map((finding, i) => (
+                <div key={i} style={{ display: 'flex', gap: 8, alignItems: 'flex-start' }}>
+                  <Text style={{ color: NAVY, fontWeight: 700, minWidth: 20 }}>{i + 1}.</Text>
+                  <Text>{finding}</Text>
+                </div>
+              ))}
+            </Space>
+          ),
+        }]} />
       )}
     </Space>
   );

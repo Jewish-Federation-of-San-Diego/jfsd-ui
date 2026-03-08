@@ -345,14 +345,97 @@ output = {
     "seasonality": seasonality_data,
     "collectionCalendar": collection_calendar,
     "narrative": {
-        "title": "Collections Intelligence: $12.3M Receivable Analysis",
+        "title": "The $12.3M Receivable: What's Real, What's Stale, and What to Do About It",
+        "date": "March 7, 2026",
+        "sections": [
+            {
+                "heading": "The Headline Number Is Misleading",
+                "body": (
+                    f"${total_receivable:,.0f} in outstanding pledges sounds alarming. It's not — once you understand what's inside. "
+                    f"Nearly half (${segments['capital']['total']:,.0f}) is Lee Goldberg's Legacy of Light / Spark capital campaign commitment. "
+                    "That operates on a multi-year timeline with its own payment schedule. It's not 'overdue' — it's a capital pledge being fulfilled "
+                    "over years, as designed. Strip that out and you're looking at $6.4M in annual fund and program receivables."
+                ),
+                "dataPoint": f"Capital campaign: ${segments['capital']['total']:,.0f} ({segments['capital']['count']} pledges). "
+                             f"Annual/program: ${total_receivable - segments['capital']['total']:,.0f} ({total_pledges - segments['capital']['count']} pledges).",
+            },
+            {
+                "heading": "93% of Pledges Have Zero Payments — That's a Process Gap",
+                "body": (
+                    f"{kpis['pledgesWithZeroPayments']} of {total_pledges} active pledges have never received a single dollar. "
+                    "This isn't donors refusing to pay — it's an organization that isn't asking. "
+                    "No statements are being sent. No systematic follow-up exists. Donors make a pledge at an event or to their DRM, "
+                    "and then... nothing. Most donors expect to be invoiced. They're not actively thinking about their pledge "
+                    "because they're waiting for someone to follow up and ask. "
+                    "The good news: this is fixable. A statement run would likely convert a significant portion overnight."
+                ),
+                "dataPoint": "Only 44 pledges (7%) have any payment history. The 551 with zero payments represent "
+                             f"${kpis['totalReceivable'] - total_paid:,.0f} in untouched receivables.",
+            },
+            {
+                "heading": "The Money Is in DRM Major Gifts",
+                "body": (
+                    f"{segments['drm_major']['count']} major gift pledges totaling ${segments['drm_major']['total']:,.0f} — "
+                    "this is where collection effort has the highest ROI. These are donors who made face-to-face commitments "
+                    "to their relationship manager. They said yes. They expect to be asked to fulfill. "
+                    "A personal call from the DRM + a formal statement would likely move millions. "
+                    "The Viterbi family alone has $1.5M outstanding. Shekhter has $333K. Zeff has $750K. "
+                    "These aren't reluctant donors — they're waiting for the ask."
+                ),
+                "dataPoint": f"DRM major gifts (>$5K): {segments['drm_major']['count']} pledges, "
+                             f"${segments['drm_major']['total']:,.0f}. "
+                             f"DRM mid ($1K-$5K): {segments['drm_mid']['count']} pledges, ${segments['drm_mid']['total']:,.0f}.",
+            },
+            {
+                "heading": "Event Pledges Need a Collection Cycle",
+                "body": (
+                    f"Fed 360, Lion of Judah Luncheon, and other events generated {segments['event']['count']} pledges "
+                    f"totaling ${segments['event']['total']:,.0f}. These donors said yes in a room, during an emotional moment. "
+                    "The window to collect is 2-4 weeks post-event — a thank-you email with a payment link. "
+                    "After 60 days without follow-up, conversion rates drop dramatically. "
+                    "For Fed 360 specifically, May is the natural collection month (event is typically Feb/Mar, "
+                    "payments historically peak in May at 12% of annual giving). Build the collection cycle around that."
+                ),
+                "dataPoint": f"Event pledges: {segments['event']['count']} pledges, ${segments['event']['total']:,.0f}. "
+                             "Many are from Fed 360 (Feb event → May collection window).",
+            },
+            {
+                "heading": "Clean Up the Dead Wood",
+                "body": (
+                    f"{segments['writeoff']['count']} pledges totaling ${segments['writeoff']['total']:,.0f} are recommended for write-off. "
+                    "These are 18+ months old with zero payments and under $10K. They include telemarketing pledges from 2022, "
+                    "old event commitments, and pledges from donors who have since passed away (Z\"L). "
+                    "Keeping these active pollutes the receivable number, creates false expectations, "
+                    "and makes the real collection opportunities harder to see. "
+                    "Send one final notice, give 30 days, then close. For the 6 pledges over $10K ($203K), "
+                    "have a DRM make a personal call before writing off — those are worth one last try."
+                ),
+                "dataPoint": f"Write-off: {segments['writeoff']['count']} pledges, ${segments['writeoff']['total']:,.0f}. "
+                             f"Plus {segments['telemarketing']['count']} old telemarketing pledges, ${segments['telemarketing']['total']:,.0f}. "
+                             f"Total cleanup: {writeoff_candidates} pledges, ${writeoff_amount:,.0f}.",
+            },
+            {
+                "heading": "Collections Should Follow the Payment Calendar",
+                "body": (
+                    "Donor payment behavior is seasonal, not random. Four months account for 61% of all annual giving: "
+                    "December (21%), January (15%), October (13%), and May (12%). March and April are the quietest months. "
+                    "Collections outreach should be timed to these peaks — send DRM reminders in November (pre-December rush), "
+                    "September (pre-High-Holidays), and April (pre-May spring push). "
+                    "Don't chase donors in March when nobody's writing checks. "
+                    "Prepare in March, collect in the peaks."
+                ),
+                "dataPoint": "Peak payment months: Dec 21%, Jan 15%, Oct 13%, May 12%. "
+                             "Dead months: Mar 3.3%, Apr 2.3%, Jun 3.3%. "
+                             "Right now (March) is prep time, not panic time.",
+            },
+        ],
         "keyFindings": [
             f"93% of active pledges ({kpis['pledgesWithZeroPayments']} of {total_pledges}) have zero payments collected.",
             f"DRM major + mid gifts: {kpis['drmActionable']} pledges, ${kpis['drmActionableAmount']:,} — highest-value collection opportunity.",
             f"Event pledges: {kpis['eventActionable']} pledges, ${kpis['eventActionableAmount']:,} — donors said yes in person, need follow-up.",
-            f"Write-off candidates: {writeoff_candidates} old telemarketing/small pledges, ${writeoff_amount:,.0f} — cleaning these improves data quality.",
+            f"Write-off candidates: {writeoff_candidates} pledges, ${writeoff_amount:,.0f} — cleaning these improves data quality.",
             "Payment seasonality: Dec (21%), Jan (15%), Oct (13%), May (12%) — collections should align with these peaks.",
-            "Capital campaign ($5.7M) operates on its own timeline — don't mix with annual fund aging.",
+            f"Capital campaign (${segments['capital']['total']:,.0f}) operates on its own timeline — don't mix with annual fund aging.",
         ],
     },
 }
