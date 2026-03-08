@@ -1,306 +1,445 @@
 {
+  "asOfDate": "2026-03-07T16:05:00-08:00",
   "actionItems": [
     {
-      "name": "James Parthemer",
-      "merchant": "Assetaccountant",
-      "amount": 6.0,
-      "date": "2026-03-06",
-      "issues": [
-        "Missing receipt",
-        "Missing GL code"
-      ]
+      "type": "needs_review",
+      "merchant": "Paypal",
+      "amount": 980,
+      "cardholder": "David Fuhriman",
+      "date": "2026-03-07",
+      "reason": "High-value transaction ($980.00)"
     },
     {
-      "name": "Yaar Ilovich",
-      "merchant": "CVS Pharmacy",
-      "amount": 2.99,
-      "date": "2026-03-06",
-      "issues": [
-        "Missing receipt",
-        "Missing GL code"
-      ]
+      "type": "policy_exception",
+      "merchant": "Paypal",
+      "amount": 980,
+      "cardholder": "David Fuhriman",
+      "date": "2026-03-07",
+      "reason": "Weekend purchase"
     },
     {
-      "name": "Ofri Ismailov",
-      "merchant": "Exxon",
-      "amount": 50.0,
-      "date": "2026-03-06",
-      "issues": [
-        "Missing receipt",
-        "Missing GL code"
-      ]
+      "type": "needs_review",
+      "merchant": "DiscountMugs",
+      "amount": 730.4,
+      "cardholder": "Julie Gordon",
+      "date": "2026-03-02",
+      "reason": "High-value transaction ($730.40)"
     },
     {
-      "name": "Joanna  Chiu",
+      "type": "missing_receipt",
+      "merchant": "Urban Plates",
+      "amount": 668.75,
+      "cardholder": "Joshua Minzer",
+      "date": "2026-03-04",
+      "txnId": "2e34a1a0-3823-4fb8-bd0e-c1d4319a4812"
+    },
+    {
+      "type": "needs_review",
+      "merchant": "Urban Plates",
+      "amount": 668.75,
+      "cardholder": "Joshua Minzer",
+      "date": "2026-03-04",
+      "reason": "High-value transaction ($668.75)"
+    },
+    {
+      "type": "needs_review",
+      "merchant": "Regents La Jolla",
+      "amount": 605.8,
+      "cardholder": "Moises Arbitman",
+      "date": "2026-03-04",
+      "reason": "High-value transaction ($605.80)"
+    },
+    {
+      "type": "missing_receipt",
+      "merchant": "THE PLACE CATERING",
+      "amount": 540,
+      "cardholder": "Candice Bucky",
+      "date": "2026-03-03",
+      "txnId": "a2700481-a9bb-4181-abdd-1854b0f483d1"
+    },
+    {
+      "type": "needs_review",
+      "merchant": "THE PLACE CATERING",
+      "amount": 540,
+      "cardholder": "Candice Bucky",
+      "date": "2026-03-03",
+      "reason": "High-value transaction ($540.00)"
+    },
+    {
+      "type": "missing_receipt",
       "merchant": "Adobe",
       "amount": 454.77,
+      "cardholder": "Joanna Chiu",
       "date": "2026-03-06",
-      "issues": [
-        "Missing receipt",
-        "Missing GL code"
-      ]
+      "txnId": "6010bfae-716f-49e1-8d02-420b7be31bcf"
     },
     {
-      "name": "Shifra  Baltinester",
-      "merchant": "Ace Parking",
-      "amount": 6.0,
+      "type": "missing_receipt",
+      "merchant": "HD Supply",
+      "amount": 442.32,
+      "cardholder": "David Fuhriman",
       "date": "2026-03-06",
-      "issues": [
-        "Missing GL code"
-      ]
+      "txnId": "e5b26599-03a9-46b8-bb86-437f95384650"
     },
     {
-      "name": "Hadar Cohen",
-      "merchant": "Ace Parking",
-      "amount": 6.0,
-      "date": "2026-03-06",
-      "issues": [
-        "Missing receipt",
-        "Missing GL code"
-      ]
-    },
-    {
-      "name": "Gillian Belk",
-      "merchant": "Amazon",
-      "amount": 15.01,
-      "date": "2026-03-06",
-      "issues": [
-        "Missing receipt",
-        "Missing GL code"
-      ]
-    },
-    {
-      "name": "alon sachs",
-      "merchant": "Vons",
-      "amount": 10.76,
-      "date": "2026-03-06",
-      "issues": [
-        "Missing receipt",
-        "Missing GL code"
-      ]
-    },
-    {
-      "name": "alon sachs",
-      "merchant": "Trader Joe's",
-      "amount": 2.34,
-      "date": "2026-03-06",
-      "issues": [
-        "Missing receipt",
-        "Missing GL code"
-      ]
-    },
-    {
-      "name": "Yaar Ilovich",
-      "merchant": "7-Eleven",
-      "amount": 45.0,
-      "date": "2026-03-06",
-      "issues": [
-        "Missing receipt",
-        "Missing GL code"
-      ]
-    },
-    {
-      "name": "Amit Ben Dov",
-      "merchant": "Chipotle",
-      "amount": 10.72,
-      "date": "2026-03-05",
-      "issues": [
-        "Missing receipt",
-        "Missing GL code"
-      ]
-    },
-    {
-      "name": "Bar Kroytzvirt",
-      "merchant": "H Mart",
-      "amount": 4.99,
-      "date": "2026-03-05",
-      "issues": [
-        "Missing receipt",
-        "Missing GL code"
-      ]
-    },
-    {
-      "name": "Ofri Ismailov",
-      "merchant": "Harissa Mediterranean Kitchen",
-      "amount": 5.81,
-      "date": "2026-03-05",
-      "issues": [
-        "Missing receipt",
-        "Missing GL code"
-      ]
-    },
-    {
-      "name": "Ori Bar",
-      "merchant": "Target",
-      "amount": 43.87,
-      "date": "2026-03-05",
-      "issues": [
-        "Missing GL code"
-      ]
-    },
-    {
-      "name": "Joshua Minzer",
+      "type": "missing_receipt",
       "merchant": "Tigris Mediterranean",
       "amount": 426.21,
+      "cardholder": "Joshua Minzer",
       "date": "2026-03-05",
-      "issues": [
-        "Missing receipt",
-        "Missing GL code"
-      ]
+      "txnId": "01ce649e-5af7-4e2c-8aab-2c7f7c950bed"
     },
     {
-      "name": "David Fuhriman",
-      "merchant": "Printwood",
-      "amount": 207.0,
-      "date": "2026-03-05",
-      "issues": [
-        "Missing GL code"
-      ]
-    },
-    {
-      "name": "Julie Gordon",
-      "merchant": "Amazon",
-      "amount": 21.52,
-      "date": "2026-03-05",
-      "issues": [
-        "Missing GL code"
-      ]
-    },
-    {
-      "name": "Gillian Belk",
-      "merchant": "Amazon",
-      "amount": 25.38,
-      "date": "2026-03-05",
-      "issues": [
-        "Missing GL code"
-      ]
-    },
-    {
-      "name": "David Fuhriman",
-      "merchant": "Anthropic",
-      "amount": 400.0,
-      "date": "2026-03-05",
-      "issues": [
-        "Missing GL code"
-      ]
-    },
-    {
-      "name": "Libi Bar-On",
-      "merchant": "Ralphs",
-      "amount": 6.49,
-      "date": "2026-03-05",
-      "issues": [
-        "Missing receipt",
-        "Missing GL code"
-      ]
-    },
-    {
-      "name": "David Fuhriman",
+      "type": "missing_receipt",
       "merchant": "Checkr",
       "amount": 222.78,
+      "cardholder": "David Fuhriman",
       "date": "2026-03-05",
-      "issues": [
-        "Missing receipt",
-        "Missing GL code"
-      ]
+      "txnId": "1864c28e-a6d6-40ba-a471-6863f93bc562"
     },
     {
-      "name": "David Fuhriman",
-      "merchant": "Repl.it",
-      "amount": 116.13,
-      "date": "2026-03-05",
-      "issues": [
-        "Missing GL code"
-      ]
+      "type": "policy_exception",
+      "merchant": "Vons",
+      "amount": 187.71,
+      "cardholder": "Jessica Kretzer",
+      "date": "2026-03-01",
+      "reason": "Weekend purchase"
     },
     {
-      "name": "Libi Bar-On",
-      "merchant": "Ralphs",
-      "amount": 28.16,
-      "date": "2026-03-05",
-      "issues": [
-        "Missing receipt",
-        "Missing GL code"
-      ]
+      "type": "missing_receipt",
+      "merchant": "HD Supply",
+      "amount": 161.37,
+      "cardholder": "David Fuhriman",
+      "date": "2026-03-06",
+      "txnId": "1f4b2168-6762-4864-a772-93ac7fe01452"
     },
     {
-      "name": "Libi Bar-On",
-      "merchant": "Ralphs",
-      "amount": 21.47,
-      "date": "2026-03-05",
-      "issues": [
-        "Missing receipt",
-        "Missing GL code"
-      ]
+      "type": "missing_receipt",
+      "merchant": "Lit'l Pepper Gourmet",
+      "amount": 106.05,
+      "cardholder": "Candice Bucky",
+      "date": "2026-03-04",
+      "txnId": "5af8f795-8d01-40bd-8bb8-a7b3bb989d59"
     },
     {
-      "name": "Ori Bar",
-      "merchant": "LAZ Parking",
-      "amount": 2.0,
-      "date": "2026-03-05",
-      "issues": [
-        "Missing receipt",
-        "Missing GL code"
-      ]
+      "type": "policy_exception",
+      "merchant": "Lob",
+      "amount": 100,
+      "cardholder": "David Fuhriman",
+      "date": "2026-03-01",
+      "reason": "Weekend purchase"
     },
     {
-      "name": "Bar Kroytzvirt",
-      "merchant": "Apple Services",
-      "amount": 2.99,
+      "type": "missing_receipt",
+      "merchant": "CITY OF SAN DIEGO",
+      "amount": 87,
+      "cardholder": "Yaar Ilovich",
       "date": "2026-03-05",
-      "issues": [
-        "Missing receipt",
-        "Missing GL code"
-      ]
+      "txnId": "b98dc3a0-e43e-4ddc-8982-6a83213876ee"
     },
     {
-      "name": "Ori Bar",
-      "merchant": "Silverlake Ramen",
-      "amount": 13.14,
-      "date": "2026-03-05",
-      "issues": [
-        "Missing receipt",
-        "Missing GL code"
-      ]
+      "type": "missing_receipt",
+      "merchant": "Beaufort 12",
+      "amount": 75,
+      "cardholder": "Carly Lobenstein",
+      "date": "2026-03-01",
+      "txnId": "bf2811a6-53d7-4585-a193-6a3e6daa73ac"
     },
     {
-      "name": "Hadar Cohen",
+      "type": "policy_exception",
+      "merchant": "Beaufort 12",
+      "amount": 75,
+      "cardholder": "Carly Lobenstein",
+      "date": "2026-03-01",
+      "reason": "Weekend purchase"
+    },
+    {
+      "type": "policy_exception",
+      "merchant": "Staples",
+      "amount": 72.58,
+      "cardholder": "Miliah Rodriguez",
+      "date": "2026-03-01",
+      "reason": "Weekend purchase"
+    },
+    {
+      "type": "missing_receipt",
+      "merchant": "Allianz Travel Insurance",
+      "amount": 70,
+      "cardholder": "Alex Kaufman",
+      "date": "2026-03-02",
+      "txnId": "bdd59f15-cd3e-4519-a8f2-8d1b09147453"
+    },
+    {
+      "type": "missing_receipt",
+      "merchant": "Allianz Travel Insurance",
+      "amount": 64,
+      "cardholder": "Alex Kaufman",
+      "date": "2026-03-02",
+      "txnId": "2bf04f83-b517-4964-9187-e855f4faad64"
+    },
+    {
+      "type": "missing_receipt",
+      "merchant": "Shein",
+      "amount": 51.53,
+      "cardholder": "Adva Amori",
+      "date": "2026-03-06",
+      "txnId": "b6e0838c-e77e-48d6-9c99-11c7ea947642"
+    },
+    {
+      "type": "missing_receipt",
+      "merchant": "Ross Dress for Less",
+      "amount": 50.2,
+      "cardholder": "Adva Amori",
+      "date": "2026-03-03",
+      "txnId": "efeb7460-a7e5-4d37-a551-5b71cc2e8518"
+    },
+    {
+      "type": "missing_receipt",
+      "merchant": "Shell",
+      "amount": 45,
+      "cardholder": "Bar Kroytzvirt",
+      "date": "2026-03-07",
+      "txnId": "b8cfba78-aa68-4d10-8078-23e218e1a573"
+    },
+    {
+      "type": "missing_receipt",
+      "merchant": "7-Eleven",
+      "amount": 45,
+      "cardholder": "Yaar Ilovich",
+      "date": "2026-03-06",
+      "txnId": "97bfb594-121b-42e0-a177-d5720bb68364"
+    },
+    {
+      "type": "missing_receipt",
+      "merchant": "Shell",
+      "amount": 45,
+      "cardholder": "Bar Kroytzvirt",
+      "date": "2026-03-01",
+      "txnId": "40930704-e9af-420e-beab-8d8da79b4aae"
+    },
+    {
+      "type": "missing_receipt",
+      "merchant": "7-Eleven",
+      "amount": 44.68,
+      "cardholder": "Adva Amori",
+      "date": "2026-03-06",
+      "txnId": "93c26192-7cac-4c93-a7ad-ac1b228d6b2f"
+    },
+    {
+      "type": "missing_receipt",
+      "merchant": "Exxon",
+      "amount": 42.78,
+      "cardholder": "Ofri Ismailov",
+      "date": "2026-03-06",
+      "txnId": "0afb3c8e-17d9-454b-9435-eaff0fe15cd2"
+    },
+    {
+      "type": "missing_receipt",
+      "merchant": "C&R Gas & Food Mart",
+      "amount": 42.46,
+      "cardholder": "Adva Amori",
+      "date": "2026-03-02",
+      "txnId": "f0aaf04e-c67a-4648-a4ec-0c896e5f6dae"
+    },
+    {
+      "type": "missing_receipt",
+      "merchant": "Target",
+      "amount": 37.68,
+      "cardholder": "Ori Bar",
+      "date": "2026-03-07",
+      "txnId": "27afb209-6062-49a5-9781-af9dffc6468a"
+    },
+    {
+      "type": "missing_receipt",
+      "merchant": "Microsoft Office / Azure",
+      "amount": 31.5,
+      "cardholder": "Joanna Chiu",
+      "date": "2026-03-07",
+      "txnId": "ad824a5d-e48a-4c8a-8490-a9eff2c6a873"
+    },
+    {
+      "type": "missing_receipt",
       "merchant": "7-Eleven",
       "amount": 30.4,
+      "cardholder": "Hadar Cohen",
       "date": "2026-03-05",
-      "issues": [
-        "Missing receipt",
-        "Missing GL code"
-      ]
+      "txnId": "a926dbc6-26a4-4fb0-8736-5680ac2d1947"
+    },
+    {
+      "type": "missing_receipt",
+      "merchant": "Ralphs",
+      "amount": 28.16,
+      "cardholder": "Libi Bar-On",
+      "date": "2026-03-05",
+      "txnId": "917c5f5b-a186-4209-9a05-a2873c7fa616"
+    },
+    {
+      "type": "missing_receipt",
+      "merchant": "Sweetgreen",
+      "amount": 26.53,
+      "cardholder": "Hadar Cohen",
+      "date": "2026-03-01",
+      "txnId": "51e620ea-db44-423a-a70d-8830068d73d7"
     }
   ],
   "expenseSummary": {
-    "last30Days": 8394.37,
-    "transactionCount": 100,
-    "avgTransaction": 83.94
+    "totalSpend7d": 9089.85,
+    "totalSpend30d": 9089.85,
+    "byDepartment": [
+      {
+        "dept": "Programs",
+        "amount": 3265.3,
+        "txnCount": 70
+      },
+      {
+        "dept": "Administration",
+        "amount": 3250.65,
+        "txnCount": 10
+      },
+      {
+        "dept": "Development",
+        "amount": 1527.43,
+        "txnCount": 8
+      },
+      {
+        "dept": "Admin",
+        "amount": 961.47,
+        "txnCount": 11
+      },
+      {
+        "dept": "UJF Holdings",
+        "amount": 85,
+        "txnCount": 1
+      }
+    ],
+    "topMerchants": [
+      {
+        "merchant": "Paypal",
+        "amount": 980,
+        "txnCount": 1
+      },
+      {
+        "merchant": "DiscountMugs",
+        "amount": 730.4,
+        "txnCount": 1
+      },
+      {
+        "merchant": "Urban Plates",
+        "amount": 668.75,
+        "txnCount": 1
+      },
+      {
+        "merchant": "Regents La Jolla",
+        "amount": 605.8,
+        "txnCount": 1
+      },
+      {
+        "merchant": "HD Supply",
+        "amount": 603.69,
+        "txnCount": 2
+      },
+      {
+        "merchant": "THE PLACE CATERING",
+        "amount": 540,
+        "txnCount": 1
+      },
+      {
+        "merchant": "Adobe",
+        "amount": 474.76,
+        "txnCount": 2
+      },
+      {
+        "merchant": "Tigris Mediterranean",
+        "amount": 426.21,
+        "txnCount": 1
+      },
+      {
+        "merchant": "Anthropic",
+        "amount": 400,
+        "txnCount": 1
+      },
+      {
+        "merchant": "Etsy",
+        "amount": 355.58,
+        "txnCount": 1
+      }
+    ],
+    "receiptComplianceRate": 40.0
   },
   "budgetPace": [
     {
-      "month": "2026-02",
-      "actual": 1268.0900000000004
+      "department": "Admin",
+      "budgetYTD": 1330019.91,
+      "actualYTD": 0,
+      "pctUsed": 0.0,
+      "projectedOverUnder": -1330019.91
     },
     {
-      "month": "2026-03",
-      "actual": 7126.279999999998
+      "department": "Development",
+      "budgetYTD": 1436940.72,
+      "actualYTD": 0,
+      "pctUsed": 0.0,
+      "projectedOverUnder": -1436940.72
+    },
+    {
+      "department": "Engagement",
+      "budgetYTD": 48153.78,
+      "actualYTD": 0,
+      "pctUsed": 0.0,
+      "projectedOverUnder": -48153.78
+    },
+    {
+      "department": "Marketing",
+      "budgetYTD": 350194.5,
+      "actualYTD": 0,
+      "pctUsed": 0.0,
+      "projectedOverUnder": -350194.5
+    },
+    {
+      "department": "Programs",
+      "budgetYTD": 2161671.66,
+      "actualYTD": 0,
+      "pctUsed": 0.0,
+      "projectedOverUnder": -2161671.66
     }
   ],
-  "cardManagement": {},
+  "cardManagement": {
+    "activeCards": 100,
+    "dormantCards": [],
+    "highUtilization": []
+  },
   "glHealth": {
-    "missingReceipts": 53,
-    "missingGLCode": 100
+    "manualEntries7d": 0,
+    "unclearedItems30d": 0,
+    "apAgingBuckets": [
+      {
+        "bucket": "0-30",
+        "amount": 0,
+        "count": 0
+      },
+      {
+        "bucket": "31-60",
+        "amount": 0,
+        "count": 0
+      },
+      {
+        "bucket": "61-90",
+        "amount": 427062.1,
+        "count": 103
+      },
+      {
+        "bucket": "90+",
+        "amount": 4806751.93,
+        "count": 397
+      }
+    ]
   },
   "kpis": {
-    "actionItems": 100,
-    "last30DaysSpend": 8394.37,
-    "missingReceipts": 53,
-    "totalSpendThisWeek": 0,
-    "receiptComplianceRate": 0,
-    "policyExceptions": 0
-  },
-  "asOfDate": "2026-03-06T10:20:00"
+    "totalSpendThisWeek": 9089.85,
+    "missingReceipts": 25,
+    "receiptComplianceRate": 40.0,
+    "apOutstanding": 5233814.03,
+    "overBudgetDepts": 0,
+    "dormantCards": 0
+  }
 }
