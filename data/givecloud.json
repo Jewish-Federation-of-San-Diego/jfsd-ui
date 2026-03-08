@@ -1,10 +1,10 @@
 {
-  "asOfDate": "2026-03-07",
+  "asOfDate": "2026-03-08",
   "notes": null,
   "onlineGiving": {
-    "totalFY26": 342405.67,
-    "totalContributions": 894,
-    "avgGift": 383.0,
+    "totalFY26": 342441.67,
+    "totalContributions": 899,
+    "avgGift": 380.91,
     "medianGift": 31.56
   },
   "monthlyTrend": [
@@ -58,9 +58,9 @@
     },
     {
       "month": "Mar",
-      "amount": 8331.81,
+      "amount": 8367.81,
       "recurringAmount": 0.0,
-      "contributions": 111
+      "contributions": 116
     }
   ],
   "recurring": {
@@ -126,11 +126,39 @@
   "conversionBySource": [
     {
       "source": "Web",
-      "contributions": 894,
-      "amount": 342405.67
+      "contributions": 899,
+      "amount": 342441.67
     }
   ],
   "recentContributions": [
+    {
+      "name": "Hannah Cohen",
+      "amount": 0.0,
+      "product": "Individual Ticket - Celebrate Israel: Yom Ha'Atzmaut Music Festival - Inidividual Ticket",
+      "date": "2026-03-08",
+      "recurring": false
+    },
+    {
+      "name": "Karen Miller",
+      "amount": 0.0,
+      "product": "Individual Ticket - Celebrate Israel: Yom Ha'Atzmaut Music Festival - Inidividual Ticket",
+      "date": "2026-03-08",
+      "recurring": false
+    },
+    {
+      "name": "David Feingold",
+      "amount": 0.0,
+      "product": "Individual Ticket - Celebrate Israel: Yom Ha'Atzmaut Music Festival - Inidividual Ticket",
+      "date": "2026-03-08",
+      "recurring": false
+    },
+    {
+      "name": "Rachel Stern",
+      "amount": 0.0,
+      "product": "Individual Ticket - Celebrate Israel: Yom Ha'Atzmaut Music Festival - Inidividual Ticket",
+      "date": "2026-03-08",
+      "recurring": false
+    },
     {
       "name": "Judy Stolow",
       "amount": 0.0,
@@ -242,39 +270,11 @@
       "product": "Individual Ticket - Celebrate Israel: Yom Ha'Atzmaut Music Festival - Inidividual Ticket",
       "date": "2026-03-07",
       "recurring": false
-    },
-    {
-      "name": "Gabriel Douek",
-      "amount": 0.0,
-      "product": "Individual Ticket - Celebrate Israel: Yom Ha'Atzmaut Music Festival - Inidividual Ticket",
-      "date": "2026-03-07",
-      "recurring": false
-    },
-    {
-      "name": "Rael Lipson",
-      "amount": 83.66,
-      "product": "Annual Campaign Page - All in - FY26 - Today Only",
-      "date": "2026-03-06",
-      "recurring": false
-    },
-    {
-      "name": "Deborah Taylor",
-      "amount": 375.42,
-      "product": "Annual Campaign Page - All in - FY26 - Today Only",
-      "date": "2026-03-06",
-      "recurring": false
-    },
-    {
-      "name": "Carrie Pineless",
-      "amount": 180.0,
-      "product": "LEADS 2026 - Program Fee",
-      "date": "2026-03-06",
-      "recurring": false
     }
   ],
   "failedPayments": [],
   "kpis": {
-    "totalOnlineRevenue": 342405.67,
+    "totalOnlineRevenue": 342441.67,
     "recurringRevenue": 0,
     "activeRecurring": 0,
     "newDonorsOnline": 0,

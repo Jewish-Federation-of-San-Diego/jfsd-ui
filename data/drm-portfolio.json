@@ -1,5 +1,5 @@
 {
-  "asOfDate": "2026-03-07 16:06",
+  "asOfDate": "2026-03-08 06:10",
   "drms": [
     {
       "name": "Michael Rabkin",
@@ -10,7 +10,7 @@
       "lybuntCount": 1022,
       "lybuntAmount": 623592.25,
       "sybuntCount": 587,
-      "recentGifts30d": 107,
+      "recentGifts30d": 108,
       "topDonors": [
         {
           "name": "Marcia Hazan",
@@ -542,6 +542,12 @@
       ],
       "recentActivity": [
         {
+          "donorName": "Elliott Nahmias",
+          "amount": 75.0,
+          "date": "2026-03-08",
+          "type": "Monthly - FY26"
+        },
+        {
           "donorName": "Rona G. Dosick",
           "amount": 0.0,
           "date": "2026-03-07",
@@ -654,12 +660,6 @@
           "amount": 1000.0,
           "date": "2026-03-03",
           "type": "FED360 - FY26 - Donations - Attended"
-        },
-        {
-          "donorName": "Dafgiving360",
-          "amount": 360.0,
-          "date": "2026-03-03",
-          "type": "FED360 - FY26 - Donations - Tributes"
         }
       ]
     },
@@ -1831,7 +1831,7 @@
       "lybuntCount": 35,
       "lybuntAmount": 1141269.45,
       "sybuntCount": 11,
-      "recentGifts30d": 40,
+      "recentGifts30d": 39,
       "topDonors": [
         {
           "name": "Andrew James Viterbi",
