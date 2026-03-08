@@ -49,6 +49,16 @@ export function WealthEngineDashboard() {
     const load = async () => {
       try {
         const json = await fetchJson<WEData>(`${import.meta.env.BASE_URL}data/wealthengine.json`);
+        // Normalize snake_case fields from generator to camelCase expected by component
+        if (json.topProspects) {
+          json.topProspects = json.topProspects.map((p: Record<string, unknown>) => ({
+            ...p,
+            netWorth: p.netWorth ?? p.net_worth ?? '—',
+            giftCapacity: p.giftCapacity ?? p.gift_capacity ?? '—',
+            p2g: p.p2g ?? p.p2g_score ?? '—',
+            age: p.age ?? null,
+          })) as WEData['topProspects'];
+        }
         setData(json);
       } catch (err) {
         setError((err as Error).message);
@@ -63,7 +73,7 @@ export function WealthEngineDashboard() {
   if (error) return <DashboardErrorState message="Failed to load WealthEngine data" description={error} />;
   if (!data) return <DashboardErrorState message="Missing WealthEngine data" />;
 
-  const kpis = data.kpis ?? { totalScreened: 0, matched: 0, avgAge: 0 };
+  const kpis = data.kpis ?? { totalScreened: 0, matched: 0, avgAge: 0, highCapacity: 0 };
   const netWorthDistribution = data.netWorthDistribution ?? [];
   const giftCapacityDistribution = data.giftCapacityDistribution ?? [];
   const p2gDistribution = data.p2gDistribution ?? [];
@@ -82,7 +92,7 @@ export function WealthEngineDashboard() {
       <DataFreshness asOfDate={data.asOfDate ?? ''} />
       <Row gutter={[16, 16]}>
         <Col xs={12} sm={8}><Card><Statistic title="Total Screened" value={safeCount(kpis.totalScreened)} valueStyle={{ color: NAVY }} /></Card></Col>
-        <Col xs={12} sm={8}><Card><Statistic title="Matched" value={safeCount(kpis.matched)} valueStyle={{ color: SUCCESS }} /></Card></Col>
+        <Col xs={12} sm={8}><Card><Statistic title={kpis.matched ? "Matched" : "High Capacity"} value={safeCount(kpis.matched || kpis.highCapacity)} valueStyle={{ color: SUCCESS }} /></Card></Col>
         <Col xs={12} sm={8}><Card><Statistic title="Avg Age" value={safeCount(kpis.avgAge)} valueStyle={{ color: GOLD }} /></Card></Col>
       </Row>
 
@@ -101,7 +111,7 @@ export function WealthEngineDashboard() {
 
       <Card title={
         topProspects.length > 0 
-          ? `${topProspects.length} prospects screened — ${topProspects.filter(p => p.giftCapacity && p.giftCapacity !== '$0').length} with capacity, top tier: ${topProspects[0]?.giftCapacity || 'N/A'}`
+          ? `Top ${topProspects.length} prospects by capacity — ${topProspects.filter(p => p.giftCapacity && p.giftCapacity !== '$0' && p.giftCapacity !== '—').length} with modeled capacity, highest: ${topProspects[0]?.giftCapacity || 'N/A'}`
           : "Top Prospects"
       }>
         <Table dataSource={topProspects.slice(0, 50)} columns={prospectCols} rowKey="name"
