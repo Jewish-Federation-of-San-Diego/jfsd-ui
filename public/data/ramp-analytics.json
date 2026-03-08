@@ -1,5 +1,5 @@
 {
-  "asOfDate": "2026-03-07T23:44:50Z",
+  "asOfDate": "2026-03-08T13:07:29Z",
   "monthlyTrend": [
     {
       "month": "Jul",
@@ -43,15 +43,15 @@
     },
     {
       "month": "Mar",
-      "amount": 9080.03,
-      "txnCount": 99
+      "amount": 9606.38,
+      "txnCount": 109
     }
   ],
   "departmentSpend": [
     {
       "dept": "Administration",
-      "amount": 431040.31,
-      "txnCount": 1303,
+      "amount": 431276.55,
+      "txnCount": 1305,
       "budget": 1773360.0,
       "pctOfBudget": 24.3
     },
@@ -78,8 +78,8 @@
     },
     {
       "dept": "Shinshinim",
-      "amount": 39628.6,
-      "txnCount": 1892,
+      "amount": 39918.71,
+      "txnCount": 1900,
       "budget": 466926.0,
       "pctOfBudget": 8.5
     },
@@ -106,13 +106,13 @@
     },
     {
       "category": "Restaurants",
-      "amount": 94024.29,
-      "txnCount": 775
+      "amount": 94154.9,
+      "txnCount": 780
     },
     {
       "category": "SaaS / Software",
-      "amount": 73602.81,
-      "txnCount": 287
+      "amount": 73612.93,
+      "txnCount": 288
     },
     {
       "category": "Professional Services",
@@ -131,8 +131,8 @@
     },
     {
       "category": "Books and Newspapers",
-      "amount": 33518.36,
-      "txnCount": 279
+      "amount": 33744.48,
+      "txnCount": 280
     },
     {
       "category": "Taxi and Rideshare",
@@ -146,8 +146,8 @@
     },
     {
       "category": "General Merchandise",
-      "amount": 29118.5,
-      "txnCount": 354
+      "amount": 29135.93,
+      "txnCount": 355
     },
     {
       "category": "Entertainment",
@@ -198,8 +198,8 @@
     },
     {
       "merchant": "Amazon",
-      "amount": 26229.08,
-      "txnCount": 298
+      "amount": 26455.2,
+      "txnCount": 299
     },
     {
       "merchant": "Tlalim Tours",
@@ -261,8 +261,8 @@
     },
     {
       "name": "David Fuhriman",
-      "amount": 108164.05,
-      "txnCount": 113,
+      "amount": 108174.17,
+      "txnCount": 114,
       "dept": "Administration"
     },
     {
@@ -327,8 +327,8 @@
     },
     {
       "name": "Miliah Rodriguez",
-      "amount": 12767.17,
-      "txnCount": 133,
+      "amount": 12993.29,
+      "txnCount": 134,
       "dept": "Administration"
     },
     {
@@ -346,22 +346,22 @@
   ],
   "cardUtilization": {
     "active": 100,
-    "dormant30d": 56,
+    "dormant30d": 58,
     "totalLimit": 348006.99,
-    "totalSpent": 800760.1,
-    "utilizationPct": 230.1
+    "totalSpent": 801286.45,
+    "utilizationPct": 230.3
   },
   "weekOverWeek": {
-    "thisWeek": 8316.53,
+    "thisWeek": 8842.88,
     "lastWeek": 7376.08,
-    "changePct": 12.7
+    "changePct": 19.9
   },
   "kpis": {
-    "totalSpendFY26": 800760.1,
-    "monthlyAvg": 88973.34,
+    "totalSpendFY26": 801286.45,
+    "monthlyAvg": 89031.83,
     "activeCards": 100,
     "topDepartment": "Administration",
-    "topDepartmentAmount": 431040.31,
-    "weekOverWeekChange": 12.7
+    "topDepartmentAmount": 431276.55,
+    "weekOverWeekChange": 19.9
   }
 }

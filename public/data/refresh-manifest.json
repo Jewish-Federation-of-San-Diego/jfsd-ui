@@ -1,28 +1,140 @@
 {
-  "refreshedAt": "2026-03-07T16:06:34.701862",
-  "totalTime": 17.4,
+  "refreshedAt": "2026-03-08T06:10:09.698797",
+  "totalTime": 371.2,
   "results": [
+    {
+      "name": "campaign",
+      "status": "ok",
+      "time": 20.3,
+      "size_before": 1896,
+      "size_after": 6265,
+      "error": null
+    },
+    {
+      "name": "stripe",
+      "status": "ok",
+      "time": 46.5,
+      "size_before": 1968,
+      "size_after": 1968,
+      "error": null
+    },
+    {
+      "name": "ramp",
+      "status": "ok",
+      "time": 143.9,
+      "size_before": 7245,
+      "size_after": 7248,
+      "error": null
+    },
+    {
+      "name": "givecloud",
+      "status": "ok",
+      "time": 98.2,
+      "size_before": 7264,
+      "size_after": 7397,
+      "error": null
+    },
+    {
+      "name": "facilities",
+      "status": "ok",
+      "time": 0.3,
+      "size_before": 102567,
+      "size_after": 99436,
+      "error": null
+    },
+    {
+      "name": "financial",
+      "status": "ok",
+      "time": 0.2,
+      "size_before": 14411,
+      "size_after": 14411,
+      "error": null
+    },
+    {
+      "name": "board",
+      "status": "ok",
+      "time": 3.3,
+      "size_before": 12079,
+      "size_after": 12237,
+      "error": null
+    },
+    {
+      "name": "donor-health",
+      "status": "ok",
+      "time": 21.8,
+      "size_before": 6249,
+      "size_after": 23367,
+      "error": null
+    },
+    {
+      "name": "ap-expense",
+      "status": "ok",
+      "time": 5.1,
+      "size_before": 10868,
+      "size_after": 11656,
+      "error": null
+    },
+    {
+      "name": "data-quality",
+      "status": "ok",
+      "time": 9.3,
+      "size_before": 2245,
+      "size_after": 17792,
+      "error": null
+    },
+    {
+      "name": "project",
+      "status": "ok",
+      "time": 0.0,
+      "size_before": 46921,
+      "size_after": 46921,
+      "error": null
+    },
     {
       "name": "drm",
       "status": "ok",
-      "time": 16.1,
-      "size_before": 2740,
-      "size_after": 86898,
+      "time": 13.7,
+      "size_before": 86898,
+      "size_after": 86878,
+      "error": null
+    },
+    {
+      "name": "pledge",
+      "status": "ok",
+      "time": 2.6,
+      "size_before": 59953,
+      "size_after": 59952,
+      "error": null
+    },
+    {
+      "name": "prospect",
+      "status": "ok",
+      "time": 2.5,
+      "size_before": 329,
+      "size_after": 34159,
+      "error": null
+    },
+    {
+      "name": "ask-list",
+      "status": "ok",
+      "time": 2.5,
+      "size_before": 492,
+      "size_after": 22774,
       "error": null
     },
     {
       "name": "silence",
       "status": "ok",
-      "time": 1.2,
-      "size_before": 280537,
-      "size_after": 217610,
+      "time": 1.0,
+      "size_before": 217610,
+      "size_after": 217611,
       "error": null
     }
   ],
   "summary": {
-    "ok": 2,
+    "ok": 16,
     "errors": 0,
     "skipped": 0,
-    "totalBytes": 304508
+    "totalBytes": 670072
   }
 }

@@ -1899,6 +1899,22 @@
   ],
   "recentPayments": [
     {
+      "name": "Mr. Elliott Nahmias",
+      "amount": 75,
+      "date": "2026-03-08",
+      "pledgeTotal": 0,
+      "campaign": "Monthly - FY26",
+      "method": "Online"
+    },
+    {
+      "name": "Mr. Bernard Surovsky",
+      "amount": 180,
+      "date": "2026-03-08",
+      "pledgeTotal": 0,
+      "campaign": "Monthly - FY26",
+      "method": "Online"
+    },
+    {
       "name": "Dr. Perri Wittgrove",
       "amount": 1000,
       "date": "2026-03-06",
@@ -2281,22 +2297,6 @@
       "pledgeTotal": 25000,
       "campaign": "The Community Trip - Underwriting",
       "method": "Check"
-    },
-    {
-      "name": "Ms. Jill Beck",
-      "amount": 5000,
-      "date": "2026-01-26",
-      "pledgeTotal": 5000,
-      "campaign": "DRM EM 2025",
-      "method": "Online"
-    },
-    {
-      "name": "Ms. Jessica Effress",
-      "amount": 5931.83,
-      "date": "2026-01-22",
-      "pledgeTotal": 20000,
-      "campaign": "DRM FACE 2025",
-      "method": "Stock"
     }
   ],
   "kpis": {

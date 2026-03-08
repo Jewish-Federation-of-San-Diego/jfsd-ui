@@ -1,5 +1,5 @@
 {
-  "asOfDate": "2026-03-07T16:05:00-08:00",
+  "asOfDate": "2026-03-08T06:09:33-08:00",
   "actionItems": [
     {
       "type": "needs_review",
@@ -91,19 +91,27 @@
     },
     {
       "type": "missing_receipt",
+      "merchant": "Amazon",
+      "amount": 226.12,
+      "cardholder": "Miliah Rodriguez",
+      "date": "2026-03-08",
+      "txnId": "81054e06-2af8-4de2-8d68-87862d14c537"
+    },
+    {
+      "type": "policy_exception",
+      "merchant": "Amazon",
+      "amount": 226.12,
+      "cardholder": "Miliah Rodriguez",
+      "date": "2026-03-08",
+      "reason": "Weekend purchase"
+    },
+    {
+      "type": "missing_receipt",
       "merchant": "Checkr",
       "amount": 222.78,
       "cardholder": "David Fuhriman",
       "date": "2026-03-05",
       "txnId": "1864c28e-a6d6-40ba-a471-6863f93bc562"
-    },
-    {
-      "type": "policy_exception",
-      "merchant": "Vons",
-      "amount": 187.71,
-      "cardholder": "Jessica Kretzer",
-      "date": "2026-03-01",
-      "reason": "Weekend purchase"
     },
     {
       "type": "missing_receipt",
@@ -115,19 +123,27 @@
     },
     {
       "type": "missing_receipt",
+      "merchant": "ZARA",
+      "amount": 114.05,
+      "cardholder": "Ori Bar",
+      "date": "2026-03-08",
+      "txnId": "d5778fcd-66b6-4eb5-a772-3db7f994758f"
+    },
+    {
+      "type": "policy_exception",
+      "merchant": "ZARA",
+      "amount": 114.05,
+      "cardholder": "Ori Bar",
+      "date": "2026-03-08",
+      "reason": "Weekend purchase"
+    },
+    {
+      "type": "missing_receipt",
       "merchant": "Lit'l Pepper Gourmet",
       "amount": 106.05,
       "cardholder": "Candice Bucky",
       "date": "2026-03-04",
       "txnId": "5af8f795-8d01-40bd-8bb8-a7b3bb989d59"
-    },
-    {
-      "type": "policy_exception",
-      "merchant": "Lob",
-      "amount": 100,
-      "cardholder": "David Fuhriman",
-      "date": "2026-03-01",
-      "reason": "Weekend purchase"
     },
     {
       "type": "missing_receipt",
@@ -136,22 +152,6 @@
       "cardholder": "Yaar Ilovich",
       "date": "2026-03-05",
       "txnId": "b98dc3a0-e43e-4ddc-8982-6a83213876ee"
-    },
-    {
-      "type": "missing_receipt",
-      "merchant": "Beaufort 12",
-      "amount": 75,
-      "cardholder": "Carly Lobenstein",
-      "date": "2026-03-01",
-      "txnId": "bf2811a6-53d7-4585-a193-6a3e6daa73ac"
-    },
-    {
-      "type": "policy_exception",
-      "merchant": "Beaufort 12",
-      "amount": 75,
-      "cardholder": "Carly Lobenstein",
-      "date": "2026-03-01",
-      "reason": "Weekend purchase"
     },
     {
       "type": "policy_exception",
@@ -243,11 +243,27 @@
     },
     {
       "type": "missing_receipt",
-      "merchant": "Target",
-      "amount": 37.68,
+      "merchant": "Din Tai Fung",
+      "amount": 36.68,
+      "cardholder": "Hadar Cohen",
+      "date": "2026-03-08",
+      "txnId": "bef32b43-1417-41b9-9095-c521dc3849e7"
+    },
+    {
+      "type": "missing_receipt",
+      "merchant": "Din Tai Fung",
+      "amount": 36.68,
+      "cardholder": "Amit Ben Dov",
+      "date": "2026-03-08",
+      "txnId": "03b1f993-1c9e-437d-824d-ccc0ef285bdf"
+    },
+    {
+      "type": "missing_receipt",
+      "merchant": "Din Tai Fung",
+      "amount": 36.67,
       "cardholder": "Ori Bar",
-      "date": "2026-03-07",
-      "txnId": "27afb209-6062-49a5-9781-af9dffc6468a"
+      "date": "2026-03-08",
+      "txnId": "e3ea9144-7e28-4210-954d-3e9dd309b61f"
     },
     {
       "type": "missing_receipt",
@@ -275,6 +291,14 @@
     },
     {
       "type": "missing_receipt",
+      "merchant": "ZARA",
+      "amount": 28.02,
+      "cardholder": "Hadar Cohen",
+      "date": "2026-03-08",
+      "txnId": "7779741e-1354-417b-827a-c7fd83022bae"
+    },
+    {
+      "type": "missing_receipt",
       "merchant": "Sweetgreen",
       "amount": 26.53,
       "cardholder": "Hadar Cohen",
@@ -283,18 +307,18 @@
     }
   ],
   "expenseSummary": {
-    "totalSpend7d": 9089.85,
-    "totalSpend30d": 9089.85,
+    "totalSpend7d": 9078.91,
+    "totalSpend30d": 9078.91,
     "byDepartment": [
       {
-        "dept": "Programs",
-        "amount": 3265.3,
-        "txnCount": 70
+        "dept": "Administration",
+        "amount": 3411.89,
+        "txnCount": 11
       },
       {
-        "dept": "Administration",
-        "amount": 3250.65,
-        "txnCount": 10
+        "dept": "Programs",
+        "amount": 3275.62,
+        "txnCount": 73
       },
       {
         "dept": "Development",
@@ -303,8 +327,8 @@
       },
       {
         "dept": "Admin",
-        "amount": 961.47,
-        "txnCount": 11
+        "amount": 778.97,
+        "txnCount": 7
       },
       {
         "dept": "UJF Holdings",
@@ -345,8 +369,8 @@
       },
       {
         "merchant": "Adobe",
-        "amount": 474.76,
-        "txnCount": 2
+        "amount": 454.77,
+        "txnCount": 1
       },
       {
         "merchant": "Tigris Mediterranean",
@@ -355,16 +379,16 @@
       },
       {
         "merchant": "Anthropic",
-        "amount": 400,
-        "txnCount": 1
+        "amount": 410.12,
+        "txnCount": 2
       },
       {
-        "merchant": "Etsy",
-        "amount": 355.58,
-        "txnCount": 1
+        "merchant": "Amazon",
+        "amount": 383.56,
+        "txnCount": 7
       }
     ],
-    "receiptComplianceRate": 40.0
+    "receiptComplianceRate": 34.0
   },
   "budgetPace": [
     {
@@ -406,7 +430,14 @@
   "cardManagement": {
     "activeCards": 100,
     "dormantCards": [],
-    "highUtilization": []
+    "highUtilization": [
+      {
+        "cardholder": "",
+        "spent": 247.41,
+        "limit": 300,
+        "pctUsed": 82.5
+      }
+    ]
   },
   "glHealth": {
     "manualEntries7d": 0,
@@ -424,20 +455,20 @@
       },
       {
         "bucket": "61-90",
-        "amount": 427062.1,
-        "count": 103
+        "amount": 426833.76,
+        "count": 100
       },
       {
         "bucket": "90+",
-        "amount": 4806751.93,
-        "count": 397
+        "amount": 4806980.27,
+        "count": 400
       }
     ]
   },
   "kpis": {
-    "totalSpendThisWeek": 9089.85,
-    "missingReceipts": 25,
-    "receiptComplianceRate": 40.0,
+    "totalSpendThisWeek": 9078.91,
+    "missingReceipts": 29,
+    "receiptComplianceRate": 34.0,
     "apOutstanding": 5233814.03,
     "overBudgetDepts": 0,
     "dormantCards": 0
