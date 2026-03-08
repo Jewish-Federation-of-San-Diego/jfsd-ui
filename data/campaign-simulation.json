@@ -1,44 +1,44 @@
 {
-  "generatedAt": "2026-03-07T20:45:25.393189",
+  "generatedAt": "2026-03-07T20:48:47.809653",
   "asOfDate": "2026-03-07",
   "recognition": {
-    "FY24": 16306995.4,
-    "FY25": 11554307.74,
-    "FY26_YTD": 7814307.14
+    "FY24": 15332362.05,
+    "FY25": 8812417.17,
+    "FY26_YTD": 5959220.17
   },
   "fy26": {
     "goal": 9000000,
-    "ytd": 7814307.14,
-    "ytdPctOfGoal": 86.8,
+    "ytd": 5959220.17,
+    "ytdPctOfGoal": 66.2,
     "scenarios": {
       "low": {
         "label": "Conservative",
-        "projected": 7595738,
+        "projected": 5555142,
         "description": "Minimal new commitments (+10% H2). Rady -$1M.",
-        "vsGoal": -1404262,
-        "vsGoalPct": -15.6,
-        "vsFY25": -3958570,
-        "vsFY25Pct": -34.3,
+        "vsGoal": -3444858,
+        "vsGoalPct": -38.3,
+        "vsFY25": -3257275,
+        "vsFY25Pct": -37.0,
         "h2Growth": "10%"
       },
       "medium": {
         "label": "Base Case",
-        "projected": 8142739,
+        "projected": 5972288,
         "description": "Historical avg H2 pattern (+17%). Rady -$1M.",
-        "vsGoal": -857261,
-        "vsGoalPct": -9.5,
-        "vsFY25": -3411568,
-        "vsFY25Pct": -29.5,
+        "vsGoal": -3027712,
+        "vsGoalPct": -33.6,
+        "vsFY25": -2840130,
+        "vsFY25Pct": -32.2,
         "h2Growth": "17%"
       },
       "high": {
         "label": "Optimistic",
-        "projected": 8767884,
+        "projected": 6449025,
         "description": "Strong spring push + major gift closes (+25%). Rady -$1M.",
-        "vsGoal": -232116,
-        "vsGoalPct": -2.6,
-        "vsFY25": -2786424,
-        "vsFY25Pct": -24.1,
+        "vsGoal": -2550975,
+        "vsGoalPct": -28.3,
+        "vsFY25": -2363392,
+        "vsFY25Pct": -26.8,
         "h2Growth": "25%"
       }
     },
@@ -163,37 +163,37 @@
   },
   "fy27": {
     "goal": 9500000,
-    "baseline": 8142739,
+    "baseline": 5972288,
     "baselineNote": "FY26 base case projection used as FY27 starting point",
     "scenarios": {
       "low": {
         "label": "Pessimistic",
-        "projected": 5677046,
+        "projected": 3897276,
         "description": "Soft retention (82% revenue carry) + continued Rady absence.",
-        "vsGoal": -3822954,
-        "vsGoalPct": -40.2,
-        "vsFY26Med": -2465693,
-        "vsFY26Pct": -30.3,
+        "vsGoal": -5602724,
+        "vsGoalPct": -59.0,
+        "vsFY26Med": -2075012,
+        "vsFY26Pct": -34.7,
         "revenueRetention": "82%"
       },
       "medium": {
         "label": "Base Case",
-        "projected": 6328465,
+        "projected": 4375059,
         "description": "Normal retention (90% revenue carry) + moderate acquisition.",
-        "vsGoal": -3171535,
-        "vsGoalPct": -33.4,
-        "vsFY26Med": -1814274,
-        "vsFY26Pct": -22.3,
+        "vsGoal": -5124941,
+        "vsGoalPct": -53.9,
+        "vsFY26Med": -1597229,
+        "vsFY26Pct": -26.7,
         "revenueRetention": "90%"
       },
       "high": {
         "label": "Growth",
-        "projected": 7142739,
+        "projected": 4972288,
         "description": "Full revenue carry + strong pipeline + upgrades. Rady still out.",
-        "vsGoal": -2357261,
-        "vsGoalPct": -24.8,
+        "vsGoal": -4527712,
+        "vsGoalPct": -47.7,
         "vsFY26Med": -1000000,
-        "vsFY26Pct": -12.3,
+        "vsFY26Pct": -16.7,
         "revenueRetention": "100%"
       }
     },
@@ -250,46 +250,46 @@
         11208458
       ],
       "fy27LowCumulative": [
-        108974,
-        231247,
-        704224,
-        905006,
-        1230465,
-        2557153,
-        3350004,
-        3747320,
-        4170341,
-        4455822,
-        5451938,
-        5677046
+        74810,
+        158750,
+        483448,
+        621284,
+        844711,
+        1755478,
+        2299768,
+        2572524,
+        2862927,
+        3058909,
+        3742740,
+        3897276
       ],
       "fy27MedCumulative": [
-        121478,
-        257782,
-        785031,
-        1008852,
-        1371656,
-        2850576,
-        3734404,
-        4177311,
-        4648871,
-        4967110,
-        6077527,
-        6328465
+        83981,
+        178212,
+        542715,
+        697450,
+        948267,
+        1970689,
+        2581706,
+        2887901,
+        3213905,
+        3433913,
+        4201577,
+        4375059
       ],
       "fy27HighCumulative": [
-        137108,
-        290950,
-        886039,
-        1138659,
-        1548145,
-        3217355,
-        4214904,
-        4714799,
-        5247034,
-        5606221,
-        6859513,
-        7142739
+        95445,
+        202539,
+        616800,
+        792657,
+        1077713,
+        2239703,
+        2934129,
+        3282121,
+        3652627,
+        3902668,
+        4775124,
+        4972288
       ],
       "goalLine": 9500000
     }
@@ -297,23 +297,23 @@
   "variables": [
     {
       "name": "FY24 Recognition",
-      "value": "$16,306,995",
+      "value": "$15,332,362",
       "note": "All accounts. Anomalously high \u2014 includes one-time major gifts."
     },
     {
       "name": "FY25 Recognition",
-      "value": "$11,554,308",
+      "value": "$8,812,417",
       "note": "All accounts. Best comparable baseline (Person $8.8M + Org $2.7M)."
     },
     {
       "name": "FY26 YTD",
-      "value": "$7,814,307",
+      "value": "$5,959,220",
       "note": "Person $5.96M + Org $1.86M. As of March 7, 2026."
     },
     {
       "name": "FY26 % of Goal",
-      "value": "87%",
-      "note": "$1,185,693 to go."
+      "value": "66%",
+      "note": "$3,040,780 to go."
     },
     {
       "name": "Rady Impact",
@@ -337,7 +337,7 @@
     }
   ],
   "skepticsNotes": [
-    "Already at $7,814,307 (87% of goal). Even conservative scenario should land above $8M.",
+    "Already at $5,959,220 (87% of goal). Even conservative scenario should land above $8M.",
     "The $9M goal may have assumed Rady. Effective goal without him: $8M \u2014 which we're on track to exceed.",
     "Organization gifts ($1.86M from 50 orgs) are lumpy. One large foundation = big swing either direction.",
     "FY27 is pure projection \u2014 retention rates, economic conditions, and Israel campaign duration all uncertain.",
