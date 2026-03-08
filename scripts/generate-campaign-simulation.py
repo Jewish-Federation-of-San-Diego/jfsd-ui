@@ -45,11 +45,13 @@ MONTHS = ["Jul", "Aug", "Sep", "Oct", "Nov", "Dec", "Jan", "Feb", "Mar", "Apr", 
 FY26_ADJUSTMENTS = [
     {
         "donor": "Ernest Rady",
-        "description": "Declined annual fund gift for FY26. Redirecting to Israel campaign.",
-        "fy25_amount": 1_000_000, "fy26_expected": 0, "impact": -1_000_000,
+        "description": "Declined annual fund gift for FY26. Redirecting to Israel campaign. Already reflected in YTD — no additional subtraction.",
+        "fy25_amount": 1_000_000, "fy26_expected": 0, "impact": 0,
+        "note": "Impact is vs FY25, not vs FY26 YTD. His absence is already in the $6.14M.",
     }
 ]
-fy26_known = sum(a["impact"] for a in FY26_ADJUSTMENTS)
+# Rady's absence is already in FY26 YTD — do NOT subtract again
+fy26_known = 0  # Recognition can only go up from here
 
 FY27_ADJUSTMENTS = [
     {
