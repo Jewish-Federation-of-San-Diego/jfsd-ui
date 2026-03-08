@@ -43,7 +43,7 @@ interface CashData {
   narrative?: { title: string; keyFindings: string[] };
 }
 
-const SEGMENT_ORDER = ['capital', 'drm_major', 'drm_mid', 'event', 'telemarketing', 'recurring', 'other'];
+const SEGMENT_ORDER = ['capital', 'drm_major', 'drm_mid', 'event', 'writeoff', 'telemarketing', 'recurring', 'other'];
 
 export function CashForecastDashboard() {
   const [data, setData] = useState<CashData | null>(null);

@@ -15,21 +15,27 @@ TODAY = date(2026, 3, 7)
 
 def sf_query(soql):
     """Run Salesforce query and return records."""
+    # Collapse multi-line SOQL to single line
+    clean_soql = " ".join(soql.split())
     result = subprocess.run(
-        ["node", "skills/salesforce/sf-query.js", soql],
+        ["node", "skills/salesforce/sf-query.js", clean_soql],
         capture_output=True, text=True, cwd=str(Path.home() / "clawd")
     )
     stdout = result.stdout
-    # Filter dotenv noise
-    start = stdout.find('{')
+    # Filter dotenv noise — find the JSON object
+    start = stdout.find('{"')
     if start < 0:
-        print(f"  WARN: No JSON in response for query: {soql[:80]}...", file=sys.stderr)
+        start = stdout.find('{\n')
+    if start < 0:
+        print(f"  WARN: No JSON in response for: {clean_soql[:80]}...", file=sys.stderr)
+        if result.stderr:
+            print(f"    stderr: {result.stderr[:200]}", file=sys.stderr)
         return []
     try:
         data = json.loads(stdout[start:])
         return data.get("records", [])
-    except json.JSONDecodeError:
-        print(f"  WARN: JSON parse error for query: {soql[:80]}...", file=sys.stderr)
+    except json.JSONDecodeError as e:
+        print(f"  WARN: JSON parse error: {e} for: {clean_soql[:80]}...", file=sys.stderr)
         return []
 
 def days_since(date_str):
@@ -153,9 +159,12 @@ segments = {
     "event": {"label": "Event Pledges (Fed 360, LOJ, etc.)", "color": "#236B4A", "pledges": [], "total": 0, "count": 0,
               "action": "Thank-you email with payment link 2-4 weeks after event. Follow-up at 60 days. These donors said yes in person — they need a convenient way to fulfill.",
               "collectionCycle": "Primary: 1-2 months post-event. Secondary: year-end (Dec). Event pledges from >6 months ago need personal outreach."},
+    "writeoff": {"label": "⚠ Recommended Write-Off", "color": "#eb6136", "pledges": [], "total": 0, "count": 0,
+                 "action": "18+ months old, zero payments, <$10K (excl. capital). Nobody is collecting. Send one final notice, then close. For pledges >$10K, make a personal call before writing off.",
+                 "collectionCycle": "One final digital reminder → 30-day grace period → write off. Flag any >$10K for DRM personal review first."},
     "telemarketing": {"label": "Telemarketing & Old Small Pledges", "color": "#8C8C8C", "pledges": [], "total": 0, "count": 0,
-                      "action": "Review for write-off. Pledges >18 months old with zero payments are likely uncollectable. Send one final notice, then close.",
-                      "collectionCycle": "One final digital reminder, then write off if no response within 30 days."},
+                      "action": "Old phone-solicited or mass-appeal pledges. Most are under $100. Batch write-off unless donor has other active engagement.",
+                      "collectionCycle": "Batch close quarterly. No individual follow-up needed for <$100."},
     "recurring": {"label": "Recurring/Open-Ended", "color": "#594fa3", "pledges": [], "total": 0, "count": 0,
                   "action": "Verify payment method is active. Check for failed transactions. These should be auto-collecting.",
                   "collectionCycle": "Monthly auto-charge. Flag if 2+ consecutive missed payments."},
@@ -193,24 +202,32 @@ for p in pledges:
         "totalPaid": sum(pay["CurrentAmount"] for pay in payments_by_commitment.get(p["Id"], [])),
     }
     
+    is_capital = any(c in campaign.upper() for c in [c.upper() for c in CAPITAL_CAMPAIGNS])
+    is_old_no_payment = (not has_payments) and days and days > 540  # 18+ months, zero payments
+    
     # Classify — order matters: most specific first
-    # Only truly auto-charging pledges go to recurring (must have payments flowing)
-    if any(c in campaign.upper() for c in [c.upper() for c in CAPITAL_CAMPAIGNS]):
+    if is_capital:
         seg = "capital"
-    elif any(c in campaign.upper() for c in [c.upper() for c in EVENT_CAMPAIGNS]):
-        seg = "event"
+    elif is_old_no_payment and not is_capital and balance <= 10000:
+        # 18+ months, zero payments, under $10K, not capital → write-off
+        seg = "writeoff"
+    elif is_old_no_payment and not is_capital and balance > 10000:
+        # Big but old with no payments → still in DRM but flagged
+        seg = "drm_major"  # Keep in DRM for personal review
     elif any(c in campaign.upper() for c in [c.upper() for c in TELEMARKETING_CAMPAIGNS]):
         seg = "telemarketing"
+    elif any(c in campaign.upper() for c in [c.upper() for c in EVENT_CAMPAIGNS]):
+        seg = "event"
+    elif recurrence in ("OpenEnded", "Fixed") and has_payments and balance < 5000:
+        seg = "recurring"  # Only if actively paying
     elif balance > 5000:
         seg = "drm_major"
     elif balance >= 1000:
         seg = "drm_mid"
-    elif recurrence in ("OpenEnded", "Fixed") and has_payments and balance < 5000:
-        seg = "recurring"  # Only if actively paying
     elif balance < 500 and days and days > 365:
-        seg = "telemarketing"  # Old tiny pledges — write-off candidates
+        seg = "telemarketing"  # Old tiny pledges
     elif balance < 1000:
-        seg = "other"  # Small but not ancient
+        seg = "other"
     else:
         seg = "other"
     
@@ -262,9 +279,9 @@ pledges_with_payments = sum(1 for p in pledges if p["Id"] in payments_by_commitm
 total_paid = sum(sum(pay["CurrentAmount"] for pay in payments_by_commitment.get(p["Id"], [])) for p in pledges)
 fy26_cash = sum(r.get("total", 0) for r in fy26_by_month.values())
 
-# Write-off candidates
-writeoff_candidates = segments["telemarketing"]["count"]
-writeoff_amount = segments["telemarketing"]["total"]
+# Write-off candidates = writeoff segment + telemarketing
+writeoff_candidates = segments["writeoff"]["count"] + segments["telemarketing"]["count"]
+writeoff_amount = segments["writeoff"]["total"] + segments["telemarketing"]["total"]
 
 kpis = {
     "totalReceivable": round(total_receivable),
