@@ -57,6 +57,7 @@ import { ChartGalleryDashboard } from './dashboards/ChartGalleryDashboard';
 import { DashboardAuditDashboard } from './dashboards/DashboardAuditDashboard';
 import { GuideDashboard } from './dashboards/GuideDashboard';
 import { CFOAnalystBriefDashboard } from './dashboards/CFOAnalystBriefDashboard';
+import { CampaignSimulationDashboard } from './dashboards/CampaignSimulationDashboard';
 import { ShareOfWalletDashboard } from './dashboards/ShareOfWalletDashboard';
 import { DonorLifecycleDashboard } from './dashboards/DonorLifecycleDashboard';
 import { CommunityNetworkDashboard } from './dashboards/CommunityNetworkDashboard';
@@ -80,6 +81,7 @@ const groupLabelStyle = { fontSize: 11, letterSpacing: '0.5px', color: 'rgba(255
 const menuItems = [
   { key: 'guide', icon: <InfoCircleOutlined />, label: 'Guide & Directory' },
   { key: 'cfo-brief', icon: <BulbOutlined />, label: 'CFO Analyst Brief' },
+  { key: 'campaign-sim', icon: <FundOutlined />, label: 'Campaign Simulation' },
   { key: 'overview', icon: <PieChartOutlined />, label: 'Overview' },
   {
     type: 'group' as const,
@@ -219,6 +221,7 @@ function App() {
     switch (selectedKey) {
       case 'guide': return <GuideDashboard onNavigate={(key: string) => setSelectedKey(key)} />;
       case 'cfo-brief': return <CFOAnalystBriefDashboard />;
+      case 'campaign-sim': return <CampaignSimulationDashboard />;
       case 'overview': return <OverviewDashboard onNavigate={(key: string) => setSelectedKey(key)} />;
       case 'campaign': return <CampaignTrackerDashboard />;
       case 'donor-health': return <DonorHealthDashboard />;
