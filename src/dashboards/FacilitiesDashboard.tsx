@@ -1,6 +1,7 @@
 import { Card, Col, Row, Statistic, Tag, Typography, Alert, Space, Badge, Tooltip as AntTooltip, Modal } from 'antd';
 import { DashboardSkeleton } from '../components/DashboardSkeleton';
 import { useEffect, useState, useCallback, useId } from 'react';
+import Plot from "react-plotly.js";
 
 import { DataFreshness } from '../components/DataFreshness';
 import { DefinitionTooltip } from '../components/DefinitionTooltip';
@@ -91,114 +92,103 @@ function Sparkline({ data, width = 80, height = 24 }: { data: TrendPoint[]; widt
   );
 }
 
-// ── Expanded Trend Chart (Modal) ────────────────────────────────────────
+// ── Expanded Trend Chart (Modal) — Plotly ───────────────────────────────
 function ExpandedTrendChart({ thermostat }: { thermostat: Thermostat }) {
-  const temps = thermostat.trend24h.map(d => d.avgTemp).filter((t): t is number => t != null);
-  if (temps.length < 2) return <Text type="secondary">Insufficient trend data</Text>;
+  const points = thermostat.trend24h.filter(d => d.avgTemp != null);
+  if (points.length < 2) return <Text type="secondary">Insufficient trend data</Text>;
 
-  const chartW = 600;
-  const chartH = 200;
-  const padL = 40;
-  const padR = 10;
-  const padT = 10;
-  const padB = 30;
-  const plotW = chartW - padL - padR;
-  const plotH = chartH - padT - padB;
-
+  const temps = points.map(d => d.avgTemp as number);
+  const hours = points.map(d => d.hour);
   const desiredCool = thermostat.desiredCool;
   const desiredHeat = thermostat.desiredHeat;
 
-  const allVals = [...temps];
-  if (desiredCool != null) allVals.push(desiredCool);
-  if (desiredHeat != null) allVals.push(desiredHeat);
-  const minT = Math.floor(Math.min(...allVals) - 1);
-  const maxT = Math.ceil(Math.max(...allVals) + 1);
-  const rangeT = maxT - minT || 1;
+  const avg = Math.round(temps.reduce((a, b) => a + b, 0) / temps.length * 10) / 10;
+  const minT = Math.min(...temps);
+  const maxT = Math.max(...temps);
 
-  const toX = (i: number) => padL + (i / (temps.length - 1)) * plotW;
-  const toY = (t: number) => padT + (1 - (t - minT) / rangeT) * plotH;
+  // Color each segment green (in range) or red (out of range)
+  const colors = temps.map(t => {
+    const aboveCool = desiredCool != null && t > desiredCool;
+    const belowHeat = desiredHeat != null && t < desiredHeat;
+    return (aboveCool || belowHeat) ? ERROR : SUCCESS;
+  });
 
-  // Build colored segments: green if within setpoints, red otherwise
-  const segments: Array<{ x1: number; y1: number; x2: number; y2: number; color: string }> = [];
-  for (let i = 0; i < temps.length - 1; i++) {
-    const midTemp = (temps[i] + temps[i + 1]) / 2;
-    const inRange =
-      (desiredHeat == null || midTemp >= desiredHeat) &&
-      (desiredCool == null || midTemp <= desiredCool);
-    segments.push({
-      x1: toX(i), y1: toY(temps[i]),
-      x2: toX(i + 1), y2: toY(temps[i + 1]),
-      color: inRange ? SUCCESS : ERROR,
+  // Setpoint reference lines
+  const shapes: Record<string, unknown>[] = [];
+  if (desiredCool != null) {
+    shapes.push({
+      type: 'line', xref: 'paper', x0: 0, x1: 1,
+      yref: 'y', y0: desiredCool, y1: desiredCool,
+      line: { color: '#3B82F6', width: 1, dash: 'dash' },
+    });
+  }
+  if (desiredHeat != null) {
+    shapes.push({
+      type: 'line', xref: 'paper', x0: 0, x1: 1,
+      yref: 'y', y0: desiredHeat, y1: desiredHeat,
+      line: { color: ERROR, width: 1, dash: 'dash' },
     });
   }
 
-  // Time labels: every 4 hours
-  const timeLabels = ['12am', '4am', '8am', '12pm', '4pm', '8pm'];
-
-  // Y-axis labels: ~5 ticks
-  const yTicks: number[] = [];
-  const yStep = Math.max(1, Math.round(rangeT / 5));
-  for (let v = minT; v <= maxT; v += yStep) yTicks.push(v);
-
-  const avg = Math.round(temps.reduce((a, b) => a + b, 0) / temps.length * 10) / 10;
-  const min2 = Math.min(...temps);
-  const max2 = Math.max(...temps);
+  // Annotations for setpoint labels
+  const annotations: Record<string, unknown>[] = [];
+  if (desiredCool != null) {
+    annotations.push({
+      xref: 'paper', x: 1, yref: 'y', y: desiredCool,
+      text: `Cool ${desiredCool}°`, showarrow: false,
+      font: { size: 10, color: '#3B82F6' },
+      xanchor: 'left', xshift: 4,
+    });
+  }
+  if (desiredHeat != null) {
+    annotations.push({
+      xref: 'paper', x: 1, yref: 'y', y: desiredHeat,
+      text: `Heat ${desiredHeat}°`, showarrow: false,
+      font: { size: 10, color: ERROR },
+      xanchor: 'left', xshift: 4,
+    });
+  }
 
   return (
     <div>
-      <svg width="100%" viewBox={`0 0 ${chartW} ${chartH}`} style={{ display: 'block' }}>
-        {/* Grid + Y labels */}
-        {yTicks.map(v => (
-          <g key={v}>
-            <line x1={padL} y1={toY(v)} x2={chartW - padR} y2={toY(v)} stroke="#e8e8e8" strokeWidth={1} />
-            <text x={padL - 4} y={toY(v) + 4} textAnchor="end" fontSize={10} fill={MUTED}>{v}°</text>
-          </g>
-        ))}
-
-        {/* X labels */}
-        {timeLabels.map((label, i) => {
-          const x = padL + (i / (timeLabels.length - 1)) * plotW;
-          return <text key={label} x={x} y={chartH - 4} textAnchor="middle" fontSize={10} fill={MUTED}>{label}</text>;
-        })}
-
-        {/* Setpoint lines */}
-        {desiredCool != null && (
-          <line
-            x1={padL} y1={toY(desiredCool)} x2={chartW - padR} y2={toY(desiredCool)}
-            stroke="#3B82F6" strokeWidth={1} strokeDasharray="6,3"
-          />
-        )}
-        {desiredHeat != null && (
-          <line
-            x1={padL} y1={toY(desiredHeat)} x2={chartW - padR} y2={toY(desiredHeat)}
-            stroke={ERROR} strokeWidth={1} strokeDasharray="6,3"
-          />
-        )}
-
-        {/* Colored line segments */}
-        {segments.map((s, i) => (
-          <line key={i} x1={s.x1} y1={s.y1} x2={s.x2} y2={s.y2} stroke={s.color} strokeWidth={2} strokeLinejoin="round" />
-        ))}
-      </svg>
-
-      {/* Legend */}
-      <div style={{ display: 'flex', gap: 16, justifyContent: 'center', marginTop: 8, fontSize: 11, color: MUTED }}>
-        {desiredCool != null && <span><span style={{ color: '#3B82F6' }}>- -</span> Cool setpoint ({desiredCool}°)</span>}
-        {desiredHeat != null && <span><span style={{ color: ERROR }}>- -</span> Heat setpoint ({desiredHeat}°)</span>}
-        <span><span style={{ color: SUCCESS }}>━</span> In range</span>
-        <span><span style={{ color: ERROR }}>━</span> Out of range</span>
-      </div>
+      <Plot
+        data={[
+          {
+            x: hours,
+            y: temps,
+            type: 'scatter',
+            mode: 'lines+markers',
+            marker: { color: colors, size: 5 },
+            line: { color: SUCCESS, width: 2 },
+            hovertemplate: '%{y:.1f}°F at %{x}<extra></extra>',
+          },
+        ]}
+        layout={{
+          height: 220,
+          margin: { l: 40, r: 50, t: 10, b: 30 },
+          xaxis: { title: '', tickangle: 0, tickfont: { size: 10, color: MUTED } },
+          yaxis: { title: '°F', tickfont: { size: 10, color: MUTED }, titlefont: { size: 11 } },
+          shapes,
+          annotations,
+          plot_bgcolor: 'transparent',
+          paper_bgcolor: 'transparent',
+          showlegend: false,
+          hovermode: 'x unified',
+        }}
+        config={{ displayModeBar: false, responsive: true }}
+        style={{ width: '100%' }}
+      />
 
       {/* Stats */}
       <Row gutter={16} style={{ marginTop: 12, textAlign: 'center' }}>
         <Col span={8}>
-          <Statistic title={<span style={{ fontSize: 11 }}>Min</span>} value={min2} suffix="°F" valueStyle={{ fontSize: 18, color: '#3B82F6' }} />
+          <Statistic title={<span style={{ fontSize: 11 }}>Min</span>} value={minT} suffix="°F" valueStyle={{ fontSize: 18, color: '#3B82F6' }} />
         </Col>
         <Col span={8}>
           <Statistic title={<span style={{ fontSize: 11 }}>Avg</span>} value={avg} suffix="°F" valueStyle={{ fontSize: 18, color: NAVY }} />
         </Col>
         <Col span={8}>
-          <Statistic title={<span style={{ fontSize: 11 }}>Max</span>} value={max2} suffix="°F" valueStyle={{ fontSize: 18, color: ERROR }} />
+          <Statistic title={<span style={{ fontSize: 11 }}>Max</span>} value={maxT} suffix="°F" valueStyle={{ fontSize: 18, color: ERROR }} />
         </Col>
       </Row>
     </div>

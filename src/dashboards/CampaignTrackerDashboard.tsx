@@ -1,6 +1,7 @@
 import { Card, Col, Row, Statistic, Table, Typography, Space, Progress, Alert, Tag, Select } from 'antd';
 import { DashboardSkeleton } from '../components/DashboardSkeleton';
 import { CsvExport } from '../components/CsvExport';
+import Plot from "react-plotly.js";
 import {
   RiseOutlined,
   FallOutlined,
@@ -9,7 +10,7 @@ import {
   TrophyOutlined,
   FieldTimeOutlined,
 } from '@ant-design/icons';
-import { useEffect, useRef, useState, useCallback, useMemo } from 'react';
+import { useEffect, useState, useCallback, useMemo } from 'react';
 
 import { DataFreshness } from '../components/DataFreshness';
 import { DefinitionTooltip } from '../components/DefinitionTooltip';
@@ -59,22 +60,7 @@ const fmtDate = (d: string) => {
 };
 
 // ── Hook: measure width ─────────────────────────────────────────────────
-function useWidth() {
-  const ref = useRef<HTMLDivElement>(null);
-  const [width, setWidth] = useState(0);
-  const measure = useCallback(() => {
-    if (ref.current) {
-      const w = ref.current.getBoundingClientRect().width;
-      if (w > 0) setWidth(Math.floor(w));
-    }
-  }, []);
-  useEffect(() => {
-    requestAnimationFrame(measure);
-    window.addEventListener('resize', measure);
-    return () => window.removeEventListener('resize', measure);
-  }, [measure]);
-  return { ref, width };
-}
+
 
 // ── Progress Ring REMOVED — replaced with big number per viz standards ──
 
@@ -315,90 +301,86 @@ function YoYComparison({ data }: { data: CampaignData }) {
   );
 }
 
-// ── Momentum Chart (SVG bars) ───────────────────────────────────────────
+// ── Momentum Chart (Plotly bar) ─────────────────────────────────────────
 function MomentumChart({ weeks }: { weeks: WeeklyMomentum[] }) {
-  const { ref, width } = useWidth();
   if (!weeks || weeks.length === 0) return (
     <Card title={<span style={{ color: NAVY }}><FieldTimeOutlined /> Weekly Giving Momentum</span>} size="small">
       <div style={{ textAlign: 'center', padding: '2rem 0', color: MUTED }}>No weekly data loaded</div>
     </Card>
   );
-  const maxAmt = Math.max(...weeks.map(w => w.amount), 1);
-  const h = 160;
-  const barGap = 6;
-  const barW = Math.max(20, (width - barGap * (weeks.length + 1)) / weeks.length);
   const latestWeek = weeks[weeks.length - 1];
   const title = latestWeek ? `Weekly Momentum: ${fmtUSD(latestWeek.amount)} this week` : "Weekly Giving Momentum";
-  
+  const colors = weeks.map((_, i) => i === weeks.length - 1 ? GOLD : NAVY);
+
   return (
     <Card title={<span style={{ color: NAVY }}><FieldTimeOutlined /> {title}</span>} size="small">
-      <div ref={ref}>
-        {width > 0 && (
-          <svg width={width} height={h + 30}>
-            {weeks.map((w, i) => {
-              const bh = (w.amount / maxAmt) * h;
-              const x = barGap + i * (barW + barGap);
-              return (
-                <g key={i}>
-                  <rect x={x} y={h - bh} width={barW} height={bh} rx={4} fill={i === weeks.length - 1 ? GOLD : NAVY} opacity={0.85} />
-                  <text x={x + barW / 2} y={h - bh - 4} textAnchor="middle" fontSize={9} fill={MUTED}>
-                    {w.amount >= 1000 ? safeCurrency(w.amount, { notation: 'compact', maximumFractionDigits: 0 }) : fmtUSD(w.amount)}
-                  </text>
-                  <text x={x + barW / 2} y={h + 16} textAnchor="middle" fontSize={9} fill={MUTED}>
-                    {fmtDate(w.weekOf)}
-                  </text>
-                </g>
-              );
-            })}
-          </svg>
-        )}
-      </div>
+      <Plot
+        data={[{
+          x: weeks.map(w => fmtDate(w.weekOf)),
+          y: weeks.map(w => w.amount),
+          type: 'bar',
+          marker: { color: colors, opacity: 0.85 },
+          text: weeks.map(w => w.amount >= 1000 ? safeCurrency(w.amount, { notation: 'compact', maximumFractionDigits: 0 }) : fmtUSD(w.amount)),
+          textposition: 'outside',
+          textfont: { size: 10, color: MUTED },
+          hovertemplate: '%{x}<br>%{y:$,.0f}<extra></extra>',
+        }]}
+        layout={{
+          height: 200,
+          margin: { l: 40, r: 10, t: 5, b: 40 },
+          xaxis: { tickfont: { size: 9, color: MUTED }, tickangle: -30 },
+          yaxis: { tickfont: { size: 9, color: MUTED }, tickprefix: '$', separatethousands: true },
+          plot_bgcolor: 'transparent',
+          paper_bgcolor: 'transparent',
+          showlegend: false,
+          bargap: 0.3,
+        }}
+        config={{ displayModeBar: false, responsive: true }}
+        style={{ width: '100%' }}
+      />
     </Card>
   );
 }
 
-// ── Donor Breakdown (donut) ─────────────────────────────────────────────
-function DonorDonut({ data }: { data: CampaignData['donorBreakdown'] }) {
+// ── Donor Breakdown (Plotly horizontal bar — no pie charts) ─────────────
+function DonorBreakdownBar({ data }: { data: CampaignData['donorBreakdown'] }) {
   const total = data.newDonors + data.returningDonors + data.lybuntRecovered;
   if (total === 0) return <Card size="small" title="Donor Breakdown"><Text type="secondary">No data</Text></Card>;
   const segments = [
-    { label: 'New', value: data.newDonors, color: SUCCESS },
+    { label: 'New Donors', value: data.newDonors, color: SUCCESS },
     { label: 'Returning', value: data.returningDonors, color: NAVY },
     { label: 'LYBUNT Recovered', value: data.lybuntRecovered, color: GOLD },
   ];
-  const size = 140;
-  const cx = size / 2, cy = size / 2, r = 50, sw = 20;
-  let cumAngle = -Math.PI / 2;
-  const arcs = segments.map(s => {
-    const angle = (s.value / total) * 2 * Math.PI;
-    const startX = cx + r * Math.cos(cumAngle);
-    const startY = cy + r * Math.sin(cumAngle);
-    cumAngle += angle;
-    const endX = cx + r * Math.cos(cumAngle);
-    const endY = cy + r * Math.sin(cumAngle);
-    const large = angle > Math.PI ? 1 : 0;
-    return { ...s, d: `M ${startX} ${startY} A ${r} ${r} 0 ${large} 1 ${endX} ${endY}` };
-  });
+
   return (
-    <Card size="small" title={<span style={{ color: NAVY }}><TeamOutlined /> Donor Breakdown</span>}>
-      <Row align="middle" gutter={16}>
-        <Col>
-          <svg width={size} height={size}>
-            {arcs.map((a, i) => (
-              <path key={i} d={a.d} fill="none" stroke={a.color} strokeWidth={sw} strokeLinecap="round" />
-            ))}
-            <text x={cx} y={cy + 4} textAnchor="middle" fontSize={18} fontWeight={700} fill={NAVY}>{safeCount(total)}</text>
-          </svg>
-        </Col>
-        <Col>
-          {segments.map(s => (
-            <div key={s.label} style={{ marginBottom: 4 }}>
-              <span style={{ display: 'inline-block', width: 10, height: 10, borderRadius: '50%', background: s.color, marginRight: 6 }} />
-              <Text>{s.label === 'LYBUNT Recovered' ? <DefinitionTooltip term="LYBUNT" dashboardKey="campaign">{s.label}</DefinitionTooltip> : s.label}: <strong>{safeCount(s.value)}</strong></Text>
-            </div>
-          ))}
-        </Col>
-      </Row>
+    <Card size="small" title={<span style={{ color: NAVY }}><TeamOutlined /> Donor Breakdown — {safeCount(total)} total donors</span>}>
+      <Plot
+        data={segments.map(s => ({
+          x: [s.value],
+          y: ['Donors'],
+          type: 'bar' as const,
+          orientation: 'h' as const,
+          name: s.label,
+          marker: { color: s.color },
+          text: [`${s.label}: ${safeCount(s.value)} (${total > 0 ? Math.round(s.value / total * 100) : 0}%)`],
+          textposition: s.value / total > 0.15 ? 'inside' : 'none',
+          textfont: { color: '#fff', size: 11 },
+          hovertemplate: `${s.label}: %{x:,} donors<extra></extra>`,
+        }))}
+        layout={{
+          height: 80,
+          margin: { l: 0, r: 0, t: 0, b: 0 },
+          barmode: 'stack',
+          xaxis: { visible: false },
+          yaxis: { visible: false },
+          plot_bgcolor: 'transparent',
+          paper_bgcolor: 'transparent',
+          showlegend: true,
+          legend: { orientation: 'h', y: -0.5, font: { size: 10 } },
+        }}
+        config={{ displayModeBar: false, responsive: true }}
+        style={{ width: '100%' }}
+      />
     </Card>
   );
 }
@@ -600,7 +582,7 @@ export function CampaignTrackerDashboard() {
             <MomentumChart weeks={filtered.weeks} />
           </Col>
           <Col xs={24} lg={10}>
-            <DonorDonut data={safeData.donorBreakdown} />
+            <DonorBreakdownBar data={safeData.donorBreakdown} />
           </Col>
         </Row>
 

@@ -1,8 +1,9 @@
-import { Card, Col, Row, Statistic, Table, Tag, Typography, Space, Progress, Tooltip as AntTooltip, Alert, List } from 'antd';
+import { Card, Col, Row, Statistic, Table, Tag, Typography, Space, Progress, Alert, List } from 'antd';
 import { DashboardSkeleton } from '../components/DashboardSkeleton';
 import { CsvExport } from '../components/CsvExport';
-import { useEffect, useRef, useState, useCallback } from 'react';
+import { useEffect, useState, useCallback } from 'react';
 import { InfoCircleOutlined, WarningOutlined, CheckCircleOutlined, BulbOutlined, ArrowUpOutlined, ArrowDownOutlined } from '@ant-design/icons';
+import Plot from "react-plotly.js";
 
 import { DataFreshness } from '../components/DataFreshness';
 import { DefinitionTooltip } from '../components/DefinitionTooltip';
@@ -12,8 +13,6 @@ import { safeCount, safeCurrency, safePercent } from '../utils/formatters';
 
 const { Text } = Typography;
 
-// ── Brand tokens ────────────────────────────────────────────────────────
-const GRID = '#E8E8ED';
 // ── Types ───────────────────────────────────────────────────────────────
 interface MonthlyRow {
   month: string;
@@ -63,31 +62,12 @@ const BRAND_COLORS: Record<string, string> = {
 };
 
 const fmtUSD = (v: number) => safeCurrency(v, { maximumFractionDigits: 0 });
-const fmtK = (v: number) => safeCurrency(v, { notation: 'compact', maximumFractionDigits: 1 });
 
 const feeColor = (v: number) => v > 2.6 ? ERROR : v > 2.5 ? WARNING : SUCCESS;
 const feeTag = (v: number): 'error' | 'warning' | 'success' => v > 2.6 ? 'error' : v > 2.5 ? 'warning' : 'success';
 
 // ── Hook: measure width reliably on mobile Safari ───────────────────────
-function useWidth() {
-  const ref = useRef<HTMLDivElement>(null);
-  const [width, setWidth] = useState(0);
-
-  const measure = useCallback(() => {
-    if (ref.current) {
-      const w = ref.current.getBoundingClientRect().width;
-      if (w > 0) setWidth(Math.floor(w));
-    }
-  }, []);
-
-  useEffect(() => {
-    requestAnimationFrame(measure);
-    window.addEventListener('resize', measure);
-    return () => window.removeEventListener('resize', measure);
-  }, [measure]);
-
-  return { ref, width };
-}
+// useWidth removed — Plotly handles responsive sizing
 
 // ── Monthly comparison helper ────────────────────────────────────────────
 function MonthDelta({ current, prior }: { current: number; prior: number; prefix?: string; suffix?: string; precision?: number }) {
@@ -280,51 +260,8 @@ function RecommendationsCard() {
   );
 }
 
-// ── SVG Bar Chart ───────────────────────────────────────────────────────
-function BarChart({ data, width: w }: { data: MonthlyRow[]; width: number }) {
-  if (!data || data.length === 0) return null;
-  const H = 220;
-  const PAD = { top: 10, right: 10, bottom: 30, left: 50 };
-  const cw = w - PAD.left - PAD.right;
-  const ch = H - PAD.top - PAD.bottom;
-  const maxVal = Math.max(...data.map(d => d.amount), 1);
-  const barW = Math.max((cw / data.length) * 0.6, 8);
-  const gap = cw / data.length;
-
-  // Dynamic y-axis ticks
-  const step = Math.ceil(maxVal / 4 / 10000) * 10000;
-  const yTicks = Array.from({ length: 5 }, (_, i) => i * step);
-
-  return (
-    <svg width={w} height={H} style={{ display: 'block' }}>
-      {yTicks.map(t => {
-        const y = PAD.top + ch - (t / maxVal) * ch;
-        return (
-          <g key={t}>
-            <line x1={PAD.left} y1={y} x2={w - PAD.right} y2={y} stroke={GRID} strokeWidth={1} />
-            <text x={PAD.left - 6} y={y + 4} textAnchor="end" fontSize={10} fill={MUTED}>{fmtK(t)}</text>
-          </g>
-        );
-      })}
-      {data.map((d, i) => {
-        const barH = (d.amount / maxVal) * ch;
-        const x = PAD.left + i * gap + (gap - barW) / 2;
-        const y = PAD.top + ch - barH;
-        return (
-          <g key={d.month}>
-            <AntTooltip title={`${d.month}: ${fmtUSD(d.amount)} (${d.charges} charges)`}>
-              <rect x={x} y={y} width={barW} height={barH} fill={NAVY} rx={3} style={{ cursor: 'pointer' }} />
-            </AntTooltip>
-            <text x={x + barW / 2} y={H - 8} textAnchor="middle" fontSize={11} fill={MUTED}>{d.month}</text>
-          </g>
-        );
-      })}
-    </svg>
-  );
-}
-
+// ── Monthly Revenue Chart (Plotly bar) ──────────────────────────────────
 function MonthlyRevenueChart({ data }: { data: MonthlyRow[] }) {
-  const { ref, width } = useWidth();
   if (!data || data.length === 0) return (
     <Card title="Monthly Revenue" size="small">
       <div style={{ textAlign: 'center', padding: '3rem 0', color: MUTED }}>No monthly data loaded — connect Stripe API for live volume</div>
@@ -339,62 +276,34 @@ function MonthlyRevenueChart({ data }: { data: MonthlyRow[] }) {
 
   return (
     <Card title={title} size="small">
-      <div ref={ref} style={{ width: '100%', minHeight: 220 }}>
-        {width > 0 && <BarChart data={data} width={width} />}
-      </div>
+      <Plot
+        data={[{
+          x: data.map(d => d.month),
+          y: data.map(d => d.amount),
+          type: 'bar',
+          marker: { color: NAVY, opacity: 0.85 },
+          hovertemplate: '%{x}: %{y:$,.0f}<extra></extra>',
+        }]}
+        layout={{
+          height: 220,
+          margin: { l: 50, r: 10, t: 5, b: 30 },
+          xaxis: { tickfont: { size: 11, color: MUTED } },
+          yaxis: { tickfont: { size: 10, color: MUTED }, tickprefix: '$', separatethousands: true },
+          plot_bgcolor: 'transparent',
+          paper_bgcolor: 'transparent',
+          showlegend: false,
+          bargap: 0.3,
+        }}
+        config={{ displayModeBar: false, responsive: true }}
+        style={{ width: '100%' }}
+      />
       <Text type="secondary" style={{ fontSize: 11 }}>Source: Stripe API · FY26 Jul–present</Text>
     </Card>
   );
 }
 
-// ── SVG Line Chart ──────────────────────────────────────────────────────
-function LineChart({ data, width: w }: { data: MonthlyRow[]; width: number }) {
-  if (!data || data.length === 0) return null;
-  const H = 220;
-  const PAD = { top: 10, right: 16, bottom: 30, left: 44 };
-  const cw = w - PAD.left - PAD.right;
-  const ch = H - PAD.top - PAD.bottom;
-  const minY = 2.0, maxY = 3.2;
-  const range = maxY - minY;
-
-  const yTicks = [2.0, 2.2, 2.4, 2.6, 2.8, 3.0, 3.2];
-
-  const toX = (i: number) => PAD.left + (i / Math.max(data.length - 1, 1)) * cw;
-  const toY = (v: number) => PAD.top + ch - ((v - minY) / range) * ch;
-
-  const points = data.map((d, i) => ({ x: toX(i), y: toY(d.feeRate), ...d }));
-  const linePath = points.map((p, i) => `${i === 0 ? 'M' : 'L'}${p.x},${p.y}`).join(' ');
-
-  const targetY = toY(2.5);
-
-  return (
-    <svg width={w} height={H} style={{ display: 'block' }}>
-      {yTicks.map(t => {
-        const y = toY(t);
-        return (
-          <g key={t}>
-            <line x1={PAD.left} y1={y} x2={w - PAD.right} y2={y} stroke={GRID} strokeWidth={1} />
-            <text x={PAD.left - 6} y={y + 4} textAnchor="end" fontSize={10} fill={MUTED}>{safePercent(t, { decimals: 1 })}</text>
-          </g>
-        );
-      })}
-      <line x1={PAD.left} y1={targetY} x2={w - PAD.right} y2={targetY} stroke={WARNING} strokeWidth={1.5} strokeDasharray="6 3" />
-      <text x={w - PAD.right + 2} y={targetY + 4} fontSize={9} fill={WARNING}>2.5%</text>
-      <path d={linePath} fill="none" stroke={NAVY} strokeWidth={2} />
-      {points.map((p) => (
-        <g key={p.month}>
-          <AntTooltip title={`${p.month}: ${safePercent(p.feeRate, { decimals: 2 })} (${safeCount(p.charges)} charges, ${fmtUSD(p.amount)})`}>
-            <circle cx={p.x} cy={p.y} r={5} fill={feeColor(p.feeRate)} stroke="#fff" strokeWidth={2} style={{ cursor: 'pointer' }} />
-          </AntTooltip>
-          <text x={p.x} y={H - 8} textAnchor="middle" fontSize={11} fill={MUTED}>{p.month}</text>
-        </g>
-      ))}
-    </svg>
-  );
-}
-
+// ── Fee Rate Chart (Plotly line + target) ───────────────────────────────
 function FeeRateChart({ data }: { data: MonthlyRow[] }) {
-  const { ref, width } = useWidth();
   if (!data || data.length === 0) return (
     <Card title="Fee Rate Trend" size="small">
       <div style={{ textAlign: 'center', padding: '3rem 0', color: MUTED }}>No fee data loaded — connect Stripe API for rate analysis</div>
@@ -407,9 +316,39 @@ function FeeRateChart({ data }: { data: MonthlyRow[] }) {
 
   return (
     <Card title={title} size="small">
-      <div ref={ref} style={{ width: '100%', minHeight: 220 }}>
-        {width > 0 && <LineChart data={data} width={width} />}
-      </div>
+      <Plot
+        data={[{
+          x: data.map(d => d.month),
+          y: data.map(d => d.feeRate),
+          type: 'scatter',
+          mode: 'lines+markers',
+          line: { color: NAVY, width: 2 },
+          marker: { color: data.map(d => feeColor(d.feeRate)), size: 8, line: { color: '#fff', width: 2 } },
+          hovertemplate: '%{x}: %{y:.2f}%<extra></extra>',
+        }]}
+        layout={{
+          height: 220,
+          margin: { l: 44, r: 16, t: 5, b: 30 },
+          xaxis: { tickfont: { size: 11, color: MUTED } },
+          yaxis: { tickfont: { size: 10, color: MUTED }, ticksuffix: '%', range: [2.0, 3.2] },
+          shapes: [{
+            type: 'line', xref: 'paper', x0: 0, x1: 1,
+            yref: 'y', y0: 2.5, y1: 2.5,
+            line: { color: WARNING, width: 1.5, dash: 'dash' },
+          }],
+          annotations: [{
+            xref: 'paper', x: 1, yref: 'y', y: 2.5,
+            text: '2.5% target', showarrow: false,
+            font: { size: 9, color: WARNING },
+            xanchor: 'left', xshift: 4,
+          }],
+          plot_bgcolor: 'transparent',
+          paper_bgcolor: 'transparent',
+          showlegend: false,
+        }}
+        config={{ displayModeBar: false, responsive: true }}
+        style={{ width: '100%' }}
+      />
       <Text type="secondary" style={{ fontSize: 11 }}>Dashed line = 2.5% target · Source: Stripe API</Text>
     </Card>
   );
