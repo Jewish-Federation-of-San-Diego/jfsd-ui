@@ -1,5 +1,5 @@
 {
-  "asOfDate": "2026-03-08 06:03",
+  "asOfDate": "2026-03-09 06:07",
   "annualCampaign": {
     "name": "Annual Campaign 26",
     "goal": 9000000,
@@ -10,18 +10,13 @@
     "priorYearSamePoint": 8812417.17
   },
   "momentum": {
-    "giftsThisWeek": 158,
-    "amountThisWeek": 124647.7,
-    "giftsLastWeek": 185,
-    "amountLastWeek": 53725.77,
-    "weekOverWeekPct": 132.0
+    "giftsThisWeek": 4,
+    "amountThisWeek": 2982.0,
+    "giftsLastWeek": 161,
+    "amountLastWeek": 121665.7,
+    "weekOverWeekPct": -97.5
   },
   "weeklyMomentum": [
-    {
-      "weekOf": "2026-01-12",
-      "gifts": 71,
-      "amount": 41695.02
-    },
     {
       "weekOf": "2026-01-19",
       "gifts": 74,
@@ -54,12 +49,17 @@
     },
     {
       "weekOf": "2026-03-02",
-      "gifts": 157,
+      "gifts": 161,
       "amount": 121665.7
+    },
+    {
+      "weekOf": "2026-03-09",
+      "gifts": 3,
+      "amount": 0.0
     }
   ],
   "donorBreakdown": {
-    "newDonors": 246,
+    "newDonors": 245,
     "returningDonors": 591,
     "lybuntRecovered": 105,
     "retentionRate": 31.6
@@ -103,69 +103,33 @@
   ],
   "topGiftsThisWeek": [
     {
-      "name": "Jewish Community Foundation",
-      "amount": 16343.16,
-      "campaign": "Endowment - FY26",
-      "date": "2026-03-03"
+      "name": "Dani Golden",
+      "amount": 2982.0,
+      "campaign": "SD AJMA Medical Mission to Israel - FY26",
+      "date": "2026-03-26"
     },
     {
-      "name": "Jewish Community Foundation",
-      "amount": 13328.16,
-      "campaign": "Endowment - FY26",
-      "date": "2026-03-03"
+      "name": "Allison Weisman",
+      "amount": 0.0,
+      "campaign": "Yom HaShoah - FY26",
+      "date": "2026-03-09"
     },
     {
-      "name": "Jewish Community Foundation",
-      "amount": 10000.0,
-      "campaign": "DRM FACE 2025",
-      "date": "2026-03-03"
+      "name": "Tamar Goldman Sachs",
+      "amount": 0.0,
+      "campaign": "Yom HaShoah - FY26 - Donations",
+      "date": "2026-03-09"
     },
     {
-      "name": "Dafgiving360",
-      "amount": 10000.0,
-      "campaign": "FED360 - FY26 - Donations - Attended",
-      "date": "2026-03-03"
-    },
-    {
-      "name": "Jewish Community Foundation",
-      "amount": 7956.0,
-      "campaign": "Endowment - FY26",
-      "date": "2026-03-03"
-    },
-    {
-      "name": "Jewish Community Foundation",
-      "amount": 7723.0,
-      "campaign": "Endowment - FY26",
-      "date": "2026-03-03"
-    },
-    {
-      "name": "Jewish Community Foundation",
-      "amount": 5425.0,
-      "campaign": "Endowment - FY26",
-      "date": "2026-03-03"
-    },
-    {
-      "name": "Jewish Community Foundation",
-      "amount": 5183.3,
-      "campaign": "Endowment - FY26",
-      "date": "2026-03-03"
-    },
-    {
-      "name": "Jewish Federation Of Metropolitan Chicago",
-      "amount": 5000.0,
-      "campaign": "Unsolicited Annual Gifts - FY26",
-      "date": "2026-03-03"
-    },
-    {
-      "name": "Jewish Community Foundation",
-      "amount": 5000.0,
-      "campaign": "LION OF JUDAH LUNCHEON 2025",
-      "date": "2026-03-03"
+      "name": "ORLI VILENSKY",
+      "amount": 0.0,
+      "campaign": "Yom HaShoah - FY26 - Donations",
+      "date": "2026-03-09"
     }
   ],
   "pipeline": {
-    "openPledges": 621,
-    "openPledgeAmount": 13740322.15,
+    "openPledges": 622,
+    "openPledgeAmount": 13745322.15,
     "expectedThisMonth": 0.0
   },
   "campaigns": [
