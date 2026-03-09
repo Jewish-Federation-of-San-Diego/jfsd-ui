@@ -1,6 +1,14 @@
 {
-  "asOfDate": "2026-03-08T06:09:33-08:00",
+  "asOfDate": "2026-03-09T06:13:07-08:00",
   "actionItems": [
+    {
+      "type": "needs_review",
+      "merchant": "Anthropic",
+      "amount": 1000,
+      "cardholder": "David Fuhriman",
+      "date": "2026-03-09",
+      "reason": "High-value transaction ($1,000.00)"
+    },
     {
       "type": "needs_review",
       "merchant": "Paypal",
@@ -91,6 +99,22 @@
     },
     {
       "type": "missing_receipt",
+      "merchant": "T-Mobile",
+      "amount": 357.19,
+      "cardholder": "Janese Cassel",
+      "date": "2026-03-08",
+      "txnId": "f56c948e-ab1f-468a-847e-89a61a65060f"
+    },
+    {
+      "type": "policy_exception",
+      "merchant": "T-Mobile",
+      "amount": 357.19,
+      "cardholder": "Janese Cassel",
+      "date": "2026-03-08",
+      "reason": "Weekend purchase"
+    },
+    {
+      "type": "missing_receipt",
       "merchant": "Amazon",
       "amount": 226.12,
       "cardholder": "Miliah Rodriguez",
@@ -155,27 +179,19 @@
     },
     {
       "type": "policy_exception",
-      "merchant": "Staples",
-      "amount": 72.58,
-      "cardholder": "Miliah Rodriguez",
-      "date": "2026-03-01",
+      "merchant": "Chevron",
+      "amount": 56.74,
+      "cardholder": "Ori Bar",
+      "date": "2026-03-08",
       "reason": "Weekend purchase"
     },
     {
-      "type": "missing_receipt",
-      "merchant": "Allianz Travel Insurance",
-      "amount": 70,
-      "cardholder": "Alex Kaufman",
-      "date": "2026-03-02",
-      "txnId": "bdd59f15-cd3e-4519-a8f2-8d1b09147453"
-    },
-    {
-      "type": "missing_receipt",
-      "merchant": "Allianz Travel Insurance",
-      "amount": 64,
-      "cardholder": "Alex Kaufman",
-      "date": "2026-03-02",
-      "txnId": "2bf04f83-b517-4964-9187-e855f4faad64"
+      "type": "policy_exception",
+      "merchant": "Shell",
+      "amount": 54.55,
+      "cardholder": "Libi Bar-On",
+      "date": "2026-03-08",
+      "reason": "Weekend purchase"
     },
     {
       "type": "missing_receipt",
@@ -211,14 +227,6 @@
     },
     {
       "type": "missing_receipt",
-      "merchant": "Shell",
-      "amount": 45,
-      "cardholder": "Bar Kroytzvirt",
-      "date": "2026-03-01",
-      "txnId": "40930704-e9af-420e-beab-8d8da79b4aae"
-    },
-    {
-      "type": "missing_receipt",
       "merchant": "7-Eleven",
       "amount": 44.68,
       "cardholder": "Adva Amori",
@@ -232,14 +240,6 @@
       "cardholder": "Ofri Ismailov",
       "date": "2026-03-06",
       "txnId": "0afb3c8e-17d9-454b-9435-eaff0fe15cd2"
-    },
-    {
-      "type": "missing_receipt",
-      "merchant": "C&R Gas & Food Mart",
-      "amount": 42.46,
-      "cardholder": "Adva Amori",
-      "date": "2026-03-02",
-      "txnId": "f0aaf04e-c67a-4648-a4ec-0c896e5f6dae"
     },
     {
       "type": "missing_receipt",
@@ -296,29 +296,21 @@
       "cardholder": "Hadar Cohen",
       "date": "2026-03-08",
       "txnId": "7779741e-1354-417b-827a-c7fd83022bae"
-    },
-    {
-      "type": "missing_receipt",
-      "merchant": "Sweetgreen",
-      "amount": 26.53,
-      "cardholder": "Hadar Cohen",
-      "date": "2026-03-01",
-      "txnId": "51e620ea-db44-423a-a70d-8830068d73d7"
     }
   ],
   "expenseSummary": {
-    "totalSpend7d": 9078.91,
-    "totalSpend30d": 9078.91,
+    "totalSpend7d": 10096.07,
+    "totalSpend30d": 10096.07,
     "byDepartment": [
       {
         "dept": "Administration",
-        "amount": 3411.89,
-        "txnCount": 11
+        "amount": 4441.63,
+        "txnCount": 15
       },
       {
         "dept": "Programs",
-        "amount": 3275.62,
-        "txnCount": 73
+        "amount": 3507.46,
+        "txnCount": 72
       },
       {
         "dept": "Development",
@@ -327,8 +319,8 @@
       },
       {
         "dept": "Admin",
-        "amount": 778.97,
-        "txnCount": 7
+        "amount": 534.55,
+        "txnCount": 4
       },
       {
         "dept": "UJF Holdings",
@@ -337,6 +329,11 @@
       }
     ],
     "topMerchants": [
+      {
+        "merchant": "Anthropic",
+        "amount": 1432.12,
+        "txnCount": 5
+      },
       {
         "merchant": "Paypal",
         "amount": 980,
@@ -378,17 +375,12 @@
         "txnCount": 1
       },
       {
-        "merchant": "Anthropic",
-        "amount": 410.12,
-        "txnCount": 2
-      },
-      {
         "merchant": "Amazon",
         "amount": 383.56,
         "txnCount": 7
       }
     ],
-    "receiptComplianceRate": 34.0
+    "receiptComplianceRate": 35.0
   },
   "budgetPace": [
     {
@@ -433,9 +425,9 @@
     "highUtilization": [
       {
         "cardholder": "",
-        "spent": 247.41,
+        "spent": 281.86,
         "limit": 300,
-        "pctUsed": 82.5
+        "pctUsed": 94.0
       }
     ]
   },
@@ -466,9 +458,9 @@
     ]
   },
   "kpis": {
-    "totalSpendThisWeek": 9078.91,
-    "missingReceipts": 29,
-    "receiptComplianceRate": 34.0,
+    "totalSpendThisWeek": 10096.07,
+    "missingReceipts": 25,
+    "receiptComplianceRate": 35.0,
     "apOutstanding": 5233814.03,
     "overBudgetDepts": 0,
     "dormantCards": 0

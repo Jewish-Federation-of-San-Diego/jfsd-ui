@@ -1,7 +1,7 @@
 {
-  "asOfDate": "2026-03-08",
+  "asOfDate": "2026-03-09",
   "totalProfiled": 552,
-  "capacityGap": 29990757,
+  "capacityGap": 29992257,
   "upgradeProspects": [
     {
       "name": "Michael S. Levinson",
@@ -852,7 +852,7 @@
       "level": "$5K-24,999",
       "donors": 168,
       "avgGiving": 8596,
-      "avgCapacity": 43752
+      "avgCapacity": 43761
     },
     {
       "level": "$25K-99,999",
@@ -1571,7 +1571,7 @@
   ],
   "kpis": {
     "totalProfiled": 552,
-    "totalCapacityGap": 29990757,
+    "totalCapacityGap": 29992257,
     "upgradeCount": 108,
     "avgUpgradeAmount": 14255,
     "highCapacityNonDonors": 65

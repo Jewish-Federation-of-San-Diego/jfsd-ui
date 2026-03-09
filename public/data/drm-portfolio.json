@@ -1,12 +1,12 @@
 {
-  "asOfDate": "2026-03-08 06:10",
+  "asOfDate": "2026-03-09 06:13",
   "drms": [
     {
       "name": "Michael Rabkin",
       "slug": "michael-rabkin",
-      "totalDonors": 30514,
-      "totalRecognitionFY26": 684837.38,
-      "totalRecognitionFY25": 1075394.63,
+      "totalDonors": 30515,
+      "totalRecognitionFY26": 690837.38,
+      "totalRecognitionFY25": 1077394.63,
       "lybuntCount": 1022,
       "lybuntAmount": 623592.25,
       "sybuntCount": 587,
@@ -20,17 +20,17 @@
           "phone": "(858) 735-9361"
         },
         {
-          "name": "Sherron C. Schuster",
-          "fy26": 50000.0,
-          "fy25": 100.0,
-          "email": "sherron1046@gmail.com",
-          "phone": ""
-        },
-        {
           "name": "Jack M. Schuster",
           "fy26": 50000.0,
           "fy25": 42000.0,
           "email": "jms1046@gmail.com",
+          "phone": ""
+        },
+        {
+          "name": "Sherron C. Schuster",
+          "fy26": 50000.0,
+          "fy25": 100.0,
+          "email": "sherron1046@gmail.com",
           "phone": ""
         },
         {
@@ -76,27 +76,6 @@
           "phone": "(858) 775-5887"
         },
         {
-          "name": "PAUL SEGAL",
-          "fy26": 10000.0,
-          "fy25": 0.0,
-          "email": "mrpaulsegal@gmail.com",
-          "phone": "+18587751951"
-        },
-        {
-          "name": "Jan Stiglitz",
-          "fy26": 10000.0,
-          "fy25": 0.0,
-          "email": "gailstiglitz@gmail.com",
-          "phone": "(619)239-0391"
-        },
-        {
-          "name": "Joan Berg",
-          "fy26": 10000.0,
-          "fy25": 0.0,
-          "email": "joan@inlandindustries.com",
-          "phone": ""
-        },
-        {
           "name": "Cheryl Rattner Price",
           "fy26": 10000.0,
           "fy25": 10000.0,
@@ -111,11 +90,32 @@
           "phone": ""
         },
         {
+          "name": "Joan Berg",
+          "fy26": 10000.0,
+          "fy25": 0.0,
+          "email": "joan@inlandindustries.com",
+          "phone": ""
+        },
+        {
+          "name": "PAUL SEGAL",
+          "fy26": 10000.0,
+          "fy25": 0.0,
+          "email": "mrpaulsegal@gmail.com",
+          "phone": "+18587751951"
+        },
+        {
           "name": "Erica Weinberg",
           "fy26": 10000.0,
           "fy25": 1800.0,
           "email": "ericaweinberg@gmail.com",
           "phone": ""
+        },
+        {
+          "name": "Jan Stiglitz",
+          "fy26": 10000.0,
+          "fy25": 0.0,
+          "email": "gailstiglitz@gmail.com",
+          "phone": "(619)239-0391"
         },
         {
           "name": "Gail Satter",
@@ -139,10 +139,17 @@
           "phone": "(858)863-4053"
         },
         {
-          "name": "Elizabeth Ann Nederlander Coden",
+          "name": "Ronald I. Simon",
           "fy26": 6000.0,
-          "fy25": 5180.0,
-          "email": "lizcoden@lfjcc.org",
+          "fy25": 2000.0,
+          "email": "ron@risimon.com",
+          "phone": ""
+        },
+        {
+          "name": "Tina Beranbaum",
+          "fy26": 6000.0,
+          "fy25": 6780.0,
+          "email": "tberanbaum@gmail.com",
           "phone": ""
         },
         {
@@ -153,10 +160,10 @@
           "phone": ""
         },
         {
-          "name": "Tina Beranbaum",
+          "name": "Elizabeth Ann Nederlander Coden",
           "fy26": 6000.0,
-          "fy25": 6780.0,
-          "email": "tberanbaum@gmail.com",
+          "fy25": 5180.0,
+          "email": "lizcoden@lfjcc.org",
           "phone": ""
         },
         {
@@ -179,13 +186,6 @@
           "fy25": 0.0,
           "email": "usbmaker@gmail.com",
           "phone": ""
-        },
-        {
-          "name": "Frederick Schenk",
-          "fy26": 5000.0,
-          "fy25": 5000.0,
-          "email": "uclabruinsfan@gmail.com",
-          "phone": "(619) 794-9548"
         }
       ],
       "lybuntList": [
@@ -672,7 +672,7 @@
       "lybuntCount": 43,
       "lybuntAmount": 113802.5,
       "sybuntCount": 21,
-      "recentGifts30d": 15,
+      "recentGifts30d": 16,
       "topDonors": [
         {
           "name": "Jessica Effress",
@@ -1154,6 +1154,12 @@
         }
       ],
       "recentActivity": [
+        {
+          "donorName": "Debbie Ann Deverett",
+          "amount": 0.0,
+          "date": "2026-03-08",
+          "type": "Yom HaShoah - FY26"
+        },
         {
           "donorName": "Heather Keith",
           "amount": 360.0,
@@ -1831,7 +1837,7 @@
       "lybuntCount": 35,
       "lybuntAmount": 1141269.45,
       "sybuntCount": 11,
-      "recentGifts30d": 39,
+      "recentGifts30d": 38,
       "topDonors": [
         {
           "name": "Andrew James Viterbi",
@@ -3179,9 +3185,9 @@
     }
   ],
   "kpis": {
-    "totalPortfolioDonors": 31155,
+    "totalPortfolioDonors": 31156,
     "totalLYBUNT": 1162,
-    "totalRecognitionFY26": 5648465.7299999995,
+    "totalRecognitionFY26": 5654465.7299999995,
     "avgPortfolioSize": 3894
   }
 }

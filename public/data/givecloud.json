@@ -1,10 +1,10 @@
 {
-  "asOfDate": "2026-03-08",
+  "asOfDate": "2026-03-09",
   "notes": null,
   "onlineGiving": {
     "totalFY26": 342441.67,
-    "totalContributions": 899,
-    "avgGift": 380.91,
+    "totalContributions": 906,
+    "avgGift": 377.97,
     "medianGift": 31.56
   },
   "monthlyTrend": [
@@ -60,7 +60,7 @@
       "month": "Mar",
       "amount": 8367.81,
       "recurringAmount": 0.0,
-      "contributions": 116
+      "contributions": 123
     }
   ],
   "recurring": {
@@ -126,11 +126,32 @@
   "conversionBySource": [
     {
       "source": "Web",
-      "contributions": 899,
+      "contributions": 906,
       "amount": 342441.67
     }
   ],
   "recentContributions": [
+    {
+      "name": "Allison Weisman",
+      "amount": 0.0,
+      "product": "Individual Ticket - Yom HaShoah - Inidividual Ticket",
+      "date": "2026-03-09",
+      "recurring": false
+    },
+    {
+      "name": "Tamar Goldman Sachs",
+      "amount": 0.0,
+      "product": "Individual Ticket - Celebrate Israel: Yom Ha'Atzmaut Music Festival - Inidividual Ticket",
+      "date": "2026-03-09",
+      "recurring": false
+    },
+    {
+      "name": "ORLI VILENSKY",
+      "amount": 0.0,
+      "product": "Individual Ticket - Celebrate Israel: Yom Ha'Atzmaut Music Festival - Inidividual Ticket",
+      "date": "2026-03-09",
+      "recurring": false
+    },
     {
       "name": "Hannah Cohen",
       "amount": 0.0,
@@ -154,6 +175,34 @@
     },
     {
       "name": "Rachel Stern",
+      "amount": 0.0,
+      "product": "Individual Ticket - Celebrate Israel: Yom Ha'Atzmaut Music Festival - Inidividual Ticket",
+      "date": "2026-03-08",
+      "recurring": false
+    },
+    {
+      "name": "Hilary Bowers",
+      "amount": 0.0,
+      "product": "Individual Ticket - Celebrate Israel: Yom Ha'Atzmaut Music Festival - Inidividual Ticket",
+      "date": "2026-03-08",
+      "recurring": false
+    },
+    {
+      "name": "Tamara Litke",
+      "amount": 0.0,
+      "product": "Individual Ticket - Celebrate Israel: Yom Ha'Atzmaut Music Festival - Inidividual Ticket",
+      "date": "2026-03-08",
+      "recurring": false
+    },
+    {
+      "name": "Debbie Deverett",
+      "amount": 0.0,
+      "product": "Individual Ticket - Yom HaShoah - Inidividual Ticket",
+      "date": "2026-03-08",
+      "recurring": false
+    },
+    {
+      "name": "Lynda Sohl",
       "amount": 0.0,
       "product": "Individual Ticket - Celebrate Israel: Yom Ha'Atzmaut Music Festival - Inidividual Ticket",
       "date": "2026-03-08",
@@ -217,55 +266,6 @@
     },
     {
       "name": "Elliott Allen",
-      "amount": 0.0,
-      "product": "Individual Ticket - Celebrate Israel: Yom Ha'Atzmaut Music Festival - Inidividual Ticket",
-      "date": "2026-03-07",
-      "recurring": false
-    },
-    {
-      "name": "Joshua D Feder",
-      "amount": 0.0,
-      "product": "Individual Ticket - Celebrate Israel: Yom Ha'Atzmaut Music Festival - Inidividual Ticket",
-      "date": "2026-03-07",
-      "recurring": false
-    },
-    {
-      "name": "Rachel Raz",
-      "amount": 0.0,
-      "product": "Individual Ticket - Yom HaZikaron - Inidividual Ticket",
-      "date": "2026-03-07",
-      "recurring": false
-    },
-    {
-      "name": "Shari & Frederick Schenk",
-      "amount": 0.0,
-      "product": "Individual Ticket - Celebrate Israel: Yom Ha'Atzmaut Music Festival - Inidividual Ticket",
-      "date": "2026-03-07",
-      "recurring": false
-    },
-    {
-      "name": "Jay Berkowitz",
-      "amount": 0.0,
-      "product": "Individual Ticket - Celebrate Israel: Yom Ha'Atzmaut Music Festival - Inidividual Ticket",
-      "date": "2026-03-07",
-      "recurring": false
-    },
-    {
-      "name": "Dana Ben-Artzi",
-      "amount": 0.0,
-      "product": "Individual Ticket - Celebrate Israel: Yom Ha'Atzmaut Music Festival - Inidividual Ticket",
-      "date": "2026-03-07",
-      "recurring": false
-    },
-    {
-      "name": "Ben Dishman",
-      "amount": 0.0,
-      "product": "Individual Ticket - Celebrate Israel: Yom Ha'Atzmaut Music Festival - Inidividual Ticket",
-      "date": "2026-03-07",
-      "recurring": false
-    },
-    {
-      "name": "stefanie becker",
       "amount": 0.0,
       "product": "Individual Ticket - Celebrate Israel: Yom Ha'Atzmaut Music Festival - Inidividual Ticket",
       "date": "2026-03-07",

@@ -1,5 +1,5 @@
 {
-  "asOfDate": "2026-03-08T13:07:29Z",
+  "asOfDate": "2026-03-09T13:10:50Z",
   "monthlyTrend": [
     {
       "month": "Jul",
@@ -43,24 +43,24 @@
     },
     {
       "month": "Mar",
-      "amount": 9606.38,
-      "txnCount": 109
+      "amount": 11298.93,
+      "txnCount": 124
     }
   ],
   "departmentSpend": [
     {
       "dept": "Administration",
-      "amount": 431276.55,
-      "txnCount": 1305,
+      "amount": 432434.72,
+      "txnCount": 1310,
       "budget": 1773360.0,
-      "pctOfBudget": 24.3
+      "pctOfBudget": 24.4
     },
     {
       "dept": "Programs",
-      "amount": 180797.33,
-      "txnCount": 430,
+      "amount": 181154.52,
+      "txnCount": 431,
       "budget": 466926.0,
-      "pctOfBudget": 38.7
+      "pctOfBudget": 38.8
     },
     {
       "dept": "Marketing",
@@ -78,10 +78,10 @@
     },
     {
       "dept": "Shinshinim",
-      "amount": 39918.71,
-      "txnCount": 1900,
+      "amount": 40095.9,
+      "txnCount": 1909,
       "budget": 466926.0,
-      "pctOfBudget": 8.5
+      "pctOfBudget": 8.6
     },
     {
       "dept": "Legacy of Light Goldberg Institute for Holocaust Education",
@@ -106,13 +106,13 @@
     },
     {
       "category": "Restaurants",
-      "amount": 94154.9,
-      "txnCount": 780
+      "amount": 94194.66,
+      "txnCount": 785
     },
     {
       "category": "SaaS / Software",
-      "amount": 73612.93,
-      "txnCount": 288
+      "amount": 74642.67,
+      "txnCount": 292
     },
     {
       "category": "Professional Services",
@@ -140,14 +140,14 @@
       "txnCount": 1070
     },
     {
+      "category": "General Merchandise",
+      "amount": 29264.36,
+      "txnCount": 356
+    },
+    {
       "category": "Other",
       "amount": 29212.04,
       "txnCount": 28
-    },
-    {
-      "category": "General Merchandise",
-      "amount": 29135.93,
-      "txnCount": 355
     },
     {
       "category": "Entertainment",
@@ -261,8 +261,8 @@
     },
     {
       "name": "David Fuhriman",
-      "amount": 108174.17,
-      "txnCount": 114,
+      "amount": 109203.91,
+      "txnCount": 118,
       "dept": "Administration"
     },
     {
@@ -339,8 +339,8 @@
     },
     {
       "name": "Janese Cassel",
-      "amount": 10858.87,
-      "txnCount": 60,
+      "amount": 11216.06,
+      "txnCount": 61,
       "dept": "Programs"
     }
   ],
@@ -348,20 +348,20 @@
     "active": 100,
     "dormant30d": 58,
     "totalLimit": 348006.99,
-    "totalSpent": 801286.45,
-    "utilizationPct": 230.3
+    "totalSpent": 802979.0,
+    "utilizationPct": 230.7
   },
   "weekOverWeek": {
-    "thisWeek": 8842.88,
-    "lastWeek": 7376.08,
-    "changePct": 19.9
+    "thisWeek": 1195.04,
+    "lastWeek": 9340.39,
+    "changePct": -87.2
   },
   "kpis": {
-    "totalSpendFY26": 801286.45,
-    "monthlyAvg": 89031.83,
+    "totalSpendFY26": 802979.0,
+    "monthlyAvg": 89219.89,
     "activeCards": 100,
     "topDepartment": "Administration",
-    "topDepartmentAmount": 431276.55,
-    "weekOverWeekChange": 19.9
+    "topDepartmentAmount": 432434.72,
+    "weekOverWeekChange": -87.2
   }
 }
