@@ -1,5 +1,5 @@
 {
-  "asOfDate": "2026-03-09T06:13:07-08:00",
+  "asOfDate": "2026-03-10T06:11:22-08:00",
   "actionItems": [
     {
       "type": "needs_review",
@@ -27,11 +27,91 @@
     },
     {
       "type": "needs_review",
-      "merchant": "DiscountMugs",
-      "amount": 730.4,
-      "cardholder": "Julie Gordon",
-      "date": "2026-03-02",
-      "reason": "High-value transaction ($730.40)"
+      "merchant": "ASix Imagery",
+      "amount": 875,
+      "cardholder": "Lee Weinstein",
+      "date": "2026-03-09",
+      "reason": "High-value transaction ($875.00)"
+    },
+    {
+      "type": "missing_receipt",
+      "merchant": "Dirt Cheap Car Rental",
+      "amount": 800,
+      "cardholder": "Moises Arbitman",
+      "date": "2026-03-09",
+      "txnId": "6e765c7e-7078-41cd-9e0e-a955a61866cf"
+    },
+    {
+      "type": "needs_review",
+      "merchant": "Dirt Cheap Car Rental",
+      "amount": 800,
+      "cardholder": "Moises Arbitman",
+      "date": "2026-03-09",
+      "reason": "High-value transaction ($800.00)"
+    },
+    {
+      "type": "missing_receipt",
+      "merchant": "Dirt Cheap Car Rental",
+      "amount": 800,
+      "cardholder": "Moises Arbitman",
+      "date": "2026-03-09",
+      "txnId": "cfd85338-fcde-4178-8c81-8286cc596073"
+    },
+    {
+      "type": "missing_receipt",
+      "merchant": "Dirt Cheap Car Rental",
+      "amount": 800,
+      "cardholder": "Moises Arbitman",
+      "date": "2026-03-09",
+      "txnId": "ba5446fe-1fcc-4f9a-859e-77a687442bda"
+    },
+    {
+      "type": "missing_receipt",
+      "merchant": "Dirt Cheap Car Rental",
+      "amount": 800,
+      "cardholder": "Moises Arbitman",
+      "date": "2026-03-09",
+      "txnId": "78ea53ac-9b34-45d3-bceb-595eaf8d6526"
+    },
+    {
+      "type": "missing_receipt",
+      "merchant": "Dirt Cheap Car Rental",
+      "amount": 800,
+      "cardholder": "Moises Arbitman",
+      "date": "2026-03-09",
+      "txnId": "a3fe9b26-4bd2-4fad-8c5c-6fa6019c17da"
+    },
+    {
+      "type": "missing_receipt",
+      "merchant": "Dirt Cheap Car Rental",
+      "amount": 800,
+      "cardholder": "Moises Arbitman",
+      "date": "2026-03-09",
+      "txnId": "a894bb23-45ed-4273-8db3-118c97ff1246"
+    },
+    {
+      "type": "missing_receipt",
+      "merchant": "Dirt Cheap Car Rental",
+      "amount": 800,
+      "cardholder": "Moises Arbitman",
+      "date": "2026-03-09",
+      "txnId": "efbdc24f-0b64-482a-85b8-bbd5eeac91b5"
+    },
+    {
+      "type": "missing_receipt",
+      "merchant": "Dirt Cheap Car Rental",
+      "amount": 800,
+      "cardholder": "Moises Arbitman",
+      "date": "2026-03-09",
+      "txnId": "66d2c4fa-5a09-4446-968d-54b7bee70311"
+    },
+    {
+      "type": "missing_receipt",
+      "merchant": "Dirt Cheap Car Rental",
+      "amount": 800,
+      "cardholder": "Moises Arbitman",
+      "date": "2026-03-09",
+      "txnId": "0d025514-d83f-42ed-bc92-21cf229cd2db"
     },
     {
       "type": "missing_receipt",
@@ -50,28 +130,20 @@
       "reason": "High-value transaction ($668.75)"
     },
     {
-      "type": "needs_review",
-      "merchant": "Regents La Jolla",
-      "amount": 605.8,
-      "cardholder": "Moises Arbitman",
-      "date": "2026-03-04",
-      "reason": "High-value transaction ($605.80)"
-    },
-    {
       "type": "missing_receipt",
-      "merchant": "THE PLACE CATERING",
-      "amount": 540,
-      "cardholder": "Candice Bucky",
-      "date": "2026-03-03",
-      "txnId": "a2700481-a9bb-4181-abdd-1854b0f483d1"
+      "merchant": "Amazon",
+      "amount": 522.19,
+      "cardholder": "Joanna Chiu",
+      "date": "2026-03-09",
+      "txnId": "35c521f5-48ff-4b17-8629-e9c5a0abf4f4"
     },
     {
       "type": "needs_review",
-      "merchant": "THE PLACE CATERING",
-      "amount": 540,
-      "cardholder": "Candice Bucky",
-      "date": "2026-03-03",
-      "reason": "High-value transaction ($540.00)"
+      "merchant": "Amazon",
+      "amount": 522.19,
+      "cardholder": "Joanna Chiu",
+      "date": "2026-03-09",
+      "reason": "High-value transaction ($522.19)"
     },
     {
       "type": "missing_receipt",
@@ -83,27 +155,11 @@
     },
     {
       "type": "missing_receipt",
-      "merchant": "HD Supply",
-      "amount": 442.32,
-      "cardholder": "David Fuhriman",
-      "date": "2026-03-06",
-      "txnId": "e5b26599-03a9-46b8-bb86-437f95384650"
-    },
-    {
-      "type": "missing_receipt",
       "merchant": "Tigris Mediterranean",
       "amount": 426.21,
       "cardholder": "Joshua Minzer",
       "date": "2026-03-05",
       "txnId": "01ce649e-5af7-4e2c-8aab-2c7f7c950bed"
-    },
-    {
-      "type": "missing_receipt",
-      "merchant": "T-Mobile",
-      "amount": 357.19,
-      "cardholder": "Janese Cassel",
-      "date": "2026-03-08",
-      "txnId": "f56c948e-ab1f-468a-847e-89a61a65060f"
     },
     {
       "type": "policy_exception",
@@ -115,11 +171,11 @@
     },
     {
       "type": "missing_receipt",
-      "merchant": "Amazon",
-      "amount": 226.12,
+      "merchant": "Staples",
+      "amount": 351.02,
       "cardholder": "Miliah Rodriguez",
-      "date": "2026-03-08",
-      "txnId": "81054e06-2af8-4de2-8d68-87862d14c537"
+      "date": "2026-03-09",
+      "txnId": "e41303af-89a3-401e-9955-d4e665d6b468"
     },
     {
       "type": "policy_exception",
@@ -139,11 +195,11 @@
     },
     {
       "type": "missing_receipt",
-      "merchant": "HD Supply",
-      "amount": 161.37,
-      "cardholder": "David Fuhriman",
-      "date": "2026-03-06",
-      "txnId": "1f4b2168-6762-4864-a772-93ac7fe01452"
+      "merchant": "Ralphs",
+      "amount": 118.87,
+      "cardholder": "Deena Libman",
+      "date": "2026-03-09",
+      "txnId": "8cfd3a5b-9a57-474f-a2a2-b07c02f79c6e"
     },
     {
       "type": "missing_receipt",
@@ -160,14 +216,6 @@
       "cardholder": "Ori Bar",
       "date": "2026-03-08",
       "reason": "Weekend purchase"
-    },
-    {
-      "type": "missing_receipt",
-      "merchant": "Lit'l Pepper Gourmet",
-      "amount": 106.05,
-      "cardholder": "Candice Bucky",
-      "date": "2026-03-04",
-      "txnId": "5af8f795-8d01-40bd-8bb8-a7b3bb989d59"
     },
     {
       "type": "missing_receipt",
@@ -203,14 +251,6 @@
     },
     {
       "type": "missing_receipt",
-      "merchant": "Ross Dress for Less",
-      "amount": 50.2,
-      "cardholder": "Adva Amori",
-      "date": "2026-03-03",
-      "txnId": "efeb7460-a7e5-4d37-a551-5b71cc2e8518"
-    },
-    {
-      "type": "missing_receipt",
       "merchant": "Shell",
       "amount": 45,
       "cardholder": "Bar Kroytzvirt",
@@ -235,11 +275,27 @@
     },
     {
       "type": "missing_receipt",
+      "merchant": "Hollister",
+      "amount": 43.05,
+      "cardholder": "Libi Bar-On",
+      "date": "2026-03-10",
+      "txnId": "02d69609-6b5a-4b25-8f29-0fa4e274eb80"
+    },
+    {
+      "type": "missing_receipt",
       "merchant": "Exxon",
       "amount": 42.78,
       "cardholder": "Ofri Ismailov",
       "date": "2026-03-06",
       "txnId": "0afb3c8e-17d9-454b-9435-eaff0fe15cd2"
+    },
+    {
+      "type": "missing_receipt",
+      "merchant": "7-Eleven",
+      "amount": 40,
+      "cardholder": "Hadar Cohen",
+      "date": "2026-03-10",
+      "txnId": "74346d49-3c6b-4a95-8977-bf771f4c30ad"
     },
     {
       "type": "missing_receipt",
@@ -267,14 +323,6 @@
     },
     {
       "type": "missing_receipt",
-      "merchant": "Microsoft Office / Azure",
-      "amount": 31.5,
-      "cardholder": "Joanna Chiu",
-      "date": "2026-03-07",
-      "txnId": "ad824a5d-e48a-4c8a-8490-a9eff2c6a873"
-    },
-    {
-      "type": "missing_receipt",
       "merchant": "7-Eleven",
       "amount": 30.4,
       "cardholder": "Hadar Cohen",
@@ -299,28 +347,28 @@
     }
   ],
   "expenseSummary": {
-    "totalSpend7d": 10096.07,
-    "totalSpend30d": 10096.07,
+    "totalSpend7d": 16481.1,
+    "totalSpend30d": 16481.1,
     "byDepartment": [
       {
-        "dept": "Administration",
-        "amount": 4441.63,
-        "txnCount": 15
-      },
-      {
         "dept": "Programs",
-        "amount": 3507.46,
-        "txnCount": 72
-      },
-      {
-        "dept": "Development",
-        "amount": 1527.43,
-        "txnCount": 8
+        "amount": 10159.79,
+        "txnCount": 75
       },
       {
         "dept": "Admin",
-        "amount": 534.55,
-        "txnCount": 4
+        "amount": 2768.98,
+        "txnCount": 10
+      },
+      {
+        "dept": "Administration",
+        "amount": 1830.67,
+        "txnCount": 7
+      },
+      {
+        "dept": "Development",
+        "amount": 1636.66,
+        "txnCount": 7
       },
       {
         "dept": "UJF Holdings",
@@ -329,6 +377,11 @@
       }
     ],
     "topMerchants": [
+      {
+        "merchant": "Dirt Cheap Car Rental",
+        "amount": 7200,
+        "txnCount": 9
+      },
       {
         "merchant": "Anthropic",
         "amount": 1432.12,
@@ -340,28 +393,18 @@
         "txnCount": 1
       },
       {
-        "merchant": "DiscountMugs",
-        "amount": 730.4,
+        "merchant": "Amazon",
+        "amount": 882.08,
+        "txnCount": 7
+      },
+      {
+        "merchant": "ASix Imagery",
+        "amount": 875,
         "txnCount": 1
       },
       {
         "merchant": "Urban Plates",
         "amount": 668.75,
-        "txnCount": 1
-      },
-      {
-        "merchant": "Regents La Jolla",
-        "amount": 605.8,
-        "txnCount": 1
-      },
-      {
-        "merchant": "HD Supply",
-        "amount": 603.69,
-        "txnCount": 2
-      },
-      {
-        "merchant": "THE PLACE CATERING",
-        "amount": 540,
         "txnCount": 1
       },
       {
@@ -375,12 +418,17 @@
         "txnCount": 1
       },
       {
-        "merchant": "Amazon",
-        "amount": 383.56,
-        "txnCount": 7
+        "merchant": "Staples",
+        "amount": 368.67,
+        "txnCount": 2
+      },
+      {
+        "merchant": "T-Mobile",
+        "amount": 357.19,
+        "txnCount": 1
       }
     ],
-    "receiptComplianceRate": 35.0
+    "receiptComplianceRate": 36.0
   },
   "budgetPace": [
     {
@@ -447,20 +495,20 @@
       },
       {
         "bucket": "61-90",
-        "amount": 426833.76,
-        "count": 100
+        "amount": 424733.76,
+        "count": 99
       },
       {
         "bucket": "90+",
-        "amount": 4806980.27,
-        "count": 400
+        "amount": 4809080.27,
+        "count": 401
       }
     ]
   },
   "kpis": {
-    "totalSpendThisWeek": 10096.07,
-    "missingReceipts": 25,
-    "receiptComplianceRate": 35.0,
+    "totalSpendThisWeek": 16481.1,
+    "missingReceipts": 31,
+    "receiptComplianceRate": 36.0,
     "apOutstanding": 5233814.03,
     "overBudgetDepts": 0,
     "dormantCards": 0

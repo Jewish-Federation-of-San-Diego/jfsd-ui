@@ -1,20 +1,20 @@
 {
-  "asOfDate": "2026-03-09 06:07",
+  "asOfDate": "2026-03-10 06:06",
   "annualCampaign": {
     "name": "Annual Campaign 26",
     "goal": 9000000,
-    "raised": 5959220.17,
+    "raised": 5959222.17,
     "pctOfGoal": 66.2,
     "donorCount": 1045,
     "avgGift": 5703.0,
-    "priorYearSamePoint": 8812417.17
+    "priorYearSamePoint": 8812479.67
   },
   "momentum": {
-    "giftsThisWeek": 4,
-    "amountThisWeek": 2982.0,
-    "giftsLastWeek": 161,
-    "amountLastWeek": 121665.7,
-    "weekOverWeekPct": -97.5
+    "giftsThisWeek": 21,
+    "amountThisWeek": 3866.46,
+    "giftsLastWeek": 175,
+    "amountLastWeek": 124381.7,
+    "weekOverWeekPct": -96.9
   },
   "weeklyMomentum": [
     {
@@ -49,17 +49,17 @@
     },
     {
       "weekOf": "2026-03-02",
-      "gifts": 161,
-      "amount": 121665.7
+      "gifts": 175,
+      "amount": 124381.7
     },
     {
       "weekOf": "2026-03-09",
-      "gifts": 3,
-      "amount": 0.0
+      "gifts": 20,
+      "amount": 884.46
     }
   ],
   "donorBreakdown": {
-    "newDonors": 245,
+    "newDonors": 239,
     "returningDonors": 591,
     "lybuntRecovered": 105,
     "retentionRate": 31.6
@@ -68,7 +68,7 @@
     {
       "level": "$1-99",
       "donors": 154,
-      "amount": 6606.14
+      "amount": 6608.14
     },
     {
       "level": "$100-499",
@@ -109,13 +109,37 @@
       "date": "2026-03-26"
     },
     {
-      "name": "Allison Weisman",
-      "amount": 0.0,
-      "campaign": "Yom HaShoah - FY26",
+      "name": "Deborah Kutner",
+      "amount": 187.86,
+      "campaign": "LEADS - FY26 - Program",
       "date": "2026-03-09"
     },
     {
-      "name": "Tamar Goldman Sachs",
+      "name": "Tina Marchiano",
+      "amount": 180.0,
+      "campaign": "Payment on Pledge - FY26",
+      "date": "2026-03-10"
+    },
+    {
+      "name": "Karla B. Silver",
+      "amount": 180.0,
+      "campaign": "Monthly - FY26",
+      "date": "2026-03-10"
+    },
+    {
+      "name": "Daniel Eyal",
+      "amount": 180.0,
+      "campaign": "LEADS - FY26 - Program",
+      "date": "2026-03-10"
+    },
+    {
+      "name": "Robin S. Rubin",
+      "amount": 156.6,
+      "campaign": "Monthly - FY26",
+      "date": "2026-03-10"
+    },
+    {
+      "name": "Elizabeth Vaisben",
       "amount": 0.0,
       "campaign": "Yom HaShoah - FY26 - Donations",
       "date": "2026-03-09"
@@ -125,11 +149,23 @@
       "amount": 0.0,
       "campaign": "Yom HaShoah - FY26 - Donations",
       "date": "2026-03-09"
+    },
+    {
+      "name": "Margaux Dinerman",
+      "amount": 0.0,
+      "campaign": "Yom HaShoah - FY26 - Donations",
+      "date": "2026-03-09"
+    },
+    {
+      "name": "Shira Jacobs",
+      "amount": 0.0,
+      "campaign": "Yom HaShoah - FY26 - Donations",
+      "date": "2026-03-09"
     }
   ],
   "pipeline": {
-    "openPledges": 622,
-    "openPledgeAmount": 13745322.15,
+    "openPledges": 624,
+    "openPledgeAmount": 13858322.15,
     "expectedThisMonth": 0.0
   },
   "campaigns": [
@@ -163,9 +199,9 @@
     },
     {
       "name": "Tributes - FY26",
-      "raised": 18073.97,
+      "raised": 18173.97,
       "goal": 0.0,
-      "donors": 81,
+      "donors": 82,
       "pctOfGoal": 0
     },
     {
@@ -191,9 +227,9 @@
     },
     {
       "name": "Monthly - FY26",
-      "raised": 21940.38,
+      "raised": 18776.98,
       "goal": 0.0,
-      "donors": 233,
+      "donors": 232,
       "pctOfGoal": 0
     },
     {

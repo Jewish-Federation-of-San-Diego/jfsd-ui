@@ -58,22 +58,22 @@
     },
     {
       "month": "Mar",
-      "charges": 50,
-      "amount": 13477,
-      "fees": 335,
-      "feeRate": 2.49
+      "charges": 56,
+      "amount": 16161,
+      "fees": 398,
+      "feeRate": 2.46
     }
   ],
   "cardBrandData": [
     {
       "brand": "Visa",
-      "amount": 199243,
-      "charges": 525
+      "amount": 201740,
+      "charges": 530
     },
     {
       "brand": "Mastercard",
-      "amount": 113418,
-      "charges": 164
+      "amount": 113606,
+      "charges": 165
     },
     {
       "brand": "Amex",
@@ -94,8 +94,8 @@
   "sourceData": [
     {
       "source": "GiveCloud",
-      "charges": 817,
-      "amount": 373558,
+      "charges": 823,
+      "amount": 376243,
       "pct": 98.9
     },
     {
@@ -106,12 +106,12 @@
     }
   ],
   "kpis": {
-    "grossVolume": 377779,
-    "netAfterFees": 368440,
-    "totalFees": 9339,
+    "grossVolume": 380463,
+    "netAfterFees": 371061,
+    "totalFees": 9402,
     "avgFeeRate": 2.47,
-    "totalCharges": 823,
+    "totalCharges": 829,
     "avgPerCharge": 459,
-    "asOfDate": "Mar 09, 2026"
+    "asOfDate": "Mar 10, 2026"
   }
 }
