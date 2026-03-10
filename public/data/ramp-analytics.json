@@ -1,5 +1,5 @@
 {
-  "asOfDate": "2026-03-09T13:10:50Z",
+  "asOfDate": "2026-03-10T13:09:01Z",
   "monthlyTrend": [
     {
       "month": "Jul",
@@ -43,43 +43,43 @@
     },
     {
       "month": "Mar",
-      "amount": 11298.93,
-      "txnCount": 124
+      "amount": 20081.69,
+      "txnCount": 144
     }
   ],
   "departmentSpend": [
     {
       "dept": "Administration",
-      "amount": 432434.72,
+      "amount": 432704.24,
       "txnCount": 1310,
       "budget": 1773360.0,
       "pctOfBudget": 24.4
     },
     {
       "dept": "Programs",
-      "amount": 181154.52,
-      "txnCount": 431,
+      "amount": 188536.52,
+      "txnCount": 441,
       "budget": 466926.0,
-      "pctOfBudget": 38.8
+      "pctOfBudget": 40.4
     },
     {
       "dept": "Marketing",
-      "amount": 70836.1,
-      "txnCount": 158,
+      "amount": 71711.1,
+      "txnCount": 159,
       "budget": 2882229.0,
       "pctOfBudget": 2.5
     },
     {
       "dept": "Development",
-      "amount": 61245.44,
-      "txnCount": 301,
+      "amount": 61389.31,
+      "txnCount": 303,
       "budget": 1915921.0,
       "pctOfBudget": 3.2
     },
     {
       "dept": "Shinshinim",
-      "amount": 40095.9,
-      "txnCount": 1909,
+      "amount": 40208.27,
+      "txnCount": 1916,
       "budget": 466926.0,
       "pctOfBudget": 8.6
     },
@@ -106,43 +106,38 @@
     },
     {
       "category": "Restaurants",
-      "amount": 94194.66,
-      "txnCount": 785
+      "amount": 94203.47,
+      "txnCount": 786
     },
     {
       "category": "SaaS / Software",
-      "amount": 74642.67,
-      "txnCount": 292
+      "amount": 74667.67,
+      "txnCount": 293
     },
     {
       "category": "Professional Services",
-      "amount": 70476.95,
-      "txnCount": 74
+      "amount": 71351.95,
+      "txnCount": 75
     },
     {
       "category": "Car Rental",
-      "amount": 44987.09,
-      "txnCount": 59
+      "amount": 52187.09,
+      "txnCount": 68
     },
     {
       "category": "Office supplies and cleaning",
-      "amount": 37212.64,
-      "txnCount": 14
+      "amount": 37563.66,
+      "txnCount": 15
     },
     {
       "category": "Books and Newspapers",
-      "amount": 33744.48,
-      "txnCount": 280
+      "amount": 34266.67,
+      "txnCount": 281
     },
     {
       "category": "Taxi and Rideshare",
       "amount": 32199.05,
       "txnCount": 1070
-    },
-    {
-      "category": "General Merchandise",
-      "amount": 29264.36,
-      "txnCount": 356
     },
     {
       "category": "Other",
@@ -153,6 +148,11 @@
       "category": "Entertainment",
       "amount": 29028.66,
       "txnCount": 30
+    },
+    {
+      "category": "General Merchandise",
+      "amount": 28668.2,
+      "txnCount": 355
     },
     {
       "category": "Lodging",
@@ -183,8 +183,8 @@
     },
     {
       "merchant": "Dirt Cheap Car Rental",
-      "amount": 43199.0,
-      "txnCount": 54
+      "amount": 50399.0,
+      "txnCount": 63
     },
     {
       "merchant": "Offisavvy, LLC",
@@ -198,8 +198,8 @@
     },
     {
       "merchant": "Amazon",
-      "amount": 26455.2,
-      "txnCount": 299
+      "amount": 26977.39,
+      "txnCount": 300
     },
     {
       "merchant": "Tlalim Tours",
@@ -261,14 +261,14 @@
     },
     {
       "name": "David Fuhriman",
-      "amount": 109203.91,
-      "txnCount": 118,
+      "amount": 108600.22,
+      "txnCount": 116,
       "dept": "Administration"
     },
     {
       "name": "Moises Arbitman",
-      "amount": 84820.52,
-      "txnCount": 104,
+      "amount": 92020.52,
+      "txnCount": 113,
       "dept": "Programs"
     },
     {
@@ -279,8 +279,8 @@
     },
     {
       "name": "Joanna  Chiu",
-      "amount": 55981.73,
-      "txnCount": 197,
+      "amount": 56503.92,
+      "txnCount": 198,
       "dept": "Administration"
     },
     {
@@ -303,8 +303,8 @@
     },
     {
       "name": "Debbie Tirouda",
-      "amount": 24666.64,
-      "txnCount": 88,
+      "amount": 24691.64,
+      "txnCount": 89,
       "dept": "Development"
     },
     {
@@ -315,8 +315,8 @@
     },
     {
       "name": "Lee Weinstein",
-      "amount": 18025.06,
-      "txnCount": 48,
+      "amount": 18900.06,
+      "txnCount": 49,
       "dept": "Marketing"
     },
     {
@@ -327,8 +327,8 @@
     },
     {
       "name": "Miliah Rodriguez",
-      "amount": 12993.29,
-      "txnCount": 134,
+      "amount": 13344.31,
+      "txnCount": 135,
       "dept": "Administration"
     },
     {
@@ -347,21 +347,21 @@
   "cardUtilization": {
     "active": 100,
     "dormant30d": 58,
-    "totalLimit": 348006.99,
-    "totalSpent": 802979.0,
-    "utilizationPct": 230.7
+    "totalLimit": 338506.99,
+    "totalSpent": 811761.76,
+    "utilizationPct": 239.8
   },
   "weekOverWeek": {
-    "thisWeek": 1195.04,
-    "lastWeek": 9340.39,
-    "changePct": -87.2
+    "thisWeek": 10581.49,
+    "lastWeek": 8736.7,
+    "changePct": 21.1
   },
   "kpis": {
-    "totalSpendFY26": 802979.0,
-    "monthlyAvg": 89219.89,
+    "totalSpendFY26": 811761.76,
+    "monthlyAvg": 90195.75,
     "activeCards": 100,
     "topDepartment": "Administration",
-    "topDepartmentAmount": 432434.72,
-    "weekOverWeekChange": -87.2
+    "topDepartmentAmount": 432704.24,
+    "weekOverWeekChange": 21.1
   }
 }

@@ -1,6 +1,6 @@
 {
-  "asOfDate": "2026-03-09 06:13",
-  "overallScore": 21,
+  "asOfDate": "2026-03-10 06:11",
+  "overallScore": 22,
   "categories": [
     {
       "name": "Contact Completeness",
@@ -288,15 +288,15 @@
               "count": 8
             },
             {
-              "name": "Martin Schwartz",
-              "count": 7
-            },
-            {
               "name": "Michael Cohen",
               "count": 7
             },
             {
-              "name": "Linda Feldman",
+              "name": "Martin Schwartz",
+              "count": 7
+            },
+            {
+              "name": "Michael Schwartz",
               "count": 6
             },
             {
@@ -304,19 +304,19 @@
               "count": 6
             },
             {
+              "name": "Linda Feldman",
+              "count": 6
+            },
+            {
               "name": "Barry Cohen",
               "count": 6
             },
             {
-              "name": "Michael Schwartz",
-              "count": 6
-            },
-            {
-              "name": "David Goodman",
+              "name": "Michael Katz",
               "count": 5
             },
             {
-              "name": "Michael Katz",
+              "name": "Andrew Cohen",
               "count": 5
             },
             {
@@ -324,11 +324,15 @@
               "count": 5
             },
             {
-              "name": "Robert Davis",
+              "name": "David Schwartz",
               "count": 5
             },
             {
-              "name": "Andrew Cohen",
+              "name": "Sharon Cohen",
+              "count": 5
+            },
+            {
+              "name": "Paul Cohen",
               "count": 5
             },
             {
@@ -338,10 +342,6 @@
             {
               "name": "Linda Bernstein",
               "count": 5
-            },
-            {
-              "name": "Jack Cohen",
-              "count": 5
             }
           ],
           "totalAffectedRecords": 1958
@@ -350,11 +350,11 @@
     },
     {
       "name": "Campaign Health",
-      "score": 92,
+      "score": 96,
       "issues": [
         {
           "metric": "Orphaned campaigns",
-          "count": 2,
+          "count": 4,
           "severity": "medium",
           "details": [
             {
@@ -366,14 +366,24 @@
               "name": "AVIAD",
               "id": "701Uf00000Wl0K6IAJ",
               "gifts": 500.0
+            },
+            {
+              "name": "Payment on Pledge - FY26",
+              "id": "701Uf00000lMSnNIAW",
+              "gifts": 180.0
+            },
+            {
+              "name": "Events - FY26",
+              "id": "701Uf00000brEh4IAE",
+              "gifts": 36.0
             }
           ]
         },
         {
           "metric": "Gifts without campaign",
-          "count": 2,
+          "count": 0,
           "severity": "high",
-          "dollarAmount": 38.0
+          "dollarAmount": 0
         }
       ]
     },
@@ -552,7 +562,7 @@
             {
               "name": "Olga M. Worm",
               "id": "001Uf00000WkFKjIAN",
-              "giving": 44140.0
+              "giving": 44340.0
             },
             {
               "name": "Warren O. Kessler",
@@ -567,7 +577,7 @@
             {
               "name": "Elyse K. Sollender",
               "id": "001Uf00000WkTxqIAF",
-              "giving": 31885.0
+              "giving": 32085.0
             },
             {
               "name": "Jon Steven Segal",
@@ -590,13 +600,13 @@
               "giving": 15730.0
             },
             {
-              "name": "Rita S. Hartman Z\"L",
-              "id": "001Uf00000WkK6NIAV",
+              "name": "Lawrence Liebermensch",
+              "id": "001Uf00000WkTanIAF",
               "giving": 13000.0
             },
             {
-              "name": "Lawrence Liebermensch",
-              "id": "001Uf00000WkTanIAF",
+              "name": "Rita S. Hartman Z\"L",
+              "id": "001Uf00000WkK6NIAV",
               "giving": 13000.0
             },
             {
@@ -637,10 +647,10 @@
   ],
   "trends": [],
   "kpis": {
-    "overallScore": 21,
+    "overallScore": 22,
     "criticalIssues": 0,
-    "highIssues": 174,
-    "mediumIssues": 50,
+    "highIssues": 172,
+    "mediumIssues": 52,
     "lowIssues": 50,
     "totalRecordsAffected": 274,
     "totalMajorDonors": 416

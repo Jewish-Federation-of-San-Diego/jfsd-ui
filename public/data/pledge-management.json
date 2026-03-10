@@ -1,21 +1,21 @@
 {
   "asOfDate": "2026-03-07",
   "summary": {
-    "totalOpenPledges": 596,
-    "totalPledgedAmount": 13631789,
-    "totalPaidAmount": 1315731,
-    "totalOutstanding": 12316058,
-    "fulfillmentRate": 9.7,
-    "avgPledgeSize": 22872,
+    "totalOpenPledges": 600,
+    "totalPledgedAmount": 13744789,
+    "totalPaidAmount": 1318731,
+    "totalOutstanding": 12426058,
+    "fulfillmentRate": 9.6,
+    "avgPledgeSize": 22908,
     "pledgesWithPayments": 44,
-    "pledgesWithZeroPayments": 552,
-    "zeroPaymentPct": 92.6
+    "pledgesWithZeroPayments": 556,
+    "zeroPaymentPct": 92.7
   },
   "agingBuckets": [
     {
       "bucket": "0-90 days",
-      "count": 240,
-      "amount": 1862849
+      "count": 244,
+      "amount": 1975849
     },
     {
       "bucket": "91-180 days",
@@ -25,12 +25,12 @@
     {
       "bucket": "181-365 days",
       "count": 73,
-      "amount": 2347191
+      "amount": 2344691
     },
     {
       "bucket": "365+ days",
       "count": 257,
-      "amount": 6988521
+      "amount": 6988021
     }
   ],
   "collectionPriority": {
@@ -227,21 +227,6 @@
           "nextAction": "Per agreement"
         },
         {
-          "name": "Mr. Alan Viterbi",
-          "donorId": "001Uf00000WkIYuIAN",
-          "pledgedAmount": 50000,
-          "paidAmount": 0,
-          "balance": 50000,
-          "startDate": "2025-07-01",
-          "daysOld": 249,
-          "campaign": "DRM - FY26",
-          "paymentCount": 0,
-          "totalPaid": 0,
-          "priority": "high",
-          "isCapital": false,
-          "nextAction": "May (Spring Push)"
-        },
-        {
           "name": "GC-00251220",
           "donorId": "001Uf00000WjYR2IAN",
           "pledgedAmount": 50000,
@@ -264,12 +249,12 @@
           "balance": 50000,
           "startDate": "2025-07-01",
           "daysOld": 249,
-          "campaign": "DRM - FY26",
+          "campaign": "Beit Melachah - General",
           "paymentCount": 0,
           "totalPaid": 0,
           "priority": "high",
-          "isCapital": false,
-          "nextAction": "May (Spring Push)"
+          "isCapital": true,
+          "nextAction": "Per agreement"
         },
         {
           "name": "Mrs. Shayna Davis-Schreiber",
@@ -279,12 +264,27 @@
           "balance": 50000,
           "startDate": "2025-07-01",
           "daysOld": 249,
-          "campaign": "Beit Melachah - General",
+          "campaign": "DRM - FY26",
           "paymentCount": 0,
           "totalPaid": 0,
           "priority": "high",
-          "isCapital": true,
-          "nextAction": "Per agreement"
+          "isCapital": false,
+          "nextAction": "May (Spring Push)"
+        },
+        {
+          "name": "Mr. Alan Viterbi",
+          "donorId": "001Uf00000WkIYuIAN",
+          "pledgedAmount": 50000,
+          "paidAmount": 0,
+          "balance": 50000,
+          "startDate": "2025-07-01",
+          "daysOld": 249,
+          "campaign": "DRM - FY26",
+          "paymentCount": 0,
+          "totalPaid": 0,
+          "priority": "high",
+          "isCapital": false,
+          "nextAction": "May (Spring Push)"
         },
         {
           "name": "Mrs. Shayna Davis-Schreiber",
@@ -349,8 +349,8 @@
       ]
     },
     "medium": {
-      "count": 218,
-      "total": 2390047,
+      "count": 222,
+      "total": 2500047,
       "description": "Balance >$1K, or any pledge with partial payments",
       "topItems": [
         {
@@ -362,6 +362,21 @@
           "startDate": "2027-01-01",
           "daysOld": -300,
           "campaign": "DRM - CY27",
+          "paymentCount": 0,
+          "totalPaid": 0,
+          "priority": "medium",
+          "isCapital": false,
+          "nextAction": "May (Spring Push)"
+        },
+        {
+          "name": "Ms. Claire Ellman",
+          "donorId": "001Uf00000WkNeeIAF",
+          "pledgedAmount": 100000,
+          "paidAmount": 0,
+          "balance": 100000,
+          "startDate": "2026-01-27",
+          "daysOld": 39,
+          "campaign": "Sha\u2019ar HaNegev Resiliency Village - Rady Match",
           "paymentCount": 0,
           "totalPaid": 0,
           "priority": "medium",
@@ -384,31 +399,16 @@
           "nextAction": "Per agreement"
         },
         {
-          "name": "Ms. Claire Ellman",
-          "donorId": "001Uf00000WkNeeIAF",
+          "name": "Mr. Charles Wax",
+          "donorId": "001Uf00000WkF5oIAF",
           "pledgedAmount": 100000,
           "paidAmount": 0,
           "balance": 100000,
-          "startDate": "2026-01-27",
-          "daysOld": 39,
-          "campaign": "Sha\u2019ar HaNegev Resiliency Village - Rady Match",
+          "startDate": "2026-03-09",
+          "daysOld": -2,
+          "campaign": "JAFI - Rady Match",
           "paymentCount": 0,
           "totalPaid": 0,
-          "priority": "medium",
-          "isCapital": false,
-          "nextAction": "May (Spring Push)"
-        },
-        {
-          "name": "Mrs. Lara Woolf Grusd",
-          "donorId": "001Uf00000WkF06IAF",
-          "pledgedAmount": 100000,
-          "paidAmount": 50000,
-          "balance": 50000,
-          "startDate": "2025-10-23",
-          "daysOld": 135,
-          "campaign": "JDC - Rady Match",
-          "paymentCount": 1,
-          "totalPaid": 50000,
           "priority": "medium",
           "isCapital": false,
           "nextAction": "May (Spring Push)"
@@ -429,36 +429,6 @@
           "nextAction": "May (Spring Push)"
         },
         {
-          "name": "Mr. Richard Gabriel",
-          "donorId": "001Uf00000WkDPYIA3",
-          "pledgedAmount": 50000,
-          "paidAmount": 0,
-          "balance": 50000,
-          "startDate": "2027-07-01",
-          "daysOld": -481,
-          "campaign": "DRM - CY28",
-          "paymentCount": 0,
-          "totalPaid": 0,
-          "priority": "medium",
-          "isCapital": false,
-          "nextAction": "May (Spring Push)"
-        },
-        {
-          "name": "Dr. Sonia Israel",
-          "donorId": "001Uf00000WkK6OIAV",
-          "pledgedAmount": 100000,
-          "paidAmount": 50000,
-          "balance": 50000,
-          "startDate": "2025-12-12",
-          "daysOld": 85,
-          "campaign": "Legacy of Light (Spark)",
-          "paymentCount": 1,
-          "totalPaid": 50000,
-          "priority": "medium",
-          "isCapital": true,
-          "nextAction": "Per agreement"
-        },
-        {
           "name": "Dr. Sonia Israel",
           "donorId": "001Uf00000WkK6OIAV",
           "pledgedAmount": 100000,
@@ -467,6 +437,21 @@
           "startDate": "2025-12-12",
           "daysOld": 85,
           "campaign": "The Community Trip - Underwriting",
+          "paymentCount": 1,
+          "totalPaid": 50000,
+          "priority": "medium",
+          "isCapital": false,
+          "nextAction": "May (Spring Push)"
+        },
+        {
+          "name": "Mrs. Lara Woolf Grusd",
+          "donorId": "001Uf00000WkF06IAF",
+          "pledgedAmount": 100000,
+          "paidAmount": 50000,
+          "balance": 50000,
+          "startDate": "2025-10-23",
+          "daysOld": 135,
+          "campaign": "JDC - Rady Match",
           "paymentCount": 1,
           "totalPaid": 50000,
           "priority": "medium",
@@ -502,6 +487,21 @@
           "priority": "medium",
           "isCapital": true,
           "nextAction": "Per agreement"
+        },
+        {
+          "name": "Mr. Richard Gabriel",
+          "donorId": "001Uf00000WkDPYIA3",
+          "pledgedAmount": 50000,
+          "paidAmount": 0,
+          "balance": 50000,
+          "startDate": "2027-07-01",
+          "daysOld": -481,
+          "campaign": "DRM - CY28",
+          "paymentCount": 0,
+          "totalPaid": 0,
+          "priority": "medium",
+          "isCapital": false,
+          "nextAction": "May (Spring Push)"
         }
       ]
     },
@@ -511,104 +511,14 @@
       "description": "Small balances or recent pledges (< 90 days)",
       "topItems": [
         {
-          "name": "Ms. Sabrina Kerbel",
-          "donorId": "001Uf00000WkQYZIA3",
+          "name": "Mr. Guri Stark",
+          "donorId": "001Uf00000WkM83IAF",
           "pledgedAmount": 1000,
           "paidAmount": 0,
           "balance": 1000,
-          "startDate": "2022-10-25",
-          "daysOld": 1229,
-          "campaign": "EVENT LOJ 2023",
-          "paymentCount": 0,
-          "totalPaid": 0,
-          "priority": "low",
-          "isCapital": false,
-          "nextAction": "May (Spring Push)"
-        },
-        {
-          "name": "Mrs. Yvette Lechtner",
-          "donorId": "001Uf00000WkPHJIA3",
-          "pledgedAmount": 1000,
-          "paidAmount": 0,
-          "balance": 1000,
-          "startDate": "2025-04-24",
-          "daysOld": 317,
-          "campaign": "DRM Call 2025",
-          "paymentCount": 0,
-          "totalPaid": 0,
-          "priority": "low",
-          "isCapital": false,
-          "nextAction": "May (Spring Push)"
-        },
-        {
-          "name": "Mrs. Joanne Ellison",
-          "donorId": "001Uf00000WkEcbIAF",
-          "pledgedAmount": 1000,
-          "paidAmount": 0,
-          "balance": 1000,
-          "startDate": "2025-05-15",
-          "daysOld": 296,
-          "campaign": "DRM Call 2025",
-          "paymentCount": 0,
-          "totalPaid": 0,
-          "priority": "low",
-          "isCapital": false,
-          "nextAction": "May (Spring Push)"
-        },
-        {
-          "name": "Mr. Steven Gerard",
-          "donorId": "001Uf00000bHTErIAO",
-          "pledgedAmount": 1000,
-          "paidAmount": 0,
-          "balance": 1000,
-          "startDate": "2026-02-13",
-          "daysOld": 22,
-          "campaign": "Annual - FY26",
-          "paymentCount": 0,
-          "totalPaid": 0,
-          "priority": "low",
-          "isCapital": false,
-          "nextAction": "May (Spring Push)"
-        },
-        {
-          "name": "Dr. David Geffen",
-          "donorId": "001Uf00000WjsAwIAJ",
-          "pledgedAmount": 1000,
-          "paidAmount": 0,
-          "balance": 1000,
-          "startDate": "2026-02-07",
-          "daysOld": 28,
-          "campaign": "FED360 - FY26 - Donations - Attended",
-          "paymentCount": 0,
-          "totalPaid": 0,
-          "priority": "low",
-          "isCapital": false,
-          "nextAction": "May (Spring Push)"
-        },
-        {
-          "name": "Ms. Suzanne Cohen",
-          "donorId": "001Uf00000WkJaqIAF",
-          "pledgedAmount": 1000,
-          "paidAmount": 0,
-          "balance": 1000,
-          "startDate": "2026-02-07",
-          "daysOld": 28,
-          "campaign": "FED360 - FY26 - Donations - Attended",
-          "paymentCount": 0,
-          "totalPaid": 0,
-          "priority": "low",
-          "isCapital": false,
-          "nextAction": "May (Spring Push)"
-        },
-        {
-          "name": "Dr. Mitchell Shack",
-          "donorId": "001Uf00000WkGv4IAF",
-          "pledgedAmount": 1000,
-          "paidAmount": 0,
-          "balance": 1000,
-          "startDate": "2026-02-07",
-          "daysOld": 28,
-          "campaign": "FED360 - FY26 - Donations - Attended",
+          "startDate": "2025-11-13",
+          "daysOld": 114,
+          "campaign": "Ambassador - FY26",
           "paymentCount": 0,
           "totalPaid": 0,
           "priority": "low",
@@ -631,14 +541,29 @@
           "nextAction": "May (Spring Push)"
         },
         {
-          "name": "Mrs. Sylvia Sneider",
-          "donorId": "001Uf00000WkSpqIAF",
+          "name": "Mr. Sacha Litman",
+          "donorId": "001Uf00000WkKf9IAF",
           "pledgedAmount": 1000,
           "paidAmount": 0,
           "balance": 1000,
-          "startDate": "2025-06-23",
-          "daysOld": 257,
-          "campaign": "DRM Call 2025",
+          "startDate": "2023-11-05",
+          "daysOld": 853,
+          "campaign": "FEDERATION 360 2024",
+          "paymentCount": 0,
+          "totalPaid": 0,
+          "priority": "low",
+          "isCapital": false,
+          "nextAction": "May (Spring Push)"
+        },
+        {
+          "name": "Mr. Todd Kobernick",
+          "donorId": "001Uf00000WkL7gIAF",
+          "pledgedAmount": 1000,
+          "paidAmount": 0,
+          "balance": 1000,
+          "startDate": "2024-06-30",
+          "daysOld": 615,
+          "campaign": "DRM EM 2024",
           "paymentCount": 0,
           "totalPaid": 0,
           "priority": "low",
@@ -648,6 +573,81 @@
         {
           "name": "Mr. Kevin Tarson",
           "donorId": "001Uf00000WkMWaIAN",
+          "pledgedAmount": 1000,
+          "paidAmount": 0,
+          "balance": 1000,
+          "startDate": "2026-02-07",
+          "daysOld": 28,
+          "campaign": "FED360 - FY26 - Donations - Attended",
+          "paymentCount": 0,
+          "totalPaid": 0,
+          "priority": "low",
+          "isCapital": false,
+          "nextAction": "May (Spring Push)"
+        },
+        {
+          "name": "Dr. David Geffen",
+          "donorId": "001Uf00000WjsAwIAJ",
+          "pledgedAmount": 1000,
+          "paidAmount": 0,
+          "balance": 1000,
+          "startDate": "2026-02-07",
+          "daysOld": 28,
+          "campaign": "FED360 - FY26 - Donations - Attended",
+          "paymentCount": 0,
+          "totalPaid": 0,
+          "priority": "low",
+          "isCapital": false,
+          "nextAction": "May (Spring Push)"
+        },
+        {
+          "name": "Dr. Haim Belzer",
+          "donorId": "001Uf00000WkOJTIA3",
+          "pledgedAmount": 1000,
+          "paidAmount": 0,
+          "balance": 1000,
+          "startDate": "2026-02-07",
+          "daysOld": 28,
+          "campaign": "FED360 - FY26 - Donations - Attended",
+          "paymentCount": 0,
+          "totalPaid": 0,
+          "priority": "low",
+          "isCapital": false,
+          "nextAction": "May (Spring Push)"
+        },
+        {
+          "name": "Ms. Marianna Alperin",
+          "donorId": "001Uf00000c5vj7IAA",
+          "pledgedAmount": 1000,
+          "paidAmount": 0,
+          "balance": 1000,
+          "startDate": "2026-02-07",
+          "daysOld": 28,
+          "campaign": "FED360 - FY26 - Donations - Attended",
+          "paymentCount": 0,
+          "totalPaid": 0,
+          "priority": "low",
+          "isCapital": false,
+          "nextAction": "May (Spring Push)"
+        },
+        {
+          "name": "Ms. Betzy Lynch",
+          "donorId": "001Uf00000WkTJ9IAN",
+          "pledgedAmount": 1000,
+          "paidAmount": 0,
+          "balance": 1000,
+          "startDate": "2026-02-07",
+          "daysOld": 28,
+          "campaign": "FED360 - FY26 - Donations - Attended",
+          "paymentCount": 0,
+          "totalPaid": 0,
+          "priority": "low",
+          "isCapital": false,
+          "nextAction": "May (Spring Push)"
+        },
+        {
+          "name": "Mr. Douglas Frankel",
+          "donorId": "001Uf00000WkNKOIA3",
           "pledgedAmount": 1000,
           "paidAmount": 0,
           "balance": 1000,
@@ -681,16 +681,6 @@
       "balance": 7500,
       "startDate": "2024-05-10",
       "daysOld": 666,
-      "campaign": "AMB EM 2024",
-      "paymentCount": 0
-    },
-    {
-      "name": "Ms. Cheryl Rattner Price",
-      "pledgeAmount": 7500,
-      "paidAmount": 0,
-      "balance": 7500,
-      "startDate": "2024-05-10",
-      "daysOld": 666,
       "campaign": "Ambassador - FY26",
       "paymentCount": 0
     },
@@ -702,6 +692,16 @@
       "startDate": "2024-05-10",
       "daysOld": 666,
       "campaign": "AMB EM 2025",
+      "paymentCount": 0
+    },
+    {
+      "name": "Ms. Cheryl Rattner Price",
+      "pledgeAmount": 7500,
+      "paidAmount": 0,
+      "balance": 7500,
+      "startDate": "2024-05-10",
+      "daysOld": 666,
+      "campaign": "AMB EM 2024",
       "paymentCount": 0
     },
     {
@@ -735,23 +735,13 @@
       "paymentCount": 0
     },
     {
-      "name": "GC-00244208",
+      "name": "Ms. Jane Willoughby",
       "pledgeAmount": 5000,
       "paidAmount": 0,
       "balance": 5000,
-      "startDate": "2024-04-11",
-      "daysOld": 695,
-      "campaign": "ONLINE GEN 2024",
-      "paymentCount": 0
-    },
-    {
-      "name": "Mrs. Leigh Johnson",
-      "pledgeAmount": 5000,
-      "paidAmount": 0,
-      "balance": 5000,
-      "startDate": "2023-06-29",
-      "daysOld": 982,
-      "campaign": "AMB EM 2023",
+      "startDate": "2023-11-06",
+      "daysOld": 852,
+      "campaign": "FEDERATION 360 2024",
       "paymentCount": 0
     },
     {
@@ -765,6 +755,26 @@
       "paymentCount": 0
     },
     {
+      "name": "Mrs. Leigh Johnson",
+      "pledgeAmount": 5000,
+      "paidAmount": 0,
+      "balance": 5000,
+      "startDate": "2023-06-29",
+      "daysOld": 982,
+      "campaign": "AMB EM 2023",
+      "paymentCount": 0
+    },
+    {
+      "name": "GC-00244208",
+      "pledgeAmount": 5000,
+      "paidAmount": 0,
+      "balance": 5000,
+      "startDate": "2024-04-11",
+      "daysOld": 695,
+      "campaign": "ONLINE GEN 2024",
+      "paymentCount": 0
+    },
+    {
       "name": "Mrs. Julie Potiker",
       "pledgeAmount": 5000,
       "paidAmount": 0,
@@ -772,16 +782,6 @@
       "startDate": "2024-07-01",
       "daysOld": 614,
       "campaign": "DRM FACE 2025",
-      "paymentCount": 0
-    },
-    {
-      "name": "Ms. Jane Willoughby",
-      "pledgeAmount": 5000,
-      "paidAmount": 0,
-      "balance": 5000,
-      "startDate": "2023-11-06",
-      "daysOld": 852,
-      "campaign": "FEDERATION 360 2024",
       "paymentCount": 0
     },
     {
@@ -841,7 +841,7 @@
       "balance": 2500,
       "startDate": "2024-05-10",
       "daysOld": 666,
-      "campaign": "Ambassador - FY26",
+      "campaign": "AMB EM 2024",
       "paymentCount": 0
     },
     {
@@ -861,7 +861,7 @@
       "balance": 2500,
       "startDate": "2024-05-10",
       "daysOld": 666,
-      "campaign": "AMB EM 2024",
+      "campaign": "Ambassador - FY26",
       "paymentCount": 0
     },
     {
@@ -905,13 +905,13 @@
       "paymentCount": 0
     },
     {
-      "name": "Ms. Sabrina Kerbel",
+      "name": "Mr. Sacha Litman",
       "pledgeAmount": 1000,
       "paidAmount": 0,
       "balance": 1000,
-      "startDate": "2022-10-25",
-      "daysOld": 1229,
-      "campaign": "EVENT LOJ 2023",
+      "startDate": "2023-11-05",
+      "daysOld": 853,
+      "campaign": "FEDERATION 360 2024",
       "paymentCount": 0
     }
   ],
@@ -1082,19 +1082,19 @@
       "nextAction": "May (Spring Push)"
     },
     {
-      "name": "GC-00256997",
-      "donorId": "001Uf00000Wk5vKIAR",
+      "name": "Ms. Claire Ellman",
+      "donorId": "001Uf00000WkNeeIAF",
       "pledgedAmount": 100000,
       "paidAmount": 0,
       "balance": 100000,
-      "startDate": "2025-12-03",
-      "daysOld": 94,
-      "campaign": "Legacy of Light (Spark)",
+      "startDate": "2026-01-27",
+      "daysOld": 39,
+      "campaign": "Sha\u2019ar HaNegev Resiliency Village - Rady Match",
       "paymentCount": 0,
       "totalPaid": 0,
       "priority": "medium",
-      "isCapital": true,
-      "nextAction": "Per agreement"
+      "isCapital": false,
+      "nextAction": "May (Spring Push)"
     },
     {
       "name": "Mr. Anton Woolf",
@@ -1127,14 +1127,29 @@
       "nextAction": "May (Spring Push)"
     },
     {
-      "name": "Ms. Claire Ellman",
-      "donorId": "001Uf00000WkNeeIAF",
+      "name": "GC-00256997",
+      "donorId": "001Uf00000Wk5vKIAR",
       "pledgedAmount": 100000,
       "paidAmount": 0,
       "balance": 100000,
-      "startDate": "2026-01-27",
-      "daysOld": 39,
-      "campaign": "Sha\u2019ar HaNegev Resiliency Village - Rady Match",
+      "startDate": "2025-12-03",
+      "daysOld": 94,
+      "campaign": "Legacy of Light (Spark)",
+      "paymentCount": 0,
+      "totalPaid": 0,
+      "priority": "medium",
+      "isCapital": true,
+      "nextAction": "Per agreement"
+    },
+    {
+      "name": "Mr. Charles Wax",
+      "donorId": "001Uf00000WkF5oIAF",
+      "pledgedAmount": 100000,
+      "paidAmount": 0,
+      "balance": 100000,
+      "startDate": "2026-03-09",
+      "daysOld": -2,
+      "campaign": "JAFI - Rady Match",
       "paymentCount": 0,
       "totalPaid": 0,
       "priority": "medium",
@@ -1187,36 +1202,6 @@
       "nextAction": "May (Spring Push)"
     },
     {
-      "name": "Mrs. Lara Woolf Grusd",
-      "donorId": "001Uf00000WkF06IAF",
-      "pledgedAmount": 100000,
-      "paidAmount": 50000,
-      "balance": 50000,
-      "startDate": "2025-10-23",
-      "daysOld": 135,
-      "campaign": "JDC - Rady Match",
-      "paymentCount": 1,
-      "totalPaid": 50000,
-      "priority": "medium",
-      "isCapital": false,
-      "nextAction": "May (Spring Push)"
-    },
-    {
-      "name": "Mr. Alan Viterbi",
-      "donorId": "001Uf00000WkIYuIAN",
-      "pledgedAmount": 50000,
-      "paidAmount": 0,
-      "balance": 50000,
-      "startDate": "2025-07-01",
-      "daysOld": 249,
-      "campaign": "DRM - FY26",
-      "paymentCount": 0,
-      "totalPaid": 0,
-      "priority": "high",
-      "isCapital": false,
-      "nextAction": "May (Spring Push)"
-    },
-    {
       "name": "Mr. Richard Gabriel",
       "donorId": "001Uf00000WkDPYIA3",
       "pledgedAmount": 50000,
@@ -1227,51 +1212,6 @@
       "campaign": "DRM - CY27",
       "paymentCount": 0,
       "totalPaid": 0,
-      "priority": "medium",
-      "isCapital": false,
-      "nextAction": "May (Spring Push)"
-    },
-    {
-      "name": "Mr. Richard Gabriel",
-      "donorId": "001Uf00000WkDPYIA3",
-      "pledgedAmount": 50000,
-      "paidAmount": 0,
-      "balance": 50000,
-      "startDate": "2027-07-01",
-      "daysOld": -481,
-      "campaign": "DRM - CY28",
-      "paymentCount": 0,
-      "totalPaid": 0,
-      "priority": "medium",
-      "isCapital": false,
-      "nextAction": "May (Spring Push)"
-    },
-    {
-      "name": "Dr. Sonia Israel",
-      "donorId": "001Uf00000WkK6OIAV",
-      "pledgedAmount": 100000,
-      "paidAmount": 50000,
-      "balance": 50000,
-      "startDate": "2025-12-12",
-      "daysOld": 85,
-      "campaign": "Legacy of Light (Spark)",
-      "paymentCount": 1,
-      "totalPaid": 50000,
-      "priority": "medium",
-      "isCapital": true,
-      "nextAction": "Per agreement"
-    },
-    {
-      "name": "Dr. Sonia Israel",
-      "donorId": "001Uf00000WkK6OIAV",
-      "pledgedAmount": 100000,
-      "paidAmount": 50000,
-      "balance": 50000,
-      "startDate": "2025-12-12",
-      "daysOld": 85,
-      "campaign": "The Community Trip - Underwriting",
-      "paymentCount": 1,
-      "totalPaid": 50000,
       "priority": "medium",
       "isCapital": false,
       "nextAction": "May (Spring Push)"
@@ -1292,6 +1232,36 @@
       "nextAction": "May (Spring Push)"
     },
     {
+      "name": "Dr. Sonia Israel",
+      "donorId": "001Uf00000WkK6OIAV",
+      "pledgedAmount": 100000,
+      "paidAmount": 50000,
+      "balance": 50000,
+      "startDate": "2025-12-12",
+      "daysOld": 85,
+      "campaign": "The Community Trip - Underwriting",
+      "paymentCount": 1,
+      "totalPaid": 50000,
+      "priority": "medium",
+      "isCapital": false,
+      "nextAction": "May (Spring Push)"
+    },
+    {
+      "name": "Mrs. Lara Woolf Grusd",
+      "donorId": "001Uf00000WkF06IAF",
+      "pledgedAmount": 100000,
+      "paidAmount": 50000,
+      "balance": 50000,
+      "startDate": "2025-10-23",
+      "daysOld": 135,
+      "campaign": "JDC - Rady Match",
+      "paymentCount": 1,
+      "totalPaid": 50000,
+      "priority": "medium",
+      "isCapital": false,
+      "nextAction": "May (Spring Push)"
+    },
+    {
       "name": "Mrs. Shayna Davis-Schreiber",
       "donorId": "001Uf00000WkPvSIAV",
       "pledgedAmount": 50000,
@@ -1329,12 +1299,12 @@
       "balance": 50000,
       "startDate": "2025-07-01",
       "daysOld": 249,
-      "campaign": "DRM - FY26",
+      "campaign": "Beit Melachah - General",
       "paymentCount": 0,
       "totalPaid": 0,
       "priority": "high",
-      "isCapital": false,
-      "nextAction": "May (Spring Push)"
+      "isCapital": true,
+      "nextAction": "Per agreement"
     },
     {
       "name": "Mrs. Shayna Davis-Schreiber",
@@ -1344,12 +1314,27 @@
       "balance": 50000,
       "startDate": "2025-07-01",
       "daysOld": 249,
-      "campaign": "Beit Melachah - General",
+      "campaign": "DRM - FY26",
       "paymentCount": 0,
       "totalPaid": 0,
       "priority": "high",
-      "isCapital": true,
-      "nextAction": "Per agreement"
+      "isCapital": false,
+      "nextAction": "May (Spring Push)"
+    },
+    {
+      "name": "Mr. Alan Viterbi",
+      "donorId": "001Uf00000WkIYuIAN",
+      "pledgedAmount": 50000,
+      "paidAmount": 0,
+      "balance": 50000,
+      "startDate": "2025-07-01",
+      "daysOld": 249,
+      "campaign": "DRM - FY26",
+      "paymentCount": 0,
+      "totalPaid": 0,
+      "priority": "high",
+      "isCapital": false,
+      "nextAction": "May (Spring Push)"
     },
     {
       "name": "Mrs. Shayna Davis-Schreiber",
@@ -1365,6 +1350,21 @@
       "priority": "high",
       "isCapital": true,
       "nextAction": "Per agreement"
+    },
+    {
+      "name": "Mr. Richard Gabriel",
+      "donorId": "001Uf00000WkDPYIA3",
+      "pledgedAmount": 50000,
+      "paidAmount": 0,
+      "balance": 50000,
+      "startDate": "2027-07-01",
+      "daysOld": -481,
+      "campaign": "DRM - CY28",
+      "paymentCount": 0,
+      "totalPaid": 0,
+      "priority": "medium",
+      "isCapital": false,
+      "nextAction": "May (Spring Push)"
     }
   ],
   "byCampaign": [
@@ -1420,9 +1420,9 @@
       "campaign": "DRM FACE 2025",
       "pledgeCount": 13,
       "pledgedAmount": 225166,
-      "paidAmount": 16658,
-      "outstanding": 208509,
-      "fulfillmentRate": 7.4
+      "paidAmount": 19158,
+      "outstanding": 206009,
+      "fulfillmentRate": 8.5
     },
     {
       "campaign": "JDC - Rady Match",
@@ -1450,11 +1450,11 @@
     },
     {
       "campaign": "The Community Trip - Underwriting",
-      "pledgeCount": 3,
-      "pledgedAmount": 120000,
+      "pledgeCount": 4,
+      "pledgedAmount": 121500,
       "paidAmount": 50000,
-      "outstanding": 70000,
-      "fulfillmentRate": 41.7
+      "outstanding": 71500,
+      "fulfillmentRate": 41.2
     },
     {
       "campaign": "Ambassador - FY26",
@@ -1474,6 +1474,14 @@
     },
     {
       "campaign": "Sha\u2019ar HaNegev Resiliency Village - Rady Match",
+      "pledgeCount": 1,
+      "pledgedAmount": 100000,
+      "paidAmount": 0,
+      "outstanding": 100000,
+      "fulfillmentRate": 0.0
+    },
+    {
+      "campaign": "JAFI - Rady Match",
       "pledgeCount": 1,
       "pledgedAmount": 100000,
       "paidAmount": 0,
@@ -1508,9 +1516,9 @@
       "campaign": "FEDERATION 360 - FY25",
       "pledgeCount": 19,
       "pledgedAmount": 39652,
-      "paidAmount": 5020,
-      "outstanding": 34632,
-      "fulfillmentRate": 12.7
+      "paidAmount": 5520,
+      "outstanding": 34132,
+      "fulfillmentRate": 13.9
     },
     {
       "campaign": "DRM FACE 2022",
@@ -1538,10 +1546,10 @@
     },
     {
       "campaign": "Rady Match for Israel\u2019s Recovery - General",
-      "pledgeCount": 3,
-      "pledgedAmount": 12500,
+      "pledgeCount": 4,
+      "pledgedAmount": 14000,
       "paidAmount": 0,
-      "outstanding": 12500,
+      "outstanding": 14000,
       "fulfillmentRate": 0.0
     },
     {
@@ -1569,6 +1577,14 @@
       "fulfillmentRate": 0.5
     },
     {
+      "campaign": "Hatzalah - Rady Match",
+      "pledgeCount": 1,
+      "pledgedAmount": 10000,
+      "paidAmount": 0,
+      "outstanding": 10000,
+      "fulfillmentRate": 0.0
+    },
+    {
       "campaign": "Corporate Event Sponsorships - FY26",
       "pledgeCount": 2,
       "pledgedAmount": 10000,
@@ -1585,6 +1601,14 @@
       "fulfillmentRate": 0.0
     },
     {
+      "campaign": "DRM EM 2024",
+      "pledgeCount": 2,
+      "pledgedAmount": 8000,
+      "paidAmount": 432,
+      "outstanding": 7568,
+      "fulfillmentRate": 5.4
+    },
+    {
       "campaign": "DRM CALL 2022",
       "pledgeCount": 2,
       "pledgedAmount": 7950,
@@ -1599,14 +1623,6 @@
       "paidAmount": 0,
       "outstanding": 7300,
       "fulfillmentRate": 0.0
-    },
-    {
-      "campaign": "DRM Em 2023",
-      "pledgeCount": 1,
-      "pledgedAmount": 7000,
-      "paidAmount": 432,
-      "outstanding": 6568,
-      "fulfillmentRate": 6.2
     },
     {
       "campaign": "DRM EM 2022",
@@ -1649,7 +1665,7 @@
       "fulfillmentRate": 0.0
     },
     {
-      "campaign": "ONLINE GEN 2024",
+      "campaign": "AMB EM 2023",
       "pledgeCount": 1,
       "pledgedAmount": 5000,
       "paidAmount": 0,
@@ -1657,7 +1673,7 @@
       "fulfillmentRate": 0.0
     },
     {
-      "campaign": "AMB EM 2023",
+      "campaign": "ONLINE GEN 2024",
       "pledgeCount": 1,
       "pledgedAmount": 5000,
       "paidAmount": 0,
@@ -1777,7 +1793,7 @@
       "fulfillmentRate": 0.0
     },
     {
-      "campaign": "FED360 - FY26 - Sponsorships",
+      "campaign": "Tributes - FY26",
       "pledgeCount": 1,
       "pledgedAmount": 1800,
       "paidAmount": 0,
@@ -1785,7 +1801,7 @@
       "fulfillmentRate": 0.0
     },
     {
-      "campaign": "Tributes - FY26",
+      "campaign": "FED360 - FY26 - Sponsorships",
       "pledgeCount": 1,
       "pledgedAmount": 1800,
       "paidAmount": 0,
@@ -1806,14 +1822,6 @@
       "pledgedAmount": 1210,
       "paidAmount": 0,
       "outstanding": 1210,
-      "fulfillmentRate": 0.0
-    },
-    {
-      "campaign": "DRM EM 2024",
-      "pledgeCount": 1,
-      "pledgedAmount": 1000,
-      "paidAmount": 0,
-      "outstanding": 1000,
       "fulfillmentRate": 0.0
     },
     {
@@ -1899,6 +1907,22 @@
   ],
   "recentPayments": [
     {
+      "name": "Ms. Robin Rubin",
+      "amount": 156.6,
+      "date": "2026-03-10",
+      "pledgeTotal": 0,
+      "campaign": "Monthly - FY26",
+      "method": "Online"
+    },
+    {
+      "name": "Ms. Karla Silver",
+      "amount": 180,
+      "date": "2026-03-10",
+      "pledgeTotal": 0,
+      "campaign": "Monthly - FY26",
+      "method": "Online"
+    },
+    {
       "name": "Mr. Elliott Nahmias",
       "amount": 75,
       "date": "2026-03-08",
@@ -1950,8 +1974,8 @@
       "name": "Mrs. Marlene Sasson Recht",
       "amount": 2500,
       "date": "2026-03-01",
-      "pledgeTotal": 0,
-      "campaign": "Monthly - FY26",
+      "pledgeTotal": 21500,
+      "campaign": "DRM FACE 2025",
       "method": "Online"
     },
     {
@@ -1990,8 +2014,8 @@
       "name": "Mrs. Laurie Hoshaw",
       "amount": 500,
       "date": "2026-03-01",
-      "pledgeTotal": 0,
-      "campaign": "Monthly - FY26",
+      "pledgeTotal": 6000,
+      "campaign": "FEDERATION 360 - FY25",
       "method": "Online"
     },
     {
@@ -2047,7 +2071,7 @@
       "amount": 200,
       "date": "2026-02-15",
       "pledgeTotal": 7000,
-      "campaign": "DRM Em 2023",
+      "campaign": "DRM EM 2024",
       "method": "Credit Card"
     },
     {
@@ -2281,30 +2305,14 @@
       "pledgeTotal": 0,
       "campaign": "Monthly - FY26",
       "method": "Online"
-    },
-    {
-      "name": "Dr. Frances Lobman",
-      "amount": 18,
-      "date": "2026-02-01",
-      "pledgeTotal": 0,
-      "campaign": "Monthly - FY26",
-      "method": "Online"
-    },
-    {
-      "name": "Mr. Jon Segal",
-      "amount": 25000,
-      "date": "2026-01-27",
-      "pledgeTotal": 25000,
-      "campaign": "The Community Trip - Underwriting",
-      "method": "Check"
     }
   ],
   "kpis": {
-    "totalOutstanding": 12316058,
-    "fulfillmentRate": 9.7,
+    "totalOutstanding": 12426058,
+    "fulfillmentRate": 9.6,
     "writeOffRiskAmount": 130871,
     "writeOffRiskCount": 164,
-    "pledgesThisMonth": 45,
+    "pledgesThisMonth": 49,
     "criticalCount": 13,
     "criticalAmount": 3283333,
     "highCount": 53,

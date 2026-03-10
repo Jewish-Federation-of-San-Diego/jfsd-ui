@@ -1,7 +1,7 @@
 {
-  "asOfDate": "2026-03-09",
+  "asOfDate": "2026-03-10",
   "totalProfiled": 552,
-  "capacityGap": 29992257,
+  "capacityGap": 29993793,
   "upgradeProspects": [
     {
       "name": "Michael S. Levinson",
@@ -587,7 +587,7 @@
     },
     {
       "name": "Jerri-Ann J Jacobs",
-      "capacity": 234013,
+      "capacity": 234073,
       "capacityTier": "$100K+",
       "currentFY26": 0,
       "priorFY25": 95000,
@@ -794,7 +794,7 @@
     },
     {
       "name": "Elyse K. Sollender",
-      "capacity": 105239,
+      "capacity": 105299,
       "capacityTier": "$100K+",
       "currentFY26": 0,
       "priorFY25": 50000,
@@ -852,19 +852,19 @@
       "level": "$5K-24,999",
       "donors": 168,
       "avgGiving": 8596,
-      "avgCapacity": 43761
+      "avgCapacity": 43767
     },
     {
       "level": "$25K-99,999",
       "donors": 30,
       "avgGiving": 41475,
-      "avgCapacity": 261141
+      "avgCapacity": 261142
     },
     {
       "level": "$100K+",
       "donors": 8,
       "avgGiving": 567346,
-      "avgCapacity": 1221670
+      "avgCapacity": 1221674
     }
   ],
   "trajectoryAnalysis": [
@@ -1355,7 +1355,7 @@
       "name": "Benevity Community Impact Fund",
       "fy24": 0,
       "fy25": 400,
-      "fy26": 11179,
+      "fy26": 11181,
       "trajectory": "increasing"
     },
     {
@@ -1571,7 +1571,7 @@
   ],
   "kpis": {
     "totalProfiled": 552,
-    "totalCapacityGap": 29992257,
+    "totalCapacityGap": 29993793,
     "upgradeCount": 108,
     "avgUpgradeAmount": 14255,
     "highCapacityNonDonors": 65
