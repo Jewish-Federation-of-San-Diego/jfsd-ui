@@ -1,6 +1,6 @@
 {
-  "asOfDate": "2026-03-10",
-  "totalPotentialRevenue": 1330000,
+  "asOfDate": "2026-03-12",
+  "totalPotentialRevenue": 1230000,
   "totalProspects": 50,
   "byPriority": [
     {
@@ -11,7 +11,7 @@
     {
       "priority": "High",
       "count": 40,
-      "potential": 855000
+      "potential": 755000
     },
     {
       "priority": "Medium",
@@ -107,20 +107,20 @@
     },
     {
       "rank": 6,
-      "name": "Michael S. Rosen",
-      "phone": "(858)481-3666 x1",
-      "email": "mrosen@contextfunds.com",
+      "name": "Theresa Marie Dupuis",
+      "phone": "",
+      "email": "theresadupuis00@gmail.com",
       "score": 125,
       "suggestedAsk": 25000,
       "askReason": "LYBUNT - gave $25K FY25",
       "category": "LYBUNT",
-      "lifetimeGiving": 621500.0,
+      "lifetimeGiving": 312991.0,
       "yearsGiving": 27,
-      "lastGiftDate": "2025-06-13",
-      "fy24": 25000.0,
+      "lastGiftDate": "2026-01-19",
+      "fy24": 100000.0,
       "fy25": 25000.0,
       "fy26": 0.0,
-      "avgAnnual": 23018.52
+      "avgAnnual": 11592.26
     },
     {
       "rank": 7,
@@ -141,20 +141,20 @@
     },
     {
       "rank": 8,
-      "name": "Theresa Marie Dupuis",
-      "phone": "",
-      "email": "theresadupuis00@gmail.com",
+      "name": "Michael S. Rosen",
+      "phone": "(858)481-3666 x1",
+      "email": "mrosen@contextfunds.com",
       "score": 125,
       "suggestedAsk": 25000,
       "askReason": "LYBUNT - gave $25K FY25",
       "category": "LYBUNT",
-      "lifetimeGiving": 312991.0,
+      "lifetimeGiving": 621500.0,
       "yearsGiving": 27,
-      "lastGiftDate": "2026-01-19",
-      "fy24": 100000.0,
+      "lastGiftDate": "2025-06-13",
+      "fy24": 25000.0,
       "fy25": 25000.0,
       "fy26": 0.0,
-      "avgAnnual": 11592.26
+      "avgAnnual": 23018.52
     },
     {
       "rank": 9,
@@ -216,13 +216,13 @@
       "suggestedAsk": 18000,
       "askReason": "LYBUNT - gave $10.0K FY25",
       "category": "LYBUNT",
-      "lifetimeGiving": 123873.18,
+      "lifetimeGiving": 124063.18,
       "yearsGiving": 43,
-      "lastGiftDate": "2026-03-04",
+      "lastGiftDate": "2026-03-06",
       "fy24": 12000.0,
       "fy25": 10036.0,
       "fy26": 0.0,
-      "avgAnnual": 2880.77
+      "avgAnnual": 2885.19
     },
     {
       "rank": 13,
@@ -267,13 +267,13 @@
       "suggestedAsk": 10000,
       "askReason": "LYBUNT - gave $6K FY25",
       "category": "LYBUNT",
-      "lifetimeGiving": 58734.0,
+      "lifetimeGiving": 58934.0,
       "yearsGiving": 45,
-      "lastGiftDate": "2025-12-09",
+      "lastGiftDate": "2026-03-05",
       "fy24": 12000.0,
       "fy25": 6000.0,
       "fy26": 0.0,
-      "avgAnnual": 1305.2
+      "avgAnnual": 1309.64
     },
     {
       "rank": 16,
@@ -386,13 +386,13 @@
       "suggestedAsk": 10000,
       "askReason": "LYBUNT - gave $6.5K FY25",
       "category": "LYBUNT",
-      "lifetimeGiving": 37275.16,
+      "lifetimeGiving": 37475.16,
       "yearsGiving": 42,
-      "lastGiftDate": "2026-03-01",
+      "lastGiftDate": "2026-03-06",
       "fy24": 0.0,
       "fy25": 6480.5,
       "fy26": 0.0,
-      "avgAnnual": 887.5
+      "avgAnnual": 892.27
     },
     {
       "rank": 23,
@@ -447,10 +447,44 @@
     },
     {
       "rank": 26,
+      "name": "Marcia Malkus",
+      "phone": "",
+      "email": "bobandmarcia@cox.net",
+      "score": 121.7,
+      "suggestedAsk": 5000,
+      "askReason": "LYBUNT - gave $5K FY25",
+      "category": "LYBUNT",
+      "lifetimeGiving": 160830.0,
+      "yearsGiving": 45,
+      "lastGiftDate": "2025-07-03",
+      "fy24": 6000.0,
+      "fy25": 5000.0,
+      "fy26": 0.0,
+      "avgAnnual": 3574.0
+    },
+    {
+      "rank": 27,
+      "name": "Ellen Epsten Benkle",
+      "phone": "6198710272",
+      "email": "ebenkle@gmail.com",
+      "score": 121.7,
+      "suggestedAsk": 5000,
+      "askReason": "LYBUNT - gave $5K FY25",
+      "category": "LYBUNT",
+      "lifetimeGiving": 43003.0,
+      "yearsGiving": 42,
+      "lastGiftDate": "2025-03-13",
+      "fy24": 6000.0,
+      "fy25": 5000.0,
+      "fy26": 0.0,
+      "avgAnnual": 1023.88
+    },
+    {
+      "rank": 28,
       "name": "Meg Leopold Mandel",
       "phone": "8582325490",
       "email": "megnjess@hotmail.com",
-      "score": 120.8,
+      "score": 120.9,
       "suggestedAsk": 5000,
       "askReason": "LYBUNT - gave $5K FY25",
       "category": "LYBUNT",
@@ -463,7 +497,7 @@
       "avgAnnual": 3037.87
     },
     {
-      "rank": 27,
+      "rank": 29,
       "name": "Jeffrey Stephan Myers",
       "phone": "(619) 300-4482",
       "email": "jeff.myers1@gmail.com",
@@ -478,40 +512,6 @@
       "fy25": 5000.0,
       "fy26": 0.0,
       "avgAnnual": 252.93
-    },
-    {
-      "rank": 28,
-      "name": "Mary Ann Scher",
-      "phone": "6195483656",
-      "email": "mascherx@gmail.com",
-      "score": 120.5,
-      "suggestedAsk": 10000,
-      "askReason": "LYBUNT - gave $5K FY25",
-      "category": "LYBUNT",
-      "lifetimeGiving": 290998.0,
-      "yearsGiving": 43,
-      "lastGiftDate": "2025-08-12",
-      "fy24": 0.0,
-      "fy25": 5000.0,
-      "fy26": 0.0,
-      "avgAnnual": 6767.4
-    },
-    {
-      "rank": 29,
-      "name": "STEVEN DEMETER",
-      "phone": "",
-      "email": "stede21@gmail.com",
-      "score": 120.5,
-      "suggestedAsk": 5000,
-      "askReason": "LYBUNT - gave $5K FY25",
-      "category": "LYBUNT",
-      "lifetimeGiving": 50800.0,
-      "yearsGiving": 32,
-      "lastGiftDate": "2025-12-27",
-      "fy24": 0.0,
-      "fy25": 5000.0,
-      "fy26": 0.0,
-      "avgAnnual": 1587.5
     },
     {
       "rank": 30,
@@ -532,23 +532,40 @@
     },
     {
       "rank": 31,
-      "name": "Monica Handler-Penner",
-      "phone": "8582452884",
-      "email": "monicahpg@gmail.com",
+      "name": "Mary Ann Scher",
+      "phone": "6195483656",
+      "email": "mascherx@gmail.com",
       "score": 120.5,
       "suggestedAsk": 10000,
       "askReason": "LYBUNT - gave $5K FY25",
       "category": "LYBUNT",
-      "lifetimeGiving": 163438.65,
-      "yearsGiving": 26,
-      "lastGiftDate": "2025-12-25",
-      "fy24": 5000.0,
+      "lifetimeGiving": 290998.0,
+      "yearsGiving": 43,
+      "lastGiftDate": "2025-08-12",
+      "fy24": 0.0,
       "fy25": 5000.0,
       "fy26": 0.0,
-      "avgAnnual": 6286.1
+      "avgAnnual": 6767.4
     },
     {
       "rank": 32,
+      "name": "STEVEN DEMETER",
+      "phone": "",
+      "email": "stede21@gmail.com",
+      "score": 120.5,
+      "suggestedAsk": 5000,
+      "askReason": "LYBUNT - gave $5K FY25",
+      "category": "LYBUNT",
+      "lifetimeGiving": 50800.0,
+      "yearsGiving": 32,
+      "lastGiftDate": "2025-12-27",
+      "fy24": 0.0,
+      "fy25": 5000.0,
+      "fy26": 0.0,
+      "avgAnnual": 1587.5
+    },
+    {
+      "rank": 33,
       "name": "Gregg Kornfeld",
       "phone": "8587744373",
       "email": "gkornfeldpens@gmail.com",
@@ -565,7 +582,7 @@
       "avgAnnual": 2323.97
     },
     {
-      "rank": 33,
+      "rank": 34,
       "name": "Gary Evan Jacobs",
       "phone": "8589452911",
       "email": "gary.e.jacobs@jacobsllc.com",
@@ -582,7 +599,7 @@
       "avgAnnual": 275275.33
     },
     {
-      "rank": 34,
+      "rank": 35,
       "name": "Ernest S. Rady",
       "phone": "(858) 454-1469",
       "email": "erady@americanassets.com",
@@ -599,7 +616,7 @@
       "avgAnnual": 95773.28
     },
     {
-      "rank": 35,
+      "rank": 36,
       "name": "Marjorie Kalmanson",
       "phone": "6199870776",
       "email": "mk4chocs@aol.com",
@@ -616,7 +633,7 @@
       "avgAnnual": 43031.76
     },
     {
-      "rank": 36,
+      "rank": 37,
       "name": "Jeremy Berg",
       "phone": "(619)398-2580",
       "email": "jeremy@inlandindustries.com",
@@ -633,7 +650,7 @@
       "avgAnnual": 22141.09
     },
     {
-      "rank": 37,
+      "rank": 38,
       "name": "Edgar F. Berner",
       "phone": "(858)863-4053",
       "email": "ed@bernerconsult.com",
@@ -650,7 +667,7 @@
       "avgAnnual": 13038.79
     },
     {
-      "rank": 38,
+      "rank": 39,
       "name": "Lara Woolf Grusd",
       "phone": "3109770065",
       "email": "larazwg@gmail.com",
@@ -667,7 +684,7 @@
       "avgAnnual": 9282.28
     },
     {
-      "rank": 39,
+      "rank": 40,
       "name": "Cheryl I Levitt",
       "phone": "",
       "email": "cilevitt@gmail.com",
@@ -684,7 +701,7 @@
       "avgAnnual": 3172.91
     },
     {
-      "rank": 40,
+      "rank": 41,
       "name": "Sara Michelle Kabakoff",
       "phone": "(858) 945-8791",
       "email": "skabakoff@gmail.com",
@@ -701,7 +718,7 @@
       "avgAnnual": 1776.62
     },
     {
-      "rank": 41,
+      "rank": 42,
       "name": "Perla Fox",
       "phone": "",
       "email": "jpfox1223@gmail.com",
@@ -718,11 +735,11 @@
       "avgAnnual": 473.68
     },
     {
-      "rank": 42,
+      "rank": 43,
       "name": "Marie Raftery",
       "phone": "6192773635",
       "email": "smilefan1@hotmail.com",
-      "score": 118.7,
+      "score": 118.8,
       "suggestedAsk": 5000,
       "askReason": "LYBUNT - gave $5K FY25",
       "category": "LYBUNT",
@@ -735,11 +752,11 @@
       "avgAnnual": 4351.58
     },
     {
-      "rank": 43,
+      "rank": 44,
       "name": "Simon Vainer",
       "phone": "(858)459-9411",
       "email": "simonvainer@outlook.com",
-      "score": 118.3,
+      "score": 118.4,
       "suggestedAsk": 100000,
       "askReason": "LYBUNT - gave $50.9K FY25",
       "category": "LYBUNT",
@@ -752,7 +769,7 @@
       "avgAnnual": 15756.36
     },
     {
-      "rank": 44,
+      "rank": 45,
       "name": "Michael S. Levinson",
       "phone": "(858)204-7527",
       "email": "mlevinson.sd@gmail.com",
@@ -769,7 +786,7 @@
       "avgAnnual": 6799.65
     },
     {
-      "rank": 45,
+      "rank": 46,
       "name": "Sandra Levinson",
       "phone": "",
       "email": "slev1@mac.com",
@@ -786,7 +803,7 @@
       "avgAnnual": 9360.11
     },
     {
-      "rank": 46,
+      "rank": 47,
       "name": "Robert Singer",
       "phone": "",
       "email": "rsingermd@aol.com",
@@ -803,7 +820,7 @@
       "avgAnnual": 8488.37
     },
     {
-      "rank": 47,
+      "rank": 48,
       "name": "Susan Shmalo",
       "phone": "(914) 645-2801",
       "email": "sshmalo@sbcglobal.net",
@@ -811,16 +828,16 @@
       "suggestedAsk": 10000,
       "askReason": "Upgrade - avg $8.5K, gave $5K FY26",
       "category": "Upgrade",
-      "lifetimeGiving": 196169.62,
+      "lifetimeGiving": 196369.62,
       "yearsGiving": 23,
-      "lastGiftDate": "2026-01-22",
+      "lastGiftDate": "2026-03-06",
       "fy24": 5000.0,
       "fy25": 5000.0,
       "fy26": 5000.0,
-      "avgAnnual": 8529.11
+      "avgAnnual": 8537.81
     },
     {
-      "rank": 48,
+      "rank": 49,
       "name": "Jerry Bierman",
       "phone": "8586920605",
       "email": "jbierman2@yahoo.com",
@@ -837,7 +854,7 @@
       "avgAnnual": 2707.42
     },
     {
-      "rank": 49,
+      "rank": 50,
       "name": "David Bramzon",
       "phone": "(310) 592-3666",
       "email": "dbramzon@gmail.com",
@@ -852,27 +869,10 @@
       "fy25": 3600.0,
       "fy26": 1800.0,
       "avgAnnual": 6525.47
-    },
-    {
-      "rank": 50,
-      "name": "Gloria E. Stone",
-      "phone": "",
-      "email": "gestone2@me.com",
-      "score": 115,
-      "suggestedAsk": 100000,
-      "askReason": "LYBUNT - gave $75K FY25",
-      "category": "LYBUNT",
-      "lifetimeGiving": 1485905.5,
-      "yearsGiving": 46,
-      "lastGiftDate": "2024-10-16",
-      "fy24": 150000.0,
-      "fy25": 75000.0,
-      "fy26": 0.0,
-      "avgAnnual": 32302.29
     }
   ],
   "kpis": {
-    "totalPotential": 1330000,
+    "totalPotential": 1230000,
     "top10Potential": 475000,
     "lybuntCount": 37,
     "upgradeCount": 13,

@@ -1,5 +1,5 @@
 {
-  "asOfDate": "2026-03-10T13:09:01Z",
+  "asOfDate": "2026-03-11T13:17:36Z",
   "monthlyTrend": [
     {
       "month": "Jul",
@@ -43,17 +43,17 @@
     },
     {
       "month": "Mar",
-      "amount": 20081.69,
-      "txnCount": 144
+      "amount": 47370.9,
+      "txnCount": 157
     }
   ],
   "departmentSpend": [
     {
       "dept": "Administration",
-      "amount": 432704.24,
-      "txnCount": 1310,
+      "amount": 458779.88,
+      "txnCount": 1315,
       "budget": 1773360.0,
-      "pctOfBudget": 24.4
+      "pctOfBudget": 25.9
     },
     {
       "dept": "Programs",
@@ -64,8 +64,8 @@
     },
     {
       "dept": "Marketing",
-      "amount": 71711.1,
-      "txnCount": 159,
+      "amount": 72734.14,
+      "txnCount": 162,
       "budget": 2882229.0,
       "pctOfBudget": 2.5
     },
@@ -78,10 +78,10 @@
     },
     {
       "dept": "Shinshinim",
-      "amount": 40208.27,
-      "txnCount": 1916,
+      "amount": 40398.8,
+      "txnCount": 1921,
       "budget": 466926.0,
-      "pctOfBudget": 8.6
+      "pctOfBudget": 8.7
     },
     {
       "dept": "Legacy of Light Goldberg Institute for Holocaust Education",
@@ -106,13 +106,13 @@
     },
     {
       "category": "Restaurants",
-      "amount": 94203.47,
-      "txnCount": 786
+      "amount": 94221.32,
+      "txnCount": 787
     },
     {
       "category": "SaaS / Software",
-      "amount": 74667.67,
-      "txnCount": 293
+      "amount": 74697.67,
+      "txnCount": 294
     },
     {
       "category": "Professional Services",
@@ -125,14 +125,19 @@
       "txnCount": 68
     },
     {
+      "category": "Insurance",
+      "amount": 42278.47,
+      "txnCount": 11
+    },
+    {
       "category": "Office supplies and cleaning",
-      "amount": 37563.66,
-      "txnCount": 15
+      "amount": 37903.23,
+      "txnCount": 17
     },
     {
       "category": "Books and Newspapers",
-      "amount": 34266.67,
-      "txnCount": 281
+      "amount": 34276.36,
+      "txnCount": 282
     },
     {
       "category": "Taxi and Rideshare",
@@ -140,19 +145,19 @@
       "txnCount": 1070
     },
     {
+      "category": "General Merchandise",
+      "amount": 30788.77,
+      "txnCount": 357
+    },
+    {
       "category": "Other",
-      "amount": 29212.04,
-      "txnCount": 28
+      "amount": 30195.39,
+      "txnCount": 29
     },
     {
       "category": "Entertainment",
       "amount": 29028.66,
       "txnCount": 30
-    },
-    {
-      "category": "General Merchandise",
-      "amount": 28668.2,
-      "txnCount": 355
     },
     {
       "category": "Lodging",
@@ -168,11 +173,6 @@
       "category": "Office",
       "amount": 26377.53,
       "txnCount": 55
-    },
-    {
-      "category": "Charitable donations",
-      "amount": 18943.03,
-      "txnCount": 63
     }
   ],
   "topMerchants": [
@@ -187,6 +187,11 @@
       "txnCount": 63
     },
     {
+      "merchant": "Alliant Insurance Servic",
+      "amount": 38138.38,
+      "txnCount": 3
+    },
+    {
       "merchant": "Offisavvy, LLC",
       "amount": 35495.54,
       "txnCount": 1
@@ -198,8 +203,8 @@
     },
     {
       "merchant": "Amazon",
-      "amount": 26977.39,
-      "txnCount": 300
+      "amount": 26987.08,
+      "txnCount": 301
     },
     {
       "merchant": "Tlalim Tours",
@@ -232,11 +237,6 @@
       "txnCount": 18
     },
     {
-      "merchant": "Alliant Insurance Servic",
-      "amount": 14522.88,
-      "txnCount": 2
-    },
-    {
       "merchant": "Embassy Suites by Hilton",
       "amount": 13563.77,
       "txnCount": 6
@@ -254,15 +254,15 @@
   ],
   "topSpenders": [
     {
-      "name": "Carly Lobenstein",
-      "amount": 128847.21,
-      "txnCount": 198,
+      "name": "David Fuhriman",
+      "amount": 132215.72,
+      "txnCount": 117,
       "dept": "Administration"
     },
     {
-      "name": "David Fuhriman",
-      "amount": 108600.22,
-      "txnCount": 116,
+      "name": "Carly Lobenstein",
+      "amount": 128847.21,
+      "txnCount": 198,
       "dept": "Administration"
     },
     {
@@ -279,14 +279,14 @@
     },
     {
       "name": "Joanna  Chiu",
-      "amount": 56503.92,
-      "txnCount": 198,
+      "amount": 58624.49,
+      "txnCount": 200,
       "dept": "Administration"
     },
     {
       "name": "Hailey Pryce-Shidler",
-      "amount": 34155.63,
-      "txnCount": 37,
+      "amount": 35148.67,
+      "txnCount": 39,
       "dept": "Marketing"
     },
     {
@@ -315,8 +315,8 @@
     },
     {
       "name": "Lee Weinstein",
-      "amount": 18900.06,
-      "txnCount": 49,
+      "amount": 18930.06,
+      "txnCount": 50,
       "dept": "Marketing"
     },
     {
@@ -327,8 +327,8 @@
     },
     {
       "name": "Miliah Rodriguez",
-      "amount": 13344.31,
-      "txnCount": 135,
+      "amount": 13683.88,
+      "txnCount": 137,
       "dept": "Administration"
     },
     {
@@ -348,20 +348,20 @@
     "active": 100,
     "dormant30d": 58,
     "totalLimit": 338506.99,
-    "totalSpent": 811761.76,
-    "utilizationPct": 239.8
+    "totalSpent": 839050.97,
+    "utilizationPct": 247.9
   },
   "weekOverWeek": {
-    "thisWeek": 10581.49,
+    "thisWeek": 37870.7,
     "lastWeek": 8736.7,
-    "changePct": 21.1
+    "changePct": 333.5
   },
   "kpis": {
-    "totalSpendFY26": 811761.76,
-    "monthlyAvg": 90195.75,
+    "totalSpendFY26": 839050.97,
+    "monthlyAvg": 93227.89,
     "activeCards": 100,
     "topDepartment": "Administration",
-    "topDepartmentAmount": 432704.24,
-    "weekOverWeekChange": 21.1
+    "topDepartmentAmount": 458779.88,
+    "weekOverWeekChange": 333.5
   }
 }

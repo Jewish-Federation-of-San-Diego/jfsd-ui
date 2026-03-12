@@ -1,16 +1,16 @@
 {
-  "asOfDate": "2026-03-10 06:11",
+  "asOfDate": "2026-03-12 06:25",
   "drms": [
     {
       "name": "Michael Rabkin",
       "slug": "michael-rabkin",
-      "totalDonors": 30519,
-      "totalRecognitionFY26": 691839.38,
+      "totalDonors": 30518,
+      "totalRecognitionFY26": 716561.19,
       "totalRecognitionFY25": 1081894.63,
-      "lybuntCount": 1021,
-      "lybuntAmount": 618092.25,
-      "sybuntCount": 589,
-      "recentGifts30d": 106,
+      "lybuntCount": 1018,
+      "lybuntAmount": 617630.25,
+      "sybuntCount": 588,
+      "recentGifts30d": 116,
       "topDonors": [
         {
           "name": "Marcia Hazan",
@@ -34,6 +34,13 @@
           "phone": ""
         },
         {
+          "name": "Leo Eisenberg",
+          "fy26": 36000.0,
+          "fy25": 0.0,
+          "email": "leoseisenberg@gmail.com",
+          "phone": ""
+        },
+        {
           "name": "Judi Gottschalk",
           "fy26": 25000.0,
           "fy25": 0.0,
@@ -41,10 +48,10 @@
           "phone": "(619) 677-2063"
         },
         {
-          "name": "Robyn F. Goldberg",
+          "name": "Ronald J. Cohn",
           "fy26": 20000.0,
-          "fy25": 0.0,
-          "email": "robynfgoldberg@yahoo.com",
+          "fy25": 5000.0,
+          "email": "cohnrj@yahoo.com",
           "phone": ""
         },
         {
@@ -52,13 +59,6 @@
           "fy26": 20000.0,
           "fy25": 30000.0,
           "email": "icohen@san.rr.com",
-          "phone": ""
-        },
-        {
-          "name": "Ronald J. Cohn",
-          "fy26": 20000.0,
-          "fy25": 5000.0,
-          "email": "cohnrj@yahoo.com",
           "phone": ""
         },
         {
@@ -76,17 +76,10 @@
           "phone": "(858) 775-5887"
         },
         {
-          "name": "Cheryl Rattner Price",
-          "fy26": 10000.0,
-          "fy25": 10000.0,
-          "email": "cherylprice@me.com",
-          "phone": "6197086883"
-        },
-        {
-          "name": "Lauren Cohen",
+          "name": "Gail Satter",
           "fy26": 10000.0,
           "fy25": 0.0,
-          "email": "lauren10s@hotmail.com",
+          "email": "celobr8@san.rr.com",
           "phone": ""
         },
         {
@@ -95,6 +88,13 @@
           "fy25": 0.0,
           "email": "joan@inlandindustries.com",
           "phone": ""
+        },
+        {
+          "name": "Cheryl Rattner Price",
+          "fy26": 10000.0,
+          "fy25": 10000.0,
+          "email": "cherylprice@me.com",
+          "phone": "6197086883"
         },
         {
           "name": "PAUL SEGAL",
@@ -111,6 +111,13 @@
           "phone": ""
         },
         {
+          "name": "Lauren Cohen",
+          "fy26": 10000.0,
+          "fy25": 0.0,
+          "email": "lauren10s@hotmail.com",
+          "phone": ""
+        },
+        {
           "name": "Jan Stiglitz",
           "fy26": 10000.0,
           "fy25": 0.0,
@@ -118,10 +125,10 @@
           "phone": "(619)239-0391"
         },
         {
-          "name": "Gail Satter",
+          "name": "Robyn F. Goldberg",
           "fy26": 10000.0,
           "fy25": 0.0,
-          "email": "celobr8@san.rr.com",
+          "email": "robynfgoldberg@yahoo.com",
           "phone": ""
         },
         {
@@ -139,10 +146,10 @@
           "phone": "(858)863-4053"
         },
         {
-          "name": "Ronald I. Simon",
+          "name": "Elizabeth Ann Nederlander Coden",
           "fy26": 6000.0,
-          "fy25": 2000.0,
-          "email": "ron@risimon.com",
+          "fy25": 5180.0,
+          "email": "lizcoden@lfjcc.org",
           "phone": ""
         },
         {
@@ -153,17 +160,17 @@
           "phone": ""
         },
         {
+          "name": "Ronald I. Simon",
+          "fy26": 6000.0,
+          "fy25": 2000.0,
+          "email": "ron@risimon.com",
+          "phone": ""
+        },
+        {
           "name": "Rebecca Gumpel",
           "fy26": 6000.0,
           "fy25": 0.0,
           "email": "jrgumpel@gmail.com",
-          "phone": ""
-        },
-        {
-          "name": "Elizabeth Ann Nederlander Coden",
-          "fy26": 6000.0,
-          "fy25": 5180.0,
-          "email": "lizcoden@lfjcc.org",
           "phone": ""
         },
         {
@@ -179,13 +186,6 @@
           "fy25": 0.0,
           "email": "r2@lefam.com",
           "phone": "(858) 756-5699"
-        },
-        {
-          "name": "Harris M. Cohen",
-          "fy26": 5000.0,
-          "fy25": 0.0,
-          "email": "usbmaker@gmail.com",
-          "phone": ""
         }
       ],
       "lybuntList": [
@@ -267,25 +267,11 @@
           "phone": ""
         },
         {
-          "name": "Marie Raftery",
-          "fy25Amount": 5000.0,
-          "lastGiftDate": "2026-02-23",
-          "email": "smilefan1@hotmail.com",
-          "phone": ""
-        },
-        {
           "name": "Anne Nagorner",
           "fy25Amount": 5000.0,
           "lastGiftDate": "2024-02-27",
           "email": "anagorner@aol.com",
           "phone": "(858)756-1195"
-        },
-        {
-          "name": "Mary Ann Scher",
-          "fy25Amount": 5000.0,
-          "lastGiftDate": "2025-08-12",
-          "email": "mascherx@gmail.com",
-          "phone": ""
         },
         {
           "name": "Lisa S. Braun Glazer",
@@ -295,10 +281,17 @@
           "phone": ""
         },
         {
-          "name": "Jennifer Goldman",
+          "name": "Mary Ann Scher",
           "fy25Amount": 5000.0,
-          "lastGiftDate": "2017-02-01",
-          "email": "goldman.jennifer.r@gmail.com",
+          "lastGiftDate": "2025-08-12",
+          "email": "mascherx@gmail.com",
+          "phone": ""
+        },
+        {
+          "name": "Adele Saleh",
+          "fy25Amount": 5000.0,
+          "lastGiftDate": "2026-01-13",
+          "email": "myfradel@gmail.com",
           "phone": ""
         },
         {
@@ -309,13 +302,6 @@
           "phone": "(858)232-3216"
         },
         {
-          "name": "Shari Friedman Schenk",
-          "fy25Amount": 5000.0,
-          "lastGiftDate": "2026-02-21",
-          "email": "sharischenk@gmail.com",
-          "phone": "(619) 794-9547"
-        },
-        {
           "name": "Julie Bronstein",
           "fy25Amount": 5000.0,
           "lastGiftDate": "2023-11-28",
@@ -323,11 +309,25 @@
           "phone": ""
         },
         {
-          "name": "Adele Saleh",
+          "name": "Jennifer Goldman",
           "fy25Amount": 5000.0,
-          "lastGiftDate": "2026-01-13",
-          "email": "myfradel@gmail.com",
+          "lastGiftDate": "2017-02-01",
+          "email": "goldman.jennifer.r@gmail.com",
           "phone": ""
+        },
+        {
+          "name": "Marie Raftery",
+          "fy25Amount": 5000.0,
+          "lastGiftDate": "2026-02-23",
+          "email": "smilefan1@hotmail.com",
+          "phone": ""
+        },
+        {
+          "name": "Shari Friedman Schenk",
+          "fy25Amount": 5000.0,
+          "lastGiftDate": "2026-02-21",
+          "email": "sharischenk@gmail.com",
+          "phone": "(619) 794-9547"
         },
         {
           "name": "Raymond I. Fink",
@@ -386,17 +386,17 @@
           "phone": ""
         },
         {
-          "name": "Stuart R. Weiss Z\"L",
-          "fy25Amount": 1500.0,
-          "lastGiftDate": "2024-07-31",
-          "email": "srweissmd75@gmail.com",
-          "phone": ""
-        },
-        {
           "name": "Larry Neugarten",
           "fy25Amount": 1500.0,
           "lastGiftDate": "2024-11-27",
           "email": "larryn@bdgdesigngroup.com",
+          "phone": ""
+        },
+        {
+          "name": "Stuart R. Weiss Z\"L",
+          "fy25Amount": 1500.0,
+          "lastGiftDate": "2024-07-31",
+          "email": "srweissmd75@gmail.com",
           "phone": ""
         },
         {
@@ -421,13 +421,6 @@
           "phone": ""
         },
         {
-          "name": "Lauren Hendin",
-          "fy25Amount": 1000.0,
-          "lastGiftDate": "",
-          "email": "",
-          "phone": ""
-        },
-        {
           "name": "Paul Saitowitz",
           "fy25Amount": 1000.0,
           "lastGiftDate": "2024-11-18",
@@ -435,10 +428,10 @@
           "phone": ""
         },
         {
-          "name": "L Jacobs",
-          "fy25Amount": 900.0,
+          "name": "Lauren Hendin",
+          "fy25Amount": 1000.0,
           "lastGiftDate": "",
-          "email": "ljacobs@sdge.com",
+          "email": "",
           "phone": ""
         },
         {
@@ -449,10 +442,24 @@
           "phone": "(858)485-2348"
         },
         {
+          "name": "L Jacobs",
+          "fy25Amount": 900.0,
+          "lastGiftDate": "",
+          "email": "ljacobs@sdge.com",
+          "phone": ""
+        },
+        {
           "name": "Steve Weissman",
           "fy25Amount": 800.0,
           "lastGiftDate": "2025-06-30",
           "email": "",
+          "phone": ""
+        },
+        {
+          "name": "Lynn Todd",
+          "fy25Amount": 750.0,
+          "lastGiftDate": "2025-04-02",
+          "email": "lynnletter@aol.com",
           "phone": ""
         },
         {
@@ -470,24 +477,24 @@
           "phone": ""
         },
         {
+          "name": "Maribel Paulette",
+          "fy25Amount": 750.0,
+          "lastGiftDate": "",
+          "email": "ace.pau@gmail.com",
+          "phone": ""
+        },
+        {
+          "name": "Victor Wahba",
+          "fy25Amount": 750.0,
+          "lastGiftDate": "1997-09-12",
+          "email": "",
+          "phone": ""
+        },
+        {
           "name": "Asaf Benhaim",
           "fy25Amount": 750.0,
           "lastGiftDate": "2024-11-18",
           "email": "asaf@teambenhaim.com",
-          "phone": ""
-        },
-        {
-          "name": "Lynn Todd",
-          "fy25Amount": 750.0,
-          "lastGiftDate": "2025-04-02",
-          "email": "lynnletter@aol.com",
-          "phone": ""
-        },
-        {
-          "name": "Julie Jacobs",
-          "fy25Amount": 750.0,
-          "lastGiftDate": "",
-          "email": "jsjacobs@san.rr.com",
           "phone": ""
         },
         {
@@ -526,21 +533,62 @@
           "phone": ""
         },
         {
-          "name": "Carrie Hunley",
+          "name": "Julie Jacobs",
           "fy25Amount": 750.0,
           "lastGiftDate": "",
-          "email": "carrie@hunleys.us",
-          "phone": ""
-        },
-        {
-          "name": "Victor Wahba",
-          "fy25Amount": 750.0,
-          "lastGiftDate": "1997-09-12",
-          "email": "",
+          "email": "jsjacobs@san.rr.com",
           "phone": ""
         }
       ],
       "recentActivity": [
+        {
+          "donorName": "Ellen Rofman",
+          "amount": 26.0,
+          "date": "2026-03-12",
+          "type": "Unsolicited Annual Gifts - FY26"
+        },
+        {
+          "donorName": "Jeffrey Harris",
+          "amount": 217.04,
+          "date": "2026-03-12",
+          "type": "Jewish Heritage Day at the Padres - FY26"
+        },
+        {
+          "donorName": "Heidi Gantwerk",
+          "amount": 52.0,
+          "date": "2026-03-11",
+          "type": "Jewish Heritage Day at the Padres - FY26"
+        },
+        {
+          "donorName": "John Urey",
+          "amount": 108.67,
+          "date": "2026-03-11",
+          "type": "Jewish Heritage Day at the Padres - FY26"
+        },
+        {
+          "donorName": "Stewart Breier",
+          "amount": 18.0,
+          "date": "2026-03-11",
+          "type": "Unsolicited Annual Gifts - FY26"
+        },
+        {
+          "donorName": "Dennis M. Pinn",
+          "amount": 0.0,
+          "date": "2026-03-11",
+          "type": "Yom HaShoah - FY26 - Donations"
+        },
+        {
+          "donorName": "Jason Bercovitch",
+          "amount": 0.0,
+          "date": "2026-03-10",
+          "type": "Yom HaShoah - FY26 - Donations"
+        },
+        {
+          "donorName": "michael Howard weiner",
+          "amount": 0.0,
+          "date": "2026-03-10",
+          "type": "Yom HaShoah - FY26"
+        },
         {
           "donorName": "Robin S. Rubin",
           "amount": 156.6,
@@ -572,6 +620,30 @@
           "type": "Yom HaShoah - FY26 - Donations"
         },
         {
+          "donorName": "William Tiep",
+          "amount": 500.0,
+          "date": "2026-03-06",
+          "type": "The Community Trip - CY27"
+        },
+        {
+          "donorName": "Sherron C. Schuster",
+          "amount": 200.0,
+          "date": "2026-03-06",
+          "type": "Lion of Judah Luncheon - FY26 - Event"
+        },
+        {
+          "donorName": "Miriam Lieber",
+          "amount": 200.0,
+          "date": "2026-03-06",
+          "type": "Lion of Judah Luncheon - FY26 - Event"
+        },
+        {
+          "donorName": "Barbara Smidt",
+          "amount": 36.0,
+          "date": "2026-03-06",
+          "type": "Tributes - FY26"
+        },
+        {
           "donorName": "Beth Peisic",
           "amount": 0.0,
           "date": "2026-03-06",
@@ -584,94 +656,22 @@
           "type": "Jewish Heritage Day at the Padres - FY26"
         },
         {
-          "donorName": "Joanne Geroe",
-          "amount": 208.0,
+          "donorName": "Diane Weinstein",
+          "amount": 416.0,
           "date": "2026-03-06",
           "type": "Jewish Heritage Day at the Padres - FY26"
-        },
-        {
-          "donorName": "Joseph Fox",
-          "amount": 217.04,
-          "date": "2026-03-05",
-          "type": "Jewish Heritage Day at the Padres - FY26"
-        },
-        {
-          "donorName": "Todd Kirschen",
-          "amount": 150.0,
-          "date": "2026-03-05",
-          "type": "Monthly - FY26"
-        },
-        {
-          "donorName": "Eileen Gaffen",
-          "amount": 30.0,
-          "date": "2026-03-05",
-          "type": "Monthly - FY26"
-        },
-        {
-          "donorName": "Barbara Rabkin",
-          "amount": 0.0,
-          "date": "2026-03-05",
-          "type": "Yom HaShoah - FY26"
-        },
-        {
-          "donorName": "Larry Michael Katz",
-          "amount": 624.0,
-          "date": "2026-03-05",
-          "type": "Jewish Heritage Day at the Padres - FY26"
-        },
-        {
-          "donorName": "Roxanne Schindler Katz",
-          "amount": 200.0,
-          "date": "2026-03-04",
-          "type": "Lion of Judah Luncheon - FY26 - Event"
-        },
-        {
-          "donorName": "Danielle L. Miller",
-          "amount": 200.0,
-          "date": "2026-03-04",
-          "type": "Lion of Judah Luncheon - FY26 - Event"
-        },
-        {
-          "donorName": "Erica Weinberg",
-          "amount": 200.0,
-          "date": "2026-03-04",
-          "type": "Lion of Judah Luncheon - FY26 - Event"
-        },
-        {
-          "donorName": "Elyse K. Sollender",
-          "amount": 200.0,
-          "date": "2026-03-04",
-          "type": "Lion of Judah Luncheon - FY26 - Event"
-        },
-        {
-          "donorName": "Eric J. Udoff",
-          "amount": 208.0,
-          "date": "2026-03-04",
-          "type": "Jewish Heritage Day at the Padres - FY26"
-        },
-        {
-          "donorName": "Stuart I. Rubenstein",
-          "amount": 208.0,
-          "date": "2026-03-04",
-          "type": "Jewish Heritage Day at the Padres - FY26"
-        },
-        {
-          "donorName": "Fidelity Charitable Trust",
-          "amount": 5000.0,
-          "date": "2026-03-04",
-          "type": "DRM - FY26"
         }
       ]
     },
     {
       "name": "Maya Steinberg",
       "slug": "maya-steinberg",
-      "totalDonors": 194,
-      "totalRecognitionFY26": 219198.18,
-      "totalRecognitionFY25": 282862.5,
+      "totalDonors": 198,
+      "totalRecognitionFY26": 219398.18,
+      "totalRecognitionFY25": 279662.5,
       "lybuntCount": 44,
       "lybuntAmount": 119302.5,
-      "sybuntCount": 21,
+      "sybuntCount": 22,
       "recentGifts30d": 19,
       "topDonors": [
         {
@@ -680,13 +680,6 @@
           "fy25": 20000.0,
           "email": "jesseffress@yahoo.com",
           "phone": ""
-        },
-        {
-          "name": "Charlene Steinhauer",
-          "fy26": 13600.0,
-          "fy25": 5000.0,
-          "email": "charbelur@gmail.com",
-          "phone": "(206) 794-1770"
         },
         {
           "name": "Debbie Ann Deverett",
@@ -724,11 +717,25 @@
           "phone": "(858)534-8797"
         },
         {
+          "name": "Charlene Steinhauer",
+          "fy26": 6800.0,
+          "fy25": 5000.0,
+          "email": "charbelur@gmail.com",
+          "phone": "(206) 794-1770"
+        },
+        {
           "name": "Judith S. Scheinberg",
           "fy26": 6000.0,
           "fy25": 6000.0,
           "email": "schnbrg@gmail.com",
           "phone": "(858)755-0735"
+        },
+        {
+          "name": "Judith Scheinberg",
+          "fy26": 6000.0,
+          "fy25": 0.0,
+          "email": "schnbrg@gmail.com",
+          "phone": ""
         },
         {
           "name": "Lauren Sommer",
@@ -752,6 +759,13 @@
           "phone": "7326721459"
         },
         {
+          "name": "Lori Shearer",
+          "fy26": 5000.0,
+          "fy25": 5072.0,
+          "email": "lorishearer420@gmail.com",
+          "phone": ""
+        },
+        {
           "name": "Jill Beck",
           "fy26": 5000.0,
           "fy25": 5000.0,
@@ -764,13 +778,6 @@
           "fy25": 1500.0,
           "email": "lgloberson@gmail.com",
           "phone": "(619)583-4569"
-        },
-        {
-          "name": "Lori Shearer",
-          "fy26": 5000.0,
-          "fy25": 5072.0,
-          "email": "lorishearer420@gmail.com",
-          "phone": ""
         },
         {
           "name": "Jeanne Z. Gold",
@@ -801,6 +808,13 @@
           "phone": ""
         },
         {
+          "name": "Belinda Feldman",
+          "fy26": 5000.0,
+          "fy25": 5000.0,
+          "email": "minifeldman@gmail.com",
+          "phone": "(858) 525-3985"
+        },
+        {
           "name": "Toby J. Eisenberg",
           "fy26": 5000.0,
           "fy25": 5000.0,
@@ -822,13 +836,6 @@
           "phone": "+18583541334"
         },
         {
-          "name": "Belinda Feldman",
-          "fy26": 5000.0,
-          "fy25": 10000.0,
-          "email": "minifeldman@gmail.com",
-          "phone": "(858) 525-3985"
-        },
-        {
           "name": "Robin Gayle Weiner",
           "fy26": 4500.0,
           "fy25": 3600.0,
@@ -841,27 +848,20 @@
           "fy25": 4136.0,
           "email": "hebkeith@gmail.com",
           "phone": "(858) 229-3186"
-        },
-        {
-          "name": "Jeff Deverett",
-          "fy26": 3600.0,
-          "fy25": 0.0,
-          "email": "jeffdeverett@gmail.com",
-          "phone": ""
         }
       ],
       "lybuntList": [
         {
           "name": "Olga M. Worm",
           "fy25Amount": 10036.0,
-          "lastGiftDate": "2026-03-04",
+          "lastGiftDate": "2026-03-06",
           "email": "olgaworm1@gmail.com",
           "phone": "(619) 890-9027"
         },
         {
           "name": "Laurie Hoshaw",
           "fy25Amount": 6480.5,
-          "lastGiftDate": "2026-03-01",
+          "lastGiftDate": "2026-03-06",
           "email": "lephoshaw@gmail.com",
           "phone": ""
         },
@@ -1168,10 +1168,34 @@
           "type": "Yom HaShoah - FY26"
         },
         {
+          "donorName": "Olga M. Worm",
+          "amount": 190.0,
+          "date": "2026-03-06",
+          "type": "Mission to India - FY26"
+        },
+        {
+          "donorName": "Laurie Hoshaw",
+          "amount": 200.0,
+          "date": "2026-03-06",
+          "type": "Lion of Judah Luncheon - FY26 - Event"
+        },
+        {
+          "donorName": "Susan Shmalo",
+          "amount": 200.0,
+          "date": "2026-03-06",
+          "type": "Lion of Judah Luncheon - FY26 - Event"
+        },
+        {
+          "donorName": "Heather Keith",
+          "amount": 200.0,
+          "date": "2026-03-05",
+          "type": "Lion of Judah Luncheon - FY26 - Event"
+        },
+        {
           "donorName": "Heather Keith",
           "amount": 360.0,
           "date": "2026-03-05",
-          "type": "Monthly - FY26"
+          "type": "DRM Call 2025"
         },
         {
           "donorName": "Debbie Ann Deverett",
@@ -1250,43 +1274,19 @@
           "amount": 5210.3,
           "date": "2026-02-24",
           "type": "DRM - FY26"
-        },
-        {
-          "donorName": "Jessica Effress",
-          "amount": 200.0,
-          "date": "2026-02-23",
-          "type": "Lion of Judah Luncheon - FY26 - Event"
-        },
-        {
-          "donorName": "Charlene Steinhauer",
-          "amount": 200.0,
-          "date": "2026-02-23",
-          "type": "Lion of Judah Luncheon - FY26 - Event"
-        },
-        {
-          "donorName": "Audrey Beth Levine",
-          "amount": 200.0,
-          "date": "2026-02-23",
-          "type": "Lion of Judah Luncheon - FY26 - Event"
-        },
-        {
-          "donorName": "Lori Shearer",
-          "amount": 200.0,
-          "date": "2026-02-23",
-          "type": "Lion of Judah Luncheon - FY26 - Event"
         }
       ]
     },
     {
       "name": "Dustin Biton",
       "slug": "dustin-biton",
-      "totalDonors": 186,
-      "totalRecognitionFY26": 664723.94,
-      "totalRecognitionFY25": 942902.5,
+      "totalDonors": 181,
+      "totalRecognitionFY26": 657723.94,
+      "totalRecognitionFY25": 931102.5,
       "lybuntCount": 42,
       "lybuntAmount": 333920.5,
-      "sybuntCount": 24,
-      "recentGifts30d": 13,
+      "sybuntCount": 23,
+      "recentGifts30d": 8,
       "topDonors": [
         {
           "name": "David Shlomo Kabakoff",
@@ -1808,36 +1808,6 @@
           "amount": 0.0,
           "date": "2026-02-24",
           "type": "Yom HaZikaron - FY26"
-        },
-        {
-          "donorName": "Sylvia Geffen",
-          "amount": 200.0,
-          "date": "2026-02-23",
-          "type": "Lion of Judah Luncheon - FY26 - Event"
-        },
-        {
-          "donorName": "Kira Elizabeth Finkenberg",
-          "amount": 200.0,
-          "date": "2026-02-23",
-          "type": "Lion of Judah Luncheon - FY26 - Event"
-        },
-        {
-          "donorName": "Marsha Berkson",
-          "amount": 200.0,
-          "date": "2026-02-23",
-          "type": "Lion of Judah Luncheon - FY26 - Event"
-        },
-        {
-          "donorName": "Silvana Anna Christy",
-          "amount": 200.0,
-          "date": "2026-02-22",
-          "type": "Lion of Judah Luncheon - FY26 - Event"
-        },
-        {
-          "donorName": "Nelly Dean",
-          "amount": 1000.0,
-          "date": "2026-02-22",
-          "type": "SD AJMA Medical Mission to Israel - FY26"
         }
       ]
     },
@@ -1850,7 +1820,7 @@
       "lybuntCount": 35,
       "lybuntAmount": 1141269.45,
       "sybuntCount": 11,
-      "recentGifts30d": 40,
+      "recentGifts30d": 34,
       "topDonors": [
         {
           "name": "Andrew James Viterbi",
@@ -2289,6 +2259,30 @@
           "type": "Yom HaShoah - FY26 - Donations"
         },
         {
+          "donorName": "Sonia Ancoli Israel",
+          "amount": 95.0,
+          "date": "2026-03-06",
+          "type": "Mission to India - FY26"
+        },
+        {
+          "donorName": "Valerie Marie Viterbi",
+          "amount": 200.0,
+          "date": "2026-03-06",
+          "type": "Lion of Judah Luncheon - FY26 - Event"
+        },
+        {
+          "donorName": "Jane Willoughby",
+          "amount": 200.0,
+          "date": "2026-03-06",
+          "type": "Lion of Judah Luncheon - FY26 - Event"
+        },
+        {
+          "donorName": "Laura Galinson",
+          "amount": 180.0,
+          "date": "2026-03-06",
+          "type": "Celebrate Israel - FY26 - Event"
+        },
+        {
           "donorName": "Rabbi Ralph Dalin",
           "amount": 0.0,
           "date": "2026-03-06",
@@ -2371,30 +2365,6 @@
           "amount": 2143.02,
           "date": "2026-03-03",
           "type": "Endowment - FY26"
-        },
-        {
-          "donorName": "Jewish Community Foundation",
-          "amount": 5425.0,
-          "date": "2026-03-03",
-          "type": "Endowment - FY26"
-        },
-        {
-          "donorName": "Jewish Community Foundation",
-          "amount": 16343.16,
-          "date": "2026-03-03",
-          "type": "Endowment - FY26"
-        },
-        {
-          "donorName": "Sonia Ancoli Israel",
-          "amount": 104.0,
-          "date": "2026-02-28",
-          "type": "Jewish Heritage Day at the Padres - FY26"
-        },
-        {
-          "donorName": "Linda Platt",
-          "amount": 200.0,
-          "date": "2026-02-27",
-          "type": "Lion of Judah Luncheon - FY26 - Event"
         }
       ]
     },
@@ -2407,7 +2377,7 @@
       "lybuntCount": 17,
       "lybuntAmount": 149348.0,
       "sybuntCount": 2,
-      "recentGifts30d": 11,
+      "recentGifts30d": 13,
       "topDonors": [
         {
           "name": "Arlene Rosen",
@@ -2638,7 +2608,7 @@
         {
           "name": "Linda R. Bennett",
           "fy25Amount": 6000.0,
-          "lastGiftDate": "2025-12-09",
+          "lastGiftDate": "2026-03-05",
           "email": "mabennett7@cox.net",
           "phone": ""
         },
@@ -2708,10 +2678,34 @@
       ],
       "recentActivity": [
         {
+          "donorName": "Linda R. Bennett",
+          "amount": 0.0,
+          "date": "2026-03-09",
+          "type": "Yom HaZikaron - FY26"
+        },
+        {
+          "donorName": "Linda R. Bennett",
+          "amount": 0.0,
+          "date": "2026-03-09",
+          "type": "Yom HaShoah - FY26"
+        },
+        {
           "donorName": "Perri L. Wittgrove",
           "amount": 1000.0,
           "date": "2026-03-06",
-          "type": "Unsolicited Annual Gifts - FY26"
+          "type": "DRM FACE 2025"
+        },
+        {
+          "donorName": "Linda R. Bennett",
+          "amount": 200.0,
+          "date": "2026-03-05",
+          "type": "Lion of Judah Luncheon - FY26 - Event"
+        },
+        {
+          "donorName": "Linda R. Bennett",
+          "amount": 0.0,
+          "date": "2026-03-05",
+          "type": "Yom HaShoah - FY26"
         },
         {
           "donorName": "Alexandra Shubin Hirschhorn",
@@ -2759,18 +2753,6 @@
           "donorName": "June B Chocheles",
           "amount": 200.0,
           "date": "2026-02-24",
-          "type": "Lion of Judah Luncheon - FY26 - Event"
-        },
-        {
-          "donorName": "Sharon R. Davidson",
-          "amount": 200.0,
-          "date": "2026-02-23",
-          "type": "Lion of Judah Luncheon - FY26 - Event"
-        },
-        {
-          "donorName": "Jennifer Dolin",
-          "amount": 200.0,
-          "date": "2026-02-22",
           "type": "Lion of Judah Luncheon - FY26 - Event"
         }
       ]
@@ -3160,7 +3142,7 @@
       "lybuntCount": 0,
       "lybuntAmount": 0.0,
       "sybuntCount": 0,
-      "recentGifts30d": 4,
+      "recentGifts30d": 3,
       "topDonors": [],
       "lybuntList": [],
       "recentActivity": [
@@ -3181,20 +3163,14 @@
           "amount": 100.0,
           "date": "2026-02-28",
           "type": "Unsolicited Annual Gifts - FY26"
-        },
-        {
-          "donorName": "Schindler Brokerage LLC",
-          "amount": 208.7,
-          "date": "2026-02-23",
-          "type": "Unsolicited Annual Gifts - FY26"
         }
       ]
     }
   ],
   "kpis": {
-    "totalPortfolioDonors": 31157,
-    "totalLYBUNT": 1162,
-    "totalRecognitionFY26": 5654467.7299999995,
-    "avgPortfolioSize": 3895
+    "totalPortfolioDonors": 31155,
+    "totalLYBUNT": 1159,
+    "totalRecognitionFY26": 5672389.54,
+    "avgPortfolioSize": 3894
   }
 }

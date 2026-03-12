@@ -1,20 +1,20 @@
 {
-  "asOfDate": "2026-03-10 06:06",
+  "asOfDate": "2026-03-12 06:21",
   "annualCampaign": {
     "name": "Annual Campaign 26",
     "goal": 9000000,
-    "raised": 5959222.17,
-    "pctOfGoal": 66.2,
-    "donorCount": 1045,
-    "avgGift": 5703.0,
-    "priorYearSamePoint": 8812479.67
+    "raised": 5977461.47,
+    "pctOfGoal": 66.4,
+    "donorCount": 1046,
+    "avgGift": 5715.0,
+    "priorYearSamePoint": 8797479.67
   },
   "momentum": {
-    "giftsThisWeek": 21,
-    "amountThisWeek": 3866.46,
-    "giftsLastWeek": 175,
-    "amountLastWeek": 124381.7,
-    "weekOverWeekPct": -96.9
+    "giftsThisWeek": 57,
+    "amountThisWeek": 11162.44,
+    "giftsLastWeek": 184,
+    "amountLastWeek": 126586.7,
+    "weekOverWeekPct": -91.2
   },
   "weeklyMomentum": [
     {
@@ -49,56 +49,56 @@
     },
     {
       "weekOf": "2026-03-02",
-      "gifts": 175,
-      "amount": 124381.7
+      "gifts": 184,
+      "amount": 126586.7
     },
     {
       "weekOf": "2026-03-09",
-      "gifts": 20,
-      "amount": 884.46
+      "gifts": 56,
+      "amount": 8180.44
     }
   ],
   "donorBreakdown": {
-    "newDonors": 239,
-    "returningDonors": 591,
-    "lybuntRecovered": 105,
-    "retentionRate": 31.6
+    "newDonors": 249,
+    "returningDonors": 594,
+    "lybuntRecovered": 106,
+    "retentionRate": 31.8
   },
   "givingLevels": [
     {
       "level": "$1-99",
-      "donors": 154,
-      "amount": 6608.14
+      "donors": 153,
+      "amount": 6542.48
     },
     {
       "level": "$100-499",
       "donors": 344,
-      "amount": 73587.45
+      "amount": 73671.11
     },
     {
       "level": "$500-999",
-      "donors": 130,
-      "amount": 74555.88
+      "donors": 132,
+      "amount": 75577.18
     },
     {
       "level": "$1K-4,999",
-      "donors": 229,
-      "amount": 402939.57
+      "donors": 228,
+      "amount": 400939.57
     },
     {
       "level": "$5K-9,999",
-      "donors": 93,
-      "amount": 522558.03
+      "donors": 94,
+      "amount": 529358.03
     },
     {
       "level": "$10K-24,999",
-      "donors": 63,
-      "amount": 795610.42
+      "donors": 62,
+      "amount": 772010.42
     },
     {
       "level": "$25K+",
-      "donors": 31,
-      "amount": 4082362.69
+      "donors": 32,
+      "amount": 4118362.69
     }
   ],
   "topGiftsThisWeek": [
@@ -109,63 +109,63 @@
       "date": "2026-03-26"
     },
     {
-      "name": "Deborah Kutner",
-      "amount": 187.86,
-      "campaign": "LEADS - FY26 - Program",
-      "date": "2026-03-09"
-    },
-    {
-      "name": "Tina Marchiano",
-      "amount": 180.0,
+      "name": "Kevin Tarson",
+      "amount": 1042.3,
       "campaign": "Payment on Pledge - FY26",
       "date": "2026-03-10"
     },
     {
-      "name": "Karla B. Silver",
-      "amount": 180.0,
-      "campaign": "Monthly - FY26",
-      "date": "2026-03-10"
+      "name": "Shelley Zimmerman",
+      "amount": 1000.0,
+      "campaign": "Payment on Pledge - FY26",
+      "date": "2026-03-11"
     },
     {
-      "name": "Daniel Eyal",
-      "amount": 180.0,
-      "campaign": "LEADS - FY26 - Program",
-      "date": "2026-03-10"
+      "name": "Schuyler Grant",
+      "amount": 728.0,
+      "campaign": "Jewish Heritage Day at the Padres - FY26",
+      "date": "2026-03-12"
     },
     {
-      "name": "Robin S. Rubin",
-      "amount": 156.6,
-      "campaign": "Monthly - FY26",
-      "date": "2026-03-10"
+      "name": "Shayna G Kaufmann",
+      "amount": 521.3,
+      "campaign": "Unsolicited Annual Gifts - FY26",
+      "date": "2026-03-11"
     },
     {
-      "name": "Elizabeth Vaisben",
-      "amount": 0.0,
-      "campaign": "Yom HaShoah - FY26 - Donations",
-      "date": "2026-03-09"
+      "name": "Rayna colton",
+      "amount": 500.0,
+      "campaign": "Payment on Pledge - FY26",
+      "date": "2026-03-11"
     },
     {
-      "name": "ORLI VILENSKY",
-      "amount": 0.0,
-      "campaign": "Yom HaShoah - FY26 - Donations",
-      "date": "2026-03-09"
+      "name": "Ronn Gruer",
+      "amount": 500.0,
+      "campaign": "Unsolicited Annual Gifts - FY26",
+      "date": "2026-03-11"
     },
     {
-      "name": "Margaux Dinerman",
-      "amount": 0.0,
-      "campaign": "Yom HaShoah - FY26 - Donations",
-      "date": "2026-03-09"
+      "name": "Allison Wolpoff",
+      "amount": 416.0,
+      "campaign": "Jewish Heritage Day at the Padres - FY26",
+      "date": "2026-03-11"
     },
     {
-      "name": "Shira Jacobs",
-      "amount": 0.0,
-      "campaign": "Yom HaShoah - FY26 - Donations",
-      "date": "2026-03-09"
+      "name": "Elan Bark",
+      "amount": 250.0,
+      "campaign": "Payment on Pledge - FY26",
+      "date": "2026-03-11"
+    },
+    {
+      "name": "Jeffrey Harris",
+      "amount": 217.04,
+      "campaign": "Jewish Heritage Day at the Padres - FY26",
+      "date": "2026-03-12"
     }
   ],
   "pipeline": {
-    "openPledges": 624,
-    "openPledgeAmount": 13858322.15,
+    "openPledges": 615,
+    "openPledgeAmount": 13856122.15,
     "expectedThisMonth": 0.0
   },
   "campaigns": [
@@ -199,9 +199,9 @@
     },
     {
       "name": "Tributes - FY26",
-      "raised": 18173.97,
+      "raised": 18209.97,
       "goal": 0.0,
-      "donors": 82,
+      "donors": 83,
       "pctOfGoal": 0
     },
     {
@@ -220,16 +220,16 @@
     },
     {
       "name": "Mission to India - FY26",
-      "raised": 406147.0,
+      "raised": 406432.0,
       "goal": 0.0,
-      "donors": 74,
+      "donors": 76,
       "pctOfGoal": 0
     },
     {
       "name": "Monthly - FY26",
-      "raised": 18776.98,
+      "raised": 18236.98,
       "goal": 0.0,
-      "donors": 232,
+      "donors": 230,
       "pctOfGoal": 0
     },
     {
