@@ -1,14 +1,14 @@
 {
-  "asOfDate": "2026-03-10",
+  "asOfDate": "2026-03-12",
   "boards": [
     {
       "name": "Jewish Community Foundation of San Diego",
       "shortName": "JCF",
       "totalMembers": 20,
       "matchedInSF": 15,
-      "gaveFY26": 5,
-      "participationRate": 25.0,
-      "totalGiven": 49084.0,
+      "gaveFY26": 6,
+      "participationRate": 30.0,
+      "totalGiven": 85084.0,
       "totalFY25": 8150.0,
       "members": [
         {
@@ -63,8 +63,8 @@
         {
           "name": "Leo Eisenberg",
           "role": "",
-          "status": "no-record",
-          "fy26Amount": 0.0,
+          "status": "gave",
+          "fy26Amount": 36000.0,
           "fy25Amount": 0.0
         },
         {
@@ -168,7 +168,7 @@
           "role": "Vice Chair",
           "status": "gave",
           "fy26Amount": 10000.0,
-          "fy25Amount": 20000.0
+          "fy25Amount": 10000.0
         },
         {
           "name": "Victor Shlionsky",
@@ -466,8 +466,8 @@
     },
     {
       "level": "$25K\u2013$99K",
-      "donors": 1,
-      "amount": 25000.0
+      "donors": 2,
+      "amount": 61000.0
     },
     {
       "level": "$10K\u2013$24K",
@@ -493,8 +493,8 @@
   "highlights": [
     {
       "metric": "Board Participation",
-      "value": "23.7%",
-      "trend": "down"
+      "value": "25.4%",
+      "trend": "up"
     },
     {
       "metric": "Campaign Progress",
@@ -503,19 +503,19 @@
     },
     {
       "metric": "Board Giving Total",
-      "value": "$593,933",
+      "value": "$629,933",
       "trend": "up"
     },
     {
       "metric": "YoY Change",
-      "value": "+3695.1%",
+      "value": "+3925.1%",
       "trend": "up"
     }
   ],
   "kpis": {
-    "overallBoardParticipation": 23.7,
+    "overallBoardParticipation": 25.4,
     "campaignPctOfGoal": 0.0,
-    "totalBoardGiving": 593933.15,
-    "yoyChange": 3695.1
+    "totalBoardGiving": 629933.15,
+    "yoyChange": 3925.1
   }
 }

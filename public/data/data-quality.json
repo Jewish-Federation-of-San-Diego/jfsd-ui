@@ -1,14 +1,14 @@
 {
-  "asOfDate": "2026-03-10 06:11",
-  "overallScore": 22,
+  "asOfDate": "2026-03-12 06:25",
+  "overallScore": 23,
   "categories": [
     {
       "name": "Contact Completeness",
-      "score": 14,
+      "score": 17,
       "issues": [
         {
           "metric": "Major donors missing email",
-          "count": 22,
+          "count": 21,
           "severity": "high",
           "details": [
             {
@@ -62,8 +62,8 @@
               "fy26": 2160.0
             },
             {
-              "name": "Anne F. Simon",
-              "id": "001Uf00000WkUEsIAN",
+              "name": "William Stone",
+              "id": "001Uf00000WkC2JIAV",
               "fy26": 2000.0
             },
             {
@@ -72,13 +72,13 @@
               "fy26": 2000.0
             },
             {
-              "name": "Susan Jacobson",
-              "id": "001Uf00000fZYonIAG",
+              "name": "Anne F. Simon",
+              "id": "001Uf00000WkUEsIAN",
               "fy26": 2000.0
             },
             {
-              "name": "William Stone",
-              "id": "001Uf00000WkC2JIAV",
+              "name": "Susan Jacobson",
+              "id": "001Uf00000fZYonIAG",
               "fy26": 2000.0
             },
             {
@@ -176,19 +176,14 @@
               "fy26": 27500.0
             },
             {
-              "name": "Sandra Hooper",
-              "id": "001Uf00000XRXMhIAP",
-              "fy26": 25000.0
-            },
-            {
               "name": "Mitchell Siegler",
               "id": "001Uf00000WkJk1IAF",
               "fy26": 25000.0
             },
             {
-              "name": "Robyn F. Goldberg",
-              "id": "001Uf00000WkEqWIAV",
-              "fy26": 20000.0
+              "name": "Sandra Hooper",
+              "id": "001Uf00000XRXMhIAP",
+              "fy26": 25000.0
             },
             {
               "name": "Andrew Garman",
@@ -221,18 +216,8 @@
               "fy26": 12000.0
             },
             {
-              "name": "Gail Satter",
-              "id": "001Uf00000WkC8CIAV",
-              "fy26": 10000.0
-            },
-            {
-              "name": "Erica Weinberg",
-              "id": "001Uf00000WkBQRIA3",
-              "fy26": 10000.0
-            },
-            {
-              "name": "Adam Jacobs",
-              "id": "001Uf00000WkKVaIAN",
+              "name": "John D. Freedman",
+              "id": "001Uf00000WkQ4aIAF",
               "fy26": 10000.0
             },
             {
@@ -241,13 +226,28 @@
               "fy26": 10000.0
             },
             {
-              "name": "Jean Somers",
-              "id": "001Uf00000WkEw3IAF",
+              "name": "Erica Weinberg",
+              "id": "001Uf00000WkBQRIA3",
               "fy26": 10000.0
             },
             {
-              "name": "John D. Freedman",
-              "id": "001Uf00000WkQ4aIAF",
+              "name": "Robyn F. Goldberg",
+              "id": "001Uf00000WkEqWIAV",
+              "fy26": 10000.0
+            },
+            {
+              "name": "Adam Jacobs",
+              "id": "001Uf00000WkKVaIAN",
+              "fy26": 10000.0
+            },
+            {
+              "name": "Gail Satter",
+              "id": "001Uf00000WkC8CIAV",
+              "fy26": 10000.0
+            },
+            {
+              "name": "Jean Somers",
+              "id": "001Uf00000WkEw3IAF",
               "fy26": 10000.0
             }
           ]
@@ -363,14 +363,14 @@
               "gifts": 154900.0
             },
             {
+              "name": "Payment on Pledge - FY26",
+              "id": "701Uf00000lMSnNIAW",
+              "gifts": 3152.3
+            },
+            {
               "name": "AVIAD",
               "id": "701Uf00000Wl0K6IAJ",
               "gifts": 500.0
-            },
-            {
-              "name": "Payment on Pledge - FY26",
-              "id": "701Uf00000lMSnNIAW",
-              "gifts": 180.0
             },
             {
               "name": "Events - FY26",
@@ -562,7 +562,7 @@
             {
               "name": "Olga M. Worm",
               "id": "001Uf00000WkFKjIAN",
-              "giving": 44340.0
+              "giving": 44530.0
             },
             {
               "name": "Warren O. Kessler",
@@ -647,12 +647,12 @@
   ],
   "trends": [],
   "kpis": {
-    "overallScore": 22,
+    "overallScore": 23,
     "criticalIssues": 0,
-    "highIssues": 172,
+    "highIssues": 171,
     "mediumIssues": 52,
     "lowIssues": 50,
-    "totalRecordsAffected": 274,
+    "totalRecordsAffected": 273,
     "totalMajorDonors": 416
   }
 }
