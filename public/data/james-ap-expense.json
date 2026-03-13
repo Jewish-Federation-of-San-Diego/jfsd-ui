@@ -1,5 +1,5 @@
 {
-  "asOfDate": "2026-03-12T06:25:15-08:00",
+  "asOfDate": "2026-03-13T06:19:33-08:00",
   "actionItems": [
     {
       "type": "needs_review",
@@ -66,14 +66,6 @@
       "reason": "High-value transaction ($875.00)"
     },
     {
-      "type": "missing_receipt",
-      "merchant": "4imprint",
-      "amount": 839.94,
-      "cardholder": "Jessica Kretzer",
-      "date": "2026-03-11",
-      "txnId": "68ee0215-766b-40ad-bba6-a18adaf80f1f"
-    },
-    {
       "type": "needs_review",
       "merchant": "4imprint",
       "amount": 839.94,
@@ -90,28 +82,28 @@
       "reason": "High-value transaction ($800.00)"
     },
     {
+      "type": "missing_receipt",
+      "merchant": "iRobot",
+      "amount": 676.96,
+      "cardholder": "Miliah Rodriguez",
+      "date": "2026-03-12",
+      "txnId": "726a9798-8888-4efd-86be-f6aa9aeb6a00"
+    },
+    {
+      "type": "needs_review",
+      "merchant": "iRobot",
+      "amount": 676.96,
+      "cardholder": "Miliah Rodriguez",
+      "date": "2026-03-12",
+      "reason": "High-value transaction ($676.96)"
+    },
+    {
       "type": "needs_review",
       "merchant": "Amazon",
       "amount": 522.19,
       "cardholder": "Joanna Chiu",
       "date": "2026-03-09",
       "reason": "High-value transaction ($522.19)"
-    },
-    {
-      "type": "missing_receipt",
-      "merchant": "Adobe",
-      "amount": 454.77,
-      "cardholder": "Joanna Chiu",
-      "date": "2026-03-06",
-      "txnId": "6010bfae-716f-49e1-8d02-420b7be31bcf"
-    },
-    {
-      "type": "missing_receipt",
-      "merchant": "Amazon",
-      "amount": 420.22,
-      "cardholder": "Miliah Rodriguez",
-      "date": "2026-03-11",
-      "txnId": "6bb9f0f6-3f74-44da-a011-4ddf8adbb5a5"
     },
     {
       "type": "policy_exception",
@@ -122,36 +114,12 @@
       "reason": "Weekend purchase"
     },
     {
-      "type": "missing_receipt",
-      "merchant": "Staples",
-      "amount": 351.02,
-      "cardholder": "Miliah Rodriguez",
-      "date": "2026-03-09",
-      "txnId": "e41303af-89a3-401e-9955-d4e665d6b468"
-    },
-    {
       "type": "policy_exception",
       "merchant": "Amazon",
       "amount": 226.12,
       "cardholder": "Miliah Rodriguez",
       "date": "2026-03-08",
       "reason": "Weekend purchase"
-    },
-    {
-      "type": "missing_receipt",
-      "merchant": "Amazon",
-      "amount": 150.84,
-      "cardholder": "Zane Vanderberg",
-      "date": "2026-03-11",
-      "txnId": "3277e751-30c8-4a70-9fa9-c1ca50e67774"
-    },
-    {
-      "type": "missing_receipt",
-      "merchant": "Ralphs",
-      "amount": 118.87,
-      "cardholder": "Deena Libman",
-      "date": "2026-03-09",
-      "txnId": "8cfd3a5b-9a57-474f-a2a2-b07c02f79c6e"
     },
     {
       "type": "missing_receipt",
@@ -211,19 +179,27 @@
     },
     {
       "type": "missing_receipt",
+      "merchant": "G&M Oil",
+      "amount": 47.01,
+      "cardholder": "alon sachs",
+      "date": "2026-03-12",
+      "txnId": "7ec04da8-260d-4ef2-bf00-8b866c821e6e"
+    },
+    {
+      "type": "missing_receipt",
       "merchant": "Exxon",
-      "amount": 50,
+      "amount": 45.85,
       "cardholder": "Ofri Ismailov",
       "date": "2026-03-12",
       "txnId": "c80c05b2-0563-4cdc-b4d1-77e992bcdbae"
     },
     {
       "type": "missing_receipt",
-      "merchant": "G&M Oil",
-      "amount": 47.01,
-      "cardholder": "alon sachs",
+      "merchant": "7-Eleven",
+      "amount": 45,
+      "cardholder": "Bar Kroytzvirt",
       "date": "2026-03-12",
-      "txnId": "7ec04da8-260d-4ef2-bf00-8b866c821e6e"
+      "txnId": "4e7ba763-b94c-41c6-862a-d63a4d118141"
     },
     {
       "type": "missing_receipt",
@@ -243,35 +219,11 @@
     },
     {
       "type": "missing_receipt",
-      "merchant": "Staples",
-      "amount": 43.28,
-      "cardholder": "Miliah Rodriguez",
-      "date": "2026-03-12",
-      "txnId": "77e6e984-be06-406f-8b2e-4ebcad7a9817"
-    },
-    {
-      "type": "missing_receipt",
-      "merchant": "Staples",
-      "amount": 43.28,
-      "cardholder": "Miliah Rodriguez",
-      "date": "2026-03-10",
-      "txnId": "28d488bf-4056-48de-aa10-3afb7ba8d8bc"
-    },
-    {
-      "type": "missing_receipt",
       "merchant": "Hollister",
       "amount": 43.05,
       "cardholder": "Libi Bar-On",
       "date": "2026-03-10",
       "txnId": "02d69609-6b5a-4b25-8f29-0fa4e274eb80"
-    },
-    {
-      "type": "missing_receipt",
-      "merchant": "Exxon",
-      "amount": 42.78,
-      "cardholder": "Ofri Ismailov",
-      "date": "2026-03-06",
-      "txnId": "0afb3c8e-17d9-454b-9435-eaff0fe15cd2"
     },
     {
       "type": "missing_receipt",
@@ -315,14 +267,6 @@
     },
     {
       "type": "missing_receipt",
-      "merchant": "Staples",
-      "amount": 31.27,
-      "cardholder": "Miliah Rodriguez",
-      "date": "2026-03-12",
-      "txnId": "37d8ddeb-5371-43a6-9f70-0921d28022e7"
-    },
-    {
-      "type": "missing_receipt",
       "merchant": "The Taco Stand",
       "amount": 30.39,
       "cardholder": "Yaar Ilovich",
@@ -339,33 +283,33 @@
     }
   ],
   "expenseSummary": {
-    "totalSpend7d": 37676.12,
-    "totalSpend30d": 37676.12,
+    "totalSpend7d": 37895.69,
+    "totalSpend30d": 37895.69,
     "byDepartment": [
       {
         "dept": "Admin",
-        "amount": 29026.51,
-        "txnCount": 15
+        "amount": 30421.79,
+        "txnCount": 20
       },
       {
         "dept": "Programs",
-        "amount": 11107.52,
-        "txnCount": 71
+        "amount": 11115.48,
+        "txnCount": 72
       },
       {
-        "dept": "Administration",
-        "amount": 1185.36,
-        "txnCount": 6
-      },
-      {
-        "dept": "UJF Holdings",
+        "dept": "Marketing",
         "amount": 150.84,
         "txnCount": 1
       },
       {
+        "dept": "Administration",
+        "amount": 31.27,
+        "txnCount": 1
+      },
+      {
         "dept": "Development",
-        "amount": -3794.11,
-        "txnCount": 7
+        "amount": -3823.69,
+        "txnCount": 6
       }
     ],
     "topMerchants": [
@@ -391,8 +335,8 @@
       },
       {
         "merchant": "Amazon",
-        "amount": 1358.64,
-        "txnCount": 6
+        "amount": 1329.06,
+        "txnCount": 5
       },
       {
         "merchant": "Anthropic",
@@ -420,7 +364,7 @@
         "txnCount": 6
       }
     ],
-    "receiptComplianceRate": 46.0
+    "receiptComplianceRate": 53.0
   },
   "budgetPace": [
     {
@@ -466,7 +410,7 @@
   },
   "glHealth": {
     "manualEntries7d": 0,
-    "unclearedItems30d": 0,
+    "unclearedItems30d": 161,
     "apAgingBuckets": [
       {
         "bucket": "0-30",
@@ -480,21 +424,21 @@
       },
       {
         "bucket": "61-90",
-        "amount": 414958.76,
-        "count": 98
+        "amount": 400385.43,
+        "count": 94
       },
       {
         "bucket": "90+",
-        "amount": 4818855.27,
-        "count": 402
+        "amount": 4857798.52,
+        "count": 406
       }
     ]
   },
   "kpis": {
-    "totalSpendThisWeek": 37676.12,
-    "missingReceipts": 26,
-    "receiptComplianceRate": 46.0,
-    "apOutstanding": 5233814.03,
+    "totalSpendThisWeek": 37895.69,
+    "missingReceipts": 18,
+    "receiptComplianceRate": 53.0,
+    "apOutstanding": 5258183.95,
     "overBudgetDepts": 0,
     "dormantCards": 0
   }

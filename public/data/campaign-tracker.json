@@ -1,20 +1,20 @@
 {
-  "asOfDate": "2026-03-12 06:21",
+  "asOfDate": "2026-03-13 06:13",
   "annualCampaign": {
     "name": "Annual Campaign 26",
     "goal": 9000000,
-    "raised": 5977461.47,
-    "pctOfGoal": 66.4,
-    "donorCount": 1046,
-    "avgGift": 5715.0,
+    "raised": 6131516.27,
+    "pctOfGoal": 68.1,
+    "donorCount": 1053,
+    "avgGift": 5823.0,
     "priorYearSamePoint": 8797479.67
   },
   "momentum": {
-    "giftsThisWeek": 57,
-    "amountThisWeek": 11162.44,
-    "giftsLastWeek": 184,
-    "amountLastWeek": 126586.7,
-    "weekOverWeekPct": -91.2
+    "giftsThisWeek": 69,
+    "amountThisWeek": 1012986.44,
+    "giftsLastWeek": 188,
+    "amountLastWeek": 127386.7,
+    "weekOverWeekPct": 695.2
   },
   "weeklyMomentum": [
     {
@@ -49,20 +49,20 @@
     },
     {
       "weekOf": "2026-03-02",
-      "gifts": 184,
-      "amount": 126586.7
+      "gifts": 188,
+      "amount": 127386.7
     },
     {
       "weekOf": "2026-03-09",
-      "gifts": 56,
-      "amount": 8180.44
+      "gifts": 68,
+      "amount": 1010004.44
     }
   ],
   "donorBreakdown": {
     "newDonors": 249,
-    "returningDonors": 594,
+    "returningDonors": 596,
     "lybuntRecovered": 106,
-    "retentionRate": 31.8
+    "retentionRate": 31.9
   },
   "givingLevels": [
     {
@@ -72,18 +72,18 @@
     },
     {
       "level": "$100-499",
-      "donors": 344,
-      "amount": 73671.11
+      "donors": 346,
+      "amount": 74101.11
     },
     {
       "level": "$500-999",
-      "donors": 132,
-      "amount": 75577.18
+      "donors": 134,
+      "amount": 76577.18
     },
     {
       "level": "$1K-4,999",
-      "donors": 228,
-      "amount": 400939.57
+      "donors": 230,
+      "amount": 402981.87
     },
     {
       "level": "$5K-9,999",
@@ -97,11 +97,17 @@
     },
     {
       "level": "$25K+",
-      "donors": 32,
-      "amount": 4118362.69
+      "donors": 33,
+      "amount": 4268945.19
     }
   ],
   "topGiftsThisWeek": [
+    {
+      "name": "Rady Foundation",
+      "amount": 1000000.0,
+      "campaign": "Rady Match for Israel\u2019s Recovery - General",
+      "date": "2026-03-11"
+    },
     {
       "name": "Dani Golden",
       "amount": 2982.0,
@@ -133,39 +139,33 @@
       "date": "2026-03-11"
     },
     {
-      "name": "Rayna colton",
-      "amount": 500.0,
-      "campaign": "Payment on Pledge - FY26",
-      "date": "2026-03-11"
-    },
-    {
       "name": "Ronn Gruer",
       "amount": 500.0,
       "campaign": "Unsolicited Annual Gifts - FY26",
       "date": "2026-03-11"
     },
     {
-      "name": "Allison Wolpoff",
-      "amount": 416.0,
-      "campaign": "Jewish Heritage Day at the Padres - FY26",
-      "date": "2026-03-11"
-    },
-    {
-      "name": "Elan Bark",
-      "amount": 250.0,
+      "name": "Rayna colton",
+      "amount": 500.0,
       "campaign": "Payment on Pledge - FY26",
       "date": "2026-03-11"
     },
     {
-      "name": "Jeffrey Harris",
-      "amount": 217.04,
+      "name": "Barry and Shelly Hirschberg",
+      "amount": 500.0,
+      "campaign": "Payment on Pledge - FY26",
+      "date": "2026-03-13"
+    },
+    {
+      "name": "Allison Wolpoff",
+      "amount": 416.0,
       "campaign": "Jewish Heritage Day at the Padres - FY26",
-      "date": "2026-03-12"
+      "date": "2026-03-11"
     }
   ],
   "pipeline": {
-    "openPledges": 615,
-    "openPledgeAmount": 13856122.15,
+    "openPledges": 617,
+    "openPledgeAmount": 14156567.15,
     "expectedThisMonth": 0.0
   },
   "campaigns": [
@@ -227,9 +227,9 @@
     },
     {
       "name": "Monthly - FY26",
-      "raised": 18236.98,
+      "raised": 18011.98,
       "goal": 0.0,
-      "donors": 230,
+      "donors": 227,
       "pctOfGoal": 0
     },
     {

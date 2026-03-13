@@ -1,49 +1,49 @@
 {
-  "generatedAt": "2026-03-12T06:24:38.245563",
-  "period": "Jul 1, 2025 \u2013 Dec 31, 2025",
-  "monthsElapsed": 6,
+  "generatedAt": "2026-03-13T06:18:55.361794",
+  "period": "Jul 1, 2025 \u2013 Mar 12, 2026",
+  "monthsElapsed": 9,
   "balanceSheet": {
-    "asOfDate": "December 31, 2025",
+    "asOfDate": "March 12, 2026",
     "assets": {
       "current": [
         {
           "name": "Cash & cash equivalents",
-          "amount": 7874186.09,
-          "priorYear": 7067443.82
+          "amount": 5614942.53,
+          "priorYear": 8638812.71
         },
         {
           "name": "Investments",
-          "amount": 1162515.66,
+          "amount": 1470506.93,
           "priorYear": 0
         },
         {
           "name": "Pledges receivable",
-          "amount": 1605625.32,
-          "priorYear": 1895681.95
+          "amount": 1965959.64,
+          "priorYear": 2546905.75
         },
         {
           "name": "Other receivables",
-          "amount": 4057502.87,
-          "priorYear": 5292893.15
+          "amount": 4204447.87,
+          "priorYear": 5141730.7
         },
         {
           "name": "Prepaid expenses",
-          "amount": 645715.7,
-          "priorYear": 215092.26
+          "amount": 406705.7,
+          "priorYear": 230350.4
         },
         {
           "name": "Inventory",
-          "amount": 18031.0,
+          "amount": 16241.0,
           "priorYear": 0
         }
       ],
-      "totalCurrent": 15363576.64,
-      "totalCurrentPriorYear": 14471111.18,
+      "totalCurrent": 13678803.67,
+      "totalCurrentPriorYear": 16557799.56,
       "fixed": [
         {
           "name": "Property & equipment, net",
-          "amount": 3659263.91,
-          "priorYear": 671871.53
+          "amount": 3889503.48,
+          "priorYear": 752287.96
         },
         {
           "name": "Right-of-use assets",
@@ -51,23 +51,23 @@
           "priorYear": 0
         }
       ],
-      "totalFixed": 4963069.74,
-      "totalFixedPriorYear": 671871.53,
+      "totalFixed": 5193309.31,
+      "totalFixedPriorYear": 752287.96,
       "other": [
         {
           "name": "Endowment investments",
           "amount": 16930904.11,
-          "priorYear": 15746713.54
+          "priorYear": 15898159.75
         },
         {
           "name": "Board-designated reserves",
           "amount": 2613556.6,
-          "priorYear": 2412988.31
+          "priorYear": 2416875.08
         },
         {
           "name": "Intercompany",
-          "amount": 909098.02,
-          "priorYear": 553309.44
+          "amount": 919692.23,
+          "priorYear": 723810.25
         },
         {
           "name": "Other assets",
@@ -75,32 +75,32 @@
           "priorYear": -0.0
         }
       ],
-      "totalOther": 20453558.73,
-      "totalOtherPriorYear": 18713011.29,
-      "totalAssets": 40780205.11,
-      "totalAssetsPriorYear": 33855994.0
+      "totalOther": 20464152.94,
+      "totalOtherPriorYear": 19038845.08,
+      "totalAssets": 39336265.92,
+      "totalAssetsPriorYear": 36348932.6
     },
     "liabilities": {
       "current": [
         {
           "name": "Accounts payable",
-          "amount": 724126.36,
-          "priorYear": 302399.06
+          "amount": 1039429.15,
+          "priorYear": 289144.12
         },
         {
           "name": "Grants payable",
-          "amount": 778657.0,
-          "priorYear": 1027748.96
+          "amount": 675485.0,
+          "priorYear": 1077669.28
         },
         {
           "name": "Credit cards payable",
-          "amount": 59243.23,
-          "priorYear": 30050.88
+          "amount": 188504.39,
+          "priorYear": 89720.87
         },
         {
           "name": "Deferred revenue",
           "amount": 2400.0,
-          "priorYear": -0.0
+          "priorYear": 66980.0
         },
         {
           "name": "Lease liability \u2014 current",
@@ -108,8 +108,8 @@
           "priorYear": 0
         }
       ],
-      "totalCurrent": 1804365.28,
-      "totalCurrentPriorYear": 1360198.9,
+      "totalCurrent": 2145757.23,
+      "totalCurrentPriorYear": 1523514.27,
       "longTerm": [
         {
           "name": "Lease liability \u2014 long-term",
@@ -119,18 +119,18 @@
         {
           "name": "Held-for-life trusts",
           "amount": 33713.32,
-          "priorYear": 100000.0
+          "priorYear": 95713.32
         },
         {
           "name": "Trust & custodial liabilities",
-          "amount": 389501.4,
-          "priorYear": 460851.29
+          "amount": 448625.4,
+          "priorYear": 515082.12
         }
       ],
-      "totalLongTerm": 1491455.74,
-      "totalLongTermPriorYear": 560851.29,
-      "totalLiabilities": 3295821.02,
-      "totalLiabilitiesPriorYear": 1921050.19
+      "totalLongTerm": 1550579.74,
+      "totalLongTermPriorYear": 610795.44,
+      "totalLiabilities": 3696336.97,
+      "totalLiabilitiesPriorYear": 2134309.71
     },
     "netAssets": {
       "withoutRestriction": 0,
@@ -144,22 +144,22 @@
     }
   },
   "activities": {
-    "period": "Jul 1, 2025 \u2013 Dec 31, 2025",
+    "period": "Jul 1, 2025 \u2013 Mar 12, 2026",
     "revenue": [
       {
         "name": "Contributions",
-        "unrestricted": 2251831.49,
-        "restricted": 2477225.02,
-        "total": 4729056.51,
-        "priorYear": 5701087.68,
-        "budget": 6834999.96
+        "unrestricted": 2685094.69,
+        "restricted": 2490101.31,
+        "total": 5175196.0,
+        "priorYear": 9765899.96,
+        "budget": 10252499.94
       },
       {
         "name": "Grants",
         "unrestricted": 24375.0,
         "restricted": 50000.0,
         "total": 74375.0,
-        "priorYear": 220744.0,
+        "priorYear": 269494.0,
         "budget": 0
       },
       {
@@ -168,38 +168,38 @@
         "restricted": 0,
         "total": 80500.0,
         "priorYear": 540.0,
-        "budget": 337600.02
+        "budget": 506400.03
       },
       {
         "name": "Program revenue",
         "unrestricted": 271366.17,
         "restricted": 0,
         "total": 271366.17,
-        "priorYear": 555581.97,
+        "priorYear": 674198.17,
         "budget": 0
       },
       {
         "name": "Management fees",
-        "unrestricted": 52710.0,
+        "unrestricted": 79065.0,
         "restricted": 0,
-        "total": 52710.0,
-        "priorYear": -820.31,
+        "total": 79065.0,
+        "priorYear": -2006.93,
         "budget": 0
       },
       {
         "name": "Mission revenue",
-        "unrestricted": 489229.22,
-        "restricted": 0,
-        "total": 489229.22,
+        "unrestricted": 512479.24,
+        "restricted": 50000.0,
+        "total": 562479.24,
         "priorYear": 17345.0,
         "budget": 0
       },
       {
         "name": "Interest & dividends",
-        "unrestricted": 121744.5,
+        "unrestricted": 131038.07,
         "restricted": 0,
-        "total": 121744.5,
-        "priorYear": 382616.78,
+        "total": 131038.07,
+        "priorYear": 434003.04,
         "budget": 0
       },
       {
@@ -207,7 +207,7 @@
         "unrestricted": 5532.24,
         "restricted": 0,
         "total": 5532.24,
-        "priorYear": 9197.08,
+        "priorYear": 18325.41,
         "budget": 0
       },
       {
@@ -215,14 +215,14 @@
         "unrestricted": 113211.75,
         "restricted": 0,
         "total": 113211.75,
-        "priorYear": 802854.65,
+        "priorYear": 884636.85,
         "budget": 0
       },
       {
         "name": "Investment expense",
-        "unrestricted": 0,
+        "unrestricted": -49.6,
         "restricted": 0,
-        "total": 0,
+        "total": -49.6,
         "priorYear": 0,
         "budget": 0
       },
@@ -240,101 +240,101 @@
         "restricted": 0,
         "total": 0,
         "priorYear": -0.0,
-        "budget": 1857500.04
+        "budget": 2786250.06
       },
       {
         "name": "Other revenue",
-        "unrestricted": 63923.67,
-        "restricted": 20200.0,
+        "unrestricted": 62133.67,
+        "restricted": 21990.0,
         "total": 84123.67,
-        "priorYear": 199449.49,
-        "budget": 372305.46
+        "priorYear": 300222.34,
+        "budget": 558458.19
       }
     ],
     "totalRevenue": {
-      "unrestricted": 3935947.77,
-      "restricted": 3179558.62,
-      "total": 7115506.39,
-      "priorYear": 7888596.34,
-      "budget": 9402405.48
+      "unrestricted": 4426269.96,
+      "restricted": 3244224.91,
+      "total": 7670494.87,
+      "priorYear": 12362657.84,
+      "budget": 14103608.22
     },
     "expenses": [
       {
         "name": "Grants \u2014 local agencies",
-        "amount": 634714.38,
-        "priorYear": 857591.89,
+        "amount": 1105972.64,
+        "priorYear": 1390426.79,
         "budget": 0
       },
       {
         "name": "Grants \u2014 designated",
-        "amount": 792470.0,
-        "priorYear": 1744396.55,
+        "amount": 962470.0,
+        "priorYear": 2144288.57,
         "budget": 0
       },
       {
         "name": "Grants \u2014 stipends",
-        "amount": 15986.92,
+        "amount": 21482.41,
         "priorYear": 0,
         "budget": 0
       },
       {
         "name": "Salaries & benefits",
-        "amount": 2011883.22,
-        "priorYear": 1846879.57,
-        "budget": 2767870.44
+        "amount": 2645647.63,
+        "priorYear": 2399248.64,
+        "budget": 4151805.66
       },
       {
         "name": "Travel & meetings",
-        "amount": 474736.54,
-        "priorYear": 136076.29,
-        "budget": 72000.12
+        "amount": 934560.07,
+        "priorYear": 263802.6,
+        "budget": 108000.18
       },
       {
         "name": "Professional fees",
-        "amount": 520707.49,
-        "priorYear": 610189.91,
-        "budget": 298599.96
+        "amount": 710124.04,
+        "priorYear": 909284.09,
+        "budget": 447899.94
       },
       {
         "name": "Events & programs",
-        "amount": 318131.44,
-        "priorYear": 468594.75,
-        "budget": 246000.0
+        "amount": 629604.23,
+        "priorYear": 578597.24,
+        "budget": 369000.0
       },
       {
         "name": "Facilities & equipment",
-        "amount": 79301.45,
-        "priorYear": 155665.29,
-        "budget": 136099.98
+        "amount": 89451.27,
+        "priorYear": 204040.76,
+        "budget": 204149.97
       },
       {
         "name": "Bank & finance fees",
-        "amount": 35636.28,
-        "priorYear": 35170.23,
-        "budget": 34999.98
+        "amount": 37399.98,
+        "priorYear": 47818.12,
+        "budget": 52499.97
       },
       {
         "name": "Security",
-        "amount": 7734.1,
-        "priorYear": 11664.28,
+        "amount": 14412.11,
+        "priorYear": 12564.28,
         "budget": 0
       },
       {
         "name": "Other operating",
-        "amount": 392279.23,
-        "priorYear": 400651.96,
-        "budget": 261583.98
+        "amount": 534963.45,
+        "priorYear": 511192.05,
+        "budget": 392375.97
       }
     ],
     "totalExpenses": {
-      "amount": 5283581.05,
-      "priorYear": 6266880.72,
-      "budget": 3817154.46
+      "amount": 7686087.83,
+      "priorYear": 8461263.14,
+      "budget": 5725731.69
     },
     "changeInNetAssets": {
-      "total": 1831925.34,
-      "priorYear": 1621715.62,
-      "budget": 5585251.02
+      "total": -15592.96,
+      "priorYear": 3901394.7,
+      "budget": 8377876.53
     }
   },
   "functionalExpenses": {
@@ -347,83 +347,83 @@
     "rows": [
       {
         "name": "Grants",
-        "programServices": 1443171.3,
+        "programServices": 2089925.05,
         "managementGeneral": 0,
         "fundraising": 0,
-        "total": 1443171.3
+        "total": 2089925.05
       },
       {
         "name": "Salaries & benefits",
-        "programServices": 1002452.86,
-        "managementGeneral": 452419.82,
-        "fundraising": 557010.54,
-        "total": 2011883.22
+        "programServices": 1254474.88,
+        "managementGeneral": 688059.27,
+        "fundraising": 703113.48,
+        "total": 2645647.63
       },
       {
         "name": "Travel & meetings",
-        "programServices": 429916.83,
-        "managementGeneral": 32519.28,
-        "fundraising": 12300.43,
-        "total": 474736.54
+        "programServices": 871399.93,
+        "managementGeneral": 39328.9,
+        "fundraising": 23831.24,
+        "total": 934560.07
       },
       {
         "name": "Professional fees",
-        "programServices": 229698.91,
-        "managementGeneral": 268094.5,
-        "fundraising": 22914.08,
-        "total": 520707.49
+        "programServices": 319540.57,
+        "managementGeneral": 306419.39,
+        "fundraising": 84164.08,
+        "total": 710124.04
       },
       {
         "name": "Events & programs",
-        "programServices": 153591.4,
-        "managementGeneral": 13410.56,
-        "fundraising": 151129.48,
-        "total": 318131.44
+        "programServices": 192318.08,
+        "managementGeneral": 16763.57,
+        "fundraising": 420522.58,
+        "total": 629604.23
       },
       {
         "name": "Facilities & equipment",
-        "programServices": 3733.21,
-        "managementGeneral": 73917.48,
-        "fundraising": 1650.76,
-        "total": 79301.45
+        "programServices": 5316.0,
+        "managementGeneral": 82047.01,
+        "fundraising": 2088.26,
+        "total": 89451.27
       },
       {
         "name": "Other operating",
-        "programServices": 103596.79,
-        "managementGeneral": 232786.85,
-        "fundraising": 55895.59,
-        "total": 392279.23
+        "programServices": 147947.38,
+        "managementGeneral": 298824.93,
+        "fundraising": 88191.14,
+        "total": 534963.45
       },
       {
         "name": "Bank & finance fees",
-        "programServices": 8172.75,
-        "managementGeneral": 17175.92,
+        "programServices": 9346.24,
+        "managementGeneral": 17766.13,
         "fundraising": 10287.61,
-        "total": 35636.28
+        "total": 37399.98
       },
       {
         "name": "Security",
         "programServices": 1987.07,
         "managementGeneral": 5747.03,
-        "fundraising": 0,
-        "total": 7734.1
+        "fundraising": 6678.01,
+        "total": 14412.11
       }
     ],
     "totals": {
-      "programServices": 3376321.12,
-      "managementGeneral": 1096071.44,
-      "fundraising": 811188.49,
-      "total": 5283581.05
+      "programServices": 4892255.2,
+      "managementGeneral": 1454956.23,
+      "fundraising": 1338876.4,
+      "total": 7686087.83
     }
   },
   "budgetVsActual": {
     "revenue": [
       {
         "name": "Contributions",
-        "budget": 6834999.96,
-        "actual": 4729056.51,
-        "variance": -2105943.45,
-        "variancePct": -30.81
+        "budget": 10252499.94,
+        "actual": 5175196.0,
+        "variance": -5077303.94,
+        "variancePct": -49.52
       },
       {
         "name": "Grants",
@@ -434,10 +434,10 @@
       },
       {
         "name": "Special events",
-        "budget": 337600.02,
+        "budget": 506400.03,
         "actual": 80500.0,
-        "variance": -257100.02,
-        "variancePct": -76.16
+        "variance": -425900.03,
+        "variancePct": -84.1
       },
       {
         "name": "Program revenue",
@@ -449,127 +449,127 @@
       {
         "name": "Management fees",
         "budget": 0,
-        "actual": 52710.0,
-        "variance": 52710.0,
+        "actual": 79065.0,
+        "variance": 79065.0,
         "variancePct": 0
       },
       {
         "name": "Mission revenue",
         "budget": 0,
-        "actual": 489229.22,
-        "variance": 489229.22,
+        "actual": 562479.24,
+        "variance": 562479.24,
         "variancePct": 0
       },
       {
         "name": "Investment income",
         "budget": 0,
-        "actual": 240488.49,
-        "variance": 240488.49,
+        "actual": 249732.46,
+        "variance": 249732.46,
         "variancePct": 0
       },
       {
         "name": "Other revenue",
-        "budget": 2229805.5,
+        "budget": 3344708.25,
         "actual": 1177781.0,
-        "variance": -1052024.5,
-        "variancePct": -47.18
+        "variance": -2166927.25,
+        "variancePct": -64.79
       }
     ],
     "expenses": [
       {
         "name": "Grants",
         "budget": 0,
-        "actual": 1443171.3,
-        "variance": -1443171.3,
+        "actual": 2089925.05,
+        "variance": -2089925.05,
         "variancePct": 0
       },
       {
         "name": "Salaries & benefits",
-        "budget": 2767870.44,
-        "actual": 2011883.22,
-        "variance": 755987.22,
-        "variancePct": 27.31
+        "budget": 4151805.66,
+        "actual": 2645647.63,
+        "variance": 1506158.03,
+        "variancePct": 36.28
       },
       {
         "name": "Travel & meetings",
-        "budget": 72000.12,
-        "actual": 474736.54,
-        "variance": -402736.42,
-        "variancePct": -559.36
+        "budget": 108000.18,
+        "actual": 934560.07,
+        "variance": -826559.89,
+        "variancePct": -765.33
       },
       {
         "name": "Professional fees",
-        "budget": 298599.96,
-        "actual": 520707.49,
-        "variance": -222107.53,
-        "variancePct": -74.38
+        "budget": 447899.94,
+        "actual": 710124.04,
+        "variance": -262224.1,
+        "variancePct": -58.55
       },
       {
         "name": "Events & programs",
-        "budget": 246000.0,
-        "actual": 318131.44,
-        "variance": -72131.44,
-        "variancePct": -29.32
+        "budget": 369000.0,
+        "actual": 629604.23,
+        "variance": -260604.23,
+        "variancePct": -70.62
       },
       {
         "name": "Facilities & equipment",
-        "budget": 136099.98,
-        "actual": 79301.45,
-        "variance": 56798.53,
-        "variancePct": 41.73
+        "budget": 204149.97,
+        "actual": 89451.27,
+        "variance": 114698.7,
+        "variancePct": 56.18
       },
       {
         "name": "Bank & finance fees",
-        "budget": 34999.98,
-        "actual": 35636.28,
-        "variance": -636.3,
-        "variancePct": -1.82
+        "budget": 52499.97,
+        "actual": 37399.98,
+        "variance": 15099.99,
+        "variancePct": 28.76
       },
       {
         "name": "Security",
         "budget": 0,
-        "actual": 7734.1,
-        "variance": -7734.1,
+        "actual": 14412.11,
+        "variance": -14412.11,
         "variancePct": 0
       },
       {
         "name": "Other operating",
-        "budget": 261583.98,
-        "actual": 392279.23,
-        "variance": -130695.25,
-        "variancePct": -49.96
+        "budget": 392375.97,
+        "actual": 534963.45,
+        "variance": -142587.48,
+        "variancePct": -36.34
       }
     ],
     "totalRevenue": {
-      "budget": 9402405.48,
-      "actual": 7115506.39,
-      "variance": -2286899.09,
-      "variancePct": -24.32
+      "budget": 14103608.22,
+      "actual": 7670494.87,
+      "variance": -6433113.35,
+      "variancePct": -45.61
     },
     "totalExpenses": {
-      "budget": 3817154.46,
-      "actual": 5283581.05,
-      "variance": -1466426.59,
-      "variancePct": -38.42
+      "budget": 5725731.69,
+      "actual": 7686087.83,
+      "variance": -1960356.14,
+      "variancePct": -34.24
     },
     "netSurplusDeficit": {
-      "budget": 5585251.02,
-      "actual": 1831925.34,
-      "variance": -3753325.68
+      "budget": 8377876.53,
+      "actual": -15592.96,
+      "variance": -8393469.49
     }
   },
   "monthlyTrend": [
     {
       "month": "Jul",
-      "revenue": 1670618.93,
+      "revenue": 2133162.25,
       "expenses": 990444.09,
-      "net": 680174.84
+      "net": 1142718.16
     },
     {
       "month": "Aug",
-      "revenue": 1342153.27,
+      "revenue": 1374753.27,
       "expenses": 645936.05,
-      "net": 696217.22
+      "net": 728817.22
     },
     {
       "month": "Sep",
@@ -594,15 +594,33 @@
       "revenue": 934283.99,
       "expenses": 859077.65,
       "net": 75206.34
+    },
+    {
+      "month": "Jan",
+      "revenue": 13582.91,
+      "expenses": 1184504.97,
+      "net": -1170922.06
+    },
+    {
+      "month": "Feb",
+      "revenue": 36858.52,
+      "expenses": 1078598.54,
+      "net": -1041740.02
+    },
+    {
+      "month": "Mar",
+      "revenue": 9403.73,
+      "expenses": 139403.27,
+      "net": -129999.54
     }
   ],
   "kpis": {
-    "totalRevenue": 7115506.39,
-    "totalExpenses": 5283581.05,
-    "netSurplusDeficit": 1831925.34,
-    "operatingMargin": 25.75,
-    "budgetVariancePct": 32.8,
-    "cashPosition": 7874186.09,
-    "monthsOfReserves": 8.94
+    "totalRevenue": 7670494.87,
+    "totalExpenses": 7686087.83,
+    "netSurplusDeficit": -15592.96,
+    "operatingMargin": -0.2,
+    "budgetVariancePct": -0.19,
+    "cashPosition": 5614942.53,
+    "monthsOfReserves": 6.57
   }
 }

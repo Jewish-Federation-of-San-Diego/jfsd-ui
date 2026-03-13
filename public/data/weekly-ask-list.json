@@ -1,6 +1,6 @@
 {
-  "asOfDate": "2026-03-12",
-  "totalPotentialRevenue": 1230000,
+  "asOfDate": "2026-03-13",
+  "totalPotentialRevenue": 1235000,
   "totalProspects": 50,
   "byPriority": [
     {
@@ -11,7 +11,7 @@
     {
       "priority": "High",
       "count": 40,
-      "potential": 755000
+      "potential": 760000
     },
     {
       "priority": "Medium",
@@ -107,23 +107,6 @@
     },
     {
       "rank": 6,
-      "name": "Theresa Marie Dupuis",
-      "phone": "",
-      "email": "theresadupuis00@gmail.com",
-      "score": 125,
-      "suggestedAsk": 25000,
-      "askReason": "LYBUNT - gave $25K FY25",
-      "category": "LYBUNT",
-      "lifetimeGiving": 312991.0,
-      "yearsGiving": 27,
-      "lastGiftDate": "2026-01-19",
-      "fy24": 100000.0,
-      "fy25": 25000.0,
-      "fy26": 0.0,
-      "avgAnnual": 11592.26
-    },
-    {
-      "rank": 7,
       "name": "Carlos David Michan",
       "phone": "(858) 823-2003",
       "email": "carlosm@strataequity.com",
@@ -138,6 +121,23 @@
       "fy25": 25000.0,
       "fy26": 0.0,
       "avgAnnual": 16040.72
+    },
+    {
+      "rank": 7,
+      "name": "Theresa Marie Dupuis",
+      "phone": "",
+      "email": "theresadupuis00@gmail.com",
+      "score": 125,
+      "suggestedAsk": 25000,
+      "askReason": "LYBUNT - gave $25K FY25",
+      "category": "LYBUNT",
+      "lifetimeGiving": 312991.0,
+      "yearsGiving": 27,
+      "lastGiftDate": "2026-01-19",
+      "fy24": 100000.0,
+      "fy25": 25000.0,
+      "fy26": 0.0,
+      "avgAnnual": 11592.26
     },
     {
       "rank": 8,
@@ -464,23 +464,6 @@
     },
     {
       "rank": 27,
-      "name": "Ellen Epsten Benkle",
-      "phone": "6198710272",
-      "email": "ebenkle@gmail.com",
-      "score": 121.7,
-      "suggestedAsk": 5000,
-      "askReason": "LYBUNT - gave $5K FY25",
-      "category": "LYBUNT",
-      "lifetimeGiving": 43003.0,
-      "yearsGiving": 42,
-      "lastGiftDate": "2025-03-13",
-      "fy24": 6000.0,
-      "fy25": 5000.0,
-      "fy26": 0.0,
-      "avgAnnual": 1023.88
-    },
-    {
-      "rank": 28,
       "name": "Meg Leopold Mandel",
       "phone": "8582325490",
       "email": "megnjess@hotmail.com",
@@ -497,24 +480,7 @@
       "avgAnnual": 3037.87
     },
     {
-      "rank": 29,
-      "name": "Jeffrey Stephan Myers",
-      "phone": "(619) 300-4482",
-      "email": "jeff.myers1@gmail.com",
-      "score": 120.5,
-      "suggestedAsk": 5000,
-      "askReason": "LYBUNT - gave $5K FY25",
-      "category": "LYBUNT",
-      "lifetimeGiving": 7588.0,
-      "yearsGiving": 30,
-      "lastGiftDate": "2025-12-28",
-      "fy24": 504.0,
-      "fy25": 5000.0,
-      "fy26": 0.0,
-      "avgAnnual": 252.93
-    },
-    {
-      "rank": 30,
+      "rank": 28,
       "name": "Carole Turk",
       "phone": "",
       "email": "grammyturk@gmail.com",
@@ -531,7 +497,7 @@
       "avgAnnual": 9237.22
     },
     {
-      "rank": 31,
+      "rank": 29,
       "name": "Mary Ann Scher",
       "phone": "6195483656",
       "email": "mascherx@gmail.com",
@@ -548,7 +514,7 @@
       "avgAnnual": 6767.4
     },
     {
-      "rank": 32,
+      "rank": 30,
       "name": "STEVEN DEMETER",
       "phone": "",
       "email": "stede21@gmail.com",
@@ -563,6 +529,40 @@
       "fy25": 5000.0,
       "fy26": 0.0,
       "avgAnnual": 1587.5
+    },
+    {
+      "rank": 31,
+      "name": "Jeffrey Stephan Myers",
+      "phone": "(619) 300-4482",
+      "email": "jeff.myers1@gmail.com",
+      "score": 120.5,
+      "suggestedAsk": 5000,
+      "askReason": "LYBUNT - gave $5K FY25",
+      "category": "LYBUNT",
+      "lifetimeGiving": 7588.0,
+      "yearsGiving": 30,
+      "lastGiftDate": "2025-12-28",
+      "fy24": 504.0,
+      "fy25": 5000.0,
+      "fy26": 0.0,
+      "avgAnnual": 252.93
+    },
+    {
+      "rank": 32,
+      "name": "Monica Handler-Penner",
+      "phone": "8582452884",
+      "email": "monicahpg@gmail.com",
+      "score": 120.5,
+      "suggestedAsk": 10000,
+      "askReason": "LYBUNT - gave $5K FY25",
+      "category": "LYBUNT",
+      "lifetimeGiving": 163438.65,
+      "yearsGiving": 26,
+      "lastGiftDate": "2025-12-25",
+      "fy24": 5000.0,
+      "fy25": 5000.0,
+      "fy26": 0.0,
+      "avgAnnual": 6286.1
     },
     {
       "rank": 33,
@@ -605,15 +605,15 @@
       "email": "erady@americanassets.com",
       "score": 120,
       "suggestedAsk": 100000,
-      "askReason": "Upgrade - avg $95.8K, gave $5K FY26",
+      "askReason": "Upgrade - avg $117.5K, gave $5K FY26",
       "category": "Upgrade",
-      "lifetimeGiving": 4405570.92,
+      "lifetimeGiving": 5405570.92,
       "yearsGiving": 46,
       "lastGiftDate": "2025-12-02",
       "fy24": 1003020.92,
       "fy25": 1000000.0,
       "fy26": 5000.0,
-      "avgAnnual": 95773.28
+      "avgAnnual": 117512.41
     },
     {
       "rank": 36,
@@ -872,7 +872,7 @@
     }
   ],
   "kpis": {
-    "totalPotential": 1230000,
+    "totalPotential": 1235000,
     "top10Potential": 475000,
     "lybuntCount": 37,
     "upgradeCount": 13,

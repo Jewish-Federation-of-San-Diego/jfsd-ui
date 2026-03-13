@@ -1,5 +1,5 @@
 {
-  "asOfDate": "2026-03-11T13:17:36Z",
+  "asOfDate": "2026-03-13T13:17:08Z",
   "monthlyTrend": [
     {
       "month": "Jul",
@@ -43,31 +43,31 @@
     },
     {
       "month": "Mar",
-      "amount": 47370.9,
-      "txnCount": 157
+      "amount": 51139.92,
+      "txnCount": 179
     }
   ],
   "departmentSpend": [
     {
       "dept": "Administration",
-      "amount": 458779.88,
-      "txnCount": 1315,
+      "amount": 459976.61,
+      "txnCount": 1320,
       "budget": 1773360.0,
       "pctOfBudget": 25.9
     },
     {
       "dept": "Programs",
-      "amount": 188536.52,
-      "txnCount": 441,
+      "amount": 188595.43,
+      "txnCount": 442,
       "budget": 466926.0,
       "pctOfBudget": 40.4
     },
     {
       "dept": "Marketing",
-      "amount": 72734.14,
-      "txnCount": 162,
+      "amount": 73940.97,
+      "txnCount": 164,
       "budget": 2882229.0,
-      "pctOfBudget": 2.5
+      "pctOfBudget": 2.6
     },
     {
       "dept": "Development",
@@ -78,22 +78,22 @@
     },
     {
       "dept": "Shinshinim",
-      "amount": 40398.8,
-      "txnCount": 1921,
+      "amount": 40708.65,
+      "txnCount": 1932,
       "budget": 466926.0,
       "pctOfBudget": 8.7
     },
     {
       "dept": "Legacy of Light Goldberg Institute for Holocaust Education",
-      "amount": 16794.6,
-      "txnCount": 41,
+      "amount": 17640.46,
+      "txnCount": 43,
       "budget": 0,
       "pctOfBudget": 0
     },
     {
       "dept": "UJF Holdings",
-      "amount": 417.72,
-      "txnCount": 3,
+      "amount": 568.56,
+      "txnCount": 4,
       "budget": 0,
       "pctOfBudget": 0
     }
@@ -101,13 +101,13 @@
   "categoryBreakdown": [
     {
       "category": "Airlines",
-      "amount": 117588.33,
-      "txnCount": 78
+      "amount": 117671.85,
+      "txnCount": 79
     },
     {
       "category": "Restaurants",
-      "amount": 94221.32,
-      "txnCount": 787
+      "amount": 94319.59,
+      "txnCount": 791
     },
     {
       "category": "SaaS / Software",
@@ -116,8 +116,8 @@
     },
     {
       "category": "Professional Services",
-      "amount": 71351.95,
-      "txnCount": 75
+      "amount": 72476.95,
+      "txnCount": 76
     },
     {
       "category": "Car Rental",
@@ -131,13 +131,13 @@
     },
     {
       "category": "Office supplies and cleaning",
-      "amount": 37903.23,
-      "txnCount": 17
+      "amount": 37977.78,
+      "txnCount": 19
     },
     {
       "category": "Books and Newspapers",
-      "amount": 34276.36,
-      "txnCount": 282
+      "amount": 34872.42,
+      "txnCount": 285
     },
     {
       "category": "Taxi and Rideshare",
@@ -146,13 +146,13 @@
     },
     {
       "category": "General Merchandise",
-      "amount": 30788.77,
-      "txnCount": 357
+      "amount": 31465.73,
+      "txnCount": 358
     },
     {
       "category": "Other",
-      "amount": 30195.39,
-      "txnCount": 29
+      "amount": 31035.33,
+      "txnCount": 30
     },
     {
       "category": "Entertainment",
@@ -171,8 +171,8 @@
     },
     {
       "category": "Office",
-      "amount": 26377.53,
-      "txnCount": 55
+      "amount": 26459.36,
+      "txnCount": 56
     }
   ],
   "topMerchants": [
@@ -203,8 +203,8 @@
     },
     {
       "merchant": "Amazon",
-      "amount": 26987.08,
-      "txnCount": 301
+      "amount": 27558.14,
+      "txnCount": 303
     },
     {
       "merchant": "Tlalim Tours",
@@ -315,9 +315,15 @@
     },
     {
       "name": "Lee Weinstein",
-      "amount": 18930.06,
-      "txnCount": 50,
+      "amount": 20136.89,
+      "txnCount": 52,
       "dept": "Marketing"
+    },
+    {
+      "name": "Miliah Rodriguez",
+      "amount": 14855.61,
+      "txnCount": 141,
+      "dept": "Administration"
     },
     {
       "name": "Alex Kaufman",
@@ -326,15 +332,9 @@
       "dept": "Legacy of Light Goldberg Institute for Holocaust Education"
     },
     {
-      "name": "Miliah Rodriguez",
-      "amount": 13683.88,
-      "txnCount": 137,
-      "dept": "Administration"
-    },
-    {
       "name": "Jessica Kretzer",
-      "amount": 11543.5,
-      "txnCount": 63,
+      "amount": 12389.36,
+      "txnCount": 65,
       "dept": "Legacy of Light Goldberg Institute for Holocaust Education"
     },
     {
@@ -346,22 +346,22 @@
   ],
   "cardUtilization": {
     "active": 100,
-    "dormant30d": 58,
-    "totalLimit": 338506.99,
-    "totalSpent": 839050.97,
-    "utilizationPct": 247.9
+    "dormant30d": 59,
+    "totalLimit": 329006.99,
+    "totalSpent": 842819.99,
+    "utilizationPct": 256.2
   },
   "weekOverWeek": {
-    "thisWeek": 37870.7,
+    "thisWeek": 41639.72,
     "lastWeek": 8736.7,
-    "changePct": 333.5
+    "changePct": 376.6
   },
   "kpis": {
-    "totalSpendFY26": 839050.97,
-    "monthlyAvg": 93227.89,
+    "totalSpendFY26": 842819.99,
+    "monthlyAvg": 93646.67,
     "activeCards": 100,
     "topDepartment": "Administration",
-    "topDepartmentAmount": 458779.88,
-    "weekOverWeekChange": 333.5
+    "topDepartmentAmount": 459976.61,
+    "weekOverWeekChange": 376.6
   }
 }
