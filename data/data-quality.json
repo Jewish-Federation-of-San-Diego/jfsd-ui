@@ -1,14 +1,14 @@
 {
-  "asOfDate": "2026-03-12 06:25",
-  "overallScore": 23,
+  "asOfDate": "2026-03-13 06:19",
+  "overallScore": 21,
   "categories": [
     {
       "name": "Contact Completeness",
-      "score": 17,
+      "score": 10,
       "issues": [
         {
           "metric": "Major donors missing email",
-          "count": 21,
+          "count": 23,
           "severity": "high",
           "details": [
             {
@@ -24,6 +24,11 @@
             {
               "name": "John D. Freedman",
               "id": "001Uf00000WkQ4aIAF",
+              "fy26": 10000.0
+            },
+            {
+              "name": "Jackie Stein",
+              "id": "001Uf00000WkDZGIA3",
               "fy26": 10000.0
             },
             {
@@ -47,19 +52,24 @@
               "fy26": 4000.0
             },
             {
-              "name": "Edith Koppel",
-              "id": "001Uf00000WkTbLIAV",
+              "name": "Dana Vandersip",
+              "id": "001Uf00000WkM1kIAF",
               "fy26": 2500.0
             },
             {
-              "name": "Dana Vandersip",
-              "id": "001Uf00000WkM1kIAF",
+              "name": "Edith Koppel",
+              "id": "001Uf00000WkTbLIAV",
               "fy26": 2500.0
             },
             {
               "name": "Thomas Petrie",
               "id": "001Uf00000WkSn0IAF",
               "fy26": 2160.0
+            },
+            {
+              "name": "Susan Jacobson",
+              "id": "001Uf00000fZYonIAG",
+              "fy26": 2000.0
             },
             {
               "name": "William Stone",
@@ -77,11 +87,6 @@
               "fy26": 2000.0
             },
             {
-              "name": "Susan Jacobson",
-              "id": "001Uf00000fZYonIAG",
-              "fy26": 2000.0
-            },
-            {
               "name": "Marcia Kossman",
               "id": "001Uf00000WkNocIAF",
               "fy26": 1200.0
@@ -92,8 +97,8 @@
               "fy26": 1200.0
             },
             {
-              "name": "Mark Kramer",
-              "id": "001Uf00000rJhxDIAS",
+              "name": "Kevin Tarson",
+              "id": "001Uf00000rWPkrIAG",
               "fy26": 1042.3
             },
             {
@@ -105,17 +110,12 @@
               "name": "Marvin Ross",
               "id": "001Uf00000WkJyEIAV",
               "fy26": 1000.0
-            },
-            {
-              "name": "Lois Rubin",
-              "id": "001Uf00000WkJT3IAN",
-              "fy26": 1000.0
             }
           ]
         },
         {
           "metric": "Major donors missing address",
-          "count": 5,
+          "count": 6,
           "severity": "medium",
           "details": [
             {
@@ -139,9 +139,14 @@
               "fy26": 1042.3
             },
             {
-              "name": "Mark Kramer",
-              "id": "001Uf00000rJhxDIAS",
+              "name": "Kevin Tarson",
+              "id": "001Uf00000rWPkrIAG",
               "fy26": 1042.3
+            },
+            {
+              "name": "Shelley Zimmerman",
+              "id": "001Uf00000rcE3ZIAU",
+              "fy26": 1000.0
             }
           ]
         },
@@ -161,14 +166,14 @@
               "fy26": 78988.06
             },
             {
+              "name": "Karen Foster-Silberman",
+              "id": "001Uf00000WkFiIIAV",
+              "fy26": 60233.0
+            },
+            {
               "name": "Shayna Davis-Schreiber",
               "id": "001Uf00000WkPvSIAV",
               "fy26": 50000.0
-            },
-            {
-              "name": "Karen Foster Silberman",
-              "id": "001Uf00000WkFiIIAV",
-              "fy26": 30116.5
             },
             {
               "name": "Elene Solomon Z\"L",
@@ -280,11 +285,11 @@
               "count": 9
             },
             {
-              "name": "Barbara Cohen",
+              "name": "David Levy",
               "count": 8
             },
             {
-              "name": "David Levy",
+              "name": "Barbara Cohen",
               "count": 8
             },
             {
@@ -296,7 +301,11 @@
               "count": 7
             },
             {
-              "name": "Michael Schwartz",
+              "name": "Linda Feldman",
+              "count": 6
+            },
+            {
+              "name": "Barry Cohen",
               "count": 6
             },
             {
@@ -304,12 +313,12 @@
               "count": 6
             },
             {
-              "name": "Linda Feldman",
+              "name": "Michael Schwartz",
               "count": 6
             },
             {
-              "name": "Barry Cohen",
-              "count": 6
+              "name": "Michael Klein",
+              "count": 5
             },
             {
               "name": "Michael Katz",
@@ -320,23 +329,19 @@
               "count": 5
             },
             {
+              "name": "Robert Davis",
+              "count": 5
+            },
+            {
+              "name": "Sharon Metz",
+              "count": 5
+            },
+            {
               "name": "Barbara Friedman",
               "count": 5
             },
             {
               "name": "David Schwartz",
-              "count": 5
-            },
-            {
-              "name": "Sharon Cohen",
-              "count": 5
-            },
-            {
-              "name": "Paul Cohen",
-              "count": 5
-            },
-            {
-              "name": "Sharon Metz",
               "count": 5
             },
             {
@@ -350,22 +355,17 @@
     },
     {
       "name": "Campaign Health",
-      "score": 96,
+      "score": 97,
       "issues": [
         {
           "metric": "Orphaned campaigns",
-          "count": 4,
+          "count": 3,
           "severity": "medium",
           "details": [
             {
               "name": "ANTISEMITISM COALITION",
               "id": "701Uf00000Wkm4aIAB",
               "gifts": 154900.0
-            },
-            {
-              "name": "Payment on Pledge - FY26",
-              "id": "701Uf00000lMSnNIAW",
-              "gifts": 3152.3
             },
             {
               "name": "AVIAD",
@@ -592,7 +592,7 @@
             {
               "name": "Jacqueline Stein",
               "id": "001Uf00000WkLdsIAF",
-              "giving": 23558.0
+              "giving": 23758.0
             },
             {
               "name": "Judith Belinsky",
@@ -647,12 +647,12 @@
   ],
   "trends": [],
   "kpis": {
-    "overallScore": 23,
+    "overallScore": 21,
     "criticalIssues": 0,
-    "highIssues": 171,
+    "highIssues": 173,
     "mediumIssues": 52,
     "lowIssues": 50,
-    "totalRecordsAffected": 273,
-    "totalMajorDonors": 416
+    "totalRecordsAffected": 275,
+    "totalMajorDonors": 419
   }
 }

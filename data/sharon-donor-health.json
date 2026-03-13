@@ -1,6 +1,30 @@
 {
-  "asOfDate": "2026-03-12T05:24:43.172823-08:00",
+  "asOfDate": "2026-03-13T05:19:00.840753-08:00",
   "failedRecurring": [
+    {
+      "name": "Yoni Breziner",
+      "amount": 208.0,
+      "reason": null,
+      "date": "2026-03-13"
+    },
+    {
+      "name": "Barry and Shelly Hirschberg",
+      "amount": 500.0,
+      "reason": null,
+      "date": "2026-03-12"
+    },
+    {
+      "name": "Julie Tice",
+      "amount": 208.0,
+      "reason": null,
+      "date": "2026-03-12"
+    },
+    {
+      "name": "Annette Feigenbaum",
+      "amount": 108.0,
+      "reason": null,
+      "date": "2026-03-12"
+    },
     {
       "name": "Ellen Rofman",
       "amount": 26.0,
@@ -288,78 +312,19 @@
       "amount": 187.86,
       "reason": null,
       "date": "2026-03-06"
-    },
-    {
-      "name": "Perri L. Wittgrove",
-      "amount": 1000.0,
-      "reason": null,
-      "date": "2026-03-06"
-    },
-    {
-      "name": "David Stear",
-      "amount": 19.06,
-      "reason": null,
-      "date": "2026-03-05"
-    },
-    {
-      "name": "Leon Mindlin",
-      "amount": 37.81,
-      "reason": null,
-      "date": "2026-03-05"
-    },
-    {
-      "name": "Benjamin Schindler",
-      "amount": 800.0,
-      "reason": null,
-      "date": "2026-03-05"
-    },
-    {
-      "name": "Carrie Pineless",
-      "amount": 180.0,
-      "reason": null,
-      "date": "2026-03-05"
-    },
-    {
-      "name": "Deborah Taylor",
-      "amount": 375.42,
-      "reason": null,
-      "date": "2026-03-05"
-    },
-    {
-      "name": "Rael Lipson",
-      "amount": 83.66,
-      "reason": null,
-      "date": "2026-03-05"
-    },
-    {
-      "name": "Lynn Lasher",
-      "amount": 104.0,
-      "reason": null,
-      "date": "2026-03-05"
-    },
-    {
-      "name": "Joseph Fox",
-      "amount": 217.04,
-      "reason": null,
-      "date": "2026-03-05"
     }
   ],
   "refundsOver100": [],
   "newDonorsBySource": [
     {
       "source": "Payment on Pledge - FY26",
-      "count": 6,
-      "totalAmount": 3152.3
+      "count": 7,
+      "totalAmount": 3652.3
     },
     {
       "source": "Jewish Heritage Day at the Padres - FY26",
-      "count": 11,
-      "totalAmount": 2197.71
-    },
-    {
-      "source": "Unsolicited Annual Gifts - FY26",
-      "count": 4,
-      "totalAmount": 2163.6
+      "count": 12,
+      "totalAmount": 2405.71
     },
     {
       "source": "LEADS - FY26 - Program",
@@ -367,14 +332,14 @@
       "totalAmount": 1267.86
     },
     {
-      "source": "Yom HaShoah - FY26 - Donations",
-      "count": 2,
-      "totalAmount": 72
+      "source": "Unsolicited Annual Gifts - FY26",
+      "count": 3,
+      "totalAmount": 1121.3
     },
     {
-      "source": "Yom HaShoah - FY26",
+      "source": "Yom HaShoah - FY26 - Donations",
       "count": 1,
-      "totalAmount": 0
+      "totalAmount": 36
     }
   ],
   "newDonorsThisWeek": 29,
@@ -383,6 +348,12 @@
       "name": "Dan Vassilovski",
       "firstGift": "2",
       "secondGift": "2026-02-21",
+      "amount": "2026-03-12"
+    },
+    {
+      "name": "Aaron Lipner",
+      "firstGift": "2",
+      "secondGift": "2005-10-31",
       "amount": "2026-03-12"
     },
     {
@@ -398,15 +369,15 @@
       "amount": "2026-03-10"
     },
     {
-      "name": "Riley Martinez",
+      "name": "Jennifer Meltzer",
       "firstGift": "2",
       "secondGift": "2026-02-24",
       "amount": "2026-03-09"
     },
     {
-      "name": "Jennifer Meltzer",
+      "name": "Shayna Davis-Schreiber",
       "firstGift": "2",
-      "secondGift": "2026-02-24",
+      "secondGift": "2026-01-02",
       "amount": "2026-03-09"
     },
     {
@@ -416,10 +387,22 @@
       "amount": "2026-03-09"
     },
     {
+      "name": "Riley Martinez",
+      "firstGift": "2",
+      "secondGift": "2026-02-24",
+      "amount": "2026-03-09"
+    },
+    {
       "name": "Tamara Litke",
       "firstGift": "2",
       "secondGift": "2026-02-24",
       "amount": "2026-03-08"
+    },
+    {
+      "name": "Jay Berkowitz",
+      "firstGift": "2",
+      "secondGift": "2026-02-20",
+      "amount": "2026-03-07"
     },
     {
       "name": "Rachel Raz",
@@ -434,10 +417,10 @@
       "amount": "2026-03-07"
     },
     {
-      "name": "Jay Berkowitz",
+      "name": "Joanne Geroe",
       "firstGift": "2",
-      "secondGift": "2026-02-20",
-      "amount": "2026-03-07"
+      "secondGift": "2026-01-30",
+      "amount": "2026-03-06"
     },
     {
       "name": "Dalia Breziner",
@@ -452,34 +435,16 @@
       "amount": "2026-03-06"
     },
     {
-      "name": "LEOPOLDO KAHN",
-      "firstGift": "2",
-      "secondGift": "2026-02-20",
-      "amount": "2026-03-06"
-    },
-    {
-      "name": "Joanne Geroe",
-      "firstGift": "2",
-      "secondGift": "2026-01-30",
-      "amount": "2026-03-06"
-    },
-    {
       "name": "Ishraq Ali",
       "firstGift": "2",
       "secondGift": "2026-02-24",
       "amount": "2026-03-06"
     },
     {
-      "name": "Sharona Canales",
+      "name": "LEOPOLDO KAHN",
       "firstGift": "2",
-      "secondGift": "2026-02-04",
-      "amount": "2026-03-05"
-    },
-    {
-      "name": "Freddi Pakier",
-      "firstGift": "2",
-      "secondGift": "2026-02-22",
-      "amount": "2026-03-05"
+      "secondGift": "2026-02-20",
+      "amount": "2026-03-06"
     }
   ],
   "newRecurring": [
@@ -496,6 +461,12 @@
       "date": "2028-01-01"
     },
     {
+      "name": "Marcia Hazan",
+      "amount": 60233,
+      "frequency": "OpenEnded",
+      "date": "2027-07-01"
+    },
+    {
       "name": "Richard Gabriel",
       "amount": 50000,
       "frequency": "OpenEnded",
@@ -508,14 +479,8 @@
       "date": "2027-02-07"
     },
     {
-      "name": "Irina Shalomayeva",
-      "amount": 100,
-      "frequency": "OpenEnded",
-      "date": "2027-01-01"
-    },
-    {
-      "name": "Sonia Ancoli Israel",
-      "amount": 36000,
+      "name": "Jean Somers",
+      "amount": 10000,
       "frequency": "OpenEnded",
       "date": "2027-01-01"
     },
@@ -526,20 +491,14 @@
       "date": "2027-01-01"
     },
     {
-      "name": "Jean Somers",
-      "amount": 10000,
-      "frequency": "OpenEnded",
-      "date": "2027-01-01"
-    },
-    {
-      "name": "Emma Paterno",
-      "amount": 3.55,
-      "frequency": "OpenEnded",
-      "date": "2027-01-01"
-    },
-    {
       "name": "David Abraham",
       "amount": 500,
+      "frequency": "OpenEnded",
+      "date": "2027-01-01"
+    },
+    {
+      "name": "Larry Michael Katz",
+      "amount": 5000,
       "frequency": "OpenEnded",
       "date": "2027-01-01"
     },
@@ -580,8 +539,8 @@
       "date": "2027-01-01"
     },
     {
-      "name": "Larry Michael Katz",
-      "amount": 5000,
+      "name": "Emma Paterno",
+      "amount": 180,
       "frequency": "OpenEnded",
       "date": "2027-01-01"
     },
@@ -598,14 +557,26 @@
       "date": "2027-01-01"
     },
     {
-      "name": "Emma Paterno",
-      "amount": 180,
+      "name": "Irina Shalomayeva",
+      "amount": 100,
       "frequency": "OpenEnded",
       "date": "2027-01-01"
     },
     {
-      "name": "Stacy Rosenberg",
-      "amount": 189.15,
+      "name": "Emma Paterno",
+      "amount": 3.55,
+      "frequency": "OpenEnded",
+      "date": "2027-01-01"
+    },
+    {
+      "name": "Sonia Ancoli Israel",
+      "amount": 36000,
+      "frequency": "OpenEnded",
+      "date": "2027-01-01"
+    },
+    {
+      "name": "Alan Litrownik",
+      "amount": 2000,
       "frequency": "OpenEnded",
       "date": "2026-07-01"
     },
@@ -646,14 +617,20 @@
       "date": "2026-07-01"
     },
     {
+      "name": "Stacy Rosenberg",
+      "amount": 189.15,
+      "frequency": "OpenEnded",
+      "date": "2026-07-01"
+    },
+    {
       "name": "Elizabeth Ann Nederlander Coden",
       "amount": 5000,
       "frequency": "OpenEnded",
       "date": "2026-07-01"
     },
     {
-      "name": "Karen Foster Silberman",
-      "amount": 30116.5,
+      "name": "Karen Foster-Silberman",
+      "amount": 60233,
       "frequency": "OpenEnded",
       "date": "2026-07-01"
     },
@@ -706,12 +683,6 @@
       "date": "2026-07-01"
     },
     {
-      "name": "Alan Litrownik",
-      "amount": 2000,
-      "frequency": "OpenEnded",
-      "date": "2026-07-01"
-    },
-    {
       "name": "Jeff M. Schindler",
       "amount": 12000,
       "frequency": "OpenEnded",
@@ -720,6 +691,12 @@
     {
       "name": "Alexandra Shubin Hirschhorn",
       "amount": 6000,
+      "frequency": "OpenEnded",
+      "date": "2026-07-01"
+    },
+    {
+      "name": "Lisa Foster",
+      "amount": 60233,
       "frequency": "OpenEnded",
       "date": "2026-07-01"
     },
@@ -754,14 +731,14 @@
       "date": "2026-03-08"
     },
     {
-      "name": "Richard Schrager",
-      "amount": 2500,
+      "name": "Marsha Berkson",
+      "amount": 5000,
       "frequency": "OpenEnded",
       "date": "2026-03-06"
     },
     {
-      "name": "Marsha Berkson",
-      "amount": 5000,
+      "name": "Richard Schrager",
+      "amount": 2500,
       "frequency": "OpenEnded",
       "date": "2026-03-06"
     },
@@ -770,39 +747,42 @@
       "amount": 5000,
       "frequency": "OpenEnded",
       "date": "2026-03-06"
-    },
-    {
-      "name": "Leo Eisenberg",
-      "amount": 36000,
-      "frequency": "OpenEnded",
-      "date": "2026-03-05"
-    },
-    {
-      "name": "Perri L. Wittgrove",
-      "amount": 12000,
-      "frequency": "OpenEnded",
-      "date": "2026-03-05"
     }
   ],
   "cancelledRecurring": [
     {
-      "name": "Craig Misrach",
-      "amount": 360,
-      "date": "2026-03-11"
+      "name": "Marcia Hazan",
+      "amount": 60233,
+      "date": "2026-03-12"
     },
     {
-      "name": "Craig Misrach",
-      "amount": 360,
-      "date": "2026-03-11"
+      "name": "Sara E. Brown",
+      "amount": 720,
+      "date": "2026-03-12"
     },
     {
-      "name": "Craig Misrach",
-      "amount": 550,
-      "date": "2026-03-11"
+      "name": "Lisa Foster",
+      "amount": 60233,
+      "date": "2026-03-12"
     },
     {
-      "name": "Craig Misrach",
+      "name": "Craig H Misrach",
       "amount": 500,
+      "date": "2026-03-11"
+    },
+    {
+      "name": "Craig H Misrach",
+      "amount": 360,
+      "date": "2026-03-11"
+    },
+    {
+      "name": "Craig H Misrach",
+      "amount": 360,
+      "date": "2026-03-11"
+    },
+    {
+      "name": "Craig H Misrach",
+      "amount": 550,
       "date": "2026-03-11"
     },
     {
@@ -844,18 +824,23 @@
       "name": "Jackie Stein",
       "amount": 10000,
       "date": "2026-03-06"
-    },
-    {
-      "name": "Moishe Leider",
-      "amount": 54,
-      "date": "2026-03-05"
     }
   ],
   "lapsedReactivated": [
     {
+      "name": "Dana Zeff",
+      "fy25Amount": 750000,
+      "fy26Amount": 750000
+    },
+    {
       "name": "Valerie Marie Viterbi",
       "fy25Amount": 46950,
       "fy26Amount": 75000
+    },
+    {
+      "name": "Shayna Davis-Schreiber",
+      "fy25Amount": 50000,
+      "fy26Amount": 50000
     },
     {
       "name": "Sherron C. Schuster",
@@ -878,7 +863,7 @@
       "fy26Amount": 12000
     },
     {
-      "name": "Larry Michael Katz",
+      "name": "Jill Beck",
       "fy25Amount": 5000,
       "fy26Amount": 5000
     },
@@ -888,34 +873,14 @@
       "fy26Amount": 5000
     },
     {
-      "name": "Heather Keith",
-      "fy25Amount": 4136,
-      "fy26Amount": 4500
-    },
-    {
       "name": "Karla B. Silver",
       "fy25Amount": 2000,
       "fy26Amount": 3600
     },
     {
-      "name": "Joseph Fox",
-      "fy25Amount": 1000,
-      "fy26Amount": 708.7
-    },
-    {
-      "name": "Todd Kirschen",
-      "fy25Amount": 840,
-      "fy26Amount": 504
-    },
-    {
       "name": "Bernard Surovsky",
       "fy25Amount": 1800,
       "fy26Amount": 450
-    },
-    {
-      "name": "Eileen Gaffen",
-      "fy25Amount": 240,
-      "fy26Amount": 90
     },
     {
       "name": "Ellen Rofman",
@@ -1108,18 +1073,18 @@
   "dataQuality": {
     "missingCampaign": 26,
     "missingAmountOpps": 43,
-    "overdueOpps": 565,
+    "overdueOpps": 562,
     "largGiftsNoCampaign": 44,
     "duplicateRecords": 200,
-    "majorDonorsMissingInfo": 24,
-    "zeroRecognitionWithGifts": 490
+    "majorDonorsMissingInfo": 26,
+    "zeroRecognitionWithGifts": 487
   },
   "kpis": {
-    "totalDonorsThisWeek": 157,
-    "recurringRevenue": 2441.16,
-    "failedChargesCount": 57,
-    "failedChargesAmount": 21627.63,
-    "dataQualityScore": 37.6,
-    "retentionRate": 31.8
+    "totalDonorsThisWeek": 141,
+    "recurringRevenue": 2366.16,
+    "failedChargesCount": 52,
+    "failedChargesAmount": 19834.64,
+    "dataQualityScore": 37.4,
+    "retentionRate": 31.9
   }
 }

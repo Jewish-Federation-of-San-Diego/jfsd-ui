@@ -1,29 +1,37 @@
 {
-  "refreshedAt": "2026-03-12T06:26:12.123744",
-  "totalTime": 271.8,
+  "refreshedAt": "2026-03-13T06:20:29.739080",
+  "totalTime": 416.2,
   "results": [
     {
       "name": "campaign",
       "status": "ok",
-      "time": 25.7,
+      "time": 34.3,
       "size_before": 6228,
-      "size_after": 6228,
+      "size_after": 6262,
       "error": null
     },
     {
       "name": "stripe",
       "status": "ok",
-      "time": 44.4,
+      "time": 51.2,
       "size_before": 1969,
       "size_after": 1969,
       "error": null
     },
     {
+      "name": "ramp",
+      "status": "ok",
+      "time": 129.4,
+      "size_before": 7240,
+      "size_after": 7245,
+      "error": null
+    },
+    {
       "name": "givecloud",
       "status": "ok",
-      "time": 107.4,
-      "size_before": 6850,
-      "size_after": 7290,
+      "time": 106.5,
+      "size_before": 7290,
+      "size_after": 7237,
       "error": null
     },
     {
@@ -31,7 +39,7 @@
       "status": "ok",
       "time": 0.2,
       "size_before": 102568,
-      "size_after": 102568,
+      "size_after": 102558,
       "error": null
     },
     {
@@ -39,37 +47,37 @@
       "status": "ok",
       "time": 0.2,
       "size_before": 14411,
-      "size_after": 14411,
+      "size_after": 14802,
       "error": null
     },
     {
       "name": "board",
       "status": "ok",
-      "time": 4.9,
-      "size_before": 12237,
-      "size_after": 12234,
+      "time": 5.4,
+      "size_before": 12234,
+      "size_after": 12232,
       "error": null
     },
     {
       "name": "donor-health",
       "status": "ok",
-      "time": 32.0,
-      "size_before": 23185,
-      "size_after": 23251,
+      "time": 32.9,
+      "size_before": 23251,
+      "size_after": 22598,
       "error": null
     },
     {
       "name": "ap-expense",
       "status": "ok",
-      "time": 4.6,
-      "size_before": 11839,
-      "size_after": 12355,
+      "time": 5.0,
+      "size_before": 12355,
+      "size_after": 10819,
       "error": null
     },
     {
       "name": "data-quality",
       "status": "ok",
-      "time": 16.5,
+      "time": 14.6,
       "size_before": 18079,
       "size_after": 18079,
       "error": null
@@ -85,48 +93,48 @@
     {
       "name": "drm",
       "status": "ok",
-      "time": 22.3,
-      "size_before": 86352,
-      "size_after": 86370,
+      "time": 23.0,
+      "size_before": 86370,
+      "size_after": 85602,
       "error": null
     },
     {
       "name": "pledge",
       "status": "ok",
-      "time": 4.4,
-      "size_before": 60237,
-      "size_after": 60174,
+      "time": 4.7,
+      "size_before": 60174,
+      "size_after": 60150,
       "error": null
     },
     {
       "name": "prospect",
       "status": "ok",
-      "time": 3.6,
-      "size_before": 34161,
-      "size_after": 34160,
+      "time": 3.5,
+      "size_before": 34160,
+      "size_after": 34319,
       "error": null
     },
     {
       "name": "ask-list",
       "status": "ok",
       "time": 3.7,
-      "size_before": 22804,
-      "size_after": 22794,
+      "size_before": 22794,
+      "size_after": 22802,
       "error": null
     },
     {
       "name": "silence",
       "status": "ok",
-      "time": 1.8,
-      "size_before": 217539,
-      "size_after": 217602,
+      "time": 1.6,
+      "size_before": 217602,
+      "size_after": 217320,
       "error": null
     }
   ],
   "summary": {
-    "ok": 15,
+    "ok": 16,
     "errors": 0,
     "skipped": 0,
-    "totalBytes": 666406
+    "totalBytes": 670915
   }
 }

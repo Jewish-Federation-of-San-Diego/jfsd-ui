@@ -1,5 +1,5 @@
 {
-  "asOfDate": "2026-03-12",
+  "asOfDate": "2026-03-13",
   "boards": [
     {
       "name": "Jewish Community Foundation of San Diego",
@@ -43,7 +43,7 @@
           "name": "Craig Misrach",
           "role": "",
           "status": "lybunt",
-          "fy26Amount": 0.0,
+          "fy26Amount": 0,
           "fy25Amount": 550.0
         },
         {
