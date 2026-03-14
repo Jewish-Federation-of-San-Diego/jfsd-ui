@@ -1,5 +1,5 @@
 {
-  "asOfDate": "2026-03-13T06:19:33-08:00",
+  "asOfDate": "2026-03-14T06:15:22-08:00",
   "actionItems": [
     {
       "type": "needs_review",
@@ -8,6 +8,14 @@
       "cardholder": "David Fuhriman",
       "date": "2026-03-10",
       "reason": "High-value transaction ($23,615.50)"
+    },
+    {
+      "type": "needs_review",
+      "merchant": "ExpoPrint",
+      "amount": 2592.06,
+      "cardholder": "Jessica Kretzer",
+      "date": "2026-03-13",
+      "reason": "High-value transaction ($2,592.06)"
     },
     {
       "type": "needs_review",
@@ -40,22 +48,6 @@
       "cardholder": "Hailey Pryce-Shidler",
       "date": "2026-03-10",
       "reason": "High-value transaction ($983.35)"
-    },
-    {
-      "type": "needs_review",
-      "merchant": "Paypal",
-      "amount": 980,
-      "cardholder": "David Fuhriman",
-      "date": "2026-03-07",
-      "reason": "High-value transaction ($980.00)"
-    },
-    {
-      "type": "policy_exception",
-      "merchant": "Paypal",
-      "amount": 980,
-      "cardholder": "David Fuhriman",
-      "date": "2026-03-07",
-      "reason": "Weekend purchase"
     },
     {
       "type": "needs_review",
@@ -123,6 +115,14 @@
     },
     {
       "type": "missing_receipt",
+      "merchant": "W&W Jewelers",
+      "amount": 187,
+      "cardholder": "Maya Steinberg",
+      "date": "2026-03-13",
+      "txnId": "a8c0b3c5-797a-4cdb-89e6-728381b2ba25"
+    },
+    {
+      "type": "missing_receipt",
       "merchant": "ZARA",
       "amount": 114.05,
       "cardholder": "Ori Bar",
@@ -171,11 +171,11 @@
     },
     {
       "type": "missing_receipt",
-      "merchant": "Shein",
-      "amount": 51.53,
-      "cardholder": "Adva Amori",
-      "date": "2026-03-06",
-      "txnId": "b6e0838c-e77e-48d6-9c99-11c7ea947642"
+      "merchant": "Exxon",
+      "amount": 50,
+      "cardholder": "Ori Bar",
+      "date": "2026-03-14",
+      "txnId": "e48c2a3c-311d-413e-a6c7-e4cb3f7b9cb0"
     },
     {
       "type": "missing_receipt",
@@ -200,22 +200,6 @@
       "cardholder": "Bar Kroytzvirt",
       "date": "2026-03-12",
       "txnId": "4e7ba763-b94c-41c6-862a-d63a4d118141"
-    },
-    {
-      "type": "missing_receipt",
-      "merchant": "Shell",
-      "amount": 45,
-      "cardholder": "Bar Kroytzvirt",
-      "date": "2026-03-07",
-      "txnId": "b8cfba78-aa68-4d10-8078-23e218e1a573"
-    },
-    {
-      "type": "missing_receipt",
-      "merchant": "7-Eleven",
-      "amount": 44.68,
-      "cardholder": "Adva Amori",
-      "date": "2026-03-06",
-      "txnId": "93c26192-7cac-4c93-a7ad-ac1b228d6b2f"
     },
     {
       "type": "missing_receipt",
@@ -267,6 +251,14 @@
     },
     {
       "type": "missing_receipt",
+      "merchant": "Michaels",
+      "amount": 30.98,
+      "cardholder": "Bar Kroytzvirt",
+      "date": "2026-03-13",
+      "txnId": "956b2223-ccde-499f-b445-f2428d1e1805"
+    },
+    {
+      "type": "missing_receipt",
       "merchant": "The Taco Stand",
       "amount": 30.39,
       "cardholder": "Yaar Ilovich",
@@ -283,18 +275,23 @@
     }
   ],
   "expenseSummary": {
-    "totalSpend7d": 37895.69,
-    "totalSpend30d": 37895.69,
+    "totalSpend7d": 40310.12,
+    "totalSpend30d": 40310.12,
     "byDepartment": [
       {
         "dept": "Admin",
-        "amount": 30421.79,
-        "txnCount": 20
+        "amount": 29410.29,
+        "txnCount": 18
       },
       {
         "dept": "Programs",
-        "amount": 11115.48,
-        "txnCount": 72
+        "amount": 13588.33,
+        "txnCount": 68
+      },
+      {
+        "dept": "Administration",
+        "amount": 797.35,
+        "txnCount": 6
       },
       {
         "dept": "Marketing",
@@ -302,14 +299,9 @@
         "txnCount": 1
       },
       {
-        "dept": "Administration",
-        "amount": 31.27,
-        "txnCount": 1
-      },
-      {
         "dept": "Development",
-        "amount": -3823.69,
-        "txnCount": 6
+        "amount": -3636.69,
+        "txnCount": 7
       }
     ],
     "topMerchants": [
@@ -322,6 +314,11 @@
         "merchant": "Dirt Cheap Car Rental",
         "amount": 7200,
         "txnCount": 9
+      },
+      {
+        "merchant": "ExpoPrint",
+        "amount": 2592.06,
+        "txnCount": 1
       },
       {
         "merchant": "HD Supply Facilities Maintenance",
@@ -340,17 +337,12 @@
       },
       {
         "merchant": "Anthropic",
-        "amount": 1032.12,
-        "txnCount": 4
+        "amount": 1053.41,
+        "txnCount": 6
       },
       {
         "merchant": "ADI Israel Foundation",
         "amount": 983.35,
-        "txnCount": 1
-      },
-      {
-        "merchant": "Paypal",
-        "amount": 980,
         "txnCount": 1
       },
       {
@@ -360,7 +352,7 @@
       },
       {
         "merchant": "Staples",
-        "amount": 782.79,
+        "amount": 788.6,
         "txnCount": 6
       }
     ],
@@ -410,7 +402,7 @@
   },
   "glHealth": {
     "manualEntries7d": 0,
-    "unclearedItems30d": 161,
+    "unclearedItems30d": 149,
     "apAgingBuckets": [
       {
         "bucket": "0-30",
@@ -424,18 +416,18 @@
       },
       {
         "bucket": "61-90",
-        "amount": 400385.43,
-        "count": 94
+        "amount": 395767.76,
+        "count": 92
       },
       {
         "bucket": "90+",
-        "amount": 4857798.52,
-        "count": 406
+        "amount": 4862416.19,
+        "count": 408
       }
     ]
   },
   "kpis": {
-    "totalSpendThisWeek": 37895.69,
+    "totalSpendThisWeek": 40310.12,
     "missingReceipts": 18,
     "receiptComplianceRate": 53.0,
     "apOutstanding": 5258183.95,

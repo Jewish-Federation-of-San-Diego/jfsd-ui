@@ -1,5 +1,5 @@
 {
-  "asOfDate": "2026-03-13T13:17:08Z",
+  "asOfDate": "2026-03-14T13:12:51Z",
   "monthlyTrend": [
     {
       "month": "Jul",
@@ -43,17 +43,17 @@
     },
     {
       "month": "Mar",
-      "amount": 51139.92,
-      "txnCount": 179
+      "amount": 54798.02,
+      "txnCount": 190
     }
   ],
   "departmentSpend": [
     {
       "dept": "Administration",
-      "amount": 459976.61,
-      "txnCount": 1320,
+      "amount": 460742.69,
+      "txnCount": 1325,
       "budget": 1773360.0,
-      "pctOfBudget": 25.9
+      "pctOfBudget": 26.0
     },
     {
       "dept": "Programs",
@@ -71,22 +71,22 @@
     },
     {
       "dept": "Development",
-      "amount": 61389.31,
-      "txnCount": 303,
+      "amount": 61576.31,
+      "txnCount": 304,
       "budget": 1915921.0,
       "pctOfBudget": 3.2
     },
     {
       "dept": "Shinshinim",
-      "amount": 40708.65,
-      "txnCount": 1932,
+      "amount": 40821.61,
+      "txnCount": 1936,
       "budget": 466926.0,
       "pctOfBudget": 8.7
     },
     {
       "dept": "Legacy of Light Goldberg Institute for Holocaust Education",
-      "amount": 17640.46,
-      "txnCount": 43,
+      "amount": 20232.52,
+      "txnCount": 44,
       "budget": 0,
       "pctOfBudget": 0
     },
@@ -111,8 +111,8 @@
     },
     {
       "category": "SaaS / Software",
-      "amount": 74697.67,
-      "txnCount": 294
+      "amount": 75440.29,
+      "txnCount": 298
     },
     {
       "category": "Professional Services",
@@ -131,8 +131,8 @@
     },
     {
       "category": "Office supplies and cleaning",
-      "amount": 37977.78,
-      "txnCount": 19
+      "amount": 38001.24,
+      "txnCount": 20
     },
     {
       "category": "Books and Newspapers",
@@ -146,13 +146,18 @@
     },
     {
       "category": "General Merchandise",
-      "amount": 31465.73,
-      "txnCount": 358
+      "amount": 31683.71,
+      "txnCount": 360
     },
     {
       "category": "Other",
       "amount": 31035.33,
       "txnCount": 30
+    },
+    {
+      "category": "Office",
+      "amount": 29051.42,
+      "txnCount": 57
     },
     {
       "category": "Entertainment",
@@ -168,11 +173,6 @@
       "category": "Taxes and tax preparation",
       "amount": 26674.04,
       "txnCount": 4
-    },
-    {
-      "category": "Office",
-      "amount": 26459.36,
-      "txnCount": 56
     }
   ],
   "topMerchants": [
@@ -255,8 +255,8 @@
   "topSpenders": [
     {
       "name": "David Fuhriman",
-      "amount": 132215.72,
-      "txnCount": 117,
+      "amount": 132958.34,
+      "txnCount": 121,
       "dept": "Administration"
     },
     {
@@ -320,21 +320,21 @@
       "dept": "Marketing"
     },
     {
+      "name": "Jessica Kretzer",
+      "amount": 14981.42,
+      "txnCount": 66,
+      "dept": "Legacy of Light Goldberg Institute for Holocaust Education"
+    },
+    {
       "name": "Miliah Rodriguez",
-      "amount": 14855.61,
-      "txnCount": 141,
+      "amount": 14879.07,
+      "txnCount": 142,
       "dept": "Administration"
     },
     {
       "name": "Alex Kaufman",
       "amount": 13942.39,
       "txnCount": 24,
-      "dept": "Legacy of Light Goldberg Institute for Holocaust Education"
-    },
-    {
-      "name": "Jessica Kretzer",
-      "amount": 12389.36,
-      "txnCount": 65,
       "dept": "Legacy of Light Goldberg Institute for Holocaust Education"
     },
     {
@@ -348,20 +348,20 @@
     "active": 100,
     "dormant30d": 59,
     "totalLimit": 329006.99,
-    "totalSpent": 842819.99,
-    "utilizationPct": 256.2
+    "totalSpent": 846478.09,
+    "utilizationPct": 257.3
   },
   "weekOverWeek": {
-    "thisWeek": 41639.72,
+    "thisWeek": 45297.82,
     "lastWeek": 8736.7,
-    "changePct": 376.6
+    "changePct": 418.5
   },
   "kpis": {
-    "totalSpendFY26": 842819.99,
-    "monthlyAvg": 93646.67,
+    "totalSpendFY26": 846478.09,
+    "monthlyAvg": 94053.12,
     "activeCards": 100,
     "topDepartment": "Administration",
-    "topDepartmentAmount": 459976.61,
-    "weekOverWeekChange": 376.6
+    "topDepartmentAmount": 460742.69,
+    "weekOverWeekChange": 418.5
   }
 }

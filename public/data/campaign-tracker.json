@@ -1,20 +1,20 @@
 {
-  "asOfDate": "2026-03-13 06:13",
+  "asOfDate": "2026-03-14 06:09",
   "annualCampaign": {
     "name": "Annual Campaign 26",
     "goal": 9000000,
-    "raised": 6131516.27,
-    "pctOfGoal": 68.1,
-    "donorCount": 1053,
-    "avgGift": 5823.0,
+    "raised": 6213007.83,
+    "pctOfGoal": 69.0,
+    "donorCount": 1058,
+    "avgGift": 5872.0,
     "priorYearSamePoint": 8797479.67
   },
   "momentum": {
-    "giftsThisWeek": 69,
-    "amountThisWeek": 1012986.44,
+    "giftsThisWeek": 79,
+    "amountThisWeek": 1015921.81,
     "giftsLastWeek": 188,
     "amountLastWeek": 127386.7,
-    "weekOverWeekPct": 695.2
+    "weekOverWeekPct": 697.5
   },
   "weeklyMomentum": [
     {
@@ -54,15 +54,15 @@
     },
     {
       "weekOf": "2026-03-09",
-      "gifts": 68,
-      "amount": 1010004.44
+      "gifts": 78,
+      "amount": 1012939.81
     }
   ],
   "donorBreakdown": {
-    "newDonors": 249,
-    "returningDonors": 596,
-    "lybuntRecovered": 106,
-    "retentionRate": 31.9
+    "newDonors": 254,
+    "returningDonors": 597,
+    "lybuntRecovered": 107,
+    "retentionRate": 32.0
   },
   "givingLevels": [
     {
@@ -72,13 +72,13 @@
     },
     {
       "level": "$100-499",
-      "donors": 346,
-      "amount": 74101.11
+      "donors": 347,
+      "amount": 74288.97
     },
     {
       "level": "$500-999",
-      "donors": 134,
-      "amount": 76577.18
+      "donors": 136,
+      "amount": 77880.88
     },
     {
       "level": "$1K-4,999",
@@ -87,8 +87,8 @@
     },
     {
       "level": "$5K-9,999",
-      "donors": 94,
-      "amount": 529358.03
+      "donors": 95,
+      "amount": 534358.03
     },
     {
       "level": "$10K-24,999",
@@ -97,8 +97,8 @@
     },
     {
       "level": "$25K+",
-      "donors": 33,
-      "amount": 4268945.19
+      "donors": 34,
+      "amount": 4343945.19
     }
   ],
   "topGiftsThisWeek": [
@@ -127,6 +127,12 @@
       "date": "2026-03-11"
     },
     {
+      "name": "Martin Lawson",
+      "amount": 990.0,
+      "campaign": "Unsolicited Annual Gifts - FY26",
+      "date": "2026-03-13"
+    },
+    {
       "name": "Schuyler Grant",
       "amount": 728.0,
       "campaign": "Jewish Heritage Day at the Padres - FY26",
@@ -139,6 +145,12 @@
       "date": "2026-03-11"
     },
     {
+      "name": "Ken Druck",
+      "amount": 521.3,
+      "campaign": "Payment on Pledge - FY26",
+      "date": "2026-03-13"
+    },
+    {
       "name": "Ronn Gruer",
       "amount": 500.0,
       "campaign": "Unsolicited Annual Gifts - FY26",
@@ -149,23 +161,11 @@
       "amount": 500.0,
       "campaign": "Payment on Pledge - FY26",
       "date": "2026-03-11"
-    },
-    {
-      "name": "Barry and Shelly Hirschberg",
-      "amount": 500.0,
-      "campaign": "Payment on Pledge - FY26",
-      "date": "2026-03-13"
-    },
-    {
-      "name": "Allison Wolpoff",
-      "amount": 416.0,
-      "campaign": "Jewish Heritage Day at the Padres - FY26",
-      "date": "2026-03-11"
     }
   ],
   "pipeline": {
-    "openPledges": 617,
-    "openPledgeAmount": 14156567.15,
+    "openPledges": 619,
+    "openPledgeAmount": 14161567.15,
     "expectedThisMonth": 0.0
   },
   "campaigns": [
