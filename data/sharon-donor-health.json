@@ -1,6 +1,42 @@
 {
-  "asOfDate": "2026-03-13T05:19:00.840753-08:00",
+  "asOfDate": "2026-03-14T05:14:58.295146-08:00",
   "failedRecurring": [
+    {
+      "name": "Steph Johnson",
+      "amount": 37.81,
+      "reason": null,
+      "date": "2026-03-14"
+    },
+    {
+      "name": "Andrea Benjamin ",
+      "amount": 260.8,
+      "reason": null,
+      "date": "2026-03-13"
+    },
+    {
+      "name": "Shelly Olsher",
+      "amount": 416.0,
+      "reason": null,
+      "date": "2026-03-13"
+    },
+    {
+      "name": "Martin Lawson",
+      "amount": 990.0,
+      "reason": null,
+      "date": "2026-03-13"
+    },
+    {
+      "name": "Ken Druck",
+      "amount": 521.3,
+      "reason": null,
+      "date": "2026-03-13"
+    },
+    {
+      "name": "Dina Buchbinder",
+      "amount": 187.86,
+      "reason": null,
+      "date": "2026-03-13"
+    },
     {
       "name": "Yoni Breziner",
       "amount": 208.0,
@@ -252,97 +288,32 @@
       "amount": 36.0,
       "reason": null,
       "date": "2026-03-07"
-    },
-    {
-      "name": "Jeffrey Major",
-      "amount": 217.04,
-      "reason": null,
-      "date": "2026-03-06"
-    },
-    {
-      "name": "Mark Kramer",
-      "amount": 1042.3,
-      "reason": null,
-      "date": "2026-03-06"
-    },
-    {
-      "name": "Jeridean Hafter",
-      "amount": 36.0,
-      "reason": null,
-      "date": "2026-03-06"
-    },
-    {
-      "name": "Laura Galinson",
-      "amount": 180.0,
-      "reason": null,
-      "date": "2026-03-06"
-    },
-    {
-      "name": "Barbara Smidt",
-      "amount": 36.0,
-      "reason": null,
-      "date": "2026-03-06"
-    },
-    {
-      "name": "Paul SEGAL",
-      "amount": 208.0,
-      "reason": null,
-      "date": "2026-03-06"
-    },
-    {
-      "name": "Diane Weinstein",
-      "amount": 416.0,
-      "reason": null,
-      "date": "2026-03-06"
-    },
-    {
-      "name": "Joanne Geroe",
-      "amount": 208.0,
-      "reason": null,
-      "date": "2026-03-06"
-    },
-    {
-      "name": "IAN TURK",
-      "amount": 100.0,
-      "reason": null,
-      "date": "2026-03-06"
-    },
-    {
-      "name": "Kass",
-      "amount": 187.86,
-      "reason": null,
-      "date": "2026-03-06"
     }
   ],
   "refundsOver100": [],
   "newDonorsBySource": [
     {
       "source": "Payment on Pledge - FY26",
-      "count": 7,
-      "totalAmount": 3652.3
+      "count": 12,
+      "totalAmount": 5143.86
     },
     {
       "source": "Jewish Heritage Day at the Padres - FY26",
-      "count": 12,
-      "totalAmount": 2405.71
-    },
-    {
-      "source": "LEADS - FY26 - Program",
-      "count": 7,
-      "totalAmount": 1267.86
+      "count": 13,
+      "totalAmount": 2821.71
     },
     {
       "source": "Unsolicited Annual Gifts - FY26",
       "count": 3,
-      "totalAmount": 1121.3
+      "totalAmount": 2011.3
     },
     {
-      "source": "Yom HaShoah - FY26 - Donations",
-      "count": 1,
-      "totalAmount": 36
+      "source": "LEADS - FY26 - Program",
+      "count": 6,
+      "totalAmount": 1087.86
     }
   ],
-  "newDonorsThisWeek": 29,
+  "newDonorsThisWeek": 31,
   "firstToSecondConversions": [
     {
       "name": "Dan Vassilovski",
@@ -369,21 +340,15 @@
       "amount": "2026-03-10"
     },
     {
-      "name": "Jennifer Meltzer",
-      "firstGift": "2",
-      "secondGift": "2026-02-24",
-      "amount": "2026-03-09"
-    },
-    {
       "name": "Shayna Davis-Schreiber",
       "firstGift": "2",
       "secondGift": "2026-01-02",
       "amount": "2026-03-09"
     },
     {
-      "name": "Irene Kneeter",
+      "name": "Jennifer Meltzer",
       "firstGift": "2",
-      "secondGift": "2026-01-31",
+      "secondGift": "2026-02-24",
       "amount": "2026-03-09"
     },
     {
@@ -393,16 +358,16 @@
       "amount": "2026-03-09"
     },
     {
+      "name": "Irene Kneeter",
+      "firstGift": "2",
+      "secondGift": "2026-01-31",
+      "amount": "2026-03-09"
+    },
+    {
       "name": "Tamara Litke",
       "firstGift": "2",
       "secondGift": "2026-02-24",
       "amount": "2026-03-08"
-    },
-    {
-      "name": "Jay Berkowitz",
-      "firstGift": "2",
-      "secondGift": "2026-02-20",
-      "amount": "2026-03-07"
     },
     {
       "name": "Rachel Raz",
@@ -411,40 +376,16 @@
       "amount": "2026-03-07"
     },
     {
+      "name": "Jay Berkowitz",
+      "firstGift": "2",
+      "secondGift": "2026-02-20",
+      "amount": "2026-03-07"
+    },
+    {
       "name": "Dana Ben-Artzi",
       "firstGift": "2",
       "secondGift": "2026-03-04",
       "amount": "2026-03-07"
-    },
-    {
-      "name": "Joanne Geroe",
-      "firstGift": "2",
-      "secondGift": "2026-01-30",
-      "amount": "2026-03-06"
-    },
-    {
-      "name": "Dalia Breziner",
-      "firstGift": "2",
-      "secondGift": "2026-02-25",
-      "amount": "2026-03-06"
-    },
-    {
-      "name": "Barbara Smidt",
-      "firstGift": "2",
-      "secondGift": "2017-06-02",
-      "amount": "2026-03-06"
-    },
-    {
-      "name": "Ishraq Ali",
-      "firstGift": "2",
-      "secondGift": "2026-02-24",
-      "amount": "2026-03-06"
-    },
-    {
-      "name": "LEOPOLDO KAHN",
-      "firstGift": "2",
-      "secondGift": "2026-02-20",
-      "amount": "2026-03-06"
     }
   ],
   "newRecurring": [
@@ -479,20 +420,20 @@
       "date": "2027-02-07"
     },
     {
-      "name": "Jean Somers",
-      "amount": 10000,
-      "frequency": "OpenEnded",
-      "date": "2027-01-01"
-    },
-    {
       "name": "Heather Keith",
       "amount": 5000,
       "frequency": "OpenEnded",
       "date": "2027-01-01"
     },
     {
-      "name": "David Abraham",
-      "amount": 500,
+      "name": "Jean Somers",
+      "amount": 10000,
+      "frequency": "OpenEnded",
+      "date": "2027-01-01"
+    },
+    {
+      "name": "Emma Paterno",
+      "amount": 3.55,
       "frequency": "OpenEnded",
       "date": "2027-01-01"
     },
@@ -539,14 +480,14 @@
       "date": "2027-01-01"
     },
     {
-      "name": "Emma Paterno",
-      "amount": 180,
+      "name": "Meryl Maneker",
+      "amount": 3600,
       "frequency": "OpenEnded",
       "date": "2027-01-01"
     },
     {
-      "name": "Meryl Maneker",
-      "amount": 3600,
+      "name": "David Abraham",
+      "amount": 500,
       "frequency": "OpenEnded",
       "date": "2027-01-01"
     },
@@ -557,14 +498,14 @@
       "date": "2027-01-01"
     },
     {
-      "name": "Irina Shalomayeva",
-      "amount": 100,
+      "name": "Emma Paterno",
+      "amount": 180,
       "frequency": "OpenEnded",
       "date": "2027-01-01"
     },
     {
-      "name": "Emma Paterno",
-      "amount": 3.55,
+      "name": "Irina Shalomayeva",
+      "amount": 100,
       "frequency": "OpenEnded",
       "date": "2027-01-01"
     },
@@ -575,8 +516,8 @@
       "date": "2027-01-01"
     },
     {
-      "name": "Alan Litrownik",
-      "amount": 2000,
+      "name": "Stacy Rosenberg",
+      "amount": 189.15,
       "frequency": "OpenEnded",
       "date": "2026-07-01"
     },
@@ -613,12 +554,6 @@
     {
       "name": "Adam Jacobs",
       "amount": 10000,
-      "frequency": "OpenEnded",
-      "date": "2026-07-01"
-    },
-    {
-      "name": "Stacy Rosenberg",
-      "amount": 189.15,
       "frequency": "OpenEnded",
       "date": "2026-07-01"
     },
@@ -683,6 +618,12 @@
       "date": "2026-07-01"
     },
     {
+      "name": "Alan Litrownik",
+      "amount": 2000,
+      "frequency": "OpenEnded",
+      "date": "2026-07-01"
+    },
+    {
       "name": "Jeff M. Schindler",
       "amount": 12000,
       "frequency": "OpenEnded",
@@ -701,16 +642,10 @@
       "date": "2026-07-01"
     },
     {
-      "name": "Perri L. Wittgrove",
-      "amount": 1500,
+      "name": "Martin Lawson",
+      "amount": 0,
       "frequency": "OpenEnded",
-      "date": "2026-03-09"
-    },
-    {
-      "name": "Charles Wax",
-      "amount": 100000,
-      "frequency": "OpenEnded",
-      "date": "2026-03-09"
+      "date": "2026-03-13"
     },
     {
       "name": "Charles Wax",
@@ -725,28 +660,22 @@
       "date": "2026-03-09"
     },
     {
+      "name": "Perri L. Wittgrove",
+      "amount": 1500,
+      "frequency": "OpenEnded",
+      "date": "2026-03-09"
+    },
+    {
+      "name": "Charles Wax",
+      "amount": 100000,
+      "frequency": "OpenEnded",
+      "date": "2026-03-09"
+    },
+    {
       "name": "Ronald I. Simon",
       "amount": 5000,
       "frequency": "OpenEnded",
       "date": "2026-03-08"
-    },
-    {
-      "name": "Marsha Berkson",
-      "amount": 5000,
-      "frequency": "OpenEnded",
-      "date": "2026-03-06"
-    },
-    {
-      "name": "Richard Schrager",
-      "amount": 2500,
-      "frequency": "OpenEnded",
-      "date": "2026-03-06"
-    },
-    {
-      "name": "Jeff M. Schindler",
-      "amount": 5000,
-      "frequency": "OpenEnded",
-      "date": "2026-03-06"
     }
   ],
   "cancelledRecurring": [
@@ -772,17 +701,17 @@
     },
     {
       "name": "Craig H Misrach",
-      "amount": 360,
-      "date": "2026-03-11"
-    },
-    {
-      "name": "Craig H Misrach",
-      "amount": 360,
-      "date": "2026-03-11"
-    },
-    {
-      "name": "Craig H Misrach",
       "amount": 550,
+      "date": "2026-03-11"
+    },
+    {
+      "name": "Craig H Misrach",
+      "amount": 360,
+      "date": "2026-03-11"
+    },
+    {
+      "name": "Craig H Misrach",
+      "amount": 360,
       "date": "2026-03-11"
     },
     {
@@ -819,11 +748,6 @@
       "name": "Ron Levenson",
       "amount": 18,
       "date": "2026-03-09"
-    },
-    {
-      "name": "Jackie Stein",
-      "amount": 10000,
-      "date": "2026-03-06"
     }
   ],
   "lapsedReactivated": [
@@ -833,24 +757,9 @@
       "fy26Amount": 750000
     },
     {
-      "name": "Valerie Marie Viterbi",
-      "fy25Amount": 46950,
-      "fy26Amount": 75000
-    },
-    {
       "name": "Shayna Davis-Schreiber",
       "fy25Amount": 50000,
       "fy26Amount": 50000
-    },
-    {
-      "name": "Sherron C. Schuster",
-      "fy25Amount": 100,
-      "fy26Amount": 50000
-    },
-    {
-      "name": "Sonia Ancoli Israel",
-      "fy25Amount": 36000,
-      "fy26Amount": 36000
     },
     {
       "name": "Heidi Gantwerk",
@@ -858,17 +767,7 @@
       "fy26Amount": 16500.16
     },
     {
-      "name": "Perri L. Wittgrove",
-      "fy25Amount": 10000,
-      "fy26Amount": 12000
-    },
-    {
       "name": "Jill Beck",
-      "fy25Amount": 5000,
-      "fy26Amount": 5000
-    },
-    {
-      "name": "Susan Shmalo",
       "fy25Amount": 5000,
       "fy26Amount": 5000
     },
@@ -1073,18 +972,18 @@
   "dataQuality": {
     "missingCampaign": 26,
     "missingAmountOpps": 43,
-    "overdueOpps": 562,
+    "overdueOpps": 558,
     "largGiftsNoCampaign": 44,
     "duplicateRecords": 200,
     "majorDonorsMissingInfo": 26,
-    "zeroRecognitionWithGifts": 487
+    "zeroRecognitionWithGifts": 488
   },
   "kpis": {
-    "totalDonorsThisWeek": 141,
-    "recurringRevenue": 2366.16,
-    "failedChargesCount": 52,
-    "failedChargesAmount": 19834.64,
-    "dataQualityScore": 37.4,
-    "retentionRate": 31.9
+    "totalDonorsThisWeek": 104,
+    "recurringRevenue": 3356.16,
+    "failedChargesCount": 48,
+    "failedChargesAmount": 19617.21,
+    "dataQualityScore": 37.5,
+    "retentionRate": 32.0
   }
 }

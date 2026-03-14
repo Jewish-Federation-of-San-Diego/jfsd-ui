@@ -1,10 +1,10 @@
 {
-  "asOfDate": "2026-03-13",
+  "asOfDate": "2026-03-14",
   "notes": null,
   "onlineGiving": {
-    "totalFY26": 353291.51,
-    "totalContributions": 966,
-    "avgGift": 365.73,
+    "totalFY26": 355667.47,
+    "totalContributions": 973,
+    "avgGift": 365.54,
     "medianGift": 31.56
   },
   "monthlyTrend": [
@@ -58,9 +58,9 @@
     },
     {
       "month": "Mar",
-      "amount": 19217.65,
+      "amount": 21593.61,
       "recurringAmount": 0.0,
-      "contributions": 183
+      "contributions": 190
     }
   ],
   "recurring": {
@@ -84,18 +84,18 @@
     },
     {
       "name": "Payment Toward Pledge - Today Only",
-      "amount": 19410.0,
-      "count": 13
+      "amount": 20340.0,
+      "count": 16
     },
     {
       "name": "Individual Ticket - Padres Jewish Heritage Celebration 2026 - Western Metal Rooftop Ticket",
-      "amount": 17628.0,
-      "count": 173
+      "amount": 18044.0,
+      "count": 177
     },
     {
       "name": "Annual Campaign Page - All in - FY26 - Monthly",
-      "amount": 7551.0,
-      "count": 17
+      "amount": 8541.0,
+      "count": 18
     },
     {
       "name": "Recurring - Monthly",
@@ -126,11 +126,25 @@
   "conversionBySource": [
     {
       "source": "Web",
-      "contributions": 966,
-      "amount": 353291.51
+      "contributions": 973,
+      "amount": 355667.47
     }
   ],
   "recentContributions": [
+    {
+      "name": "Shelly Olsher",
+      "amount": 416.0,
+      "product": "Individual Ticket - Padres Jewish Heritage Celebration 2026 - Western Metal Rooftop Ticket",
+      "date": "2026-03-14",
+      "recurring": false
+    },
+    {
+      "name": "Andrea Benjamin",
+      "amount": 260.8,
+      "product": "Payment Toward Pledge - Today Only",
+      "date": "2026-03-14",
+      "recurring": false
+    },
     {
       "name": "Julie Tice",
       "amount": 208.0,
@@ -149,6 +163,41 @@
       "name": "Yoni Breziner",
       "amount": 208.0,
       "product": "Individual Ticket - Padres Jewish Heritage Celebration 2026 - Western Metal Rooftop Ticket",
+      "date": "2026-03-13",
+      "recurring": false
+    },
+    {
+      "name": "Heidi Gantwerk",
+      "amount": 0.0,
+      "product": "Individual Ticket - Yom HaZikaron - Inidividual Ticket",
+      "date": "2026-03-13",
+      "recurring": false
+    },
+    {
+      "name": "Heidi Gantwerk",
+      "amount": 0.0,
+      "product": "Individual Ticket - Celebrate Israel: Yom Ha'Atzmaut Music Festival - Inidividual Ticket",
+      "date": "2026-03-13",
+      "recurring": false
+    },
+    {
+      "name": "Dina Buchbinder",
+      "amount": 187.86,
+      "product": "Payment Toward Pledge - Today Only",
+      "date": "2026-03-13",
+      "recurring": false
+    },
+    {
+      "name": "Ken Druck",
+      "amount": 521.3,
+      "product": "Payment Toward Pledge - Today Only",
+      "date": "2026-03-13",
+      "recurring": false
+    },
+    {
+      "name": "Martin Lawson",
+      "amount": 990.0,
+      "product": "Annual Campaign Page - All in - FY26 - Monthly",
       "date": "2026-03-13",
       "recurring": false
     },
@@ -221,60 +270,11 @@
       "product": "Individual Ticket - Yom HaShoah - Inidividual Ticket",
       "date": "2026-03-12",
       "recurring": false
-    },
-    {
-      "name": "Annette Feigenbaum",
-      "amount": 108.0,
-      "product": "Individual Ticket - Yom HaShoah - Inidividual Ticket",
-      "date": "2026-03-12",
-      "recurring": false
-    },
-    {
-      "name": "Jacob Banuelos",
-      "amount": 180.0,
-      "product": "LEADS 2026 - Program Fee",
-      "date": "2026-03-11",
-      "recurring": false
-    },
-    {
-      "name": "Dennis Pinn",
-      "amount": 0.0,
-      "product": "Individual Ticket - Celebrate Israel: Yom Ha'Atzmaut Music Festival - Inidividual Ticket",
-      "date": "2026-03-11",
-      "recurring": false
-    },
-    {
-      "name": "Dayana Coffler DMD",
-      "amount": 180.0,
-      "product": "Payment Toward Pledge - Today Only",
-      "date": "2026-03-11",
-      "recurring": false
-    },
-    {
-      "name": "Stewart Breier",
-      "amount": 18.0,
-      "product": "Annual Campaign Page - All in - FY26 - Today Only",
-      "date": "2026-03-11",
-      "recurring": false
-    },
-    {
-      "name": "Rayna colton",
-      "amount": 500.0,
-      "product": "Payment Toward Pledge - Today Only",
-      "date": "2026-03-11",
-      "recurring": false
-    },
-    {
-      "name": "Shoshana Rice",
-      "amount": 52.0,
-      "product": "Individual Ticket - Padres Jewish Heritage Celebration 2026 - Western Metal Rooftop Ticket",
-      "date": "2026-03-11",
-      "recurring": false
     }
   ],
   "failedPayments": [],
   "kpis": {
-    "totalOnlineRevenue": 353291.51,
+    "totalOnlineRevenue": 355667.47,
     "recurringRevenue": 0,
     "activeRecurring": 0,
     "newDonorsOnline": 0,

@@ -1,5 +1,5 @@
 {
-  "asOfDate": "2026-03-13 06:19",
+  "asOfDate": "2026-03-14 06:15",
   "overallScore": 21,
   "categories": [
     {
@@ -221,21 +221,6 @@
               "fy26": 12000.0
             },
             {
-              "name": "John D. Freedman",
-              "id": "001Uf00000WkQ4aIAF",
-              "fy26": 10000.0
-            },
-            {
-              "name": "Lauren Cohen",
-              "id": "001Uf00000WkF94IAF",
-              "fy26": 10000.0
-            },
-            {
-              "name": "Erica Weinberg",
-              "id": "001Uf00000WkBQRIA3",
-              "fy26": 10000.0
-            },
-            {
               "name": "Robyn F. Goldberg",
               "id": "001Uf00000WkEqWIAV",
               "fy26": 10000.0
@@ -248,6 +233,21 @@
             {
               "name": "Gail Satter",
               "id": "001Uf00000WkC8CIAV",
+              "fy26": 10000.0
+            },
+            {
+              "name": "Erica Weinberg",
+              "id": "001Uf00000WkBQRIA3",
+              "fy26": 10000.0
+            },
+            {
+              "name": "John D. Freedman",
+              "id": "001Uf00000WkQ4aIAF",
+              "fy26": 10000.0
+            },
+            {
+              "name": "Lauren Cohen",
+              "id": "001Uf00000WkF94IAF",
               "fy26": 10000.0
             },
             {
@@ -575,11 +575,6 @@
               "giving": 36495.0
             },
             {
-              "name": "Elyse K. Sollender",
-              "id": "001Uf00000WkTxqIAF",
-              "giving": 32085.0
-            },
-            {
               "name": "Jon Steven Segal",
               "id": "001Uf00000WkN2UIAV",
               "giving": 26250.0
@@ -630,6 +625,11 @@
               "giving": 6000.0
             },
             {
+              "name": "Howard Bruce Somers",
+              "id": "001Uf00000WkHeSIAV",
+              "giving": 6000.0
+            },
+            {
               "name": "Lynn Gardner",
               "id": "001Uf00000WkUJ4IAN",
               "giving": 6000.0
@@ -653,6 +653,6 @@
     "mediumIssues": 52,
     "lowIssues": 50,
     "totalRecordsAffected": 275,
-    "totalMajorDonors": 419
+    "totalMajorDonors": 421
   }
 }
